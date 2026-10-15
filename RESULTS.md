@@ -28,6 +28,8 @@ The best model’s +1.97-point pass@8 gain has a paired 95% interval of **[−1.
 
 The seven-benchmark macro follows the assignment’s AVG set: AIME25, CN Math 2024, Kaoyan, AMC, Minerva, OlympiadBench, and GPQA.
 
+**This is not a broad win.** Best full SFT improves pass@8 on only **4 of 9 benchmarks** and regresses on **5 of 9**. Within the seven benchmarks used for AVG it improves 4 and regresses on 3. The +1.97-point macro is driven mainly by CN Math 2024 (+10.00 points) and AIME25 (+6.67 points), both 30-question sets with large sampling uncertainty. Compact-balanced SFT is worse: it improves only Kaoyan and GPQA and regresses on the other 7 benchmarks.
+
 ## Generation behavior
 
 | Metric across all nine benchmarks | Base | Best full SFT | Compact-balanced SFT |
