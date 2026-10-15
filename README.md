@@ -1,5 +1,10 @@
 > **Final measured status (October 15, 2026):** the compact balanced 15K run completed all 1,875 updates and all nine benchmarks, but failed the strict all-column objective. Its seven-benchmark pass@8 was **44.83%**, versus **49.55%** for matched base and **51.52%** for the earlier full-SFT model. It reduced truncations to 44/15,792, but cleared only the Minerva and GPQA historical column thresholds. Historical leaderboard equivalence is not established.
 
+> **Current experiment:** [`TRIMSFT_EXPERIMENT.md`](TRIMSFT_EXPERIMENT.md)
+> specifies one full 15K run using the published fixed TrimSFT token-weighting
+> parameters, followed directly by all nine assignment benchmarks. It has no
+> pilot, public-score checkpoint selection, or development gate.
+
 Start with [RESULTS.md](RESULTS.md) for the direct baseline answer and final score table, then [DETAILED_PROJECT_REPORT_20261014.md](DETAILED_PROJECT_REPORT_20261014.md) for the complete experiment narrative and [FULL_RESULTS_AND_IMPLEMENTATION.md](FULL_RESULTS_AND_IMPLEMENTATION.md) for implementation and per-benchmark results. [LARGE_ARTIFACTS.md](LARGE_ARTIFACTS.md) records the local weight files excluded by GitHub's per-file size limit.
 
 # Assignment-Reasoning-SFT-LLM

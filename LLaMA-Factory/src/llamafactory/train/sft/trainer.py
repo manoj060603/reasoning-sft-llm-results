@@ -17,6 +17,7 @@
 
 import json
 import os
+from functools import partial
 from types import MethodType
 from typing import TYPE_CHECKING, Any, Optional, Union
 
@@ -82,6 +83,15 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             from ..trainer_utils import dft_loss_func
 
             self.compute_loss_func = dft_loss_func
+
+        if finetuning_args.use_trimsft_loss:
+            from ..trainer_utils import trimsft_loss_func
+
+            self.compute_loss_func = partial(
+                trimsft_loss_func,
+                margin=finetuning_args.trimsft_margin,
+                bandwidth=finetuning_args.trimsft_bandwidth,
+            )
 
     @override
     def create_optimizer(self) -> "torch.optim.Optimizer":

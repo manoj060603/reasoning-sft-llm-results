@@ -676,6 +676,29 @@ def _dft_cross_entropy(
     return loss
 
 
+def trimsft_loss_func(
+    outputs,
+    labels,
+    num_items_in_batch=None,
+    margin: float = 1.5,
+    bandwidth: float = 0.8,
+):
+    """Gaussian logit-gap token weighting from TrimSFT (arXiv:2609.09707)."""
+    logits = outputs.get("logits")
+    if logits is None:
+        return outputs.get("loss", torch.tensor(0.0))
+
+    logits = logits.float()
+    vocab_size = logits.size(-1)
+    labels = torch.nn.functional.pad(labels, (0, 1), value=-100)
+    shift_labels = labels[..., 1:].contiguous()
+    logits = logits.view(-1, vocab_size)
+    shift_labels = shift_labels.view(-1).to(logits.device)
+    from reasoning.trimsft import trimsft_cross_entropy
+
+    return trimsft_cross_entropy(logits, shift_labels, margin, bandwidth, num_items_in_batch)
+
+
 def nested_detach(
     tensors: Union["torch.Tensor", list["torch.Tensor"], tuple["torch.Tensor"], dict[str, "torch.Tensor"]],
     clone: bool = False,

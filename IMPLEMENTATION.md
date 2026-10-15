@@ -4,6 +4,12 @@ This implementation adds data preparation, selection, full SFT/QLoRA configurati
 
 **Current status:** See [DETAILED_PROJECT_REPORT_20261014.md](DETAILED_PROJECT_REPORT_20261014.md) for the final consolidated evidence. All 31 tests pass locally. Full-parameter SFT on all 15,000 rows has the strongest complete public result: 51.52% seven-benchmark pass@8 versus 49.55% for matched base, with a confidence interval crossing zero and severe overgeneration. Fixed alpha-0.50 interpolation completed the same suite at 50.63% with 343 truncations, versus 1,964 for full SFT and 141 for base. The repaired 2K student-guided experiment completed both 250-update arms, but guided targets scored 51.0% pass@8 on fresh confirmation versus 52.0% for the existing-target control and 53.5% for base, with worse termination. No official historical leaderboard win is established.
 
+The next prespecified full experiment is documented in
+[`TRIMSFT_EXPERIMENT.md`](TRIMSFT_EXPERIMENT.md). It adds detached Gaussian
+logit-gap token weighting to the vendored LLaMA-Factory trainer and otherwise
+reuses the exact 15K dataset and official nine-benchmark protocol. The public
+suite will be evaluated only at the final 1,875-update checkpoint.
+
 ## Strategy and evidence
 
 The proposed default is **quality-filtered, diverse, student-aware selection** of exactly 15,000 unique prompts. It is an experimental synthesis, not an exact reproduction of a paper or a guaranteed best strategy.

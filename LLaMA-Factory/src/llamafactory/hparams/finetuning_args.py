@@ -481,6 +481,18 @@ class FinetuningArguments(
         default=False,
         metadata={"help": "Whether to use the DFT loss."},
     )
+    use_trimsft_loss: bool = field(
+        default=False,
+        metadata={"help": "Whether to use Gaussian logit-gap TrimSFT weighting."},
+    )
+    trimsft_margin: float = field(
+        default=1.5,
+        metadata={"help": "Center m of the TrimSFT Gaussian logit-gap weighting."},
+    )
+    trimsft_bandwidth: float = field(
+        default=0.8,
+        metadata={"help": "Bandwidth tau of the TrimSFT Gaussian logit-gap weighting."},
+    )
     freeze_vision_tower: bool = field(
         default=True,
         metadata={"help": "Whether ot not to freeze the vision tower in MLLM training."},
@@ -531,6 +543,10 @@ class FinetuningArguments(
         self.use_ref_model = self.stage == "dpo" and self.pref_loss not in ["orpo", "simpo"]
 
         assert self.finetuning_type in ["lora", "oft", "freeze", "full"], "Invalid fine-tuning method."
+        if self.use_dft_loss and self.use_trimsft_loss:
+            raise ValueError("DFT and TrimSFT losses are mutually exclusive.")
+        if self.trimsft_bandwidth <= 0:
+            raise ValueError("`trimsft_bandwidth` must be positive.")
         assert self.ref_model_quantization_bit in [None, 8, 4], "We only accept 4-bit or 8-bit quantization."
         assert self.reward_model_quantization_bit in [None, 8, 4], "We only accept 4-bit or 8-bit quantization."
 
