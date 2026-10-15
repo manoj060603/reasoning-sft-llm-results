@@ -1,0 +1,65 @@
+{
+  "amc": {
+    "problems": 40,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.375,
+    "pass_at_8": 0.7,
+    "truncated_samples": 49
+  },
+  "aime25": {
+    "problems": 30,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.03333333333333333,
+    "pass_at_8": 0.2,
+    "truncated_samples": 54
+  },
+  "aime": {
+    "problems": 30,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.04583333333333333,
+    "pass_at_8": 0.16666666666666666,
+    "truncated_samples": 71
+  },
+  "math": {
+    "problems": 500,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.64,
+    "pass_at_8": 0.85,
+    "truncated_samples": 257
+  },
+  "cn_math_2024": {
+    "problems": 30,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.07916666666666666,
+    "pass_at_8": 0.3333333333333333,
+    "truncated_samples": 75
+  },
+  "kaoyan": {
+    "problems": 199,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.21231155778894473,
+    "pass_at_8": 0.5979899497487438,
+    "truncated_samples": 289
+  },
+  "minerva": {
+    "problems": 272,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.27297794117647056,
+    "pass_at_8": 0.4889705882352941,
+    "truncated_samples": 128
+  },
+  "olympiadbench": {
+    "problems": 675,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.2633333333333333,
+    "pass_at_8": 0.49333333333333335,
+    "truncated_samples": 871
+  },
+  "gpqa": {
+    "problems": 198,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.2935606060606061,
+    "pass_at_8": 0.7929292929292929,
+    "truncated_samples": 170
+  }
+}

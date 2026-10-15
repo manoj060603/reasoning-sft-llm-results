@@ -1,0 +1,42 @@
+{
+  "development": {
+    "filtered_random-sft": {
+      "problems": 32,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.07421875,
+      "pass_at_8": 0.21875
+    },
+    "route-sft": {
+      "problems": 32,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.15234375,
+      "pass_at_8": 0.375
+    },
+    "route-dft": {
+      "problems": 32,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.21875,
+      "pass_at_8": 0.46875
+    },
+    "route-asft": {
+      "problems": 32,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.25,
+      "pass_at_8": 0.5
+    }
+  },
+  "amc": {
+    "base": {
+      "problems": 40,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.415625,
+      "pass_at_8": 0.675
+    },
+    "selected_pilot": {
+      "problems": 40,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.38125,
+      "pass_at_8": 0.7
+    }
+  }
+}

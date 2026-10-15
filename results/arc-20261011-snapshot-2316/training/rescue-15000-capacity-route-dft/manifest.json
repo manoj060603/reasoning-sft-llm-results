@@ -1,0 +1,19 @@
+{
+  "arguments": {
+    "model": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "data": "artifacts/datasets-rescue-4k/advanced.json",
+    "output": "runs/rescue-15000-capacity-route-dft",
+    "objective": "dft",
+    "kl": 0.03,
+    "cutoff": 4096,
+    "steps": 1875,
+    "accumulation": 8,
+    "lr": 1e-05,
+    "seed": 42,
+    "rank": 64,
+    "save_every": 100,
+    "keep_every": 300
+  },
+  "data_sha256": "4877cd3e25a361722cf6e11b378617e5e1ae2833a5060908a36a20e4156dc1ea",
+  "code_sha256": "cedbd74d06f5187e40b9cf81175b4f230a8009bb342acedae5a5b64da5b3b433"
+}

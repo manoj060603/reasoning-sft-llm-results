@@ -1,0 +1,9 @@
+{
+  "acereason_dev": {
+    "problems": 32,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.21875,
+    "pass_at_8": 0.46875,
+    "truncated_samples": 29
+  }
+}

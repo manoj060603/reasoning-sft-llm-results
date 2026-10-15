@@ -1,0 +1,22 @@
+{
+  "input_sha256": "35f76b541157c71f41f31210de6933c969783ab73b479422daab175016da49f5",
+  "arguments": {
+    "input": "/Users/rohitsalla/Documents/Playground/Project-Reasoning-SFT-LLM-main/artifacts/smoke/prepared/validation.json",
+    "output": "/Users/rohitsalla/Documents/Playground/Project-Reasoning-SFT-LLM-main/artifacts/smoke/val_features.json",
+    "model": "artifacts/tokenizer",
+    "revision": "main",
+    "clusters": 4,
+    "embedding_model": null,
+    "score_nll": false,
+    "nll_tokens": 512,
+    "seed": 42
+  },
+  "resolved_tokenizer_commit": null,
+  "resolved_model_commit": null,
+  "clusters": {
+    "2": 5,
+    "0": 1,
+    "3": 1,
+    "1": 1
+  }
+}

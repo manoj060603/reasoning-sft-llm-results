@@ -1,0 +1,217 @@
+{
+  "newly_solved": [
+    {
+      "problem_id": "7c11807d31cab0db7332a54a1cc9d3711ff269ad05c0de553dfcf83457c1be74",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 2
+    },
+    {
+      "problem_id": "3d7cf667fde9f727addc63d546786975dab3c36072c1807a94a2f6d577e8b0a7",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 1
+    },
+    {
+      "problem_id": "95a987d5fd87a3c730b62e6cdd0d50b3af0b087dcd984d6e902e1b901e0dd10e",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 1
+    },
+    {
+      "problem_id": "9dc6e71239857ff369994ede8bad005e69a34cfa59392ea3269606167323d0f7",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 1
+    }
+  ],
+  "lost": [
+    {
+      "problem_id": "0210c2abd7e750efca93ce6810d945d6fa2abbaa5370d9cfcb5c508e93eeb515",
+      "base_correct_samples": 1,
+      "candidate_correct_samples": 0
+    },
+    {
+      "problem_id": "398f8d305052c3e982910e84c220f9056c24fd469c0e8f65341e9b88c131be0c",
+      "base_correct_samples": 1,
+      "candidate_correct_samples": 0
+    },
+    {
+      "problem_id": "907a8318293de5a13d7747def41a1406ede84c84f0141e795631749f4d897418",
+      "base_correct_samples": 1,
+      "candidate_correct_samples": 0
+    }
+  ],
+  "both_solved": [
+    {
+      "problem_id": "080784f4c8d11c52efefb80f7f53adc6faaaee5c21c18ada04dd98b7c99c361a",
+      "base_correct_samples": 8,
+      "candidate_correct_samples": 8
+    },
+    {
+      "problem_id": "e9fb8bee9683ad1cb2f7b0365a0a3e7a2b261e49d9bf1988ed42180941909f1b",
+      "base_correct_samples": 7,
+      "candidate_correct_samples": 6
+    },
+    {
+      "problem_id": "367d6a1bd539ea4781346a17a03051de9bc06c211be9b79605cd60391cadc6bf",
+      "base_correct_samples": 8,
+      "candidate_correct_samples": 8
+    },
+    {
+      "problem_id": "d1b7a910408f01f8f76595a02033c69c4c08994657190044d8b885a55e297929",
+      "base_correct_samples": 5,
+      "candidate_correct_samples": 6
+    },
+    {
+      "problem_id": "f605be43a163ca49dca9ea34c2b8e937d1ebc26b694e0d8185787c4999e0ec49",
+      "base_correct_samples": 1,
+      "candidate_correct_samples": 1
+    },
+    {
+      "problem_id": "c593d770463b6d621f4f87f481c402f060c70ba3646ae45aa1c8cbe3afb121da",
+      "base_correct_samples": 3,
+      "candidate_correct_samples": 2
+    },
+    {
+      "problem_id": "57c514cace03b44bee752151973ab16b3db691424a01a0d1ab91fcc6212a2692",
+      "base_correct_samples": 5,
+      "candidate_correct_samples": 2
+    },
+    {
+      "problem_id": "014f558364c557179247b94d1efe64dbea3171d4063601bf4a29b0be4bc1e23f",
+      "base_correct_samples": 7,
+      "candidate_correct_samples": 8
+    },
+    {
+      "problem_id": "1d0f3fb542b3ebec0a70c6d98eace8a40fec885195df2db63ecb99e282e16db3",
+      "base_correct_samples": 8,
+      "candidate_correct_samples": 2
+    },
+    {
+      "problem_id": "7965cdfa2eefb5dc42bef991b44e2a55f55d5b453fa0b723ef371e17a80fd4e0",
+      "base_correct_samples": 4,
+      "candidate_correct_samples": 2
+    },
+    {
+      "problem_id": "f9068701da5b6ed2e1e4036c02faf5eae3a68cae3aba01e1f174946a5bdcf8cb",
+      "base_correct_samples": 7,
+      "candidate_correct_samples": 5
+    },
+    {
+      "problem_id": "694482b8f78c89183789cd5bbd035c20a8fbe8f084f581aa61c75a98920a6143",
+      "base_correct_samples": 8,
+      "candidate_correct_samples": 8
+    },
+    {
+      "problem_id": "40766ca287a3de97b448de6a19068c195ff20cbaf61c5147dc04c429bfec2ca8",
+      "base_correct_samples": 6,
+      "candidate_correct_samples": 6
+    },
+    {
+      "problem_id": "0606c57825774dba95ea3fca62aa1016549fa4ecd82dea9277f2e15a0cb67e70",
+      "base_correct_samples": 2,
+      "candidate_correct_samples": 4
+    },
+    {
+      "problem_id": "c3a870059c799d00014fc818b31f25ac44d5b474f4e0743440844fd1e8073590",
+      "base_correct_samples": 5,
+      "candidate_correct_samples": 5
+    },
+    {
+      "problem_id": "dee72e58ca782c935b472b265ee8b6cad322f15e200f73f1ed02c4b94560e933",
+      "base_correct_samples": 2,
+      "candidate_correct_samples": 5
+    },
+    {
+      "problem_id": "f17d175f2b115b6985de41ddf5bb4b6cfa59acc93d183820ba4bfb76c77a7077",
+      "base_correct_samples": 1,
+      "candidate_correct_samples": 2
+    },
+    {
+      "problem_id": "f335989862f1bf8fabaea4060b2d696e7f73dc59e34085c4bd2670ecb1834dae",
+      "base_correct_samples": 6,
+      "candidate_correct_samples": 6
+    },
+    {
+      "problem_id": "51adb5811fd2db67e7dfdd889058526dc482fd88f54d399af80ad34e7bc3165b",
+      "base_correct_samples": 3,
+      "candidate_correct_samples": 2
+    },
+    {
+      "problem_id": "6faf16b57c502f6e0232d928d2c64bf4979dd24516ad3abedf8c259d5e31d1b7",
+      "base_correct_samples": 7,
+      "candidate_correct_samples": 5
+    },
+    {
+      "problem_id": "35d9b57de2401e51ff654d0242aea3b84bd38e06b7c1deffd4ecd6f8c013397a",
+      "base_correct_samples": 8,
+      "candidate_correct_samples": 8
+    },
+    {
+      "problem_id": "778f8423da9e292b363be859251137757b8e8fcbf57e7631b1366e33547a7f23",
+      "base_correct_samples": 8,
+      "candidate_correct_samples": 8
+    },
+    {
+      "problem_id": "b918284920ea52f499dbf7b4d42116742f4eb9935677d3b6397672331d9919ab",
+      "base_correct_samples": 8,
+      "candidate_correct_samples": 7
+    },
+    {
+      "problem_id": "9a4c836b0903f4db0b148c1e27986715d5d95147b4ec3031445a948d280088a6",
+      "base_correct_samples": 3,
+      "candidate_correct_samples": 1
+    }
+  ],
+  "neither_solved": [
+    {
+      "problem_id": "e232e46004a5e9571d45580da99de722d3afa0b26ae5e415d9130c77091cc0fe",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 0
+    },
+    {
+      "problem_id": "6834ae3c1cb2a381195ee7c363f516819a92105571933fc75c97a580df96b529",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 0
+    },
+    {
+      "problem_id": "6d3b101cc6c9c08e14993efb2f82f8a2fe97894fffc749b9c7ce053cba648115",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 0
+    },
+    {
+      "problem_id": "aa9c362cef8ddfb26c963fc2670d66f2aef0b4d35140e020401695569d28e133",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 0
+    },
+    {
+      "problem_id": "05d16cbf34a16a2e6c22da36a68486fcd6a4a2958b859deebab599740d94ce22",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 0
+    },
+    {
+      "problem_id": "be9289baddb6a962cb7ac52792ede1df35dd04ddf70f25f451b110efaef09cab",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 0
+    },
+    {
+      "problem_id": "235616655e843798f1d37a095f84c6722c95d708d7f99d5613217c0c6c1828f9",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 0
+    },
+    {
+      "problem_id": "6f3ad859871e8dce7c940a1e293e11e29b2437ba74730f06e6e09bb45e64b1c3",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 0
+    },
+    {
+      "problem_id": "0070ab40f845b883632500b1bb4462758c7ec8db69b4beb8cd1b00774206750a",
+      "base_correct_samples": 0,
+      "candidate_correct_samples": 0
+    }
+  ],
+  "counts": {
+    "newly_solved": 4,
+    "lost": 3,
+    "both_solved": 24,
+    "neither_solved": 9
+  },
+  "note": "Descriptive post-selection error analysis only; no public-test-driven recipe change."
+}

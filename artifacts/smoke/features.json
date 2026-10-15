@@ -1,0 +1,322 @@
+[
+  {
+    "id": "51a3d2aa4fa9176b550a957ca825e932bcea2c82591676ac2e703d2d1a059f25",
+    "cluster": 2,
+    "total_tokens": 970,
+    "response_tokens": 850,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "1a1096c81507dea84456d3a816e2388f4fe0d2b3cfc721741da877b45b39b9c7",
+    "cluster": 2,
+    "total_tokens": 977,
+    "response_tokens": 858,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "c423b4e29d445c0de7137fa98b11e7d0605deeda786ca50b13ed779714c2c4b5",
+    "cluster": 2,
+    "total_tokens": 967,
+    "response_tokens": 852,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "22eb240851c2a62e60a35bea36dd55ee69f37d3e62e2642064b8e83d1c8b0d92",
+    "cluster": 1,
+    "total_tokens": 971,
+    "response_tokens": 849,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "f29fec3e2397d9937beaee9a0d574e64f70ef06139fa9ba167c33134e8a07544",
+    "cluster": 2,
+    "total_tokens": 970,
+    "response_tokens": 854,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "9df1f6eb21c7c333b0a75bc9035c3c50d836fe8a5d1a5d06b3db505ad3f775df",
+    "cluster": 2,
+    "total_tokens": 965,
+    "response_tokens": 853,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "4066610eb4a69d48905e47f9bd686d97571bd52133aed0a11623241c8fe59c9f",
+    "cluster": 1,
+    "total_tokens": 979,
+    "response_tokens": 856,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "b76a42cc49dcbe32c5c64932c775c6387fcae4440b1ff96c0abf52e6631c3976",
+    "cluster": 2,
+    "total_tokens": 971,
+    "response_tokens": 854,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "a037517ba0fbea4fc939c95e8c8002a595440db270a33342c80ae6a0dbca64e2",
+    "cluster": 1,
+    "total_tokens": 981,
+    "response_tokens": 855,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "e9b5788cc0874200529575d03de5bf14b5006c24acbc901309f6f7c727bd9b24",
+    "cluster": 1,
+    "total_tokens": 984,
+    "response_tokens": 870,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "6d0dafa5b261f5cc4f7b81c3ac4130f871cdc7e1ff48377fc3c4efed974fc43b",
+    "cluster": 2,
+    "total_tokens": 967,
+    "response_tokens": 845,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "b3f73f4a4bbca222cdc7e94d3fac0473b1356a5e7fce8b69d7d4fec19e8e0d77",
+    "cluster": 1,
+    "total_tokens": 970,
+    "response_tokens": 860,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "f6da6cec7c66d87f6a24b886f3e11c4a92124740e45ad6fb169e26e3fe1abc59",
+    "cluster": 1,
+    "total_tokens": 973,
+    "response_tokens": 853,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "b521f2c1a26dd430e05b5a8a7aed53ef3203d4f1f6541c1b94ebb6cf520a033f",
+    "cluster": 2,
+    "total_tokens": 972,
+    "response_tokens": 852,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "d7283fb797fe4eeb325f1fa61ea523d31ae35f3211fd533dd5092be1d3912b3e",
+    "cluster": 3,
+    "total_tokens": 984,
+    "response_tokens": 864,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "9b16283de7f502f7132dd42b80ecccb20e39267d25382af341da614f4ed43005",
+    "cluster": 2,
+    "total_tokens": 972,
+    "response_tokens": 852,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "7a6f705cb0fe10312220616cf734dc0fc4f996f040d4ec5bac7c1e3fb5efea31",
+    "cluster": 1,
+    "total_tokens": 980,
+    "response_tokens": 859,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "7cf09e026b312dcf66e0855f6a2f1c562b63853c0f695f5c408a7e7a3adad7ea",
+    "cluster": 1,
+    "total_tokens": 974,
+    "response_tokens": 853,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "fadb9cb3f04ed9bc106a84d1bc5ed300cf2b8ee9dfee40b1cc0aa01b9a3c4ba4",
+    "cluster": 1,
+    "total_tokens": 978,
+    "response_tokens": 856,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "f3bb7918ae627b77bcb92e0220b534647512d7735abcfe58fad1b4000b30f8db",
+    "cluster": 1,
+    "total_tokens": 970,
+    "response_tokens": 850,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "106b6b61c2a55446800bf00a26c90f3181ff94d89aab3b90f26502fa65d855f0",
+    "cluster": 1,
+    "total_tokens": 974,
+    "response_tokens": 856,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "7711a71ce2b3425943303bcee31bf33ac56e531d045f5f7ed9adaced558ef872",
+    "cluster": 1,
+    "total_tokens": 980,
+    "response_tokens": 863,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "698753b068e24b8a1f76493c4c2bc8ebd4533ca97830f6b3b31eda1c55eb3321",
+    "cluster": 1,
+    "total_tokens": 971,
+    "response_tokens": 853,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "f1b2f935291ce071d7368ea2dc85552fab4d286af6396beb47ce60b261cd56b0",
+    "cluster": 1,
+    "total_tokens": 970,
+    "response_tokens": 854,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "532cc35d17e64170e5c03e203c1f8e3c236e41ba1e96f7e4ed07173e8f8853b4",
+    "cluster": 1,
+    "total_tokens": 975,
+    "response_tokens": 859,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "e33a76dbd9286981bf7bcacbf823009bd36330a4fecc5a10bd4e83c3ac40c211",
+    "cluster": 2,
+    "total_tokens": 985,
+    "response_tokens": 862,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "f60b7833058b7f95e200ade080f9f85691d39038aaa76f67adaf9bdec2c19e40",
+    "cluster": 1,
+    "total_tokens": 954,
+    "response_tokens": 840,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "18b110133890e93829cf9202db257c87a59b492685283fbe1773920893122a5e",
+    "cluster": 2,
+    "total_tokens": 948,
+    "response_tokens": 833,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "9e0e192d0a49cd00654965778351b19b5aef23bbec8a3e208bb9fc13f8f0a55f",
+    "cluster": 1,
+    "total_tokens": 966,
+    "response_tokens": 852,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "d95c7dbfd744371e89f1e482044ebcae10d3ca9b64b428bbf57f9abf1635a3a6",
+    "cluster": 2,
+    "total_tokens": 973,
+    "response_tokens": 853,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "24637a7402008da5eaa27a26573ee66f33a52aad572eb95a936afb4c6633454d",
+    "cluster": 2,
+    "total_tokens": 971,
+    "response_tokens": 853,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "c1a8e1a388edd2682310000990e4fbe61eaf0dc03ab5279d004db4cba0edb369",
+    "cluster": 2,
+    "total_tokens": 969,
+    "response_tokens": 856,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "2b0339013bfc91abbb6b4ddd55d62f950acc5267adc9a03967e807e8af950444",
+    "cluster": 1,
+    "total_tokens": 962,
+    "response_tokens": 843,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "32d8e18039e48c829122bdf1fc9d912d2d4a291e739136a8bd84731d46dffc60",
+    "cluster": 1,
+    "total_tokens": 985,
+    "response_tokens": 867,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "59c4a2f84f54cb142a9a05b4e66c95075f83f2105fd9142531b91ca3997c2ec7",
+    "cluster": 1,
+    "total_tokens": 976,
+    "response_tokens": 858,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "65277a3b59934b0b9ee26f07088581445861884bda3aa7821ec7a119dc9e29ec",
+    "cluster": 1,
+    "total_tokens": 972,
+    "response_tokens": 851,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "69aeb14a5b5a1c0ad56286cd91eb2a4c1aa3b227944dfda3c169a9a61cb43191",
+    "cluster": 0,
+    "total_tokens": 973,
+    "response_tokens": 853,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "111f0775dc2586561af7d9bab78ed12990fd2aa78ac32139806f847bd316ccb3",
+    "cluster": 2,
+    "total_tokens": 959,
+    "response_tokens": 841,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "2be10d8576cfa4925c9a236f6d54b2a5b71e89f80c32e2b7521a0cad481a10c5",
+    "cluster": 1,
+    "total_tokens": 983,
+    "response_tokens": 866,
+    "complete_box": true,
+    "repetition": 0.0
+  },
+  {
+    "id": "e972c96154208f4b1630ea9cd7bb1b919d2cf357e0df2d99e33f0b0b7eb93fbc",
+    "cluster": 2,
+    "total_tokens": 980,
+    "response_tokens": 862,
+    "complete_box": true,
+    "repetition": 0.0
+  }
+]

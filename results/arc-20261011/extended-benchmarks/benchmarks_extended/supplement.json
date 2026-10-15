@@ -1,0 +1,20 @@
+{
+  "repo": "math-ai/aime25",
+  "revision": "563bb8404243c5f09de6ec262f2db674fe5bce9b",
+  "source_url": "https://huggingface.co/datasets/math-ai/aime25",
+  "source_sha256": "b4e273c02d3e7fe1b74b59eae768fc8230bfb0f79539890cb56f4361caac0331",
+  "canonical_sha256": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d",
+  "problems": 30,
+  "license": "Apache-2.0 (dataset card)",
+  "supplied_benchmark_hashes": {
+    "aime": "afeac47232fe8975b2752a01da1af749171a6f97b9a53c8ee2f17db866425326",
+    "amc": "5ed21b3a67cdca5ff9d248173c8817fd0f12a42667925f9bdd5f88906bfd699f",
+    "cn_math_2024": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533",
+    "gpqa": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f",
+    "kaoyan": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7",
+    "math": "35dc41080a3680858b27fa7e0533d2d547825316fc5dafe5d316f4ccc5a06132",
+    "minerva": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d",
+    "olympiadbench": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f"
+  },
+  "limitation": "Separately sourced AIME25; the historical leaderboard data/version is not verified."
+}

@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-11",
+  "account": "tml_2026",
+  "remote_root": "/projects/tealab/rohit/reasoning-sft-20261011",
+  "preparation": {
+    "cluster": "tinkercliffs",
+    "job_id": "7945713",
+    "state": "COMPLETED"
+  },
+  "gpu": {
+    "cluster": "falcon",
+    "job_id": "632295",
+    "gpu": "L40S",
+    "count": 1,
+    "walltime": "02:48:00",
+    "stage": "pilot training and evaluation",
+    "state": "CANCELLED",
+    "memory_gb": 48,
+    "reason": "All four development pilots and selected pilot AMC complete; stopped incomplete control AMC because its first batch exceeded 30 minutes and the full benchmark could not finish within remaining allocation. No partial control score reported.",
+    "gpu_seconds": 7813
+  },
+  "measured_scores": {
+    "base-amc": {
+      "amc": {
+        "problems": 40,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.415625,
+        "pass_at_8": 0.675,
+        "generated_tokens": 362369,
+        "mean_output_tokens": 1132.403125,
+        "truncated_samples": 3,
+        "boxed_answer_samples": 317,
+        "mean_repeated_8gram_fraction": 0.043686817132389255
+      }
+    },
+    "pilot-filtered_random-sft-dev": {
+      "acereason_dev": {
+        "problems": 32,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.07421875,
+        "pass_at_8": 0.21875,
+        "generated_tokens": 1650115,
+        "mean_output_tokens": 6445.76171875,
+        "truncated_samples": 187,
+        "boxed_answer_samples": 73,
+        "mean_repeated_8gram_fraction": 0.5439839249462318
+      }
+    },
+    "pilot-route-asft-dev": {
+      "acereason_dev": {
+        "problems": 32,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.25,
+        "pass_at_8": 0.5,
+        "generated_tokens": 318860,
+        "mean_output_tokens": 1245.546875,
+        "truncated_samples": 8,
+        "boxed_answer_samples": 249,
+        "mean_repeated_8gram_fraction": 0.07434412880271296
+      }
+    },
+    "pilot-route-dft-dev": {
+      "acereason_dev": {
+        "problems": 32,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.21875,
+        "pass_at_8": 0.46875,
+        "generated_tokens": 479982,
+        "mean_output_tokens": 1874.9296875,
+        "truncated_samples": 29,
+        "boxed_answer_samples": 223,
+        "mean_repeated_8gram_fraction": 0.12423619052924616
+      }
+    },
+    "pilot-route-sft-dev": {
+      "acereason_dev": {
+        "problems": 32,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.15234375,
+        "pass_at_8": 0.375,
+        "generated_tokens": 1377343,
+        "mean_output_tokens": 5380.24609375,
+        "truncated_samples": 146,
+        "boxed_answer_samples": 113,
+        "mean_repeated_8gram_fraction": 0.4353689086463268
+      }
+    },
+    "pilot-route-asft-amc": {
+      "amc": {
+        "problems": 40,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.38125,
+        "pass_at_8": 0.7,
+        "truncated_samples": 8
+      }
+    }
+  },
+  "previous_attempts": [
+    {
+      "job_id": "631837",
+      "state": "FAILED",
+      "reason": "vLLM worker CXXABI mismatch; no generations",
+      "repair": "set Conda LD_LIBRARY_PATH"
+    },
+    {
+      "job_id": "631874",
+      "state": "FAILED",
+      "gpu_seconds": 634,
+      "reason": "Zero topic-cluster quota rejected during 512-example selection; no training",
+      "repair": "skip zero-quota clusters; 19 tests pass"
+    },
+    {
+      "job_id": "632069",
+      "state": "FAILED",
+      "gpu_seconds": 711,
+      "reason": "64 SFT optimizer steps completed and checkpointed; merged export failed on optional DeepSpeed import without CUDA_HOME",
+      "repair": "CUDA 12.8 toolkit path for training/export; tiny model serialization round-trip passed; resume from step 64"
+    },
+    {
+      "job_id": "632126",
+      "state": "CANCELLED",
+      "gpu_seconds": 1756,
+      "reason": "Full 32K development screening was too expensive; 40/256 samples finished but no complete development score was saved",
+      "retained": "step-64 merged control; incomplete evaluation directory renamed with -aborted-32k suffix",
+      "replacement_protocol": "8192 new tokens for all four development variants; AMC remains 32768"
+    },
+    {
+      "job_id": "1119134",
+      "cluster": "owl",
+      "gpu": "B200",
+      "state": "FAILED",
+      "gpu_seconds": 136,
+      "reason": "FlashInfer Blackwell JIT compilation could not find nvcc; no generations",
+      "repair": "CUDA_HOME and PATH for CUDA 12.8, isolated FlashInfer workspace",
+      "retained": "evaluations/full-base-suite-failed-init-1119134"
+    },
+    {
+      "job_id": "1119463",
+      "cluster": "owl",
+      "gpu": "B200",
+      "state": "CANCELLED",
+      "gpu_seconds": 223,
+      "reason": "CUDA repair verified; restarted early to avoid small-batch long-tail idling in full-suite evaluation",
+      "repair": "queue whole benchmarks (batch size 1024), keep max_num_seqs 128 for both arms",
+      "retained": "evaluations/full-base-suite-stopped-batching-1119463"
+    },
+    {
+      "job_id": "1119701",
+      "cluster": "owl",
+      "gpu": "B200",
+      "state": "FAILED",
+      "gpu_seconds": 936,
+      "reason": "Supplied Kaoyan contains four duplicate prompt pairs; old evaluator required unique prompt hashes",
+      "repair": "Stable per-record IDs for duplicate prompts; cluster bootstrap; five completed unchanged benchmarks validated and copied byte-for-byte to full-base-suite-v2",
+      "retained": "evaluations/full-base-suite"
+    }
+  ],
+  "baseline": {
+    "job_id": "631840",
+    "scheduler_state": "FAILED",
+    "exit_reason": "driver exited 3 after successful baseline because CPU selection was not yet complete",
+    "gpu_seconds": 1075,
+    "results": "evaluations/base-amc"
+  },
+  "trained_adapter": {
+    "variant": "filtered_random-sft",
+    "steps": 64,
+    "optimization_seconds_from_log": 567.5177610432729,
+    "merged_export": "complete"
+  },
+  "extended_preparation": {
+    "cluster": "tinkercliffs",
+    "job_id": "7946299",
+    "state": "COMPLETED",
+    "earlier_job": "7946264",
+    "earlier_state": "CANCELLED",
+    "reason": "Reuse input-identical verified feature files instead of redundant tokenization",
+    "elapsed_seconds": 474
+  },
+  "trained_variants": [
+    "filtered_random-sft",
+    "route-sft",
+    "route-dft",
+    "route-asft"
+  ],
+  "running_variant": null,
+  "full_gpu": {
+    "cluster": "owl",
+    "job_id": "1120144",
+    "gpu": "B200",
+    "count": 1,
+    "memory_gb": 64,
+    "walltime": "05:38:00",
+    "state": "CANCELLED",
+    "stage": "Training completed; candidate public evaluation stopped during MATH after regressions",
+    "training_cutoff": 8192,
+    "steps": 1875,
+    "evaluation_max_new_tokens": 32768,
+    "evaluation_max_num_seqs": 128,
+    "evaluation_batch_size": 1024,
+    "selected_recipe": "route-asft",
+    "start_utc": "2026-10-11T23:37:39+00:00",
+    "early_measured_seconds_per_update": 8.08,
+    "used_examples": 15000,
+    "dropped_examples": 0,
+    "training_started_utc_estimate": "2026-10-12T00:11:34Z"
+  },
+  "pilot_choice": "route-asft",
+  "total_pilot_allocated_gpu_seconds": 12129,
+  "completion_check": {
+    "automation_id": null,
+    "state": "deleted after terminal outcome"
+  },
+  "capacity_matched_rescue": {
+    "cluster": "owl",
+    "job_id": "1123493",
+    "gpu": "B200",
+    "count": 1,
+    "walltime": "04:00:00",
+    "elapsed": "02:05:05",
+    "scheduler_state": "FAILED",
+    "exit_code": "1:0",
+    "terminal_reason": "Prespecified development gate rejection; public evaluation intentionally skipped",
+    "recipe": "15000-example 4K capacity-mixed route-DFT",
+    "learning_rate": 1e-05,
+    "steps": 1875,
+    "training_seconds": 6500.554806979024,
+    "used_examples": 15000,
+    "dropped_examples": 0,
+    "training_tokens": 38012362,
+    "finite_training_log": true,
+    "development": {
+      "questions": 200,
+      "samples_per_question": 8,
+      "base_pass_at_1": 0.23375,
+      "candidate_pass_at_1": 0.199375,
+      "pass_at_1_delta": -0.034375,
+      "pass_at_1_ci95": [-0.06125, -0.005625],
+      "base_pass_at_8": 0.475,
+      "candidate_pass_at_8": 0.435,
+      "pass_at_8_delta": -0.04,
+      "pass_at_8_ci95": [-0.105, 0.025],
+      "base_truncated_samples": 31,
+      "candidate_truncated_samples": 408
+    },
+    "public_suite_evaluated": false,
+    "matched_seven_benchmark_macro": null,
+    "adapter_sha256": "41ed905ff6dee2dcee18daf7989f8851542e0a39cafc0e4956e4ab3fd3253474"
+  }
+}

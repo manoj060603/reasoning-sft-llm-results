@@ -1,0 +1,86 @@
+{
+  "model": "runs/pilot-filtered_random-sft/merged",
+  "identity": {
+    "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "config.json": "fcbd46a874eadd6e4f192854cec9dc2fd5ce8e5b7e9a557377a6bbca1f9a672c",
+    "generation_config.json": "f0e589e48660cf9df7b1fd5b6ec2ba8d1e28b69a2317e8486bbadf132bbd2fb5",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "model-00001-of-00002.safetensors": "4222aa97884a7d3c9dfbe4a9fb93ef43931b4949e702c9363718a892759aab58",
+    "model-00002-of-00002.safetensors": "17e3fc11e259932056b6500a2966bf875364decfa6c4b1d1afa966210a7cecb1",
+    "model.safetensors.index.json": "446488e522e2869be7ae879c735637a46375f0cc8aadc4e9fe01bbb88f5c87ff",
+    "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+    "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "tokenizer_config.json": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "seed": 0,
+  "n": 8,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "max_tokens": 8192,
+  "max_model_len": 32768,
+  "system": "Please reason step by step, and put your final answer within \\boxed{}.",
+  "generation_config": "vllm",
+  "max_num_seqs": 32,
+  "top_k": -1,
+  "min_p": 0.0,
+  "repetition_penalty": 1.0,
+  "batch_size": 32,
+  "tensor_parallel_size": 1,
+  "gpu_memory_utilization": 0.85,
+  "versions": {
+    "vllm": "0.19.0",
+    "transformers": "4.57.6",
+    "torch": "2.10.0",
+    "sympy": "1.14.0",
+    "antlr4-python3-runtime": "4.7.2",
+    "latex2sympy2": "1.9.1"
+  },
+  "grader_sha256": {
+    "grader.py": "43d858572b1dadda6fe3ec327db123bb5362fccd271ae58329c57f0c10521383",
+    "parser.py": "8d04ceb93e9ef50d61157fd1c8826a5cbf8d7f64cda85459f1166e19d8784208",
+    "math_normalization.py": "9c0484a01b76bd4582bfe61c8ee55df375dbc09782f1b587fc21b21dd80e23a0"
+  },
+  "problem_counts": {
+    "acereason_dev": 32
+  },
+  "problem_ids": {
+    "acereason_dev": [
+      "f72bf23c67d6f27d948f86ca95d74469f0252d597f07aed8134236bb1424c8d9",
+      "2eb742efb91c734a7c46674331e787312d60bfa5b018b1fb3859fdc6f7e6196d",
+      "0c2921c3ddc5c926dc960f0ca8975bcaca97db3e6fa3b8d9620410a4c2257171",
+      "6cc5973e51faf8558f4ad20f7f5a5d8a767b29f560d92836abf0e9b51764c9fe",
+      "5d58c22fd80a1a5e4e18f2363f594d2fc3a497c9b0b293944c26c9b99930f062",
+      "5353407b26cbccdf93836c74f0e15ec3cf50a6fd2043b6186811155f9618daed",
+      "36dca355744e435ff31bdde1903d51b2fee714a882f74501f9e3c16a0df45895",
+      "2ae4f0e130cadcd0531621005ef6ccac81aca2898fb542612f546c828a06c9d6",
+      "d15cc2c5e32c4ef2ff5d4c6d1d0f0c2be7e965b117efe4c4e45b76b5af9dc35a",
+      "2731ba9e6d9d7c6b60e7a97e8c7e4405d6a8f5327bf949b9a387596b42b79bbb",
+      "dfa5c97d57d0629e201deb3c9a7fbd609792a418a50056c9a8e2a4492107eb15",
+      "a370242aabbf9dbdca5894a39ef5b553eb07335f452fd2e594359dc424d5ac1d",
+      "0e236a741589d853f4282f0cfbdb7c0f5d5184a899aef54c22b27f2bd0ce21cb",
+      "0db515ff69961a5dbdd29a35a5703b97d4f15c3a220c7f8e0ff68b89a2625a87",
+      "293e6721ccded344b9212fcbfc0d9c75fb8e8e69a9ad4185d71705eb52c628f6",
+      "51b4b35a12b585093283a434350b9606143075a978fdd694ea2fc122023ad85b",
+      "57014b860b0882294925030e6f7236d9c67d657cf449f1f29a0e2f65b67bcaf7",
+      "c4bd49bf23b94414aae51fe0bbc32dcae0921389c0c20b9a30e2d008b0b29e66",
+      "e75a093a13d5292494b3c0895abcb983d6681e6618a6bb186b439c82952ae8c1",
+      "0d377430b8b172784444f65f7917fa31000cc39d63e66f2e3717cbbc6451a54e",
+      "d6cd3082d91e31abb23fd25c402a6de87272a01dd2653f8be3d51b2052f69d82",
+      "4a37125a1b96acb373435a12db5068136bb157b8f9d0af4b67eb1f44e5da519e",
+      "f9cbd3b4a4f0a26500da2fd6722ae70e224b9b1c339385ecd8cd7a87ca25c329",
+      "a24e23804581e6cf5d56ac8f3b6e7768442b6c9cbb5a0fde4d688a71d2e7b1a6",
+      "51dd794a629118139652293fb8674a659ffe87f59dd8be63f1841d44df71f9d2",
+      "af2dd0f8aefc7a5586e2302a7b7a9ba7412aefd6241c961839f71c0d2896727b",
+      "df8523a02b5482b3ab1c4ae263b1292cf179258f6423d752bf66e07c33ee3fd4",
+      "6e07c914de1b432604a4cdf3ed2074d7a95b1b92af9439868d3d017279c3ca3d",
+      "04992fdf4b7ccb5bc2a7e037ab90c140e18bd6fa18054275d12823045287d28a",
+      "3d49090a0cbdcc72530f568dce9b90b78c7ac60bb9eeb30b0e5db9b11fb0c07e",
+      "867b0fd5d31e8b8ed39e11c22cb7e797c0136a3c2fe952d3e167f7e461f8f2ec",
+      "3b801a33aac43a4e1874001c729977c5274cde6c94960680bab15e691ba2bd0d"
+    ]
+  },
+  "data": {
+    "acereason_dev": "1b74215afb0d18b7d992e0496fdf61d3f5a7977d72a669e8a49df4e9191dbdf6"
+  }
+}

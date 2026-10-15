@@ -1,0 +1,53 @@
+{
+  "aime": {
+    "count": 30,
+    "unicode_line_separators": 0,
+    "original_sha256": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc",
+    "clean_sha256": "afeac47232fe8975b2752a01da1af749171a6f97b9a53c8ee2f17db866425326"
+  },
+  "math": {
+    "count": 500,
+    "unicode_line_separators": 0,
+    "original_sha256": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94",
+    "clean_sha256": "35dc41080a3680858b27fa7e0533d2d547825316fc5dafe5d316f4ccc5a06132"
+  },
+  "amc": {
+    "count": 40,
+    "unicode_line_separators": 0,
+    "original_sha256": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4",
+    "clean_sha256": "5ed21b3a67cdca5ff9d248173c8817fd0f12a42667925f9bdd5f88906bfd699f"
+  },
+  "cn_math_2024": {
+    "count": 30,
+    "unicode_line_separators": 0,
+    "original_sha256": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533",
+    "clean_sha256": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533"
+  },
+  "kaoyan": {
+    "count": 199,
+    "unicode_line_separators": 0,
+    "original_sha256": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7",
+    "clean_sha256": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7"
+  },
+  "minerva": {
+    "count": 272,
+    "unicode_line_separators": 0,
+    "original_sha256": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d",
+    "clean_sha256": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d"
+  },
+  "olympiadbench": {
+    "count": 675,
+    "unicode_line_separators": 0,
+    "original_sha256": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f",
+    "clean_sha256": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f"
+  },
+  "gpqa": {
+    "count": 198,
+    "unicode_line_separators": 1,
+    "original_sha256": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f",
+    "clean_sha256": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f"
+  },
+  "limitations": [
+    "AIME25 is not supplied: historical leaderboard AVG cannot be reproduced."
+  ]
+}

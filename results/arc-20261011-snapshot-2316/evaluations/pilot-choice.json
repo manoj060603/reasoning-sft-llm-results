@@ -1,0 +1,31 @@
+{
+  "winner": "route-asft",
+  "development_scores": {
+    "filtered_random-sft": {
+      "problems": 32,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.07421875,
+      "pass_at_8": 0.21875
+    },
+    "route-sft": {
+      "problems": 32,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.15234375,
+      "pass_at_8": 0.375
+    },
+    "route-dft": {
+      "problems": 32,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.21875,
+      "pass_at_8": 0.46875
+    },
+    "route-asft": {
+      "problems": 32,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.25,
+      "pass_at_8": 0.5
+    }
+  },
+  "criterion": "held-out development pass@8, then pass@1, then simpler control",
+  "limitation": "32-question pilot screening, not a statistically established best recipe"
+}

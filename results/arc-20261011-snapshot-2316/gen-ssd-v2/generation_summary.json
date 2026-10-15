@@ -1,0 +1,17 @@
+{
+  "requested": 4,
+  "verified": 4,
+  "failed": 0,
+  "complete": true,
+  "source_considered": 32,
+  "guided_sha256": "501ff686eddf0a66ad09199d7a131e621735ce9a61fd956764aaf2b847cc4b43",
+  "existing_sha256": "4da490e7e85f6e9ed8892480f7b59bc6dbc0d2b610e177d151c9d1b2bf3dc676",
+  "training_cutoff": 4096,
+  "max_guided_training_tokens": 3532,
+  "max_existing_training_tokens": 2693,
+  "mean_output_tokens": 2879.0,
+  "attempt_histogram": {
+    "1": 8,
+    "2": 0
+  }
+}

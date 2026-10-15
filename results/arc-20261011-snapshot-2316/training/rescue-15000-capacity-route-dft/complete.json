@@ -1,0 +1,7 @@
+{
+  "steps": 1875,
+  "objective": "dft",
+  "merged": "runs/rescue-15000-capacity-route-dft/merged",
+  "training_seconds": 6500.554806979024,
+  "peak_gpu_bytes": 14986109952
+}

@@ -1,0 +1,9 @@
+# Separate Linux/CUDA Python 3.10 environment; avoid the archive's vLLM<=0.6.1 constraint.
+vllm==0.8.5
+transformers==4.51.3
+huggingface-hub==0.30.2
+sympy==1.13.1
+word2number==1.1
+Pebble==5.1.1
+timeout-decorator==0.5.0
+# Install latex2sympy2==1.9.1 with --no-deps and antlr4-python3-runtime==4.7.2 separately.

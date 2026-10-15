@@ -1,0 +1,23 @@
+{
+  "amc": {
+    "problems": 40,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.40625,
+    "pass_at_8": 0.675,
+    "truncated_samples": 52
+  },
+  "aime25": {
+    "problems": 30,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.041666666666666664,
+    "pass_at_8": 0.13333333333333333,
+    "truncated_samples": 66
+  },
+  "aime": {
+    "problems": 30,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.0625,
+    "pass_at_8": 0.2,
+    "truncated_samples": 83
+  }
+}

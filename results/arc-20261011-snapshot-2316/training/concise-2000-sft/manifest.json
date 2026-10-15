@@ -1,0 +1,19 @@
+{
+  "arguments": {
+    "model": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "data": "artifacts/datasets-concise-2k/concise.json",
+    "output": "runs/concise-2000-sft",
+    "objective": "sft",
+    "kl": 0.03,
+    "cutoff": 4096,
+    "steps": 250,
+    "accumulation": 8,
+    "lr": 1e-05,
+    "seed": 42,
+    "rank": 64,
+    "save_every": 50,
+    "keep_every": 50
+  },
+  "data_sha256": "ce7dedd308b5281ae987f7f3bcd44f03120e80ddb32062098a520ec233aef447",
+  "code_sha256": "cedbd74d06f5187e40b9cf81175b4f230a8009bb342acedae5a5b64da5b3b433"
+}

@@ -1,0 +1,304 @@
+{
+  "schema": "reasoning-sft-gen-ssd-2k-final-v1",
+  "job_id": 1145533,
+  "complete": true,
+  "preflight": {
+    "generation": {
+      "requested": 4,
+      "verified": 4,
+      "failed": 0,
+      "complete": true,
+      "source_considered": 32,
+      "guided_sha256": "501ff686eddf0a66ad09199d7a131e621735ce9a61fd956764aaf2b847cc4b43",
+      "existing_sha256": "4da490e7e85f6e9ed8892480f7b59bc6dbc0d2b610e177d151c9d1b2bf3dc676",
+      "training_cutoff": 4096,
+      "max_guided_training_tokens": 3532,
+      "max_existing_training_tokens": 2693,
+      "mean_output_tokens": 2879.0,
+      "attempt_histogram": {
+        "1": 8,
+        "2": 0
+      }
+    },
+    "validation": {
+      "schema": "reasoning-sft-gen-ssd-export-validation-v1",
+      "rows_per_arm": 4,
+      "identical_ordered_question_ids": true,
+      "unique_question_ids": 4,
+      "training_cutoff": 4096,
+      "max_guided_training_tokens": 3532,
+      "max_existing_training_tokens": 2693,
+      "guided_sha256": "501ff686eddf0a66ad09199d7a131e621735ce9a61fd956764aaf2b847cc4b43",
+      "existing_sha256": "4da490e7e85f6e9ed8892480f7b59bc6dbc0d2b610e177d151c9d1b2bf3dc676",
+      "loader": "datasets.load_dataset(json)"
+    }
+  },
+  "generation": {
+    "requested": 2000,
+    "verified": 2000,
+    "failed": 0,
+    "complete": true,
+    "source_considered": 4000,
+    "guided_sha256": "7a27ee1d5e47297414b8262dec979976b1c2f98ed8bdea53683edba31474c270",
+    "existing_sha256": "280e6c9df044f06cf4b0baa3caeeb340b94191666d551773aee17ee3fb4cb72f",
+    "training_cutoff": 4096,
+    "max_guided_training_tokens": 4095,
+    "max_existing_training_tokens": 4064,
+    "mean_output_tokens": 3062.681989247312,
+    "attempt_histogram": {
+      "1": 3720,
+      "2": 0,
+      "3": 0
+    }
+  },
+  "export_validation": {
+    "schema": "reasoning-sft-gen-ssd-export-validation-v1",
+    "rows_per_arm": 2000,
+    "identical_ordered_question_ids": true,
+    "unique_question_ids": 2000,
+    "training_cutoff": 4096,
+    "max_guided_training_tokens": 4095,
+    "max_existing_training_tokens": 4064,
+    "guided_sha256": "7a27ee1d5e47297414b8262dec979976b1c2f98ed8bdea53683edba31474c270",
+    "existing_sha256": "280e6c9df044f06cf4b0baa3caeeb340b94191666d551773aee17ee3fb4cb72f",
+    "loader": "datasets.load_dataset(json)"
+  },
+  "teacher": {
+    "repo": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+    "commit": "916b56a44061fd5cd7d6a8fb632557ed4f724f60",
+    "path": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--deepseek-ai--DeepSeek-R1-Distill-Qwen-7B/snapshots/916b56a44061fd5cd7d6a8fb632557ed4f724f60"
+  },
+  "training": {
+    "existing": {
+      "global_step": 250,
+      "finite_logs": true,
+      "train_loss": 0.548576637506485,
+      "train_runtime_seconds": 491.8058
+    },
+    "guided": {
+      "global_step": 250,
+      "finite_logs": true,
+      "train_loss": 0.39226389837265013,
+      "train_runtime_seconds": 533.0215
+    }
+  },
+  "development": {
+    "base": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.233125,
+      "pass_at_8": 0.475,
+      "generated_tokens": 2264070,
+      "mean_output_tokens": 1415.04375,
+      "truncated_samples": 29,
+      "boxed_answer_samples": 1571,
+      "mean_repeated_8gram_fraction": 0.057947954455918785
+    },
+    "existing": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.21875,
+      "pass_at_8": 0.475,
+      "generated_tokens": 6737555,
+      "mean_output_tokens": 4210.971875,
+      "truncated_samples": 152,
+      "boxed_answer_samples": 1444,
+      "mean_repeated_8gram_fraction": 0.13390854015723824
+    },
+    "guided": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.20875,
+      "pass_at_8": 0.485,
+      "generated_tokens": 6996954,
+      "mean_output_tokens": 4373.09625,
+      "truncated_samples": 157,
+      "boxed_answer_samples": 1449,
+      "mean_repeated_8gram_fraction": 0.13025425840247112
+    },
+    "guided_vs_existing": {
+      "baseline": {
+        "problems": 200,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.21875,
+        "pass_at_8": 0.475
+      },
+      "candidate": {
+        "problems": 200,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.20875,
+        "pass_at_8": 0.485
+      },
+      "unique_questions": 200,
+      "pass_at_1": {
+        "delta": -0.01,
+        "ci95": [
+          -0.03125,
+          0.014375
+        ]
+      },
+      "pass_at_8": {
+        "delta": 0.01,
+        "ci95": [
+          -0.045,
+          0.065
+        ]
+      }
+    },
+    "guided_vs_base": {
+      "baseline": {
+        "problems": 200,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.233125,
+        "pass_at_8": 0.475
+      },
+      "candidate": {
+        "problems": 200,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.20875,
+        "pass_at_8": 0.485
+      },
+      "unique_questions": 200,
+      "pass_at_1": {
+        "delta": -0.024375,
+        "ci95": [
+          -0.05125,
+          0.003125
+        ]
+      },
+      "pass_at_8": {
+        "delta": 0.01,
+        "ci95": [
+          -0.06,
+          0.08
+        ]
+      }
+    }
+  },
+  "selection": "guided",
+  "confirmation": {
+    "base": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.2675,
+      "pass_at_8": 0.535,
+      "generated_tokens": 2064605,
+      "mean_output_tokens": 1290.378125,
+      "truncated_samples": 21,
+      "boxed_answer_samples": 1580,
+      "mean_repeated_8gram_fraction": 0.060174890706452454
+    },
+    "existing": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.234375,
+      "pass_at_8": 0.52,
+      "generated_tokens": 6611134,
+      "mean_output_tokens": 4131.95875,
+      "truncated_samples": 144,
+      "boxed_answer_samples": 1454,
+      "mean_repeated_8gram_fraction": 0.12798463130912413
+    },
+    "guided": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.226875,
+      "pass_at_8": 0.51,
+      "generated_tokens": 8434563,
+      "mean_output_tokens": 5271.601875,
+      "truncated_samples": 191,
+      "boxed_answer_samples": 1413,
+      "mean_repeated_8gram_fraction": 0.1488899451740193
+    },
+    "guided_vs_existing": {
+      "baseline": {
+        "problems": 200,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.234375,
+        "pass_at_8": 0.52
+      },
+      "candidate": {
+        "problems": 200,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.226875,
+        "pass_at_8": 0.51
+      },
+      "unique_questions": 200,
+      "pass_at_1": {
+        "delta": -0.0075,
+        "ci95": [
+          -0.03,
+          0.014375
+        ]
+      },
+      "pass_at_8": {
+        "delta": -0.01,
+        "ci95": [
+          -0.07,
+          0.05
+        ]
+      }
+    },
+    "existing_vs_base": {
+      "baseline": {
+        "problems": 200,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.2675,
+        "pass_at_8": 0.535
+      },
+      "candidate": {
+        "problems": 200,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.234375,
+        "pass_at_8": 0.52
+      },
+      "unique_questions": 200,
+      "pass_at_1": {
+        "delta": -0.033125,
+        "ci95": [
+          -0.060625,
+          -0.00375
+        ]
+      },
+      "pass_at_8": {
+        "delta": -0.015,
+        "ci95": [
+          -0.075,
+          0.04
+        ]
+      }
+    },
+    "guided_vs_base": {
+      "baseline": {
+        "problems": 200,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.2675,
+        "pass_at_8": 0.535
+      },
+      "candidate": {
+        "problems": 200,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.226875,
+        "pass_at_8": 0.51
+      },
+      "unique_questions": 200,
+      "pass_at_1": {
+        "delta": -0.040625,
+        "ci95": [
+          -0.07,
+          -0.011875
+        ]
+      },
+      "pass_at_8": {
+        "delta": -0.025,
+        "ci95": [
+          -0.08,
+          0.025
+        ]
+      }
+    }
+  },
+  "public_suite_evaluated": false,
+  "historical_leaderboard_comparable": false,
+  "interpretation": "guided passed the existing-control development gate by 1 point pass@8, then lost 1 point to existing control and 2.5 points to base on fresh confirmation; all pass@8 intervals include zero and termination regressed"
+}

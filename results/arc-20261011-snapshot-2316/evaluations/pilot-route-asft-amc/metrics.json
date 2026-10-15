@@ -1,0 +1,9 @@
+{
+  "amc": {
+    "problems": 40,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.38125,
+    "pass_at_8": 0.7,
+    "truncated_samples": 8
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "synthetic": true,
+  "model_accuracy_measured": false,
+  "source_records": 48,
+  "train_pool": 40,
+  "validation": 8,
+  "selected_per_variant": 15,
+  "dev": 4
+}

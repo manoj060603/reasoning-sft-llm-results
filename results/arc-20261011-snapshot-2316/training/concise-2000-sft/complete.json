@@ -1,0 +1,7 @@
+{
+  "steps": 250,
+  "objective": "sft",
+  "merged": "runs/concise-2000-sft/merged",
+  "training_seconds": 645.0797352129593,
+  "peak_gpu_bytes": 11074246144
+}

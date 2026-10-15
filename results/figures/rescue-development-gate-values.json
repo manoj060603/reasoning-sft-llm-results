@@ -1,0 +1,45 @@
+{
+  "base": {
+    "problems": 200,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.23375,
+    "pass_at_8": 0.475,
+    "truncated_samples": 31
+  },
+  "candidate": {
+    "problems": 200,
+    "samples_per_problem": 8,
+    "pass_at_1": 0.199375,
+    "pass_at_8": 0.435,
+    "truncated_samples": 408
+  },
+  "comparison": {
+    "baseline": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.23375,
+      "pass_at_8": 0.475
+    },
+    "candidate": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.199375,
+      "pass_at_8": 0.435
+    },
+    "unique_questions": 200,
+    "pass_at_1": {
+      "delta": -0.034375,
+      "ci95": [
+        -0.06125,
+        -0.005625
+      ]
+    },
+    "pass_at_8": {
+      "delta": -0.04,
+      "ci95": [
+        -0.105,
+        0.025
+      ]
+    }
+  }
+}

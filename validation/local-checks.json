@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-11",
+  "unit_tests": 24,
+  "unit_tests_passed": true,
+  "syntax_checks_passed": true,
+  "real_qwen_tokenizer_synthetic_pipeline_passed": true,
+  "synthetic_examples": 48,
+  "cuda_available": false,
+  "mps_available": false,
+  "trained_model": false,
+  "benchmark_model_scores": null,
+  "caveat": "These are local checks. Actual ARC baseline results and pilot status are recorded separately under results/arc-20261011; local CPU tests are not model benchmark scores.",
+  "observed_local_versions": {
+    "python": "3.13",
+    "torch": "2.10.0",
+    "transformers": "5.5.0",
+    "numpy": "2.4.2",
+    "sklearn": "1.8.0"
+  }
+}

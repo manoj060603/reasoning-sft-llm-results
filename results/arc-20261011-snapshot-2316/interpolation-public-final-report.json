@@ -1,0 +1,29 @@
+{
+  "schema": "reasoning-sft-interpolation-public-final-v1",
+  "job_id": 1145532,
+  "complete": true,
+  "macro_bootstrap": {
+    "pass_at_1": {
+      "baseline": 0.23549731831212764,
+      "candidate": 0.23175458703734272,
+      "delta": -0.003742731274784916,
+      "ci95": [
+        -0.016954761136429495,
+        0.00945371077724019
+      ]
+    },
+    "pass_at_8": {
+      "baseline": 0.49547442493570193,
+      "candidate": 0.5063218527347998,
+      "delta": 0.010847427799097864,
+      "ci95": [
+        -0.02486800247737286,
+        0.04685103334262998
+      ]
+    }
+  },
+  "total_truncations": {
+    "baseline": 141,
+    "candidate": 343
+  }
+}

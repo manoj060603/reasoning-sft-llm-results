@@ -1,0 +1,91 @@
+{
+  "schema": "reasoning-sft-weight-interpolation-selection-v1",
+  "benchmark": "acereason_dev",
+  "rule": "among interpolated models choose pass@8, then pass@1, fewer truncations, less repeated-8-gram fraction",
+  "selected": "alpha-050",
+  "runs": {
+    "base": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.233125,
+      "pass_at_8": 0.475,
+      "generated_tokens": 2264070,
+      "mean_output_tokens": 1415.04375,
+      "truncated_samples": 29,
+      "boxed_answer_samples": 1571,
+      "mean_repeated_8gram_fraction": 0.05794795445591882,
+      "delta_pass_at_1": 0.0,
+      "delta_pass_at_8": 0.0,
+      "extra_truncated_samples": 0,
+      "extra_repeated_8gram_fraction": 0.0
+    },
+    "full": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.23,
+      "pass_at_8": 0.53,
+      "generated_tokens": 11166166,
+      "mean_output_tokens": 6978.85375,
+      "truncated_samples": 275,
+      "boxed_answer_samples": 1352,
+      "mean_repeated_8gram_fraction": 0.18813560647562594,
+      "delta_pass_at_1": -0.003124999999999989,
+      "delta_pass_at_8": 0.05500000000000005,
+      "extra_truncated_samples": 246,
+      "extra_repeated_8gram_fraction": 0.1301876520197071
+    },
+    "alpha-025": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.231875,
+      "pass_at_8": 0.45,
+      "generated_tokens": 2267061,
+      "mean_output_tokens": 1416.913125,
+      "truncated_samples": 25,
+      "boxed_answer_samples": 1574,
+      "mean_repeated_8gram_fraction": 0.05857687159105779,
+      "delta_pass_at_1": -0.0012500000000000011,
+      "delta_pass_at_8": -0.024999999999999967,
+      "extra_truncated_samples": -4,
+      "extra_repeated_8gram_fraction": 0.0006289171351389691
+    },
+    "alpha-050": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.2325,
+      "pass_at_8": 0.515,
+      "generated_tokens": 3425554,
+      "mean_output_tokens": 2140.97125,
+      "truncated_samples": 55,
+      "boxed_answer_samples": 1542,
+      "mean_repeated_8gram_fraction": 0.07475347312500813,
+      "delta_pass_at_1": -0.0006249999999999867,
+      "delta_pass_at_8": 0.040000000000000036,
+      "extra_truncated_samples": 26,
+      "extra_repeated_8gram_fraction": 0.01680551866908931
+    },
+    "alpha-075": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.22875,
+      "pass_at_8": 0.505,
+      "generated_tokens": 5884336,
+      "mean_output_tokens": 3677.71,
+      "truncated_samples": 119,
+      "boxed_answer_samples": 1480,
+      "mean_repeated_8gram_fraction": 0.11526894389248796,
+      "delta_pass_at_1": -0.00437499999999999,
+      "delta_pass_at_8": 0.030000000000000027,
+      "extra_truncated_samples": 90,
+      "extra_repeated_8gram_fraction": 0.05732098943656914
+    }
+  },
+  "manifest_sha256": {
+    "base": "0b0ac8b348dd8de6dde69a6a96a178875c7e537523a728efbfea7e6f6d3650e8",
+    "full": "092d3026cee20632b8e09dd438eee805f41b639393f96fe019d6d058ed219444",
+    "alpha-025": "2fc107611e78addfd63e13c676984cd4e4ac772f53ee2200532001e1ec349d8f",
+    "alpha-050": "e4aff7245c2043b4ae8f0844b40710579d72250ce0f71f3e3ab20aebb2f4d73a",
+    "alpha-075": "b62471fe43672664667b1c85bb42ef6ad73f4abbc30fc3fa6fd5c126d86edd87"
+  },
+  "analysis_code_sha256": "5a0a478e83408db877f665b4a068591a78b4751e19715c9fc269fb8d171b5815"
+}

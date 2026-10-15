@@ -1,0 +1,7 @@
+{
+  "steps": 1875,
+  "objective": "asft",
+  "merged": "runs/final-15000-route-asft/merged",
+  "training_seconds": 14286.753618687973,
+  "peak_gpu_bytes": 34171535360
+}

@@ -1,0 +1,43 @@
+### Full-data, full-parameter LLaMA-Factory SFT run.
+model_name_or_path: /projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1
+trust_remote_code: false
+flash_attn: sdpa
+
+stage: sft
+do_train: true
+finetuning_type: full
+
+dataset: advanced
+dataset_dir: /projects/tealab/rohit/reasoning-sft-20261011/artifacts/datasets-final-8k
+template: qwen
+cutoff_len: 4096
+max_samples: 15000
+overwrite_cache: true
+preprocessing_num_workers: 8
+dataloader_num_workers: 0
+train_on_prompt: false
+packing: false
+
+output_dir: /projects/tealab/rohit/reasoning-sft-20261011/runs/lmf-full-15000-sft
+overwrite_output_dir: false
+logging_steps: 1
+save_strategy: steps
+save_steps: 250
+save_total_limit: 2
+save_only_model: false
+plot_loss: true
+report_to: none
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 2.0e-6
+max_steps: 1875
+lr_scheduler_type: cosine
+warmup_ratio: 0.03
+weight_decay: 0.01
+max_grad_norm: 1.0
+bf16: true
+gradient_checkpointing: true
+seed: 42
+data_seed: 42
+ddp_timeout: 18000

@@ -1,0 +1,12 @@
+{
+  "original_pool_sha256": "c115f4331f485458616b8e29a3715422b5d4479396cf50c287183014820eabc9",
+  "original_validation_sha256": "5737267040ec4d3e2f3ea9cf1ebf25cbc9e95f5ad7da03b60a347263e0deca71",
+  "extra_exclusions": {
+    "artifacts/benchmarks_extended/aime25/test.jsonl": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d"
+  },
+  "train_before": 83037,
+  "train_after": 83037,
+  "validation_before": 1000,
+  "validation_after": 1000,
+  "heldout_rows_never_moved_to_train": true
+}

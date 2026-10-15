@@ -1,0 +1,15 @@
+{
+  "schema": "reasoning-sft-lmf-full-15000-v1",
+  "training_rows": 15000,
+  "unique_selected_ids": 15000,
+  "data_sha256": "dfd90ba66bf97bfe649befcb7edf009e5a539296790a22e0b12c19336d19d10a",
+  "selection_manifest_sha256": "06682645575be6f11c312cfd1a9870f645339b866170005150d6a70128587b96",
+  "dataset_info_sha256": "7bd4efafa5a62e36607a16e61f992587c7eb160b7d792e4bd1d901c3794fbbad",
+  "config_sha256": "d3eabcdd2f4e2f0bdb3ec82cfce5464703d579a0a290b8b486ca2530c4282757",
+  "llamafactory_source_tree": "05aa58cebdff9cb78fc06a5b94014dbad4f5c3d66d6de0a210bb2c4ef5a0af75",
+  "base_model": {
+    "repo": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "path": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "source_sha256": "5737267040ec4d3e2f3ea9cf1ebf25cbc9e95f5ad7da03b60a347263e0deca71",
+  "seed": 271828,
+  "size": 200,
+  "exclusions": {
+    "artifacts/dev-rescue/acereason_dev/test.jsonl": "035f7125f7c00cc05eb49db902bb430b87cb9997fbb8ecbcaf56eb33bda8daec"
+  },
+  "excluded_ids": 200,
+  "note": "Reference answers extracted from held-out teacher traces; not independently verified."
+}

@@ -1,0 +1,52 @@
+{
+  "acereason_dev": {
+    "baseline": {
+      "problems": 32,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.07421875,
+      "pass_at_8": 0.21875
+    },
+    "candidate": {
+      "problems": 32,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.15234375,
+      "pass_at_8": 0.375
+    },
+    "pass_at_1": {
+      "delta": 0.078125,
+      "ci95": [
+        0.0234375,
+        0.14453125
+      ]
+    },
+    "pass_at_8": {
+      "delta": 0.15625,
+      "ci95": [
+        0.03125,
+        0.28125
+      ]
+    }
+  },
+  "available_suite_macro": {
+    "pass_at_1": {
+      "baseline": 0.07421875,
+      "candidate": 0.15234375
+    },
+    "pass_at_8": {
+      "baseline": 0.21875,
+      "candidate": 0.375
+    }
+  },
+  "historical_leaderboard_avg": null,
+  "missing_leaderboard_benchmarks": [
+    "aime25",
+    "amc",
+    "cn_math_2024",
+    "gpqa",
+    "kaoyan",
+    "minerva",
+    "olympiadbench"
+  ],
+  "matched_seven_benchmark_macro": null,
+  "note": "Only matched internal runs are compared. Historical data versions and runtime are not verified; a separately sourced AIME25 does not establish exact historical comparability. Confidence intervals are per-benchmark, not multiple-comparison adjusted."
+}

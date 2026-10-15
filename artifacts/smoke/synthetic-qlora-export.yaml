@@ -1,0 +1,8 @@
+model_name_or_path: Qwen/Qwen2.5-3B-Instruct
+adapter_name_or_path: /Users/rohitsalla/Documents/Playground/Project-Reasoning-SFT-LLM-main/artifacts/smoke/qlora
+template: qwen
+finetuning_type: lora
+export_dir: /Users/rohitsalla/Documents/Playground/Project-Reasoning-SFT-LLM-main/artifacts/smoke/qlora-merged
+export_size: 5
+export_device: cpu
+export_legacy_format: false

@@ -1,0 +1,6 @@
+{
+  "source_sha256": "35f76b541157c71f41f31210de6933c969783ab73b479422daab175016da49f5",
+  "seed": 42,
+  "size": 4,
+  "note": "Reference answers extracted from held-out teacher traces; not independently verified."
+}

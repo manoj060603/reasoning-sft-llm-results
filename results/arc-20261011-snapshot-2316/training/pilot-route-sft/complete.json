@@ -1,0 +1,7 @@
+{
+  "steps": 64,
+  "objective": "sft",
+  "merged": "runs/pilot-route-sft/merged",
+  "training_seconds": 406.7647453453392,
+  "peak_gpu_bytes": 14966084608
+}

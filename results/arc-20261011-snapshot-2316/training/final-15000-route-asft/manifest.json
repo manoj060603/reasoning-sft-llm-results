@@ -1,0 +1,18 @@
+{
+  "arguments": {
+    "model": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "data": "artifacts/datasets-final-8k/advanced.json",
+    "output": "runs/final-15000-route-asft",
+    "objective": "asft",
+    "kl": 0.03,
+    "cutoff": 8192,
+    "steps": 1875,
+    "accumulation": 8,
+    "lr": 5e-05,
+    "seed": 42,
+    "rank": 64,
+    "save_every": 100
+  },
+  "data_sha256": "dfd90ba66bf97bfe649befcb7edf009e5a539296790a22e0b12c19336d19d10a",
+  "code_sha256": "10903c5e292ed8f0e17df863aa0aefd303ba033ae9f26559b1ab2ee6b47d71bb"
+}

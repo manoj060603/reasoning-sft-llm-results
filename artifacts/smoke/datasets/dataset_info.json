@@ -1,0 +1,14 @@
+{
+  "random": {
+    "file_name": "random.json"
+  },
+  "filtered_random": {
+    "file_name": "filtered_random.json"
+  },
+  "advanced": {
+    "file_name": "advanced.json"
+  },
+  "validation": {
+    "file_name": "validation.json"
+  }
+}

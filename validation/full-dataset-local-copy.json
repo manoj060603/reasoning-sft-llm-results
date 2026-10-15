@@ -1,0 +1,8 @@
+{
+  "training_examples": 15000,
+  "validation_examples": 420,
+  "ids_match_remote_selection_receipt": true,
+  "training_sha256": "dfd90ba66bf97bfe649befcb7edf009e5a539296790a22e0b12c19336d19d10a",
+  "validation_sha256": "ab934bf56d47b99fc10772434c8d636d1675c51bc35995ac92826e37b2bfdcbf",
+  "response_tokens": 62866732
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "reasoning-sft-gen-ssd-terminal-v1",
+  "job_id": 1144570,
+  "state": "FAILED",
+  "exit_code": "1:0",
+  "elapsed": "00:17:31",
+  "failure": "zero-token stop candidates were discarded, causing teacher returned no continuation for an active problem",
+  "record_files": 240,
+  "verified_correct": 96,
+  "training_started": false,
+  "evaluation_started": false,
+  "teacher": {
+    "repo": "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+    "commit": "916b56a44061fd5cd7d6a8fb632557ed4f724f60",
+    "path": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--deepseek-ai--DeepSeek-R1-Distill-Qwen-7B/snapshots/916b56a44061fd5cd7d6a8fb632557ed4f724f60"
+  },
+  "generation_manifest_sha256": "0cb066f194d6781d3068b08d9f5ceda7bb48298f51a581d3165e7e36d0218332",
+  "log_sha256": "40a01022ad6f58cb076eccac1815d3f8e6d9cec6e4e0758f4a054c1071a037b4"
+}

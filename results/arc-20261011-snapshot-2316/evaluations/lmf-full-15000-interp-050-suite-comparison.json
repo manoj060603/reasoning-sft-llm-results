@@ -1,0 +1,286 @@
+{
+  "amc": {
+    "baseline": {
+      "problems": 40,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.44375,
+      "pass_at_8": 0.775
+    },
+    "candidate": {
+      "problems": 40,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.41875,
+      "pass_at_8": 0.775
+    },
+    "unique_questions": 40,
+    "pass_at_1": {
+      "delta": -0.025,
+      "ci95": [
+        -0.071875,
+        0.021875
+      ]
+    },
+    "pass_at_8": {
+      "delta": 0.0,
+      "ci95": [
+        -0.1,
+        0.1
+      ]
+    }
+  },
+  "aime25": {
+    "baseline": {
+      "problems": 30,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.025,
+      "pass_at_8": 0.13333333333333333
+    },
+    "candidate": {
+      "problems": 30,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.0125,
+      "pass_at_8": 0.06666666666666667
+    },
+    "unique_questions": 30,
+    "pass_at_1": {
+      "delta": -0.0125,
+      "ci95": [
+        -0.03333333333333333,
+        0.004166666666666667
+      ]
+    },
+    "pass_at_8": {
+      "delta": -0.06666666666666667,
+      "ci95": [
+        -0.16666666666666666,
+        0.0
+      ]
+    }
+  },
+  "aime": {
+    "baseline": {
+      "problems": 30,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.07083333333333333,
+      "pass_at_8": 0.23333333333333334
+    },
+    "candidate": {
+      "problems": 30,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.075,
+      "pass_at_8": 0.2
+    },
+    "unique_questions": 30,
+    "pass_at_1": {
+      "delta": 0.004166666666666667,
+      "ci95": [
+        -0.029166666666666667,
+        0.041666666666666664
+      ]
+    },
+    "pass_at_8": {
+      "delta": -0.03333333333333333,
+      "ci95": [
+        -0.13333333333333333,
+        0.06666666666666667
+      ]
+    }
+  },
+  "math": {
+    "baseline": {
+      "problems": 500,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.65875,
+      "pass_at_8": 0.852
+    },
+    "candidate": {
+      "problems": 500,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.65575,
+      "pass_at_8": 0.846
+    },
+    "unique_questions": 500,
+    "pass_at_1": {
+      "delta": -0.003,
+      "ci95": [
+        -0.017,
+        0.0105
+      ]
+    },
+    "pass_at_8": {
+      "delta": -0.006,
+      "ci95": [
+        -0.028,
+        0.016
+      ]
+    }
+  },
+  "cn_math_2024": {
+    "baseline": {
+      "problems": 30,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.075,
+      "pass_at_8": 0.23333333333333334
+    },
+    "candidate": {
+      "problems": 30,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.09166666666666666,
+      "pass_at_8": 0.4
+    },
+    "unique_questions": 30,
+    "pass_at_1": {
+      "delta": 0.016666666666666666,
+      "ci95": [
+        -0.04583333333333333,
+        0.07916666666666666
+      ]
+    },
+    "pass_at_8": {
+      "delta": 0.16666666666666666,
+      "ci95": [
+        -0.03333333333333333,
+        0.36666666666666664
+      ]
+    }
+  },
+  "kaoyan": {
+    "baseline": {
+      "problems": 199,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.2242462311557789,
+      "pass_at_8": 0.5678391959798995
+    },
+    "candidate": {
+      "problems": 199,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.21670854271356785,
+      "pass_at_8": 0.5628140703517588
+    },
+    "unique_questions": 195,
+    "pass_at_1": {
+      "delta": -0.007537688442211055,
+      "ci95": [
+        -0.03362944162436548,
+        0.019770408163265307
+      ]
+    },
+    "pass_at_8": {
+      "delta": -0.005025125628140704,
+      "ci95": [
+        -0.06060606060606061,
+        0.04975124378109453
+      ]
+    }
+  },
+  "minerva": {
+    "baseline": {
+      "problems": 272,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.31066176470588236,
+      "pass_at_8": 0.4963235294117647
+    },
+    "candidate": {
+      "problems": 272,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.3083639705882353,
+      "pass_at_8": 0.4852941176470588
+    },
+    "unique_questions": 272,
+    "pass_at_1": {
+      "delta": -0.002297794117647059,
+      "ci95": [
+        -0.02022058823529412,
+        0.015165441176470588
+      ]
+    },
+    "pass_at_8": {
+      "delta": -0.011029411764705883,
+      "ci95": [
+        -0.051470588235294115,
+        0.029411764705882353
+      ]
+    }
+  },
+  "olympiadbench": {
+    "baseline": {
+      "problems": 675,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.275,
+      "pass_at_8": 0.4948148148148148
+    },
+    "candidate": {
+      "problems": 675,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.2838888888888889,
+      "pass_at_8": 0.4918518518518519
+    },
+    "unique_questions": 675,
+    "pass_at_1": {
+      "delta": 0.008888888888888889,
+      "ci95": [
+        -0.002777777777777778,
+        0.020370370370370372
+      ]
+    },
+    "pass_at_8": {
+      "delta": -0.002962962962962963,
+      "ci95": [
+        -0.02962962962962963,
+        0.023703703703703703
+      ]
+    }
+  },
+  "gpqa": {
+    "baseline": {
+      "problems": 198,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.2948232323232323,
+      "pass_at_8": 0.7676767676767676
+    },
+    "candidate": {
+      "problems": 198,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.2904040404040404,
+      "pass_at_8": 0.7626262626262627
+    },
+    "unique_questions": 198,
+    "pass_at_1": {
+      "delta": -0.004419191919191919,
+      "ci95": [
+        -0.030934343434343436,
+        0.025252525252525252
+      ]
+    },
+    "pass_at_8": {
+      "delta": -0.005050505050505051,
+      "ci95": [
+        -0.07575757575757576,
+        0.06565656565656566
+      ]
+    }
+  },
+  "available_suite_macro": {
+    "pass_at_1": {
+      "baseline": 0.2642293957242474,
+      "candidate": 0.26144801214015545
+    },
+    "pass_at_8": {
+      "baseline": 0.5059615897648052,
+      "candidate": 0.5100281076826221
+    }
+  },
+  "historical_leaderboard_avg": null,
+  "missing_leaderboard_benchmarks": [],
+  "matched_seven_benchmark_macro": {
+    "pass_at_1": {
+      "baseline": 0.23549731831212767,
+      "candidate": 0.23175458703734272
+    },
+    "pass_at_8": {
+      "baseline": 0.49547442493570193,
+      "candidate": 0.5063218527347998
+    }
+  },
+  "note": "Only matched internal runs are compared. Historical data versions and runtime are not verified; a separately sourced AIME25 does not establish exact historical comparability. Confidence intervals resample normalized question clusters (keeping duplicate records together), are per-benchmark, and are not multiple-comparison adjusted."
+}

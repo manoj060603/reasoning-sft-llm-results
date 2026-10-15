@@ -1,0 +1,51 @@
+{
+  "schema": "reasoning-sft-gen-ssd-2k-selection-v1",
+  "rule": "guided pass@8 must exceed matched existing-target full SFT and add no more than 40 truncations",
+  "selected": "guided",
+  "runs": {
+    "base": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.233125,
+      "pass_at_8": 0.475,
+      "generated_tokens": 2264070,
+      "mean_output_tokens": 1415.04375,
+      "truncated_samples": 29,
+      "boxed_answer_samples": 1571,
+      "mean_repeated_8gram_fraction": 0.05794795445591882
+    },
+    "existing": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.21875,
+      "pass_at_8": 0.475,
+      "generated_tokens": 6737555,
+      "mean_output_tokens": 4210.971875,
+      "truncated_samples": 152,
+      "boxed_answer_samples": 1444,
+      "mean_repeated_8gram_fraction": 0.13390854015723824
+    },
+    "guided": {
+      "problems": 200,
+      "samples_per_problem": 8,
+      "pass_at_1": 0.20875,
+      "pass_at_8": 0.485,
+      "generated_tokens": 6996954,
+      "mean_output_tokens": 4373.09625,
+      "truncated_samples": 157,
+      "boxed_answer_samples": 1449,
+      "mean_repeated_8gram_fraction": 0.13025425840247123
+    }
+  },
+  "delta_guided_vs_existing": {
+    "pass_at_1": -0.010000000000000009,
+    "pass_at_8": 0.010000000000000009,
+    "truncated_samples": 5
+  },
+  "manifest_sha256": {
+    "base": "0b0ac8b348dd8de6dde69a6a96a178875c7e537523a728efbfea7e6f6d3650e8",
+    "existing": "5a9f005651dc8412e1988f52f92dab87e0c3df774f00c90d515a135f67c8ce07",
+    "guided": "1d5df4faf2a06bc7df7239701db5ab4359c9337145147168e075b7f8ab023329"
+  },
+  "analysis_code_sha256": "9fff8912775cfba931116af4ad837f64f5fd8638968c9eec7665ed83f23d8118"
+}

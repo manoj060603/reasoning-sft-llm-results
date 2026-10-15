@@ -1,0 +1,12 @@
+{
+  "schema": "reasoning-sft-gen-ssd-export-validation-v1",
+  "rows_per_arm": 2000,
+  "identical_ordered_question_ids": true,
+  "unique_question_ids": 2000,
+  "training_cutoff": 4096,
+  "max_guided_training_tokens": 4095,
+  "max_existing_training_tokens": 4064,
+  "guided_sha256": "7a27ee1d5e47297414b8262dec979976b1c2f98ed8bdea53683edba31474c270",
+  "existing_sha256": "280e6c9df044f06cf4b0baa3caeeb340b94191666d551773aee17ee3fb4cb72f",
+  "loader": "datasets.load_dataset(json)"
+}

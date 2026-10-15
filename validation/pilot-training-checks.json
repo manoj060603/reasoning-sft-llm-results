@@ -1,0 +1,38 @@
+{
+  "pilot-filtered_random-sft": {
+    "updates": 64,
+    "last_step": 64,
+    "finite_loss_and_gradients": true,
+    "used_examples": 512,
+    "dropped_examples": 0,
+    "optimization_seconds": 567.5177610432729,
+    "merged_export_complete": true
+  },
+  "pilot-route-asft": {
+    "updates": 64,
+    "last_step": 64,
+    "finite_loss_and_gradients": true,
+    "used_examples": 512,
+    "dropped_examples": 0,
+    "optimization_seconds": 500.96580675337464,
+    "merged_export_complete": true
+  },
+  "pilot-route-dft": {
+    "updates": 64,
+    "last_step": 64,
+    "finite_loss_and_gradients": true,
+    "used_examples": 512,
+    "dropped_examples": 0,
+    "optimization_seconds": 385.33613686077297,
+    "merged_export_complete": true
+  },
+  "pilot-route-sft": {
+    "updates": 64,
+    "last_step": 64,
+    "finite_loss_and_gradients": true,
+    "used_examples": 512,
+    "dropped_examples": 0,
+    "optimization_seconds": 387.7947822101414,
+    "merged_export_complete": true
+  }
+}

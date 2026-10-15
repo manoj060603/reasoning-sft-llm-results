@@ -1,0 +1,21 @@
+{
+  "schema": "reasoning-sft-gen-ssd-2k-v1",
+  "method": "generation-time chunk selection by lowest base-student PPL",
+  "paper": "https://arxiv.org/abs/2604.02819",
+  "adaptation": "4/2 candidates, 1024-token chunks, 4096-token cap; paper default is 16/8/4, 4096-token chunks, 16384-token cap",
+  "input": "artifacts/datasets-rescue-4k/advanced.json",
+  "input_sha256": "4877cd3e25a361722cf6e11b378617e5e1ae2833a5060908a36a20e4156dc1ea",
+  "teacher": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--deepseek-ai--DeepSeek-R1-Distill-Qwen-7B/snapshots/916b56a44061fd5cd7d6a8fb632557ed4f724f60",
+  "student": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "target_size": 2000,
+  "max_source": 4000,
+  "attempts": 3,
+  "batch_size": 24,
+  "score_batch_size": 2,
+  "chunk_tokens": 1024,
+  "max_new_tokens": 4096,
+  "first_candidates": 4,
+  "later_candidates": 2,
+  "training_cutoff": 4096,
+  "seed": 42
+}

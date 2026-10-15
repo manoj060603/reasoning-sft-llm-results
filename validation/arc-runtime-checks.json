@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-11",
+  "unit_tests_passed_on_arc": 24,
+  "tiny_cpu_model_export_roundtrip": true,
+  "control_checkpoint_step": 64,
+  "control_optimization_seconds_from_log": 567.5177610432729,
+  "control_merged_export_complete": true,
+  "control_exported_parameters_checked": 3085938688,
+  "control_exported_parameters_all_finite": true,
+  "control_exported_parameter_absolute_maximum": 91.5,
+  "tokenizer_vocabulary_equal_to_base": true,
+  "tokenizer_chat_template_equal_to_base": true,
+  "tokenizer_pre_tokenizer_equal_to_base": true,
+  "identical_prompt_tokenizations_checked": 72,
+  "stop_token_and_context_config_equal_to_base": true,
+  "worker_profile": "Ten-second nonblocking profile observed sampling, scheduling, model execution, and output updates; not a single blocked operation.",
+  "caveat": "These checks validate implementation/runtime only. Accuracy is reported separately from completed evaluations."
+}

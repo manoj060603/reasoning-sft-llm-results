@@ -1,0 +1,37 @@
+{
+  "input_sha256": "35f76b541157c71f41f31210de6933c969783ab73b479422daab175016da49f5",
+  "arguments": {
+    "input": "artifacts/smoke/prepared/validation.json",
+    "output": "artifacts/smoke/provenance_features.json",
+    "model": "artifacts/tokenizer",
+    "revision": "main",
+    "clusters": 4,
+    "embedding_model": null,
+    "score_nll": false,
+    "nll_tokens": 512,
+    "seed": 42
+  },
+  "provenance": {
+    "code_sha256": "5cee76526c1b552e53b490c811c2e4c5506758985be735c13bc0945fb6a59d13",
+    "tokenizer_commit": null,
+    "model_commit": null,
+    "versions": {
+      "transformers": "5.5.0",
+      "scikit-learn": "1.8.0",
+      "numpy": "2.4.2"
+    },
+    "local_tokenizer_files": {
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    }
+  },
+  "resolved_tokenizer_commit": null,
+  "resolved_model_commit": null,
+  "clusters": {
+    "2": 5,
+    "0": 1,
+    "3": 1,
+    "1": 1
+  }
+}

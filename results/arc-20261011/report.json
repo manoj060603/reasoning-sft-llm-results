@@ -1,0 +1,78 @@
+{
+  "complete": {
+    "base-amc": {
+      "amc": {
+        "problems": 40,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.415625,
+        "pass_at_8": 0.675,
+        "generated_tokens": 362369,
+        "mean_output_tokens": 1132.403125,
+        "truncated_samples": 3,
+        "boxed_answer_samples": 317,
+        "mean_repeated_8gram_fraction": 0.043686817132389255
+      }
+    },
+    "pilot-filtered_random-sft-dev": {
+      "acereason_dev": {
+        "problems": 32,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.07421875,
+        "pass_at_8": 0.21875,
+        "generated_tokens": 1650115,
+        "mean_output_tokens": 6445.76171875,
+        "truncated_samples": 187,
+        "boxed_answer_samples": 73,
+        "mean_repeated_8gram_fraction": 0.5439839249462318
+      }
+    },
+    "pilot-route-asft-dev": {
+      "acereason_dev": {
+        "problems": 32,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.25,
+        "pass_at_8": 0.5,
+        "generated_tokens": 318860,
+        "mean_output_tokens": 1245.546875,
+        "truncated_samples": 8,
+        "boxed_answer_samples": 249,
+        "mean_repeated_8gram_fraction": 0.07434412880271296
+      }
+    },
+    "pilot-route-dft-dev": {
+      "acereason_dev": {
+        "problems": 32,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.21875,
+        "pass_at_8": 0.46875,
+        "generated_tokens": 479982,
+        "mean_output_tokens": 1874.9296875,
+        "truncated_samples": 29,
+        "boxed_answer_samples": 223,
+        "mean_repeated_8gram_fraction": 0.12423619052924616
+      }
+    },
+    "pilot-route-sft-dev": {
+      "acereason_dev": {
+        "problems": 32,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.15234375,
+        "pass_at_8": 0.375,
+        "generated_tokens": 1377343,
+        "mean_output_tokens": 5380.24609375,
+        "truncated_samples": 146,
+        "boxed_answer_samples": 113,
+        "mean_repeated_8gram_fraction": 0.4353689086463268
+      }
+    }
+  },
+  "incomplete": {
+    "base-amc-failed-init-631837": "incomplete benchmark: amc",
+    "full-base-suite": "incomplete benchmark: amc",
+    "full-base-suite-failed-init-1119134": "incomplete benchmark: amc",
+    "pilot-filtered_random-sft-dev-aborted-32k": "incomplete benchmark: acereason_dev",
+    "pilot-route-asft-amc": "incomplete benchmark: amc"
+  },
+  "historical_leaderboard_beaten": null,
+  "note": "Development pilots and individual benchmarks are not a full historical leaderboard score."
+}

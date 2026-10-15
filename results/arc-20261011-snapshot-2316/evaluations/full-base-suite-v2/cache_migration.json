@@ -1,0 +1,114 @@
+{
+  "source": "results/full-base-suite",
+  "source_manifest_sha256": "bb2363f895b205e4b9a3149a7fae1c81bd201adfe213454c447b80023007bdd7",
+  "changed_identity_benchmarks": [
+    "kaoyan"
+  ],
+  "copied_complete_benchmarks": [
+    "aime",
+    "aime25",
+    "amc",
+    "cn_math_2024",
+    "math"
+  ],
+  "datasets_unchanged": true,
+  "source_preserved": true,
+  "duplicate_audit": {
+    "amc": {
+      "records": 40,
+      "unique_questions": 40,
+      "duplicate_groups": [],
+      "conflicting_duplicate_answers": false
+    },
+    "aime25": {
+      "records": 30,
+      "unique_questions": 30,
+      "duplicate_groups": [],
+      "conflicting_duplicate_answers": false
+    },
+    "aime": {
+      "records": 30,
+      "unique_questions": 30,
+      "duplicate_groups": [],
+      "conflicting_duplicate_answers": false
+    },
+    "math": {
+      "records": 500,
+      "unique_questions": 500,
+      "duplicate_groups": [],
+      "conflicting_duplicate_answers": false
+    },
+    "cn_math_2024": {
+      "records": 30,
+      "unique_questions": 30,
+      "duplicate_groups": [],
+      "conflicting_duplicate_answers": false
+    },
+    "kaoyan": {
+      "records": 199,
+      "unique_questions": 195,
+      "duplicate_groups": [
+        {
+          "question_hash": "7c6f5caa64f699f3875c8a1557610b5609bf8317104593d594f46b391ec25d24",
+          "row_indices": [
+            21,
+            88
+          ],
+          "answers": [
+            "(1,1)"
+          ]
+        },
+        {
+          "question_hash": "ba48582b07f2bcdc1d3756a53b54a90982ec7cecf9ce1b60948dd8cc4ada6a5a",
+          "row_indices": [
+            141,
+            174
+          ],
+          "answers": [
+            "\\frac{1}{2}"
+          ]
+        },
+        {
+          "question_hash": "d5b1f15ac9e2b233fe72be4711f2dee47b2b52a32c2704b8db548111e8ca15a5",
+          "row_indices": [
+            151,
+            165
+          ],
+          "answers": [
+            "D"
+          ]
+        },
+        {
+          "question_hash": "0e135ae9e4c8f11612aaa262a96144f5db0abd58831eee65ef835e8768d7f62f",
+          "row_indices": [
+            156,
+            178
+          ],
+          "answers": [
+            "D"
+          ]
+        }
+      ],
+      "conflicting_duplicate_answers": false
+    },
+    "minerva": {
+      "records": 272,
+      "unique_questions": 272,
+      "duplicate_groups": [],
+      "conflicting_duplicate_answers": false
+    },
+    "olympiadbench": {
+      "records": 675,
+      "unique_questions": 675,
+      "duplicate_groups": [],
+      "conflicting_duplicate_answers": false
+    },
+    "gpqa": {
+      "records": 198,
+      "unique_questions": 198,
+      "duplicate_groups": [],
+      "conflicting_duplicate_answers": false
+    }
+  },
+  "note": "Only unevaluated benchmark IDs changed. Completed predictions copied byte-for-byte."
+}

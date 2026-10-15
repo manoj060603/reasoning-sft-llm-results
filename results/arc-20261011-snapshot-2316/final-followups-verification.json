@@ -1,0 +1,33 @@
+{
+  "schema": "reasoning-sft-followups-verification-v1",
+  "jobs": {
+    "interpolation": {
+      "id": 1145532,
+      "state": "COMPLETED",
+      "records": 1974,
+      "responses": 15792,
+      "benchmarks": 9,
+      "protocol_matches_base": true
+    },
+    "gen_ssd": {
+      "id": 1145533,
+      "state": "COMPLETED",
+      "rows_per_arm": 2000,
+      "identical_ordered_question_ids": true,
+      "max_guided_training_tokens": 4095,
+      "max_existing_training_tokens": 4064,
+      "updates_per_arm": 250,
+      "finite_logs": true,
+      "development_predictions": {
+        "base": 1600,
+        "existing": 1600,
+        "guided": 1600
+      },
+      "confirmation_predictions": {
+        "base": 1600,
+        "existing": 1600,
+        "guided": 1600
+      }
+    }
+  }
+}

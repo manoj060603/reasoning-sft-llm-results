@@ -1,0 +1,90 @@
+{
+  "arguments": {
+    "pool": "/Users/rohitsalla/Documents/Playground/Project-Reasoning-SFT-LLM-main/artifacts/smoke/prepared/pool.json",
+    "validation": "/Users/rohitsalla/Documents/Playground/Project-Reasoning-SFT-LLM-main/artifacts/smoke/prepared/validation.json",
+    "features": "/Users/rohitsalla/Documents/Playground/Project-Reasoning-SFT-LLM-main/artifacts/smoke/features.json",
+    "validation_features": "/Users/rohitsalla/Documents/Playground/Project-Reasoning-SFT-LLM-main/artifacts/smoke/val_features.json",
+    "output": "/Users/rohitsalla/Documents/Playground/Project-Reasoning-SFT-LLM-main/artifacts/smoke/datasets",
+    "size": 15,
+    "seed": 42,
+    "cutoff": 16384,
+    "strategy": "diversity"
+  },
+  "quotas": {
+    "1": 7,
+    "2": 6,
+    "0": 1,
+    "3": 1
+  },
+  "pool_sha256": "bf872c948c16715bdd32e3905c260205a39e8b4be55afd9b5785e6cb25416825",
+  "features_sha256": "2a71cda737693385fdc7d23bc7f20d7b62bd69c0beb0d807136e80d1fd0ea752",
+  "selected_ids": {
+    "random": [
+      "b76a42cc49dcbe32c5c64932c775c6387fcae4440b1ff96c0abf52e6631c3976",
+      "1a1096c81507dea84456d3a816e2388f4fe0d2b3cfc721741da877b45b39b9c7",
+      "7cf09e026b312dcf66e0855f6a2f1c562b63853c0f695f5c408a7e7a3adad7ea",
+      "9b16283de7f502f7132dd42b80ecccb20e39267d25382af341da614f4ed43005",
+      "d7283fb797fe4eeb325f1fa61ea523d31ae35f3211fd533dd5092be1d3912b3e",
+      "a037517ba0fbea4fc939c95e8c8002a595440db270a33342c80ae6a0dbca64e2",
+      "4066610eb4a69d48905e47f9bd686d97571bd52133aed0a11623241c8fe59c9f",
+      "9df1f6eb21c7c333b0a75bc9035c3c50d836fe8a5d1a5d06b3db505ad3f775df",
+      "18b110133890e93829cf9202db257c87a59b492685283fbe1773920893122a5e",
+      "2be10d8576cfa4925c9a236f6d54b2a5b71e89f80c32e2b7521a0cad481a10c5",
+      "51a3d2aa4fa9176b550a957ca825e932bcea2c82591676ac2e703d2d1a059f25",
+      "c423b4e29d445c0de7137fa98b11e7d0605deeda786ca50b13ed779714c2c4b5",
+      "32d8e18039e48c829122bdf1fc9d912d2d4a291e739136a8bd84731d46dffc60",
+      "e972c96154208f4b1630ea9cd7bb1b919d2cf357e0df2d99e33f0b0b7eb93fbc",
+      "7a6f705cb0fe10312220616cf734dc0fc4f996f040d4ec5bac7c1e3fb5efea31"
+    ],
+    "filtered_random": [
+      "b76a42cc49dcbe32c5c64932c775c6387fcae4440b1ff96c0abf52e6631c3976",
+      "1a1096c81507dea84456d3a816e2388f4fe0d2b3cfc721741da877b45b39b9c7",
+      "7cf09e026b312dcf66e0855f6a2f1c562b63853c0f695f5c408a7e7a3adad7ea",
+      "9b16283de7f502f7132dd42b80ecccb20e39267d25382af341da614f4ed43005",
+      "d7283fb797fe4eeb325f1fa61ea523d31ae35f3211fd533dd5092be1d3912b3e",
+      "a037517ba0fbea4fc939c95e8c8002a595440db270a33342c80ae6a0dbca64e2",
+      "4066610eb4a69d48905e47f9bd686d97571bd52133aed0a11623241c8fe59c9f",
+      "9df1f6eb21c7c333b0a75bc9035c3c50d836fe8a5d1a5d06b3db505ad3f775df",
+      "18b110133890e93829cf9202db257c87a59b492685283fbe1773920893122a5e",
+      "2be10d8576cfa4925c9a236f6d54b2a5b71e89f80c32e2b7521a0cad481a10c5",
+      "51a3d2aa4fa9176b550a957ca825e932bcea2c82591676ac2e703d2d1a059f25",
+      "c423b4e29d445c0de7137fa98b11e7d0605deeda786ca50b13ed779714c2c4b5",
+      "32d8e18039e48c829122bdf1fc9d912d2d4a291e739136a8bd84731d46dffc60",
+      "e972c96154208f4b1630ea9cd7bb1b919d2cf357e0df2d99e33f0b0b7eb93fbc",
+      "7a6f705cb0fe10312220616cf734dc0fc4f996f040d4ec5bac7c1e3fb5efea31"
+    ],
+    "advanced": [
+      "f3bb7918ae627b77bcb92e0220b534647512d7735abcfe58fad1b4000b30f8db",
+      "d95c7dbfd744371e89f1e482044ebcae10d3ca9b64b428bbf57f9abf1635a3a6",
+      "c423b4e29d445c0de7137fa98b11e7d0605deeda786ca50b13ed779714c2c4b5",
+      "b3f73f4a4bbca222cdc7e94d3fac0473b1356a5e7fce8b69d7d4fec19e8e0d77",
+      "22eb240851c2a62e60a35bea36dd55ee69f37d3e62e2642064b8e83d1c8b0d92",
+      "9df1f6eb21c7c333b0a75bc9035c3c50d836fe8a5d1a5d06b3db505ad3f775df",
+      "7a6f705cb0fe10312220616cf734dc0fc4f996f040d4ec5bac7c1e3fb5efea31",
+      "d7283fb797fe4eeb325f1fa61ea523d31ae35f3211fd533dd5092be1d3912b3e",
+      "24637a7402008da5eaa27a26573ee66f33a52aad572eb95a936afb4c6633454d",
+      "f6da6cec7c66d87f6a24b886f3e11c4a92124740e45ad6fb169e26e3fe1abc59",
+      "2b0339013bfc91abbb6b4ddd55d62f950acc5267adc9a03967e807e8af950444",
+      "9b16283de7f502f7132dd42b80ecccb20e39267d25382af341da614f4ed43005",
+      "69aeb14a5b5a1c0ad56286cd91eb2a4c1aa3b227944dfda3c169a9a61cb43191",
+      "e9b5788cc0874200529575d03de5bf14b5006c24acbc901309f6f7c727bd9b24",
+      "e33a76dbd9286981bf7bcacbf823009bd36330a4fecc5a10bd4e83c3ac40c211"
+    ],
+    "validation": [
+      "a31533fa51bdb8b3b4d430fbb43c221088692423b1bf291070da41bbad9e4ba2",
+      "855fe26e49fa84213b7615645b6421d8185c69a3461c693ca2c0362532d9c2d4",
+      "9276ee9e35fdd198e0410a757ee225c1351cadd3792e126b97a31e0dbc9fa52b",
+      "3c7ebd9b2f4b2cf48cd73d8be5dffe139f60eff99e2d5d151596b21275e8799a",
+      "7c77377d9949f547514e156ca5c767c83170cdc7268e2466b8b97a73bacc4ba6",
+      "332e22ce24a6c7d56ff3676c85af6e87c493ae0e55a9beaba83f78ebf51c6de7",
+      "b3c3cd1bc78174c176099da1e6e64db3786f8467241a31497a63893b30f6064b",
+      "e4012c40a8f353ce3c63015bb718dbb5a47c2c93e11284a80a0fa867b51cdd26"
+    ]
+  },
+  "response_tokens": {
+    "random": 12834,
+    "filtered_random": 12834,
+    "advanced": 12826,
+    "validation": 6815
+  }
+}
