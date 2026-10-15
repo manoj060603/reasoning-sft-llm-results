@@ -531,3 +531,27 @@ full-parameter updates. Guided passed the development gate by +1.0 pass@8 point
 against existing targets, but on fresh confirmation scored 51.0% versus 52.0%
 for existing targets and 53.5% for base. It also increased truncations to 191,
 versus 144 and 21. No public evaluation was performed for the 2K arms.
+
+## Compact balanced 15K terminal result (job 1156820)
+
+The strict all-benchmark experiment completed on October 15, 2026. It trained exactly 15,000 unique rows for all 1,875 planned updates. The dataset SHA-256 was `fb1a2dfe71f239be755d0bceb03e443888ecfd895ce9cbb3b1465b36bc091e48`. All 1,875 logged losses and gradient norms were finite (loss range 0.1881–0.5890). The complete nine-benchmark evaluation contains eight samples for every problem and uses question IDs matched exactly to the base manifest.
+
+| Benchmark | Base pass@1 | Compact pass@1 | Base pass@8 | Compact pass@8 | Pass@8 delta and paired 95% CI | Compact trunc. | Strict Fall 2025 column gate |
+|---|---:|---:|---:|---:|---:|---:|:---:|
+| AIME24 | 7.08% | 3.33% | 23.33% | 13.33% | -10.00 pp [-20.00, +0.00] | 3 | no |
+| AIME25 | 2.50% | 0.83% | 13.33% | 6.67% | -6.67 pp [-23.33, +6.67] | 0 | no |
+| MATH | 65.88% | 59.90% | 85.20% | 82.60% | -2.60 pp [-5.40, +0.20] | 5 | no |
+| CN Math 2024 | 7.50% | 2.50% | 23.33% | 16.67% | -6.67 pp [-23.33, +10.00] | 2 | no |
+| Kaoyan | 22.42% | 22.55% | 56.78% | 57.29% | +0.50 pp [-6.03, +6.60] | 0 | no |
+| AMC | 44.38% | 32.81% | 77.50% | 62.50% | -15.00 pp [-27.50, -5.00] | 2 | no |
+| Minerva | 31.07% | 28.58% | 49.63% | 48.16% | -1.47 pp [-5.51, +2.57] | 4 | yes |
+| OlympiadBench | 27.50% | 22.04% | 49.48% | 42.22% | -7.26 pp [-10.22, -4.30] | 24 | no |
+| GPQA | 29.48% | 27.59% | 76.77% | 80.30% | +3.54 pp [-2.02, +9.09] | 4 | yes |
+
+The seven-benchmark macro fell from **49.55% to 44.83% pass@8** (-4.72 points) and from **23.55% to 19.56% pass@1** (-3.99 points). The unweighted nine-benchmark pass@8 macro fell from 50.60% to 45.53%. Per-benchmark confidence intervals are paired, cluster-aware where duplicate prompts exist, and unadjusted for multiple comparisons.
+
+The compact targets repaired generation behavior: total truncations fell from **141 to 44** out of 15,792 samples, mean output length fell from 1064.5 to 695.7 tokens, and mean repeated-8-gram fraction fell from 0.0384 to 0.0288. Accuracy did not transfer: only Minerva and GPQA cleared their strict historical score thresholds, so the all-nine gate is **failed (2/9 columns)**.
+
+This result rejects the hypothesis that post-`</think>` compact targets plus balanced quotas and a smaller learning rate would dominate every column. It also shows that stopping quality can improve while reasoning accuracy regresses. The earlier ordinary full-SFT model remains the strongest complete candidate by matched seven-benchmark pass@8 at 51.52%; the compact model scores 44.83%. No official historical leaderboard claim is made because dataset and runtime equivalence remain unverified.
+
+Auditable receipts: `results/arc-20261011-snapshot-2316/compact-balanced/final-report.json`, `results/arc-20261011-snapshot-2316/evaluations/lmf-compact-balanced-15000-suite-comparison.json`, `results/arc-20261011-snapshot-2316/evaluations/lmf-compact-balanced-15000-domination.json`, and the complete raw predictions under `results/arc-20261011-snapshot-2316/evaluations/lmf-compact-balanced-15000-suite/`.
