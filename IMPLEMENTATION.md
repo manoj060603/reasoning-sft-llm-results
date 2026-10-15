@@ -10,6 +10,12 @@ logit-gap token weighting to the vendored LLaMA-Factory trainer and otherwise
 reuses the exact 15K dataset and official nine-benchmark protocol. The public
 suite will be evaluated only at the final 1,875-update checkpoint.
 
+The follow-up recipe in [`PRIFT_EXPERIMENT.md`](PRIFT_EXPERIMENT.md) was staged
+after the first three TrimSFT benchmark columns rejected that weighting rule.
+It implements the official PriFT-mass frozen-reference objective and restores
+the selection pipeline's 8,192-token bound. It remains unrun until the active
+TrimSFT evaluation releases the GPU.
+
 ## Strategy and evidence
 
 The proposed default is **quality-filtered, diverse, student-aware selection** of exactly 15,000 unique prompts. It is an experimental synthesis, not an exact reproduction of a paper or a guaranteed best strategy.

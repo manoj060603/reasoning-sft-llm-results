@@ -493,6 +493,26 @@ class FinetuningArguments(
         default=0.8,
         metadata={"help": "Bandwidth tau of the TrimSFT Gaussian logit-gap weighting."},
     )
+    use_prift_loss: bool = field(
+        default=False,
+        metadata={"help": "Whether to use frozen-reference prior-support token weighting."},
+    )
+    prift_method: Literal["prob", "mass"] = field(
+        default="mass",
+        metadata={"help": "PriFT weighting rule: reference target probability or cumulative mass."},
+    )
+    prift_reference_model: Optional[str] = field(
+        default=None,
+        metadata={"help": "Frozen reference checkpoint for PriFT. Defaults to the training model path."},
+    )
+    prift_mass_threshold: float = field(
+        default=0.5,
+        metadata={"help": "Cumulative prior-mass threshold for PriFT-mass."},
+    )
+    prift_vocab_chunk: int = field(
+        default=4096,
+        metadata={"help": "Vocabulary chunk size for memory-bounded PriFT-mass computation."},
+    )
     freeze_vision_tower: bool = field(
         default=True,
         metadata={"help": "Whether ot not to freeze the vision tower in MLLM training."},
@@ -543,10 +563,16 @@ class FinetuningArguments(
         self.use_ref_model = self.stage == "dpo" and self.pref_loss not in ["orpo", "simpo"]
 
         assert self.finetuning_type in ["lora", "oft", "freeze", "full"], "Invalid fine-tuning method."
-        if self.use_dft_loss and self.use_trimsft_loss:
-            raise ValueError("DFT and TrimSFT losses are mutually exclusive.")
+        if sum((self.use_dft_loss, self.use_trimsft_loss, self.use_prift_loss)) > 1:
+            raise ValueError("DFT, TrimSFT, and PriFT losses are mutually exclusive.")
         if self.trimsft_bandwidth <= 0:
             raise ValueError("`trimsft_bandwidth` must be positive.")
+        if self.prift_method not in ("prob", "mass"):
+            raise ValueError("`prift_method` must be `prob` or `mass`.")
+        if not 0.0 <= self.prift_mass_threshold <= 1.0:
+            raise ValueError("`prift_mass_threshold` must lie in [0, 1].")
+        if self.prift_vocab_chunk <= 0:
+            raise ValueError("`prift_vocab_chunk` must be positive.")
         assert self.ref_model_quantization_bit in [None, 8, 4], "We only accept 4-bit or 8-bit quantization."
         assert self.reward_model_quantization_bit in [None, 8, 4], "We only accept 4-bit or 8-bit quantization."
 

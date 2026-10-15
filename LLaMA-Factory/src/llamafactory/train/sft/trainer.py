@@ -23,7 +23,7 @@ from typing import TYPE_CHECKING, Any, Optional, Union
 
 import numpy as np
 import torch
-from transformers import Seq2SeqTrainer
+from transformers import AutoModelForCausalLM, Seq2SeqTrainer
 from typing_extensions import override
 
 from ...extras import logging
@@ -93,6 +93,22 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
                 bandwidth=finetuning_args.trimsft_bandwidth,
             )
 
+        self.prift_reference_model = None
+        if finetuning_args.use_prift_loss:
+            reference_path = finetuning_args.prift_reference_model or self.model.config._name_or_path
+            logger.info_rank0("Loading frozen PriFT reference model from %s", reference_path)
+            self.prift_reference_model = AutoModelForCausalLM.from_pretrained(
+                reference_path,
+                torch_dtype=torch.bfloat16,
+                attn_implementation="sdpa",
+                trust_remote_code=False,
+                low_cpu_mem_usage=True,
+            ).to(self.args.device)
+            self.prift_reference_model.eval()
+            self.prift_reference_model.requires_grad_(False)
+            if self.prift_reference_model.config.vocab_size != self.model.config.vocab_size:
+                raise ValueError("PriFT reference and online model vocabularies differ.")
+
     @override
     def create_optimizer(self) -> "torch.optim.Optimizer":
         if self.optimizer is None:
@@ -115,6 +131,30 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
 
     @override
     def compute_loss(self, model, inputs, *args, **kwargs):
+        if self.finetuning_args.use_prift_loss:
+            labels = inputs.get("labels")
+            if labels is None:
+                raise ValueError("PriFT requires labels.")
+            reference_inputs = {
+                key: inputs[key]
+                for key in ("input_ids", "attention_mask", "position_ids")
+                if key in inputs
+            }
+            with torch.no_grad():
+                reference_outputs = self.prift_reference_model(**reference_inputs, use_cache=False)
+            outputs = model(**inputs)
+            from reasoning.prift import prift_cross_entropy
+
+            loss = prift_cross_entropy(
+                outputs.logits[..., :-1, :],
+                reference_outputs.logits[..., :-1, :],
+                labels[..., 1:],
+                method=self.finetuning_args.prift_method,
+                mass_threshold=self.finetuning_args.prift_mass_threshold,
+                vocab_chunk=self.finetuning_args.prift_vocab_chunk,
+            )
+            del reference_outputs
+            return (loss, outputs) if kwargs.get("return_outputs", False) else loss
         return super().compute_loss(model, inputs, *args, **kwargs)
 
     @override

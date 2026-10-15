@@ -5,6 +5,11 @@
 > parameters, followed directly by all nine assignment benchmarks. It has no
 > pilot, public-score checkpoint selection, or development gate.
 
+> **Staged follow-up:** [`PRIFT_EXPERIMENT.md`](PRIFT_EXPERIMENT.md) implements
+> the official frozen-reference PriFT-mass objective at the dataset's intended
+> 8,192-token cutoff. It will run only after the active complete-suite evaluation
+> finishes; no overlapping GPU job is submitted.
+
 Start with [RESULTS.md](RESULTS.md) for the direct baseline answer and final score table, then [DETAILED_PROJECT_REPORT_20261014.md](DETAILED_PROJECT_REPORT_20261014.md) for the complete experiment narrative and [FULL_RESULTS_AND_IMPLEMENTATION.md](FULL_RESULTS_AND_IMPLEMENTATION.md) for implementation and per-benchmark results. [LARGE_ARTIFACTS.md](LARGE_ARTIFACTS.md) records the local weight files excluded by GitHub's per-file size limit.
 
 # Assignment-Reasoning-SFT-LLM
