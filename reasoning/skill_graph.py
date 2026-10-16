@@ -43,7 +43,7 @@ SCHEMA = {
     "properties": {
         "domain": {"type": "string", "enum": list(DOMAINS)},
         "skills": {"type": "array", "items": {"type": "string", "enum": list(SKILLS)},
-                   "minItems": 2, "maxItems": 5, "uniqueItems": True},
+                   "minItems": 2, "maxItems": 5},
         "composition_depth": {"type": "integer", "minimum": 1, "maximum": 4},
         "representation": {"type": "string", "enum": list(REPRESENTATIONS)},
         "language": {"type": "string", "enum": list(LANGUAGES)},
