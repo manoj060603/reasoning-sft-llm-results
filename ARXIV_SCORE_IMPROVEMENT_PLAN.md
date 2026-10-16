@@ -28,7 +28,7 @@ PriFT computes token weights from a frozen copy of the pretrained model. This av
 
 PriFT completed all nine benchmarks at 45.96% seven-benchmark pass@8 versus 49.55% for the matched base. It cleared the contextual Fall 2025 columns only on Minerva and GPQA. This is a completed negative method result and will not be rerun unchanged.
 
-### 2. GEM on the same sealed 15K set — evaluating
+### 2. GEM on the same sealed 15K set — completed, partial gain
 
 **Paper and code:** [Preserving Diversity in Supervised Fine-Tuning of Large Language Models](https://arxiv.org/abs/2408.16673), [official GEM repository](https://github.com/liziniu/GEM).
 
@@ -38,15 +38,17 @@ GEM replaces ordinary cross-entropy distribution matching with an entropy-regula
 
 **Why ranked second:** it optimizes the output-distribution property most clearly missing from our full-SFT model, has public reference code, and does not require new teacher generations or duplicate prompts.
 
-Training completed all 1,875 finite updates. Interim evaluation improves MATH, CN Math, and Kaoyan over base and sharply reduces truncation relative to ordinary full SFT, but misses the strict target on AIME24, AIME25, and AMC. The complete nine-benchmark evaluation remains authoritative.
+Training completed all 1,875 finite updates and all nine benchmarks. GEM scored 50.53% seven-benchmark pass@8 versus 49.55% for base, but pass@1 fell to 21.81% and the strict goal passed only Minerva and GPQA.
 
-### 3. Model-aware selection from the complete approved pool — staged successor
+### 3. Model-aware selection from the complete approved pool — completed, negative
 
 **Sources:** [Select2Reason](https://arxiv.org/abs/2505.17266), [AceReason-Nemotron 1.1](https://arxiv.org/abs/2506.13284), and [GEM](https://arxiv.org/abs/2408.16673).
 
 The current 15K identities were selected using route diversity and static quality checks. The 83,037-row approved pool was never scored relative to the pinned student: `features_extended.json` contains clusters, lengths, answer completeness, and repetition, but no base-model loss. This leaves a concrete data-selection hypothesis untested while repeated loss-only changes reuse the same examples.
 
 The staged successor computes teacher-forced base response NLL over 512 tokens for every approved row, ranks difficulty within response-length buckets, and selects exactly 15,000 unique 8K-safe rows with frozen 128-cluster quotas around the prespecified 65th difficulty percentile. It then applies the already tested GEM objective. NLL is treated only as a model-relative difficulty proxy; it does not prove correctness or solve probability. Public benchmark data and scores are excluded from selection.
+
+The run completed full-pool scoring, selection, 1,875 finite updates, and all nine benchmarks. It scored 48.32% seven-benchmark pass@8 and 21.00% pass@1, both below base, while reducing truncations to 284. The hypothesis is rejected for this selector: teacher-forced NLL can emphasize surprising teacher tokens without identifying correct, transferable, student-learnable skills.
 
 ### 4. Base-anchored diversity SFT — conservative hybrid only after standalone evidence
 
@@ -94,9 +96,9 @@ The compact-balanced failure shows that coarse domain quotas and short targets a
 
 ## Execution policy
 
-1. Finish and audit the current GEM run.
-2. If GEM fails operationally, fix a concrete cause and resume once; do not relaunch an unchanged recurring failure.
-3. If GEM completes but misses the objective, preserve the result and launch the staged model-aware 15K GEM run.
+1. Preserve ordinary GEM and model-aware GEM as completed results.
+2. Do not rerun either method unchanged.
+3. Any successor must introduce verified skill coverage or multiple correct reasoning paths rather than another loss-only change or raw-NLL selector.
 4. Keep only one GPU job active. Do not submit pilots or overlap full jobs.
 5. Every completed candidate must produce all nine metrics, raw predictions, manifest matches, truncation/repetition diagnostics, paired uncertainty, seven-benchmark macro, and the strict integer domination receipt.
 6. Treat paper-reported gains as motivation, never as expected project outcomes. No method is claimed to beat the historical leaderboard until this exact evaluator completes and the nine-column gate passes.
@@ -105,8 +107,8 @@ The compact-balanced failure shows that coarse domain quotas and short targets a
 
 | Rank | Method | Direct fit to pass@8 | Base-retention mechanism | One-B200 practicality | Assignment fit |
 |---:|---|---|---|---|---|
-| 1 | GEM 8K | strong | entropy-preserving objective | evaluating | strong |
-| 2 | Model-aware 15K + GEM | strong | learnable examples plus entropy preservation | staged | strongest data-selection fit |
+| 1 | GEM 8K | strong | entropy-preserving objective | completed partial gain | strong |
+| 2 | Model-aware 15K + GEM | strong | model-relative difficulty plus diversity | completed negative | strongest data-selection fit |
 | 3 | Anchored/CurioSFT | strong | KL or adaptive self-distillation | moderate to difficult | strong if kept as SFT |
 | 4 | RPD/SSFT multi-solution | very strong | diversity by construction | data-generation heavy | conditional on unique-prompt rule |
 | 5 | DCO/verifier RFT | strongest objective match | reward/KL dependent | expensive | requires instructor-rule check |

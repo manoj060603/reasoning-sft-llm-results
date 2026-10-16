@@ -1,15 +1,16 @@
-> **Final measured status (October 15, 2026):** the compact balanced 15K run completed all 1,875 updates and all nine benchmarks, but failed the strict all-column objective. Its seven-benchmark pass@8 was **44.83%**, versus **49.55%** for matched base and **51.52%** for the earlier full-SFT model. It reduced truncations to 44/15,792, but cleared only the Minerva and GPQA historical column thresholds. Historical leaderboard equivalence is not established.
+> **Final measured status (October 16, 2026):** the model-aware 15K GEM run completed full-pool scoring, all 1,875 updates, and all nine benchmarks. It scored **48.32%** seven-benchmark pass@8 versus **49.55%** for matched base. Ordinary GEM scored **50.53%**, while the earlier ordinary full-SFT model remains strongest at **51.52%**. Model-aware GEM reduced truncations to 284/15,792 but cleared only the Minerva and GPQA contextual Fall 2025 thresholds. Historical leaderboard equivalence is not established.
 
-> **Current experiment:** [`PRIFT_EXPERIMENT.md`](PRIFT_EXPERIMENT.md) implements
-> the official frozen-reference PriFT-mass objective on all 15,000 examples at
-> the dataset's intended 8,192-token cutoff, followed directly by all nine
-> assignment benchmarks. TrimSFT was stopped after seven completed benchmark
-> columns were all below the matched base.
+> **Latest experiment:** [`MODEL_AWARE_GEM_EXPERIMENT.md`](MODEL_AWARE_GEM_EXPERIMENT.md)
+> records the completed base-NLL/diversity selection and full GEM run. The
+> selector scored all 83,037 approved rows without public benchmark data,
+> chose exactly 15,000 unique 8K-safe examples, and evaluated all nine
+> assignment benchmarks.
 
 > **Research queue:** [`ARXIV_SCORE_IMPROVEMENT_PLAN.md`](ARXIV_SCORE_IMPROVEMENT_PLAN.md)
 > ranks assignment-compatible follow-ups by evidence, direct relevance to
-> pass@8, compute practicality, and risk. GEM is the leading standalone
-> successor if PriFT completes without meeting the strict objective.
+> pass@8, compute practicality, and risk. Ordinary GEM improved the matched
+> macro but did not meet the strict per-column goal; model-aware reselection
+> reduced that macro and is preserved as a negative result.
 
 Start with [RESULTS.md](RESULTS.md) for the direct baseline answer and final score table, then [DETAILED_PROJECT_REPORT_20261014.md](DETAILED_PROJECT_REPORT_20261014.md) for the complete experiment narrative and [FULL_RESULTS_AND_IMPLEMENTATION.md](FULL_RESULTS_AND_IMPLEMENTATION.md) for implementation and per-benchmark results. [LARGE_ARTIFACTS.md](LARGE_ARTIFACTS.md) records the local weight files excluded by GitHub's per-file size limit.
 

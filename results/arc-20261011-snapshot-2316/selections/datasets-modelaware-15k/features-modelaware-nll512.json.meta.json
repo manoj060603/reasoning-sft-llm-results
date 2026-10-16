@@ -1,0 +1,30 @@
+{
+  "input_sha256": "c115f4331f485458616b8e29a3715422b5d4479396cf50c287183014820eabc9",
+  "arguments": {
+    "input": "artifacts/prepared_extended/pool.json",
+    "features": "artifacts/features_extended.json",
+    "output": "artifacts/features-modelaware-nll512.json",
+    "model": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "nll_tokens": 512,
+    "max_batch_tokens": 8192,
+    "flush_every": 256
+  },
+  "provenance": {
+    "source_features_sha256": "039cd63692d528dcce2caf2be2bfed85be917a66298a2532933ef1107f9db979",
+    "source_features_meta_sha256": "d0140d4d4d144c59a00aba9519195b0ae18541e73041533196a0e6f5f9419825",
+    "code_sha256": "009d894fc20f990b0ed842aa4bfc56da17774ac48a2faa5c91a0e31d969c0d5a",
+    "versions": {
+      "torch": "2.10.0",
+      "transformers": "4.57.6"
+    }
+  },
+  "schema": "base-response-nll-v1",
+  "features_sha256": "039cd63692d528dcce2caf2be2bfed85be917a66298a2532933ef1107f9db979",
+  "model": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "resolved_model_commit": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "resolved_tokenizer_commit": null,
+  "nll_tokens": 512,
+  "max_batch_tokens": 8192
+}

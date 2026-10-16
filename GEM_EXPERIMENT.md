@@ -27,3 +27,11 @@ Report every benchmark and the seven-benchmark macro. The strict goal passes onl
 
 - GEM paper: <https://arxiv.org/abs/2408.16673>
 - Official implementation reviewed at commit `e5b1430979fa12bf8ab7398b2ccc71dff795bbee`: <https://github.com/liziniu/GEM>
+
+## Terminal result (job 1166712)
+
+Training completed exactly 1,875 updates with finite logs, and the final checkpoint completed all nine benchmarks. The matched seven-benchmark macro was **21.81% pass@1 / 50.53% pass@8**, compared with **23.55% / 49.55%** for base. Thus GEM gained **+0.98 pass@8 points** while losing **−1.74 pass@1 points**. The pass@8 gain was distributed across MATH (+0.20 pp), CN Math (+6.67 pp), Kaoyan (+4.02 pp), OlympiadBench (+1.04 pp), and GPQA (+3.54 pp), while AMC, AIME25, AIME24, and Minerva declined.
+
+The run produced 417 truncations across 15,792 samples, substantially fewer than ordinary full SFT's 1,964 but more than base's 141. It failed the strict Fall 2025 column gate, clearing only Minerva and GPQA. The result supports GEM as a partial diversity/termination improvement, but it does not supply the missing AIME/AMC skills and does not surpass the 51.52% ordinary full-SFT macro.
+
+Receipts: `results/arc-20261011-snapshot-2316/evaluations/lmf-gem-15000-8k-suite-comparison.json`, `results/arc-20261011-snapshot-2316/evaluations/lmf-gem-15000-8k-domination.json`, and the complete raw generations under `results/arc-20261011-snapshot-2316/evaluations/lmf-gem-15000-8k-suite/`.

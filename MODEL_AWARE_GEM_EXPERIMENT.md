@@ -20,3 +20,24 @@ No benchmark prompt, answer, score, or error category enters scoring or selectio
 ## Decision rule
 
 The run succeeds on the strict project objective only if the final model clears every prespecified Fall 2025 solve-count column under this evaluator. Complete nine-benchmark results, generation diagnostics, manifests, and uncertainty intervals are retained even if the strict gate fails. Historical runtime equivalence remains unverified, so a numeric clearance is reported as an internal reproduction result rather than an official leaderboard win.
+
+## Terminal result (job 1169839)
+
+The complete pool scorer produced finite NLL values for exactly **83,037 unique approved IDs**. The selector chose exactly **15,000 unique 8K-safe IDs**. Their dataset SHA-256 is `c083d54960969a56ce6944f17782d8676b0bf4830c434a8cf3b68dd2723858d3`. Training completed exactly **1,875 finite updates**, and the final checkpoint completed all nine benchmarks.
+
+| Benchmark | Matched base pass@8 | Model-aware GEM pass@8 | Delta |
+|---|---:|---:|---:|
+| AIME24 | 23.33% | 16.67% | −6.67 pp |
+| AIME25 | 13.33% | 13.33% | 0.00 pp |
+| MATH | 85.20% | 85.40% | +0.20 pp |
+| CN Math 2024 | 23.33% | 23.33% | 0.00 pp |
+| Kaoyan | 56.78% | 61.81% | +5.03 pp |
+| AMC | 77.50% | 65.00% | −12.50 pp |
+| Minerva | 49.63% | 45.59% | −4.04 pp |
+| OlympiadBench | 49.48% | 48.89% | −0.59 pp |
+| GPQA | 76.77% | 80.30% | +3.54 pp |
+| **Seven-benchmark macro** | **49.55%** | **48.32%** | **−1.23 pp** |
+
+Pass@1 also fell from **23.55% to 21.00%**. The run generated 284 truncations across 15,792 samples, fewer than ordinary GEM's 417 and ordinary full SFT's 1,964. It passed the contextual Fall 2025 thresholds only on Minerva and GPQA. Difficulty-aware reselection therefore improved termination and Kaoyan but reduced broad accuracy. A plausible interpretation is that teacher-forced NLL identifies surprising teacher tokens, which can include noisy or unsupported trajectories; it is not a correctness or learnability oracle.
+
+Receipts: `results/arc-20261011-snapshot-2316/evaluations/lmf-gem-modelaware-15000-8k-suite-comparison.json`, `results/arc-20261011-snapshot-2316/evaluations/lmf-gem-modelaware-15000-8k-domination.json`, `results/arc-20261011-snapshot-2316/training/lmf-gem-modelaware-15000-8k/`, and complete raw generations under `results/arc-20261011-snapshot-2316/evaluations/lmf-gem-modelaware-15000-8k-suite/`.

@@ -1,0 +1,33 @@
+{
+  "schema": "reasoning-sft-gem-modelaware-15000-8k-v1",
+  "literature": [
+    "https://arxiv.org/abs/2505.17266",
+    "https://arxiv.org/abs/2408.16673",
+    "https://arxiv.org/abs/2506.13284"
+  ],
+  "selection": {
+    "name": "base_nll_diversity_hybrid",
+    "nll_prefix_tokens": 512,
+    "within_length_rank_target": 0.65,
+    "clusters": 128,
+    "public_benchmark_scores_used": false
+  },
+  "objective": {
+    "name": "linear_gem",
+    "beta": 0.7
+  },
+  "training_rows": 15000,
+  "unique_selected_ids": 15000,
+  "pool_sha256": "c115f4331f485458616b8e29a3715422b5d4479396cf50c287183014820eabc9",
+  "static_features_sha256": "039cd63692d528dcce2caf2be2bfed85be917a66298a2532933ef1107f9db979",
+  "nll_features_sha256": "530c1e9dc03912c2970e1ac8414f5207b84eb3e03adcd4d1af3e403c893f1d24",
+  "data_sha256": "c083d54960969a56ce6944f17782d8676b0bf4830c434a8cf3b68dd2723858d3",
+  "selection_manifest_sha256": "1baed454c3aa19e678fafbbf6b98df7d172b38c7ceb955c7af8775451fe38bfc",
+  "config_sha256": "3ebc2b2039a6d5d7c218e7f2c109d0c360f82c03a73be8e7e6f279d94d1eb4d5",
+  "source_tree_sha256": "df5c36c5b9f2bbae10d87db4b5b93536de90d641f2d66a56d83c6d5974b132ce",
+  "base_model": {
+    "repo": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "path": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  }
+}
