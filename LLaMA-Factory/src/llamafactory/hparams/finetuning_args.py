@@ -513,6 +513,18 @@ class FinetuningArguments(
         default=4096,
         metadata={"help": "Vocabulary chunk size for memory-bounded PriFT-mass computation."},
     )
+    use_gem_loss: bool = field(
+        default=False,
+        metadata={"help": "Whether to use the linear Generalized Entropy Minimization loss."},
+    )
+    gem_beta: float = field(
+        default=0.7,
+        metadata={"help": "GEM sharpening temperature in (0, 1]."},
+    )
+    gem_vocab_chunk: int = field(
+        default=4096,
+        metadata={"help": "Vocabulary chunk size for memory-bounded GEM computation."},
+    )
     freeze_vision_tower: bool = field(
         default=True,
         metadata={"help": "Whether ot not to freeze the vision tower in MLLM training."},
@@ -563,8 +575,8 @@ class FinetuningArguments(
         self.use_ref_model = self.stage == "dpo" and self.pref_loss not in ["orpo", "simpo"]
 
         assert self.finetuning_type in ["lora", "oft", "freeze", "full"], "Invalid fine-tuning method."
-        if sum((self.use_dft_loss, self.use_trimsft_loss, self.use_prift_loss)) > 1:
-            raise ValueError("DFT, TrimSFT, and PriFT losses are mutually exclusive.")
+        if sum((self.use_dft_loss, self.use_trimsft_loss, self.use_prift_loss, self.use_gem_loss)) > 1:
+            raise ValueError("DFT, TrimSFT, PriFT, and GEM losses are mutually exclusive.")
         if self.trimsft_bandwidth <= 0:
             raise ValueError("`trimsft_bandwidth` must be positive.")
         if self.prift_method not in ("prob", "mass"):
@@ -573,6 +585,10 @@ class FinetuningArguments(
             raise ValueError("`prift_mass_threshold` must lie in [0, 1].")
         if self.prift_vocab_chunk <= 0:
             raise ValueError("`prift_vocab_chunk` must be positive.")
+        if not 0.0 < self.gem_beta <= 1.0:
+            raise ValueError("`gem_beta` must lie in (0, 1].")
+        if self.gem_vocab_chunk <= 0:
+            raise ValueError("`gem_vocab_chunk` must be positive.")
         assert self.ref_model_quantization_bit in [None, 8, 4], "We only accept 4-bit or 8-bit quantization."
         assert self.reward_model_quantization_bit in [None, 8, 4], "We only accept 4-bit or 8-bit quantization."
 

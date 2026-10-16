@@ -1,5 +1,29 @@
 # PriFT-mass full 15K experiment
 
+## Interim result and failure diagnosis
+
+Training completed all 1,875 updates and the fixed nine-benchmark evaluation is still running. The first five completed columns already reject the strict all-column hypothesis:
+
+| Benchmark | Matched base pass@8 | PriFT pass@8 | Delta | Fall 2025 target |
+|---|---:|---:|---:|---:|
+| AMC | 77.50% | 65.00% | -12.50 pp | 82.50% |
+| AIME25 | 13.33% | 10.00% | -3.33 pp | 26.67% |
+| AIME24 | 23.33% | 13.33% | -10.00 pp | 26.67% |
+| MATH | 85.20% | 82.00% | -3.20 pp | 90.20% |
+| CN Math 2024 | 23.33% | 26.67% | +3.33 pp | 46.67% |
+
+PriFT improves CN Math over the matched base, but it misses every historical target above and materially regresses AMC, AIME24, and MATH. Truncations on these five columns total 209. The accuracy losses therefore cannot be explained solely by the severe nontermination seen in ordinary full SFT.
+
+The leading mechanisms, pending the complete suite and token-retention audit, are:
+
+1. The prior-support mask can discard low-support target tokens. Those tokens may be precisely the novel steps needed to teach harder AIME and AMC solutions.
+2. Retained tokens still push toward one fixed demonstration. PriFT does not directly preserve the alternative solution paths that pass@8 rewards.
+3. The 1e-5 learning rate is five times the 2e-6 rate used by the strongest completed ordinary full-SFT model, so the retained gradients may still move the model too far from useful base capabilities.
+4. An 8K cutoff preserves complete targets but also exposes the model to long single-trajectory traces. Prior filtering does not directly supervise early stopping or penalize repetition.
+5. The approved 15K pool may not cover the missing competition skills densely enough. The earlier compact-balanced run showed that coarse domain quotas alone do not solve this coverage problem.
+
+These are causal hypotheses, not established facts. The final report will separate measured evidence from the token-retention and error analyses needed to distinguish them.
+
 ## Reason for the change
 
 The first completed TrimSFT benchmark columns were already below both the matched base and historical targets. That rejects moderate-logit-gap weighting for the strict all-column objective. The next run uses a distinct signal and also corrects a training-context mismatch in the ordinary full-SFT run.

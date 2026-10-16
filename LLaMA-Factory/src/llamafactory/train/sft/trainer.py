@@ -131,6 +131,21 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
 
     @override
     def compute_loss(self, model, inputs, *args, **kwargs):
+        if self.finetuning_args.use_gem_loss:
+            labels = inputs.get("labels")
+            if labels is None:
+                raise ValueError("GEM requires labels.")
+            model_inputs = {key: value for key, value in inputs.items() if key != "labels"}
+            outputs = model(**model_inputs)
+            from reasoning.gem import gem_cross_entropy
+
+            loss = gem_cross_entropy(
+                outputs.logits[..., :-1, :],
+                labels[..., 1:],
+                beta=self.finetuning_args.gem_beta,
+                vocab_chunk=self.finetuning_args.gem_vocab_chunk,
+            )
+            return (loss, outputs) if kwargs.get("return_outputs", False) else loss
         if self.finetuning_args.use_prift_loss:
             labels = inputs.get("labels")
             if labels is None:
