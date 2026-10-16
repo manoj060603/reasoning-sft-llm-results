@@ -68,14 +68,17 @@ def validate_label(label: dict) -> dict:
         if label[key] not in allowed:
             raise ValueError(f"invalid {key}")
     skills = label["skills"]
-    if not isinstance(skills, list) or not 2 <= len(skills) <= 5 or len(set(skills)) != len(skills):
+    if not isinstance(skills, list) or not 2 <= len(skills) <= 5:
         raise ValueError("invalid skill list")
     if not set(skills) <= set(SKILLS):
         raise ValueError("unknown skill")
+    # xgrammar does not implement JSON Schema uniqueItems.  Canonicalize a
+    # repeated label instead of fabricating an additional mathematical skill.
+    skills = sorted(set(skills))
     depth = label["composition_depth"]
     if type(depth) is not int or not 1 <= depth <= 4:
         raise ValueError("invalid composition depth")
-    return {**label, "skills": sorted(skills)}
+    return {**label, "skills": skills}
 
 
 def label_items(label: dict, cluster: int) -> tuple[str, ...]:

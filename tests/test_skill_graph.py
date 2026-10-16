@@ -16,8 +16,8 @@ class SkillGraphTests(unittest.TestCase):
         x = validate_label(label(["factoring", "equations"]))
         self.assertEqual(x["skills"], ["equations", "factoring"])
         self.assertIn("p:equations+factoring", label_items(x, 3))
-        with self.assertRaises(ValueError):
-            validate_label(label(["equations", "equations"]))
+        self.assertEqual(validate_label(label(["equations", "equations"]))["skills"],
+                         ["equations"])
         with self.assertRaises(ValueError):
             validate_label(label(["equations", "invented_skill"]))
 
