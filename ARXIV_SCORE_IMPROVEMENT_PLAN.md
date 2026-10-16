@@ -20,6 +20,10 @@ The repeated pattern is useful: the project can trade accuracy for termination o
 
 ## Ranked experiment queue
 
+### Strict successor after TIES: skill-graph verified anchored SFT
+
+The parallel literature review is consolidated in [STRICT_ALL_NEXT_STRATEGY.md](STRICT_ALL_NEXT_STRATEGY.md). The chosen assignment-compatible successor labels the complete sealed pool with benchmark-blind skills, builds a MASS-style skill graph, selects exactly 15,000 unique prompts by submodular skill and skill-pair coverage, adds independent symbolic evidence for rare/high-composition solutions where practical, and trains with a frozen-base anchor. RPD-curated SSFT is retained as the higher-compute escalation because it is more directly aligned with pass@8 but requires multiple verified paths and a custom set-level training interface.
+
 ### 0. Fixed TIES merge of full SFT and GEM — running next
 
 **Sources:** [TIES-Merging](https://arxiv.org/abs/2306.01708) and [Model Soups](https://arxiv.org/abs/2203.05482).
