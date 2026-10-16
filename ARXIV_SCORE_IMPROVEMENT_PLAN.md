@@ -20,15 +20,15 @@ The repeated pattern is useful: the project can trade accuracy for termination o
 
 ## Ranked experiment queue
 
-### 1. PriFT-mass with the full 8K-approved targets — running
+### 1. PriFT-mass with the full 8K-approved targets — completed, negative
 
 **Paper and code:** [PriFT: Prior-Support Guided Supervised Fine-Tuning](https://arxiv.org/abs/2606.09396), [official implementation](https://github.com/wang-kee/PriFT).
 
 PriFT computes token weights from a frozen copy of the pretrained model. This avoids the self-reinforcing weight drift of online probability weighting and preferentially learns target tokens supported by the base distribution. It directly addresses the broad regressions observed after ordinary SFT. The current run also uses the dataset's actual 8,192-token bound; the earlier 4K trainer could cut otherwise approved targets before their final answer and end token.
 
-**Decision:** retain only if it completes all nine benchmarks and improves broadly. A macro gain concentrated in the two 30-question sets is insufficient evidence for the all-column objective.
+PriFT completed all nine benchmarks at 45.96% seven-benchmark pass@8 versus 49.55% for the matched base. It cleared the contextual Fall 2025 columns only on Minerva and GPQA. This is a completed negative method result and will not be rerun unchanged.
 
-### 2. GEM on the same sealed 15K set — strongest next standalone method
+### 2. GEM on the same sealed 15K set — evaluating
 
 **Paper and code:** [Preserving Diversity in Supervised Fine-Tuning of Large Language Models](https://arxiv.org/abs/2408.16673), [official GEM repository](https://github.com/liziniu/GEM).
 
@@ -38,7 +38,17 @@ GEM replaces ordinary cross-entropy distribution matching with an entropy-regula
 
 **Why ranked second:** it optimizes the output-distribution property most clearly missing from our full-SFT model, has public reference code, and does not require new teacher generations or duplicate prompts.
 
-### 3. Base-anchored diversity SFT — conservative hybrid only after standalone evidence
+Training completed all 1,875 finite updates. Interim evaluation improves MATH, CN Math, and Kaoyan over base and sharply reduces truncation relative to ordinary full SFT, but misses the strict target on AIME24, AIME25, and AMC. The complete nine-benchmark evaluation remains authoritative.
+
+### 3. Model-aware selection from the complete approved pool — staged successor
+
+**Sources:** [Select2Reason](https://arxiv.org/abs/2505.17266), [AceReason-Nemotron 1.1](https://arxiv.org/abs/2506.13284), and [GEM](https://arxiv.org/abs/2408.16673).
+
+The current 15K identities were selected using route diversity and static quality checks. The 83,037-row approved pool was never scored relative to the pinned student: `features_extended.json` contains clusters, lengths, answer completeness, and repetition, but no base-model loss. This leaves a concrete data-selection hypothesis untested while repeated loss-only changes reuse the same examples.
+
+The staged successor computes teacher-forced base response NLL over 512 tokens for every approved row, ranks difficulty within response-length buckets, and selects exactly 15,000 unique 8K-safe rows with frozen 128-cluster quotas around the prespecified 65th difficulty percentile. It then applies the already tested GEM objective. NLL is treated only as a model-relative difficulty proxy; it does not prove correctness or solve probability. Public benchmark data and scores are excluded from selection.
+
+### 4. Base-anchored diversity SFT — conservative hybrid only after standalone evidence
 
 **Sources:** [Anchored Supervised Fine-Tuning](https://arxiv.org/abs/2509.23753) and [CurioSFT](https://arxiv.org/abs/2602.02244) with its [official implementation](https://github.com/HaoooWang/CurioSFT).
 
@@ -48,7 +58,7 @@ The project already ran one ASFT-style route experiment that overgenerated badly
 
 **Decision:** implement only if PriFT shows base retention but inadequate pass@8 coverage, or GEM improves coverage while drifting on GPQA/AMC. Do not invent an unvalidated PriFT+GEM+ASFT compound objective before measuring the standalone methods.
 
-### 4. Multiple-solution diversity curation — high upside, larger data change
+### 5. Multiple-solution diversity curation — high upside, larger data change
 
 **Sources:** [Reasoning Path Divergence](https://arxiv.org/abs/2510.26122), [official RPD code](https://github.com/fengjujf/Reasoning-Path-Divergence), and [Set Supervised Fine-Tuning](https://arxiv.org/abs/2510.05132) with [official SSFT code](https://github.com/Sheng-J/SSFT).
 
@@ -58,7 +68,7 @@ RPD reports that selecting semantically different correct paths per problem impr
 
 **Why not immediate:** the current pool is primarily one response per selected prompt, so faithful SSFT/RPD needs additional correct trajectories and substantially more generation, verification, and training integration.
 
-### 5. Direct Coverage Optimization or verifier-guided RFT — closest objective, highest compliance/compute risk
+### 6. Direct Coverage Optimization or verifier-guided RFT — closest objective, highest compliance/compute risk
 
 **Source:** [Direct Coverage Optimization](https://arxiv.org/abs/2502.07154).
 
@@ -66,7 +76,7 @@ DCO directly targets pass@N coverage rather than token likelihood. This is conce
 
 **Gate before implementation:** confirm that the assignment permits optimization beyond SFT and permits generated responses in the 15K subset. The main assignment asks for data selection and SFT; therefore this route could weaken submission compliance even if it improves scores. It also requires costly online or offline sampling and reliable reward/verifier behavior.
 
-### 6. Better data scaling and model-aware selection — useful, but not sufficient alone
+### 7. Further data scaling and verifier-based selection — useful, but more expensive
 
 **Sources:** [AceReason-Nemotron 1.1](https://arxiv.org/abs/2506.13284), [OpenThoughts](https://arxiv.org/abs/2506.04178), and [LIMO](https://arxiv.org/abs/2502.03387).
 
@@ -84,9 +94,9 @@ The compact-balanced failure shows that coarse domain quotas and short targets a
 
 ## Execution policy
 
-1. Finish and audit the current PriFT run.
-2. If PriFT fails operationally, fix a concrete cause and restart once; do not relaunch an unchanged recurring failure.
-3. If PriFT completes but misses the objective, preserve the result and prepare one full GEM run as the next highest-value experiment.
+1. Finish and audit the current GEM run.
+2. If GEM fails operationally, fix a concrete cause and resume once; do not relaunch an unchanged recurring failure.
+3. If GEM completes but misses the objective, preserve the result and launch the staged model-aware 15K GEM run.
 4. Keep only one GPU job active. Do not submit pilots or overlap full jobs.
 5. Every completed candidate must produce all nine metrics, raw predictions, manifest matches, truncation/repetition diagnostics, paired uncertainty, seven-benchmark macro, and the strict integer domination receipt.
 6. Treat paper-reported gains as motivation, never as expected project outcomes. No method is claimed to beat the historical leaderboard until this exact evaluator completes and the nine-column gate passes.
@@ -95,10 +105,10 @@ The compact-balanced failure shows that coarse domain quotas and short targets a
 
 | Rank | Method | Direct fit to pass@8 | Base-retention mechanism | One-B200 practicality | Assignment fit |
 |---:|---|---|---|---|---|
-| 1 | PriFT-mass 8K | medium | strong frozen-prior support | already running | strong |
-| 2 | GEM 8K | strong | entropy-preserving objective | plausible | strong |
+| 1 | GEM 8K | strong | entropy-preserving objective | evaluating | strong |
+| 2 | Model-aware 15K + GEM | strong | learnable examples plus entropy preservation | staged | strongest data-selection fit |
 | 3 | Anchored/CurioSFT | strong | KL or adaptive self-distillation | moderate to difficult | strong if kept as SFT |
 | 4 | RPD/SSFT multi-solution | very strong | diversity by construction | data-generation heavy | conditional on unique-prompt rule |
 | 5 | DCO/verifier RFT | strongest objective match | reward/KL dependent | expensive | requires instructor-rule check |
-| 6 | model-aware reselection | indirect | avoids unsupported examples | practical | strongest data-selection fit |
+| 6 | PriFT-mass 8K | medium | strong frozen-prior support | completed negative | strong |
 
