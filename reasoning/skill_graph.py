@@ -133,8 +133,7 @@ def label_pool(pool: Path, teacher: str, output: Path, batch_size: int,
               gpu_memory_utilization=gpu_memory_utilization, trust_remote_code=False)
     tokenizer = llm.get_tokenizer()
     params = SamplingParams(temperature=0, max_tokens=128,
-                            structured_outputs=StructuredOutputsParams(json=SCHEMA),
-                            thinking_token_budget=0)
+                            structured_outputs=StructuredOutputsParams(json=SCHEMA))
     for start in range(len(complete), stop, batch_size):
         batch = rows[start:min(start + batch_size, stop)]
         prompts = [tokenizer.apply_chat_template([

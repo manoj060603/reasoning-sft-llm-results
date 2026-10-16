@@ -4,7 +4,7 @@
 
 The only success condition is one fixed model exceeding **every** prespecified Fall 2025 solve-count threshold in the unchanged nine-benchmark internal evaluator. Historical dataset/runtime equivalence is not established. The preceding fixed TIES merge cleared only Minerva and GPQA (2/9), so this is a new data-and-objective intervention, not a TIES retune.
 
-Preparation job **1176835** was submitted to ARC Owl on October 16, 2026. It is queued or running; no benchmark result exists for this candidate yet. The full training/evaluation job will be submitted only after the preparation receipt passes all checks and no other `rohits25` GPU job is active.
+Preparation job **1176835** failed in its four-example preflight before writing labels because vLLM 0.19 rejected the schema's `uniqueItems` keyword. The schema was fixed while retaining duplicate-skill validation in Python. Replacement Owl job **1177248** was cancelled while pending to use an earlier Falcon L40S slot. Falcon job **654015** then failed in the same preflight before writing labels because vLLM requires a configured reasoning parser when `thinking_token_budget` is set. That unused option was removed; the structured JSON constraint remains. Neither failure produced training data or a benchmark result. The full training/evaluation job will be submitted only after a successful preparation receipt and an idle project GPU queue.
 
 ## Literature and frozen design
 
@@ -22,4 +22,4 @@ The full model is pinned Qwen2.5-3B-Instruct with full-parameter response-only a
 
 The preparation receipt must prove source hashes `c115f4331f485458616b8e29a3715422b5d4479396cf50c287183014820eabc9` and `039cd63692d528dcce2caf2be2bfed85be917a66298a2532933ef1107f9db979`, 83,037 ordered unique skill labels, exact 15,000 unique selected IDs, finite selection gains, 8K token bounds, and 256 alternative-generation audit records. The final run must prove 1,875 finite updates, complete model files, eight predictions per question on all nine matched manifests, pass@1/pass@8, truncation, repetition, output length, paired confidence intervals, macro, and the strict per-column integer gate.
 
-The preparation and training code passed 58 local unit tests, ARC loss/schema tests, shell/Python syntax checks, and an ARC CPU end-to-end export/token-count/answer-check preflight before job submission. The live four-example structured-generation preflight is part of job 1176835 and has not yet been reported as passed.
+The preparation and training code passed 58 local unit tests, ARC loss/schema tests, shell/Python syntax checks, and an ARC CPU end-to-end export/token-count/answer-check preflight before job submission. After the second compatibility fix, the vLLM sampling parameters constructed successfully and the three skill-graph unit tests passed on Falcon. The live four-example structured-generation preflight has not yet passed.
