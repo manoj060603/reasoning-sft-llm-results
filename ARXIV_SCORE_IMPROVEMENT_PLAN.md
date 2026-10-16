@@ -20,6 +20,12 @@ The repeated pattern is useful: the project can trade accuracy for termination o
 
 ## Ranked experiment queue
 
+### 0. Fixed TIES merge of full SFT and GEM — running next
+
+**Sources:** [TIES-Merging](https://arxiv.org/abs/2306.01708) and [Model Soups](https://arxiv.org/abs/2203.05482).
+
+The ordinary full-SFT checkpoint has the strongest complete macro, while GEM has far fewer truncations and a different output distribution. A fixed layerwise TIES merge can retain aligned task-vector changes and discard small or sign-conflicting changes without training on or selecting against public benchmarks. The prespecified merge keeps the top 20% task-vector entries per tensor, uses magnitude sign election and a disjoint mean, and applies scale 1.0. It is evaluated once on all nine benchmarks. This is a low-cost test of whether the two completed objectives learned complementary transferable directions; it is not a public-score-tuned soup.
+
 ### 1. PriFT-mass with the full 8K-approved targets — completed, negative
 
 **Paper and code:** [PriFT: Prior-Support Guided Supervised Fine-Tuning](https://arxiv.org/abs/2606.09396), [official implementation](https://github.com/wang-kee/PriFT).
