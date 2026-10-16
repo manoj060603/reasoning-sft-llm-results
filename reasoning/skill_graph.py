@@ -137,6 +137,8 @@ def label_pool(pool: Path, teacher: str, output: Path, batch_size: int,
     tokenizer = llm.get_tokenizer()
     params = SamplingParams(temperature=0, max_tokens=128,
                             structured_outputs=StructuredOutputsParams(json=SCHEMA))
+    retry_params = SamplingParams(temperature=0, max_tokens=512,
+                                  structured_outputs=StructuredOutputsParams(json=SCHEMA))
     for start in range(len(complete), stop, batch_size):
         batch = rows[start:min(start + batch_size, stop)]
         prompts = [tokenizer.apply_chat_template([
@@ -147,11 +149,34 @@ def label_pool(pool: Path, teacher: str, output: Path, batch_size: int,
         if len(outputs) != len(batch):
             raise RuntimeError("teacher returned incomplete skill-label batch")
         checked = []
-        for row, generated in zip(batch, outputs):
+        retry_indices = []
+        for index, (row, generated) in enumerate(zip(batch, outputs)):
             if len(generated.outputs) != 1:
                 raise RuntimeError("teacher returned unexpected label count")
-            label = validate_label(json.loads(generated.outputs[0].text))
-            checked.append({"id": row["id"], "label": label})
+            try:
+                label = validate_label(json.loads(generated.outputs[0].text))
+                checked.append({"id": row["id"], "label": label})
+            except (json.JSONDecodeError, ValueError):
+                checked.append(None)
+                retry_indices.append(index)
+        if retry_indices:
+            retry_outputs = llm.generate([prompts[i] for i in retry_indices],
+                                         retry_params, use_tqdm=False)
+            if len(retry_outputs) != len(retry_indices):
+                raise RuntimeError("teacher returned incomplete skill-label retries")
+            for index, generated in zip(retry_indices, retry_outputs):
+                if len(generated.outputs) != 1:
+                    raise RuntimeError("teacher returned unexpected retry count")
+                try:
+                    label = validate_label(json.loads(generated.outputs[0].text))
+                except (json.JSONDecodeError, ValueError) as exc:
+                    raise RuntimeError(
+                        f"invalid skill label after 512-token retry for {batch[index]['id']}; "
+                        f"finish_reason={generated.outputs[0].finish_reason}"
+                    ) from exc
+                checked[index] = {"id": batch[index]["id"], "label": label}
+            print(f"retried {len(retry_indices)} truncated or invalid labels at "
+                  f"batch offset {start}", flush=True)
         with output.open("a", encoding="utf-8") as stream:
             for item in checked:
                 stream.write(json.dumps(item, ensure_ascii=False, sort_keys=True) + "\n")
