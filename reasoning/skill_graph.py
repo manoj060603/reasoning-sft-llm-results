@@ -112,6 +112,7 @@ def label_pool(pool: Path, teacher: str, output: Path, batch_size: int,
                max_model_len: int, gpu_memory_utilization: float,
                limit: int | None = None) -> None:
     from vllm import LLM, SamplingParams
+    from vllm.config import StructuredOutputsConfig
     from vllm.sampling_params import StructuredOutputsParams
 
     rows = read_rows(pool)
@@ -134,8 +135,12 @@ def label_pool(pool: Path, teacher: str, output: Path, batch_size: int,
     stop = min(len(rows), limit) if limit is not None else len(rows)
     if len(complete) >= stop:
         return
+    # This reasoning model can spend hundreds of constrained tokens on legal
+    # JSON whitespace.  The installed xgrammar backend supports compact JSON.
     llm = LLM(model=teacher, tokenizer=teacher, max_model_len=max_model_len,
-              gpu_memory_utilization=gpu_memory_utilization, trust_remote_code=False)
+              gpu_memory_utilization=gpu_memory_utilization, trust_remote_code=False,
+              structured_outputs_config=StructuredOutputsConfig(
+                  backend="xgrammar", disable_any_whitespace=True))
     tokenizer = llm.get_tokenizer()
     params = SamplingParams(temperature=0, max_tokens=128,
                             structured_outputs=StructuredOutputsParams(json=SCHEMA))
