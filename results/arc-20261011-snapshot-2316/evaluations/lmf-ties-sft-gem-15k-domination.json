@@ -1,0 +1,77 @@
+{
+  "all_nine_strictly_exceeded": false,
+  "benchmarks": {
+    "aime": {
+      "historical_leader": 0.233,
+      "candidate": 0.16666666666666666,
+      "candidate_solves": 5,
+      "strict_target_solves": 8,
+      "solve_gap": 3,
+      "passed": false
+    },
+    "aime25": {
+      "historical_leader": 0.233,
+      "candidate": 0.16666666666666666,
+      "candidate_solves": 5,
+      "strict_target_solves": 8,
+      "solve_gap": 3,
+      "passed": false
+    },
+    "math": {
+      "historical_leader": 0.9,
+      "candidate": 0.84,
+      "candidate_solves": 420,
+      "strict_target_solves": 451,
+      "solve_gap": 31,
+      "passed": false
+    },
+    "cn_math_2024": {
+      "historical_leader": 0.433,
+      "candidate": 0.3333333333333333,
+      "candidate_solves": 10,
+      "strict_target_solves": 14,
+      "solve_gap": 4,
+      "passed": false
+    },
+    "kaoyan": {
+      "historical_leader": 0.688,
+      "candidate": 0.5829145728643216,
+      "candidate_solves": 116,
+      "strict_target_solves": 138,
+      "solve_gap": 22,
+      "passed": false
+    },
+    "amc": {
+      "historical_leader": 0.8,
+      "candidate": 0.75,
+      "candidate_solves": 30,
+      "strict_target_solves": 33,
+      "solve_gap": 3,
+      "passed": false
+    },
+    "minerva": {
+      "historical_leader": 0.346,
+      "candidate": 0.49264705882352944,
+      "candidate_solves": 134,
+      "strict_target_solves": 95,
+      "solve_gap": 0,
+      "passed": true
+    },
+    "olympiadbench": {
+      "historical_leader": 0.569,
+      "candidate": 0.5081481481481481,
+      "candidate_solves": 343,
+      "strict_target_solves": 385,
+      "solve_gap": 42,
+      "passed": false
+    },
+    "gpqa": {
+      "historical_leader": 0.606,
+      "candidate": 0.7777777777777778,
+      "candidate_solves": 154,
+      "strict_target_solves": 121,
+      "solve_gap": 0,
+      "passed": true
+    }
+  }
+}

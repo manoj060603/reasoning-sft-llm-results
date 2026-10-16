@@ -1,0 +1,16 @@
+{
+  "schema": "reasoning-sft-layerwise-ties-v1",
+  "method": "layerwise TIES magnitude trim, mass sign election, disjoint mean",
+  "density": 0.2,
+  "scale": 1.0,
+  "large_tensor_cutoff": "deterministic uniform sample of at most 1000000 entries",
+  "base_index_sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+  "expert_index_sha256": [
+    "88a50027f81c9f8a1f2c773b695ccc0a9a47e19107d6c70ccf531f322b5304e6",
+    "88a50027f81c9f8a1f2c773b695ccc0a9a47e19107d6c70ccf531f322b5304e6"
+  ],
+  "output_index_sha256": "45e07d77bbeb02675d70133f336cb9e5d86f54929ff1357453a787115fe257b8",
+  "tensor_count": 434,
+  "total_size": 6171877376,
+  "output_dtype": "bfloat16"
+}

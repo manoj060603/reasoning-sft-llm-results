@@ -1,0 +1,35 @@
+{
+  "schema": "reasoning-sft-ties-sft-gem-15k-v1",
+  "literature": [
+    "https://arxiv.org/abs/2306.01708",
+    "https://arxiv.org/abs/2203.05482"
+  ],
+  "merge": {
+    "schema": "reasoning-sft-layerwise-ties-v1",
+    "method": "layerwise TIES magnitude trim, mass sign election, disjoint mean",
+    "density": 0.2,
+    "scale": 1.0,
+    "large_tensor_cutoff": "deterministic uniform sample of at most 1000000 entries",
+    "base_index_sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+    "expert_index_sha256": [
+      "88a50027f81c9f8a1f2c773b695ccc0a9a47e19107d6c70ccf531f322b5304e6",
+      "88a50027f81c9f8a1f2c773b695ccc0a9a47e19107d6c70ccf531f322b5304e6"
+    ],
+    "output_index_sha256": "45e07d77bbeb02675d70133f336cb9e5d86f54929ff1357453a787115fe257b8",
+    "tensor_count": 434,
+    "total_size": 6171877376,
+    "output_dtype": "bfloat16"
+  },
+  "experts": [
+    "runs/lmf-full-15000-sft",
+    "runs/lmf-gem-15000-8k"
+  ],
+  "public_benchmark_scores_used_for_merge": false,
+  "selection_or_checkpoint_tuning": false,
+  "base_model": {
+    "repo": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "path": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "source_sha256": "9b7a0a1d14296fe60fb77d12713be7a792b630fbda26a7ae3d30db53ab165294"
+}
