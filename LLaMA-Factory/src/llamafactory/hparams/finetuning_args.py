@@ -525,6 +525,22 @@ class FinetuningArguments(
         default=4096,
         metadata={"help": "Vocabulary chunk size for memory-bounded GEM computation."},
     )
+    use_asft_loss: bool = field(
+        default=False,
+        metadata={"help": "Whether to use frozen-reference anchored supervised fine-tuning."},
+    )
+    asft_reference_model: Optional[str] = field(
+        default=None,
+        metadata={"help": "Frozen base checkpoint for anchored SFT."},
+    )
+    asft_kl_weight: float = field(
+        default=0.03,
+        metadata={"help": "Frozen-reference KL weight for anchored SFT."},
+    )
+    asft_token_chunk: int = field(
+        default=128,
+        metadata={"help": "Supervised-token chunk size for anchored SFT loss."},
+    )
     freeze_vision_tower: bool = field(
         default=True,
         metadata={"help": "Whether ot not to freeze the vision tower in MLLM training."},
@@ -575,8 +591,9 @@ class FinetuningArguments(
         self.use_ref_model = self.stage == "dpo" and self.pref_loss not in ["orpo", "simpo"]
 
         assert self.finetuning_type in ["lora", "oft", "freeze", "full"], "Invalid fine-tuning method."
-        if sum((self.use_dft_loss, self.use_trimsft_loss, self.use_prift_loss, self.use_gem_loss)) > 1:
-            raise ValueError("DFT, TrimSFT, PriFT, and GEM losses are mutually exclusive.")
+        if sum((self.use_dft_loss, self.use_trimsft_loss, self.use_prift_loss, self.use_gem_loss,
+                self.use_asft_loss)) > 1:
+            raise ValueError("DFT, TrimSFT, PriFT, GEM, and ASFT losses are mutually exclusive.")
         if self.trimsft_bandwidth <= 0:
             raise ValueError("`trimsft_bandwidth` must be positive.")
         if self.prift_method not in ("prob", "mass"):
@@ -589,6 +606,8 @@ class FinetuningArguments(
             raise ValueError("`gem_beta` must lie in (0, 1].")
         if self.gem_vocab_chunk <= 0:
             raise ValueError("`gem_vocab_chunk` must be positive.")
+        if self.asft_kl_weight < 0 or self.asft_token_chunk <= 0:
+            raise ValueError("invalid anchored SFT KL weight or token chunk size.")
         assert self.ref_model_quantization_bit in [None, 8, 4], "We only accept 4-bit or 8-bit quantization."
         assert self.reward_model_quantization_bit in [None, 8, 4], "We only accept 4-bit or 8-bit quantization."
 

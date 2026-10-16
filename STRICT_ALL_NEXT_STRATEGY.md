@@ -21,11 +21,11 @@ These papers motivate the design; none guarantees clearing all nine heterogeneou
 ## Next full candidate: SkillGraph-Verified Anchored SFT
 
 1. Freeze the hashes of the complete 83,037-row sealed pool, decontamination records, tokenizer, base model, and source code.
-2. Use the pinned 7B teacher to label every prompt with constrained JSON containing broad domain, two to five atomic skills or theorems, composition depth, representation type, language, and answer form. Cap this classification output at 128 tokens and require schema-valid decoding.
+2. Use the pinned 7B teacher to label every prompt from its first 2,048 instruction characters with constrained JSON containing broad domain, two to five skills from a fixed 46-skill vocabulary, composition depth, representation type, language, and answer form. Cap this classification output at 128 tokens and require schema-valid decoding.
 3. Normalize skill aliases deterministically and build a benchmark-blind skill and skill-pair co-occurrence graph. No benchmark prompt, answer, score, error label, or leaderboard column may enter the graph.
-4. Apply the existing 8K serialization, completeness, repetition, near-duplicate, and contamination filters. Add independent solution evidence where practical: for rare or high-composition candidates, generate one alternative teacher solution and accept it only when the final answer symbolically matches the original, the serialization is complete and 8K-safe, and its tagged approach differs materially.
-5. Select exactly 15,000 unique prompt IDs by greedy submodular coverage over skills and skill pairs, with square-root frequency caps, rare-skill floors, language/source coverage, and a near-duplicate penalty. Solution quality is an eligibility condition or deterministic tie-breaker, never a public-score signal.
-6. Train full-parameter response-only SFT from the pinned original base with the paper-defined frozen-base anchor, 8K cutoff, effective batch eight, one prompt epoch, and exactly 1,875 updates. Freeze the anchor coefficient from primary literature before evaluation.
+4. Apply the existing sealed-pool contamination and unique-ID checks, then the 8K serialization, complete-box, response-length, and repetition filters. Independently generate one alternative solution for 256 high-composition selected prompts and audit symbolic final-answer agreement and exact token bounds. These alternatives are diagnostic only; they do not replace the original training targets, and matching final answers do not prove intermediate reasoning.
+5. Select exactly 15,000 unique prompt IDs by deterministic greedy inverse-frequency-weighted square-root coverage over skills, skill pairs, broad labels, and the frozen 128-cluster IDs. Repetition enters only a small fixed quality term. No public-score signal enters the selection.
+6. Train full-parameter response-only anchored SFT from the pinned original base, using detached gold-token probability weighting and KL(reference || online) against the frozen original base at the authors' BF16 weight 0.03. Use an 8K cutoff, effective batch eight, one prompt epoch, and exactly 1,875 updates.
 7. Evaluate the single final checkpoint once on all nine benchmarks at temperature 0.6, top-p 0.95, eight samples, and 32,768 maximum new tokens.
 
 ## Required receipts
@@ -34,7 +34,7 @@ These papers motivate the design; none guarantees clearing all nine heterogeneou
 - raw and normalized skill-tag hashes, taxonomy version, graph edge list, and graph hash;
 - exact selection objective, quotas, marginal gains, and 15,000 unique selected IDs;
 - source, teacher, tokenizer, model, code, configuration, and final dataset hashes;
-- alternative-generation manifests, symbolic-verification outcomes, approach-divergence scores, and rejection reasons;
+- alternative-generation manifests, symbolic final-answer agreement, text-divergence scores, and 8K checks for the diagnostic subset;
 - complete chat-template token counts with a maximum of 8,192;
 - exactly 1,875 finite updates and complete final model files;
 - complete matched predictions and manifests for all nine benchmarks, pass@1/pass@8, truncation, repetition, output length, paired confidence intervals, macro, and strict per-column gate.

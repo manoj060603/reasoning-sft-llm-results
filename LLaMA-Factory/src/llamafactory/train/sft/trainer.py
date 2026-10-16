@@ -109,6 +109,22 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
             if self.prift_reference_model.config.vocab_size != self.model.config.vocab_size:
                 raise ValueError("PriFT reference and online model vocabularies differ.")
 
+        self.asft_reference_model = None
+        if finetuning_args.use_asft_loss:
+            reference_path = finetuning_args.asft_reference_model or self.model.config._name_or_path
+            logger.info_rank0("Loading frozen ASFT reference model from %s", reference_path)
+            self.asft_reference_model = AutoModelForCausalLM.from_pretrained(
+                reference_path,
+                torch_dtype=torch.bfloat16,
+                attn_implementation="sdpa",
+                trust_remote_code=False,
+                low_cpu_mem_usage=True,
+            ).to(self.args.device)
+            self.asft_reference_model.eval()
+            self.asft_reference_model.requires_grad_(False)
+            if self.asft_reference_model.config.vocab_size != self.model.config.vocab_size:
+                raise ValueError("ASFT reference and online model vocabularies differ.")
+
     @override
     def create_optimizer(self) -> "torch.optim.Optimizer":
         if self.optimizer is None:
@@ -131,6 +147,25 @@ class CustomSeq2SeqTrainer(Seq2SeqTrainer):
 
     @override
     def compute_loss(self, model, inputs, *args, **kwargs):
+        if self.finetuning_args.use_asft_loss:
+            labels = inputs.get("labels")
+            if labels is None:
+                raise ValueError("ASFT requires labels.")
+            model_inputs = {key: value for key, value in inputs.items() if key != "labels"}
+            with torch.no_grad():
+                reference_outputs = self.asft_reference_model(**model_inputs, use_cache=False)
+            outputs = model(**model_inputs)
+            from reasoning.asft import anchored_loss
+
+            loss = anchored_loss(
+                outputs.logits[..., :-1, :],
+                reference_outputs.logits[..., :-1, :],
+                labels[..., 1:],
+                kl_weight=self.finetuning_args.asft_kl_weight,
+                token_chunk=self.finetuning_args.asft_token_chunk,
+            )
+            del reference_outputs
+            return (loss, outputs) if kwargs.get("return_outputs", False) else loss
         if self.finetuning_args.use_gem_loss:
             labels = inputs.get("labels")
             if labels is None:
