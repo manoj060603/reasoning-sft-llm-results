@@ -68,7 +68,9 @@ def validate_label(label: dict) -> dict:
         if label[key] not in allowed:
             raise ValueError(f"invalid {key}")
     skills = label["skills"]
-    if not isinstance(skills, list) or not 2 <= len(skills) <= 5:
+    # Saved labels can contain one unique skill after xgrammar's repeated
+    # 2-item output is deduplicated.  Do not invent a second skill on resume.
+    if not isinstance(skills, list) or not 1 <= len(skills) <= 5:
         raise ValueError("invalid skill list")
     if not set(skills) <= set(SKILLS):
         raise ValueError("unknown skill")
