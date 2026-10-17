@@ -1,0 +1,213 @@
+{
+  "scope": "Complete nine-benchmark metrics in the saved evaluations directory; incomplete runs excluded. Improvements over base and historical gate clearance are different comparisons.",
+  "strict_target_solves": {
+    "aime": 8,
+    "aime25": 8,
+    "math": 451,
+    "cn_math_2024": 14,
+    "kaoyan": 138,
+    "amc": 33,
+    "minerva": 95,
+    "olympiadbench": 385,
+    "gpqa": 121
+  },
+  "historical_runtime_equivalence_verified": false,
+  "runs": [
+    {
+      "model": "full-base-suite-v2",
+      "metrics_path": "results/arc-20261011-snapshot-2316/evaluations/full-base-suite-v2/metrics.json",
+      "metrics_sha256": "e5c469da3e07b82b39530b155792536311d799a637e84b245ea03215e0626f5b",
+      "improved_over_matched_base": [],
+      "cleared_strict_gates": [
+        "minerva",
+        "gpqa"
+      ],
+      "candidate_solves": {
+        "aime": 7,
+        "aime25": 4,
+        "math": 426,
+        "cn_math_2024": 7,
+        "kaoyan": 113,
+        "amc": 31,
+        "minerva": 135,
+        "olympiadbench": 334,
+        "gpqa": 152
+      }
+    },
+    {
+      "model": "lmf-compact-balanced-15000-suite",
+      "metrics_path": "results/arc-20261011-snapshot-2316/evaluations/lmf-compact-balanced-15000-suite/metrics.json",
+      "metrics_sha256": "7b1ba633311cfc0cf760dd819090afca43b8858e67a9cc363562cb2da87b5d1b",
+      "improved_over_matched_base": [
+        "kaoyan",
+        "gpqa"
+      ],
+      "cleared_strict_gates": [
+        "minerva",
+        "gpqa"
+      ],
+      "candidate_solves": {
+        "aime": 4,
+        "aime25": 2,
+        "math": 413,
+        "cn_math_2024": 5,
+        "kaoyan": 114,
+        "amc": 25,
+        "minerva": 131,
+        "olympiadbench": 285,
+        "gpqa": 159
+      }
+    },
+    {
+      "model": "lmf-full-15000-interp-050-suite",
+      "metrics_path": "results/arc-20261011-snapshot-2316/evaluations/lmf-full-15000-interp-050-suite/metrics.json",
+      "metrics_sha256": "df2fad717ff3f1e508384a7807b9abe036e9b8e70405403362a41a1f85aff099",
+      "improved_over_matched_base": [
+        "cn_math_2024"
+      ],
+      "cleared_strict_gates": [
+        "minerva",
+        "gpqa"
+      ],
+      "candidate_solves": {
+        "aime": 6,
+        "aime25": 2,
+        "math": 423,
+        "cn_math_2024": 12,
+        "kaoyan": 112,
+        "amc": 31,
+        "minerva": 132,
+        "olympiadbench": 332,
+        "gpqa": 151
+      }
+    },
+    {
+      "model": "lmf-full-15000-sft-suite",
+      "metrics_path": "results/arc-20261011-snapshot-2316/evaluations/lmf-full-15000-sft-suite/metrics.json",
+      "metrics_sha256": "3b071059acd80340e89ca7f499a2a1baf877a911a1786690a1a6ecd298ae04b5",
+      "improved_over_matched_base": [
+        "aime25",
+        "cn_math_2024",
+        "kaoyan",
+        "gpqa"
+      ],
+      "cleared_strict_gates": [
+        "minerva",
+        "gpqa"
+      ],
+      "candidate_solves": {
+        "aime": 5,
+        "aime25": 6,
+        "math": 425,
+        "cn_math_2024": 10,
+        "kaoyan": 119,
+        "amc": 28,
+        "minerva": 133,
+        "olympiadbench": 333,
+        "gpqa": 157
+      }
+    },
+    {
+      "model": "lmf-gem-15000-8k-suite",
+      "metrics_path": "results/arc-20261011-snapshot-2316/evaluations/lmf-gem-15000-8k-suite/metrics.json",
+      "metrics_sha256": "16828fd41aeb1fe99610fe1b2fb551bf5b349c5fdad02098f386b9b9450007ee",
+      "improved_over_matched_base": [
+        "math",
+        "cn_math_2024",
+        "kaoyan",
+        "olympiadbench",
+        "gpqa"
+      ],
+      "cleared_strict_gates": [
+        "minerva",
+        "gpqa"
+      ],
+      "candidate_solves": {
+        "aime": 5,
+        "aime25": 3,
+        "math": 427,
+        "cn_math_2024": 9,
+        "kaoyan": 121,
+        "amc": 30,
+        "minerva": 128,
+        "olympiadbench": 341,
+        "gpqa": 159
+      }
+    },
+    {
+      "model": "lmf-gem-modelaware-15000-8k-suite",
+      "metrics_path": "results/arc-20261011-snapshot-2316/evaluations/lmf-gem-modelaware-15000-8k-suite/metrics.json",
+      "metrics_sha256": "58b7d7b67b867e1ef7f1c43d4f9ba367b04747d529c4f311db84d3890c476e62",
+      "improved_over_matched_base": [
+        "math",
+        "kaoyan",
+        "gpqa"
+      ],
+      "cleared_strict_gates": [
+        "minerva",
+        "gpqa"
+      ],
+      "candidate_solves": {
+        "aime": 5,
+        "aime25": 4,
+        "math": 427,
+        "cn_math_2024": 7,
+        "kaoyan": 123,
+        "amc": 26,
+        "minerva": 124,
+        "olympiadbench": 330,
+        "gpqa": 159
+      }
+    },
+    {
+      "model": "lmf-prift-mass-15000-8k-suite",
+      "metrics_path": "results/arc-20261011-snapshot-2316/evaluations/lmf-prift-mass-15000-8k-suite/metrics.json",
+      "metrics_sha256": "7ef51db56341d16cb92b6853980561a03742075a9fb9e28db96f0992b7dc1a61",
+      "improved_over_matched_base": [
+        "cn_math_2024"
+      ],
+      "cleared_strict_gates": [
+        "minerva",
+        "gpqa"
+      ],
+      "candidate_solves": {
+        "aime": 4,
+        "aime25": 3,
+        "math": 410,
+        "cn_math_2024": 8,
+        "kaoyan": 113,
+        "amc": 26,
+        "minerva": 129,
+        "olympiadbench": 325,
+        "gpqa": 134
+      }
+    },
+    {
+      "model": "lmf-ties-sft-gem-15k-suite",
+      "metrics_path": "results/arc-20261011-snapshot-2316/evaluations/lmf-ties-sft-gem-15k-suite/metrics.json",
+      "metrics_sha256": "abddb41df53fca839e8c4eaa6e83a2a029cff9ab7f7ba6b46b0cf62c8a1a7afd",
+      "improved_over_matched_base": [
+        "aime25",
+        "cn_math_2024",
+        "kaoyan",
+        "olympiadbench",
+        "gpqa"
+      ],
+      "cleared_strict_gates": [
+        "minerva",
+        "gpqa"
+      ],
+      "candidate_solves": {
+        "aime": 5,
+        "aime25": 5,
+        "math": 420,
+        "cn_math_2024": 10,
+        "kaoyan": 116,
+        "amc": 30,
+        "minerva": 134,
+        "olympiadbench": 343,
+        "gpqa": 154
+      }
+    }
+  ]
+}

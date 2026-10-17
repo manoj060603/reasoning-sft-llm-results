@@ -4,15 +4,9 @@
 > records the assignment constraints, measured solve gaps, arXiv evidence and
 > limitations, setup audit, and next original-target selection hypothesis.
 
-> **Concrete next idea:** [Original-demonstration response and curriculum SFT](DEMONSTRATION_RESPONSE_SFT_DESIGN.md),
-> supported by the [detailed nine-paper review and implementation checks](ARXIV_DETAILED_REVIEW_20261016.md).
-> The preparation/export/training path is implemented and CPU-verified. It remains an unmeasured research hypothesis; launch status is recorded in its design document.
+> **Best completed result:** [TIES merge](TIES_MERGE_EXPERIMENT.md), **51.59%** seven-benchmark pass@8 and **2/9** frozen Fall 2025 gates. Ordinary full SFT improved over our matched base on **4/9** benchmarks, which is a different comparison; it also cleared only **2/9** historical gates. See [RESULTS.md](RESULTS.md).
 
-> **Latest experiment:** [`MODEL_AWARE_GEM_EXPERIMENT.md`](MODEL_AWARE_GEM_EXPERIMENT.md)
-> records the completed base-NLL/diversity selection and full GEM run. The
-> selector scored all 83,037 approved rows without public benchmark data,
-> chose exactly 15,000 unique 8K-safe examples, and evaluated all nine
-> assignment benchmarks.
+> **Current experiment:** [Full-length original-solution SFT](FULL_LENGTH_SFT_EXPERIMENT.md), with complete original targets, explicit system mapping, and three epochs. [Demonstration-response preparation](DEMONSTRATION_RESPONSE_SFT_DESIGN.md) is retired after a negative capacity result; it never reached training. The [detailed paper review](ARXIV_DETAILED_REVIEW_20261016.md) records the research evidence and limits.
 
 > **Research queue:** [`ARXIV_SCORE_IMPROVEMENT_PLAN.md`](ARXIV_SCORE_IMPROVEMENT_PLAN.md)
 > ranks assignment-compatible follow-ups by evidence, direct relevance to

@@ -2,18 +2,24 @@
 
 ## Direct answer
 
-**The project’s best model beats the matched local baseline on the target seven-benchmark pass@8 macro, but the latest compact-balanced model does not.**
+**The highest completed seven-benchmark pass@8 macro is TIES at 51.59%, versus 49.55% for the matched base. No completed candidate clears all nine frozen Fall 2025 gates.**
 
-- **Matched base:** 49.55% pass@8
-- **Best model, full-parameter 15K SFT:** **51.52% pass@8** — **+1.97 percentage points**
-- **Latest compact-balanced 15K SFT:** 44.83% pass@8 — **−4.72 points**
-- **Illustrative Fall 2025 leader:** 52.50% AVG; the best model is 0.98 points lower, and exact historical comparability is unverified.
+| Completed candidate | Seven-benchmark pass@8 | Gain over matched base | Strict Fall 2025 gates cleared |
+|---|---:|---:|---:|
+| TIES full-SFT/GEM merge | **51.59%** | **+2.04 pp** | 2/9 |
+| Ordinary full-parameter 15K SFT | 51.52% | +1.97 pp | 2/9 |
+| Ordinary GEM | 50.53% | +0.98 pp | 2/9 |
+| Matched base | 49.55% | — | 2/9 |
 
-The best model’s +1.97-point pass@8 gain has a paired 95% interval of **[−1.89, +5.74] points**, so the observed improvement is not statistically decisive. Its pass@1 fell from 23.55% to 21.85%, with a paired interval of **[−3.16, −0.22] points**.
+**The earlier “4/9” result means ordinary full SFT improved over the matched base on four benchmarks: AIME25, CN Math 2024, Kaoyan, and GPQA. It does not mean four Fall 2025 gates were cleared.** Both ordinary full SFT and TIES clear only Minerva and GPQA. The [complete-run gate audit](research/completed_nine_benchmark_gate_audit_20261017.json) records exact solve counts and source metric hashes.
+
+The ordinary full-SFT +1.97-point macro gain has a paired 95% interval of **[−1.89, +5.74] points**, so that observed improvement is not statistically decisive. Its pass@1 fell from 23.55% to 21.85%, with a paired interval of **[−3.16, −0.22] points**. Those intervals belong to ordinary full SFT, not TIES. Historical runtime and dataset equivalence remain unverified.
+
+The new full-length, system-aligned three-epoch candidate is unmeasured; B200 job **1187777** was still pending with reason Priority at the latest October 17 scheduler check. See [FULL_LENGTH_SFT_EXPERIMENT.md](FULL_LENGTH_SFT_EXPERIMENT.md).
 
 ## Complete nine-benchmark pass@8 results
 
-| Benchmark | Matched base | Best full SFT | Delta | Compact-balanced SFT | Compact delta |
+| Benchmark | Matched base | Ordinary full SFT | Delta | Compact-balanced SFT | Compact delta |
 |---|---:|---:|---:|---:|---:|
 | AIME24 | 23.33% | 16.67% | −6.67 pp | 13.33% | −10.00 pp |
 | AIME25 | 13.33% | 20.00% | +6.67 pp | 6.67% | −6.67 pp |
@@ -28,17 +34,17 @@ The best model’s +1.97-point pass@8 gain has a paired 95% interval of **[−1.
 
 The seven-benchmark macro follows the assignment’s AVG set: AIME25, CN Math 2024, Kaoyan, AMC, Minerva, OlympiadBench, and GPQA.
 
-**This is not a broad win.** Best full SFT improves pass@8 on only **4 of 9 benchmarks** and regresses on **5 of 9**. Within the seven benchmarks used for AVG it improves 4 and regresses on 3. The +1.97-point macro is driven mainly by CN Math 2024 (+10.00 points) and AIME25 (+6.67 points), both 30-question sets with large sampling uncertainty. Compact-balanced SFT is worse: it improves only Kaoyan and GPQA and regresses on the other 7 benchmarks.
+**This is not a broad win.** Ordinary full SFT improves pass@8 on only **4 of 9 benchmarks** and regresses on **5 of 9**. Within the seven benchmarks used for AVG it improves 4 and regresses on 3. The +1.97-point macro is driven mainly by CN Math 2024 (+10.00 points) and AIME25 (+6.67 points), both 30-question sets with large sampling uncertainty. Compact-balanced SFT is worse: it improves only Kaoyan and GPQA and regresses on the other 7 benchmarks.
 
 ## Generation behavior
 
-| Metric across all nine benchmarks | Base | Best full SFT | Compact-balanced SFT |
+| Metric across all nine benchmarks | Base | Ordinary full SFT | Compact-balanced SFT |
 |---|---:|---:|---:|
 | Truncated samples | **141 / 15,792** | 1,964 / 15,792 | **44 / 15,792** |
 | Seven-benchmark pass@1 | **23.55%** | 21.85% | 19.56% |
 | Seven-benchmark pass@8 | 49.55% | **51.52%** | 44.83% |
 
-The full SFT model produced the highest target score but severely worsened termination. Compact targets repaired termination and shortened outputs, but accuracy regressed substantially. This shows that better stopping behavior did not translate into better benchmark accuracy.
+Ordinary full SFT produced a strong measured average but severely worsened termination; the later TIES merge slightly exceeded its average. Compact targets repaired termination and shortened outputs, but accuracy regressed substantially. This shows that better stopping behavior did not translate into better benchmark accuracy.
 
 ## Fall 2025 comparison
 
@@ -60,7 +66,7 @@ These historical comparisons are contextual only. The Fall 2025 dataset revision
 
 Both full 15K GEM experiments completed exactly 1,875 finite updates and all nine benchmarks. Ordinary GEM scored **50.53%** seven-benchmark pass@8 versus **49.55%** for matched base, with **417/15,792 truncations**. Model-aware GEM scored all 83,037 approved pool rows, selected exactly 15,000 unique 8K-safe examples, and scored **48.32%** pass@8 with **284/15,792 truncations**. Its matched pass@1/pass@8 values were **21.00% / 48.32%**, versus **23.55% / 49.55%** for base.
 
-Ordinary GEM improved the target macro by 0.98 points but failed the strict per-column objective. Model-aware reselection improved Kaoyan by 5.03 points and GPQA by 3.54 points over base, tied base on AIME25 and CN Math, and regressed most other columns. Both cleared only the contextual Minerva and GPQA Fall 2025 thresholds. The ordinary full-SFT model remains the highest measured seven-benchmark candidate at **51.52%**, with its previously documented pass@1 and truncation costs.
+Ordinary GEM improved the target macro by 0.98 points but failed the strict per-column objective. Model-aware reselection improved Kaoyan by 5.03 points and GPQA by 3.54 points over base, tied base on AIME25 and CN Math, and regressed most other columns. Both cleared only the contextual Minerva and GPQA Fall 2025 thresholds. At that stage ordinary full SFT led at **51.52%**; the later TIES merge reached **51.59%**, still clearing only 2/9 strict gates.
 
 This evidence rejects teacher-forced base NLL as a sufficient standalone selection signal for this pool. NLL measures surprising teacher tokens and can favor noisy or unsupported trajectories; it does not establish correctness or learnability. Complete receipts and predictions are under `results/arc-20261011-snapshot-2316/evaluations/lmf-gem-15000-8k-*` and `results/arc-20261011-snapshot-2316/evaluations/lmf-gem-modelaware-15000-8k-*`. Historical runtime equivalence remains unverified, so these are internal matched results rather than official leaderboard claims.
 
