@@ -1,0 +1,32 @@
+{
+  "schema": "demonstration-response-v1",
+  "model": "artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "seed": 42,
+  "pool_sha256": "c115f4331f485458616b8e29a3715422b5d4479396cf50c287183014820eabc9",
+  "features_sha256": "039cd63692d528dcce2caf2be2bfed85be917a66298a2532933ef1107f9db979",
+  "labels_sha256": "af60cf26d836eb733aace1267cc1139bcc66891a5968c198b7b50ff2e2ec0a4f",
+  "module_sha256": "176e09a5c256738c610785753aa3201cbe4490a0770476416adaae02acadc8f1",
+  "model_manifest_sha256": "8b7203d9fc828aaf7b97f3a7fd79de0133bdb00cef5d81373d94d702b21dd1bd",
+  "grader_sha256": {
+    "grader.py": "43d858572b1dadda6fe3ec327db123bb5362fccd271ae58329c57f0c10521383",
+    "parser.py": "8d04ceb93e9ef50d61157fd1c8826a5cbf8d7f64cda85459f1166e19d8784208",
+    "math_normalization.py": "9c0484a01b76bd4582bfe61c8ee55df375dbc09782f1b587fc21b21dd80e23a0"
+  },
+  "size": 30000,
+  "n_per_condition": 2,
+  "max_new_tokens": 2048,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "cutoff": 8192,
+  "categories": {
+    "retention": 3000,
+    "manageable": 6000,
+    "missed": 6000
+  },
+  "prefix_usable": 25158,
+  "plan_sha256": "79b390f644f1e49b6520aff4e884bde8ef766deb7731870a0381dd25bf3a928a",
+  "preparation_script_sha256": "8d905730a21e00840b24e03cba86b426c6d869bc7cd231e6f29283b0ac218b5c",
+  "max_exact_tokens": 8160,
+  "request_count": 110316,
+  "cpu_verified_before_submission": true
+}

@@ -1,13 +1,6 @@
 # ArXiv-backed score-improvement plan
 
-> **Current decision (October 16, 2026):** [STRICT_9_OF_9_PLAN.md](STRICT_9_OF_9_PLAN.md)
-> supersedes the historical ranking below. It records the assignment-rule audit,
-> measured nine-column gaps, corrected benchmark record counts, limitations of
-> the arXiv evidence, and a primary successor using empirical student solvability
-> to select original AceReason examples. Generated replacement targets and
-> multi-response sets are conditional extensions, not automatically authorized
-> assignment recipes. SkillGraph ASFT job 1180491 remains in evaluation; no
-> successor GPU run has yet been submitted. The demonstration-response preparation and complete training path are now implemented and CPU-verified; see its design for the frozen rules and audit.
+> **Current execution (October 17, 2026):** the user authorized advancing without waiting for SkillGraph’s failed candidate. Its seven completed results and weights are preserved. The benchmark-blind demonstration-response selector, fresh control audit, complete export/training path, and CPU verification are implemented. Full B200 preparation job **1183868** is submitted and initially pending resources. [The frozen design](DEMONSTRATION_RESPONSE_SFT_DESIGN.md) records the immutable rules, 40 GPU-hour preparation cap, and receipts; no unmeasured success is claimed. [STRICT_9_OF_9_PLAN.md](STRICT_9_OF_9_PLAN.md) supersedes the older ranked queue below.
 
 > **Detailed reading and concrete hypothesis:** [ARXIV_DETAILED_REVIEW_20261016.md](ARXIV_DETAILED_REVIEW_20261016.md)
 > records the nine-paper methods/appendix review and author-code inspection.

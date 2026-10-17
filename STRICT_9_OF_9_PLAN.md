@@ -8,7 +8,7 @@ Reviewed October 16, 2026 (America/New_York). This is a research and execution p
 specifies original-demonstration assistance measurements, a 3K/6K/6K retention/acquisition selection,
 and a medium-to-currently-missed curriculum. [The detailed literature review](ARXIV_DETAILED_REVIEW_20261016.md)
 records methods, ablations, appendix findings, and pinned implementation checks for nine papers
-plus LIMOPro. This refines the general selection stage below; its implementation and CPU checks are now recorded in that design document. GPU scoring and training remain unmeasured.
+plus LIMOPro. This refines the general selection stage below; its implementation and CPU checks are recorded in that design document. Full B200 preparation job 1183868 is submitted; GPU scoring and training remain unmeasured.
 
 Keep the evaluated model a descendant of the pinned Qwen2.5-3B-Instruct base. Preserve SkillGraph ASFT job 1180491 results and advance the implemented successor as authorized by the user; never overlap B200 work. Prepare one new intervention around **measured student solvability and original-target quality**, rather than another loss, merge, or unverified rewrite. A teacher may supply preparation evidence; it is not the submitted model. The primary path selects original AceReason examples and retains their original complete responses.
 
@@ -103,4 +103,4 @@ If it fails, distinguish a demonstrated operational bug from a negative method r
 - `results/arc-20261011-snapshot-2316/evaluations/lmf-ties-sft-gem-15k-suite-comparison.json`
 - `results/arc-20261011-snapshot-2316/evaluations/lmf-ties-sft-gem-15k-domination.json`
 - `LMF_CONTROL_EXPERIMENT.md`, `GEN_SSD_EXPERIMENT.md`, `GEM_EXPERIMENT.md`, `MODEL_AWARE_GEM_EXPERIMENT.md`, `SKILLGRAPH_ASFT_EXPERIMENT.md`
-- Current job at implementation: 1180491. The demonstration-response successor is implemented and staged; its actual launch ID will be recorded when submitted.
+- Current preparation job: 1183868, initially pending B200 resources. SkillGraph 1180491 evaluation was cancelled at the user-authorized handoff after preserving seven complete benchmarks; training and weights are complete.

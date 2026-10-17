@@ -1,0 +1,17 @@
+{
+  "old_job_id": 1180491,
+  "reason": "User authorized moving on without waiting after strict all-nine failure was established",
+  "utc": "2026-10-17T04:20:43.214815+00:00",
+  "completed_benchmarks": [
+    "amc",
+    "aime25",
+    "aime",
+    "math",
+    "cn_math_2024",
+    "kaoyan",
+    "minerva"
+  ],
+  "training_complete": true,
+  "evaluation_tail_cancelled": true,
+  "original_weights_and_completed_predictions_preserved": true
+}
