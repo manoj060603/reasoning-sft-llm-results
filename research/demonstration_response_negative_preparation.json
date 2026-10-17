@@ -1,0 +1,57 @@
+{
+  "status": "negative_preparation_capacity_result",
+  "jobs": [
+    1183868,
+    1186667
+  ],
+  "complete_generation_requests": 110316,
+  "unique_candidate_ids": 30000,
+  "requirements": {
+    "retention": 3000,
+    "manageable": 6000,
+    "missed": 6000
+  },
+  "capacities": {
+    "excluded": 19828,
+    "missed": 2978,
+    "retention": 5955,
+    "manageable": 1239
+  },
+  "finish_reasons": {
+    "normal:stop": 58410,
+    "assisted:stop": 49150,
+    "normal:length": 1590,
+    "assisted:length": 1166
+  },
+  "supported_counts": {
+    "normal:True": 58431,
+    "assisted:True": 49098,
+    "normal:False": 1569,
+    "assisted:False": 1218
+  },
+  "empty_counts": {
+    "assisted": 1
+  },
+  "prompt_outcomes": {
+    "normal_all_complete_supported:True": 28567,
+    "normal_all_complete_supported:False": 1433
+  },
+  "plan_sha256": "9c696d9194dac34164aaf4efd1b48dd476906615fcc38dea99c86f25a352c786",
+  "ledger_sha256": "63297693c92c9a00fe28f3153ef80fab12769af6fde8333b86f4c8db95522ab9",
+  "allocations": {
+    "plan_sha256": "9c696d9194dac34164aaf4efd1b48dd476906615fcc38dea99c86f25a352c786",
+    "job_ids": [
+      "1183868",
+      "1186667"
+    ],
+    "runtime_versions": {
+      "torch": "2.10.0",
+      "transformers": "4.57.6",
+      "vllm": "0.19.0"
+    },
+    "operational_recovery_from_plan_sha256": "79b390f644f1e49b6520aff4e884bde8ef766deb7731870a0381dd25bf3a928a"
+  },
+  "training_launched": false,
+  "audit_launched": false,
+  "selection_relaxed": false
+}

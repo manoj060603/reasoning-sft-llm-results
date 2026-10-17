@@ -37,3 +37,6 @@ results/**/batch_*.json
 # Resumable training-only preparation contains large raw generations/prefixes.
 artifacts/demonstration-response/
 artifacts/datasets-demonstration-response-15k/advanced.json
+
+# Full-length candidate exports retain original large source responses.
+artifacts/datasets-full-length-15k/advanced.json
