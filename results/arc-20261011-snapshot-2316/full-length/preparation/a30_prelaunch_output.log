@@ -1,0 +1,69 @@
+{
+  "schema": "full-length-4a30-execution-v1",
+  "user_authorized_cluster_change": true,
+  "b200_job_to_replace": "1187777",
+  "preparation_sha256": "581ff86452dc42b45736556d3606f10bb926e5397b7e57019070419a93543905",
+  "data_sha256": "0ccdb3b3e7800f181cd99cb16f433d81d359d86e6d6fa0d089f61c36f56185cc",
+  "selection_sha256": "f4a43fbc36ce72e74cb9a5f1afa92a31fd5071d753420657eb7440026f5ee7ed",
+  "execution_sha256": {
+    "configs/lmf-full-length-15k-16k-3epoch-4a30.yaml": "bf65c0fca9bebb9d10e6926ed5b11e9394653122dc2c295420a526859225cf58",
+    "configs/ds-full-length-4a30.json": "0bc55666fc63214baeacf1483f7517910d343b1745a16a73fbb35c0855a3992d",
+    "scripts/arc_full_length_4a30_train.sh": "9af93d2ebb67dbdd7bdeaaf914c7fcef3c3e0c4b6366cf095de8f48fc85f5f88",
+    "scripts/train_memory_ce.py": "96a9bd2f3687ebd7f6fb0ba8ac84c6d846656957f4b875383e5e1e6e8e923bea",
+    "reasoning/memory_ce.py": "814dfa396ce7ffd70e512c69c9cff7850e96e35f55606d85d32806af0283cf7e",
+    "reasoning/a30_runtime.py": "41b8c2ef36cae79643efc95644e25b5aa574a644647fe7751b7488528fa1b5aa"
+  },
+  "runtime_versions": {
+    "torch": "2.10.0",
+    "transformers": "4.55.0",
+    "deepspeed": "0.18.9"
+  },
+  "config_diff_from_frozen_b200_recipe": {
+    "output_dir": {
+      "before": "/projects/tealab/rohit/reasoning-sft-20261011/runs/lmf-full-length-15k-16k-3epoch",
+      "after": "/projects/tealab/rohit/reasoning-sft-20261011/runs/lmf-full-length-15k-16k-3epoch-4a30"
+    },
+    "deepspeed": {
+      "before": null,
+      "after": "/projects/tealab/rohit/reasoning-sft-20261011/configs/ds-full-length-4a30.json"
+    },
+    "average_tokens_across_devices": {
+      "before": null,
+      "after": true
+    },
+    "gradient_accumulation_steps": {
+      "before": 8,
+      "after": 2
+    },
+    "save_steps": {
+      "before": 250,
+      "after": 50
+    }
+  },
+  "cpu_tests": {
+    "plain_ce_loss_and_gradient": true,
+    "global_token_denominator": true,
+    "all_rank_checkpoint_rejection": true,
+    "cpu_adam_one_step": true,
+    "installed_zero3_schema": true
+  },
+  "gpu_pilot": false,
+  "effective_batch": 8,
+  "training_world_size": 4,
+  "original_targets_unchanged": true,
+  "updates": 5625,
+  "epochs": 3,
+  "evaluation_hardware": "single Owl B200",
+  "physical_gpu_hours_cap": 40,
+  "four_a30_chunks": {
+    "max_count": 4,
+    "hours_each": 2,
+    "gpu_hours_each": 8
+  },
+  "b200_evaluation_gpu_hours_reserved": 8,
+  "limitations": [
+    "Distributed reduction/offload arithmetic is not bitwise equivalent to one GPU.",
+    "CPU checks do not prove GPU memory fit or distributed NCCL runtime success.",
+    "Earlier queue start is not evidence of earlier completion or benchmark improvement."
+  ]
+}
