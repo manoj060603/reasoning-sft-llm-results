@@ -1,0 +1,28 @@
+{
+  "schema": "reasoning-sft-skillgraph-asft-15000-8k-v1",
+  "literature": [
+    "https://arxiv.org/abs/2503.14917",
+    "https://arxiv.org/abs/2509.23753"
+  ],
+  "source_tree_sha256": "3706a403225605416485d944e8b85c1d4e379713bf66886caea40434992b7206",
+  "config_sha256": "497ff96d88bdc2ca23d5433d737bf224376e9042453c8f748a7e8cf099098e03",
+  "preparation_receipt": {
+    "schema": "reasoning-sft-skillgraph-asft-preparation-v1",
+    "pool_rows": 83037,
+    "skill_labels": 83037,
+    "selected_ids": 15000,
+    "verified_alternative_answers": 47,
+    "pool_sha256": "c115f4331f485458616b8e29a3715422b5d4479396cf50c287183014820eabc9",
+    "features_sha256": "039cd63692d528dcce2caf2be2bfed85be917a66298a2532933ef1107f9db979",
+    "labels_sha256": "af60cf26d836eb733aace1267cc1139bcc66891a5968c198b7b50ff2e2ec0a4f",
+    "data_sha256": "d84f297f6d93c96d74243d3ca0b22cf3cf2d719b4e25648c2a05b8c2ac6a2749",
+    "selection_sha256": "3c21aa5b8731949b0139d82a1062de751edf0be7da814c54903a277fe92f27ea",
+    "audit_sha256": "a2b3a317e42433daf60ff99eefd23141b01544d45f7a7209c5b44d8d1559547a"
+  },
+  "public_benchmark_data_used_for_selection": false,
+  "base_model": {
+    "repo": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "path": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  }
+}

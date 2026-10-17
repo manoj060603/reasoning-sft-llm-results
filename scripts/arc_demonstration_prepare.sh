@@ -18,7 +18,7 @@ test "${SLURM_JOB_PARTITION:-}" = b200_normal_q
 nvidia-smi --query-gpu=name --format=csv,noheader | "$PY" -c 'import sys; names=sys.stdin.read(); assert "B200" in names,names'
 mkdir -p logs artifacts/demonstration-response "$DATA"
 "$PY" - <<'PY'
-import json,os
+import json,os,importlib.metadata
 from pathlib import Path
 from reasoning.data import digest,write_json
 from reasoning.demonstration_response import load_plan
@@ -27,6 +27,9 @@ assert plan['prefix_usable']>=12000
 path=Path('artifacts/demonstration-response/allocations.json')
 receipt=json.load(open(path)) if path.exists() else {'plan_sha256':digest('artifacts/demonstration-response/plan.json'),'job_ids':[]}
 assert receipt['plan_sha256']==digest('artifacts/demonstration-response/plan.json')
+versions={k:importlib.metadata.version(k) for k in ('torch','transformers','vllm')}
+assert receipt.get('runtime_versions',versions)==versions,'Runtime changed across immutable preparation chunks'
+receipt['runtime_versions']=versions
 job=os.environ['SLURM_JOB_ID']
 if job not in receipt['job_ids']:
  assert len(receipt['job_ids'])<5,'Frozen preparation budget exhausted: five eight-hour B200 allocations'
