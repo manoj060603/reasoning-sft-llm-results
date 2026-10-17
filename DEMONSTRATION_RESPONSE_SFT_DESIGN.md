@@ -1,6 +1,6 @@
 # SFT curriculum selected by response to original demonstrations
 
-Design proposal, October 16, 2026 (America/New_York). Status: **specified hypothesis; not implemented, not launched, and no measured win**. The distinguishing intervention is to select missing skills for which the original demonstration gives the student useful assistance. Its score measures conditional answering, not actual improvement after a gradient update.
+Design proposal, October 16, 2026 (America/New_York). Status: **implemented and CPU-verified; final preparation plan frozen before GPU generation; no measured win**. The distinguishing intervention is to select missing skills for which the original demonstration gives the student useful assistance. Its score measures conditional answering, not actual improvement after a gradient update.
 
 ## Research question
 
@@ -57,7 +57,7 @@ Use this only as a coarse ranking signal. Two samples cannot identify a true sol
 
 ### 4. Select exactly 15K original examples
 
-Proposed disjoint categories:
+Frozen disjoint categories:
 
 | Category | Count | Observed requirement | Learning role |
 |---|---:|---|---|
@@ -65,17 +65,19 @@ Proposed disjoint categories:
 | Acquisition, manageable | 6,000 | 1/2 unassisted matches, 2/2 assisted matches, all draws complete/supported | Strengthen accessible reasoning with useful original demonstrations |
 | Acquisition, currently missed | 6,000 | 0/2 unassisted matches, at least 1/2 assisted matches, all draws complete/supported | Introduce skills with observable demonstration assistance |
 
-For each category, preserve cluster representation through the existing square-root quota allocation, subject to category capacity. Within a cluster, select greater observed gain first; resolve ties by marginal skill/skill-pair coverage from the frozen taxonomy, then stable ID hash. Retention ties use coverage and hash. No extra mixture weights are optimized.
+For each category, preserve cluster representation through the existing square-root quota allocation, subject to category capacity. Within a cluster, select greater observed gain first; resolve ties by marginal skill/skill-pair coverage from the frozen taxonomy, then stable ID. Retention ties use coverage and hash. No extra mixture weights are optimized.
 
 Record every selected ID, category, score, quota, coverage increment, and tie-break. If the candidate pool cannot fill a category, the design has a preparation feasibility failure. Do not fill acquisition slots with arbitrary targets, duplicate identities, quietly change proportions, or launch a nominally identical full run. Revise a new training-only design and report that change explicitly. No 9/9 forecast is justified by passing preparation.
 
 This selection preserves broad cross-prompt coverage. It does **not** reproduce RPD multi-path training or prove output-path diversity. One original path per prompt can still yield correlated wrong answers at evaluation.
 
-### 5. Audit the actual mechanism before export
+### 5. Audit the actual mechanism before training readiness
 
-Choose 256 scored examples deterministically across categories, languages, response-length strata, and rare skill pairs. Audit final-answer extraction, prefix answer exposure, and original-target agreement. Where mathematical structure permits, check explicit arithmetic/equation transitions independently. Mark unsupported steps as unverified; agreement of final answers is not proof of the intermediate derivation.
+Choose 256 selected examples deterministically: 86 retention, 85 manageable, and 85 currently missed, round-robin across language/length strata and prioritizing composition depth within strata. Audit final-answer extraction, mechanical prefix answer exposure, and original-target agreement. The implemented symbolic grader verifies final answers only; intermediate arithmetic/equation transitions are **not** independently verified, and this candidate must not be described as proof-verified.
 
-For this fixed audit subset, generate two additional completions with a mismatched prefix from a different training problem of the same broad cluster and length stratum. Compare correct-prefix, unassisted, and mismatched-prefix outcomes. This tests whether a supposed gain appears to depend on relevant demonstration information, rather than any added text. A mismatched prefix may itself be distracting, so this is a negative-control diagnostic, not a causal estimate of learning.
+For this fixed audit subset, generate **six fresh completions per prompt**: two unassisted, two with its correct prefix, and two with a mismatched prefix from a different training problem of the same broad cluster and length quartile. All audit seeds differ from selection seeds. Exclude mismatched prefixes that mechanically expose the current target answer. Compare the three conditions using these independent outcomes, rather than reusing selection draws that were chosen for an observed gain. This tests whether a supposed gain appears to depend on relevant demonstration information, rather than any added text. A mismatched prefix may itself be distracting, so this is a negative-control diagnostic, not a causal estimate of learning.
+
+Require at least 32 question IDs with all six outputs complete and symbolically supported. At the question level, compare the two-draw correct-prefix solve count with each control using one-sided exact paired sign tests, ignoring ties, with Bonferroni alpha .025 per comparison. Both comparisons must pass. This is a prespecified training-data mechanism check, not a public benchmark, GPU pilot, accuracy forecast, or checkpoint selection. Insufficient category/control capacity or a negative/inconclusive audit prevents a training-ready receipt; preserve the negative preparation result.
 
 Any direct answer leak must be fixed in the mechanical prefix construction and all affected scores invalidated/recomputed with preserved logs before export. Do not optimize the audit sample, use public benchmark feedback, or call a weak final-answer match rate a proof-quality certificate. If the audit cannot distinguish the proposed signal from leakage or parser failure, report the mechanism as unresolved and do not claim readiness.
 
@@ -106,14 +108,18 @@ The proposed full run changes selection and order together. It tests the combine
 
 ## Compute and readiness
 
-Four scoring completions for 30K candidates at a 2,048-token limit yield at most 245,760,000 output tokens. The 256-example mismatched-prefix audit adds at most 1,048,576. Total upper bound: 246,808,576 output tokens, excluding prefill, template tokens, sampling overhead, scoring, training, and final evaluation. At an illustrative sustained 2,000 output tokens/s, output generation alone is about 34.3 hours. At 1,000/s it is about 68.6 hours. These are arithmetic scenarios, not measured B200 ETAs.
+Four scoring completions for 30K candidates at a 2,048-token limit yield at most 245,760,000 output tokens. The fresh three-condition 256-example audit adds at most 3,145,728. Total upper bound: 248,905,728 output tokens, excluding prefill, template tokens, sampling overhead, scoring, training, and final evaluation. At an illustrative sustained 2,000 output tokens/s, output generation alone is about 34.6 hours. At 1,000/s it is about 69.1 hours. These are arithmetic scenarios, not measured B200 ETAs.
 
-Use existing B200 logs for a measured throughput estimate, then account for current-job completion, queue time, resumable eight-hour preparation allocations, training, nine benchmarks, uploads, and the October 20, 11:59 p.m. Eastern deadline. Do not launch a budget that cannot plausibly finish. Scheduler interruption resumes an immutable ledger; it does not authorize method changes or overlapping jobs.
+Use existing B200 logs for a measured throughput estimate, then account for current-job completion, queue time, resumable eight-hour preparation allocations, training, nine benchmarks, uploads, and the October 20, 11:59 p.m. Eastern deadline. Do not launch a budget that cannot plausibly finish. The frozen preparation budget is at most five sequential eight-hour B200 allocations (40 GPU-hours). The allocation receipt binds their IDs to the same plan hash. Reaching a time limit with a progressing ledger permits the next planned chunk; it does not authorize changed selection rules. A recurring operational error is different and must not be repeatedly relaunched. Stop and report capacity/audit failure or budget exhaustion rather than consume indefinite GPU time.
 
-Before submission, implement and CPU-verify category membership, answer/finish-reason handling, stable resume seeds, leakage rejection, quota capacity, unique IDs, exact token spans, original response hashes, curriculum order, and the 1,875-update accounting. No GPU pilot or development benchmark. This design document does not assert those implementation checks have passed.
+Before submission, implement and CPU-verify category membership, answer/finish-reason handling, stable resume seeds, leakage rejection, quota capacity, unique IDs, exact token spans, original response hashes, curriculum order, and the 1,875-update accounting. No GPU pilot or development benchmark. The implementation passed 28 local tests covering selection, censoring, leakage, deterministic resume, and generation-ledger handling. On Owl, the actual LLaMA-Factory tokenizer, supervised processor, and native sequential sampler passed a synthetic 15K-row CPU path check: complete original responses/EOS, masked prompts, exact curriculum order, and 1,875 updates. The sealed full-source CPU pass found 30,000 exact eligible candidates and 25,158 usable prefixes. This is pre-generation capacity only; category capacity, the independent audit, and the final selected 15K real training rows remain unmeasured until preparation. The real-row LLaMA-Factory check is mandatory again after export.
 
 ## Measurement and decision
 
 The unchanged all-nine evaluator alone decides the frozen integer gates: AIME24 8/30; AIME25 8/30; MATH 451/500; CN Math 14/30; Kaoyan 138/199; AMC 33/40; Minerva 95/272; OlympiadBench 385/675; GPQA 121/198. Also report pass@1, matched pass@8, paired confidence intervals, output lengths, repetition, truncation, and all manifests.
 
-The hardest measured TIES deficits include 42 OlympiadBench, 31 MATH, and 22 Kaoyan solves. This design is intended to acquire missing operations while preserving easier successes; it has no validated forecast for any of these counts. A partial win remains a failed candidate. Finish the current candidate, prepare this mechanism only after it is implemented and budgeted, and preserve any negative result without rerunning it unchanged.
+The hardest measured TIES deficits include 42 OlympiadBench, 31 MATH, and 22 Kaoyan solves. This design is intended to acquire missing operations while preserving easier successes; it has no validated forecast for any of these counts. A partial win remains a failed candidate. The user authorized moving on without waiting for this candidate. Preserve its available results and make the B200 available once the verified successor is ready; never overlap GPU jobs. Prepare this mechanism as the next complete candidate, with no claim that it will clear the nine gates. Preserve negative results without rerunning an unchanged method.
+
+## Implementation receipt before GPU submission
+
+The nine staged demonstration-response tests passed in ARC’s installed runtime (test discovery avoids an unrelated installed `tests` package). The real source CPU plan and synthetic 15K training serialization preflight run on CPU, never as a GPU pilot. Runtime modules are `reasoning/demonstration_response.py` and `reasoning/demonstration_preflight.py`; preparation and full training entry points are `scripts/demonstration_prepare.slurm` and `scripts/demonstration_sft_full.slurm`. Preparation creates no training-ready receipt unless the categories fill, the fresh controls pass, and all real selected rows pass the actual training processor.

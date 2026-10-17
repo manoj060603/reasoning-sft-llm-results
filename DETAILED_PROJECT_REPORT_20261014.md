@@ -424,3 +424,22 @@ This evidence rejects teacher-forced base NLL as a sufficient standalone selecti
 ## TIES merge terminal result (job 1174986)
 
 The frozen no-training full-SFT/GEM TIES merge completed all nine benchmarks. Its seven-benchmark pass@8 macro was **51.59%** versus **49.55%** for matched base, with 602/15,792 truncations. It cleared only **Minerva and GPQA**, failing the strict all-nine goal (2/9). The largest remaining strict solve gaps are OlympiadBench 42, MATH 31, and Kaoyan 22. Full per-benchmark pass@1/pass@8, paired confidence intervals, generation diagnostics, and provenance are in [TIES_MERGE_EXPERIMENT.md](TIES_MERGE_EXPERIMENT.md). This is an internal matched evaluation; historical equivalence is unverified.
+
+
+## SkillGraph ASFT result at successor handoff (October 17, 2026)
+
+Job 1180491 completed exactly 1,875 finite full-parameter training updates. The current candidate has failed the strict all-nine objective. The user authorized moving on without waiting for the remaining evaluation; available complete predictions and their manifests are preserved non-destructively. Cancellation of an unfinished evaluation tail, if needed for the handoff, is a user-requested transition rather than a training failure. Unfinished benchmarks are unmeasured, not zero scores.
+
+| Benchmark | Solves | Strict target | Pass@1 | Pass@8 | Truncated samples |
+|---|---:|---:|---:|---:|---:|
+| amc | 25/40 | 33 | 35.94% | 62.50% | 45 |
+| aime25 | 4/30 | 8 | 4.58% | 13.33% | 49 |
+| aime | 4/30 | 8 | 5.83% | 13.33% | 73 |
+| math | 415/500 | 451 | 64.83% | 83.00% | 267 |
+| cn_math_2024 | 11/30 | 14 | 10.42% | 36.67% | 72 |
+| kaoyan | 114/199 | 138 | 26.13% | 57.29% | 258 |
+| minerva | 121/272 | 95 | 27.76% | 44.49% | 146 |
+
+OlympiadBench and GPQA are not complete in this snapshot. The matched seven-benchmark macro is therefore unavailable. Paired pass@1/pass@8 confidence intervals, output lengths and repetition are recorded in `results/arc-20261011-snapshot-2316/lmf-skillgraph-asft-15000-8k-suite/available_results_audit.json`. Candidate/base protocol and completed-problem identities match. All seven completed columns except Minerva miss the frozen strict target; this candidate is retired rather than rerun unchanged.
+
+The successor is original-demonstration response selection plus a fixed plain-SFT curriculum, documented in [DEMONSTRATION_RESPONSE_SFT_DESIGN.md](DEMONSTRATION_RESPONSE_SFT_DESIGN.md). Exactly 15,000 unique original prompts/targets and the unchanged final all-nine evaluator remain mandatory. Preparation/category capacity, the fresh control audit, and transfer remain unmeasured. Historical leaderboard equivalence is not established.

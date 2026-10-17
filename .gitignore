@@ -33,3 +33,7 @@ results/**/batch_*.json
 
 # Packaged deliverables are generated from the tracked tree.
 *.zip
+
+# Resumable training-only preparation contains large raw generations/prefixes.
+artifacts/demonstration-response/
+artifacts/datasets-demonstration-response-15k/advanced.json

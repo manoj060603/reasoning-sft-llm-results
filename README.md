@@ -6,7 +6,7 @@
 
 > **Concrete next idea:** [Original-demonstration response and curriculum SFT](DEMONSTRATION_RESPONSE_SFT_DESIGN.md),
 > supported by the [detailed nine-paper review and implementation checks](ARXIV_DETAILED_REVIEW_20261016.md).
-> This is a specified research hypothesis, not a launched or successful experiment.
+> The preparation/export/training path is implemented and CPU-verified. It remains an unmeasured research hypothesis; launch status is recorded in its design document.
 
 > **Latest experiment:** [`MODEL_AWARE_GEM_EXPERIMENT.md`](MODEL_AWARE_GEM_EXPERIMENT.md)
 > records the completed base-NLL/diversity selection and full GEM run. The

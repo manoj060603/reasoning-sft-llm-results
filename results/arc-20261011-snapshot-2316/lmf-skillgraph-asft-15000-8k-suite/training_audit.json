@@ -1,0 +1,22 @@
+{
+  "job_id": 1180491,
+  "global_step": 1875,
+  "logged_updates": 1875,
+  "finite_loss_grad_norm": true,
+  "all_steps_once": true,
+  "model_files": [
+    {
+      "name": "model-00001-of-00003.safetensors",
+      "bytes": 4982131536
+    },
+    {
+      "name": "model-00002-of-00003.safetensors",
+      "bytes": 4932949336
+    },
+    {
+      "name": "model-00003-of-00003.safetensors",
+      "bytes": 2428723160
+    }
+  ],
+  "index_sha256": "88a50027f81c9f8a1f2c773b695ccc0a9a47e19107d6c70ccf531f322b5304e6"
+}

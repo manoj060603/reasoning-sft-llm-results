@@ -7,7 +7,7 @@
 > to select original AceReason examples. Generated replacement targets and
 > multi-response sets are conditional extensions, not automatically authorized
 > assignment recipes. SkillGraph ASFT job 1180491 remains in evaluation; no
-> successor has been submitted in this review.
+> successor GPU run has yet been submitted. The demonstration-response preparation and complete training path are now implemented and CPU-verified; see its design for the frozen rules and audit.
 
 > **Detailed reading and concrete hypothesis:** [ARXIV_DETAILED_REVIEW_20261016.md](ARXIV_DETAILED_REVIEW_20261016.md)
 > records the nine-paper methods/appendix review and author-code inspection.

@@ -1,0 +1,281 @@
+{
+  "job_id": 1180491,
+  "scope": "completed benchmarks only; unfinished results are unmeasured",
+  "complete_benchmarks": [
+    "amc",
+    "aime25",
+    "aime",
+    "math",
+    "cn_math_2024",
+    "kaoyan",
+    "minerva"
+  ],
+  "unmeasured_benchmarks": [
+    "gpqa",
+    "olympiadbench"
+  ],
+  "matched_seven_benchmark_macro": null,
+  "strict_all_nine_success": false,
+  "manifest_sha256": "0ab32362eb065425321e00398d25ac6819124d720bd699fb5b17b09fb89d01ca",
+  "benchmarks": {
+    "amc": {
+      "baseline": {
+        "problems": 40,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.44375,
+        "pass_at_8": 0.775
+      },
+      "candidate": {
+        "problems": 40,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.359375,
+        "pass_at_8": 0.625
+      },
+      "pass_at_1": {
+        "delta": -0.084375,
+        "ci95": [
+          -0.140625,
+          -0.03125
+        ]
+      },
+      "pass_at_8": {
+        "delta": -0.15,
+        "ci95": [
+          -0.275,
+          -0.025
+        ]
+      },
+      "diagnostics": {
+        "samples": 320,
+        "truncated": 45,
+        "mean_output_tokens": 5425.65,
+        "mean_repetition": 0.1650412830751648
+      },
+      "candidate_solves": 25,
+      "strict_target_solves": 33,
+      "passed": false
+    },
+    "aime25": {
+      "baseline": {
+        "problems": 30,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.025,
+        "pass_at_8": 0.13333333333333333
+      },
+      "candidate": {
+        "problems": 30,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.04583333333333333,
+        "pass_at_8": 0.13333333333333333
+      },
+      "pass_at_1": {
+        "delta": 0.020833333333333332,
+        "ci95": [
+          -0.008333333333333333,
+          0.058333333333333334
+        ]
+      },
+      "pass_at_8": {
+        "delta": 0.0,
+        "ci95": [
+          -0.13333333333333333,
+          0.13333333333333333
+        ]
+      },
+      "diagnostics": {
+        "samples": 240,
+        "truncated": 49,
+        "mean_output_tokens": 7574.75,
+        "mean_repetition": 0.23486454020083528
+      },
+      "candidate_solves": 4,
+      "strict_target_solves": 8,
+      "passed": false
+    },
+    "aime": {
+      "baseline": {
+        "problems": 30,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.07083333333333333,
+        "pass_at_8": 0.23333333333333334
+      },
+      "candidate": {
+        "problems": 30,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.058333333333333334,
+        "pass_at_8": 0.13333333333333333
+      },
+      "pass_at_1": {
+        "delta": -0.0125,
+        "ci95": [
+          -0.03333333333333333,
+          0.0125
+        ]
+      },
+      "pass_at_8": {
+        "delta": -0.1,
+        "ci95": [
+          -0.23333333333333334,
+          0.03333333333333333
+        ]
+      },
+      "diagnostics": {
+        "samples": 240,
+        "truncated": 73,
+        "mean_output_tokens": 10717.183333333332,
+        "mean_repetition": 0.31427525996146466
+      },
+      "candidate_solves": 4,
+      "strict_target_solves": 8,
+      "passed": false
+    },
+    "math": {
+      "baseline": {
+        "problems": 500,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.65875,
+        "pass_at_8": 0.852
+      },
+      "candidate": {
+        "problems": 500,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.64825,
+        "pass_at_8": 0.83
+      },
+      "pass_at_1": {
+        "delta": -0.0105,
+        "ci95": [
+          -0.0285,
+          0.00675
+        ]
+      },
+      "pass_at_8": {
+        "delta": -0.022,
+        "ci95": [
+          -0.046,
+          0.002
+        ]
+      },
+      "diagnostics": {
+        "samples": 4000,
+        "truncated": 267,
+        "mean_output_tokens": 2788.34825,
+        "mean_repetition": 0.08612823570253433
+      },
+      "candidate_solves": 415,
+      "strict_target_solves": 451,
+      "passed": false
+    },
+    "cn_math_2024": {
+      "baseline": {
+        "problems": 30,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.075,
+        "pass_at_8": 0.23333333333333334
+      },
+      "candidate": {
+        "problems": 30,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.10416666666666667,
+        "pass_at_8": 0.36666666666666664
+      },
+      "pass_at_1": {
+        "delta": 0.029166666666666667,
+        "ci95": [
+          -0.04583333333333333,
+          0.10416666666666667
+        ]
+      },
+      "pass_at_8": {
+        "delta": 0.13333333333333333,
+        "ci95": [
+          0.0,
+          0.3
+        ]
+      },
+      "diagnostics": {
+        "samples": 240,
+        "truncated": 72,
+        "mean_output_tokens": 10828.379166666668,
+        "mean_repetition": 0.34410032935752966
+      },
+      "candidate_solves": 11,
+      "strict_target_solves": 14,
+      "passed": false
+    },
+    "kaoyan": {
+      "baseline": {
+        "problems": 199,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.2242462311557789,
+        "pass_at_8": 0.5678391959798995
+      },
+      "candidate": {
+        "problems": 199,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.2613065326633166,
+        "pass_at_8": 0.5728643216080402
+      },
+      "pass_at_1": {
+        "delta": 0.03706030150753769,
+        "ci95": [
+          0.00548780487804878,
+          0.07054455445544554
+        ]
+      },
+      "pass_at_8": {
+        "delta": 0.005025125628140704,
+        "ci95": [
+          -0.059113300492610835,
+          0.0707070707070707
+        ]
+      },
+      "diagnostics": {
+        "samples": 1592,
+        "truncated": 258,
+        "mean_output_tokens": 6242.027010050251,
+        "mean_repetition": 0.19635011654756723
+      },
+      "candidate_solves": 114,
+      "strict_target_solves": 138,
+      "passed": false
+    },
+    "minerva": {
+      "baseline": {
+        "problems": 272,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.31066176470588236,
+        "pass_at_8": 0.4963235294117647
+      },
+      "candidate": {
+        "problems": 272,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.2775735294117647,
+        "pass_at_8": 0.44485294117647056
+      },
+      "pass_at_1": {
+        "delta": -0.03308823529411765,
+        "ci95": [
+          -0.05330882352941176,
+          -0.012867647058823529
+        ]
+      },
+      "pass_at_8": {
+        "delta": -0.051470588235294115,
+        "ci95": [
+          -0.09558823529411764,
+          -0.011029411764705883
+        ]
+      },
+      "diagnostics": {
+        "samples": 2176,
+        "truncated": 146,
+        "mean_output_tokens": 2818.848345588235,
+        "mean_repetition": 0.08153609895728406
+      },
+      "candidate_solves": 121,
+      "strict_target_solves": 95,
+      "passed": true
+    }
+  }
+}

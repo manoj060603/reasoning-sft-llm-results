@@ -8,9 +8,9 @@ Reviewed October 16, 2026 (America/New_York). This is a research and execution p
 specifies original-demonstration assistance measurements, a 3K/6K/6K retention/acquisition selection,
 and a medium-to-currently-missed curriculum. [The detailed literature review](ARXIV_DETAILED_REVIEW_20261016.md)
 records methods, ablations, appendix findings, and pinned implementation checks for nine papers
-plus LIMOPro. This refines the general selection stage below; it is not implemented or submitted.
+plus LIMOPro. This refines the general selection stage below; its implementation and CPU checks are now recorded in that design document. GPU scoring and training remain unmeasured.
 
-Keep the evaluated model a descendant of the pinned Qwen2.5-3B-Instruct base. Finish SkillGraph ASFT job 1180491 on Owl B200 and preserve its complete result. Prepare one new intervention around **measured student solvability and original-target quality**, rather than another loss, merge, or unverified rewrite. A teacher may supply preparation evidence; it is not the submitted model. The primary path selects original AceReason examples and retains their original complete responses.
+Keep the evaluated model a descendant of the pinned Qwen2.5-3B-Instruct base. Preserve SkillGraph ASFT job 1180491 results and advance the implemented successor as authorized by the user; never overlap B200 work. Prepare one new intervention around **measured student solvability and original-target quality**, rather than another loss, merge, or unverified rewrite. A teacher may supply preparation evidence; it is not the submitted model. The primary path selects original AceReason examples and retains their original complete responses.
 
 Success remains one fixed final checkpoint clearing all nine previously frozen solve-count gates. A macro improvement or a subset of wins is a failed candidate. This means exceeding the nine columns of the prespecified first-place Fall 2025 row, not silently changing the target to the best value from every historical team. Exact historical equivalence is still unverified.
 
@@ -40,7 +40,7 @@ The table below comes from the preserved matched TIES comparison, the strongest 
 
 The strict integer targets are frozen conservative project gates derived from a rounded historical table. They are not recovered historical prediction receipts. Do not adjust them to make a candidate pass.
 
-SkillGraph ASFT is still evaluating. Its first three completed counts are AMC 25/40, AIME25 4/30, and AIME24 4/30, already excluding strict success for that checkpoint. Complete the other six; do not cancel or relaunch this successfully trained candidate unchanged.
+SkillGraph ASFT is still evaluating. Its first three completed counts are AMC 25/40, AIME25 4/30, and AIME24 4/30, already excluding strict success for that checkpoint. The user subsequently authorized moving on without waiting. Preserve available results and distinguish any cancelled evaluation tail from an operational failure; never relaunch this trained candidate unchanged.
 
 ## Why the routes have not solved it
 
@@ -103,4 +103,4 @@ If it fails, distinguish a demonstrated operational bug from a negative method r
 - `results/arc-20261011-snapshot-2316/evaluations/lmf-ties-sft-gem-15k-suite-comparison.json`
 - `results/arc-20261011-snapshot-2316/evaluations/lmf-ties-sft-gem-15k-domination.json`
 - `LMF_CONTROL_EXPERIMENT.md`, `GEN_SSD_EXPERIMENT.md`, `GEM_EXPERIMENT.md`, `MODEL_AWARE_GEM_EXPERIMENT.md`, `SKILLGRAPH_ASFT_EXPERIMENT.md`
-- Current job: 1180491; no successor submitted during this planning review.
+- Current job at implementation: 1180491. The demonstration-response successor is implemented and staged; its actual launch ID will be recorded when submitted.
