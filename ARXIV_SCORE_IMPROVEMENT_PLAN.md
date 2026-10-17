@@ -1,6 +1,6 @@
 # ArXiv-backed score-improvement plan
 
-> **Current execution (October 17, 2026):** the demonstration-response selector completed scoring and failed its prespecified category capacities, so no training followed. [FULL_LENGTH_SFT_EXPERIMENT.md](FULL_LENGTH_SFT_EXPERIMENT.md) freezes the new long-original-solution / three-epoch candidate, motivated by AceReason exposure analysis, Select2Reason length evidence and the assignment reference configuration. The actual dataset converter now explicitly preserves the system column. All real-row CPU checks must pass before submission; no new win is measured.
+> **Current execution (October 17, 2026):** full B200 job **1187777** is submitted and initially pending priority after all 15K real-row converter/processor checks passed. [FULL_LENGTH_SFT_EXPERIMENT.md](FULL_LENGTH_SFT_EXPERIMENT.md) freezes complete original 16K supervision, corrected system-column alignment, three epochs/5,625 updates and the unchanged all-nine final evaluation. The preceding demonstration-response candidate completed scoring but failed its fixed capacities and is retired before training. Primary-literature motivation, assignment-reference settings, actual hashes and limitations are recorded; no unmeasured win is claimed.
 
 > **Detailed reading and concrete hypothesis:** [ARXIV_DETAILED_REVIEW_20261016.md](ARXIV_DETAILED_REVIEW_20261016.md)
 > records the nine-paper methods/appendix review and author-code inspection.

@@ -1,6 +1,6 @@
 # Complete original solutions and three-epoch SFT
 
-Frozen new candidate, October 17, 2026. Status: implemented for CPU verification; not yet submitted and no measured improvement. This candidate is distinct from the failed demonstration-response selector and does not relax its categories or reuse its generated answers for selection.
+Frozen new candidate, October 17, 2026. Status: complete real-row CPU verification passed; full B200 job **1187777** submitted, initially **PENDING (Priority)**; no measured improvement. This candidate is distinct from the failed demonstration-response selector and does not relax its categories or reuse its generated answers for selection.
 
 ## Evidence and hypothesis
 
@@ -44,3 +44,7 @@ All 15,000 real rows passed the actual converter and batch-supervised processor:
 Data SHA **0ccdb3b3e7800f181cd99cb16f433d81d359d86e6d6fa0d089f61c36f56185cc**. Selection-manifest SHA **f4a43fbc36ce72e74cb9a5f1afa92a31fd5071d753420657eb7440026f5ee7ed**. Dataset-info SHA **7892ecad03c3232d8f9f7599f64227b157876727ccd0825414b56734c5c0cac4**. Selection-module SHA **b366ad8c0d5c59e707a69efeeaddf39d7e5e40c75a87d991f20c19b9ba4b76af**.
 
 The local suite passed 32 tests; the staged selection tests and real converter/long-target/NFC/overlength-rejection fixtures passed on ARC. The installed trainer's loss arguments select plain CE, and both embedded full-run Python stages compile. The complete CPU prelaunch block validated data/config hashes before any allocation submission. At prelaunch, 83.36 hours remained before the assignment deadline, exceeding the frozen 40 GPU-hour cap plus a four-hour reporting buffer; queue and actual training speed are still uncertain. No GPU pilot or benchmark feedback was used. The fetched immutable receipts are under `results/arc-20261011-snapshot-2316/full-length/preparation/`.
+
+## Actual full-run submission
+
+Full B200 job **1187777** was submitted with `scripts/full_length_full.slurm` after the queue was confirmed empty and all source/data/config/driver hashes and the positive 15K CPU prelaunch receipt were checked. Initial scheduler state: **PENDING (Priority)**. No GPU jobs overlapped. The submission receipt is `results/arc-20261011-snapshot-2316/full-length/preparation/submission.json`; implementation/readiness commits are cc5d447 and e10f449. The existing heartbeat now monitors this full training/evaluation job, with 5,625-update/three-epoch verification and the unchanged nine-column gate.
