@@ -1,0 +1,15 @@
+{
+  "failed_job": 1183868,
+  "utc": "2026-10-17T13:15:23.569318+00:00",
+  "saved_valid_requests": 49416,
+  "remaining_requests": 60900,
+  "ledger_sha256_before_resume": "70937257a35039efc5301b4012416c6af9f93f3367a506745dd79faf5e76d315",
+  "original_module_sha256": "176e09a5c256738c610785753aa3201cbe4490a0770476416adaae02acadc8f1",
+  "fixed_module_sha256": "01d805f7f59e812b0306cfdf558658d565051b2db6179729663d8691da846178",
+  "original_plan_sha256": "79b390f644f1e49b6520aff4e884bde8ef766deb7731870a0381dd25bf3a928a",
+  "method_ast_unchanged_outside_run_requests": true,
+  "cause": "Old fatal guard rejected either empty text or an invalid finish reason without retaining which. Empty stop/length outcomes are legitimate censored model responses; fixed to preserve them unsupported, with explicit diagnostics for other finish reasons.",
+  "selection_and_seeds_unchanged": true,
+  "operational_resume_number": 1,
+  "fixed_plan_sha256": "9c696d9194dac34164aaf4efd1b48dd476906615fcc38dea99c86f25a352c786"
+}

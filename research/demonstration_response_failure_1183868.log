@@ -1,0 +1,637 @@
+INFO 10-17 00:44:19 [utils.py:233] non-default args: {'tokenizer': 'artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1', 'dtype': 'bfloat16', 'max_model_len': 12288, 'gpu_memory_utilization': 0.85, 'max_num_seqs': 128, 'disable_log_stats': True, 'generation_config': 'vllm', 'model': 'artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1'}
+INFO 10-17 00:44:19 [model.py:549] Resolved architecture: Qwen2ForCausalLM
+INFO 10-17 00:44:19 [model.py:1678] Using max model len 12288
+INFO 10-17 00:44:20 [scheduler.py:238] Chunked prefill is enabled with max_num_batched_tokens=16384.
+INFO 10-17 00:44:20 [vllm.py:790] Asynchronous scheduling is enabled.
+(EngineCore pid=1101949) INFO 10-17 00:44:32 [core.py:105] Initializing a V1 LLM engine (v0.19.0) with config: model='artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1', speculative_config=None, tokenizer='artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=12288, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'splitting_ops': ['vllm::unified_attention', 'vllm::unified_attention_with_output', 'vllm::unified_mla_attention', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::gdn_attention_core', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::kda_attention', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_images_per_batch': 0, 'compile_sizes': [], 'compile_ranges_endpoints': [16384], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False}, 'max_cudagraph_capture_size': 256, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}
+(EngineCore pid=1101949) INFO 10-17 00:44:35 [parallel_state.py:1400] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://10.128.32.181:39041 backend=nccl
+(EngineCore pid=1101949) INFO 10-17 00:44:36 [parallel_state.py:1716] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=1101949) INFO 10-17 00:44:36 [gpu_model_runner.py:4735] Starting to load model artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1...
+(EngineCore pid=1101949) INFO 10-17 00:44:38 [cuda.py:334] Using FLASHINFER attention backend out of potential backends: ['FLASHINFER', 'FLASH_ATTN', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=1101949) INFO 10-17 00:44:38 [selector.py:124] Using HND KV cache layout for FLASHINFER backend.
+(EngineCore pid=1101949) <frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+(EngineCore pid=1101949) <frozen importlib._bootstrap_external>:1184: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+(EngineCore pid=1101949) INFO 10-17 00:44:38 [weight_utils.py:848] Prefetching checkpoint files into page cache started (in background)
+(EngineCore pid=1101949) Loading safetensors checkpoint shards:   0% Completed | 0/2 [00:00<?, ?it/s]
+(EngineCore pid=1101949) INFO 10-17 00:44:39 [weight_utils.py:825] Prefetching checkpoint files: 10% (1/2)
+(EngineCore pid=1101949) INFO 10-17 00:44:39 [weight_utils.py:825] Prefetching checkpoint files: 20% (2/2)
+(EngineCore pid=1101949) INFO 10-17 00:44:39 [weight_utils.py:843] Prefetching checkpoint files into page cache finished in 0.60s
+(EngineCore pid=1101949) Loading safetensors checkpoint shards:  50% Completed | 1/2 [00:00<00:00,  1.63it/s]
+(EngineCore pid=1101949) Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:01<00:00,  2.05it/s]
+(EngineCore pid=1101949) Loading safetensors checkpoint shards: 100% Completed | 2/2 [00:01<00:00,  1.98it/s]
+(EngineCore pid=1101949) 
+(EngineCore pid=1101949) INFO 10-17 00:44:39 [default_loader.py:384] Loading weights took 1.05 seconds
+(EngineCore pid=1101949) INFO 10-17 00:44:40 [gpu_model_runner.py:4820] Model loading took 5.79 GiB memory and 2.836661 seconds
+(EngineCore pid=1101949) INFO 10-17 00:44:50 [backends.py:1051] Using cache directory: /home/rohits25/.cache/vllm/torch_compile_cache/6936d935ff/rank_0_0/backbone for vLLM's torch.compile
+(EngineCore pid=1101949) INFO 10-17 00:44:50 [backends.py:1111] Dynamo bytecode transform time: 10.23 s
+(EngineCore pid=1101949) INFO 10-17 00:44:54 [backends.py:372] Cache the graph of compile range (1, 16384) for later use
+(EngineCore pid=1101949) INFO 10-17 00:44:58 [backends.py:390] Compiling a graph for compile range (1, 16384) takes 7.46 s
+(EngineCore pid=1101949) INFO 10-17 00:45:00 [decorators.py:640] saved AOT compiled function to /home/rohits25/.cache/vllm/torch_compile_cache/torch_aot_compile/a76832dcb8459b280c0a3043e50f3d516097dcd2d37ce8a6167ae9d97c1d5e93/rank_0_0/model
+(EngineCore pid=1101949) INFO 10-17 00:45:00 [monitor.py:48] torch.compile took 19.86 s in total
+(EngineCore pid=1101949) INFO 10-17 00:45:00 [monitor.py:76] Initial profiling/warmup run took 0.24 s
+(EngineCore pid=1101949) INFO 10-17 00:45:07 [kv_cache_utils.py:829] Overriding num_gpu_blocks=0 with num_gpu_blocks_override=256
+(EngineCore pid=1101949) INFO 10-17 00:45:07 [utils.py:59] `_KV_CACHE_LAYOUT_OVERRIDE` variable detected. Setting KV cache layout to HND.
+(EngineCore pid=1101949) INFO 10-17 00:45:07 [gpu_model_runner.py:5876] Profiling CUDA graph memory: PIECEWISE=35 (largest=256), FULL=19 (largest=128)
+(EngineCore pid=1101949) WARNING 10-17 00:45:07 [flashinfer.py:389] Using TRTLLM prefill attention (auto-detected).
+(EngineCore pid=1101949) INFO 10-17 00:45:08 [gpu_model_runner.py:5955] Estimated CUDA graph memory: 0.61 GiB total
+(EngineCore pid=1101949) INFO 10-17 00:45:08 [gpu_worker.py:436] Available KV cache memory: 144.23 GiB
+(EngineCore pid=1101949) INFO 10-17 00:45:08 [gpu_worker.py:470] In v0.19, CUDA graph memory profiling will be enabled by default (VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=1), which more accurately accounts for CUDA graph memory during KV cache allocation. To try it now, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=1 and increase --gpu-memory-utilization from 0.8500 to 0.8534 to maintain the same effective KV cache size.
+(EngineCore pid=1101949) INFO 10-17 00:45:08 [kv_cache_utils.py:1319] GPU KV cache size: 4,200,912 tokens
+(EngineCore pid=1101949) INFO 10-17 00:45:08 [kv_cache_utils.py:1324] Maximum concurrency for 12,288 tokens per request: 341.87x
+(EngineCore pid=1101949) 2026-10-17 00:45:08,340 - INFO - autotuner.py:262 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(EngineCore pid=1101949) 2026-10-17 00:45:08,351 - INFO - autotuner.py:268 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(EngineCore pid=1101949) INFO 10-17 00:45:08 [kernel_warmup.py:69] Warming up FlashInfer attention.
+(EngineCore pid=1101949) Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/35 [00:00<?, ?it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  11%|█▏        | 4/35 [00:00<00:01, 30.72it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  23%|██▎       | 8/35 [00:00<00:00, 28.61it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  31%|███▏      | 11/35 [00:00<00:00, 27.63it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  40%|████      | 14/35 [00:00<00:00, 27.29it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  49%|████▊     | 17/35 [00:00<00:00, 27.71it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  57%|█████▋    | 20/35 [00:00<00:00, 27.68it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  66%|██████▌   | 23/35 [00:00<00:00, 26.46it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  74%|███████▍  | 26/35 [00:00<00:00, 25.82it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  83%|████████▎ | 29/35 [00:01<00:00, 25.26it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  91%|█████████▏| 32/35 [00:01<00:00, 26.48it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 35/35 [00:01<00:00, 26.79it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 35/35 [00:01<00:00, 26.96it/s]
+(EngineCore pid=1101949) Capturing CUDA graphs (decode, FULL):   0%|          | 0/19 [00:00<?, ?it/s]Capturing CUDA graphs (decode, FULL):  26%|██▋       | 5/19 [00:00<00:00, 41.77it/s]Capturing CUDA graphs (decode, FULL):  53%|█████▎    | 10/19 [00:00<00:00, 42.49it/s]Capturing CUDA graphs (decode, FULL):  79%|███████▉  | 15/19 [00:00<00:00, 42.25it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 19/19 [00:00<00:00, 42.66it/s]
+(EngineCore pid=1101949) INFO 10-17 00:45:10 [gpu_model_runner.py:6046] Graph capturing finished in 2 secs, took 0.22 GiB
+(EngineCore pid=1101949) INFO 10-17 00:45:10 [gpu_worker.py:597] CUDA graph pool memory: 0.22 GiB (actual), 0.61 GiB (estimated), difference: 0.39 GiB (179.3%).
+(EngineCore pid=1101949) INFO 10-17 00:45:10 [core.py:283] init engine (profile, create kv cache, warmup model) took 30.61 seconds
+(EngineCore pid=1101949) INFO 10-17 00:45:11 [vllm.py:790] Asynchronous scheduling is enabled.
+generations.jsonl: 256/110316; batch_seconds=78.82; output_tokens=151649; end_to_end_output_tokens_per_second=1923.91
+generations.jsonl: 512/110316; batch_seconds=54.50; output_tokens=164284; end_to_end_output_tokens_per_second=3014.50
+generations.jsonl: 768/110316; batch_seconds=54.42; output_tokens=169126; end_to_end_output_tokens_per_second=3107.92
+generations.jsonl: 1024/110316; batch_seconds=88.47; output_tokens=166576; end_to_end_output_tokens_per_second=1882.95
+generations.jsonl: 1280/110316; batch_seconds=23.70; output_tokens=129353; end_to_end_output_tokens_per_second=5458.72
+generations.jsonl: 1536/110316; batch_seconds=18.82; output_tokens=133619; end_to_end_output_tokens_per_second=7098.35
+generations.jsonl: 1792/110316; batch_seconds=18.00; output_tokens=165634; end_to_end_output_tokens_per_second=9201.19
+generations.jsonl: 2048/110316; batch_seconds=15.05; output_tokens=176709; end_to_end_output_tokens_per_second=11744.40
+generations.jsonl: 2304/110316; batch_seconds=17.63; output_tokens=180970; end_to_end_output_tokens_per_second=10267.44
+generations.jsonl: 2560/110316; batch_seconds=19.82; output_tokens=192733; end_to_end_output_tokens_per_second=9721.73
+generations.jsonl: 2816/110316; batch_seconds=14.70; output_tokens=106275; end_to_end_output_tokens_per_second=7231.55
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 3072/110316; batch_seconds=14.17; output_tokens=82448; end_to_end_output_tokens_per_second=5819.04
+generations.jsonl: 3328/110316; batch_seconds=25.03; output_tokens=123819; end_to_end_output_tokens_per_second=4945.95
+generations.jsonl: 3584/110316; batch_seconds=27.18; output_tokens=163083; end_to_end_output_tokens_per_second=6000.02
+generations.jsonl: 3840/110316; batch_seconds=27.80; output_tokens=161478; end_to_end_output_tokens_per_second=5809.14
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 4096/110316; batch_seconds=42.54; output_tokens=154299; end_to_end_output_tokens_per_second=3626.98
+generations.jsonl: 4352/110316; batch_seconds=34.38; output_tokens=160460; end_to_end_output_tokens_per_second=4667.09
+generations.jsonl: 4608/110316; batch_seconds=54.09; output_tokens=190465; end_to_end_output_tokens_per_second=3521.15
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 4864/110316; batch_seconds=46.34; output_tokens=187979; end_to_end_output_tokens_per_second=4056.47
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 5120/110316; batch_seconds=34.32; output_tokens=163245; end_to_end_output_tokens_per_second=4756.82
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 5376/110316; batch_seconds=35.22; output_tokens=187699; end_to_end_output_tokens_per_second=5328.95
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 5632/110316; batch_seconds=39.08; output_tokens=187276; end_to_end_output_tokens_per_second=4792.01
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+generations.jsonl: 5888/110316; batch_seconds=55.59; output_tokens=139712; end_to_end_output_tokens_per_second=2513.36
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+generations.jsonl: 6144/110316; batch_seconds=53.21; output_tokens=169573; end_to_end_output_tokens_per_second=3186.96
+generations.jsonl: 6400/110316; batch_seconds=109.73; output_tokens=160810; end_to_end_output_tokens_per_second=1465.47
+generations.jsonl: 6656/110316; batch_seconds=102.28; output_tokens=157177; end_to_end_output_tokens_per_second=1536.80
+generations.jsonl: 6912/110316; batch_seconds=90.41; output_tokens=188171; end_to_end_output_tokens_per_second=2081.23
+generations.jsonl: 7168/110316; batch_seconds=76.25; output_tokens=191199; end_to_end_output_tokens_per_second=2507.54
+generations.jsonl: 7424/110316; batch_seconds=29.22; output_tokens=139731; end_to_end_output_tokens_per_second=4782.64
+generations.jsonl: 7680/110316; batch_seconds=25.67; output_tokens=136532; end_to_end_output_tokens_per_second=5319.33
+generations.jsonl: 7936/110316; batch_seconds=26.64; output_tokens=120748; end_to_end_output_tokens_per_second=4532.08
+generations.jsonl: 8192/110316; batch_seconds=22.46; output_tokens=157848; end_to_end_output_tokens_per_second=7028.15
+generations.jsonl: 8448/110316; batch_seconds=30.43; output_tokens=173521; end_to_end_output_tokens_per_second=5703.18
+generations.jsonl: 8704/110316; batch_seconds=20.77; output_tokens=108829; end_to_end_output_tokens_per_second=5238.59
+generations.jsonl: 8960/110316; batch_seconds=30.50; output_tokens=127176; end_to_end_output_tokens_per_second=4170.05
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 9216/110316; batch_seconds=28.71; output_tokens=140930; end_to_end_output_tokens_per_second=4908.03
+generations.jsonl: 9472/110316; batch_seconds=34.15; output_tokens=156742; end_to_end_output_tokens_per_second=4590.43
+generations.jsonl: 9728/110316; batch_seconds=33.17; output_tokens=163755; end_to_end_output_tokens_per_second=4936.63
+generations.jsonl: 9984/110316; batch_seconds=29.33; output_tokens=114406; end_to_end_output_tokens_per_second=3900.07
+generations.jsonl: 10240/110316; batch_seconds=35.52; output_tokens=126227; end_to_end_output_tokens_per_second=3553.51
+generations.jsonl: 10496/110316; batch_seconds=37.78; output_tokens=154483; end_to_end_output_tokens_per_second=4089.10
+generations.jsonl: 10752/110316; batch_seconds=34.99; output_tokens=170223; end_to_end_output_tokens_per_second=4865.20
+generations.jsonl: 11008/110316; batch_seconds=29.83; output_tokens=157180; end_to_end_output_tokens_per_second=5268.52
+generations.jsonl: 11264/110316; batch_seconds=24.34; output_tokens=129776; end_to_end_output_tokens_per_second=5331.37
+generations.jsonl: 11520/110316; batch_seconds=24.66; output_tokens=115278; end_to_end_output_tokens_per_second=4674.02
+<string>:1: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+<string>:1: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+generations.jsonl: 11776/110316; batch_seconds=33.81; output_tokens=135835; end_to_end_output_tokens_per_second=4017.80
+generations.jsonl: 12032/110316; batch_seconds=32.52; output_tokens=141985; end_to_end_output_tokens_per_second=4365.76
+generations.jsonl: 12288/110316; batch_seconds=29.38; output_tokens=160698; end_to_end_output_tokens_per_second=5469.01
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 12544/110316; batch_seconds=32.87; output_tokens=160691; end_to_end_output_tokens_per_second=4888.70
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 12800/110316; batch_seconds=43.47; output_tokens=195613; end_to_end_output_tokens_per_second=4500.36
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 13056/110316; batch_seconds=34.45; output_tokens=163201; end_to_end_output_tokens_per_second=4737.68
+generations.jsonl: 13312/110316; batch_seconds=27.16; output_tokens=181152; end_to_end_output_tokens_per_second=6670.73
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 13568/110316; batch_seconds=28.28; output_tokens=198625; end_to_end_output_tokens_per_second=7024.42
+generations.jsonl: 13824/110316; batch_seconds=37.11; output_tokens=185663; end_to_end_output_tokens_per_second=5003.02
+generations.jsonl: 14080/110316; batch_seconds=37.69; output_tokens=157142; end_to_end_output_tokens_per_second=4169.03
+generations.jsonl: 14336/110316; batch_seconds=41.22; output_tokens=175413; end_to_end_output_tokens_per_second=4255.33
+generations.jsonl: 14592/110316; batch_seconds=36.89; output_tokens=176617; end_to_end_output_tokens_per_second=4787.75
+generations.jsonl: 14848/110316; batch_seconds=36.25; output_tokens=158128; end_to_end_output_tokens_per_second=4361.77
+generations.jsonl: 15104/110316; batch_seconds=43.42; output_tokens=163580; end_to_end_output_tokens_per_second=3767.35
+generations.jsonl: 15360/110316; batch_seconds=48.33; output_tokens=187867; end_to_end_output_tokens_per_second=3887.54
+generations.jsonl: 15616/110316; batch_seconds=51.61; output_tokens=172885; end_to_end_output_tokens_per_second=3349.67
+generations.jsonl: 15872/110316; batch_seconds=29.64; output_tokens=132442; end_to_end_output_tokens_per_second=4467.88
+generations.jsonl: 16128/110316; batch_seconds=30.03; output_tokens=156641; end_to_end_output_tokens_per_second=5216.61
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 16384/110316; batch_seconds=34.84; output_tokens=159532; end_to_end_output_tokens_per_second=4579.22
+generations.jsonl: 16640/110316; batch_seconds=33.68; output_tokens=188960; end_to_end_output_tokens_per_second=5611.12
+generations.jsonl: 16896/110316; batch_seconds=39.78; output_tokens=180828; end_to_end_output_tokens_per_second=4545.14
+generations.jsonl: 17152/110316; batch_seconds=39.52; output_tokens=146514; end_to_end_output_tokens_per_second=3707.38
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+generations.jsonl: 17408/110316; batch_seconds=41.86; output_tokens=177493; end_to_end_output_tokens_per_second=4239.99
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+generations.jsonl: 17664/110316; batch_seconds=32.58; output_tokens=193304; end_to_end_output_tokens_per_second=5933.80
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 17920/110316; batch_seconds=33.31; output_tokens=128068; end_to_end_output_tokens_per_second=3845.02
+generations.jsonl: 18176/110316; batch_seconds=38.01; output_tokens=148416; end_to_end_output_tokens_per_second=3904.91
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 18432/110316; batch_seconds=42.33; output_tokens=167784; end_to_end_output_tokens_per_second=3963.59
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 18688/110316; batch_seconds=45.63; output_tokens=171956; end_to_end_output_tokens_per_second=3768.17
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 18944/110316; batch_seconds=37.56; output_tokens=194128; end_to_end_output_tokens_per_second=5168.10
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 19200/110316; batch_seconds=39.93; output_tokens=177506; end_to_end_output_tokens_per_second=4445.61
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 19456/110316; batch_seconds=26.26; output_tokens=174842; end_to_end_output_tokens_per_second=6656.96
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 19712/110316; batch_seconds=30.69; output_tokens=196214; end_to_end_output_tokens_per_second=6392.82
+generations.jsonl: 19968/110316; batch_seconds=28.93; output_tokens=190119; end_to_end_output_tokens_per_second=6572.25
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+generations.jsonl: 20224/110316; batch_seconds=32.56; output_tokens=149688; end_to_end_output_tokens_per_second=4597.80
+generations.jsonl: 20480/110316; batch_seconds=36.49; output_tokens=114825; end_to_end_output_tokens_per_second=3146.54
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+generations.jsonl: 20736/110316; batch_seconds=36.53; output_tokens=148084; end_to_end_output_tokens_per_second=4054.11
+generations.jsonl: 20992/110316; batch_seconds=39.78; output_tokens=162217; end_to_end_output_tokens_per_second=4077.63
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+generations.jsonl: 21248/110316; batch_seconds=42.74; output_tokens=177654; end_to_end_output_tokens_per_second=4157.01
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+generations.jsonl: 21504/110316; batch_seconds=45.91; output_tokens=169650; end_to_end_output_tokens_per_second=3695.14
+generations.jsonl: 21760/110316; batch_seconds=45.86; output_tokens=178496; end_to_end_output_tokens_per_second=3891.80
+generations.jsonl: 22016/110316; batch_seconds=25.24; output_tokens=157279; end_to_end_output_tokens_per_second=6231.37
+generations.jsonl: 22272/110316; batch_seconds=26.08; output_tokens=158837; end_to_end_output_tokens_per_second=6090.27
+generations.jsonl: 22528/110316; batch_seconds=26.00; output_tokens=141543; end_to_end_output_tokens_per_second=5443.99
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 22784/110316; batch_seconds=19.76; output_tokens=139752; end_to_end_output_tokens_per_second=7072.81
+generations.jsonl: 23040/110316; batch_seconds=23.18; output_tokens=149331; end_to_end_output_tokens_per_second=6442.27
+generations.jsonl: 23296/110316; batch_seconds=23.15; output_tokens=142262; end_to_end_output_tokens_per_second=6146.29
+generations.jsonl: 23552/110316; batch_seconds=26.44; output_tokens=126857; end_to_end_output_tokens_per_second=4797.88
+generations.jsonl: 23808/110316; batch_seconds=37.28; output_tokens=170666; end_to_end_output_tokens_per_second=4577.53
+generations.jsonl: 24064/110316; batch_seconds=44.56; output_tokens=177529; end_to_end_output_tokens_per_second=3983.67
+generations.jsonl: 24320/110316; batch_seconds=45.87; output_tokens=181934; end_to_end_output_tokens_per_second=3966.43
+generations.jsonl: 24576/110316; batch_seconds=47.47; output_tokens=208043; end_to_end_output_tokens_per_second=4382.38
+generations.jsonl: 24832/110316; batch_seconds=45.62; output_tokens=186522; end_to_end_output_tokens_per_second=4088.55
+generations.jsonl: 25088/110316; batch_seconds=35.43; output_tokens=145812; end_to_end_output_tokens_per_second=4115.86
+generations.jsonl: 25344/110316; batch_seconds=44.38; output_tokens=154316; end_to_end_output_tokens_per_second=3477.07
+generations.jsonl: 25600/110316; batch_seconds=42.17; output_tokens=168799; end_to_end_output_tokens_per_second=4002.52
+generations.jsonl: 25856/110316; batch_seconds=36.17; output_tokens=136206; end_to_end_output_tokens_per_second=3765.49
+generations.jsonl: 26112/110316; batch_seconds=23.37; output_tokens=114460; end_to_end_output_tokens_per_second=4897.54
+generations.jsonl: 26368/110316; batch_seconds=26.53; output_tokens=138671; end_to_end_output_tokens_per_second=5227.85
+generations.jsonl: 26624/110316; batch_seconds=27.04; output_tokens=130651; end_to_end_output_tokens_per_second=4831.17
+generations.jsonl: 26880/110316; batch_seconds=28.54; output_tokens=129439; end_to_end_output_tokens_per_second=4535.79
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+generations.jsonl: 27136/110316; batch_seconds=28.96; output_tokens=130330; end_to_end_output_tokens_per_second=4501.02
+generations.jsonl: 27392/110316; batch_seconds=33.18; output_tokens=152006; end_to_end_output_tokens_per_second=4581.23
+generations.jsonl: 27648/110316; batch_seconds=28.42; output_tokens=156470; end_to_end_output_tokens_per_second=5506.11
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+generations.jsonl: 27904/110316; batch_seconds=32.13; output_tokens=176552; end_to_end_output_tokens_per_second=5495.50
+generations.jsonl: 28160/110316; batch_seconds=29.19; output_tokens=179378; end_to_end_output_tokens_per_second=6144.72
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 28416/110316; batch_seconds=31.34; output_tokens=167087; end_to_end_output_tokens_per_second=5331.51
+generations.jsonl: 28672/110316; batch_seconds=33.90; output_tokens=141007; end_to_end_output_tokens_per_second=4159.26
+generations.jsonl: 28928/110316; batch_seconds=30.96; output_tokens=116784; end_to_end_output_tokens_per_second=3772.14
+generations.jsonl: 29184/110316; batch_seconds=37.62; output_tokens=130594; end_to_end_output_tokens_per_second=3471.39
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 29440/110316; batch_seconds=49.73; output_tokens=173086; end_to_end_output_tokens_per_second=3480.41
+generations.jsonl: 29696/110316; batch_seconds=57.69; output_tokens=168826; end_to_end_output_tokens_per_second=2926.45
+generations.jsonl: 29952/110316; batch_seconds=48.60; output_tokens=175040; end_to_end_output_tokens_per_second=3601.87
+generations.jsonl: 30208/110316; batch_seconds=52.19; output_tokens=182980; end_to_end_output_tokens_per_second=3506.03
+generations.jsonl: 30464/110316; batch_seconds=33.70; output_tokens=173412; end_to_end_output_tokens_per_second=5146.01
+generations.jsonl: 30720/110316; batch_seconds=35.91; output_tokens=202316; end_to_end_output_tokens_per_second=5633.44
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 30976/110316; batch_seconds=39.15; output_tokens=173440; end_to_end_output_tokens_per_second=4430.40
+generations.jsonl: 31232/110316; batch_seconds=35.49; output_tokens=148883; end_to_end_output_tokens_per_second=4194.95
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 31488/110316; batch_seconds=37.80; output_tokens=176921; end_to_end_output_tokens_per_second=4680.20
+generations.jsonl: 31744/110316; batch_seconds=35.00; output_tokens=149992; end_to_end_output_tokens_per_second=4285.91
+generations.jsonl: 32000/110316; batch_seconds=27.85; output_tokens=145036; end_to_end_output_tokens_per_second=5206.84
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+generations.jsonl: 32256/110316; batch_seconds=48.94; output_tokens=155901; end_to_end_output_tokens_per_second=3185.72
+generations.jsonl: 32512/110316; batch_seconds=43.20; output_tokens=187125; end_to_end_output_tokens_per_second=4331.23
+generations.jsonl: 32768/110316; batch_seconds=31.45; output_tokens=133061; end_to_end_output_tokens_per_second=4230.44
+generations.jsonl: 33024/110316; batch_seconds=30.95; output_tokens=133293; end_to_end_output_tokens_per_second=4306.25
+generations.jsonl: 33280/110316; batch_seconds=39.21; output_tokens=151549; end_to_end_output_tokens_per_second=3864.72
+generations.jsonl: 33536/110316; batch_seconds=38.48; output_tokens=171460; end_to_end_output_tokens_per_second=4455.34
+generations.jsonl: 33792/110316; batch_seconds=46.46; output_tokens=154287; end_to_end_output_tokens_per_second=3321.16
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 34048/110316; batch_seconds=29.54; output_tokens=154435; end_to_end_output_tokens_per_second=5227.37
+generations.jsonl: 34304/110316; batch_seconds=37.80; output_tokens=199154; end_to_end_output_tokens_per_second=5268.72
+generations.jsonl: 34560/110316; batch_seconds=31.64; output_tokens=179252; end_to_end_output_tokens_per_second=5666.12
+generations.jsonl: 34816/110316; batch_seconds=19.70; output_tokens=110696; end_to_end_output_tokens_per_second=5618.58
+generations.jsonl: 35072/110316; batch_seconds=21.14; output_tokens=128526; end_to_end_output_tokens_per_second=6080.79
+generations.jsonl: 35328/110316; batch_seconds=23.26; output_tokens=170981; end_to_end_output_tokens_per_second=7351.39
+generations.jsonl: 35584/110316; batch_seconds=26.66; output_tokens=176786; end_to_end_output_tokens_per_second=6630.09
+generations.jsonl: 35840/110316; batch_seconds=27.18; output_tokens=164932; end_to_end_output_tokens_per_second=6069.22
+generations.jsonl: 36096/110316; batch_seconds=22.15; output_tokens=169757; end_to_end_output_tokens_per_second=7664.04
+generations.jsonl: 36352/110316; batch_seconds=42.87; output_tokens=146043; end_to_end_output_tokens_per_second=3406.88
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+<string>:1: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+generations.jsonl: 36608/110316; batch_seconds=50.71; output_tokens=184383; end_to_end_output_tokens_per_second=3636.01
+generations.jsonl: 36864/110316; batch_seconds=30.71; output_tokens=157693; end_to_end_output_tokens_per_second=5134.96
+generations.jsonl: 37120/110316; batch_seconds=30.87; output_tokens=161654; end_to_end_output_tokens_per_second=5235.77
+generations.jsonl: 37376/110316; batch_seconds=32.05; output_tokens=154058; end_to_end_output_tokens_per_second=4807.09
+generations.jsonl: 37632/110316; batch_seconds=31.97; output_tokens=163196; end_to_end_output_tokens_per_second=5104.60
+generations.jsonl: 37888/110316; batch_seconds=32.69; output_tokens=145652; end_to_end_output_tokens_per_second=4455.41
+generations.jsonl: 38144/110316; batch_seconds=54.59; output_tokens=154565; end_to_end_output_tokens_per_second=2831.21
+generations.jsonl: 38400/110316; batch_seconds=49.72; output_tokens=156768; end_to_end_output_tokens_per_second=3153.16
+generations.jsonl: 38656/110316; batch_seconds=49.55; output_tokens=167870; end_to_end_output_tokens_per_second=3387.72
+generations.jsonl: 38912/110316; batch_seconds=49.98; output_tokens=157885; end_to_end_output_tokens_per_second=3159.01
+generations.jsonl: 39168/110316; batch_seconds=54.66; output_tokens=164161; end_to_end_output_tokens_per_second=3003.21
+generations.jsonl: 39424/110316; batch_seconds=47.10; output_tokens=167149; end_to_end_output_tokens_per_second=3549.11
+generations.jsonl: 39680/110316; batch_seconds=57.25; output_tokens=175808; end_to_end_output_tokens_per_second=3071.06
+generations.jsonl: 39936/110316; batch_seconds=57.65; output_tokens=168030; end_to_end_output_tokens_per_second=2914.44
+generations.jsonl: 40192/110316; batch_seconds=47.50; output_tokens=136020; end_to_end_output_tokens_per_second=2863.84
+generations.jsonl: 40448/110316; batch_seconds=71.72; output_tokens=121051; end_to_end_output_tokens_per_second=1687.88
+generations.jsonl: 40704/110316; batch_seconds=72.67; output_tokens=166411; end_to_end_output_tokens_per_second=2289.92
+generations.jsonl: 40960/110316; batch_seconds=71.72; output_tokens=178940; end_to_end_output_tokens_per_second=2494.99
+generations.jsonl: 41216/110316; batch_seconds=94.94; output_tokens=185735; end_to_end_output_tokens_per_second=1956.39
+generations.jsonl: 41472/110316; batch_seconds=87.35; output_tokens=182683; end_to_end_output_tokens_per_second=2091.45
+generations.jsonl: 41728/110316; batch_seconds=50.30; output_tokens=172309; end_to_end_output_tokens_per_second=3425.40
+generations.jsonl: 41984/110316; batch_seconds=32.61; output_tokens=152502; end_to_end_output_tokens_per_second=4676.55
+generations.jsonl: 42240/110316; batch_seconds=37.76; output_tokens=190602; end_to_end_output_tokens_per_second=5048.15
+generations.jsonl: 42496/110316; batch_seconds=41.35; output_tokens=175745; end_to_end_output_tokens_per_second=4249.84
+generations.jsonl: 42752/110316; batch_seconds=40.86; output_tokens=139660; end_to_end_output_tokens_per_second=3418.33
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'set' object is not callable; perhaps you missed a comma?
+generations.jsonl: 43008/110316; batch_seconds=37.43; output_tokens=173200; end_to_end_output_tokens_per_second=4627.24
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 43264/110316; batch_seconds=37.24; output_tokens=153547; end_to_end_output_tokens_per_second=4123.59
+generations.jsonl: 43520/110316; batch_seconds=35.30; output_tokens=160946; end_to_end_output_tokens_per_second=4559.73
+generations.jsonl: 43776/110316; batch_seconds=17.73; output_tokens=105219; end_to_end_output_tokens_per_second=5935.68
+generations.jsonl: 44032/110316; batch_seconds=18.46; output_tokens=96683; end_to_end_output_tokens_per_second=5237.13
+generations.jsonl: 44288/110316; batch_seconds=17.19; output_tokens=129182; end_to_end_output_tokens_per_second=7513.55
+generations.jsonl: 44544/110316; batch_seconds=18.67; output_tokens=125361; end_to_end_output_tokens_per_second=6714.43
+generations.jsonl: 44800/110316; batch_seconds=26.48; output_tokens=156021; end_to_end_output_tokens_per_second=5891.64
+generations.jsonl: 45056/110316; batch_seconds=21.67; output_tokens=141926; end_to_end_output_tokens_per_second=6548.13
+generations.jsonl: 45312/110316; batch_seconds=28.94; output_tokens=155798; end_to_end_output_tokens_per_second=5383.97
+generations.jsonl: 45568/110316; batch_seconds=15.82; output_tokens=147231; end_to_end_output_tokens_per_second=9305.94
+generations.jsonl: 45824/110316; batch_seconds=15.66; output_tokens=155530; end_to_end_output_tokens_per_second=9934.59
+generations.jsonl: 46080/110316; batch_seconds=18.65; output_tokens=178003; end_to_end_output_tokens_per_second=9542.23
+generations.jsonl: 46336/110316; batch_seconds=18.10; output_tokens=213921; end_to_end_output_tokens_per_second=11819.95
+generations.jsonl: 46592/110316; batch_seconds=23.77; output_tokens=201603; end_to_end_output_tokens_per_second=8480.81
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 46848/110316; batch_seconds=33.99; output_tokens=178583; end_to_end_output_tokens_per_second=5253.76
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 47104/110316; batch_seconds=41.51; output_tokens=169203; end_to_end_output_tokens_per_second=4076.46
+generations.jsonl: 47360/110316; batch_seconds=39.18; output_tokens=176352; end_to_end_output_tokens_per_second=4501.38
+generations.jsonl: 47616/110316; batch_seconds=31.72; output_tokens=117970; end_to_end_output_tokens_per_second=3719.20
+generations.jsonl: 47872/110316; batch_seconds=37.15; output_tokens=137539; end_to_end_output_tokens_per_second=3702.56
+generations.jsonl: 48128/110316; batch_seconds=35.62; output_tokens=145964; end_to_end_output_tokens_per_second=4097.41
+generations.jsonl: 48384/110316; batch_seconds=41.25; output_tokens=159899; end_to_end_output_tokens_per_second=3876.12
+generations.jsonl: 48640/110316; batch_seconds=42.45; output_tokens=166602; end_to_end_output_tokens_per_second=3924.22
+generations.jsonl: 48896/110316; batch_seconds=37.92; output_tokens=129534; end_to_end_output_tokens_per_second=3416.29
+generations.jsonl: 49152/110316; batch_seconds=39.32; output_tokens=125679; end_to_end_output_tokens_per_second=3196.17
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+<string>:1: SyntaxWarning: 'tuple' object is not callable; perhaps you missed a comma?
+generations.jsonl: 49408/110316; batch_seconds=45.87; output_tokens=124648; end_to_end_output_tokens_per_second=2717.38
+Traceback (most recent call last):
+  File "/home/rohits25/.conda/envs/sata-vllm/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/rohits25/.conda/envs/sata-vllm/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/projects/tealab/rohit/reasoning-sft-20261011/reasoning/demonstration_response.py", line 537, in <module>
+    main()
+  File "/projects/tealab/rohit/reasoning-sft-20261011/reasoning/demonstration_response.py", line 529, in main
+    run_requests(args, plan, standard_requests(plan), {r["id"]: r for r in rows}, args.ledger)
+  File "/projects/tealab/rohit/reasoning-sft-20261011/reasoning/demonstration_response.py", line 272, in run_requests
+    raise RuntimeError("empty or invalid completion; refuse to label model failure")
+RuntimeError: empty or invalid completion; refuse to label model failure
+(EngineCore pid=1101949) INFO 10-17 02:46:20 [core.py:1210] Shutdown initiated (timeout=0)
+(EngineCore pid=1101949) INFO 10-17 02:46:20 [core.py:1233] Shutdown complete
+[rank0]:[W1017 02:46:20.684101046 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+ERROR 10-17 02:46:21 [core_client.py:667] Engine core proc EngineCore died unexpectedly, shutting down client.

@@ -104,3 +104,7 @@ If it fails, distinguish a demonstrated operational bug from a negative method r
 - `results/arc-20261011-snapshot-2316/evaluations/lmf-ties-sft-gem-15k-domination.json`
 - `LMF_CONTROL_EXPERIMENT.md`, `GEN_SSD_EXPERIMENT.md`, `GEM_EXPERIMENT.md`, `MODEL_AWARE_GEM_EXPERIMENT.md`, `SKILLGRAPH_ASFT_EXPERIMENT.md`
 - Current preparation job: 1183868, initially pending B200 resources. SkillGraph 1180491 evaluation was cancelled at the user-authorized handoff after preserving seven complete benchmarks; training and weights are complete.
+
+## Preparation recovery on October 17
+
+Current preparation job is **1186667**, the single corrected resume of failed 1183868. All 49,416 saved requests validated; 60,900 remain. The prior broad fatal guard did not retain whether it saw empty text or an invalid finish reason. Empty stop/length responses now persist as unsupported/censored; unexpected reasons remain fatal with explicit diagnostics. All method AST nodes outside generation handling and all plan method fields remain unchanged. The original code/plan/log and the old/new hashes are preserved. Twenty-nine local and ten staged CPU tests passed, no GPU pilot was run, and the queue was empty before submission. Initial resume status: pending B200 resources. No new benchmark result or success claim follows.
