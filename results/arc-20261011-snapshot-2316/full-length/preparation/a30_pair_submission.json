@@ -1,0 +1,22 @@
+{
+  "job_id": "656067",
+  "cluster": "Falcon",
+  "partition": "a30_preemptable_q",
+  "gpus": 2,
+  "time_limit_hours": 2,
+  "automatic_requeue": false,
+  "previous_job_id": "655846",
+  "previous_job_state": "CANCELLED",
+  "previous_job_elapsed_seconds": 0,
+  "no_project_gpu_overlap": true,
+  "implementation_commit": "27fb563",
+  "execution_receipt": "a30_pair_execution_receipt.json",
+  "gpu_pilot": false,
+  "full_training_goal_updates": 5625,
+  "effective_batch": 8,
+  "gradient_accumulation_steps": 4,
+  "evaluation_phase": "single B200 after training terminates",
+  "monitor_interval_minutes": 15,
+  "hypothetical_estimate_at_1611_EDT": "2026-10-17T16:29:33-04:00",
+  "hypothetical_estimate_is_not_confirmed_start": true
+}
