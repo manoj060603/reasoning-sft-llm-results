@@ -1,5 +1,14 @@
 # ArXiv-backed score-improvement plan
 
+> **Current decision (October 16, 2026):** [STRICT_9_OF_9_PLAN.md](STRICT_9_OF_9_PLAN.md)
+> supersedes the historical ranking below. It records the assignment-rule audit,
+> measured nine-column gaps, corrected benchmark record counts, limitations of
+> the arXiv evidence, and a primary successor using empirical student solvability
+> to select original AceReason examples. Generated replacement targets and
+> multi-response sets are conditional extensions, not automatically authorized
+> assignment recipes. SkillGraph ASFT job 1180491 remains in evaluation; no
+> successor has been submitted in this review.
+
 ## Objective and constraints
 
 The target is one fixed Qwen2.5-3B-Instruct descendant that is evaluated with the assignment sampler on all nine benchmarks and strictly clears every displayed Fall 2025 column. The comparison remains contextual because historical dataset and runtime equivalence are unverified.

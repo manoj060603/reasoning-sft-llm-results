@@ -1,4 +1,8 @@
-> **Final measured status (October 16, 2026):** the model-aware 15K GEM run completed full-pool scoring, all 1,875 updates, and all nine benchmarks. It scored **48.32%** seven-benchmark pass@8 versus **49.55%** for matched base. Ordinary GEM scored **50.53%**, while the earlier ordinary full-SFT model remains strongest at **51.52%**. Model-aware GEM reduced truncations to 284/15,792 but cleared only the Minerva and GPQA contextual Fall 2025 thresholds. Historical leaderboard equivalence is not established.
+> **Current status (October 16, 2026):** the completed TIES merge scored **51.59%** seven-benchmark pass@8 versus **49.55%** for matched base, but cleared only **2/9** frozen Fall 2025 column gates. SkillGraph ASFT job **1180491** completed training and is evaluating all nine benchmarks on Owl B200. Its first three results already exclude strict success; its complete evaluation will be preserved. Historical leaderboard equivalence is not established.
+
+> **Strict 9/9 execution plan:** [STRICT_9_OF_9_PLAN.md](STRICT_9_OF_9_PLAN.md)
+> records the assignment constraints, measured solve gaps, arXiv evidence and
+> limitations, setup audit, and next original-target selection hypothesis.
 
 > **Latest experiment:** [`MODEL_AWARE_GEM_EXPERIMENT.md`](MODEL_AWARE_GEM_EXPERIMENT.md)
 > records the completed base-NLL/diversity selection and full GEM run. The
