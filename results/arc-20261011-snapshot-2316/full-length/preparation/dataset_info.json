@@ -1,0 +1,11 @@
+{
+  "advanced": {
+    "file_name": "advanced.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
+  }
+}

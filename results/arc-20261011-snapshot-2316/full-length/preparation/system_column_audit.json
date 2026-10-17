@@ -1,0 +1,20 @@
+{
+  "scope": "actual old SkillGraph and new full-length dataset converters on a synthetic CPU-only fixture",
+  "old_dataset_info_sha256": "2656d0ded971390b9cc138f9cd4eaf3574fb75305db77f264a62d97b7f9ea89e",
+  "new_dataset_info_sha256": "7892ecad03c3232d8f9f7599f64227b157876727ccd0825414b56734c5c0cac4",
+  "old_system_column": null,
+  "old_converted_system": "",
+  "new_system_column": "system",
+  "new_converted_system_preserved": true,
+  "old_prompt_tokens": 39,
+  "new_prompt_tokens": 38,
+  "prompt_tokens_differ": true,
+  "template_default_system": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant.",
+  "source_hashes": {
+    "parser.py": "ab7b7e224e45804bdfb64e19eae5ae5c0649776b202e834369134aaf31c1167c",
+    "converter.py": "3d88c71bb6bfe00bb511bf44c15dce09cded6a4837ade486e9983ae639d4688d",
+    "template.py": "1b0a8370401a968602d6fdef1ff9e4951c965fecb3ed8503d06bdb9aa915a6f9",
+    "processor/supervised.py": "21554b511accf3bbc2478e03385c0f7aaabca1b94de3a0c0f294c1f0486c3296"
+  },
+  "causal_benchmark_effect_measured": false
+}
