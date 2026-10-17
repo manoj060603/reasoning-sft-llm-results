@@ -1,0 +1,154 @@
+{
+  "review_date_america_new_york": "2026-10-16",
+  "scope": "Nine arXiv papers: methods, experiment setups, ablations, limitations and relevant appendices; four author implementations. Not an exhaustive arXiv survey or reproduction.",
+  "papers": [
+    {
+      "id": "2605.30651v1",
+      "url": "https://arxiv.org/html/2605.30651v1",
+      "sha256": "1254d3e49d5173f7b528259cef0408ef3c0327415f21343c18c84e7b1ec77e30",
+      "lines": 2428
+    },
+    {
+      "id": "2606.04466v1",
+      "url": "https://arxiv.org/html/2606.04466v1",
+      "sha256": "0ea6fc4682d44b709ea2a051be70c826ab03b8e7537bb06a5abf470dbd7b5359",
+      "lines": 1853
+    },
+    {
+      "id": "2510.26122v2",
+      "url": "https://arxiv.org/html/2510.26122v2",
+      "sha256": "b4ce3232519e292eef0518475eafb1c378881259164193ce712286fbf669fa9c",
+      "lines": 1847
+    },
+    {
+      "id": "2510.05132v1",
+      "url": "https://arxiv.org/html/2510.05132v1",
+      "sha256": "209cb8d89c31eaba5caa7f71f901206bbbb885fe27200213566b6dafcfaf93cc",
+      "lines": 793
+    },
+    {
+      "id": "2602.13407v1",
+      "url": "https://arxiv.org/html/2602.13407v1",
+      "sha256": "0967e86dac5ec3dba6467fb820595c8a90d17ab449e08758d0ce5048d982c804",
+      "lines": 1839
+    },
+    {
+      "id": "2505.17266v1",
+      "url": "https://arxiv.org/html/2505.17266v1",
+      "sha256": "a7a72c6b9ae777479d14995c3b9c78bafe6bc005f8127a06069dff23c10ea25b",
+      "lines": 784
+    },
+    {
+      "id": "2505.18440v2",
+      "url": "https://arxiv.org/html/2505.18440v2",
+      "sha256": "f583c7cdb9ce0d7cd00627cb4a8196929f3abcdae8cbe523222fa0bd435a6825",
+      "lines": 843
+    },
+    {
+      "id": "2506.13284v1",
+      "url": "https://arxiv.org/html/2506.13284v1",
+      "sha256": "5b00dc96bfb79829eab1ddf986337fdc72e2324570c8f50e2cd155ff5445143c",
+      "lines": 890
+    },
+    {
+      "id": "2609.33780v1",
+      "url": "https://arxiv.org/html/2609.33780v1",
+      "sha256": "63edecc677ed6fb54e4179f483990c55199dc57335bfb9b93eab9e57e6149620",
+      "lines": 2492
+    }
+  ],
+  "author_code": [
+    {
+      "repository": "https://github.com/EIT-NLP/On-Policy-SFT",
+      "revision": "d788bc027a4bd6aea18051ce75081870fa3ac6b6",
+      "downloaded_for_inspection": [
+        {
+          "local_reading_filename": "EIT-NLP_On-Policy-SFT__README.md",
+          "sha256": "caa51d4c267f2c73773632f3d12d614d3b94ef56b52280af8bf7372d94d7a37d"
+        },
+        {
+          "local_reading_filename": "EIT-NLP_On-Policy-SFT__opsft_recipe_On_Policy_SFT_dp_actor.py",
+          "sha256": "f39897808c61c344c5335be5b8e91b3ea749a194ef130245a423cc43bdc94693"
+        },
+        {
+          "local_reading_filename": "EIT-NLP_On-Policy-SFT__opsft_recipe_On_Policy_SFT_on_policy_sft_trainer.py",
+          "sha256": "3730a027e19b0b4d33f11859c558a51f4e0a1c5ee73e8a07642266fdc3bc5a43"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/GAIR-NLP/LIMOPro",
+      "revision": "7f18718bdeb2ae99bca7dd7f3a72095bfe3ee394",
+      "downloaded_for_inspection": [
+        {
+          "local_reading_filename": "GAIR-NLP_LIMOPro__CIE_calculate_cie.py",
+          "sha256": "ddb2c9dfbca1ee7ea5af4970355923ee4d052357234a8d8cdb65065f0674fb5b"
+        },
+        {
+          "local_reading_filename": "GAIR-NLP_LIMOPro__CIE_cie.py",
+          "sha256": "a74a790ae9447ad773cc77f0ea0e804dedd191558e3431699fb032080b29839f"
+        },
+        {
+          "local_reading_filename": "GAIR-NLP_LIMOPro__CIE_filter.py",
+          "sha256": "04db89b0f165dc465ef387ce30f6da69a2d7e56973ca918eff2c78c3b6534c81"
+        },
+        {
+          "local_reading_filename": "GAIR-NLP_LIMOPro__README.md",
+          "sha256": "dabb4775eb6b28a1be0f0cff8679ed13b47697fb247764f843dd6597387c549e"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/Tianrun-Yu/LARK",
+      "revision": "38cfd4f54707b19e5b4abd3e8a00051636fef19e",
+      "downloaded_for_inspection": [
+        {
+          "local_reading_filename": "Tianrun-Yu_LARK__README.md",
+          "sha256": "b931e63d01182d162fb8bfd5c9fdcf2ca20c9b71ce4df3d345c3ce0aca874a81"
+        },
+        {
+          "local_reading_filename": "Tianrun-Yu_LARK__lark_score_lark.py",
+          "sha256": "bc159f5f7f062269d0083c85385e0a5c6596146dfd3cccbab00ea70832456185"
+        },
+        {
+          "local_reading_filename": "Tianrun-Yu_LARK__lark_selection_select_chi2.py",
+          "sha256": "1527e2c953ca14a5ce375ab2f7f86948885cfd514d87bf25079ee7820b1c6445"
+        },
+        {
+          "local_reading_filename": "Tianrun-Yu_LARK__lark_train_configs_sft_full.yaml",
+          "sha256": "e1ea96dddf35fd1d6abe8df1eb21be3092c63a5d560a83863573af45ea386e39"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/fengjujf/Reasoning-Path-Divergence",
+      "revision": "8e82b0b7475ba89a714f41c02494371fb0e4262f",
+      "downloaded_for_inspection": [
+        {
+          "local_reading_filename": "fengjujf_Reasoning-Path-Divergence__05_compute_matrix.py",
+          "sha256": "a9ffdf649ef806b274e39c3821d849f7e02343f750af3ee215fcf3a40a7e5338"
+        },
+        {
+          "local_reading_filename": "fengjujf_Reasoning-Path-Divergence__06_select_problems.py",
+          "sha256": "08ec14fda91a81aec7aeaee28a56510c983bc496caf38a4de7ba8cc17610aae5"
+        },
+        {
+          "local_reading_filename": "fengjujf_Reasoning-Path-Divergence__07_select_answers.py",
+          "sha256": "0d1d7665d91eada3eaebac2413f8d8698e5ade0a6e0563b4aecc644fdb0fa08d"
+        },
+        {
+          "local_reading_filename": "fengjujf_Reasoning-Path-Divergence__config.py",
+          "sha256": "d9187c0e4653eec13da2598717ef28849498106021ac98be1d737a14cf1d5a22"
+        }
+      ]
+    }
+  ],
+  "unavailable_code": [
+    {
+      "url": "https://github.com/IDEA-FinAI/Select2Reason",
+      "observation": "GitHub API returned HTTP 404 during review"
+    }
+  ],
+  "raw_full_text_redistributed": false,
+  "new_gpu_job_submitted": false
+}

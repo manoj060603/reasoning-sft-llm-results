@@ -9,6 +9,14 @@
 > assignment recipes. SkillGraph ASFT job 1180491 remains in evaluation; no
 > successor has been submitted in this review.
 
+> **Detailed reading and concrete hypothesis:** [ARXIV_DETAILED_REVIEW_20261016.md](ARXIV_DETAILED_REVIEW_20261016.md)
+> records the nine-paper methods/appendix review and author-code inspection.
+> [DEMONSTRATION_RESPONSE_SFT_DESIGN.md](DEMONSTRATION_RESPONSE_SFT_DESIGN.md)
+> proposes selecting unchanged original examples by whether their partial demonstrations
+> help the student complete currently missed problems, with retention examples and a fixed curriculum.
+> It is a new, unmeasured design. The earlier frozen-dataset recommendation must not be
+> described as a faithful reproduction of continually refreshed on-policy SFT.
+
 ## Objective and constraints
 
 The target is one fixed Qwen2.5-3B-Instruct descendant that is evaluated with the assignment sampler on all nine benchmarks and strictly clears every displayed Fall 2025 column. The comparison remains contextual because historical dataset and runtime equivalence are unverified.

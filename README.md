@@ -4,6 +4,10 @@
 > records the assignment constraints, measured solve gaps, arXiv evidence and
 > limitations, setup audit, and next original-target selection hypothesis.
 
+> **Concrete next idea:** [Original-demonstration response and curriculum SFT](DEMONSTRATION_RESPONSE_SFT_DESIGN.md),
+> supported by the [detailed nine-paper review and implementation checks](ARXIV_DETAILED_REVIEW_20261016.md).
+> This is a specified research hypothesis, not a launched or successful experiment.
+
 > **Latest experiment:** [`MODEL_AWARE_GEM_EXPERIMENT.md`](MODEL_AWARE_GEM_EXPERIMENT.md)
 > records the completed base-NLL/diversity selection and full GEM run. The
 > selector scored all 83,037 approved rows without public benchmark data,

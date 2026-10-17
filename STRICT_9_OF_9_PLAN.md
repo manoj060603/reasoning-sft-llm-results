@@ -4,6 +4,12 @@ Reviewed October 16, 2026 (America/New_York). This is a research and execution p
 
 ## Decision
 
+**Concrete successor design:** [DEMONSTRATION_RESPONSE_SFT_DESIGN.md](DEMONSTRATION_RESPONSE_SFT_DESIGN.md)
+specifies original-demonstration assistance measurements, a 3K/6K/6K retention/acquisition selection,
+and a medium-to-currently-missed curriculum. [The detailed literature review](ARXIV_DETAILED_REVIEW_20261016.md)
+records methods, ablations, appendix findings, and pinned implementation checks for nine papers
+plus LIMOPro. This refines the general selection stage below; it is not implemented or submitted.
+
 Keep the evaluated model a descendant of the pinned Qwen2.5-3B-Instruct base. Finish SkillGraph ASFT job 1180491 on Owl B200 and preserve its complete result. Prepare one new intervention around **measured student solvability and original-target quality**, rather than another loss, merge, or unverified rewrite. A teacher may supply preparation evidence; it is not the submitted model. The primary path selects original AceReason examples and retains their original complete responses.
 
 Success remains one fixed final checkpoint clearing all nine previously frozen solve-count gates. A macro improvement or a subset of wins is a failed candidate. This means exceeding the nine columns of the prespecified first-place Fall 2025 row, not silently changing the target to the best value from every historical team. Exact historical equivalence is still unverified.
@@ -53,7 +59,7 @@ SkillGraph ASFT is still evaluating. Its first three completed counts are AMC 25
 | [AceReason-Nemotron 1.1, 2506.13284](https://arxiv.org/html/2506.13284v1) | Studies unique-prompt coverage, multiple responses, and repeated SFT exposure | Far larger data and different models; its epoch observations cannot select our checkpoint using public scores |
 | [Efficient Long CoT in Small Models, 2505.18440](https://arxiv.org/abs/2505.18440) | Student-compatible curation and removing redundant reasoning | Our compact-target result shows shortening alone can regress accuracy |
 | [On-policy SFT, 2602.13407](https://arxiv.org/html/2602.13407v1) | Learns from correct, complete self-generated solutions; discusses rollout temperature and length bias | Primarily improves efficiency while preserving accuracy in DeepSeek-R1 1.5B/7B; does not demonstrate the large broad gains needed here |
-| [Reasoning Path Divergence, 2510.26122](https://arxiv.org/abs/2510.26122) | Diverse valid trajectories improve multi-sample coverage | Qwen3-4B-Base/pass@16 setup; extra responses consume budget and do not establish assignment permission |
+| [Reasoning Path Divergence, 2510.26122](https://arxiv.org/abs/2510.26122) | Diverse trajectories improve multi-sample coverage | Main Qwen3-4B setup plus a Qwen2.5-3B appendix; distinct small-data/multi-response protocol and no established assignment permission for extra targets |
 | [OpenMathReasoning, 2504.16891](https://arxiv.org/abs/2504.16891) | Large verified solution collections and quality filtering underpin strong reasoning models | Millions of solutions, tools, and candidate selection are outside our unchanged evaluation interface |
 
 The common requirement is usable, correct supervision that expands transferable skills while preserving reliable answers. A paper title or an efficiency gain does not justify forecasting 9/9. One-path selection should not be described as preserving within-prompt multi-path diversity; that claim requires actual multiple paths and a compatible training design.
