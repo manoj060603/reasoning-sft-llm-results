@@ -1,6 +1,6 @@
 # Complete original solutions and three-epoch SFT
 
-Frozen new candidate, October 17, 2026. Status: complete real-row CPU verification passed; full B200 job **1187777** submitted, initially **PENDING (Priority)**; no measured improvement. This candidate is distinct from the failed demonstration-response selector and does not relax its categories or reuse its generated answers for selection.
+Frozen new candidate, October 17, 2026. Status: complete real-row CPU verification passed; B200 job **1187777** was replaced before GPU use by user-authorized four-A30 full training job **655846**; no measured improvement. This candidate is distinct from the failed demonstration-response selector and does not relax its categories or reuse its generated answers for selection.
 
 ## Evidence and hypothesis
 
@@ -62,3 +62,5 @@ The first request uses the authorized A30 preemptable queue, four GPUs on one no
 After training completes, the final model must pass exactly 5,625 finite logged updates, epoch three and complete finite consolidated weights/tokenizer/config checks. Evaluation uses a separate single-B200 allocation, the unchanged evaluator, existing B200 baseline, and unchanged temperature/top-p/eight-sample/32K settings. The four-A30 job does not perform a mismatched tensor-parallel or A30 evaluation. No other GPU job is queued for this project until its predecessor terminates. Native GPU arithmetic, reduction order, CPUAdam and shuffle distribution can differ from the original single-GPU execution; no bitwise reproducibility claim is made.
 
 The immutable migration receipt is `artifacts/datasets-full-length-15k/a30_execution_receipt.json`; it binds execution code, config differences, original preparation/data/selection hashes and runtime versions. The original 15K converter/processor receipt remains unchanged. No failed rollout, benchmark score or benchmark error enters this migration.
+
+Actual migration: job **1187777** was confirmed PENDING and cancelled with elapsed zero before exactly one full four-A30 training job **655846** was submitted. Implementation/readiness commit **04b977f** was pushed first. Actual tiny Qwen CPU loss dispatch and backward also passed before submission. The updated heartbeat monitors job 655846 and the A30 training/B200 evaluation budget. Submission receipt: `results/arc-20261011-snapshot-2316/full-length/preparation/a30_submission.json`.

@@ -1,3 +1,5 @@
+> **Execution update (October 17, 2026):** the user authorized four Falcon A30s for training. Pending B200 job 1187777 was cancelled before GPU use; full training job **655846** is submitted in the A30 preemptable queue, using verified ZeRO-3/CPU offload and bounded-memory plain CE. Effective batch eight, 15K unchanged targets, 16K context, three epochs and 5,625 updates remain fixed. Final evaluation stays on one B200 with the unchanged evaluator. At most four two-hour four-A30 training allocations plus eight single-B200 evaluation hours fit the 40 physical GPU-hour ceiling; completion is unmeasured. See [FULL_LENGTH_SFT_EXPERIMENT.md](FULL_LENGTH_SFT_EXPERIMENT.md).
+
 # Strict all-benchmark objective
 
 The next objective is stronger than improving the seven-benchmark macro: one fixed model must strictly exceed the Fall 2025 leader in every displayed pass@8 column under the assignment sampler.

@@ -15,7 +15,7 @@
 
 The ordinary full-SFT +1.97-point macro gain has a paired 95% interval of **[−1.89, +5.74] points**, so that observed improvement is not statistically decisive. Its pass@1 fell from 23.55% to 21.85%, with a paired interval of **[−3.16, −0.22] points**. Those intervals belong to ordinary full SFT, not TIES. Historical runtime and dataset equivalence remain unverified.
 
-The new full-length, system-aligned three-epoch candidate is unmeasured; B200 job **1187777** was still pending with reason Priority at the latest October 17 scheduler check. See [FULL_LENGTH_SFT_EXPERIMENT.md](FULL_LENGTH_SFT_EXPERIMENT.md).
+**Execution update (October 17, 2026):** the user authorized four Falcon A30s for training. Pending B200 job 1187777 was cancelled before GPU use; full training job **655846** is submitted in the A30 preemptable queue, using verified ZeRO-3/CPU offload and bounded-memory plain CE. Effective batch eight, 15K unchanged targets, 16K context, three epochs and 5,625 updates remain fixed. Final evaluation stays on one B200 with the unchanged evaluator. At most four two-hour four-A30 training allocations plus eight single-B200 evaluation hours fit the 40 physical GPU-hour ceiling; completion is unmeasured. See [FULL_LENGTH_SFT_EXPERIMENT.md](FULL_LENGTH_SFT_EXPERIMENT.md).
 
 ## Complete nine-benchmark pass@8 results
 

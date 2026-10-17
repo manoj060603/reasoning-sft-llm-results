@@ -1,0 +1,18 @@
+{
+  "job_id": "655846",
+  "cluster": "Falcon",
+  "partition": "a30_preemptable_q",
+  "gpus": 4,
+  "time_limit_hours": 2,
+  "automatic_requeue": false,
+  "previous_job_id": "1187777",
+  "previous_job_state": "CANCELLED",
+  "previous_job_elapsed_seconds": 0,
+  "no_project_gpu_overlap": true,
+  "implementation_commit": "04b977f",
+  "execution_receipt": "a30_execution_receipt.json",
+  "actual_tiny_qwen_cpu_loss_dispatch_passed": true,
+  "gpu_pilot": false,
+  "full_training_goal_updates": 5625,
+  "evaluation_phase": "single B200 only after training terminates"
+}
