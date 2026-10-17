@@ -268,16 +268,22 @@ def run_requests(args, plan, requests, by_id, ledger):
                 if len(output.outputs) != 1:
                     raise RuntimeError("wrong number of completion samples")
                 result = output.outputs[0]
-                if result.finish_reason not in ("stop", "length") or not result.text.strip():
-                    raise RuntimeError("empty or invalid completion; refuse to label model failure")
+                if result.finish_reason not in ("stop", "length"):
+                    raise RuntimeError(f"invalid completion finish reason={result.finish_reason!r}; "
+                                       f"text_chars={len(result.text)}, tokens={len(result.token_ids)}")
+                # EOS or whitespace-only terminal responses are valid model outcomes.
+                # Preserve them as unsupported/censored, never as wrong answers.
+                empty_completion = not result.text.strip()
                 # Reassemble the assistant text only for extraction, while the prefix
                 # is mechanically answer-withheld and never contains the gold box.
-                supported, correct = grade_output(request["prefix"] + result.text,
-                                                  by_id[request["id"]]["output"])
+                supported, correct = ((False, False) if empty_completion else
+                                      grade_output(request["prefix"] + result.text,
+                                                   by_id[request["id"]]["output"]))
                 record = {k: request[k] for k in ("key", "id", "condition", "sample", "seed")}
                 record.update(prefix_sha256=text_hash(request["prefix"]), text=result.text,
                               text_sha256=text_hash(result.text), finish_reason=result.finish_reason,
                               generated_tokens=len(result.token_ids), supported=supported, correct=correct,
+                              empty_completion=empty_completion,
                               extracted_answer=boxed(request["prefix"] + result.text),
                               repetition=repetition(result.text))
                 stream.write(json.dumps(record, ensure_ascii=False, separators=(",", ":")) + "\n")

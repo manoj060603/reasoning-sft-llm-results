@@ -150,4 +150,30 @@ class DemonstrationTests(unittest.TestCase):
             self.assertTrue(all(r['correct'] for r in first.values()))
 
 
+    def test_empty_terminal_completions_are_censored_and_resumed(self):
+        for finish, text in [('stop', ''), ('stop', '  '), ('length', '')]:
+            class Engine:
+                def __init__(self, **kwargs): pass
+                def get_tokenizer(self): return Tokenizer()
+                def generate(self, prompts, params, **kwargs):
+                    return [SimpleNamespace(outputs=[SimpleNamespace(
+                        text=text,finish_reason=finish,token_ids=[])]) for _ in prompts]
+            fake=SimpleNamespace(LLM=Engine,SamplingParams=lambda **kwargs: kwargs)
+            requests=[dict(key=f'x:normal:{i}',id='x',condition='normal',sample=i,
+                           seed=i,prefix='') for i in range(2)]
+            with tempfile.TemporaryDirectory() as d, patch.dict('sys.modules', {'vllm':fake}), \
+                 patch('reasoning.demonstration_response.grade_output') as grade:
+                path=Path(d)/'ledger.jsonl'; args=SimpleNamespace(batch_size=2)
+                saved=run_requests(args,{'model':'fake'},requests,
+                                   {'x':{'instruction':'Question','output':r'\boxed{97}'}},path)
+                grade.assert_not_called()
+                self.assertTrue(all(r['empty_completion'] and not r['supported'] and not r['correct']
+                                    for r in saved.values()))
+                self.assertEqual(categorize({'id':'x','prefix':''},saved),(None,0.))
+                with patch.dict('sys.modules',{'vllm':SimpleNamespace(
+                    LLM=lambda **kwargs:self.fail('saved empty completion was regenerated'),
+                    SamplingParams=lambda **kwargs:kwargs)}):
+                    self.assertEqual(run_requests(args,{'model':'fake'},requests,{},path),saved)
+
+
 if __name__ == '__main__': unittest.main()
