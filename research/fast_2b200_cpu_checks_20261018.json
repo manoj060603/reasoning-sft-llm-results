@@ -1,0 +1,27 @@
+{
+  "checked_at_eastern": "2026-10-18T11:50:18.073538-04:00",
+  "tests": [
+    "tests.test_fast_2b200",
+    "tests.test_early_b200",
+    "tests.test_memory_ce"
+  ],
+  "test_count": 8,
+  "result": "PASS",
+  "runtime_seconds": 7.553,
+  "cuda_visible_devices": "-1",
+  "native_guard_frozen_data_recipe_and_budget_preflight": "PASS",
+  "local_remote_bound_files_match": 14,
+  "gpu_fit_speed_accuracy_verified": false,
+  "new_job_id": "1199964",
+  "prior_gpu_hours_charged": 8,
+  "training_request": {
+    "gpus": 2,
+    "gpu_type": "B200",
+    "wall_hours": 6,
+    "gpu_hours": 12
+  },
+  "evaluation_gpu_hours_reserved": 8,
+  "total_with_this_allocation_and_eval": 28,
+  "total_cap": 40,
+  "deadline_eastern": "2026-10-20T23:59:00-04:00"
+}
