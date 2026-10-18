@@ -1,0 +1,21 @@
+{
+  "job_id": "1199964",
+  "state": "RUNNING",
+  "node": "owl-sr001",
+  "actual_started_at_eastern": "2026-10-18T12:37:35-04:00",
+  "allocation_end_eastern": "2026-10-18T18:37:35-04:00",
+  "training_started_at_eastern": "2026-10-18T12:39:22-04:00",
+  "parsed_finite_loss_and_gradient_records": 29,
+  "trainer_log_steps": 30,
+  "epoch": 0.016,
+  "training_elapsed_seconds": 135,
+  "early_remaining_seconds": 25290,
+  "throughput_is_initial_not_sustained": true,
+  "traceback_cuda_oom_childfailed_markers": [],
+  "first_checkpoint_not_yet_present_at_initial_check": true,
+  "gpu_hours_conservatively_charged": 20,
+  "evaluation_gpu_hours_reserved": 8,
+  "cap": 40,
+  "accuracy_result": null,
+  "monitor_interval_minutes": 15
+}
