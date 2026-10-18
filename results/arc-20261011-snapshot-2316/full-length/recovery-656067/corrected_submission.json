@@ -1,0 +1,20 @@
+{
+  "failed_job_id": "656067",
+  "failed_state": "FAILED",
+  "failed_elapsed_seconds": 129,
+  "training_updates_before_failure": 0,
+  "model_loaded_before_failure": false,
+  "corrected_job_id": "656673",
+  "fix_commit": "15a7a4a",
+  "original_environments_unchanged": true,
+  "native_guard_bypassed": false,
+  "new_training_environment": ".venv-lmf-a30-ds0169",
+  "deepspeed": "0.16.9",
+  "torch": "2.10.0",
+  "transformers": "4.55.0",
+  "both_project_queues_empty_before_submission": true,
+  "failed_allocation_retained": true,
+  "budget_reset": false,
+  "corrected_gpu_submissions_for_this_cause": 1,
+  "gpu_pilot": false
+}
