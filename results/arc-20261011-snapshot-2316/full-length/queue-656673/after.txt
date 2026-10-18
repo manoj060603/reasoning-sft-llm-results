@@ -1,0 +1,29 @@
+JobId=656673 JobName=reasoning_full_length_2a30
+   UserId=rohits25(22671672) GroupId=rohits25(22671672) MCS_label=N/A
+   Priority=1242 Nice=0 Account=tml_2026 QOS=fal_a30_normal_short
+   JobState=PENDING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:00 TimeLimit=02:00:00 TimeMin=N/A
+   SubmitTime=2026-10-17T23:24:52 EligibleTime=2026-10-17T23:24:52
+   AccrueTime=Unknown
+   StartTime=2026-10-18T11:23:42 EndTime=2026-10-18T13:23:42 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-18T03:18:46 Scheduler=Backfill:*
+   Partition=a30_normal_q AllocNode:Sid=falcon1:3800221
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList= SchedNodeList=fal007
+   NumNodes=1-1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=8,mem=160G,node=1,gres/gpu=2
+   AllocTRES=(null)
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=8 MinMemoryNode=160G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/projects/tealab/rohit/reasoning-sft-20261011/scripts/full_length_2a30_train.slurm
+   SubmitLine=sbatch --parsable scripts/full_length_2a30_train.slurm
+   WorkDir=/projects/tealab/rohit/reasoning-sft-20261011
+   StdErr=
+   StdIn=/dev/null
+   StdOut=/projects/tealab/rohit/reasoning-sft-20261011/logs/full_length_2a30_656673.log
+   TresPerNode=gres/gpu:2
+   TresPerTask=cpu=8
+
