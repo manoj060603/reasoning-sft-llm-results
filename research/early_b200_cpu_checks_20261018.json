@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-18",
+  "environment": ".venv-lmf-a30-ds0169 on Owl with CUDA_VISIBLE_DEVICES=-1",
+  "early_b200_runtime_tests": {
+    "ran": 3,
+    "passed": 3,
+    "checks": [
+      "old A30 charges retained; reserve respected; duplicate jobs not double-charged; fourth eight-hour B200 training allocation rejected",
+      "missing native optimizer/scheduler/RNG/model recovery state rejected",
+      "exact5625/epoch3/finiteness final requirements; NaN saved tensor rejected"
+    ]
+  },
+  "memory_ce_tests": {
+    "ran": 2,
+    "passed": 2
+  },
+  "actual_native_dependency_guard": "passed",
+  "actual_frozen_recipe_and_data_hash_checks": "passed",
+  "prior_gpu_hours_charged": 8,
+  "total_gpu_hours_cap": 40,
+  "evaluation_gpu_hours_reserved": 8,
+  "gpu_job_submitted": false,
+  "gpu_memory_fit_verified": false,
+  "gpu_throughput_verified": false
+}

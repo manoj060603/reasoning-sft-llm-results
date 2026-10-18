@@ -1,0 +1,30 @@
+{
+  "execution_sha256": {
+    "configs/lmf-full-length-early-b200.yaml": "1477d95580e09e39e097de932408b86d8c73a57e14a3458d2857d3d033bebba9",
+    "scripts/arc_full_length_early_b200.sh": "9b2a777d59aad223e3a74fea295fe02b33fd9712993203139b97b5c777c7abff",
+    "scripts/full_length_early_b200.slurm": "b6fd5f6dca87b649245341f62b2c865b85551f2bca60928f097346432fa67dad",
+    "reasoning/early_b200.py": "c7a157401b88db76e680ccec12681c4ff43bc22db333bfe7014c640df4f545f8",
+    "scripts/arc_full_length_early_b200_eval.sh": "494a89bcf4971ef7b5aa0fcf34bb97cff1074a72963c98e12ad07da5211024e9",
+    "scripts/full_length_early_b200_eval.slurm": "460a4df10e40b669af914ca6a542e7a127c95a6c416d052960c9c96ce430e840",
+    "scripts/train_memory_ce.py": "96a9bd2f3687ebd7f6fb0ba8ac84c6d846656957f4b875383e5e1e6e8e923bea",
+    "reasoning/memory_ce.py": "814dfa396ce7ffd70e512c69c9cff7850e96e35f55606d85d32806af0283cf7e"
+  },
+  "preparation_sha256": "581ff86452dc42b45736556d3606f10bb926e5397b7e57019070419a93543905",
+  "selection_sha256": "f4a43fbc36ce72e74cb9a5f1afa92a31fd5071d753420657eb7440026f5ee7ed",
+  "runtime_versions": {
+    "torch": "2.10.0",
+    "transformers": "4.55.0",
+    "deepspeed": "0.16.9"
+  },
+  "prior_training_job_ids": [
+    "656067",
+    "656673"
+  ],
+  "prior_charged_gpu_hours": 8,
+  "single_b200_training_allocation_hours": 8,
+  "total_gpu_hours_cap": 40,
+  "evaluation_gpu_hours_reserved": 8,
+  "original_base_restart": true,
+  "two_rank_checkpoint_imported": false,
+  "gpu_fit_and_throughput_unverified": true
+}
