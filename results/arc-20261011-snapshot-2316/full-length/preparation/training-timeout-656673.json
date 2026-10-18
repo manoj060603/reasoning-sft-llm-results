@@ -1,0 +1,41 @@
+{
+  "time": "2026-10-18T05:25:50.625513-04:00",
+  "job_id": "656673",
+  "state": "TIMEOUT",
+  "elapsed": "02:00:22",
+  "logged_finite_updates": 202,
+  "recoverable_updates": 200,
+  "unsaved_updates": 2,
+  "target_updates": 5625,
+  "target_epochs": 3,
+  "saved_epoch": 0.10666666666666667,
+  "complete_training": false,
+  "checkpoint": "runs/lmf-full-length-15k-16k-3epoch-2a30/checkpoint-200",
+  "checkpoint_structurally_valid": true,
+  "model_shards": [
+    "model-00001-of-00002.safetensors",
+    "model-00002-of-00002.safetensors"
+  ],
+  "model_tensors_checked": 434,
+  "all_saved_model_tensors_finite": true,
+  "optimizer_rank_shards": 2,
+  "rng_ranks": [
+    0,
+    1
+  ],
+  "log_sha256": "857c1d33d750281d5ca04b51d080ce7d2851505ac5797cb9e8f71f6f7c28db0d",
+  "traceback_present": false,
+  "benchmark_evaluation_performed": false,
+  "gates": "unmeasured",
+  "full_recipe_unchanged_continuation_disabled": true,
+  "reason": "measured throughput exceeds remaining original training-allocation budget and user deadline",
+  "charged_training_allocations": [
+    "656067",
+    "656673"
+  ],
+  "charged_training_gpu_hours": 8,
+  "total_gpu_hours_cap": 40,
+  "evaluation_gpu_hours_reserved": 8,
+  "new_gpu_job_submitted": false,
+  "cpu_verifier_threads": 2
+}
