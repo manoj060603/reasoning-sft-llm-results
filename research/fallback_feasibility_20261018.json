@@ -1,0 +1,22 @@
+{
+  "checked_at_eastern": "2026-10-18T05:34:23-04:00",
+  "working_deadline_eastern": "2026-10-19T04:18:00-04:00",
+  "required_evaluation_partition": "b200_normal_q",
+  "required_evaluation_qos": "owl_b200_normal_short",
+  "evaluation_requested_hours": 8,
+  "scheduler_test_only": true,
+  "gpu_job_submitted": false,
+  "provisional_evaluation_start_eastern": "2026-10-19T23:34:23-04:00",
+  "estimate_after_working_deadline": true,
+  "estimated_start_is_not_a_guarantee": true,
+  "charged_training_gpu_hours": 8,
+  "total_gpu_hours_cap": 40,
+  "evaluation_gpu_hours_reserved": 8,
+  "remaining_unreserved_gpu_hours": 24,
+  "full_length_unchanged_resume_feasible_at_measured_rate": false,
+  "branch_fallback": "negative frozen preparation capacity",
+  "srp_fallback": "isolated CPU arithmetic verified; reference cache and trainer integration absent; runtime fit unverified",
+  "launch_ready_fallback": false,
+  "current_candidate_accuracy": "unmeasured",
+  "strict_goal_achieved": false
+}
