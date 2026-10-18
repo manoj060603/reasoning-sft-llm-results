@@ -95,3 +95,8 @@ The existing pending job 656673 was moved **in place** using `scontrol update Jo
 The saved automation was found at 480-minute intervals and corrected through the app to 15-minute intervals. The deadline is at serious risk: no GPU training throughput has yet been measured, and neither training completion nor 9/9 accuracy is guaranteed.
 
 At approximately **03:19:20 Eastern October 18**, job656673 transitioned to **RUNNING on fal007** after the in-place queue change. This supersedes the pending estimates above. Startup log was initially empty; no optimizer updates or throughput were confirmed at this observation.
+
+
+### Measured throughput blocker, October 18 around 03:34 Eastern
+
+Job656673 reached19 logged updates after10m31s of training, with finite loss and gradient norms. The recent displayed rate was32.20s/update and roughly50 hours remaining. This is operational progress, not an accuracy result. At this sustained measured speed, the unchanged5,625-update candidate does not fit the remaining14-hour maximum A30 training window or the user's shortened deadline. The monitor was updated to prohibit automatic additional unchanged allocations under the older continuation instructions. The current allocation remains running while its first complete recovery checkpoint is awaited; no checkpoint, data or recipe was deleted or changed. A CPU-only capacity check of the separately frozen branch-filtered fallback was started, without a new GPU job.

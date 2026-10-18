@@ -1,0 +1,12 @@
+{
+  "time": "2026-10-18T03:35:15.617390-04:00",
+  "pool_sha256": "c115f4331f485458616b8e29a3715422b5d4479396cf50c287183014820eabc9",
+  "features_sha256": "039cd63692d528dcce2caf2be2bfed85be917a66298a2532933ef1107f9db979",
+  "selector_sha256": "bf05904678a3949f38b14ba2e44882821639fb0ac5fc40f00628e43ee05e0403",
+  "cutoff": 8192,
+  "gpu_used": false,
+  "dataset_exported": false,
+  "actual_native_processor_checked": false,
+  "status": "negative_preparation_capacity",
+  "error": "insufficient retained capacity: 1/0"
+}
