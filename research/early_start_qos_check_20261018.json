@@ -1,0 +1,32 @@
+{
+  "checked_at_eastern": "2026-10-18T10:43:00-04:00",
+  "request": "do early start",
+  "job_submitted": false,
+  "gpu_budget_spent": 0,
+  "normal_b200_estimate": "2026-10-20T04:39:43-04:00",
+  "normal_b200_two_and_four_hour_requests_also_after_deadline": true,
+  "normal_b200_highest_account_priority_qos": "owl_b200_normal_short",
+  "normal_b200_qos_priority": 1200,
+  "normal_two_a30_estimate": "2026-10-18T19:36:04-04:00",
+  "preemptable_test_only_estimated_immediate": true,
+  "preemptable_test_requested_qos": "owl_preemptable_base",
+  "preemptable_partition_allowed_qos": [
+    "normal",
+    "owl_b200_preemptable_base"
+  ],
+  "account_allowed_qos": [
+    "owl_b200_normal_base",
+    "owl_b200_normal_long",
+    "owl_b200_normal_short",
+    "owl_normal_base",
+    "owl_normal_int",
+    "owl_normal_long",
+    "owl_normal_short",
+    "owl_preemptable_base"
+  ],
+  "account_partition_qos_intersection": [],
+  "preemptable_launch_permission_verified": false,
+  "reason": "Test-only estimate does not establish partition/account QoS compatibility; account lacks B200-specific preemptable QoS",
+  "external_action_needed": "ARC administrator must grant owl_b200_preemptable_base to the appropriate class-account association, or provide a valid earlier B200 allocation",
+  "remaining_recipe_and_budget_constraints_unchanged": true
+}
