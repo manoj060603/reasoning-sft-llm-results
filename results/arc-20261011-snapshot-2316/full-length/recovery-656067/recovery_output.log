@@ -1,0 +1,33 @@
+{
+  "schema": "a30-deepspeed-native-guard-recovery-v1",
+  "failed_job": "656067",
+  "full_log_sha256": "1a8ecd719e5deca476ab1a88380dfd70f9b0f8155b53854e575fada35110ee48",
+  "old_execution_receipt_sha256": "aafa28a034680f7c993911b4d44bde0c32e5937627f6a784260d6dc83b731abd",
+  "new_execution_receipt_sha256": "7a30f7b1e94ed13052d2bd65360e925c8d02ff698bbd2691b6c52bcf364e29b4",
+  "only_bound_execution_file_changed": [
+    "scripts/arc_full_length_2a30_train.sh"
+  ],
+  "config_data_selection_preparation_unchanged": true,
+  "native_trainer_guard_sha256": "dc72d5906315afe89c6d6013b3fc238c9d9b9f92e157769ba3cb832c3bb22ecb",
+  "cpu_dependency_log_sha256": "b2fbc49b78e3dde0a292494b5aced09243bf452870a7bc1b4f9efa9ac4d5196b",
+  "cpu_tests": {
+    "native_dependency_guard": true,
+    "cpu_adam_step": true,
+    "installed_zero3_schema": true,
+    "plain_ce_loss_gradient": true,
+    "two_rank_recovery": true
+  },
+  "overlay_initial_cpu_failure_preserved": "overlay_initial_cpu_check.log",
+  "new_overlay_pth_sha256": "f54ae5a8daf254a9e6b720f8205d929203f5a5fe287fc371fe16c7fa6379b34c",
+  "new_overlay_pyvenv_sha256": "3d23300b205f097fa315b49cdb846de3ccd68d5a6c60f2f7d9f0d286a42f186a",
+  "before_allocation_sha256": "9214e19d19929d41939347a8e8f04f79b77ced5b3d9e07948fb03bc3e21addfe",
+  "after_allocation_sha256": "2bf6a13e17eca45f2d9bd8d10910f3f1872c916c8bd54719744103faa4c9bf60",
+  "training_updates": 0,
+  "model_loaded": false,
+  "budget_charged_allocations": [
+    "656067"
+  ],
+  "no_gpu_pilot": true,
+  "corrected_gpu_resubmissions_allowed": 1
+}
+COMPLETE_STAGED_CPU_PRELAUNCH_OK

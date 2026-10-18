@@ -1,0 +1,20 @@
+Collecting deepspeed==0.16.9
+  Downloading deepspeed-0.16.9.tar.gz (1.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 6.0 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: deepspeed
+  Building wheel for deepspeed (setup.py): started
+  Building wheel for deepspeed (setup.py): finished with status 'done'
+  Created wheel for deepspeed: filename=deepspeed-0.16.9-py3-none-any.whl size=1644443 sha256=61dba1b6a96fc5f7df949a87022a3f822f54388b3ebacad762b4147b3a8f9239
+  Stored in directory: /home/rohits25/.cache/pip/wheels/8b/31/46/ab053255ccb6906832f546dc0cd41c6fe92d08d5fa0a8d5161
+Successfully built deepspeed
+Installing collected packages: deepspeed
+  Attempting uninstall: deepspeed
+    Found existing installation: deepspeed 0.18.9
+    Not uninstalling deepspeed at /home/rohits25/.conda/envs/sata-vllm/lib/python3.10/site-packages, outside environment /projects/tealab/rohit/reasoning-sft-20261011/.venv-lmf-a30-ds0169
+    Can't uninstall 'deepspeed'. No files were found to uninstall.
+Successfully installed deepspeed-0.16.9
+
+[notice] A new release of pip is available: 23.0.1 -> 26.2.1
+[notice] To update, run: /projects/tealab/rohit/reasoning-sft-20261011/.venv-lmf-a30-ds0169/bin/python -m pip install --upgrade pip

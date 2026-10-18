@@ -10,7 +10,8 @@ export PATH="$CUDA_HOME/bin:$PATH"
 export PYTHONPATH="$PWD/LLaMA-Factory/src:$PWD"
 export FLASHINFER_WORKSPACE_BASE="$PWD/artifacts/flashinfer-runtime"
 export TRITON_CACHE_DIR="${TMPDIR:-/tmp}/reasoning-full-length-${SLURM_JOB_ID:-local}"
-TRAIN_PYTHON="$PWD/.venv-lmf/bin/python"
+TRAIN_PYTHON="$PWD/.venv-lmf-a30-ds0169/bin/python"
+export TORCH_EXTENSIONS_DIR="$PWD/artifacts/torch_extensions_ds0169"
 EVAL_PYTHON="$PWD/.venv-arc/bin/python"
 RUN=runs/lmf-full-length-15k-16k-3epoch-2a30
 [[ "${SLURM_JOB_PARTITION:-}" = a30_normal_q || "${SLURM_JOB_PARTITION:-}" = a30_preemptable_q ]]
@@ -44,7 +45,11 @@ assert not cfg['disable_shuffling'] and not cfg['packing'] and not cfg['train_on
 from llamafactory.hparams import FinetuningArguments
 loss_flags={k:cfg[k] for k in ('use_dft_loss','use_trimsft_loss','use_prift_loss','use_gem_loss','use_asft_loss')}
 assert not any(loss_flags.values())
-FinetuningArguments(finetuning_type='full',disable_shuffling=False,**loss_flags)
+ft=FinetuningArguments(finetuning_type='full',disable_shuffling=False,plot_loss=cfg['plot_loss'],**loss_flags)
+from types import SimpleNamespace
+from llamafactory.hparams import ModelArguments
+from llamafactory.hparams.parser import _check_extra_dependencies
+_check_extra_dependencies(ModelArguments(model_name_or_path=cfg['model_name_or_path'],flash_attn=cfg['flash_attn']),ft,SimpleNamespace(deepspeed=cfg['deepspeed'],predict_with_generate=False))
 run=Path(cfg['output_dir']);run.mkdir(parents=True,exist_ok=True)
 from reasoning.a30_pair_runtime import register_allocation,valid_checkpoint
 register_allocation(run,cfg_path)

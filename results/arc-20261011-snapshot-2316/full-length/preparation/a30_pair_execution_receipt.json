@@ -8,7 +8,7 @@
   "execution_sha256": {
     "configs/lmf-full-length-15k-16k-3epoch-2a30.yaml": "93842e4a752d793873d1208d90d6fead0baa2949c975383fd8f4be966bb29bfe",
     "configs/ds-full-length-4a30.json": "0bc55666fc63214baeacf1483f7517910d343b1745a16a73fbb35c0855a3992d",
-    "scripts/arc_full_length_2a30_train.sh": "22df1b9c266b51bf76a64ec63fc8e923a692f67e10f9754f217bd29f011f32c2",
+    "scripts/arc_full_length_2a30_train.sh": "c139b902db744ebb7f3b3330d75a004f1176b3c331b114c14953ed33ceaa9a19",
     "scripts/train_memory_ce.py": "96a9bd2f3687ebd7f6fb0ba8ac84c6d846656957f4b875383e5e1e6e8e923bea",
     "reasoning/memory_ce.py": "814dfa396ce7ffd70e512c69c9cff7850e96e35f55606d85d32806af0283cf7e",
     "reasoning/a30_pair_runtime.py": "6eada32a58215b745bfef86a0fc7957dedb6386d990b3bc15e34eb313fa2de1c"
@@ -16,7 +16,7 @@
   "runtime_versions": {
     "torch": "2.10.0",
     "transformers": "4.55.0",
-    "deepspeed": "0.18.9"
+    "deepspeed": "0.16.9"
   },
   "config_diff_from_frozen_b200_recipe": {
     "gradient_accumulation_steps": {
@@ -65,5 +65,25 @@
     "Distributed reduction/offload arithmetic is not bitwise equivalent to one GPU.",
     "CPU checks do not prove GPU memory fit or distributed NCCL runtime success.",
     "Earlier queue start is not evidence of earlier completion or benchmark improvement."
-  ]
+  ],
+  "operational_recovery": {
+    "failed_job": "656067",
+    "cause": "native LLaMA-Factory requires DeepSpeed<=0.16.9; original environment had0.18.9",
+    "old_runtime_versions": {
+      "torch": "2.10.0",
+      "transformers": "4.55.0",
+      "deepspeed": "0.18.9"
+    },
+    "new_runtime_versions": {
+      "torch": "2.10.0",
+      "transformers": "4.55.0",
+      "deepspeed": "0.16.9"
+    },
+    "isolated_environment": ".venv-lmf-a30-ds0169",
+    "original_environments_unchanged": true,
+    "failed_allocation_retained": true,
+    "training_updates_before_failure": 0,
+    "gpu_pilot": false,
+    "dependency_guard_bypassed": false
+  }
 }

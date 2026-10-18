@@ -1,0 +1,46 @@
+{
+  "schema": "full-length-original-15k-16k-three-epoch-2a30-v1",
+  "preparation_receipt": {
+    "schema": "full-length-original-15k-16k-three-epoch-v1",
+    "pool_sha256": "c115f4331f485458616b8e29a3715422b5d4479396cf50c287183014820eabc9",
+    "features_sha256": "039cd63692d528dcce2caf2be2bfed85be917a66298a2532933ef1107f9db979",
+    "module_sha256": "b366ad8c0d5c59e707a69efeeaddf39d7e5e40c75a87d991f20c19b9ba4b76af",
+    "allocation_module_sha256": "2927d52baeb2b9cfeb099e3d5cddde7ad892c7413717bb99043ba43a7270b6a1",
+    "model_manifest": {
+      "repo": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "path": "/projects/tealab/rohit/reasoning-sft-20261011/artifacts/hf/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+    },
+    "eligible_examples": 56673,
+    "selected_above_8k": 5524,
+    "max_exact_tokens": 16350,
+    "mean_exact_tokens": 7149.174933333334,
+    "source_responses_with_nfc_composition": 8,
+    "supervised_tokens_per_epoch": 105736982,
+    "cutoff": 16384,
+    "unique_prompts": 15000,
+    "epochs": 3,
+    "example_presentations": 45000,
+    "updates": 5625,
+    "original_targets_complete": true,
+    "prompt_tokens_masked": true,
+    "eos_supervised": true,
+    "actual_dataset_converter_verified": true,
+    "system_column_preserved": true,
+    "dataset_info_sha256": "7892ecad03c3232d8f9f7599f64227b157876727ccd0825414b56734c5c0cac4",
+    "student_generations_used_for_selection": false,
+    "public_scores_used_for_selection": false,
+    "data_sha256": "0ccdb3b3e7800f181cd99cb16f433d81d359d86e6d6fa0d089f61c36f56185cc",
+    "versions": {
+      "torch": "2.10.0",
+      "transformers": "4.55.0"
+    }
+  },
+  "config_sha256": "93842e4a752d793873d1208d90d6fead0baa2949c975383fd8f4be966bb29bfe",
+  "original_targets_unchanged": true,
+  "serialized_tokens_per_epoch": 107237624,
+  "total_serialized_tokens": 321712872,
+  "total_supervised_tokens": 317210946,
+  "checkpoint_selection": false,
+  "public_scores_used_for_selection": false
+}

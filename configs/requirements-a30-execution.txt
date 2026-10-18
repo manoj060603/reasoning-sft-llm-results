@@ -1,0 +1,3 @@
+# Isolated overlay; shared torch/Transformers/evaluation environments remain unchanged.
+# Install with DS_BUILD_OPS=0 pip install --no-deps --no-build-isolation -r this-file.
+deepspeed==0.16.9

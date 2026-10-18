@@ -1,0 +1,19 @@
+{
+  "execution_sha256": {
+    "configs/lmf-full-length-15k-16k-3epoch-2a30.yaml": "93842e4a752d793873d1208d90d6fead0baa2949c975383fd8f4be966bb29bfe",
+    "configs/ds-full-length-4a30.json": "0bc55666fc63214baeacf1483f7517910d343b1745a16a73fbb35c0855a3992d",
+    "scripts/arc_full_length_2a30_train.sh": "22df1b9c266b51bf76a64ec63fc8e923a692f67e10f9754f217bd29f011f32c2",
+    "scripts/train_memory_ce.py": "96a9bd2f3687ebd7f6fb0ba8ac84c6d846656957f4b875383e5e1e6e8e923bea",
+    "reasoning/memory_ce.py": "814dfa396ce7ffd70e512c69c9cff7850e96e35f55606d85d32806af0283cf7e",
+    "reasoning/a30_pair_runtime.py": "6eada32a58215b745bfef86a0fc7957dedb6386d990b3bc15e34eb313fa2de1c"
+  },
+  "job_ids": [
+    "656067"
+  ],
+  "training_gpu_hours_cap": 32,
+  "evaluation_gpu_hours_reserved": 8,
+  "total_gpu_hours_cap": 40,
+  "allocation_gpu_count": 2,
+  "allocation_hours": 2,
+  "automatic_requeue": false
+}

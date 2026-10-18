@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/projects/tealab/rohit/reasoning-sft-20261011/scripts/check_a30_dependencies.py", line 8, in <module>
+    from llamafactory.hparams import ModelArguments,FinetuningArguments
+  File "/projects/tealab/rohit/reasoning-sft-20261011/LLaMA-Factory/src/llamafactory/__init__.py", line 28, in <module>
+    from .extras.env import VERSION
+  File "/projects/tealab/rohit/reasoning-sft-20261011/LLaMA-Factory/src/llamafactory/extras/env.py", line 26, in <module>
+    import trl
+ModuleNotFoundError: No module named 'trl'
