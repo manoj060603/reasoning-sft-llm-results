@@ -1,0 +1,111 @@
+{
+  "time": "2026-10-18T04:04:29.036300-04:00",
+  "job": "656673",
+  "checkpoint": "runs/lmf-full-length-15k-16k-3epoch-2a30/checkpoint-50",
+  "global_step": 50,
+  "finite_logged_steps": 50,
+  "structural_checkpoint_check": true,
+  "optimizer_rank_shards": 2,
+  "rng_ranks": [
+    0,
+    1
+  ],
+  "files": [
+    {
+      "name": "trainer_state.json",
+      "size": 9221
+    },
+    {
+      "name": "config.json",
+      "size": 1500
+    },
+    {
+      "name": "rng_state_1.pth",
+      "size": 14917
+    },
+    {
+      "name": "training_args.bin",
+      "size": 8081
+    },
+    {
+      "name": "latest",
+      "size": 13
+    },
+    {
+      "name": "vocab.json",
+      "size": 2776833
+    },
+    {
+      "name": "model-00002-of-00002.safetensors",
+      "size": 1214366696
+    },
+    {
+      "name": "tokenizer_config.json",
+      "size": 4713
+    },
+    {
+      "name": "model-00001-of-00002.safetensors",
+      "size": 4957560304
+    },
+    {
+      "name": "chat_template.jinja",
+      "size": 2507
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "size": 35613
+    },
+    {
+      "name": "special_tokens_map.json",
+      "size": 613
+    },
+    {
+      "name": "zero_to_fp32.py",
+      "size": 33272
+    },
+    {
+      "name": "added_tokens.json",
+      "size": 605
+    },
+    {
+      "name": "scheduler.pt",
+      "size": 1465
+    },
+    {
+      "name": "tokenizer.json",
+      "size": 11421896
+    },
+    {
+      "name": "generation_config.json",
+      "size": 243
+    },
+    {
+      "name": "merges.txt",
+      "size": 1671853
+    },
+    {
+      "name": "rng_state_0.pth",
+      "size": 14917
+    },
+    {
+      "name": "global_step50/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt",
+      "size": 18515651027
+    },
+    {
+      "name": "global_step50/zero_pp_rank_0_mp_rank_00_model_states.pt",
+      "size": 213795
+    },
+    {
+      "name": "global_step50/zero_pp_rank_1_mp_rank_00_model_states.pt",
+      "size": 213731
+    },
+    {
+      "name": "global_step50/bf16_zero_pp_rank_1_mp_rank_00_optim_states.pt",
+      "size": 18515651027
+    }
+  ],
+  "model_tensor_finiteness_not_checked": true,
+  "training_complete": false,
+  "benchmark_evaluation_performed": false,
+  "unchanged_future_allocations_disabled": true
+}
