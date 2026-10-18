@@ -1,0 +1,29 @@
+{
+  "checked_at_eastern": "2026-10-18T11:54:01-04:00",
+  "user_request": "fast track as much as you can",
+  "actual_job_id": "1199964",
+  "actual_job_state": "PENDING",
+  "live_actual_start_estimate_eastern": "2026-10-18T14:29:47-04:00",
+  "estimate_is_provisional": true,
+  "highest_authorized_qos": "owl_b200_normal_short",
+  "qos_priority": 1200,
+  "alternative_test_only_results": {
+    "two_b200_16cpu_160g_6h": "2026-10-20T09:59:47-04:00",
+    "two_b200_8cpu_96g_6h": "2026-10-20T09:59:47-04:00",
+    "two_b200_8cpu_96g_4h": "2026-10-20T09:59:47-04:00",
+    "two_nodes_one_b200_each_6h": "2026-10-20T05:54:01-04:00"
+  },
+  "free_gpus_at_check": {
+    "owl-sr001": 1,
+    "owl-sr002": 0,
+    "owl-sr003": 1,
+    "owl-sr004": 0
+  },
+  "current_queue_position_preserved": true,
+  "new_job_submitted": false,
+  "additional_gpu_budget_spent": 0,
+  "recipe_changed": false,
+  "monitor_interval_minutes_during_pending_and_startup": 5,
+  "monitor_restore_after_ten_finite_updates_minutes": 15,
+  "decision": "Retain the actual job; alternative hypothetical estimates do not improve its live estimate."
+}
