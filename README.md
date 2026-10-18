@@ -1,3 +1,5 @@
+> **Advance fallback preparation (October 18):** [new source-selection and margin-preservation designs](FALLBACK_STRATEGIES_20261018.md) are recorded before the current candidate result. The branch-selection prototype passed synthetic CPU checks; real-pool preparation and GPU feasibility remain unverified. Job656673 is running; initial finite progress is too slow for the shortened deadline if sustained. No second GPU job was submitted.
+
 > **Execution update (October 17, 2026):** two-A30 job 656067 failed at startup before model loading or any updates because the native trainer rejected DeepSpeed0.18.9. The isolated DeepSpeed0.16.9 correction passed the actual trainer dependency guard, CPUAdam, CE loss/gradient and recovery CPU checks without changing the scientific recipe. Exactly one corrected full training job **656673** was submitted after both project queues were empty. The failed allocation remains charged; no budget reset or GPU pilot. See [FULL_LENGTH_SFT_EXPERIMENT.md](FULL_LENGTH_SFT_EXPERIMENT.md) for complete before/after provenance; accuracy is still unmeasured.
 
 

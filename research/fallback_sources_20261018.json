@@ -1,0 +1,38 @@
+{
+  "review_date": "2026-10-18",
+  "before_current_candidate_benchmark_result": true,
+  "papers": [
+    {
+      "id": "2604.01702v2",
+      "url": "https://arxiv.org/html/2604.01702v2",
+      "reviewed": "method, section5, Table5, setup; not a replication",
+      "role": "branch-filtered original-target selection"
+    },
+    {
+      "id": "2610.19685v1",
+      "url": "https://arxiv.org/html/2610.19685v1",
+      "reviewed": "section4, D4-D6, limitations of cross-model/protocol transfer",
+      "role": "separate reference-margin fallback blueprint"
+    },
+    {
+      "id": "2602.07464v1",
+      "url": "https://arxiv.org/html/2602.07464v1",
+      "reviewed": "method, Table1, SFT-only versus post-RL distinction",
+      "role": "screened out for immediate SFT-only route"
+    },
+    {
+      "id": "2609.33780v1",
+      "url": "https://arxiv.org/html/2609.33780v1",
+      "reviewed": "prior detailed review plus current primary text",
+      "role": "post-RL limitation; not selected as new immediate route"
+    }
+  ],
+  "prototype_sha256": {
+    "research/branch_fallback.py": "bf05904678a3949f38b14ba2e44882821639fb0ac5fc40f00628e43ee05e0403",
+    "research/check_branch_fallback.py": "517635f4178ecbd9e79410f861b67ad4c9631bea30f0a0af53640c7a76b63f5b",
+    "FALLBACK_STRATEGIES_20261018.md": "58fc5288a665a07b20808c2718d3cf4b0f6d63835c478a93e63301c0b7468012"
+  },
+  "actual_pool_prepared": false,
+  "new_gpu_job_submitted": false,
+  "current_training_recipe_changed": false
+}

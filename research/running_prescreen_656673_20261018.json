@@ -1,0 +1,23 @@
+{
+  "observed_at": "2026-10-18T03:26:12.857040-04:00",
+  "job_id": "656673",
+  "native_dependency_guard_passed": true,
+  "distributed_ranks_initialized": 2,
+  "examples_tokenized": 15000,
+  "original_model_shards_loaded": 2,
+  "logged_steps": 5,
+  "last_metrics": {"loss": 0.7989, "grad_norm": 2.296212911605835, "learning_rate": 4.999993761437838e-06, "epoch": 0.0},
+  "all_logged_loss_and_gradient_finite": true,
+  "last_progress": ["5", "02:40<55:30:38, 35.56s/it"],
+  "traceback": false,
+  "checkpoints": [],
+  "allocation_ledger": ["656067", "656673"],
+  "early_rate_only": true,
+  "if_sustained_exceeds_deadline_and_remaining_training_budget": true,
+  "benchmark_screen_performed": false,
+  "scheduler_warning_source_inspected": {
+    "trainer": "optimizer.step precedes scheduler.step in Trainer",
+    "accelerate": "DeepSpeedEngineWrapper.backward calls engine.step; DeepSpeedOptimizerWrapper.step is a no-op",
+    "conclusion": "Wrapper warning alone does not establish a reversed real update order or justify a recipe change"
+  }
+}
