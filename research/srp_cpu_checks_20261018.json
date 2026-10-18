@@ -1,0 +1,17 @@
+{
+  "isolated_srp_cpu_checks": {
+    "torch.float32": "passed",
+    "torch.bfloat16": "passed"
+  },
+  "finite_difference": "passed",
+  "masked_zero_gradient": true,
+  "teacher_ties_ignored": true,
+  "satisfied_margin_zero": true,
+  "shift_invariant": true,
+  "rank_summed_denominator": "passed",
+  "cache_constructed": false,
+  "trainer_integrated": false,
+  "gpu_used": false,
+  "execution_environment": ".venv-lmf-a30-ds0169 on Falcon with CUDA_VISIBLE_DEVICES=-1",
+  "date": "2026-10-18"
+}

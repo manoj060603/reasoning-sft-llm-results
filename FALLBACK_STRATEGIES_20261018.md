@@ -51,3 +51,8 @@ The user has authorized a subsequent candidate if this one fails, but the author
 ## Actual CPU preparation result, October 18 03:35 Eastern
 
 The first fallback failed its fixed capacity contract on the actual sealed source pool: `insufficient retained capacity: 1/0` (cluster1, length quartile0). Both source hashes and exact83,037-row coverage passed before selection. Selector SHA `bf05904678a3949f38b14ba2e44882821639fb0ac5fc40f00628e43ee05e0403`. Status: **negative preparation capacity**. No dataset was exported, no native all-row processor audit was run, and no GPU was used. The preset filter/quotas were not relaxed. This candidate is not launchable as specified; do not rerun it unchanged. Receipt: `results/arc-20261011-snapshot-2316/branch-fallback-20261018/capacity_manifest.json`. The separate SRP-SFT design remains unimplemented and has no measured runtime fit.
+
+
+### SRP isolated CPU prototype, October 18 04:35 Eastern
+
+`research/srp_cpu_prototype.py` now implements the selected-logit margin auxiliary only. In the existing compatible environment with CUDA disabled, synthetic FP32/BF16 checks passed for finite loss/gradients, finite-difference gradients, masked zero gradients, ignored teacher ties, zero penalty at satisfied margins, shift invariance and rank-summed token normalization. See `research/srp_cpu_checks_20261018.json`. No reference cache, real-data audit, target-exclusion cache construction, training integration, model training, or GPU check has occurred. These checks establish local objective arithmetic only; the fallback is still not launch-ready and has no verified deadline/budget fit. Live training files were untouched.
