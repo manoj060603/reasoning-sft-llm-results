@@ -100,3 +100,10 @@ At approximately **03:19:20 Eastern October 18**, job656673 transitioned to **RU
 ### Measured throughput blocker, October 18 around 03:34 Eastern
 
 Job656673 reached19 logged updates after10m31s of training, with finite loss and gradient norms. The recent displayed rate was32.20s/update and roughly50 hours remaining. This is operational progress, not an accuracy result. At this sustained measured speed, the unchanged5,625-update candidate does not fit the remaining14-hour maximum A30 training window or the user's shortened deadline. The monitor was updated to prohibit automatic additional unchanged allocations under the older continuation instructions. The current allocation remains running while its first complete recovery checkpoint is awaited; no checkpoint, data or recipe was deleted or changed. A CPU-only capacity check of the separately frozen branch-filtered fallback was started, without a new GPU job.
+
+
+### Allocation ended at time limit: incomplete training
+
+Job **656673** ended **TIMEOUT** after **02:00:22** on October18 around05:20Eastern. Complete log inspection found202finite loss/gradient records and no Python traceback. Latest complete recovery checkpoint is **200** (epochapproximately0.107), including trainer state, scheduler, exactlytwo optimizer-rank shards, both RNG states, tokenizer/config and two consolidated model shards. Two subsequent logged updates were not saved. This is not the prescribed5,625-update/three-epoch final model. No benchmark was run and no accuracy failure or9/9 result is inferred.
+
+The two charged training allocations remain656067 and656673, conservatively8physical GPU-hours under the fixed ledger; total cap40 with8reserved for final B200evaluation. The observed rate is roughly200savedupdates per2h, making the remaining5,425updates require about54h at this allocation-level rate. Unchanged continuation therefore cannot fit the remaining original training budget or the user's October19~04:18Eastern working deadline and is disabled. No replacement allocation was submitted. Source/data/recipe/logs/checkpoints remain preserved.
