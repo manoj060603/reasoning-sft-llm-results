@@ -40,3 +40,22 @@ artifacts/datasets-demonstration-response-15k/advanced.json
 
 # Full-length candidate exports retain original large source responses.
 artifacts/datasets-full-length-15k/advanced.json
+
+# Private two-plan runtime evidence: public sync includes code and sanitized status only.
+artifacts/two-plans-20261019/
+artifacts/datasets-assistance-coverage-20261019*/
+artifacts/datasets-stage2-hard3k-20261019/
+research/two-plan-live-20261019/
+research/source-plans-20261019/
+research/arc_login_node_correction_20261019.json
+research/assistance_cpu_operational_recovery_20261019.json
+research/assistance_inventory_20261019.json
+research/original_path_inventory_20261019.json
+research/stage2_inventory_20261019.json
+research/stage2_native_receipt_20261019.json
+research/stage2_native_schedule_20261019.json
+research/two_plan_contamination_receipt_20261019.json
+research/two_plan_execution_review_20261019.json
+research/fast_2b200_resume_20261018.json
+results/arc-20261011-snapshot-2316/lmf-full-length-15k-16k-3epoch-fast-2b200-suite/
+results/arc-20261011-snapshot-2316/full-length/full_length_2a30_656673.log

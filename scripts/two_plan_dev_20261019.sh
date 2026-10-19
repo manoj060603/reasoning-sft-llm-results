@@ -8,7 +8,7 @@ export CUDA_HOME=/apps/common/software/CUDA/12.8.0
 export PATH="$CUDA_HOME/bin:$PATH"
 export LD_LIBRARY_PATH="/home/rohits25/.conda/envs/sata-vllm/lib:${LD_LIBRARY_PATH:-}"
 export PYTHONPATH="$PWD/LLaMA-Factory/src:$PWD"
-PY="$PWD/.venv-lmf-a30-ds0169/bin/python"
+PY="$PWD/.venv-arc/bin/python"
 [[ -s artifacts/two-plans-20261019/additional_budget_authorization.json ]]
-nvidia-smi --query-gpu=name --format=csv,noheader | "$PY" -c 'import sys; s=sys.stdin.read().splitlines(); assert len(s)==1 and "B200" in s[0]'
+"$PY" -c 'import os,torch; assert int(os.environ["SLURM_GPUS_ON_NODE"]) == 1; assert torch.cuda.device_count() == 1; assert "B200" in torch.cuda.get_device_name(0)'
 exec "$PY" -m reasoning.two_plan_dev_20261019 "--run-$1"

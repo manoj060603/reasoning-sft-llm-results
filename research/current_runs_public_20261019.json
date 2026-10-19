@@ -1,0 +1,121 @@
+{
+  "snapshot_eastern": "2026-10-19T13:43:01-04:00",
+  "deadline_eastern": "2026-10-20T23:59:00-04:00",
+  "prior_committed_gpu_hours": 40,
+  "additional_authorized_gpu_hours": 57,
+  "total_gpu_hour_cap": 97,
+  "parallel_distinct_plans": true,
+  "strict_nine_of_nine_achieved": false,
+  "old_candidate_evaluation_complete": false,
+  "completed_benchmarks": [
+    {
+      "benchmark": "amc",
+      "problems": 40,
+      "solved": 24,
+      "required_gate": 33,
+      "gate_passed": false,
+      "pass_at_1": 0.35,
+      "pass_at_8": 0.6,
+      "truncated_samples": 60
+    },
+    {
+      "benchmark": "aime25",
+      "problems": 30,
+      "solved": 5,
+      "required_gate": 8,
+      "gate_passed": false,
+      "pass_at_1": 0.06666666666666667,
+      "pass_at_8": 0.16666666666666666,
+      "truncated_samples": 87
+    },
+    {
+      "benchmark": "aime",
+      "problems": 30,
+      "solved": 5,
+      "required_gate": 8,
+      "gate_passed": false,
+      "pass_at_1": 0.06666666666666667,
+      "pass_at_8": 0.16666666666666666,
+      "truncated_samples": 99
+    },
+    {
+      "benchmark": "math",
+      "problems": 500,
+      "solved": 428,
+      "required_gate": 451,
+      "gate_passed": false,
+      "pass_at_1": 0.64,
+      "pass_at_8": 0.856,
+      "truncated_samples": 377
+    },
+    {
+      "benchmark": "cn_math_2024",
+      "problems": 30,
+      "solved": 11,
+      "required_gate": 14,
+      "gate_passed": false,
+      "pass_at_1": 0.125,
+      "pass_at_8": 0.36666666666666664,
+      "truncated_samples": 44
+    },
+    {
+      "benchmark": "kaoyan",
+      "problems": 199,
+      "solved": 135,
+      "required_gate": 138,
+      "gate_passed": false,
+      "pass_at_1": 0.29396984924623115,
+      "pass_at_8": 0.678391959798995,
+      "truncated_samples": 176
+    }
+  ],
+  "remaining_benchmarks": [
+    "minerva",
+    "olympiadbench",
+    "gpqa"
+  ],
+  "jobs": [
+    {
+      "job_id": "1206228",
+      "purpose": "original_candidate_all_nine_evaluation",
+      "state": "RUNNING"
+    },
+    {
+      "job_id": "1207375",
+      "purpose": "final_parent_training_token_accuracy",
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "correct_tokens": 1109712,
+      "supervised_tokens": 1324044,
+      "accuracy": 0.8381232043648096,
+      "experimental_stage2_gate_passed": true
+    },
+    {
+      "job_id": "1207378",
+      "purpose": "stage2_training",
+      "state": "PENDING",
+      "reason": "Resources",
+      "gpus": 2,
+      "requested_hours": 6,
+      "provisional_start_eastern": "2026-10-19T17:55:49-04:00"
+    },
+    {
+      "job_id": "1207417",
+      "purpose": "frozen_200_question_parent_dev_control",
+      "state": "RUNNING",
+      "gpus": 1,
+      "requested_hours": 2
+    },
+    {
+      "job_id": "1207446",
+      "purpose": "assistance_candidate_compute_node_preparation",
+      "state": "RUNNING",
+      "gpus": 0,
+      "cpus": 8,
+      "requested_hours": 2
+    }
+  ],
+  "assistance_training_submitted": false,
+  "source_data_or_question_ids_included": false,
+  "runtime_guarantee": false
+}

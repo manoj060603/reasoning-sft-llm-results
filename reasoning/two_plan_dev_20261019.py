@@ -446,7 +446,10 @@ def run(phase, auth_path=AUTH):
     expected = input_binding(phase)
     require(read(spec['input']) == expected, 'runtime input/model/source binding differs from CPU preflight')
     require(not spec['decision'].exists(), 'development decision already exists; refuse overwrite')
-    command = [str(ROOT/'.venv-lmf-a30-ds0169/bin/python'), '-m', 'reasoning.evaluate',
+    # Use the same pinned evaluation environment as the existing full-suite
+    # runs.  The training environment does not expose all package metadata
+    # recorded by reasoning.evaluate's immutable manifest.
+    command = [str(ROOT/'.venv-arc/bin/python'), '-m', 'reasoning.evaluate',
                '--model', str(spec['model']), '--data-dir', str(DEV_ROOT),
                '--benchmarks', 'acereason_dev', '--output', str(spec['output']),
                '--seed', '0', '--batch-size', '1024', '--tensor-parallel-size', '1',
