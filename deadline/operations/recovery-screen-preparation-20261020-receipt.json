@@ -1,0 +1,178 @@
+{
+  "schema": "deadline-source-heldout-recovery-screen-v1",
+  "phase": "prepare",
+  "complete": true,
+  "exploratory": true,
+  "post_primary_observation": true,
+  "primary_runs_immutable": true,
+  "protocol": {
+    "n": 1,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "seed": 20261020,
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "dtype": "bfloat16",
+    "max_num_seqs": 64,
+    "gpu_memory_utilization": 0.85,
+    "tensor_parallel_size": 1,
+    "generation_config": "vllm",
+    "top_k": -1,
+    "min_p": 0.0,
+    "repetition_penalty": 1.0,
+    "system": "Please reason step by step, and put your final answer within \\boxed{}.",
+    "prompt_token_limit": 2048,
+    "rows": 64,
+    "prompt_input": "explicit native token IDs; no additional special tokens",
+    "selection": "sha256(seed:source-heldout-screen:id), ascending",
+    "teacher_metric": "source teacher boxed-answer agreement; not truth",
+    "gate": {
+      "agreement_ge_advanced": true,
+      "agreement_ge_base_minus": 2,
+      "length_finishes_max_fraction_of_advanced": 0.5
+    }
+  },
+  "models": {
+    "base": {
+      "path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "files": {
+        "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+        "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00002.safetensors": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+        "model-00002-of-00002.safetensors": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+        "model.safetensors.index.json": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "advanced": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model",
+      "files": {
+        "model-00001-of-00003.safetensors": "a974cccbecc6300f30a4100df98bbc54e32ae4a56068a143df8353fa93ce9647",
+        "model-00002-of-00003.safetensors": "31011c044710a4fabe4772fc14edb30c43fa92af3e3249c94f094b4aa2a65079",
+        "model-00003-of-00003.safetensors": "d76fee8999c5b8b1080bd7fcd52134248072848699cc1917679914af4379ef7f",
+        "model.safetensors.index.json": "88a50027f81c9f8a1f2c773b695ccc0a9a47e19107d6c70ccf531f322b5304e6",
+        "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+        "chat_template.jinja": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+        "config.json": "e3394fd18e601ef755377e1465daee07775b3df6799e39ad1c0805aa12b9791f",
+        "generation_config.json": "bee877e33ef166a0ebe065a65c0406f6c0be90040e3eb42e68932314b20e50cb",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+        "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+        "tokenizer_config.json": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "recovery": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/model",
+      "files": {
+        "LICENSE": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+        "NOTICE": "13ba3e070a8a64020760ed8cf39b30fe20ec298cf7a0ee2dbba2a26d47082449",
+        "config.json": "79624335d945b5ca71c0f99fe10d64de5b20231aeed57768cb08e9b094f21aae",
+        "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00006.safetensors": "542ac258274d6f69398371ef0fc04b4ca218080066d75ade06c405a71321e8c1",
+        "model-00002-of-00006.safetensors": "b804d0df475b07658266e79facbc4f4c2b5ccfcf26217c010e04bb2c0c148998",
+        "model-00003-of-00006.safetensors": "d05b792d5d4e9ebc0f939bc680ff17205ce01fa33629132549eb95782fbef3a1",
+        "model-00004-of-00006.safetensors": "462596d965ebf2f8ac2c6a5aceb8e5c0093d9455f0547ff0c2d963b7faff8afc",
+        "model-00005-of-00006.safetensors": "23ddb724e03670764bfa271bd801fc6928f8719442a4be47af2332459883bbd1",
+        "model-00006-of-00006.safetensors": "aa76a669be6dc254478b10f94895790c60c50344e083c19dece67ae84d373462",
+        "model.safetensors.index.json": "5a2c6bfe556466ee7cea4d8ee2a8cb754b09727ff27287b325da09ff5c1a258e",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    }
+  },
+  "compatibility": {
+    "advanced": {
+      "architecture_sha256": "53a2c017fcf5f76955a8bce5caea1903883ae0a9aa182adec6c744725b99cb46",
+      "tokenizer_semantics_sha256": "357a2e8226c155110a2434a43158e88f0b4332211cc7165eacc0e6ca965d4879",
+      "generation_semantics_sha256": "ba584290512c1b824c2861801dac8833b7338bd3b8f12c3c312e083ec456d42e",
+      "tokenizer_backends_identical": true,
+      "config_semantics_identical": true,
+      "generation_defaults_identical_after_validated_operational_ids": true,
+      "allowed_operational_config_differences": {
+        "bos_token_id": {
+          "base": 151643,
+          "advanced": null
+        },
+        "pad_token_id": {
+          "base": null,
+          "advanced": 151643
+        }
+      },
+      "native_prompt_parity_cases": 3,
+      "operational_rule": "Only Qwen151643 BOS/pad metadata and disabled full-attention window metadata may differ; prompts are native explicit token IDs. Output copies original-base defaults."
+    },
+    "recovery": {
+      "architecture_sha256": "53a2c017fcf5f76955a8bce5caea1903883ae0a9aa182adec6c744725b99cb46",
+      "tokenizer_semantics_sha256": "357a2e8226c155110a2434a43158e88f0b4332211cc7165eacc0e6ca965d4879",
+      "generation_semantics_sha256": "ba584290512c1b824c2861801dac8833b7338bd3b8f12c3c312e083ec456d42e",
+      "tokenizer_backends_identical": true,
+      "config_semantics_identical": true,
+      "generation_defaults_identical_after_validated_operational_ids": true,
+      "allowed_operational_config_differences": {},
+      "native_prompt_parity_cases": 3,
+      "operational_rule": "Only Qwen151643 BOS/pad metadata and disabled full-attention window metadata may differ; prompts are native explicit token IDs. Output copies original-base defaults."
+    }
+  },
+  "eligible_rows": 718,
+  "source_audit": {
+    "artifacts": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts",
+    "files": {
+      "heldout.json": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3",
+      "pool.json": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "preparation_complete.json": "7fb88fb85f685eef6cbc5ffde2e83de00a87445fbf7db8e134b61640451b82ab",
+      "model_identity.json": "81af59dbb365b8559ad0d853dbda245aa4ac3ff0bedc03428e50fed65d7f7ae2",
+      "source/data/acereason11_100k.json": "f064d1a5fb39b9f493f678d5d6350a9acbfb2a2fa85400d0947fe72578ff28d8",
+      "transfer_meta.json": "4c63b8c4eb0d306a3ca7bbd7ff3b80e16e5a83d4638f92b3faa806162476956c",
+      "probeA_ids.json": "6ae31826e4d06b517e9e290d653a9b3502056cc81c57e281ef0447a0918de4d6",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeA/probe_receipt.json": "4352d5bbcdc24b93be86003567f616e7ad71b61fcf86ab0dad67286a95138004",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeA/run_manifest.json": "6f7db54ee2a6a315489af738763cd21d6de78155fd1c256a07500131d6c126c7",
+      "probeB_ids.json": "42c0b860943dae371ae692c1824504ced4b9e10e09801790324adaca6ed4ffa1",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeB/probe_receipt.json": "650c2799ab1b692e4c36a763774f997c7f951c36a822e0de46bec414acb78a75",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeB/run_manifest.json": "3e73ca4dd36e143e144c9b418367b1832696ffcca5679858ebb07918f21d0e21",
+      "selected/selection_manifest.json": "07e2b09fb92342447e0764fb73578279bb71383c26fb436d3d88b06333986e9d",
+      "training/random/selected_ids.json": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9",
+      "selected/random.json": "3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7",
+      "training/random/dataset.json": "3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7",
+      "training/random/cache_meta.json": "69de9dd0a9467af5943023c68d96fce6dbe4286b7121be58843c09c040532c55",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/manifest.json": "80e987b7a5cc15d7a64a35abe13f3fc38fd9fc5b3ac9e983d71bbaeed944f3da",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/complete.json": "3096f82603f4df4790988ae955581cb7ce513fae54d875021936cea893ce62ec",
+      "training/advanced/selected_ids.json": "2241e6e39ab65fe465db8544d7635570ff8a67b7e95f764ac72ddcb1bb9d3d7f",
+      "selected/advanced.json": "511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199",
+      "training/advanced/dataset.json": "511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199",
+      "training/advanced/cache_meta.json": "71a51f9a88586872d352082e4fd15db9ad6b73fe1a191a0aafdf1ac08459aec6",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/manifest.json": "415aa571740dc5c6e215db762a0157b58a8cbdb45eccedc69eb7ae0086e21647",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/complete.json": "c0d96498b3c1855dd36d554c0a9712b3d5db9201118de855f615536e71c6ecfd",
+      "random_ids.json": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9"
+    },
+    "population_counts": {
+      "entire_prepared_pool": 83029,
+      "probeA": 512,
+      "probeB": 512,
+      "random": 15000,
+      "advanced": 15000
+    },
+    "disjointness": "exact normalized canonical prompt identities; not semantic equivalence"
+  },
+  "merge_receipt": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/complete.json",
+  "merge_receipt_sha256": "6f68fd45dabeddafc5896ac0e46659725dbfba9d7f68ca1a4248e2796f7ca1b8",
+  "compute": {
+    "slurm_job_id": "1214044",
+    "slurm_step_id": null,
+    "slurmd_nodename": "owl008",
+    "cuda_visible_devices": ""
+  },
+  "selected_ids_sha256": "af899b05afe502400cebb6c2197a7fd454f66114198733838ffd7913f9975d8e",
+  "selected_sha256": "ae18868690469558d648450bf0a4c88bed9f4e4935d29598f5438f8bce4314d7",
+  "code_sha256": "f531d07db77738a08d4104231449e854e74956c4e8b51daf479eedf682ea74e8",
+  "grader_sha256": {
+    "grader.py": "43d858572b1dadda6fe3ec327db123bb5362fccd271ae58329c57f0c10521383",
+    "parser.py": "8d04ceb93e9ef50d61157fd1c8826a5cbf8d7f64cda85459f1166e19d8784208",
+    "math_normalization.py": "9c0484a01b76bd4582bfe61c8ee55df375dbc09782f1b587fc21b21dd80e23a0"
+  }
+}
