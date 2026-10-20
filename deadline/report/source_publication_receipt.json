@@ -1,0 +1,29 @@
+{
+  "schema": "reasoning-sft-github-source-publication-v1",
+  "repository_url": "https://github.com/manoj060603/reasoning-sft-llm-results",
+  "branch": "main",
+  "published_commit": "45e4d38784f1fdad4c033031f3b2d4c32c6c94b2",
+  "published_tree": "2d9b141495a24a4a42435e856bf2220cf0de3a81",
+  "local_source_commit": "cb08e18a3b1bbfe58e8db814a2a2e54a6471d29b",
+  "previous_branch_head": "9f86f8ee9ad476e8b7046351ad29f962b934746d",
+  "publication_manifest_sha256": "16d4555eced7061d1b9e1724f8cac04405a27267a951c7c7037bfcbc02be6eea",
+  "changed_files": 63,
+  "content_bytes": 754360,
+  "verified_at_utc": "2026-10-20T02:57:11.274912+00:00",
+  "verification": {
+    "owner_push_permission": true,
+    "expected_head_lease_succeeded": true,
+    "force_update": false,
+    "public_git_fetch_succeeded": true,
+    "fetched_branch_head_matches_published_commit": true,
+    "entire_fetched_tree_matches_local_source_tree": true
+  },
+  "source_publication_complete": true,
+  "final_assignment_delivery_complete": false,
+  "limitations": [
+    "This receipt proves source snapshot publication, not complete trained-model benchmark results.",
+    "Two model repositories and two dataset repositories remain pending.",
+    "The longer evaluation is prepared but unadmitted and awaits native ARC checks.",
+    "Later documentation or result commits do not change the identity of this verified snapshot."
+  ]
+}

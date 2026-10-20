@@ -13,6 +13,8 @@ due **October 20, 2026, at 11:59 p.m. Eastern**.
 Last successful scheduler check: **October 19, 2026, at 9:42 p.m. Eastern**.
 Subsequent ARC SSH and OnDemand connections timed out. This is an access failure;
 it does not establish that the running cluster jobs failed or stopped.
+The Cisco VT Traffic VPN session expired; its reconnect now awaits Virginia
+Tech sign-in and Duo in Brave.
 
 | Stage | Verified state |
 |---|---|
@@ -53,6 +55,10 @@ the comparison tests the complete selection method rather than an isolated
 transfer-gain ablation.
 
 ## Reproducibility and delivery
+
+The [fresh source snapshot](https://github.com/manoj060603/reasoning-sft-llm-results/commit/45e4d38784f1fdad4c033031f3b2d4c32c6c94b2)
+is public and verified against the entire local Git tree; see the
+[publication receipt](deadline/report/source_publication_receipt.json).
 
 Heavy preparation, training, evaluation and native checks run in ARC compute
 allocations. Exact source revisions, selected IDs, actual example consumption,

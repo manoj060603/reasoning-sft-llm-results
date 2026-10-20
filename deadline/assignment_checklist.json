@@ -228,12 +228,13 @@
       "id": "A13",
       "mandatory": true,
       "requirement": "Provide a GitHub repository with necessary files and a final README.",
-      "status": "pending_final_repository_delivery",
+      "status": "source_snapshot_published_final_results_and_artifact_links_pending",
       "evidence_paths": [
         "README.md",
         "deadline/README.md",
         "deadline/experiment_plan.json",
-        "deadline/assignment_checklist.json"
+        "deadline/assignment_checklist.json",
+        "deadline/report/source_publication_receipt.json"
       ],
       "completion_evidence_required": [
         "final committed code/config/tests",
@@ -365,8 +366,8 @@
     "Publication and course submission remain pending until verified links/receipts exist."
   ],
   "handoff_slots": {
-    "repository_url": null,
-    "repository_commit": null,
+    "repository_url": "https://github.com/manoj060603/reasoning-sft-llm-results",
+    "repository_commit": "45e4d38784f1fdad4c033031f3b2d4c32c6c94b2",
     "random_model_url": null,
     "advanced_model_url": null,
     "random_dataset_url": null,
@@ -388,9 +389,9 @@
       "finding": "The README table says 499, but the actual official file and local copy both contain 500 valid JSON records. The last record has no trailing newline; keep MATH=500 in evaluation and audit."
     }
   },
-  "last_reconciled_utc": "2026-10-20T02:17:59.247111+00:00",
+  "last_reconciled_utc": "2026-10-20T02:57:11.274912+00:00",
   "requested_repository_owner": "manoj060603",
   "team_submission_action": "Team-owned action; no course-system submission is performed by this experiment automation.",
   "last_verified_cluster_snapshot_utc": "2026-10-20T01:42:21+00:00",
-  "current_access_note": "Subsequent ARC SSH and OnDemand access timed out. Local evidence reconciliation does not imply a fresh scheduler check or advanced-model completion."
+  "current_access_note": "Cisco reports that its saved VT Traffic VPN session expired (Max time exceeded). Reconnection has opened login.vt.edu and awaits human sign-in/Duo. No subsequent scheduler or receipt progress is inferred."
 }
