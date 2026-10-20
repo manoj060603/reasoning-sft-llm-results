@@ -1,0 +1,252 @@
+{
+  "schema": "deadline-tokenizer-equivalence-v1",
+  "complete": true,
+  "equivalent": true,
+  "recorded_at_utc": "2026-10-20T01:18:44.716155+00:00",
+  "operation": "Read-only tokenization comparison; no model weights loaded or outputs inspected",
+  "benchmark_outcomes_inspected": false,
+  "reference_answers_used": false,
+  "tokenization_flags_changed": false,
+  "scientific_files_modified": false,
+  "allocation": {
+    "SLURM_JOB_ID": "1208059",
+    "SLURM_STEP_ID": "0",
+    "SLURM_JOB_NODELIST": "owl-sr002",
+    "SLURM_CPUS_PER_TASK": "1",
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "TOKENIZERS_PARALLELISM": "false"
+  },
+  "hostname": "owl-sr002",
+  "python": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/.venv/bin/python",
+  "argv": [
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/operations/tokenizer_equivalence_random.py"
+  ],
+  "script_sha256": "c5cf1527e94935bd8f4f4cd6a093b7e422b8795c49c0d81e48277ac1a731efaa",
+  "transformers_version": "4.57.3",
+  "tokenizers_version": "0.22.1",
+  "transformers_source": "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/transformers/tokenization_utils_base.py",
+  "transformers_source_sha256": "d9d46a3012baf4636dd5213043a5b983d975cac3cd99dc8cee074b8a9fee2b91",
+  "mistral_patch_source_sha256": "291625a8ba069cfa8d1c225271ab754b305228ea9d12a56268321f490ebdd274",
+  "warning_source_url": "https://github.com/huggingface/transformers/blob/v4.57.3/src/transformers/tokenization_utils_base.py",
+  "warning_explanation": "Local fast vocabulary>100K plus config saved with4.57.3 bypasses the older non-Mistral-model skip; default logs and sets a false flag, while the regex replacement requires explicit/saved true.",
+  "tokenizer_metadata": {
+    "original": {
+      "path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "tokenizer_class": "Qwen2TokenizerFast",
+      "vocab_size": 151643,
+      "model_type": "qwen2",
+      "config_transformers_version": "4.43.1",
+      "fix_mistral_regex_attribute": null,
+      "files_sha256": {
+        "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      }
+    },
+    "random": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model",
+      "tokenizer_class": "Qwen2TokenizerFast",
+      "vocab_size": 151643,
+      "model_type": "qwen2",
+      "config_transformers_version": "4.57.3",
+      "fix_mistral_regex_attribute": false,
+      "files_sha256": {
+        "config.json": "e3394fd18e601ef755377e1465daee07775b3df6799e39ad1c0805aa12b9791f",
+        "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+        "tokenizer_config.json": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+        "chat_template.jinja": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+        "special_tokens_map.json": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+      }
+    }
+  },
+  "semantic_properties_equal": {
+    "backend_json": true,
+    "pre_tokenizer": true,
+    "added_vocab": true,
+    "special_tokens": true,
+    "special_token_ids": true,
+    "chat_template": true
+  },
+  "backend_components": {
+    "added_tokens": {
+      "equal": true,
+      "original_sha256": "89097adfec874087c6e370b5b4c4307edd848af9e5a00ceb245015361c99902d",
+      "random_sha256": "89097adfec874087c6e370b5b4c4307edd848af9e5a00ceb245015361c99902d"
+    },
+    "decoder": {
+      "equal": true,
+      "original_sha256": "4942970eeb62af80cf8c4eb5d864699b914996b14b6a5e083528e3eed7dfc44d",
+      "random_sha256": "4942970eeb62af80cf8c4eb5d864699b914996b14b6a5e083528e3eed7dfc44d"
+    },
+    "model": {
+      "equal": true,
+      "original_sha256": "19f1c196940e3774164637c8133178ccc284d1a6b6a5c761fd2b700c8fc5b07a",
+      "random_sha256": "19f1c196940e3774164637c8133178ccc284d1a6b6a5c761fd2b700c8fc5b07a"
+    },
+    "normalizer": {
+      "equal": true,
+      "original_sha256": "5628358406a1a2864e0f9e853618fc4d47d359acf10253558d0c18886de3f06e",
+      "random_sha256": "5628358406a1a2864e0f9e853618fc4d47d359acf10253558d0c18886de3f06e"
+    },
+    "padding": {
+      "equal": true,
+      "original_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "random_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    },
+    "post_processor": {
+      "equal": true,
+      "original_sha256": "4942970eeb62af80cf8c4eb5d864699b914996b14b6a5e083528e3eed7dfc44d",
+      "random_sha256": "4942970eeb62af80cf8c4eb5d864699b914996b14b6a5e083528e3eed7dfc44d"
+    },
+    "pre_tokenizer": {
+      "equal": true,
+      "original_sha256": "78d576476d401e55be4850cbdeeb3183809b5bb60da2d2e20872c6d43a2db99e",
+      "random_sha256": "78d576476d401e55be4850cbdeeb3183809b5bb60da2d2e20872c6d43a2db99e"
+    },
+    "truncation": {
+      "equal": true,
+      "original_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "random_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+    },
+    "version": {
+      "equal": true,
+      "original_sha256": "a51162aeeb057ca4e3df627977231de20b581f0d0d418ca3a111bc0e408ac6cc",
+      "random_sha256": "a51162aeeb057ca4e3df627977231de20b581f0d0d418ca3a111bc0e408ac6cc"
+    }
+  },
+  "benchmark_records_compared": 1974,
+  "benchmarks": {
+    "amc": {
+      "records": 40,
+      "data_sha256": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4",
+      "original_rendered_and_token_ids_sha256": "1abe6f0936c4cc48fff9a90d6b846b5a5019001474b2d243ccb06b066df43aed",
+      "random_rendered_and_token_ids_sha256": "1abe6f0936c4cc48fff9a90d6b846b5a5019001474b2d243ccb06b066df43aed",
+      "equal": true
+    },
+    "aime25": {
+      "records": 30,
+      "data_sha256": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d",
+      "original_rendered_and_token_ids_sha256": "cd1edc83d153ab42ad09f9c406e5c4ad85deab43719c9f49bc97199a6045bce9",
+      "random_rendered_and_token_ids_sha256": "cd1edc83d153ab42ad09f9c406e5c4ad85deab43719c9f49bc97199a6045bce9",
+      "equal": true
+    },
+    "aime": {
+      "records": 30,
+      "data_sha256": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc",
+      "original_rendered_and_token_ids_sha256": "95fdf88c7d5122791e29a480dd954dd8d6adf6e11fe584ad8c0ac3ef4ceddeff",
+      "random_rendered_and_token_ids_sha256": "95fdf88c7d5122791e29a480dd954dd8d6adf6e11fe584ad8c0ac3ef4ceddeff",
+      "equal": true
+    },
+    "math": {
+      "records": 500,
+      "data_sha256": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94",
+      "original_rendered_and_token_ids_sha256": "c9f4bf5ec0942a936aaadf0e7e8b015eaeb3c1cf2baa86b7c141bbb880688efb",
+      "random_rendered_and_token_ids_sha256": "c9f4bf5ec0942a936aaadf0e7e8b015eaeb3c1cf2baa86b7c141bbb880688efb",
+      "equal": true
+    },
+    "cn_math_2024": {
+      "records": 30,
+      "data_sha256": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533",
+      "original_rendered_and_token_ids_sha256": "d098d4f7d39775438b30360e5088b70fd6bdfd433bb228fe4463df42211fdaa7",
+      "random_rendered_and_token_ids_sha256": "d098d4f7d39775438b30360e5088b70fd6bdfd433bb228fe4463df42211fdaa7",
+      "equal": true
+    },
+    "kaoyan": {
+      "records": 199,
+      "data_sha256": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7",
+      "original_rendered_and_token_ids_sha256": "aa0cb4b4cf93470265575628c851f6b52abace3c22c7f109191ae2519eb62c05",
+      "random_rendered_and_token_ids_sha256": "aa0cb4b4cf93470265575628c851f6b52abace3c22c7f109191ae2519eb62c05",
+      "equal": true
+    },
+    "minerva": {
+      "records": 272,
+      "data_sha256": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d",
+      "original_rendered_and_token_ids_sha256": "976c06bd3a935c7f7f3c021e0b8fcdfa4cb3172752b1fb5f3363a37a189c4b03",
+      "random_rendered_and_token_ids_sha256": "976c06bd3a935c7f7f3c021e0b8fcdfa4cb3172752b1fb5f3363a37a189c4b03",
+      "equal": true
+    },
+    "olympiadbench": {
+      "records": 675,
+      "data_sha256": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f",
+      "original_rendered_and_token_ids_sha256": "955d46e66726544d4807a2f081013ed5de3d88bc602514a3bfb2f797af42fad8",
+      "random_rendered_and_token_ids_sha256": "955d46e66726544d4807a2f081013ed5de3d88bc602514a3bfb2f797af42fad8",
+      "equal": true
+    },
+    "gpqa": {
+      "records": 198,
+      "data_sha256": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f",
+      "original_rendered_and_token_ids_sha256": "ef996d16778a46137873c097442c34093e8de37e7d92db7b9ee66c11bbe308b0",
+      "random_rendered_and_token_ids_sha256": "ef996d16778a46137873c097442c34093e8de37e7d92db7b9ee66c11bbe308b0",
+      "equal": true
+    }
+  },
+  "prompt_mismatches": [],
+  "diagnostic_cases": [
+    {
+      "text": "1234567890 + 3.1415926535",
+      "equivalent": true,
+      "original": "c33351331accee93ff8888114f3e2e445d22d804cc03a458649f0cc97210805c",
+      "random": "c33351331accee93ff8888114f3e2e445d22d804cc03a458649f0cc97210805c"
+    },
+    {
+      "text": "\\frac{123}{456} = \\boxed{\\sqrt{2}}",
+      "equivalent": true,
+      "original": "5af5d04432ff4f98e4adafd3d59d5b92702c65fd1ae613a7e53e6fe955bdbb2a",
+      "random": "5af5d04432ff4f98e4adafd3d59d5b92702c65fd1ae613a7e53e6fe955bdbb2a"
+    },
+    {
+      "text": "数学：计算 1＋2。",
+      "equivalent": true,
+      "original": "684bbfb3bbbd568a94f7103adc2be3b1ddfec1e4ad38007819467877e07ef909",
+      "random": "684bbfb3bbbd568a94f7103adc2be3b1ddfec1e4ad38007819467877e07ef909"
+    },
+    {
+      "text": "Café café naïve Ελληνικά عربى",
+      "equivalent": true,
+      "original": "0cb4907f08d24325b6ef6874990ea16dcc5788c172c70f0766f16aa07b47452d",
+      "random": "0cb4907f08d24325b6ef6874990ea16dcc5788c172c70f0766f16aa07b47452d"
+    },
+    {
+      "text": "😀🧮𝛼 ℝ ≤ ≥ ≠",
+      "equivalent": true,
+      "original": "00d7d823b495637f4752147cda4090297ebd5863231db3c9ebd22b73a6b1251c",
+      "random": "00d7d823b495637f4752147cda4090297ebd5863231db3c9ebd22b73a6b1251c"
+    },
+    {
+      "text": " leading  multiple   spaces ",
+      "equivalent": true,
+      "original": "2b5a386fabf79e946e595c48b8c0c64861a1841f73d6ae9b89cf8802782ecd85",
+      "random": "2b5a386fabf79e946e595c48b8c0c64861a1841f73d6ae9b89cf8802782ecd85"
+    },
+    {
+      "text": "\tindent\tvalue\n\nnext\r\nend\n",
+      "equivalent": true,
+      "original": "29d13cb6e34231eb85a11dd7531ad909c0a4154e520e58074eb7497611c4f33f",
+      "random": "29d13cb6e34231eb85a11dd7531ad909c0a4154e520e58074eb7497611c4f33f"
+    },
+    {
+      "text": "UPPERlower CamelCase ABCdef 007",
+      "equivalent": true,
+      "original": "9125924fd4554c79b2fc7b7f3c4e448ff7fd9e8a146cad9458d8ca90b30a468b",
+      "random": "9125924fd4554c79b2fc7b7f3c4e448ff7fd9e8a146cad9458d8ca90b30a468b"
+    },
+    {
+      "text": "<|im_start|>user\nQuestion<|im_end|>\n",
+      "equivalent": true,
+      "original": "ffb1788e1e60595dfb31e1748c3314ab0dfec7a125e4e29f65abb66b6bb73559",
+      "random": "ffb1788e1e60595dfb31e1748c3314ab0dfec7a125e4e29f65abb66b6bb73559"
+    },
+    {
+      "text": "",
+      "equivalent": true,
+      "original": "901179597b07b443af7100b5b5e89c2faba5ad78d2f17d8f00ba49e95f583139",
+      "random": "901179597b07b443af7100b5b5e89c2faba5ad78d2f17d8f00ba49e95f583139"
+    }
+  ]
+}

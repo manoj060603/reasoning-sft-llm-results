@@ -15,7 +15,7 @@ def checkpoint_identity(model, revision):
     path = Path(model)
     if path.is_dir():
         files = sorted(p for p in path.iterdir() if p.is_file() and
-                       (p.suffix in ('.json', '.safetensors', '.bin', '.model') or p.name=='merges.txt'))
+                       (p.suffix in ('.json', '.safetensors', '.bin', '.model', '.jinja') or p.name=='merges.txt'))
         if not files:
             raise ValueError('no checkpoint files found')
         return {str(p.relative_to(path)): digest(p) for p in files}
@@ -77,6 +77,7 @@ def main():
                   generation_config='vllm', max_num_seqs=a.max_num_seqs, top_k=-1, min_p=0., repetition_penalty=1.,
                   batch_size=a.batch_size, tensor_parallel_size=a.tensor_parallel_size,
                   gpu_memory_utilization=a.gpu_memory_utilization,
+                  evaluator_sha256=digest(__file__),
                   versions={k: importlib.metadata.version(k) for k in ['vllm','transformers','torch','sympy','antlr4-python3-runtime','latex2sympy2']},
                   grader_sha256={f: digest(ROOT/'eval'/'utils'/f) for f in ['grader.py','parser.py','math_normalization.py']},
                   problem_counts={b: len(rows) for b, rows in all_data.items()},

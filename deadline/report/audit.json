@@ -1,0 +1,124 @@
+{
+  "runs": {
+    "original": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original",
+      "benchmarks": {
+        "aime": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.07916666666666666,
+            "pass_at_8": 0.23333333333333334,
+            "truncated_samples": 10
+          }
+        },
+        "amc": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 40,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.425,
+            "pass_at_8": 0.7,
+            "truncated_samples": 3
+          }
+        },
+        "math": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 500,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.659,
+            "pass_at_8": 0.838,
+            "truncated_samples": 19
+          }
+        },
+        "cn_math_2024": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.1,
+            "pass_at_8": 0.26666666666666666,
+            "truncated_samples": 8
+          }
+        },
+        "kaoyan": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 199,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.21105527638190955,
+            "pass_at_8": 0.49748743718592964,
+            "truncated_samples": 3
+          }
+        },
+        "minerva": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 272,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.30330882352941174,
+            "pass_at_8": 0.47794117647058826,
+            "truncated_samples": 5
+          }
+        },
+        "olympiadbench": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 675,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.2825925925925926,
+            "pass_at_8": 0.5185185185185185,
+            "truncated_samples": 99
+          }
+        },
+        "gpqa": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 198,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.2840909090909091,
+            "pass_at_8": 0.696969696969697,
+            "truncated_samples": 5
+          }
+        },
+        "aime25": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.008333333333333333,
+            "pass_at_8": 0.03333333333333333,
+            "truncated_samples": 0
+          }
+        }
+      },
+      "errors": [],
+      "official_eight_macro": {
+        "pass_at_1": 0.2930267835326862,
+        "pass_at_8": 0.5286146036430917
+      },
+      "supplemented_historical_seven_macro": {
+        "pass_at_1": 0.23062584784687948,
+        "pass_at_8": 0.45584526130639047
+      }
+    }
+  },
+  "comparison": {
+    "matched": false,
+    "errors": [
+      "random: no run supplied",
+      "advanced: no run supplied"
+    ]
+  }
+}

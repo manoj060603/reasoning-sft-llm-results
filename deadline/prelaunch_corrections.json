@@ -1,0 +1,20 @@
+{
+  "schema": "fresh-transfer-prelaunch-corrections-v1",
+  "timing": "All corrections precede any GPU training, transfer scores or benchmark outcomes.",
+  "corrections": [
+    {
+      "issue": "Low learning-rate updates can round away in BF16 parameter storage.",
+      "change": "Use FP32 final trainable parameters and Adam moments with BF16 autocast, guarded by native numerical tests. Probes use BF16 frozen base and FP32 trainable adapters/moments."
+    },
+    {
+      "issue": "A complete-target-filtered random control answers a narrower question than the assignment random baseline.",
+      "change": "Use uniform random from the broad prepared source pool, with shared deduplication, benchmark/source-heldout, prompt-capacity and reserved-probe exclusions. Preserve original exports; disclose token-cache truncation. Do not call it literal uniform sampling over untouched100K."
+    },
+    {
+      "issue": "CPU preparation8067234 failed at4K with15938 complete eligible targets, below16024 required for15000 final rows plus1024 reserved probe rows.",
+      "change": "Use8192 training cutoff for both final arms and probes. Keep the full original advanced solutions, source-only scoring, fixed15000 size, and opposite-fold reservations. Expand reservoir length cells to cover8K. Rebuild preparation and rerun native tests before GPU submission.",
+      "evidence": "deadline/logs/prepare-8067234.err",
+      "failed_job_gpu_hours": 0
+    }
+  ]
+}

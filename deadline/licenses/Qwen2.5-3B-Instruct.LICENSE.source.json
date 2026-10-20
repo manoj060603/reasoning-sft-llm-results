@@ -1,0 +1,8 @@
+{
+  "source_url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/raw/aa8e72537993ba99e69dfaafa59ed015b17504d1/LICENSE",
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+  "bytes": 7388,
+  "retrieval": "System curl over certificate-verified HTTPS; exact unmodified response bytes."
+}

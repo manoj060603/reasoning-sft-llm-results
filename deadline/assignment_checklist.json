@@ -1,0 +1,396 @@
+{
+  "schema": "reasoning-sft-assignment-checklist-v1",
+  "status": "execution snapshot: original measured; both datasets and advanced selection complete; random training complete/evaluation running; advanced training running; comparisons and publication pending",
+  "assignment_url": "https://github.com/reds-lab/Project-Reasoning-SFT-LLM",
+  "deadline_eastern": "2026-10-20T23:59:00-04:00",
+  "current_experiment": "Cross-fitted Transfer Gain with Coverage; fresh original-base initialization",
+  "completion_rule": "Do not mark an item complete from code existence, job submission, or a training receipt when its required result/publication evidence is absent.",
+  "requirements": [
+    {
+      "id": "A01",
+      "mandatory": true,
+      "requirement": "Set up usable ARC training and evaluation environments and record versions.",
+      "status": "gpu_runtime_verified_native_test_receipt_pending_mirror",
+      "evidence_paths": [
+        "deadline/prepare_transfer.slurm",
+        "deadline/finalize_preparation.slurm",
+        "deadline/gpu_train.slurm",
+        "deadline/gpu_eval.slurm",
+        "deadline/report/original_evaluation_manifest.json",
+        "deadline/report/random_training_runtime.json",
+        "deadline/report/random_training_receipt.json"
+      ],
+      "completion_evidence_required": [
+        "successful native test oracle",
+        "GPU runtime checks",
+        "environment versions and hardware receipts"
+      ],
+      "evidence_note": "Committed receipts establish successful B200 training/evaluation and actual software versions. The already-run native test-oracle receipt still needs to be mirrored from ARC for portable completion evidence; source code alone is insufficient."
+    },
+    {
+      "id": "A02",
+      "mandatory": true,
+      "requirement": "Use Qwen2.5-3B-Instruct and the supplied AceReason 100K subset with reproducible provenance.",
+      "status": "complete_native_provenance",
+      "evidence_paths": [
+        "deadline/artifacts/preparation_complete.json",
+        "deadline/artifacts/model_identity.json",
+        "deadline/report/original_evaluation_manifest.json"
+      ],
+      "completion_evidence_required": [
+        "verified source revision/hash",
+        "actual base weight/config/tokenizer identity",
+        "source count and schema audit"
+      ]
+    },
+    {
+      "id": "A03",
+      "mandatory": true,
+      "requirement": "Evaluate the original model on the supplied reasoning benchmarks.",
+      "status": "complete_measured_original_all_nine",
+      "evidence_paths": [
+        "deadline/report/audit.json",
+        "deadline/report/original_metrics.json",
+        "deadline/report/original_evaluation_manifest.json"
+      ],
+      "completion_evidence_required": [
+        "all eight supplied benchmarks complete with eight valid samples per question",
+        "exact benchmark bytes/identities",
+        "grader preflight",
+        "MATH file parsed as 500 records; stale README499 count explained with identical official/local file hash"
+      ]
+    },
+    {
+      "id": "A04",
+      "mandatory": true,
+      "requirement": "Create the 15K random-data control requested by the assignment.",
+      "status": "complete_native_export_prepared_source_random_population",
+      "evidence_paths": [
+        "deadline/artifacts/random_ids.json",
+        "deadline/artifacts/training/random/dataset.json",
+        "deadline/artifacts/finalized.json",
+        "deadline/report/selection_receipt.json"
+      ],
+      "completion_evidence_required": [
+        "15,000 unique unchanged source pairs",
+        "uniform sampling within the frozen broad prepared source pool and recorded seed",
+        "deduplication, benchmark/source-heldout, prompt-capacity, and probe exclusions disclosed",
+        "explicit distinction from literal uniform-over-untouched-100K sampling"
+      ],
+      "scope_note": "The assignment describes a random 15K subset of its 100K source. This control samples the broad prepared source pool without the advanced complete-trace quality filters, after declared safety/identity/capacity exclusions. It is not literal uniform sampling over untouched 100K rows. Report the exact population; no instructor-acceptance or strict-compliance determination is assumed."
+    },
+    {
+      "id": "A05",
+      "mandatory": true,
+      "requirement": "Export both selected datasets in the required instruction/input/output/system structure.",
+      "status": "complete_native_exports_truncation_disclosed",
+      "evidence_paths": [
+        "deadline/report/selection_receipt.json",
+        "deadline/artifacts/training/random/cache_meta.json",
+        "deadline/runs/random/cache_audit.json",
+        "deadline/artifacts/training/advanced/cache_meta.json"
+      ],
+      "completion_evidence_required": [
+        "15,000 rows and unique question IDs in each dataset",
+        "unchanged original response identity in dataset exports",
+        "explicit dataset column mapping",
+        "zero selected-row drops",
+        "advanced zero target truncation; random training prefix-truncation and missing-EOS counts disclosed"
+      ]
+    },
+    {
+      "id": "A06",
+      "mandatory": true,
+      "requirement": "Fine-tune a model on the random control.",
+      "status": "complete_native_full_training_and_exact_consumption",
+      "evidence_paths": [
+        "deadline/report/random_training_receipt.json",
+        "deadline/report/random_training_runtime.json",
+        "deadline/runs/random/manifest.json",
+        "deadline/runs/random/consumption_final.json",
+        "deadline/runs/random/finite_updates.jsonl",
+        "deadline/runs/random/cache_audit.json"
+      ],
+      "completion_evidence_required": [
+        "1,875 finite optimizer updates",
+        "all 15K rows used exactly once",
+        "FP32 parameters/moments and BF16 compute",
+        "complete finite final model",
+        "random prefix-truncated-row and missing-supervised-EOS counts reconciled with cache metadata"
+      ]
+    },
+    {
+      "id": "A07",
+      "mandatory": true,
+      "requirement": "Implement and describe an advanced 15K data-selection strategy.",
+      "status": "complete_real_opposite_fold_scores_and_selection",
+      "evidence_paths": [
+        "deadline/report/selection_receipt.json",
+        "deadline/artifacts/selected/selection_manifest.json",
+        "deadline/runs/scores_fold0/score_receipt.json",
+        "deadline/runs/scores_fold1/score_receipt.json"
+      ],
+      "completion_evidence_required": [
+        "both real opposite-fold score artifacts complete",
+        "probe training IDs excluded from both arms",
+        "15K unique unchanged selected pairs",
+        "verified gain/quota/reservoir provenance"
+      ]
+    },
+    {
+      "id": "A08",
+      "mandatory": true,
+      "requirement": "Fine-tune a fresh original-base model on the advanced selection.",
+      "status": "pending_training_completion",
+      "evidence_paths": [
+        "deadline/runs/advanced/manifest.json",
+        "deadline/runs/advanced/complete.json",
+        "deadline/runs/advanced/consumption_final.json"
+      ],
+      "completion_evidence_required": [
+        "same declared training recipe as control",
+        "1,875 finite updates",
+        "one use of all 15K unique rows",
+        "complete finite final model"
+      ]
+    },
+    {
+      "id": "A09",
+      "mandatory": true,
+      "requirement": "Evaluate both fine-tuned models and compare them with the original.",
+      "status": "pending_measured_results",
+      "evidence_paths": [
+        "deadline/results/random",
+        "deadline/results/advanced",
+        "deadline/report/audit.json"
+      ],
+      "completion_evidence_required": [
+        "complete supplied-eight results for all three models",
+        "matched generation/grader/data protocol",
+        "pass@1 and pass@8 reported",
+        "partial results explicitly labeled",
+        "broad source-random and advanced complete-target population differences disclosed"
+      ]
+    },
+    {
+      "id": "A10",
+      "mandatory": true,
+      "requirement": "Answer whether the advanced selection beats the random control and analyze why.",
+      "status": "pending_analysis",
+      "evidence_paths": [
+        "deadline/report_outline.json",
+        "deadline/report/results.md"
+      ],
+      "completion_evidence_required": [
+        "measured advanced-versus-control comparison",
+        "uncertainty and generation diagnostics",
+        "honest negative/mixed finding if applicable",
+        "sampling-population limitation"
+      ],
+      "scope_note": "The whole advanced selection policy is compared with broad prepared-source random sampling. Do not attribute a difference solely to transfer gain. A guaranteed positive improvement or statistical significance is not an assignment completion requirement."
+    },
+    {
+      "id": "A11",
+      "mandatory": true,
+      "requirement": "Report the final model hyperparameters and data-selection strategy.",
+      "status": "drafted_pending_actual_run_reconciliation",
+      "evidence_paths": [
+        "deadline/experiment_plan.json",
+        "deadline/report_outline.json",
+        "deadline/runs/random/manifest.json",
+        "deadline/runs/advanced/manifest.json"
+      ],
+      "completion_evidence_required": [
+        "actual model/data revisions",
+        "selection/probe/final-training settings",
+        "precision and loss normalization",
+        "runtime, hardware, resource and truncation disclosures"
+      ]
+    },
+    {
+      "id": "A12",
+      "mandatory": true,
+      "requirement": "Explain the training-framework difference from the assignment tutorial.",
+      "status": "complete_documented_native_trainer_with_runtime_evidence",
+      "evidence_paths": [
+        "deadline/FINAL_REPORT.md",
+        "deadline/report/random_training_runtime.json",
+        "deadline/train_full.py"
+      ],
+      "completion_evidence_required": [
+        "state native Transformers Trainer was used",
+        "preserve reproducible full-SFT behavior and requested dataset format",
+        "do not describe the run as LLaMA-Factory execution"
+      ],
+      "scope_note": "The assignment tutorial uses LLaMA-Factory and also mentions custom Python training scripts. This fresh runtime uses native Trainer; document the implementation choice without asserting any course-specific framework interpretation."
+    },
+    {
+      "id": "A13",
+      "mandatory": true,
+      "requirement": "Provide a GitHub repository with necessary files and a final README.",
+      "status": "pending_final_repository_delivery",
+      "evidence_paths": [
+        "README.md",
+        "deadline/README.md",
+        "deadline/experiment_plan.json",
+        "deadline/assignment_checklist.json"
+      ],
+      "completion_evidence_required": [
+        "final committed code/config/tests",
+        "current README with measured results and limitations",
+        "verified repository URL/commit",
+        "usable artifact links and reproduction instructions"
+      ]
+    },
+    {
+      "id": "A14",
+      "mandatory": true,
+      "requirement": "Push the trained models to Hugging Face.",
+      "status": "pending_publication",
+      "evidence_paths": [],
+      "completion_evidence_required": [
+        "usable random-control model repository/link",
+        "usable advanced model repository/link",
+        "complete weights/tokenizer/config",
+        "model cards with provenance, training and evaluation information"
+      ]
+    },
+    {
+      "id": "A15",
+      "mandatory": true,
+      "requirement": "Push both random and advanced datasets to Hugging Face.",
+      "status": "pending_publication",
+      "evidence_paths": [],
+      "completion_evidence_required": [
+        "two accessible dataset repository links",
+        "correct original 15K records and format",
+        "dataset cards with source, sampling and exclusions",
+        "verified data hashes and relation to training caches"
+      ]
+    },
+    {
+      "id": "A16",
+      "mandatory": true,
+      "requirement": "Deliver the final report containing original performance, trained-model results, comparison, hyperparameters, and selection method.",
+      "status": "narrative_draft_created_trained_results_pending",
+      "evidence_paths": [
+        "deadline/FINAL_REPORT.md",
+        "deadline/report/audit.json"
+      ],
+      "completion_evidence_required": [
+        "final report document",
+        "complete required content",
+        "all reported values traceable to actual evidence",
+        "no prior-team scores represented as fresh results"
+      ]
+    },
+    {
+      "id": "A17",
+      "mandatory": true,
+      "requirement": "Complete the team submission by the posted deadline.",
+      "status": "pending_submission",
+      "evidence_paths": [],
+      "completion_evidence_required": [
+        "repository and model/dataset links ready",
+        "final report ready",
+        "team/course submission confirmation or receipt"
+      ]
+    }
+  ],
+  "optional_research_and_bonus": [
+    {
+      "id": "O01",
+      "mandatory": false,
+      "requirement": "Run a coverage-only ablation using the same reservoir, quotas, recipe, and evaluator.",
+      "status": "not_run",
+      "evidence_paths": [],
+      "completion_evidence_required": [
+        "additional matched model and results"
+      ],
+      "scope_note": "A coverage-only arm on the same eligible reservoir/quotas would isolate transfer gain from coverage. An eligible-random arm is separately needed to assess the advanced eligibility effect. These are research ablations, not completed parts of the current pair."
+    },
+    {
+      "id": "O02",
+      "mandatory": false,
+      "requirement": "Run additional seeds or fresh confirmatory evaluation.",
+      "status": "not_run",
+      "evidence_paths": [],
+      "completion_evidence_required": [
+        "prespecified repeated experiments and uncertainty"
+      ]
+    },
+    {
+      "id": "O03",
+      "mandatory": false,
+      "requirement": "Evaluate supplementary AIME25 and report the seven-task internal macro.",
+      "status": "planned_supplement",
+      "evidence_paths": [
+        "deadline/artifacts/benchmarks/aime25/test.jsonl"
+      ],
+      "completion_evidence_required": [
+        "pinned supplementary data and complete matched evaluations"
+      ],
+      "scope_note": "The supplied benchmark archive contains eight tasks. AIME25 supports an additional internal comparison, not verified historical equivalence."
+    },
+    {
+      "id": "O04",
+      "mandatory": false,
+      "requirement": "Seek a top-five leaderboard bonus or strict historical all-nine dominance.",
+      "status": "not_established",
+      "evidence_paths": [],
+      "completion_evidence_required": [
+        "actual course leaderboard evidence if relevant"
+      ],
+      "scope_note": "A leaderboard win, historical 9/9 dominance, or a state-of-the-art claim is not required for basic assignment completion."
+    },
+    {
+      "id": "O05",
+      "mandatory": false,
+      "requirement": "Train and evaluate an eligible-pool random control as a separate ablation.",
+      "status": "not_run",
+      "evidence_paths": [],
+      "completion_evidence_required": [
+        "same complete-trace eligible population and training recipe as advanced selection",
+        "complete matched evaluation"
+      ],
+      "scope_note": "The primary random arm is the broader prepared-source control. This additional arm would help separate eligibility/context-fit effects from the remaining selection policy."
+    }
+  ],
+  "critical_open_scopes": [
+    "The primary control is uniform over a broad prepared source population after deduplication, benchmark/source-heldout, prompt-capacity and reserved-probe exclusions; it is not literal uniform sampling over untouched 100K rows. State this nuance without assuming instructor acceptance.",
+    "Random 8K training prefixes can lose final answers/EOS; original exported datasets remain unchanged and truncation/missing-EOS rates must be reported.",
+    "Transfer gain is not isolated from eligibility, reservoir construction and coverage without separate eligible-random and coverage-only ablations.",
+    "Native Trainer replaces the tutorial LLaMA-Factory execution path; record the actual framework.",
+    "MATH has 500 actual JSON records despite README499; the official and local files are byte-identical.",
+    "Publication and course submission remain pending until verified links/receipts exist."
+  ],
+  "handoff_slots": {
+    "repository_url": null,
+    "repository_commit": null,
+    "random_model_url": null,
+    "advanced_model_url": null,
+    "random_dataset_url": null,
+    "advanced_dataset_url": null,
+    "final_report_path": "deadline/FINAL_REPORT.md (draft; trained results pending)",
+    "course_submission_receipt": null
+  },
+  "reviewed_implementation_commit": "b092f29",
+  "benchmark_count_audit": {
+    "math": {
+      "checked_date": "2026-10-19",
+      "assignment_url": "https://raw.githubusercontent.com/reds-lab/Project-Reasoning-SFT-LLM/main/eval/data/math/test.jsonl",
+      "local_assignment_copy": "eval/data/math/test.jsonl",
+      "parsed_records": 500,
+      "physical_newline_characters": 499,
+      "bytes": 446563,
+      "sha256": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94",
+      "byte_identical_official_and_local": true,
+      "finding": "The README table says 499, but the actual official file and local copy both contain 500 valid JSON records. The last record has no trailing newline; keep MATH=500 in evaluation and audit."
+    }
+  },
+  "last_reconciled_utc": "2026-10-20T02:17:59.247111+00:00",
+  "requested_repository_owner": "manoj060603",
+  "team_submission_action": "Team-owned action; no course-system submission is performed by this experiment automation.",
+  "last_verified_cluster_snapshot_utc": "2026-10-20T01:42:21+00:00",
+  "current_access_note": "Subsequent ARC SSH and OnDemand access timed out. Local evidence reconciliation does not imply a fresh scheduler check or advanced-model completion."
+}

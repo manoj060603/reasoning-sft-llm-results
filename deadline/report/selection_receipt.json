@@ -1,0 +1,47 @@
+{
+  "schema": "deadline-crossfit-selection-complete-v1",
+  "complete": true,
+  "method": "cross_fitted_transfer_gain_with_coverage",
+  "rows_per_arm": 15000,
+  "seed": 20261019,
+  "cutoff": 8192,
+  "selection_sha256": "6576564357f9d708c3b8263414490df1b340035e66e892193a13a7f762a24d56",
+  "base_model_sha256": "d9fe5b6890d4e60435ce5ae081c61d09bf6d3ad49ed4bbc06359cd81f360f7ee",
+  "random_control_ids_unchanged": true,
+  "advanced_training_rows": 15000,
+  "advanced_truncated_rows": 0,
+  "files_sha256": {
+    "selected/advanced.json": "511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199",
+    "selected/dataset_info.json": "e434d6371c88b4162a4d5d64a1539cedd42325343666a9d21fa34cf78ad8b4e8",
+    "selected/random.json": "3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7",
+    "selected/selection_manifest.json": "07e2b09fb92342447e0764fb73578279bb71383c26fb436d3d88b06333986e9d",
+    "training/advanced/cache_meta.json": "71a51f9a88586872d352082e4fd15db9ad6b73fe1a191a0aafdf1ac08459aec6",
+    "training/advanced/dataset.json": "511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199",
+    "training/advanced/selected_ids.json": "2241e6e39ab65fe465db8544d7635570ff8a67b7e95f764ac72ddcb1bb9d3d7f",
+    "training/advanced/training.jsonl": "04d5e55bbb18065865f5cba94f44e7af83579b0695b0b948f67eb9ff42590d04"
+  },
+  "probe_artifacts": {
+    "probeA": {
+      "receipt_sha256": "4352d5bbcdc24b93be86003567f616e7ad71b61fcf86ab0dad67286a95138004",
+      "checkpoint_sha256": "06826c06b9fe15e75eb6a9addc85ab29ed94ce47b09506bd87b34ca72f46d5f9"
+    },
+    "probeB": {
+      "receipt_sha256": "650c2799ab1b692e4c36a763774f997c7f951c36a822e0de46bec414acb78a75",
+      "checkpoint_sha256": "48646d78f92b4ab97f483a8bb732fa11586192c15f3f07a3934ddd751abeeb22"
+    }
+  },
+  "score_artifacts": {
+    "fold0": {
+      "receipt_sha256": "5ac1f6e2bfb6b030baaf2892b05e1d96d36199bc03ab2c7b53d413d4d70e52c0",
+      "manifest_sha256": "834efccf24ed9cfd4396fc80ad0907f286b6c26475b27cd37ba46caee7b59ece",
+      "scores_sha256": "d2939a5f4c75d5b9f060a3ef5e8e5503458c825398ab9b3dec2221dedf9a0869",
+      "rows": 15024
+    },
+    "fold1": {
+      "receipt_sha256": "40b1c0ec54ed6076d8aea7844dcb1cd0031197e507118c0e7785444797413ec5",
+      "manifest_sha256": "8c6d8a450fbd647ec080927df2f6035a056ccac394b737d8a746188fc68a1119",
+      "scores_sha256": "73fd83465bb665e07b9d4b06137d9ca43de8707d7b28978f3010c51803e85302",
+      "rows": 14976
+    }
+  }
+}

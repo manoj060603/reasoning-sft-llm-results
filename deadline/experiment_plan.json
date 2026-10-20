@@ -1,0 +1,76 @@
+{
+  "method": "Cross-fitted Transfer Gain with Coverage",
+  "status": "experimental hypothesis; no performance result yet",
+  "goal": "Test a fresh source-only 15K selector against a fresh matched random15K control and original Qwen2.5-3B-Instruct.",
+  "base_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "source_revision": "ce815bd726c0c4ffdc0912789754646910188195",
+  "selection_seed": 20261019,
+  "selection_signal": "(CE_base-CE_opposite_fold_probe)/max(CE_base,1e-8)",
+  "probes": {
+    "count": 2,
+    "rows_each": 512,
+    "updates_each": 64,
+    "rank": 8,
+    "learning_rate": 5e-05,
+    "global_batch": 8
+  },
+  "selection": {
+    "candidate_reservoir_maximum": 30000,
+    "selected_unique_originals": 15000,
+    "cutoff": 8192,
+    "positive_gain_maximum_fraction_per_cell": 0.5,
+    "remaining_quota": "seeded coverage",
+    "public_benchmark_outcomes_used": false
+  },
+  "final_training": {
+    "initialization": "original base, not probe weights",
+    "full_parameter": true,
+    "parameter_storage": "float32",
+    "optimizer_moments": "float32",
+    "forward_compute": "bfloat16 autocast",
+    "updates": 1875,
+    "global_batch": 8,
+    "epochs": 1,
+    "learning_rate": 2e-06,
+    "cutoff": 8192,
+    "same_recipe_for_random_and_advanced": true
+  },
+  "controls": {
+    "random": "uniform broad prepared source pool after shared deduplication, benchmark/source-heldout, prompt-capacity and reserved-probe exclusions; not restricted to complete short traces and not uniform over untouched original100K",
+    "same_training_cutoff_for_both_arms": 8192,
+    "random_training_truncation": "declared prefix truncation only in token cache; original exports unchanged; no invented EOS; count and missing EOS recorded",
+    "advanced_training_truncation": "forbidden",
+    "prelaunch_correction": "Broadened random control before any probe training, candidate scoring or benchmark evaluation to match the assignment random-selection requirement."
+  },
+  "evaluation": {
+    "samples_per_question": 8,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "maximum_new_tokens": 32768,
+    "maximum_context": 32768,
+    "metrics": [
+      "pass@1",
+      "pass@8",
+      "truncation",
+      "official-eight macro",
+      "supplemented historical-seven macro"
+    ]
+  },
+  "deadline_eastern": "2026-10-20T23:59:00-04:00",
+  "fresh_experiment_conservative_gpu_hour_cap": 48,
+  "planned_requested_gpu_hours": 42,
+  "limitations": [
+    "Relative teacher-forced loss reduction is a proxy, not verified mathematical correctness or causal data utility.",
+    "Random sampling is uniform within the broad prepared source pool after declared shared exclusions, not untouched original100K.",
+    "Random targets may be truncated by the shared 8K training cutoff, while complete-target fit is part of advanced selection; report this rate and do not attribute all gains to transfer scoring.",
+    "Separate eligible-random and coverage-only ablations would be needed to isolate transfer gain from eligibility and coverage allocation.",
+    "No novelty or state-of-the-art claim is established before results."
+  ],
+  "prelaunch_capacity_correction": {
+    "failed_cpu_job": 8067234,
+    "four_k_eligible_complete_targets": 15938,
+    "minimum_required_including_probes": 16024,
+    "new_cutoff_both_arms": 8192,
+    "before_any_gpu_training_scores_or_benchmark_outcomes": true
+  }
+}

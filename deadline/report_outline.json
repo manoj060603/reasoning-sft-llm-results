@@ -1,0 +1,713 @@
+{
+  "schema": "fresh-transfer-report-outline-v1",
+  "title": "Cross-fitted Transfer Gain with Coverage for Reasoning SFT",
+  "document_status": "structured draft; no benchmark scores populated",
+  "deadline_eastern": "2026-10-20T23:59:00-04:00",
+  "sources": {
+    "assignment": "https://github.com/reds-lab/Project-Reasoning-SFT-LLM",
+    "frozen_design": "deadline/experiment_plan.json",
+    "implementation_overview": "deadline/README.md",
+    "result_audit": "deadline/report/audit.json"
+  },
+  "scope": {
+    "fresh_initialization": true,
+    "previous_team_models_used": false,
+    "previous_team_scores_used_as_new_results": false,
+    "target_rewriting": false,
+    "external_training_examples_added": false
+  },
+  "research_questions": [
+    {
+      "id": "RQ1",
+      "question": "How does each fresh SFT model compare with the original Qwen2.5-3B-Instruct under one matched evaluator?",
+      "answer_status": "pending"
+    },
+    {
+      "id": "RQ2",
+      "question": "Does the complete eligibility-plus-transfer-plus-coverage policy outperform uniform sampling from the broad prepared source pool?",
+      "answer_status": "pending"
+    },
+    {
+      "id": "RQ3",
+      "question": "How do pass@1, pass@8, output length, repetition, and truncation change, and how uncertain are the differences?",
+      "answer_status": "pending"
+    },
+    {
+      "id": "RQ4",
+      "question": "What do transfer gain, structural eligibility, and coverage each contribute independently?",
+      "answer_status": "not isolated by the current two-arm comparison; requires separate eligible-random and coverage-only ablations"
+    }
+  ],
+  "sections": [
+    {
+      "id": "abstract",
+      "title": "Abstract",
+      "prose": "We test a new source-only data-selection policy for Qwen2.5-3B-Instruct. Two source-trained LoRA probes estimate opposite-fold response-loss reduction. A quota-constrained selector combines structural complete-trace eligibility, positive transfer-gain leaders, and topic/length coverage, then trains a fresh full-parameter model on 15,000 unchanged original pairs. A fresh random control samples the broader prepared source pool and uses the same training cutoff and optimizer recipe. Comparative findings remain pending.",
+      "pending_fields": [
+        "final benchmark deltas",
+        "uncertainty",
+        "termination findings",
+        "conclusion"
+      ]
+    },
+    {
+      "id": "task",
+      "title": "Task and comparison scope",
+      "prose": "The assignment asks for an original-model baseline, reasoning SFT on a random 15K subset of the supplied 100K source, an advanced 15K selection, evaluation, analysis, code, models, and datasets. This experiment samples its random control uniformly from the broad prepared source pool after deduplication, benchmark/source-heldout exclusions, prompt-capacity bounds, and reserved-probe exclusions. It does not apply the advanced complete-short-trace, boxed-answer, repetition, topic, or gain criteria to random sampling. This is a random subset after declared preparation, not literal uniform sampling over the untouched original 100K. Keep that distinction explicit without assuming the instructor accepts any particular interpretation.",
+      "pending_fields": [
+        "final precise description of the source-random sampling population",
+        "team names and course details",
+        "any course-specific interpretation of literal original-100K sampling"
+      ]
+    },
+    {
+      "id": "data",
+      "title": "Source data and exclusions",
+      "prose": "Use only the pinned redsgnaoh/acereason11_100k source and preserve original question/response pairs in dataset exports. Canonicalize and deduplicate prompt identities, reserve 1,000 source-only held-out questions before selection, and remove lexical matches to benchmark questions and held-out prompts. A shared prompt-capacity bound reserves room for supervised response tokens. Benchmark answers and measured benchmark outcomes do not enter selection. Supplementary AIME25 question exclusions occur before GPU probe training. Both final arms exclude all held-out questions and both reserved probe sets. Record the broad random population separately from the advanced complete-trace population and scoring reservoir.",
+      "pending_fields": [
+        "observed source/duplicate/exclusion counts",
+        "final eligible-pool count",
+        "probe and reservoir counts",
+        "dataset hashes",
+        "overlap audit receipt"
+      ]
+    },
+    {
+      "id": "method",
+      "title": "Cross-fitted transfer gain and coverage",
+      "prose": "Split source prompt identities into deterministic folds. Train one rank-eight LoRA probe on 512 complete originals from each fold for 64 updates. Score each frozen reservoir candidate with the original model and the probe trained on its opposite fold. The score is normalized response-loss reduction, (CE_base - CE_opposite_probe) / max(CE_base, 1e-8). Topic clusters and response-length cells determine capped quotas. At most half each cell is filled with positive-gain leaders; seeded coverage fills the remainder. The final selected model initializes from the original base, never from a probe. This is an experimental synthesis, with no established global-novelty or superiority claim.",
+      "pending_fields": [
+        "observed gain distribution",
+        "positive-gain count",
+        "actual leader/coverage counts per cell",
+        "probe/score artifact hashes"
+      ]
+    },
+    {
+      "id": "eligibility",
+      "title": "Advanced eligibility and broad random control",
+      "prose": "Advanced candidates must preserve complete source targets within the 8,192-token training cutoff and a 32-token selection margin, have at least 128 response tokens, a complete final boxed answer, limited repeated eight-grams, and balanced ordered think tags. These are structural checks, not independent mathematical correctness verification. Advanced selection uses a frozen coverage-balanced scoring reservoir of at most 30,000 candidates. The random control samples the broader prepared source population without those complete-target quality filters. Both arms use the same 8K cutoff and preserve unchanged original dataset exports. Overlength random training sequences use declared prefixes without adding an invented EOS; record truncated-row and missing-supervised-EOS counts. Advanced targets may not truncate, and neither arm may silently drop selected rows.",
+      "pending_fields": [
+        "actual broad random population and advanced eligible/reservoir counts",
+        "native cache audit for both arms",
+        "random prefix-truncated-row and missing-supervised-EOS counts",
+        "advanced zero target truncations and both arms zero row drops",
+        "exact original-target export identity checks"
+      ]
+    },
+    {
+      "id": "training",
+      "title": "Matched full-parameter SFT",
+      "prose": "Both final arms use the same original base, system message, response-mask construction, one pass, 1,875 optimizer updates, and effective batch eight. Parameters and AdamW moments remain FP32; forward computation uses BF16 autocast. Each sequence contributes its mean shifted supervised-token cross entropy, then examples are averaged within an optimizer update. Deterministic samplers and consumption receipts verify one presentation of every unique selected row. Advanced caches preserve complete original targets and native end markers; random caches may contain explicitly reported 8K prefixes. Native Transformers Trainer is used for runtime compatibility; the framework choice is documented rather than described as a LLaMA-Factory run.",
+      "pending_fields": [
+        "complete finite-update receipts",
+        "one-pass consumption proofs",
+        "peak GPU memory",
+        "elapsed training time",
+        "runtime versions",
+        "final checkpoint identities and finite-tensor scans"
+      ]
+    },
+    {
+      "id": "evaluation",
+      "title": "Fixed evaluation and metrics",
+      "prose": "Evaluate the original, prepared-source random, and advanced models with the same benchmark contents, grader, prompt, runtime, hardware settings, and eight-sample generation protocol. Report per-question mean sample correctness as pass@1 and any-of-eight correctness as pass@8. Retain repeated benchmark records with distinct identities; paired uncertainty should resample duplicate-question clusters together. Report the supplied eight-benchmark macro separately from the supplementary historical-seven internal macro. Historical runtime/dataset equivalence is unverified, so the latter is not an official leaderboard rank. Parse the actual MATH JSONL file as 500 records; its 499 newline characters explain the stale README table value.",
+      "pending_fields": [
+        "complete matched manifests",
+        "raw predictions or explicit aggregate-only evidence labels",
+        "grader preflight",
+        "paired confidence intervals",
+        "generation diagnostics"
+      ]
+    },
+    {
+      "id": "results",
+      "title": "Results",
+      "prose": "Populate the tables only from complete, identity-checked evaluation artifacts. Leave missing values null and label partial coverage. A queued job, a completed training run, or a successful unit test does not establish benchmark accuracy.",
+      "pending_fields": [
+        "all per-benchmark values",
+        "official-eight macro",
+        "supplemented-seven macro",
+        "paired comparisons"
+      ]
+    },
+    {
+      "id": "analysis",
+      "title": "Analysis and limitations",
+      "prose": "Assess both accuracy and generation behavior. A pass@8 gain accompanied by a pass@1 or termination regression is a tradeoff. The current comparison tests the whole advanced policy: structural complete-target filtering, scoring-reservoir construction, transfer scoring, and coverage allocation. Complete-target eligibility also changes length distribution and EOS survival relative to broad random training prefixes. A separate eligible-random arm and a coverage-only arm using the same reservoir and quotas are needed to isolate those contributions; neither is currently part of the planned model pair. Lexical decontamination cannot rule out semantic contamination. Teacher-forced loss reduction is not proof of trace correctness or causal learning utility. One training seed and small benchmarks limit statistical precision.",
+      "pending_fields": [
+        "supported interpretations of measured results",
+        "individual benchmark errors",
+        "confidence intervals",
+        "which conclusions remain unresolved"
+      ]
+    },
+    {
+      "id": "reproducibility",
+      "title": "Reproducibility and deliverables",
+      "prose": "Provide exact model/source revisions, source and dataset hashes, selected prompt identities, source-only reservations, actual probe/score manifests, cache masks, training recipes, finite-state receipts, benchmark identities, and raw evaluation artifacts where feasible. Publish the required models and datasets with usable cards and verified links, provide the final repository README, and prepare the final report for team submission. No publication or course submission is established by this draft.",
+      "pending_fields": [
+        "repository commit and URL",
+        "two model links",
+        "two dataset links",
+        "final report artifact",
+        "course submission receipt"
+      ]
+    }
+  ],
+  "fixed_design": {
+    "method": "Cross-fitted Transfer Gain with Coverage",
+    "status": "experimental hypothesis; no performance result yet",
+    "goal": "Test a fresh source-only 15K selector against a fresh matched random15K control and original Qwen2.5-3B-Instruct.",
+    "base_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "source_revision": "ce815bd726c0c4ffdc0912789754646910188195",
+    "selection_seed": 20261019,
+    "selection_signal": "(CE_base-CE_opposite_fold_probe)/max(CE_base,1e-8)",
+    "probes": {
+      "count": 2,
+      "rows_each": 512,
+      "updates_each": 64,
+      "rank": 8,
+      "learning_rate": 5e-05,
+      "global_batch": 8
+    },
+    "selection": {
+      "candidate_reservoir_maximum": 30000,
+      "selected_unique_originals": 15000,
+      "cutoff": 8192,
+      "positive_gain_maximum_fraction_per_cell": 0.5,
+      "remaining_quota": "seeded coverage",
+      "public_benchmark_outcomes_used": false
+    },
+    "final_training": {
+      "initialization": "original base, not probe weights",
+      "full_parameter": true,
+      "parameter_storage": "float32",
+      "optimizer_moments": "float32",
+      "forward_compute": "bfloat16 autocast",
+      "updates": 1875,
+      "global_batch": 8,
+      "epochs": 1,
+      "learning_rate": 2e-06,
+      "cutoff": 8192,
+      "same_recipe_for_random_and_advanced": true
+    },
+    "controls": {
+      "random": "uniform broad prepared source pool after shared deduplication, benchmark/source-heldout, prompt-capacity and reserved-probe exclusions; not restricted to complete short traces and not uniform over untouched original100K",
+      "same_training_cutoff_for_both_arms": 8192,
+      "random_training_truncation": "declared prefix truncation only in token cache; original exports unchanged; no invented EOS; count and missing EOS recorded",
+      "advanced_training_truncation": "forbidden",
+      "prelaunch_correction": "Broadened random control before any probe training, candidate scoring or benchmark evaluation to match the assignment random-selection requirement."
+    },
+    "evaluation": {
+      "samples_per_question": 8,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "maximum_new_tokens": 32768,
+      "maximum_context": 32768,
+      "metrics": [
+        "pass@1",
+        "pass@8",
+        "truncation",
+        "official-eight macro",
+        "supplemented historical-seven macro"
+      ]
+    },
+    "deadline_eastern": "2026-10-20T23:59:00-04:00",
+    "fresh_experiment_conservative_gpu_hour_cap": 48,
+    "planned_requested_gpu_hours": 42,
+    "limitations": [
+      "Relative teacher-forced loss reduction is a proxy, not verified mathematical correctness or causal data utility.",
+      "Random sampling is uniform within the broad prepared source pool after declared shared exclusions, not untouched original100K.",
+      "Random targets may be truncated by the shared 8K training cutoff, while complete-target fit is part of advanced selection; report this rate and do not attribute all gains to transfer scoring.",
+      "Separate eligible-random and coverage-only ablations would be needed to isolate transfer gain from eligibility and coverage allocation.",
+      "No novelty or state-of-the-art claim is established before results."
+    ]
+  },
+  "additional_training_parameters": {
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_norm_clip": 1.0,
+    "warmup_ratio": 0.03,
+    "scheduler": "cosine",
+    "training_seed": 42,
+    "microbatch_size": 1,
+    "gradient_accumulation": 8,
+    "parameter_dtype": "float32",
+    "optimizer_moment_dtype": "float32",
+    "compute_dtype": "bfloat16_autocast",
+    "loss_normalization": "mean response-token CE per example; mean across eight examples",
+    "framework": "Transformers Trainer 4.57.3",
+    "checkpoint_interval_updates": 256,
+    "retained_checkpoints": 2,
+    "checkpoint_policy": "fixed final checkpoint; no public-score checkpoint selection"
+  },
+  "evaluation_protocol": {
+    "system": "Please reason step by step, and put your final answer within \\boxed{}.",
+    "seed": 0,
+    "samples_per_question": 8,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": -1,
+    "min_p": 0.0,
+    "repetition_penalty": 1.0,
+    "maximum_new_tokens": 32768,
+    "maximum_total_context": 32768,
+    "tensor_parallel_size": 1,
+    "maximum_sequences": 128,
+    "batch_size": 1024,
+    "gpu_memory_utilization": 0.85,
+    "note": "The prompt consumes part of the native total-context window, so maximum_new_tokens is an upper bound rather than guaranteed available output length."
+  },
+  "results": {
+    "status": "pending complete measured artifacts",
+    "roles": [
+      "original",
+      "prepared_source_random_15k",
+      "transfer_coverage_15k"
+    ],
+    "benchmarks": [
+      {
+        "name": "aime",
+        "expected_problems": 30,
+        "scope": "assignment_supplied",
+        "metrics": {
+          "original": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "prepared_source_random_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "transfer_coverage_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          }
+        }
+      },
+      {
+        "name": "amc",
+        "expected_problems": 40,
+        "scope": "assignment_supplied",
+        "metrics": {
+          "original": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "prepared_source_random_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "transfer_coverage_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          }
+        }
+      },
+      {
+        "name": "math",
+        "expected_problems": 500,
+        "scope": "assignment_supplied",
+        "metrics": {
+          "original": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "prepared_source_random_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "transfer_coverage_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          }
+        }
+      },
+      {
+        "name": "cn_math_2024",
+        "expected_problems": 30,
+        "scope": "assignment_supplied",
+        "metrics": {
+          "original": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "prepared_source_random_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "transfer_coverage_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          }
+        }
+      },
+      {
+        "name": "kaoyan",
+        "expected_problems": 199,
+        "scope": "assignment_supplied",
+        "metrics": {
+          "original": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "prepared_source_random_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "transfer_coverage_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          }
+        }
+      },
+      {
+        "name": "minerva",
+        "expected_problems": 272,
+        "scope": "assignment_supplied",
+        "metrics": {
+          "original": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "prepared_source_random_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "transfer_coverage_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          }
+        }
+      },
+      {
+        "name": "olympiadbench",
+        "expected_problems": 675,
+        "scope": "assignment_supplied",
+        "metrics": {
+          "original": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "prepared_source_random_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "transfer_coverage_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          }
+        }
+      },
+      {
+        "name": "gpqa",
+        "expected_problems": 198,
+        "scope": "assignment_supplied",
+        "metrics": {
+          "original": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "prepared_source_random_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "transfer_coverage_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          }
+        }
+      },
+      {
+        "name": "aime25",
+        "expected_problems": 30,
+        "scope": "supplementary",
+        "metrics": {
+          "original": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "prepared_source_random_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          },
+          "transfer_coverage_15k": {
+            "status": "pending",
+            "pass_at_1": null,
+            "pass_at_8": null,
+            "solved_questions": null,
+            "truncated_samples": null,
+            "mean_output_tokens": null,
+            "repeated_8gram_fraction": null,
+            "evidence_path": null
+          }
+        }
+      }
+    ],
+    "aggregates": [
+      {
+        "name": "official_eight_macro",
+        "benchmarks": [
+          "aime",
+          "amc",
+          "math",
+          "cn_math_2024",
+          "kaoyan",
+          "minerva",
+          "olympiadbench",
+          "gpqa"
+        ],
+        "weighting": "equal weight per benchmark",
+        "values": {
+          "original": null,
+          "prepared_source_random_15k": null,
+          "transfer_coverage_15k": null
+        }
+      },
+      {
+        "name": "supplemented_historical_seven_internal_macro",
+        "benchmarks": [
+          "aime25",
+          "cn_math_2024",
+          "kaoyan",
+          "amc",
+          "minerva",
+          "olympiadbench",
+          "gpqa"
+        ],
+        "weighting": "equal weight per benchmark",
+        "historical_rank_verified": false,
+        "values": {
+          "original": null,
+          "prepared_source_random_15k": null,
+          "transfer_coverage_15k": null
+        }
+      }
+    ],
+    "paired_comparisons": [
+      {
+        "baseline": "original",
+        "candidate": "prepared_source_random_15k",
+        "status": "pending",
+        "pass_at_1_delta": null,
+        "pass_at_8_delta": null,
+        "ci95": null
+      },
+      {
+        "baseline": "original",
+        "candidate": "transfer_coverage_15k",
+        "status": "pending",
+        "pass_at_1_delta": null,
+        "pass_at_8_delta": null,
+        "ci95": null
+      },
+      {
+        "baseline": "prepared_source_random_15k",
+        "candidate": "transfer_coverage_15k",
+        "status": "pending",
+        "pass_at_1_delta": null,
+        "pass_at_8_delta": null,
+        "ci95": null
+      }
+    ]
+  },
+  "claims_not_supported_yet": [
+    "The advanced policy improves accuracy.",
+    "The transfer-gain signal alone improves over eligibility or coverage.",
+    "The method beats a literal uniform draw over the untouched original 100K.",
+    "The model wins the historical leaderboard or passes all nine historical thresholds.",
+    "The instructor accepts any particular interpretation of the prepared source-random population.",
+    "The required model/dataset uploads or course submission are complete."
+  ],
+  "publication_slots": {
+    "repository_url": null,
+    "repository_commit": null,
+    "random_model_url": null,
+    "advanced_model_url": null,
+    "random_dataset_url": null,
+    "advanced_dataset_url": null,
+    "final_report_path": null,
+    "course_submission_receipt": null
+  },
+  "frozen_design_sha256": "8763f5109415dbe673ea3a292debd6c4c9aff7b04c344e553d68e69117dad85c",
+  "source_provenance": {
+    "dataset_repository": "redsgnaoh/acereason11_100k",
+    "dataset_revision": "ce815bd726c0c4ffdc0912789754646910188195",
+    "dataset_file": "data/acereason11_100k.json",
+    "source_sha256": "f064d1a5fb39b9f493f678d5d6350a9acbfb2a2fa85400d0947fe72578ff28d8",
+    "base_model": "Qwen/Qwen2.5-3B-Instruct",
+    "base_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "actual_model_identity_receipt": "deadline/artifacts/model_identity.json"
+  },
+  "reviewed_implementation_commit": "b092f29",
+  "benchmark_count_audit": {
+    "math": {
+      "checked_date": "2026-10-19",
+      "assignment_url": "https://raw.githubusercontent.com/reds-lab/Project-Reasoning-SFT-LLM/main/eval/data/math/test.jsonl",
+      "local_assignment_copy": "eval/data/math/test.jsonl",
+      "parsed_records": 500,
+      "physical_newline_characters": 499,
+      "bytes": 446563,
+      "sha256": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94",
+      "byte_identical_official_and_local": true,
+      "finding": "The README table says 499, but the actual official file and local copy both contain 500 valid JSON records. The last record has no trailing newline; keep MATH=500 in evaluation and audit."
+    }
+  }
+}

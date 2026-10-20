@@ -1,0 +1,24 @@
+{
+  "binding_sha256": "41ea3e2d1283c88a0e356f8def2a7027cb178e7b5e9a05c65f97b666921e0e70",
+  "steps": 1875,
+  "unique_examples": 15000,
+  "example_presentations": 15000,
+  "padding_presentations": 0,
+  "full_parameter": true,
+  "model": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model",
+  "final_model_verification": {
+    "tensors": 434,
+    "all_finite": true,
+    "parameter_dtype": "float32",
+    "parameter_names_verified": 434,
+    "files": {
+      "model-00001-of-00003.safetensors": "794471ad13476e2d5f8572aa31c1477b2aca2490f107176e2f72eb889299cc2b",
+      "model-00002-of-00003.safetensors": "8004054d70eebf0531ed0c3fa68d4baa87e869c59208398092fa0810e55a42ec",
+      "model-00003-of-00003.safetensors": "8f8ef6c4acaef6e4033c942c2d2cdb88d878fb0f8fe3ca1c99d8c4e470f4d26f"
+    },
+    "model_index_sha256": "88a50027f81c9f8a1f2c773b695ccc0a9a47e19107d6c70ccf531f322b5304e6"
+  },
+  "training_loss": 0.6576059756596884,
+  "current_attempt_seconds": 6646.6397235309705,
+  "peak_gpu_bytes": 61797884416
+}

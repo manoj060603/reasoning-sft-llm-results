@@ -1,5 +1,15 @@
 .DS_Store
 __pycache__/
+deadline/artifacts/
+deadline/runs/
+deadline/logs/
+deadline/results/
+deadline/hf/
+deadline/runtime_probe.json
+deadline/job_ledger.json
+deadline/job_ledger.lock
+deadline/report.lock
+deadline/deployment.json
 *.py[cod]
 .pytest_cache/
 .mypy_cache/
