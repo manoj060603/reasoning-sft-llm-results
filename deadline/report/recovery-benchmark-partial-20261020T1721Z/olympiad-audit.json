@@ -1,0 +1,114 @@
+{
+  "schema": "deadline-olympiad-four-role-partial-raw-audit-v1",
+  "complete": true,
+  "created_at_utc": "2026-10-20T17:22:19.393945+00:00",
+  "compute": {
+    "job_id": "1216562",
+    "step_id": "1",
+    "hostname": "owl-sr002",
+    "cuda_visible_devices": ""
+  },
+  "scope": "Only saved OlympiadBench all four roles; existing correctness flags and metrics reconciled, no regrading/generation/weights read. No full recovery macro or overall superiority inferred.",
+  "auditor_sha256": "d8465b346b5a51dd0c30287202265b7e195014649d31fd19ac7588ede9408cb2",
+  "benchmark": "olympiadbench",
+  "expected_problems": 675,
+  "samples_per_problem": 8,
+  "comparison": {
+    "matched": true,
+    "errors": []
+  },
+  "runs": {
+    "original": {
+      "metrics": {
+        "problems": 675,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.2825925925925926,
+        "pass_at_8": 0.5185185185185185,
+        "truncated_samples": 99
+      },
+      "evidence": "raw eight-sample predictions verified",
+      "errors": [],
+      "manifest": {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/manifest.json",
+        "sha256": "ae42667eeac86f7aebafbda1afd4f364bd95e422ff32ae9b7555202d48a9d68b",
+        "bytes": 149445
+      },
+      "raw_batches": [
+        {
+          "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/olympiadbench/batch_000000.json",
+          "sha256": "fec43bb811a56de7060ead51ec71ee662c2542227762a858299c7fae53b24e3b",
+          "bytes": 19553344
+        }
+      ]
+    },
+    "random": {
+      "metrics": {
+        "problems": 675,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.17148148148148148,
+        "pass_at_8": 0.3837037037037037,
+        "truncated_samples": 3526
+      },
+      "evidence": "raw eight-sample predictions verified",
+      "errors": [],
+      "manifest": {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/manifest.json",
+        "sha256": "91b10bd128f10e7453dddc4bd02b4941d15d3a55795a17ab210bcb4c176e5aa4",
+        "bytes": 149898
+      },
+      "raw_batches": [
+        {
+          "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/olympiadbench/batch_000000.json",
+          "sha256": "6c2f190b67764906653560caaa95e0d2905a2240a2fbc132c82df3aac910cfa2",
+          "bytes": 364033684
+        }
+      ]
+    },
+    "advanced": {
+      "metrics": {
+        "problems": 675,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.1887037037037037,
+        "pass_at_8": 0.40444444444444444,
+        "truncated_samples": 3062
+      },
+      "evidence": "raw eight-sample predictions verified",
+      "errors": [],
+      "manifest": {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/manifest.json",
+        "sha256": "4fa4bd9d6913ffff95b6a2a65d74966aa30782b78ad87ca9b98748560141a36a",
+        "bytes": 149900
+      },
+      "raw_batches": [
+        {
+          "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/olympiadbench/batch_000000.json",
+          "sha256": "378a476ce26bc9adb8909d5c64106798ac44c08721b27c460ec94ce2619c9f37",
+          "bytes": 323367350
+        }
+      ]
+    },
+    "recovery": {
+      "metrics": {
+        "problems": 675,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.2740740740740741,
+        "pass_at_8": 0.4948148148148148,
+        "truncated_samples": 122
+      },
+      "evidence": "raw eight-sample predictions verified",
+      "errors": [],
+      "manifest": {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/benchmarks/manifest.json",
+        "sha256": "17c11ab91b445b65ea16ad7f8115001b1d636ec9788daa914bc7823cf4c019dc",
+        "bytes": 149810
+      },
+      "raw_batches": [
+        {
+          "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/benchmarks/olympiadbench/batch_000000.json",
+          "sha256": "59e2051e9262ccfc8e5010eb46a84951fb9edcecbd53952b65ef5ec7906afb3b",
+          "bytes": 22461132
+        }
+      ]
+    }
+  }
+}

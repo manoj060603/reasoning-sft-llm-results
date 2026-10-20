@@ -1,0 +1,277 @@
+{
+  "schema": "deadline-optional-recovery-publication-admission-v1",
+  "admitted_at_utc": "2026-10-20T17:26:42.502348+00:00",
+  "role": "optional_recovery_publication_verified_1",
+  "job_id": "1217227",
+  "scheduler_dependency": null,
+  "parents_verified_complete": "1209745|COMPLETED|0:0\n1216562|COMPLETED|0:0\n",
+  "dependency_repair": "Both successful parent jobs are already terminal. Slurm rejected the first request because the older controller dependency expired; that zero-GPU failed entry is preserved unchanged. This new role starts after verified terminal accounting and repeats primary-success/all-nine gates at runtime.",
+  "rejected_attempt": {
+    "status": "submission_failed",
+    "command": [
+      "sbatch",
+      "--clusters=owl",
+      "--parsable",
+      "--dependency=afterok:1209745:1216562",
+      "deadline/operations/publish_optional_model.slurm"
+    ],
+    "requested_gpu_hours": 0,
+    "requested_at_utc": "2026-10-20T17:25:57.012651+00:00",
+    "error": "sbatch: error: Batch job submission failed: Job dependency problem\n"
+  },
+  "live_job_ids_before_retry": [
+    "1216562"
+  ],
+  "native_qa_receipt": "deadline/operations/optional-publication-native-qa-20261020-attempt1.json",
+  "native_qa_sha256": "e9da20d04b102ecec3f9986c66a60e289adb4a9941aa8512df2091bc3d96a67e",
+  "source_sha256": {
+    "deadline/publish_optional_model.py": "7f66957481a7596a593d0c57b3366a45193fbe67e065a5467728b56750bad866",
+    "tests/test_optional_publication.py": "093bbbaea36b6288df92347649a04e643e9c9c6b6aaad500fa50a271df638dc3",
+    "deadline/operations/publish_optional_model.slurm": "a4767638ea5a4bccd3631627481f3778121cf67667536be068e6f913261a6ed7",
+    "deadline/publish_huggingface.py": "e228e1c8d5081809cc8b878bb023854bef5a61571858a62f312643473b7cebe8",
+    "deadline/package_deliverables.py": "9982f53f53a935f4aa7d2fcfdd868a823464a252ae7a5958297a115cad22f8bb",
+    "deadline/audit_results.py": "d8465b346b5a51dd0c30287202265b7e195014649d31fd19ac7588ede9408cb2",
+    "deadline/recovery/common.py": "4964ac176ca47dc609d3e0e8395f0892015925fd4c7d17d638a3ec7cb4608630",
+    "deadline/recovery/screen.py": "f531d07db77738a08d4104231449e854e74956c4e8b51daf479eedf682ea74e8",
+    "deadline/recovery/plan.json": "f7210518343d43eaf7f8342b66b33ae4e06df8cdee46af0e72991c9adb7912e5",
+    "deadline/experiment_plan.json": "080488bb494c52ca71d385b2f041821e8c71c2c994aa6439c1c6f24d8227635d",
+    "reasoning/benchmark.py": "c26126e78cf31612fbc288a22726f23bb5998e643809ff449595a29a5bcc4c9f",
+    "reasoning/data.py": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68"
+  },
+  "primary_publication_receipt_sha256": "259623a64c1715516607c783303d10676dd84c2bd6e31851906b935c9f206d73",
+  "all_nine_metrics_present": true,
+  "native_raw_and_weight_validation_before_upload": "All four roles, fixed development gate, actual merge weights/sidecars and primary published parent lineage are verified in this CPU allocation before repository creation/content commits.",
+  "destination": "adversarialbandit/qwen25-3b-base75-advanced25-posthoc-20261020",
+  "allocated_gpus": 0,
+  "required_deadline_reserve_hours": 2,
+  "before": {
+    "policy": "verified-terminal-allocations-plus-full-open-reservations-v1",
+    "cap_gpu_seconds": 172800,
+    "cumulative_admitted_requested_gpu_seconds": 260100,
+    "cumulative_all_attempt_requested_gpu_seconds": 324900,
+    "conservative_committed_gpu_seconds": 141240,
+    "additional_requested_gpu_seconds": 0,
+    "projected_gpu_seconds": 141240,
+    "remaining_gpu_seconds": 31560,
+    "within_cap": true,
+    "roles": {
+      "original_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 3600,
+        "basis": "verified terminal allocation accounting"
+      },
+      "probes_and_scores": {
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 9540,
+        "basis": "verified terminal allocation accounting"
+      },
+      "random_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 6780,
+        "basis": "verified terminal allocation accounting"
+      },
+      "transfer_selection": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "advanced_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 5340,
+        "basis": "verified terminal allocation accounting"
+      },
+      "random_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21660,
+        "basis": "verified terminal allocation accounting"
+      },
+      "advanced_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21660,
+        "basis": "verified terminal allocation accounting"
+      },
+      "final_results": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "publication_preflight": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "huggingface_publication": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "random_evaluation_continuation": {
+        "requested_gpu_seconds": 57600,
+        "charged_gpu_seconds": 35640,
+        "basis": "verified terminal allocation accounting"
+      },
+      "advanced_evaluation_continuation": {
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 31200,
+        "basis": "verified terminal allocation accounting"
+      },
+      "recovery_preparation": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "recovery_development": {
+        "requested_gpu_seconds": 2700,
+        "charged_gpu_seconds": 360,
+        "basis": "verified terminal allocation accounting"
+      },
+      "recovery_evaluation_initial": {
+        "requested_gpu_seconds": 2700,
+        "charged_gpu_seconds": 2760,
+        "basis": "verified terminal allocation accounting"
+      },
+      "recovery_evaluation_continuation_1": {
+        "requested_gpu_seconds": 2700,
+        "charged_gpu_seconds": 2700,
+        "basis": "full requested reservation"
+      },
+      "optional_recovery_publication": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      }
+    },
+    "historical_attempt_charges": [
+      {
+        "role": "original_evaluation",
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      },
+      {
+        "role": "probes_and_scores",
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      }
+    ]
+  },
+  "after": {
+    "policy": "verified-terminal-allocations-plus-full-open-reservations-v1",
+    "cap_gpu_seconds": 172800,
+    "cumulative_admitted_requested_gpu_seconds": 260100,
+    "cumulative_all_attempt_requested_gpu_seconds": 324900,
+    "conservative_committed_gpu_seconds": 141240,
+    "additional_requested_gpu_seconds": 0,
+    "projected_gpu_seconds": 141240,
+    "remaining_gpu_seconds": 31560,
+    "within_cap": true,
+    "roles": {
+      "original_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 3600,
+        "basis": "verified terminal allocation accounting"
+      },
+      "probes_and_scores": {
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 9540,
+        "basis": "verified terminal allocation accounting"
+      },
+      "random_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 6780,
+        "basis": "verified terminal allocation accounting"
+      },
+      "transfer_selection": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "advanced_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 5340,
+        "basis": "verified terminal allocation accounting"
+      },
+      "random_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21660,
+        "basis": "verified terminal allocation accounting"
+      },
+      "advanced_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21660,
+        "basis": "verified terminal allocation accounting"
+      },
+      "final_results": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "publication_preflight": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "huggingface_publication": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "random_evaluation_continuation": {
+        "requested_gpu_seconds": 57600,
+        "charged_gpu_seconds": 35640,
+        "basis": "verified terminal allocation accounting"
+      },
+      "advanced_evaluation_continuation": {
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 31200,
+        "basis": "verified terminal allocation accounting"
+      },
+      "recovery_preparation": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "recovery_development": {
+        "requested_gpu_seconds": 2700,
+        "charged_gpu_seconds": 360,
+        "basis": "verified terminal allocation accounting"
+      },
+      "recovery_evaluation_initial": {
+        "requested_gpu_seconds": 2700,
+        "charged_gpu_seconds": 2760,
+        "basis": "verified terminal allocation accounting"
+      },
+      "recovery_evaluation_continuation_1": {
+        "requested_gpu_seconds": 2700,
+        "charged_gpu_seconds": 2700,
+        "basis": "full requested reservation"
+      },
+      "optional_recovery_publication": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "optional_recovery_publication_verified_1": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      }
+    },
+    "historical_attempt_charges": [
+      {
+        "role": "original_evaluation",
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      },
+      {
+        "role": "probes_and_scores",
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      }
+    ]
+  },
+  "primary_four_destinations_and_dependencies_unchanged": true
+}

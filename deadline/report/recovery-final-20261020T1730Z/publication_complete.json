@@ -1,0 +1,222 @@
+{
+  "commit": "51814ba26ab0dc052447aee1612bebcffdba43f2",
+  "complete": true,
+  "completed_at_utc": "2026-10-20T17:28:51.255465+00:00",
+  "evaluated_and_published_weight_bytes_identical": true,
+  "evaluation_summary_sha256": "027180fcc55446a57b6186f70e6ba6fb4fe984ad8512c0003e0aa21addaa4c7d",
+  "files": {
+    "LICENSE": {
+      "blob_sha1": "ed317377ac0abff39f17eec693ce664f4b8152af",
+      "bytes": 7388,
+      "method": "Git blob SHA1 and size"
+    },
+    "MODIFICATIONS.md": {
+      "blob_sha1": "e2914b98dc0aecfcc0eb2c0afde1528cd846ea8a",
+      "bytes": 499,
+      "method": "Git blob SHA1 and size"
+    },
+    "NOTICE": {
+      "blob_sha1": "60cc7e5e68cda11d19a89757388ce254c5fd76c9",
+      "bytes": 342,
+      "method": "Git blob SHA1 and size"
+    },
+    "README.md": {
+      "blob_sha1": "49b2e7c4fb657581accd48acad7e40360888638e",
+      "bytes": 3555,
+      "method": "Git blob SHA1 and size"
+    },
+    "config.json": {
+      "blob_sha1": "a003fb3fdf43dc443835a79cec0aeb6323cda1a3",
+      "bytes": 660,
+      "method": "Git blob SHA1 and size"
+    },
+    "evaluation_summary.json": {
+      "blob_sha1": "c0929bdaaa41b9301e17ff127124252f4ff58f64",
+      "bytes": 13972,
+      "method": "Git blob SHA1 and size"
+    },
+    "generation_config.json": {
+      "blob_sha1": "bf077f03dc569cfb8a90b3ec1ad20365a620bad6",
+      "bytes": 242,
+      "method": "Git blob SHA1 and size"
+    },
+    "merges.txt": {
+      "blob_sha1": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+      "bytes": 1671839,
+      "method": "Git blob SHA1 and size"
+    },
+    "model-00001-of-00006.safetensors": {
+      "bytes": 2133926464,
+      "method": "LFS SHA256 and size",
+      "sha256": "542ac258274d6f69398371ef0fc04b4ca218080066d75ade06c405a71321e8c1"
+    },
+    "model-00002-of-00006.safetensors": {
+      "bytes": 2065880928,
+      "method": "LFS SHA256 and size",
+      "sha256": "b804d0df475b07658266e79facbc4f4c2b5ccfcf26217c010e04bb2c0c148998"
+    },
+    "model-00003-of-00006.safetensors": {
+      "bytes": 2067987640,
+      "method": "LFS SHA256 and size",
+      "sha256": "d05b792d5d4e9ebc0f939bc680ff17205ce01fa33629132549eb95782fbef3a1"
+    },
+    "model-00004-of-00006.safetensors": {
+      "bytes": 2067987664,
+      "method": "LFS SHA256 and size",
+      "sha256": "462596d965ebf2f8ac2c6a5aceb8e5c0093d9455f0547ff0c2d963b7faff8afc"
+    },
+    "model-00005-of-00006.safetensors": {
+      "bytes": 2139281264,
+      "method": "LFS SHA256 and size",
+      "sha256": "23ddb724e03670764bfa271bd801fc6928f8719442a4be47af2332459883bbd1"
+    },
+    "model-00006-of-00006.safetensors": {
+      "bytes": 1868739904,
+      "method": "LFS SHA256 and size",
+      "sha256": "aa76a669be6dc254478b10f94895790c60c50344e083c19dece67ae84d373462"
+    },
+    "model.safetensors.index.json": {
+      "blob_sha1": "d0effe98f6ca9b767622b7394b265ff5dc1d301a",
+      "bytes": 35582,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/LICENSE.source.json": {
+      "blob_sha1": "064ef3cb85e5b9376c81ab958c4979b4e46951ce",
+      "bytes": 413,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/advanced/complete.json": {
+      "blob_sha1": "302eed671fd42d6ef3ffe976bf0d1830ded592c7",
+      "bytes": 484,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/advanced/manifest.json": {
+      "blob_sha1": "dce5e24bdba153ed44c734542520143b23ca8277",
+      "bytes": 3088,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/advanced/observations.json": {
+      "blob_sha1": "ddc0ea63f1336b6152f17f69e75b1e25c6dbd80d",
+      "bytes": 27953,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/base/complete.json": {
+      "blob_sha1": "f5430e4e480f861dbceb1184e923f5e3e7d09c7b",
+      "bytes": 479,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/base/manifest.json": {
+      "blob_sha1": "0653813a037a8cb98dc86aa58acf75a97ad8da4e",
+      "bytes": 2714,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/base/observations.json": {
+      "blob_sha1": "18a6b901831cf21f40b054f7ff43944192ac1d61",
+      "bytes": 27654,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/gpu_allocation.json": {
+      "blob_sha1": "e94a7ebcebb236d2764fbd9fa2b40f14b22d1d41",
+      "bytes": 374,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/prepared.json": {
+      "blob_sha1": "ac4b74f5c035e98adcdb94fa969de5fba1336baf",
+      "bytes": 11709,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/recovery/complete.json": {
+      "blob_sha1": "143d5052003b4f8fed45aa7cc66e2a3479c48934",
+      "bytes": 482,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/recovery/manifest.json": {
+      "blob_sha1": "db5152c3652d2621558ec9e1882f22d604d8535a",
+      "bytes": 3321,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/recovery/observations.json": {
+      "blob_sha1": "0f49ac22878cc284967d925ac5279d2d1a62006f",
+      "bytes": 27670,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/selected.json": {
+      "blob_sha1": "c32fd5d276eb1c9b0a5192614d92196f5e464776",
+      "bytes": 24986,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/selected_ids.json": {
+      "blob_sha1": "a87b7ae57a84e23c2cd2ae85d86acd04768b0db3",
+      "bytes": 4483,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/development/summary.json": {
+      "blob_sha1": "8131de6f63e3c91ebf41caaa8ef523182c7eb25f",
+      "bytes": 2670,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/evaluation_manifest.json": {
+      "blob_sha1": "04f4e5432e42710f32d196a4897c8358e4bed494",
+      "bytes": 149810,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/evaluation_metrics.json": {
+      "blob_sha1": "90c76cd829a0221bf4696bf2442f9a50e2878dfe",
+      "bytes": 1448,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/merge-NOTICE.original": {
+      "blob_sha1": "1c560cd81c022bcd39d293df50f749ba78f3d5b2",
+      "bytes": 231,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/merge_complete.json": {
+      "blob_sha1": "da9107ecb90ea3333944fa7034571427c44e23f6",
+      "bytes": 7527,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/primary_experiment_plan.json": {
+      "blob_sha1": "3172f7cd17ff2713b23cbfef5b91be1b9461d22d",
+      "bytes": 3384,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/primary_publication_complete.json": {
+      "blob_sha1": "2f19a6fae02f4d8e032cd49632db7e6068680310",
+      "bytes": 20855,
+      "method": "Git blob SHA1 and size"
+    },
+    "provenance/recovery_plan.json": {
+      "blob_sha1": "cdca6e0b4de71073e5677cfe08a4d78c741249af",
+      "bytes": 3442,
+      "method": "Git blob SHA1 and size"
+    },
+    "publication_manifest.json": {
+      "blob_sha1": "b0b4d8281ef77cd8c55f85d08a97cb7f927418ab",
+      "bytes": 12258,
+      "method": "Git blob SHA1 and size"
+    },
+    "tokenizer.json": {
+      "blob_sha1": "443909a61d429dff23010e5bddd28ff530edda00",
+      "bytes": 7031645,
+      "method": "Git blob SHA1 and size"
+    },
+    "tokenizer_config.json": {
+      "blob_sha1": "07bfe0640cb5a0037f9322287fbfc682806cf672",
+      "bytes": 7305,
+      "method": "Git blob SHA1 and size"
+    },
+    "vocab.json": {
+      "blob_sha1": "4783fe10ac3adce15ac8f358ef5462739852c569",
+      "bytes": 2776833,
+      "method": "Git blob SHA1 and size"
+    }
+  },
+  "merge_receipt_sha256": "6f68fd45dabeddafc5896ac0e46659725dbfba9d7f68ca1a4248e2796f7ca1b8",
+  "owner": "adversarialbandit",
+  "primary_four_artifacts_unchanged": true,
+  "public_access_verified": true,
+  "publication_sha256": "8cebdb40a836902f57a18dd19392553988de35a74e6ff99c8c46c54b7701ddc9",
+  "repo_id": "adversarialbandit/qwen25-3b-base75-advanced25-posthoc-20261020",
+  "schema": "deadline-optional-recovery-publication-complete-v1",
+  "url": "https://huggingface.co/adversarialbandit/qwen25-3b-base75-advanced25-posthoc-20261020"
+}

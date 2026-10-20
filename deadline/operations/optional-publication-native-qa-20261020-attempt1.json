@@ -1,0 +1,41 @@
+{
+  "schema": "deadline-optional-publication-native-qa-v1",
+  "success": true,
+  "created_at_utc": "2026-10-20T17:22:00.599170+00:00",
+  "compute": {
+    "job_id": "1216562",
+    "step_id": "0",
+    "hostname": "owl-sr002",
+    "cuda_visible_devices": "",
+    "cpu_only": true
+  },
+  "tests_run": 23,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "wrapper_syntax_passed": true,
+  "source_unchanged": true,
+  "source_sha256": {
+    "deadline/publish_optional_model.py": "7f66957481a7596a593d0c57b3366a45193fbe67e065a5467728b56750bad866",
+    "tests/test_optional_publication.py": "093bbbaea36b6288df92347649a04e643e9c9c6b6aaad500fa50a271df638dc3",
+    "deadline/operations/publish_optional_model.slurm": "a4767638ea5a4bccd3631627481f3778121cf67667536be068e6f913261a6ed7",
+    "deadline/publish_huggingface.py": "e228e1c8d5081809cc8b878bb023854bef5a61571858a62f312643473b7cebe8",
+    "deadline/package_deliverables.py": "9982f53f53a935f4aa7d2fcfdd868a823464a252ae7a5958297a115cad22f8bb",
+    "deadline/audit_results.py": "d8465b346b5a51dd0c30287202265b7e195014649d31fd19ac7588ede9408cb2",
+    "deadline/recovery/common.py": "4964ac176ca47dc609d3e0e8395f0892015925fd4c7d17d638a3ec7cb4608630",
+    "deadline/recovery/screen.py": "f531d07db77738a08d4104231449e854e74956c4e8b51daf479eedf682ea74e8",
+    "deadline/recovery/plan.json": "f7210518343d43eaf7f8342b66b33ae4e06df8cdee46af0e72991c9adb7912e5",
+    "deadline/experiment_plan.json": "080488bb494c52ca71d385b2f041821e8c71c2c994aa6439c1c6f24d8227635d",
+    "reasoning/benchmark.py": "c26126e78cf31612fbc288a22726f23bb5998e643809ff449595a29a5bcc4c9f",
+    "reasoning/data.py": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68"
+  },
+  "test_log": "deadline/operations/optional-publication-native-qa-20261020-attempt1.txt",
+  "test_log_sha256": "7eeba12a05166e7910b590405cb9911e966beddd0a83fa283234ff881a455688",
+  "versions": {
+    "huggingface-hub": "0.36.0",
+    "transformers": "4.57.3",
+    "torch": "2.9.0"
+  },
+  "primary_or_recovery_code_modified": false,
+  "network_or_upload_performed": false
+}

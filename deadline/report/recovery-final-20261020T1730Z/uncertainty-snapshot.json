@@ -1,0 +1,18 @@
+{
+  "schema": "deadline-posthoc-uncertainty-complete-v1",
+  "complete": true,
+  "observed_at_utc": "2026-10-20T17:39:24.166519+00:00",
+  "job_id": "1217465",
+  "sacct_text": "1217465|1217465|COMPLETED|0:0|27|billing=3,cpu=1,mem=16G,node=1",
+  "allocated_gpus": 0,
+  "elapsed_seconds": 27,
+  "live_job_ids": [
+    "1217465"
+  ],
+  "summary_sha256": "04af178f22243faab992bec74e98e89c41cb31b81079b0cfb6a92f4f1301a633",
+  "native_alias_output_sha256": "fe7fc3930076391d4bb1618fe1900b4909ce2c7b8cc5d7cee92b7c3cb336d053",
+  "wrapper_sha256": "f28e11f20d8052832691fb45644935a1ff705943cf6dcae545fdd51a7158d693",
+  "unchanged_analysis_sha256": "bbc9f515302d0cd2b19059e07140efaa778b1245c81515cd51021ef2a78b5b6f",
+  "primary_comparison_unchanged": true,
+  "posthoc_one_fixed_candidate": true
+}

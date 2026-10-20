@@ -1,0 +1,5 @@
+Qwen is licensed under the Qwen RESEARCH LICENSE AGREEMENT, Copyright (c) Alibaba Cloud. All Rights Reserved.
+
+Built with Qwen. Original Qwen2.5-3B-Instruct by the Qwen Team.
+Modified by fixed FP32 interpolation: 75% original base and 25% advanced full-SFT checkpoint.
+Exploratory post-hoc candidate; no benchmark superiority is established.

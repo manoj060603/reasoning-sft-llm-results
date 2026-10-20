@@ -1,6 +1,6 @@
 {
   "schema": "reasoning-sft-assignment-checklist-v1",
-  "status": "All primary original/random/advanced evaluations are complete on all nine tasks (all eight supplied tasks plus supplementary AIME25), with matched raw audits and conditional paired uncertainty. Advanced improves over random in the supplied-eight macro but remains below original. Native primary CPU closeout and publication packaging completed; Hugging Face publication is running. Recovery has seven tasks audited and its unchanged final two-benchmark continuation is running. Final links/report handoff and team course submission remain pending.",
+  "status": "Technical delivery complete: both fresh full-SFT models, both original 15K datasets, all nine matched tasks for each primary role, conditional uncertainty, reproducible report and verified public artifacts. A fixed, separately labeled post-hoc recovery also completed all nine tasks and conditional uncertainty and is published. The team must perform its own course submission.",
   "assignment_url": "https://github.com/reds-lab/Project-Reasoning-SFT-LLM",
   "deadline_eastern": "2026-10-20T23:59:00-04:00",
   "current_experiment": "Cross-fitted Transfer Gain with Coverage; fresh original-base initialization",
@@ -214,7 +214,7 @@
       "id": "A11",
       "mandatory": true,
       "requirement": "Report the final model hyperparameters and data-selection strategy.",
-      "status": "complete_training_recipe_selection_and_primary_results_recovery_resource_accounting_pending",
+      "status": "complete_training_recipe_selection_results_and_terminal_gpu_accounting",
       "evidence_paths": [
         "deadline/experiment_plan.json",
         "deadline/report_outline.json",
@@ -231,7 +231,8 @@
         "deadline/operations/evaluation-resume-20261020.json",
         "deadline/operations/gpu-budget-reconciliation-b2705ce9203eb224.json",
         "deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json",
-        "deadline/operations/gpu-budget-reconciliation-029e44effa49a4c6.json"
+        "deadline/operations/gpu-budget-reconciliation-029e44effa49a4c6.json",
+        "deadline/operations/gpu-budget-reconciliation-43fae58f06119f1c.json"
       ],
       "completion_evidence_required": [
         "actual model/data revisions",
@@ -239,7 +240,7 @@
         "precision and loss normalization",
         "runtime, hardware, resource and truncation disclosures"
       ],
-      "evidence_note": "Training recipe, selected data, exact example consumption and primary terminal GPU use are reconciled. Current total terminal charges plus the full live recovery reservation are 141,240 seconds (39.233333/48 GPU-hours). Recovery final resource accounting remains pending."
+      "evidence_note": "All GPU allocations are terminal: actual elapsed GPU use is 140,025 seconds (38.895833 hours), conservatively charged 140,520 seconds (39.033333 hours), below the original 48-hour cap. Original requested reservations and rejected attempts remain preserved."
     },
     {
       "id": "A12",
@@ -263,7 +264,7 @@
       "id": "A13",
       "mandatory": true,
       "requirement": "Provide a GitHub repository with necessary files and a final README.",
-      "status": "source_snapshot_published_final_results_and_artifact_links_pending",
+      "status": "complete_final_source_report_and_reproduction_snapshot",
       "evidence_paths": [
         "README.md",
         "deadline/README.md",
@@ -276,43 +277,53 @@
         "current README with measured results and limitations",
         "verified repository URL/commit",
         "usable artifact links and reproduction instructions"
-      ]
+      ],
+      "evidence_note": "The current snapshot contains the final code, native checks, all measured results and uncertainty, exact public model/dataset links and reproduction instructions. Final public tree equality is checked against this committed snapshot at delivery; preceding pinned publication receipts remain historical."
     },
     {
       "id": "A14",
       "mandatory": true,
       "requirement": "Push the trained models to Hugging Face.",
-      "status": "publication_in_progress_not_yet_anonymously_verified",
-      "evidence_paths": [],
+      "status": "complete_both_primary_models_published_and_anonymously_verified",
+      "evidence_paths": [
+        "deadline/report/primary-hf-publication-20261020/publication_complete.json",
+        "deadline/report/recovery-final-20261020T1730Z/publication_complete.json"
+      ],
       "completion_evidence_required": [
         "usable random-control model repository/link",
         "usable advanced model repository/link",
         "complete weights/tokenizer/config",
         "model cards with provenance, training and evaluation information"
-      ]
+      ],
+      "evidence_note": "Both exact evaluated primary FP32 checkpoints are public with every-file Git/LFS verification. The separate post-hoc recovery model is additionally public; it does not replace either assignment model."
     },
     {
       "id": "A15",
       "mandatory": true,
       "requirement": "Push both random and advanced datasets to Hugging Face.",
-      "status": "publication_in_progress_not_yet_anonymously_verified",
-      "evidence_paths": [],
+      "status": "complete_both_original_datasets_published_and_anonymously_verified",
+      "evidence_paths": [
+        "deadline/report/primary-hf-publication-20261020/publication_complete.json"
+      ],
       "completion_evidence_required": [
         "two accessible dataset repository links",
         "correct original 15K records and format",
         "dataset cards with source, sampling and exclusions",
         "verified data hashes and relation to training caches"
-      ]
+      ],
+      "evidence_note": "Both 15K original instruction/input/output/system exports are public; native hashes match the original selection/training exports and every-file anonymous verification passed."
     },
     {
       "id": "A16",
       "mandatory": true,
       "requirement": "Deliver the final report containing original performance, trained-model results, comparison, hyperparameters, and selection method.",
-      "status": "complete_primary_results_available_narrative_reconciliation_and_verified_links_pending",
+      "status": "complete_final_primary_and_separate_posthoc_report",
       "evidence_paths": [
         "deadline/FINAL_REPORT.md",
-        "deadline/report/audit.json",
-        "deadline/report/partial-20261020T1010Z/audit.json"
+        "deadline/report/primary-final-20261020T1708Z/audit.json",
+        "deadline/report/primary-final-20261020T1708Z/uncertainty.json",
+        "deadline/report/recovery-final-20261020T1730Z/evaluation_summary.json",
+        "deadline/report/recovery-final-20261020T1730Z/uncertainty.json"
       ],
       "completion_evidence_required": [
         "final report document",
@@ -360,16 +371,16 @@
       "id": "O03",
       "mandatory": false,
       "requirement": "Evaluate supplementary AIME25 and report the seven-task internal macro.",
-      "status": "supplementary_aime25_complete_for_all_three_internal_seven_macro_pending",
+      "status": "complete_all_four_roles_supplementary_aime25_and_both_stated_macros",
       "evidence_paths": [
-        "deadline/artifacts/benchmarks/aime25/test.jsonl",
-        "deadline/report/partial-20261020T1010Z/audit.json"
+        "deadline/report/primary-final-20261020T1708Z/audit.json",
+        "deadline/report/recovery-final-20261020T1730Z/evaluation_summary.json"
       ],
       "completion_evidence_required": [
         "pinned supplementary data and complete matched evaluations"
       ],
       "scope_note": "The supplied benchmark archive contains eight tasks. AIME25 supports an additional internal comparison, not verified historical equivalence.",
-      "evidence_note": "AIME25 has complete raw eight-sample predictions for all 3 roles. The internal seven-task macro remains pending because other trained-model tasks are incomplete."
+      "evidence_note": "Supplementary AIME25 and the separately defined internal seven-task macro are complete for original, random, advanced and fixed post-hoc recovery. Neither supplementary result establishes historical leaderboard equivalence."
     },
     {
       "id": "O04",
@@ -401,21 +412,24 @@
     "Transfer gain is not isolated from eligibility, reservoir construction and coverage without separate eligible-random and coverage-only ablations.",
     "Native Trainer replaces the tutorial LLaMA-Factory execution path; record the actual framework.",
     "MATH has 500 actual JSON records despite README499; the official and local files are byte-identical.",
-    "Publication and course submission remain pending until verified links/receipts exist."
+    "The team must perform and confirm its own course submission; all five Hugging Face artifacts are public and anonymously verified."
   ],
   "handoff_slots": {
     "repository_url": "https://github.com/manoj060603/reasoning-sft-llm-results",
-    "repository_commit": "3003d5860e829135ebda53f7e1826a92927eb1f1",
-    "random_model_url": null,
-    "advanced_model_url": null,
-    "random_dataset_url": null,
-    "advanced_dataset_url": null,
-    "final_report_path": "deadline/FINAL_REPORT.md (draft; both training runs complete, full trained-model results pending)",
+    "repository_commit": "bca82159efe8c3cc14eec7108b2eb20b9fb802fb",
+    "random_model_url": "https://huggingface.co/adversarialbandit/qwen25-3b-reasoning-random15k-20261019",
+    "advanced_model_url": "https://huggingface.co/adversarialbandit/qwen25-3b-reasoning-transfer-coverage15k-20261019",
+    "random_dataset_url": "https://huggingface.co/datasets/adversarialbandit/reasoning-random15k-20261019",
+    "advanced_dataset_url": "https://huggingface.co/datasets/adversarialbandit/reasoning-transfer-coverage15k-20261019",
+    "final_report_path": "deadline/FINAL_REPORT.md",
     "course_submission_receipt": null,
-    "repository_local_source_commit": "62e98f15e3e6775e0502ee00079e7701a74562ea",
-    "repository_tree": "386e161cc13632530f171c055158e0f56f27506c",
+    "repository_local_source_commit": "39b8b8815851c14cebd9a5b4b69ae9ca95c4d2a2",
+    "repository_tree": "b2ba752a012b314025a98272865e6cf1edb1ebe2",
     "pinned_source_publication_receipt_commit": "45e4d38784f1fdad4c033031f3b2d4c32c6c94b2",
-    "publication_note": "Verified public source snapshot includes the primary 10:10 UTC audit and separate recovery code, CPU checks, merge provenance and sealed source-screen IDs. Exact tree equality was checked by anonymous Git fetch. Hugging Face artifacts and recovery performance remain pending."
+    "publication_note": "Both primary evaluated models, both original 15K datasets and the separate recovery model are public at pinned commits with anonymous every-file verification. The final report includes all nine tasks for all four roles, separate conditional uncertainty and terminal resources. Exact source tree equality is verified at delivery. Course submission remains team-owned.",
+    "repository_commit_scope": "Verified preceding primary-final snapshot; final source/documentation delta is being published to main. Exact final tree verification is recorded at delivery.",
+    "repository_live_branch": "https://github.com/manoj060603/reasoning-sft-llm-results/tree/main",
+    "recovery_model_url": "https://huggingface.co/adversarialbandit/qwen25-3b-base75-advanced25-posthoc-20261020"
   },
   "reviewed_implementation_commit": "b092f29",
   "benchmark_count_audit": {
@@ -431,11 +445,11 @@
       "finding": "The README table says 499, but the actual official file and local copy both contain 500 valid JSON records. The last record has no trailing newline; keep MATH=500 in evaluation and audit."
     }
   },
-  "last_reconciled_utc": "2026-10-20T10:10:00+00:00",
+  "last_reconciled_utc": "2026-10-20T17:40:15.153706+00:00",
   "requested_repository_owner": "manoj060603",
   "team_submission_action": "Team-owned action; no course-system submission is performed by this experiment automation.",
-  "last_verified_cluster_snapshot_utc": "2026-10-20T17:11:50+00:00",
-  "current_access_note": "All primary evaluations and native CPU closeout are complete. Four primary Hugging Face artifact uploads are in progress; no anonymous completion receipt yet. Recovery continuation 1216562 remains running on its final two benchmarks with seven audited tasks retained.",
+  "last_verified_cluster_snapshot_utc": "2026-10-20T17:31:14.643548+00:00",
+  "current_access_note": "All primary and recovery generations, native conditional analyses and publication jobs completed successfully. All five public model/dataset repositories passed anonymous file-identity verification. Final source snapshot is ready for verified publication. Course submission remains team-owned.",
   "current_execution_evidence": {
     "partial_audit": "deadline/report/partial-20261020T1010Z/audit.json",
     "training_complete": {
@@ -512,22 +526,25 @@
     "publisher": {
       "job_id": "1209745",
       "dependency": "afterok:1208135",
-      "observed_state": "RUNNING",
-      "upload_complete": false
+      "observed_state": "COMPLETED",
+      "upload_complete": true,
+      "elapsed_seconds": 336,
+      "public_access_verified": true,
+      "receipt": "deadline/report/primary-hf-publication-20261020/publication_complete.json"
     },
     "admission_receipt": "deadline/operations/evaluation-continuation-admission.json",
-    "conservative_gpu_hours_bound": 39.233333333333334,
+    "conservative_gpu_hours_bound": 39.03333333333333,
     "gpu_hours_cap": 48,
     "historical_admitted_requested_gpu_hours": 72.25,
     "all_attempt_requested_gpu_hours": 90.25,
     "verified_unadmitted_requested_gpu_hours": 18,
-    "final_terminal_resource_accounting": "pending",
+    "final_terminal_resource_accounting": "complete_all_gpu_allocations_terminal",
     "complete_official_eight_tasks": {
       "original": 8,
       "random": 8,
       "advanced": 8
     },
-    "gpu_resource_figure_interpretation": "39.233333/48 hours comprises all verified terminal GPU charges plus the full live 45-minute recovery continuation reservation. Primary random continuation used 35,613 elapsed seconds and is charged 35,640. Final actual GPU use awaits terminal recovery accounting; all original requests are preserved.",
+    "gpu_resource_figure_interpretation": "All GPU allocations are terminal. Actual elapsed allocated GPU use totals 140,025 seconds (38.895833 hours). Conservative per-allocation upward-minute accounting totals 140,520 seconds (39.033333 hours), below the fixed 48-hour cap. No live GPU reservation remains. Historical admitted requests are 72.25 hours and all-attempt requests 90.25 hours; these are preserved and are not actual consumption.",
     "partial_math_comparison": {
       "problems": 500,
       "samples_per_problem": 8,
@@ -542,7 +559,8 @@
       "random_truncated_samples": 1508,
       "advanced_truncated_samples": 1235,
       "responses_per_role": 4000,
-      "paired_uncertainty": "pending"
+      "paired_uncertainty": "complete: deadline/report/primary-final-20261020T1708Z/uncertainty.json",
+      "scope": "Historical partial snapshot retained; final matched primary audit and conditional uncertainty supersede pending status."
     },
     "partial_cn_math_2024": {
       "original_pass_at_1": 0.1,
@@ -555,7 +573,8 @@
       "advanced_pass_at_8": 0.23333333333333334,
       "advanced_truncated_samples": 159,
       "responses_per_role": 240,
-      "paired_uncertainty": "pending"
+      "paired_uncertainty": "complete: deadline/report/primary-final-20261020T1708Z/uncertainty.json",
+      "scope": "Historical partial snapshot retained; final matched primary audit and conditional uncertainty supersede pending status."
     },
     "remaining_tasks_per_trained_model": {
       "random": [],
@@ -572,9 +591,10 @@
       "advanced_pass_at_8": 0.47738693467336685,
       "advanced_truncated_samples": 667,
       "responses_per_role": 1592,
-      "paired_uncertainty": "pending"
+      "paired_uncertainty": "complete: deadline/report/primary-final-20261020T1708Z/uncertainty.json",
+      "scope": "Historical partial snapshot retained; final matched primary audit and conditional uncertainty supersede pending status."
     },
-    "conservative_gpu_seconds_bound": 172440,
+    "conservative_gpu_seconds_bound": 140520,
     "evaluation_resume": {
       "receipt": "deadline/operations/evaluation-resume-20261020.json",
       "scientific_protocol_unchanged": true,
@@ -612,7 +632,8 @@
       "advanced_truncated_samples": 1088,
       "responses_per_role": 2176,
       "problems": 272,
-      "paired_uncertainty": "pending"
+      "paired_uncertainty": "complete: deadline/report/primary-final-20261020T1708Z/uncertainty.json",
+      "scope": "Historical partial snapshot retained; final matched primary audit and conditional uncertainty supersede pending status."
     },
     "primary_before_recovery_development_gpu_hours_bound": 47.05,
     "posthoc_recovery": {
@@ -646,214 +667,274 @@
         }
       },
       "benchmark_results": {
-        "amc": {
-          "original": {
-            "problems": 40,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.425,
-            "pass_at_8": 0.7,
-            "truncated_samples": 3
-          },
-          "random": {
-            "problems": 40,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.225,
-            "pass_at_8": 0.475,
-            "truncated_samples": 190
-          },
-          "advanced": {
-            "problems": 40,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.25,
-            "pass_at_8": 0.45,
-            "truncated_samples": 169
-          },
-          "recovery": {
-            "problems": 40,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.390625,
-            "pass_at_8": 0.75,
-            "truncated_samples": 4
-          }
-        },
-        "aime25": {
-          "original": {
-            "problems": 30,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.008333333333333333,
-            "pass_at_8": 0.03333333333333333,
-            "truncated_samples": 0
-          },
-          "random": {
-            "problems": 30,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.029166666666666667,
-            "pass_at_8": 0.16666666666666666,
-            "truncated_samples": 203
-          },
-          "advanced": {
-            "problems": 30,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.016666666666666666,
-            "pass_at_8": 0.13333333333333333,
-            "truncated_samples": 185
-          },
-          "recovery": {
-            "problems": 30,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.025,
-            "pass_at_8": 0.1,
-            "truncated_samples": 3
-          }
-        },
         "aime": {
-          "original": {
+          "advanced": {
+            "pass_at_1": 0.025,
+            "pass_at_8": 0.13333333333333333,
             "problems": 30,
             "samples_per_problem": 8,
+            "truncated_samples": 192
+          },
+          "original": {
             "pass_at_1": 0.07916666666666666,
             "pass_at_8": 0.23333333333333334,
+            "problems": 30,
+            "samples_per_problem": 8,
             "truncated_samples": 10
           },
           "random": {
-            "problems": 30,
-            "samples_per_problem": 8,
             "pass_at_1": 0.004166666666666667,
             "pass_at_8": 0.03333333333333333,
+            "problems": 30,
+            "samples_per_problem": 8,
             "truncated_samples": 204
           },
-          "advanced": {
-            "problems": 30,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.025,
-            "pass_at_8": 0.13333333333333333,
-            "truncated_samples": 192
-          },
           "recovery": {
-            "problems": 30,
-            "samples_per_problem": 8,
             "pass_at_1": 0.0625,
             "pass_at_8": 0.23333333333333334,
+            "problems": 30,
+            "samples_per_problem": 8,
             "truncated_samples": 19
           }
         },
-        "math": {
-          "original": {
-            "problems": 500,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.659,
-            "pass_at_8": 0.838,
-            "truncated_samples": 19
-          },
-          "random": {
-            "problems": 500,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.49725,
-            "pass_at_8": 0.782,
-            "truncated_samples": 1508
-          },
+        "aime25": {
           "advanced": {
-            "problems": 500,
+            "pass_at_1": 0.016666666666666666,
+            "pass_at_8": 0.13333333333333333,
+            "problems": 30,
             "samples_per_problem": 8,
-            "pass_at_1": 0.51225,
-            "pass_at_8": 0.782,
-            "truncated_samples": 1235
+            "truncated_samples": 185
           },
-          "recovery": {
-            "problems": 500,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.65325,
-            "pass_at_8": 0.846,
-            "truncated_samples": 27
-          }
-        },
-        "cn_math_2024": {
           "original": {
-            "problems": 30,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.1,
-            "pass_at_8": 0.26666666666666666,
-            "truncated_samples": 8
-          },
-          "random": {
-            "problems": 30,
-            "samples_per_problem": 8,
             "pass_at_1": 0.008333333333333333,
-            "pass_at_8": 0.06666666666666667,
-            "truncated_samples": 215
-          },
-          "advanced": {
+            "pass_at_8": 0.03333333333333333,
             "problems": 30,
             "samples_per_problem": 8,
-            "pass_at_1": 0.05,
-            "pass_at_8": 0.23333333333333334,
-            "truncated_samples": 159
+            "truncated_samples": 0
+          },
+          "random": {
+            "pass_at_1": 0.029166666666666667,
+            "pass_at_8": 0.16666666666666666,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 203
           },
           "recovery": {
+            "pass_at_1": 0.025,
+            "pass_at_8": 0.1,
             "problems": 30,
             "samples_per_problem": 8,
-            "pass_at_1": 0.125,
-            "pass_at_8": 0.3333333333333333,
-            "truncated_samples": 6
+            "truncated_samples": 3
           }
         },
-        "kaoyan": {
-          "original": {
-            "problems": 199,
+        "amc": {
+          "advanced": {
+            "pass_at_1": 0.25,
+            "pass_at_8": 0.45,
+            "problems": 40,
             "samples_per_problem": 8,
-            "pass_at_1": 0.21105527638190955,
-            "pass_at_8": 0.49748743718592964,
+            "truncated_samples": 169
+          },
+          "original": {
+            "pass_at_1": 0.425,
+            "pass_at_8": 0.7,
+            "problems": 40,
+            "samples_per_problem": 8,
             "truncated_samples": 3
           },
           "random": {
-            "problems": 199,
+            "pass_at_1": 0.225,
+            "pass_at_8": 0.475,
+            "problems": 40,
             "samples_per_problem": 8,
-            "pass_at_1": 0.1407035175879397,
-            "pass_at_8": 0.41708542713567837,
-            "truncated_samples": 1009
-          },
-          "advanced": {
-            "problems": 199,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.15452261306532664,
-            "pass_at_8": 0.47738693467336685,
-            "truncated_samples": 667
+            "truncated_samples": 190
           },
           "recovery": {
-            "problems": 199,
+            "pass_at_1": 0.390625,
+            "pass_at_8": 0.75,
+            "problems": 40,
             "samples_per_problem": 8,
-            "pass_at_1": 0.21105527638190955,
-            "pass_at_8": 0.542713567839196,
-            "truncated_samples": 1
+            "truncated_samples": 4
           }
         },
-        "minerva": {
-          "original": {
-            "problems": 272,
+        "cn_math_2024": {
+          "advanced": {
+            "pass_at_1": 0.05,
+            "pass_at_8": 0.23333333333333334,
+            "problems": 30,
             "samples_per_problem": 8,
-            "pass_at_1": 0.30330882352941174,
-            "pass_at_8": 0.47794117647058826,
+            "truncated_samples": 159
+          },
+          "original": {
+            "pass_at_1": 0.1,
+            "pass_at_8": 0.26666666666666666,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 8
+          },
+          "random": {
+            "pass_at_1": 0.008333333333333333,
+            "pass_at_8": 0.06666666666666667,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 215
+          },
+          "recovery": {
+            "pass_at_1": 0.125,
+            "pass_at_8": 0.3333333333333333,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 6
+          }
+        },
+        "gpqa": {
+          "advanced": {
+            "pass_at_1": 0.1414141414141414,
+            "pass_at_8": 0.5404040404040404,
+            "problems": 198,
+            "samples_per_problem": 8,
+            "truncated_samples": 954
+          },
+          "original": {
+            "pass_at_1": 0.2840909090909091,
+            "pass_at_8": 0.696969696969697,
+            "problems": 198,
+            "samples_per_problem": 8,
             "truncated_samples": 5
           },
           "random": {
-            "problems": 272,
+            "pass_at_1": 0.09217171717171717,
+            "pass_at_8": 0.41414141414141414,
+            "problems": 198,
             "samples_per_problem": 8,
-            "pass_at_1": 0.15946691176470587,
-            "pass_at_8": 0.3639705882352941,
-            "truncated_samples": 1269
-          },
-          "advanced": {
-            "problems": 272,
-            "samples_per_problem": 8,
-            "pass_at_1": 0.18106617647058823,
-            "pass_at_8": 0.41544117647058826,
-            "truncated_samples": 1088
+            "truncated_samples": 1089
           },
           "recovery": {
+            "pass_at_1": 0.3042929292929293,
+            "pass_at_8": 0.7626262626262627,
+            "problems": 198,
+            "samples_per_problem": 8,
+            "truncated_samples": 9
+          }
+        },
+        "kaoyan": {
+          "advanced": {
+            "pass_at_1": 0.15452261306532664,
+            "pass_at_8": 0.47738693467336685,
+            "problems": 199,
+            "samples_per_problem": 8,
+            "truncated_samples": 667
+          },
+          "original": {
+            "pass_at_1": 0.21105527638190955,
+            "pass_at_8": 0.49748743718592964,
+            "problems": 199,
+            "samples_per_problem": 8,
+            "truncated_samples": 3
+          },
+          "random": {
+            "pass_at_1": 0.1407035175879397,
+            "pass_at_8": 0.41708542713567837,
+            "problems": 199,
+            "samples_per_problem": 8,
+            "truncated_samples": 1009
+          },
+          "recovery": {
+            "pass_at_1": 0.21105527638190955,
+            "pass_at_8": 0.542713567839196,
+            "problems": 199,
+            "samples_per_problem": 8,
+            "truncated_samples": 1
+          }
+        },
+        "math": {
+          "advanced": {
+            "pass_at_1": 0.51225,
+            "pass_at_8": 0.782,
+            "problems": 500,
+            "samples_per_problem": 8,
+            "truncated_samples": 1235
+          },
+          "original": {
+            "pass_at_1": 0.659,
+            "pass_at_8": 0.838,
+            "problems": 500,
+            "samples_per_problem": 8,
+            "truncated_samples": 19
+          },
+          "random": {
+            "pass_at_1": 0.49725,
+            "pass_at_8": 0.782,
+            "problems": 500,
+            "samples_per_problem": 8,
+            "truncated_samples": 1508
+          },
+          "recovery": {
+            "pass_at_1": 0.65325,
+            "pass_at_8": 0.846,
+            "problems": 500,
+            "samples_per_problem": 8,
+            "truncated_samples": 27
+          }
+        },
+        "minerva": {
+          "advanced": {
+            "pass_at_1": 0.18106617647058823,
+            "pass_at_8": 0.41544117647058826,
             "problems": 272,
             "samples_per_problem": 8,
+            "truncated_samples": 1088
+          },
+          "original": {
+            "pass_at_1": 0.30330882352941174,
+            "pass_at_8": 0.47794117647058826,
+            "problems": 272,
+            "samples_per_problem": 8,
+            "truncated_samples": 5
+          },
+          "random": {
+            "pass_at_1": 0.15946691176470587,
+            "pass_at_8": 0.3639705882352941,
+            "problems": 272,
+            "samples_per_problem": 8,
+            "truncated_samples": 1269
+          },
+          "recovery": {
             "pass_at_1": 0.2945772058823529,
             "pass_at_8": 0.48161764705882354,
+            "problems": 272,
+            "samples_per_problem": 8,
             "truncated_samples": 9
+          }
+        },
+        "olympiadbench": {
+          "advanced": {
+            "pass_at_1": 0.1887037037037037,
+            "pass_at_8": 0.40444444444444444,
+            "problems": 675,
+            "samples_per_problem": 8,
+            "truncated_samples": 3062
+          },
+          "original": {
+            "pass_at_1": 0.2825925925925926,
+            "pass_at_8": 0.5185185185185185,
+            "problems": 675,
+            "samples_per_problem": 8,
+            "truncated_samples": 99
+          },
+          "random": {
+            "pass_at_1": 0.17148148148148148,
+            "pass_at_8": 0.3837037037037037,
+            "problems": 675,
+            "samples_per_problem": 8,
+            "truncated_samples": 3526
+          },
+          "recovery": {
+            "pass_at_1": 0.2740740740740741,
+            "pass_at_8": 0.4948148148148148,
+            "problems": 675,
+            "samples_per_problem": 8,
+            "truncated_samples": 122
           }
         }
       },
@@ -880,9 +961,9 @@
       "initial_benchmark_state": "TIMEOUT",
       "initial_benchmark_requested_gpu_hours": 0.75,
       "initial_benchmark_limit_minutes": 45,
-      "full_suite_complete": false,
+      "full_suite_complete": true,
       "future_continuation_admitted": true,
-      "complete_tasks": 7,
+      "complete_tasks": 9,
       "partial_benchmark_audit": "deadline/report/recovery-benchmark-partial-20261020T1502Z/audit.json",
       "partial_benchmark_audits": [
         "deadline/report/recovery-benchmark-partial-20261020T1521Z/audit.json",
@@ -892,17 +973,38 @@
       "initial_elapsed_seconds": 2703,
       "initial_terminal_observation": "deadline/operations/recovery-initial-evaluation-terminal-observation-20261020.json",
       "terminal_budget_reconciliation": "deadline/operations/gpu-budget-reconciliation-c0f4181a2d92af85.json",
-      "remaining_tasks": [
-        "olympiadbench",
-        "gpqa"
-      ],
+      "remaining_tasks": [],
       "initial_charged_gpu_seconds": 2760,
       "continuation_job_id": "1216562",
-      "continuation_state": "RUNNING",
+      "continuation_state": "COMPLETED",
       "continuation_start_eastern": "2026-10-20T12:51:19-04:00",
       "continuation_limit_minutes": 45,
       "continuation_end_eastern": "2026-10-20T13:36:19-04:00",
-      "continuation_admission_receipt": "deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json"
+      "continuation_admission_receipt": "deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json",
+      "continuation_elapsed_seconds": 1940,
+      "continuation_charged_gpu_seconds": 1980,
+      "terminal_gpu_accounting": "deadline/operations/gpu-budget-reconciliation-43fae58f06119f1c.json",
+      "optional_publication_complete": true,
+      "optional_publication_job_id": "1217227",
+      "optional_publication_receipt": "deadline/report/recovery-final-20261020T1730Z/publication_complete.json",
+      "all_nine_four_role_raw_evaluation": "deadline/report/recovery-final-20261020T1730Z/evaluation_summary.json",
+      "official_eight_macro": {
+        "pass_at_1": 0.2894218107039082,
+        "pass_at_8": 0.5555548698757204
+      },
+      "supplemented_historical_seven_macro": {
+        "pass_at_1": 0.23208921223303797,
+        "pass_at_8": 0.49501508938177574
+      },
+      "native_optional_publisher_tests": 23,
+      "native_optional_publisher_qa": "deadline/operations/optional-publication-native-qa-20261020-attempt1.json",
+      "verified_optional_huggingface_repository": {
+        "url": "https://huggingface.co/adversarialbandit/qwen25-3b-base75-advanced25-posthoc-20261020",
+        "repo_id": "adversarialbandit/qwen25-3b-base75-advanced25-posthoc-20261020",
+        "commit": "51814ba26ab0dc052447aee1612bebcffdba43f2",
+        "public_access_verified": true,
+        "evaluated_and_published_weight_bytes_identical": true
+      }
     },
     "partial_olympiadbench": {
       "original": {
@@ -928,8 +1030,8 @@
       }
     },
     "partial_olympiadbench_audit": "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json",
-    "conservative_committed_gpu_seconds": 141240,
-    "uncommitted_gpu_seconds": 31560,
+    "conservative_committed_gpu_seconds": 140520,
+    "uncommitted_gpu_seconds": 32280,
     "partial_gpqa": {
       "original": {
         "problems": 198,
@@ -1211,10 +1313,122 @@
       "conditioning": "Fixed trained models and their eight recorded outputs per problem; excludes training-seed and additional generation-sampling variance.",
       "multiple_comparison_adjustment": false,
       "historical_leaderboard_equivalence_verified": false
+    },
+    "actual_elapsed_gpu_seconds": 140025,
+    "actual_elapsed_gpu_hours": 38.895833333333336,
+    "gpu_final_reconciliation": "deadline/operations/gpu-budget-reconciliation-43fae58f06119f1c.json",
+    "verified_primary_huggingface_repositories": {
+      "advanced_dataset": {
+        "url": "https://huggingface.co/datasets/adversarialbandit/reasoning-transfer-coverage15k-20261019",
+        "repo_id": "adversarialbandit/reasoning-transfer-coverage15k-20261019",
+        "repo_type": "dataset",
+        "commit": "aab32e0bf630ba32db492af0b4af0b2632c32a06",
+        "complete": true,
+        "public_access_verified": true
+      },
+      "advanced_model": {
+        "url": "https://huggingface.co/adversarialbandit/qwen25-3b-reasoning-transfer-coverage15k-20261019",
+        "repo_id": "adversarialbandit/qwen25-3b-reasoning-transfer-coverage15k-20261019",
+        "repo_type": "model",
+        "commit": "550bdcc89a9352335d6030d6834fcff0f94d697f",
+        "complete": true,
+        "public_access_verified": true
+      },
+      "random_dataset": {
+        "url": "https://huggingface.co/datasets/adversarialbandit/reasoning-random15k-20261019",
+        "repo_id": "adversarialbandit/reasoning-random15k-20261019",
+        "repo_type": "dataset",
+        "commit": "26077e0219ac79c8518e370dd7736091200d0da3",
+        "complete": true,
+        "public_access_verified": true
+      },
+      "random_model": {
+        "url": "https://huggingface.co/adversarialbandit/qwen25-3b-reasoning-random15k-20261019",
+        "repo_id": "adversarialbandit/qwen25-3b-reasoning-random15k-20261019",
+        "repo_type": "model",
+        "commit": "860dd82d4aa28b650555d6b4787b44711e4d0326",
+        "complete": true,
+        "public_access_verified": true
+      }
+    },
+    "recovery_uncertainty": {
+      "job_id": "1217465",
+      "status": "COMPLETED",
+      "exit_code": "0:0",
+      "elapsed_seconds": 27,
+      "gpu_hours": 0,
+      "wrapper": "deadline/operations/recovery_uncertainty.slurm",
+      "summary": "deadline/report/recovery-final-20261020T1730Z/uncertainty.json",
+      "native_alias_output": "deadline/report/recovery-final-20261020T1730Z/uncertainty-native-candidate-alias.json",
+      "native_snapshot": "deadline/report/recovery-final-20261020T1730Z/uncertainty-snapshot.json",
+      "scope": "One fixed post-hoc recovery, unchanged 10K paired normalized-question-cluster bootstrap, no coefficient or model search. Conditional on fixed models and recorded eight outputs, unadjusted multiple comparisons; excludes training-seed and additional generation-sampling variance.",
+      "official_eight_macro_comparisons": {
+        "recovery_vs_random": {
+          "pass_at_1": {
+            "recovery": 0.2894218107039082,
+            "comparator": 0.16232170350073052,
+            "delta": 0.1271001072031777,
+            "delta_pp": 12.710010720317769,
+            "ci95": [
+              0.1113103823597903,
+              0.14378204694760696
+            ],
+            "ci95_pp": [
+              11.13103823597903,
+              14.378204694760695
+            ]
+          },
+          "pass_at_8": {
+            "recovery": 0.5555548698757204,
+            "comparator": 0.3669876416520113,
+            "delta": 0.18856722822370914,
+            "delta_pp": 18.856722822370912,
+            "ci95": [
+              0.15167868916588365,
+              0.2267052366843202
+            ],
+            "ci95_pp": [
+              15.167868916588365,
+              22.67052366843202
+            ]
+          }
+        },
+        "recovery_vs_original": {
+          "pass_at_1": {
+            "recovery": 0.2894218107039082,
+            "comparator": 0.2930267835326862,
+            "delta": -0.0036049728287779748,
+            "delta_pp": -0.3604972828777975,
+            "ci95": [
+              -0.012972816783890414,
+              0.006355961094495096
+            ],
+            "ci95_pp": [
+              -1.2972816783890415,
+              0.6355961094495096
+            ]
+          },
+          "pass_at_8": {
+            "recovery": 0.5555548698757204,
+            "comparator": 0.5286146036430917,
+            "delta": 0.026940266232628796,
+            "delta_pp": 2.6940266232628796,
+            "ci95": [
+              -0.0013627358140225784,
+              0.05613092857552518
+            ],
+            "ci95_pp": [
+              -0.13627358140225784,
+              5.613092857552518
+            ]
+          }
+        }
+      },
+      "interpretation": "Recovery-minus-original supplied-eight intervals include zero in both metrics; no clear advantage over original is established by this conditional analysis."
     }
   },
-  "last_verified_result_snapshot_utc": "2026-10-20T17:08:00+00:00",
-  "operational_update_utc": "2026-10-20T17:11:50+00:00",
+  "last_verified_result_snapshot_utc": "2026-10-20T17:30:00+00:00",
+  "operational_update_utc": "2026-10-20T17:31:14+00:00",
   "reviewed_implementation_commit_scope": "b092f29 is a historical primary implementation review; later operational and recovery changes have separately recorded native receipts.",
   "report_closeout_obligations": [
     "FinalCPUjob creates audit/uncertainty/package metadata, not the finished narrative; reconcile FINAL_REPORT.md,README and this checklist manually with complete results and verified links.",

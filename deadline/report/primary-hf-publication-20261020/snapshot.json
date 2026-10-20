@@ -1,0 +1,11 @@
+{
+  "schema": "deadline-primary-publication-native-snapshot-v1",
+  "complete": true,
+  "observed_at_utc": "2026-10-20T17:22:44.628969+00:00",
+  "native_cpu_job_id": "1209745",
+  "sacct_text": "1209745|1209745|COMPLETED|336|0:0|billing=10,cpu=4,mem=32G,node=1\n",
+  "original_receipt_path": "deadline/hf/publication/publication_complete.json",
+  "receipt_sha256": "259623a64c1715516607c783303d10676dd84c2bd6e31851906b935c9f206d73",
+  "public_access_and_file_identities_verified_by_native_publisher": true,
+  "course_submission_performed": false
+}

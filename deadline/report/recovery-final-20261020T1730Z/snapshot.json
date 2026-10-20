@@ -1,0 +1,38 @@
+{
+  "schema": "deadline-posthoc-recovery-final-native-snapshot-v1",
+  "complete": true,
+  "observed_at_utc": "2026-10-20T17:31:57.702347+00:00",
+  "native_cpu_publication_job_id": "1217227",
+  "native_gpu_evaluation_job_id": "1216562",
+  "sacct_text": "1216562|COMPLETED|1940|0:0|billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1\n1217227|COMPLETED|120|0:0|billing=20,cpu=8,mem=64G,node=1\n",
+  "artifacts": {
+    "publication_complete.json": {
+      "sha256": "7b905af5c4408a00890fb6434a0aac9b8145ead3477fe1bfc18891d36a7de8d9",
+      "bytes": 8087
+    },
+    "evaluation_summary.json": {
+      "sha256": "027180fcc55446a57b6186f70e6ba6fb4fe984ad8512c0003e0aa21addaa4c7d",
+      "bytes": 13972
+    },
+    "publication_plan.json": {
+      "sha256": "c0c6319995267f4d8c29a89994094a76a137efa2b3eb7a810a2fb84fa87f26b8",
+      "bytes": 12258
+    },
+    "README.model.md": {
+      "sha256": "8b0b8fad11c31d4aa12f4ac2a1ea4719649ccb8bc41927792d77ea9a70ec0f6a",
+      "bytes": 3555
+    },
+    "NOTICE.published": {
+      "sha256": "fd21b38cf5c1021fbfb347a0f482383761822f6ed6f6f3fb6e05e4799d00c77e",
+      "bytes": 342
+    },
+    "MODIFICATIONS.md": {
+      "sha256": "b126d1ccf5e24f37df2fbd16488663a626e7a75fc6a8cab6014e7cbaa49b62c6",
+      "bytes": 499
+    }
+  },
+  "all_nine_four_role_raw_evaluation_matched": true,
+  "posthoc_single_fixed_coefficient": true,
+  "original_notice_preserved_and_published_notice_augmented": true,
+  "primary_four_artifacts_unchanged": true
+}

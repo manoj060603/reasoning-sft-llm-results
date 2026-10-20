@@ -1,0 +1,452 @@
+{
+  "all_nine_matched_raw": true,
+  "historical_leaderboard_equivalence_verified": false,
+  "models": {
+    "advanced": {
+      "benchmarks": {
+        "aime": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.025,
+            "pass_at_8": 0.13333333333333333,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 192
+          },
+          "status": "complete"
+        },
+        "aime25": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.016666666666666666,
+            "pass_at_8": 0.13333333333333333,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 185
+          },
+          "status": "complete"
+        },
+        "amc": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.25,
+            "pass_at_8": 0.45,
+            "problems": 40,
+            "samples_per_problem": 8,
+            "truncated_samples": 169
+          },
+          "status": "complete"
+        },
+        "cn_math_2024": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.05,
+            "pass_at_8": 0.23333333333333334,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 159
+          },
+          "status": "complete"
+        },
+        "gpqa": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.1414141414141414,
+            "pass_at_8": 0.5404040404040404,
+            "problems": 198,
+            "samples_per_problem": 8,
+            "truncated_samples": 954
+          },
+          "status": "complete"
+        },
+        "kaoyan": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.15452261306532664,
+            "pass_at_8": 0.47738693467336685,
+            "problems": 199,
+            "samples_per_problem": 8,
+            "truncated_samples": 667
+          },
+          "status": "complete"
+        },
+        "math": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.51225,
+            "pass_at_8": 0.782,
+            "problems": 500,
+            "samples_per_problem": 8,
+            "truncated_samples": 1235
+          },
+          "status": "complete"
+        },
+        "minerva": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.18106617647058823,
+            "pass_at_8": 0.41544117647058826,
+            "problems": 272,
+            "samples_per_problem": 8,
+            "truncated_samples": 1088
+          },
+          "status": "complete"
+        },
+        "olympiadbench": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.1887037037037037,
+            "pass_at_8": 0.40444444444444444,
+            "problems": 675,
+            "samples_per_problem": 8,
+            "truncated_samples": 3062
+          },
+          "status": "complete"
+        }
+      },
+      "official_eight_macro": {
+        "pass_at_1": 0.18786957933172,
+        "pass_at_8": 0.42954290783238835
+      },
+      "supplemented_historical_seven_macro": {
+        "pass_at_1": 0.14033904304577524,
+        "pass_at_8": 0.37919189466558667
+      }
+    },
+    "original": {
+      "benchmarks": {
+        "aime": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.07916666666666666,
+            "pass_at_8": 0.23333333333333334,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 10
+          },
+          "status": "complete"
+        },
+        "aime25": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.008333333333333333,
+            "pass_at_8": 0.03333333333333333,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 0
+          },
+          "status": "complete"
+        },
+        "amc": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.425,
+            "pass_at_8": 0.7,
+            "problems": 40,
+            "samples_per_problem": 8,
+            "truncated_samples": 3
+          },
+          "status": "complete"
+        },
+        "cn_math_2024": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.1,
+            "pass_at_8": 0.26666666666666666,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 8
+          },
+          "status": "complete"
+        },
+        "gpqa": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.2840909090909091,
+            "pass_at_8": 0.696969696969697,
+            "problems": 198,
+            "samples_per_problem": 8,
+            "truncated_samples": 5
+          },
+          "status": "complete"
+        },
+        "kaoyan": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.21105527638190955,
+            "pass_at_8": 0.49748743718592964,
+            "problems": 199,
+            "samples_per_problem": 8,
+            "truncated_samples": 3
+          },
+          "status": "complete"
+        },
+        "math": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.659,
+            "pass_at_8": 0.838,
+            "problems": 500,
+            "samples_per_problem": 8,
+            "truncated_samples": 19
+          },
+          "status": "complete"
+        },
+        "minerva": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.30330882352941174,
+            "pass_at_8": 0.47794117647058826,
+            "problems": 272,
+            "samples_per_problem": 8,
+            "truncated_samples": 5
+          },
+          "status": "complete"
+        },
+        "olympiadbench": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.2825925925925926,
+            "pass_at_8": 0.5185185185185185,
+            "problems": 675,
+            "samples_per_problem": 8,
+            "truncated_samples": 99
+          },
+          "status": "complete"
+        }
+      },
+      "official_eight_macro": {
+        "pass_at_1": 0.2930267835326862,
+        "pass_at_8": 0.5286146036430917
+      },
+      "supplemented_historical_seven_macro": {
+        "pass_at_1": 0.23062584784687948,
+        "pass_at_8": 0.45584526130639047
+      }
+    },
+    "random": {
+      "benchmarks": {
+        "aime": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.004166666666666667,
+            "pass_at_8": 0.03333333333333333,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 204
+          },
+          "status": "complete"
+        },
+        "aime25": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.029166666666666667,
+            "pass_at_8": 0.16666666666666666,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 203
+          },
+          "status": "complete"
+        },
+        "amc": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.225,
+            "pass_at_8": 0.475,
+            "problems": 40,
+            "samples_per_problem": 8,
+            "truncated_samples": 190
+          },
+          "status": "complete"
+        },
+        "cn_math_2024": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.008333333333333333,
+            "pass_at_8": 0.06666666666666667,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 215
+          },
+          "status": "complete"
+        },
+        "gpqa": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.09217171717171717,
+            "pass_at_8": 0.41414141414141414,
+            "problems": 198,
+            "samples_per_problem": 8,
+            "truncated_samples": 1089
+          },
+          "status": "complete"
+        },
+        "kaoyan": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.1407035175879397,
+            "pass_at_8": 0.41708542713567837,
+            "problems": 199,
+            "samples_per_problem": 8,
+            "truncated_samples": 1009
+          },
+          "status": "complete"
+        },
+        "math": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.49725,
+            "pass_at_8": 0.782,
+            "problems": 500,
+            "samples_per_problem": 8,
+            "truncated_samples": 1508
+          },
+          "status": "complete"
+        },
+        "minerva": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.15946691176470587,
+            "pass_at_8": 0.3639705882352941,
+            "problems": 272,
+            "samples_per_problem": 8,
+            "truncated_samples": 1269
+          },
+          "status": "complete"
+        },
+        "olympiadbench": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.17148148148148148,
+            "pass_at_8": 0.3837037037037037,
+            "problems": 675,
+            "samples_per_problem": 8,
+            "truncated_samples": 3526
+          },
+          "status": "complete"
+        }
+      },
+      "official_eight_macro": {
+        "pass_at_1": 0.16232170350073052,
+        "pass_at_8": 0.3669876416520113
+      },
+      "supplemented_historical_seven_macro": {
+        "pass_at_1": 0.11804623257226346,
+        "pass_at_8": 0.32674778093563195
+      }
+    },
+    "recovery": {
+      "benchmarks": {
+        "aime": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.0625,
+            "pass_at_8": 0.23333333333333334,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 19
+          },
+          "status": "complete"
+        },
+        "aime25": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.025,
+            "pass_at_8": 0.1,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 3
+          },
+          "status": "complete"
+        },
+        "amc": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.390625,
+            "pass_at_8": 0.75,
+            "problems": 40,
+            "samples_per_problem": 8,
+            "truncated_samples": 4
+          },
+          "status": "complete"
+        },
+        "cn_math_2024": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.125,
+            "pass_at_8": 0.3333333333333333,
+            "problems": 30,
+            "samples_per_problem": 8,
+            "truncated_samples": 6
+          },
+          "status": "complete"
+        },
+        "gpqa": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.3042929292929293,
+            "pass_at_8": 0.7626262626262627,
+            "problems": 198,
+            "samples_per_problem": 8,
+            "truncated_samples": 9
+          },
+          "status": "complete"
+        },
+        "kaoyan": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.21105527638190955,
+            "pass_at_8": 0.542713567839196,
+            "problems": 199,
+            "samples_per_problem": 8,
+            "truncated_samples": 1
+          },
+          "status": "complete"
+        },
+        "math": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.65325,
+            "pass_at_8": 0.846,
+            "problems": 500,
+            "samples_per_problem": 8,
+            "truncated_samples": 27
+          },
+          "status": "complete"
+        },
+        "minerva": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.2945772058823529,
+            "pass_at_8": 0.48161764705882354,
+            "problems": 272,
+            "samples_per_problem": 8,
+            "truncated_samples": 9
+          },
+          "status": "complete"
+        },
+        "olympiadbench": {
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "pass_at_1": 0.2740740740740741,
+            "pass_at_8": 0.4948148148148148,
+            "problems": 675,
+            "samples_per_problem": 8,
+            "truncated_samples": 122
+          },
+          "status": "complete"
+        }
+      },
+      "official_eight_macro": {
+        "pass_at_1": 0.2894218107039082,
+        "pass_at_8": 0.5555548698757204
+      },
+      "supplemented_historical_seven_macro": {
+        "pass_at_1": 0.23208921223303797,
+        "pass_at_8": 0.49501508938177574
+      }
+    }
+  },
+  "primary_comparison_unmodified": true,
+  "schema": "deadline-optional-recovery-all-nine-evaluation-v1"
+}

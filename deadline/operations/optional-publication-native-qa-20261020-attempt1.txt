@@ -1,0 +1,28 @@
+test_aggregate_only_receipt_cannot_substitute_for_raw_predictions (test_optional_publication.EvidenceGatesTests) ... ok
+test_all_nine_raw_benchmarks_are_accepted (test_optional_publication.EvidenceGatesTests) ... ok
+test_changed_merge_policy_or_incomplete_fp32_output_is_rejected (test_optional_publication.EvidenceGatesTests) ... ok
+test_complete_primary_publication_is_accepted_without_mutation (test_optional_publication.EvidenceGatesTests) ... ok
+test_errors_or_wrong_eight_sample_coverage_are_rejected (test_optional_publication.EvidenceGatesTests) ... ok
+test_fixed_complete_posthoc_merge_is_accepted (test_optional_publication.EvidenceGatesTests) ... ok
+test_missing_supplementary_ninth_task_is_rejected (test_optional_publication.EvidenceGatesTests) ... ok
+test_primary_receipt_cannot_swap_same_type_roles (test_optional_publication.EvidenceGatesTests) ... ok
+test_primary_receipt_rejects_missing_or_substituted_destination (test_optional_publication.EvidenceGatesTests) ... ok
+test_primary_receipt_requires_public_complete_exact_weight_evidence (test_optional_publication.EvidenceGatesTests) ... ok
+test_publication_notice_adds_upstream_attribution_and_preserves_original_bytes (test_optional_publication.EvidenceGatesTests) ... ok
+test_ambiguous_lost_creation_response_requires_reconciliation (test_optional_publication.OptionalTransactionTests) ... ok
+test_conflicting_optional_repository_prevents_all_remote_writes (test_optional_publication.OptionalTransactionTests) ... ok
+test_identical_retry_reverifies_without_any_additional_remote_writes (test_optional_publication.OptionalTransactionTests) ... ok
+test_login_or_gpu_allocation_never_writes (test_optional_publication.OptionalTransactionTests) ... ok
+test_lost_accepted_large_commit_resumes_without_reuploading_that_shard (test_optional_publication.OptionalTransactionTests) ... ok
+test_optional_destination_and_state_are_isolated_from_all_four_primary_repositories (test_optional_publication.OptionalTransactionTests) ... ok
+test_private_or_authenticated_only_visibility_cannot_claim_completion (test_optional_publication.OptionalTransactionTests) ... ok
+test_public_lfs_hash_mismatch_cannot_claim_completion (test_optional_publication.OptionalTransactionTests) ... ok
+test_separate_optional_state_path_is_accepted_without_creating_it (test_optional_publication.OptionalTransactionTests) ... ok
+test_unknown_existing_empty_repository_is_not_adopted (test_optional_publication.OptionalTransactionTests) ... ok
+test_unsafe_state_paths_are_rejected_before_any_directory_or_file_write (test_optional_publication.OptionalTransactionTests) ... ok
+test_wrong_expected_owner_or_authenticated_account_never_writes (test_optional_publication.OptionalTransactionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.045s
+
+OK

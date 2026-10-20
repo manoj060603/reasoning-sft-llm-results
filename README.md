@@ -10,7 +10,7 @@ due **October 20, 2026, at 11:59 p.m. Eastern**.
 
 ## Verified progress
 
-Verified snapshot: **October 20, 2026, at 1:12 p.m. Eastern / 17:12 UTC**.
+Verified snapshot: **October 20, 2026, at 1:41 p.m. Eastern / 17:41 UTC**.
 Both full-SFT runs and all three primary evaluations are complete: **9/9 tasks
 per model, including all eight supplied tasks and supplementary AIME25**. The
 [native final audit](deadline/report/primary-final-20261020T1708Z/audit.json)
@@ -24,7 +24,21 @@ protocol, benchmark identities and hardware and no audit errors.
 | Both final full-SFT models | Complete; 1,875 updates each, 15,000 unique examples used once, 434 finite FP32 tensors per model |
 | Original, random and advanced evaluations | All nine complete for each model; full matched comparison verified |
 | Primary native CPU closeout | `1208135` completed successfully; final audit, uncertainty and publication package created |
-| Hugging Face publication | Publisher `1209745` running; verified upload-completion receipt and four public links remain pending |
+| Hugging Face publication | Complete; two models and two datasets anonymously verified at their pinned commits |
+| Separate post-hoc recovery | All nine tasks raw-verified; distinct recovery checkpoint publicly verified |
+
+Publisher `1209745` completed at **17:15:11 UTC**, using 336 seconds of CPU
+allocation and no GPU. Its [completion receipt](deadline/report/primary-hf-publication-20261020/publication_complete.json)
+verifies public access, every published file, and unchanged evaluated FP32 weight
+bytes. The [snapshot](deadline/report/primary-hf-publication-20261020/snapshot.json)
+preserves the native publication evidence.
+
+| Primary artifact | Public repository | Verified commit |
+|---|---|---|
+| Random 15K model | [qwen25-3b-reasoning-random15k-20261019](https://huggingface.co/adversarialbandit/qwen25-3b-reasoning-random15k-20261019) | [860dd82d](https://huggingface.co/adversarialbandit/qwen25-3b-reasoning-random15k-20261019/tree/860dd82d4aa28b650555d6b4787b44711e4d0326) |
+| Advanced 15K model | [qwen25-3b-reasoning-transfer-coverage15k-20261019](https://huggingface.co/adversarialbandit/qwen25-3b-reasoning-transfer-coverage15k-20261019) | [550bdcc8](https://huggingface.co/adversarialbandit/qwen25-3b-reasoning-transfer-coverage15k-20261019/tree/550bdcc89a9352335d6030d6834fcff0f94d697f) |
+| Random original dataset | [reasoning-random15k-20261019](https://huggingface.co/datasets/adversarialbandit/reasoning-random15k-20261019) | [26077e02](https://huggingface.co/datasets/adversarialbandit/reasoning-random15k-20261019/tree/26077e0219ac79c8518e370dd7736091200d0da3) |
+| Advanced original dataset | [reasoning-transfer-coverage15k-20261019](https://huggingface.co/datasets/adversarialbandit/reasoning-transfer-coverage15k-20261019) | [aab32e0b](https://huggingface.co/datasets/adversarialbandit/reasoning-transfer-coverage15k-20261019/tree/aab32e0bf630ba32db492af0b4af0b2632c32a06) |
 
 **The advanced policy beats the prepared-source random control, but both SFT
 models regress from the original.** On the supplied-eight macro, advanced gains
@@ -35,19 +49,23 @@ uses 10,000 paired normalized-question-cluster draws. These intervals condition
 on the fixed models and eight recorded outputs; they exclude training-seed and
 additional generation-sampling variance, with no multiple-comparison adjustment.
 
-| Benchmark | Original pass@1 / pass@8 | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
-|---|---:|---:|---:|
-| AMC 2023 | 42.50% / 70.00% | 22.50% / 47.50% | 25.00% / 45.00% |
-| AIME24 | 7.92% / 23.33% | 0.42% / 3.33% | 2.50% / 13.33% |
-| MATH | 65.90% / 83.80% | 49.73% / 78.20% | 51.23% / 78.20% |
-| CN_MATH_2024 | 10.00% / 26.67% | 0.83% / 6.67% | 5.00% / 23.33% |
-| Kaoyan | 21.11% / 49.75% | 14.07% / 41.71% | 15.45% / 47.74% |
-| Minerva | 30.33% / 47.79% | 15.95% / 36.40% | 18.11% / 41.54% |
-| OlympiadBench | 28.26% / 51.85% | 17.15% / 38.37% | 18.87% / 40.44% |
-| GPQA | 28.41% / 69.70% | 9.22% / 41.41% | 14.14% / 54.04% |
-| AIME25, supplementary | 0.83% / 3.33% | 2.92% / 16.67% | 1.67% / 13.33% |
-| **Supplied-eight macro** | **29.30% / 52.86%** | **16.23% / 36.70%** | **18.79% / 42.95%** |
-| Supplemented seven, internal macro | 23.06% / 45.58% | 11.80% / 32.67% | 14.03% / 37.92% |
+| Benchmark | Original pass@1 / pass@8 | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 | Recovery, post-hoc pass@1 / pass@8 |
+|---|---:|---:|---:|---:|
+| AMC 2023 | 42.50% / 70.00% | 22.50% / 47.50% | 25.00% / 45.00% | 39.06% / 75.00% |
+| AIME24 | 7.92% / 23.33% | 0.42% / 3.33% | 2.50% / 13.33% | 6.25% / 23.33% |
+| MATH | 65.90% / 83.80% | 49.73% / 78.20% | 51.23% / 78.20% | 65.33% / 84.60% |
+| CN_MATH_2024 | 10.00% / 26.67% | 0.83% / 6.67% | 5.00% / 23.33% | 12.50% / 33.33% |
+| Kaoyan | 21.11% / 49.75% | 14.07% / 41.71% | 15.45% / 47.74% | 21.11% / 54.27% |
+| Minerva | 30.33% / 47.79% | 15.95% / 36.40% | 18.11% / 41.54% | 29.46% / 48.16% |
+| OlympiadBench | 28.26% / 51.85% | 17.15% / 38.37% | 18.87% / 40.44% | 27.41% / 49.48% |
+| GPQA | 28.41% / 69.70% | 9.22% / 41.41% | 14.14% / 54.04% | 30.43% / 76.26% |
+| AIME25, supplementary | 0.83% / 3.33% | 2.92% / 16.67% | 1.67% / 13.33% | 2.50% / 10.00% |
+| **Supplied-eight macro** | **29.30% / 52.86%** | **16.23% / 36.70%** | **18.79% / 42.95%** | **28.94% / 55.56%** |
+| Supplemented seven, internal macro | 23.06% / 45.58% | 11.80% / 32.67% | 14.03% / 37.92% | 23.21% / 49.50% |
+
+The recovery column is a separate fixed post-hoc weight interpolation, not a new
+SFT model or a replacement for the primary comparison. Its [final native summary](deadline/report/recovery-final-20261020T1730Z/evaluation_summary.json)
+verifies all nine tasks for all four roles from matched raw eight-sample outputs.
 
 The [complete results table](deadline/report/primary-final-20261020T1708Z/results.md)
 uses equal benchmark weights for each stated macro. The supplementary seven-task
@@ -70,7 +88,7 @@ limitations from unequal eligibility/token exposure and missing ablations.
 The primary selection method, models and evaluation protocol were not changed
 in response to the measured scores.
 
-A separate [post-hoc recovery experiment](deadline/recovery/plan.json) tests a
+A separate [post-hoc recovery experiment](deadline/recovery/plan.json) tested a
 fixed blend of 75% original weights and 25% advanced weights. Its CPU build
 verified 434 finite FP32 tensors, and 31 native checks passed. The fixed
 [64-question source-heldout screen](deadline/report/recovery-development-20261020/summary.json)
@@ -79,30 +97,39 @@ recovery **19/64**; length-limit finishes were **1/64**, **49/64** and **1/64**.
 This one-sample, 4K development result supports restored stopping versus advanced;
 it does not establish benchmark improvement or superiority to the original.
 
-Initial recovery benchmark job `1214775` started at **14:54:26 UTC**, using the
-same all-nine, eight-sample, 32K protocol in a bounded 45-minute allocation.
-The [native manifest audit](deadline/operations/recovery-evaluation-manifest-audit-20261020.json)
-confirms matching protocol, data, IDs, grader, runtime and B200 hardware. Its
-full-suite results remain pending. That first stage reached its time limit,
-retaining seven complete tasks. Primary SFT checkpoints, results and publication
-identities remain separate. The first recovery task is
-[raw-audited AMC](deadline/report/recovery-benchmark-partial-20261020T1502Z/audit.json):
-**39.0625% pass@1 / 75.00% pass@8**, versus advanced **25.00% / 45.00%** and
-original **42.50% / 70.00%**. Recovery improves over advanced in both metrics on
-AMC, while original retains higher pass@1. Full-suite results and significance
-remain unestablished. Recovery now has seven audited tasks:
-MATH **65.325% / 84.60%**, CN Math **12.50% / 33.33%**, and Kaoyan
-**21.1055% / 54.2714%** are also verified. The [five-task audit](deadline/report/recovery-benchmark-partial-20261020T1521Z/audit.json)
-and [additional Kaoyan audit](deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json)
-retain exact comparisons. MATH pass@1 remains below original; CN exceeds original
-in both recorded metrics, and Kaoyan ties original pass@1 with higher pass@8.
-Minerva is also verified at **29.4577% / 48.1618%**, versus original **30.3309% / 47.7941%** ([native audit](deadline/report/recovery-benchmark-partial-20261020T1535Z/minerva-audit.json)).
-Only OlympiadBench and GPQA remain outside the audited recovery snapshot.
-An [unchanged recovery continuation](deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json),
-job `1216562`, is **running**, starting at **12:51:19 p.m. Eastern / 16:51:19 UTC**
-with a 45-minute allocation ending at **1:36:19 p.m. Eastern / 17:36:19 UTC**.
-It retains the initial seven saved tasks and uses the same model, protocol and
-output directory. No recovery full macro or significance is established.
+Initial recovery job `1214775` retained seven complete tasks at its time limit.
+The [unchanged continuation](deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json),
+`1216562`, completed successfully after **1,940 seconds**, finishing OlympiadBench
+and GPQA with the same weights, eight-sample 32K protocol, data, IDs, grader,
+runtime and B200 hardware. Recovery GPQA is **30.4293% / 76.2626%**, with **9
+length finishes out of 1,584 responses**. Its supplied-eight macro is
+**28.94218107% / 55.55548699%**, versus original **29.30267835% / 52.86146036%**:
+pass@1 is **0.3605 points lower** and pass@8 **2.6940 points higher**. This is a
+tradeoff, not dominance or a SOTA result. Recovery has **197 / 15,552 supplied-task
+length finishes**, versus original 152, random 9,010 and advanced 7,526. The report
+retains the per-task length counts. The completed [native recovery uncertainty](deadline/report/recovery-final-20261020T1730Z/uncertainty.json)
+gives supplied-eight recovery-minus-original 95% intervals of **[−1.2973, 0.6356]
+points pass@1** and **[−0.1363, 5.6131] points pass@8**. Both include zero: this
+conditional analysis finds **no clear supplied-eight difference from original**.
+Recovery exceeds random by **12.7100 points pass@1 [11.1310, 14.3782]** and
+**18.8567 points pass@8 [15.1679, 22.6705]**. These 10,000 paired question-cluster
+draws use seed 20261019, exclude training-seed and additional generation variance,
+and make no multiple-comparison adjustment. The fixed post-hoc candidate and
+point estimates establish neither general superiority nor SOTA. CPU analysis
+`1217465` completed in **27 seconds**, with no GPU or primary-output changes.
+
+The distinct [recovery checkpoint](https://huggingface.co/adversarialbandit/qwen25-3b-base75-advanced25-posthoc-20261020)
+is anonymously verified at [commit 51814ba26ab0dc052447aee1612bebcffdba43f2](https://huggingface.co/adversarialbandit/qwen25-3b-base75-advanced25-posthoc-20261020/tree/51814ba26ab0dc052447aee1612bebcffdba43f2).
+Its [publication receipt](deadline/report/recovery-final-20261020T1730Z/publication_complete.json)
+and [native snapshot](deadline/report/recovery-final-20261020T1730Z/snapshot.json)
+confirm completion at **17:28:51 UTC**; CPU publisher `1217227` completed in 120
+seconds after **23 native CPU checks** and wrapper syntax checks passed.
+All six evaluated FP32 weight shards and model/tokenizer sidecars retain their
+exact bytes. Publication adds the required upstream attribution sentence to
+NOTICE while preserving the original recovery notice verbatim and separately
+under provenance; both hashes are declared. The coefficient was fixed before
+recovery generation, after primary outcomes had been viewed; no additional SFT
+or coefficient sweep occurred. All four primary publications remain unchanged.
 
 The [runtime continuation record](deadline/operations/evaluation-resume-20261020.json)
 documents retaining six completed benchmarks and fully regenerating the unsaved
@@ -119,7 +146,8 @@ and [advanced proof](deadline/operations/gpu-budget-reconciliation-637c6b2ed6420
 therefore establish the primary-only terminal-plus-open-reservation bound of **47.05 of 48
 GPU-hours (169,380 seconds)**. This is **not actual elapsed GPU usage**.
 Before recovery, admitted requests totaled 70 hours; the 88-hour all-attempt history
-includes 18 hours verified never admitted. Final resource reconciliation and publication remain pending; primary comparisons are complete.
+includes 18 hours verified never admitted. These are historical reservation
+snapshots; the terminal resource reconciliation is reported below.
 
 The recovery screen completed in 316 seconds and is charged 360 GPU-seconds
 under its [terminal accounting proof](deadline/operations/gpu-budget-reconciliation-e85de9ae41202753.json).
@@ -133,26 +161,33 @@ then-full random and recovery-continuation reservations gave
 **163,200 seconds = 45.333333 / 48 GPU-hours**. This preserved reservation snapshot
 is historical, not actual elapsed usage.
 
-**Current resource bound, 17:11:50 UTC:** random continuation `1210309` completed
+**Historical resource bound, 17:11:50 UTC:** random continuation `1210309` completed
 after **35,613 seconds** and is conservatively charged **35,640 GPU-seconds** by
 its [terminal proof](deadline/operations/gpu-budget-reconciliation-029e44effa49a4c6.json).
-Verified closed charges now total **138,540 seconds (38.483333 GPU-hours)**.
-The only remaining GPU reservation is the 2,700-second recovery continuation,
-so the bound is **141,240 seconds = 39.233333 / 48 GPU-hours**, with **31,560
-seconds** uncommitted. Final consumed use awaits recovery terminal accounting.
+Verified closed charges then totaled **138,540 seconds (38.483333 GPU-hours)**.
+Adding the then-open 2,700-second recovery continuation gave
+**141,240 seconds = 39.233333 / 48 GPU-hours**, before its terminal reconciliation.
 Historical admitted requests remain **72.25 hours**, and all-attempt requests
 **90.25 hours**; no request history is erased.
+
+**Final GPU accounting:** all GPU allocations are terminal. The [final exact
+reconciliation](deadline/operations/gpu-budget-reconciliation-43fae58f06119f1c.json)
+records **140,025 actual elapsed GPU-seconds = 38.895833 GPU-hours** and
+**140,520 conservatively minute-rounded GPU-seconds = 39.033333 / 48 GPU-hours**.
+The recovery continuation's 1,940 seconds are charged as 1,980 seconds. Interrupted
+and timed-out work is included. Historical admitted/all-attempt reservations
+remain **72.25 / 90.25 hours**. CPU packaging and publication add zero GPU usage.
 
 The [primary closeout receipt](deadline/operations/primary-closeout-complete-20261020.json)
 confirms CPU job `1208135` completed successfully in 159 seconds. It produced
 matched results, paired uncertainty and a verified [staged publication package](deadline/report/primary-final-20261020T1708Z/publication-package/package_manifest.json).
-Publisher `1209745` is running. Hugging Face publication remains pending its
-verified completion receipt and four public artifact links.
+Publisher `1209745` completed successfully. Its four public artifacts and exact
+verified commits are linked above. Manual course submission remains pending.
 
 ## Read the experiment
 
 - [Method, controls and execution workflow](deadline/README.md)
-- [Report draft and assignment answers](deadline/FINAL_REPORT.md)
+- [Report and assignment answers](deadline/FINAL_REPORT.md)
 - [Complete primary results and audit](deadline/report/primary-final-20261020T1708Z/results.md)
 - [Paired uncertainty and generation diagnostics](deadline/report/primary-final-20261020T1708Z/uncertainty.json)
 - [Requirement-by-requirement checklist](deadline/assignment_checklist.json)
@@ -168,15 +203,12 @@ transfer-gain ablation.
 
 ## Reproducibility and delivery
 
-The [fresh source snapshot](https://github.com/manoj060603/reasoning-sft-llm-results/commit/45e4d38784f1fdad4c033031f3b2d4c32c6c94b2)
-is public and verified against its corresponding local source tree; see the
-[publication receipt](deadline/report/source_publication_receipt.json).
-A [verified source snapshot](https://github.com/manoj060603/reasoning-sft-llm-results/commit/3003d5860e829135ebda53f7e1826a92927eb1f1)
-matches local commit `62e98f15e3e6775e0502ee00079e7701a74562ea` and entire tree
-`386e161cc13632530f171c055158e0f56f27506c`. It includes the primary 10:10 UTC
-partial audit and separately labeled recovery preparation. Source publication
-does not establish completed recovery generation, benchmark gains, or publication
-of model and dataset artifacts.
+The public source is [manoj060603/reasoning-sft-llm-results, main](https://github.com/manoj060603/reasoning-sft-llm-results/tree/main).
+The [report](deadline/FINAL_REPORT.md) links the complete native primary and
+recovery evaluations, all five verified model/dataset publications, and terminal
+GPU accounting. This source snapshot contains the final documentation and
+native evidence. The [earlier source-publication receipt](deadline/report/source_publication_receipt.json)
+is retained as historical snapshot verification.
 
 Heavy preparation, training, evaluation and native checks run in ARC compute
 allocations. Exact source revisions, selected IDs, actual example consumption,
@@ -185,12 +217,14 @@ plan was 42 GPU-hours; the fresh experiment's consumption cap remains 48 hours.
 Any unused-reservation reconciliation preserves historical requests and charges
 the full reservation for every open or unverified allocation.
 
-Matched primary results, uncertainty estimates and their report interpretation
-are complete. Remaining delivery work includes verified links for two public
-model repositories and two public dataset repositories, final resource/source
-reconciliation and team submission. The publisher is in progress; source
-availability and upload calls do not establish verified publication. Course
-submission remains a human action.
+The mandatory technical delivery is complete: both trained models, both original
+15K dataset exports, matched primary results, uncertainty estimates and report
+interpretation are available, with anonymous verification of all four Hugging
+Face repositories. The optional recovery checkpoint is separately published and
+verified, terminal GPU accounting is complete, and the separate recovery
+uncertainty analysis is complete. The final source snapshot is ready; manual team
+submission remains pending. Recovery uncertainty is labeled separately from the
+unchanged primary CI claims. Course submission remains a human action.
 
 The code license is in [LICENSE](LICENSE). Published derivative model weights
 must carry the [pinned upstream Qwen Research License](deadline/licenses/Qwen2.5-3B-Instruct.LICENSE),
