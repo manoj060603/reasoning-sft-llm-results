@@ -1,0 +1,157 @@
+{
+  "schema": "reasoning-sft-retention-onpolicy-planning-review-v1",
+  "status": "research_recommendation_only_not_a_frozen_plan_or_job_admission",
+  "reviewed_as_of_utc": "2026-10-20T23:07:04+00:00",
+  "scope": "Fixed original Qwen2.5-3B-Instruct, one-week extension, user-reported removal of the old GPU-hour cap; finite job bounds and the historical experiment remain intact.",
+  "local_evidence": {
+    "cpu_audit": "extension/report/feasibility-20261020-1222225/complete.json",
+    "literature_inventory": "extension/research.json",
+    "facts_reported_by_parent_from_completed_native_audit": [
+      "All 83029 prepared source outputs begin with a literal <think> tag and have one balanced tag pair.",
+      "The old advanced 15000 originals already had complete supervised EOS and boxed answers, lower repetition and lower English branching-keyword density than random.",
+      "The advanced model nevertheless ended 7526 of 15552 benchmark samples at the length limit."
+    ],
+    "inference_not_established_cause": "Another completeness/branching-only selector is unlikely to be a sufficient new mechanism. Teacher/student trajectory mismatch and harmful policy drift deserve direct causal tests. The audit does not prove either mechanism and does not establish a training-code bug."
+  },
+  "primary_research": [
+    {
+      "method": "ASFT",
+      "paper": "https://arxiv.org/abs/2509.23753",
+      "code": "https://github.com/zhuchichi56/ASFT",
+      "mechanism": "Detached online target-probability-weighted CE plus forward KL from frozen starting model to the trainable model.",
+      "relevance": "A direct retention intervention compatible with unchanged original pairs and full-parameter SFT. It is distinct from post-hoc weight interpolation.",
+      "caveats": "Published math experiments use Qwen2.5-7B, different data and evaluation. Its own 30K math table has ASFT aggregate27.18 versus DFT27.66, so superiority is not universal. KL on teacher-forced states need not preserve behavior at student-visited generation states.",
+      "cost_evidence": "One reported LLaMA-7B configuration takes0.648h versus0.524h SFT, with substantially higher memory. This ratio is not a B200/Qwen3B runtime prediction."
+    },
+    {
+      "method": "PriFT",
+      "paper": "https://arxiv.org/abs/2606.09396",
+      "code": "https://github.com/wang-kee/PriFT",
+      "mechanism": "Use frozen starting-model probabilities or cumulative probability mass to weight original target tokens, avoiding online self-reinforcing weights.",
+      "relevance": "A reproducible prior-support baseline for our proposed prior-weighted and KL-anchored synthesis.",
+      "caveats": "Prior support is not correctness. Raw probability can favor easy formatting/function tokens and suppress genuinely new knowledge. Published improvements are not directly comparable to our assignment protocol.",
+      "cost_evidence": "A single reference forward pass adds approximately1/(3E) FLOPs to E SFT epochs: about33% for one epoch,16.7% for two. Cached reference statistics can avoid a simultaneous reference model during later training."
+    },
+    {
+      "method": "Retaining by Doing",
+      "paper": "https://arxiv.org/abs/2510.18874",
+      "version": "v3,2026-06-26; ICML2026",
+      "mechanism": "Controlled experiments attribute much of RL retention to on-policy data rather than KL regularization or advantage estimation alone; approximately on-policy data can be useful.",
+      "relevance": "Motivates an independent own-trajectory data arm alongside anchored SFT, especially because every supplied original trace shares the same imported thinking style.",
+      "caveats": "A mechanism and transfer hypothesis, not evidence that our exact3B model will improve on every math/science benchmark."
+    },
+    {
+      "method": "On-Policy SFT for Efficient Reasoning",
+      "paper": "https://arxiv.org/abs/2602.13407",
+      "code": "https://github.com/EIT-NLP/On-Policy-SFT",
+      "mechanism": "Repeatedly sample current-model solutions, retain answer-correct responses within a length budget, and train with supervised learning.",
+      "evidence": "R1-Distill-Qwen1.5B: accuracy59.9 versus original59.0, Pass@N73.6 versus73.5, mean length2186 versus10178. Main models are R1-distill1.5B and7B, not our nonreasoning Qwen2.5-3B-Instruct.",
+      "cost_evidence": "Authors report about30% of their ThinkPrune baseline wall time to converge, but this does not provide an absolute B200 budget for us.",
+      "caveats": "Primarily an efficiency result with small accuracy changes. Own-trajectory SFT can reshape existing success probability without adding missing capabilities. A one-shot rejection-sampling pilot is an approximately-on-policy adaptation, not a reproduction of their iterative algorithm."
+    },
+    {
+      "method": "Small Model Learnability Gap",
+      "paper": "https://arxiv.org/abs/2502.12143",
+      "mechanism": "Small students can benefit more from compatible shorter traces and a mixture of reasoning styles than from only long strong-teacher traces.",
+      "exact_model_evidence": "For Qwen2.5-3B-Instruct, the reported five-task aggregate is40.3 with long traces,43.4 with short traces and45.9 with mixed distillation.",
+      "caveats": "Different training data and decoding. Shortening alone is not a correctness guarantee, and arbitrary deletion/truncation can remove necessary reasoning. A regenerated or rewritten trace must remain separately identified from an original assignment pair."
+    },
+    {
+      "method": "GRPO and exact3B follow-up evidence",
+      "original_grpo_paper": "https://arxiv.org/abs/2402.03300",
+      "exact_model_followup": "https://arxiv.org/abs/2605.04066",
+      "exact_model_followup_name": "Adaptive Power-Mean Policy Optimization",
+      "evidence": "Its Qwen2.5-3B-Instruct six-math-task Pass@1 aggregate is32.4 for APMPO versus29.4 GRPO and25.1 original in that paper.",
+      "caveats": "These are author-reported different-protocol results, not our eight-task macro. That paper lists12000 MATH training examples and674 Olympiad examples; exact bytes/splits must be audited before borrowing data or scores. No GPQA preservation result establishes an all-benchmark benefit. Absolute training GPU-hours were not established in this review. Start with auditable GRPO before adding adaptive objectives."
+    },
+    {
+      "method": "RLVR capability-versus-coverage analysis",
+      "paper": "https://arxiv.org/abs/2504.13837",
+      "version": "v5,2025-11-24; NeurIPS2025",
+      "evidence": "Across studied settings, RLVR often improves small-k accuracy while the original model covers more solutions at sufficiently large k; distillation can add teacher reasoning patterns.",
+      "caveats": "This is empirical evidence about the studied algorithms and budgets, not an impossibility theorem for every RL setup. It directly motivates measuring both pass@1 and pass@8 rather than choosing only a convenient metric."
+    }
+  ],
+  "recommended_priority": [
+    {
+      "priority": 1,
+      "arm": "Main original-pair anchored full-SFT",
+      "reason": "Preserves the clean15K original-pair assignment experiment and uses already prepared objective implementations. Test true base compatibility and retention, not completeness/branch filtering alone.",
+      "causal_controls": [
+        "Same original model revision, tokenizer, prompts, optimizer precision, response masks and per-example reduction.",
+        "Cross eligible-random and proposed coverage/base-compatible selection with ordinaryCE and the frozen-base anchored objective on matched data.",
+        "Keep ASFT as a published baseline; identify frozen-prior-weighted-plus-KL as an experimental synthesis with no novelty claim.",
+        "Track effective gradient weights, comparable update magnitude, EOS supervision, base KL, generation stopping and labeled math/science accuracy.",
+        "Use predefined development and independent confirmation; never choose the winning objective from assignment benchmark results."
+      ]
+    },
+    {
+      "priority": 2,
+      "arm": "Separately labeled answer-checked concise approximately-on-policy SFT",
+      "reason": "Directly changes the teacher/student prefix distribution that the native audit found common to all original traces; avoids the implementation burden of a new RL stack.",
+      "causal_controls": [
+        "Use the same independently labeled, decontaminated training questions for compared response policies; separate every training question from development/confirmation.",
+        "Compare source/expert traces with sampled answer-correct student traces on the common-question intersection. Do not compare different easy/hard question populations as if only trace style changed.",
+        "If selecting the shortest correct trace, include a random-correct trace control where feasible to isolate conciseness from correctness rejection sampling.",
+        "Match example exposure and record actual target-token exposure; shortened data changes both distribution and token budget.",
+        "Keep generated targets, raw rollouts, model revision, question IDs, answers, grader decisions and selection probabilities separate from the unchanged original15K exports.",
+        "Call outputs answer-checked, not logically verified reasoning: matching the final answer cannot certify every intermediate step. AceReason boxed-answer agreement alone is weaker than independent ground-truth verification."
+      ]
+    },
+    {
+      "priority": 3,
+      "arm": "GRPO feasibility branch",
+      "reason": "Worth a bounded smoke test if the preceding rollout inventory produces nontrivial mixtures of successful and unsuccessful attempts and the main SFT pipeline remains on schedule.",
+      "causal_controls": [
+        "Use exact original3B initialization or a single prespecified SFT initialization; do not silently compare different initial models.",
+        "Use trustworthy answer rewards with native grader oracles and record all-zero/all-one group rates; group-relative gradients vanish without reward variation.",
+        "Compare GRPO with answer-checked SFT using the same question pool, rollout distribution and approximately matched generated-token budget; include rollout and optimizer costs.",
+        "Freeze reward, length/truncation policy, KL direction/coefficient, advantage normalization, clipping and sampling before the RL pilot.",
+        "Audit reward exploitation, output diversity and independent science retention. Do not introduce Prolog tools, majority voting or inference-time selection into the unchanged assignment benchmark protocol."
+      ]
+    }
+  ],
+  "proposed_bounded_next_pilot_not_admitted": {
+    "prerequisites": [
+      "Native CPU tests and zero-update serialization/config checks pass.",
+      "Seal exact data IDs, independently sourced answers, exclusions, licenses and train/development/confirmation partitions.",
+      "Write exact pilot acceptance/ranking and failure-stop rules before generation; preserve the old source screens as previously viewed data.",
+      "Inspect the separate extension ledger and scheduler for duplicates; keep old plans/ledgers/checkpoints unchanged."
+    ],
+    "first_rollout_inventory": {
+      "model": "Original pinned Qwen2.5-3B-Instruct",
+      "questions_maximum": 1024,
+      "samples_per_question": 8,
+      "response_token_cap": 4096,
+      "maximum_generated_tokens": 33554432,
+      "proposed_allocation_ceiling": "One B200 for at most2hours; an operational reservation, not a measured runtime prediction.",
+      "record": [
+        "Per-question correctness, native stopping/EOS, boxed-answer extraction, output length and repetition.",
+        "Questions with zero, partial or complete success across eight samples.",
+        "Number and topic/difficulty distribution of questions retaining at least one completed answer-correct trajectory under the predefined length budget.",
+        "All raw output identities and failed/incomplete work; never treat a partial inventory as a completed experiment."
+      ]
+    },
+    "matched_small_sft_pilot": {
+      "questions_maximum": 1024,
+      "bounded_scope": "At most one small matched pilot for the anchored original-pair branch and one separately identified generated-trace branch after frozen admission. Reserve at most4additional GPU-hours initially, then recalibrate from measured native throughput.",
+      "gate_dimensions_to_freeze": [
+        "Independent labeled math accuracy and science noninferiority, with both pass@1 and pass@8.",
+        "Native stopping, length-limit finishes, repetition and supervised termination-token counts.",
+        "No selection from public benchmark outcomes; no claim based solely on lower teacher-forced loss or shorter responses."
+      ]
+    },
+    "optional_grpo_smoke_test": {
+      "initial_ceiling": "At most2 B200 GPU-hours for environment, reward, rollout/update and provenance smoke testing; no automatic multi-day continuation.",
+      "continuation_condition": "Only after a frozen plan, native tests, usable mixed-reward groups and source-only learning/retention evidence; exact full training reservation requires its own review and admission."
+    },
+    "main_feasibility_constraint": "Unlimited user GPU-hours do not remove the one-week wall-clock, queue, implementation, data-verification or final-evaluation constraints. Keep a bounded final-candidate policy and explicit final benchmark/publication reserves."
+  },
+  "claim_limits": [
+    "No method here has demonstrated a win on all eight assignment benchmarks for this exact3B model and frozen protocol.",
+    "R1-distill, specialized math-base and general-instruct checkpoints are different models; their scores cannot replace our original-model comparison.",
+    "Our previously viewed assignment test scores make later benchmark comparisons exploratory; new independent confirmation improves selection discipline but cannot erase prior exposure.",
+    "New concise/distilled or RL arms are additional experiments and must not be relabeled as training on the original unmodified15K response pairs."
+  ],
+  "work_performed_by_this_review": "Primary-source browsing, small source/metadata reads and creation of this planning JSON only. No model/data workload, tests, scheduler submission, inference or publication was performed."
+}

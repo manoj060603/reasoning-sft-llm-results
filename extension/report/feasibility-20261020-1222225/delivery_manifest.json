@@ -1,0 +1,55 @@
+{
+  "manifest_copy": {
+    "path": "extension/report/feasibility-20261020-1222225/evidence_manifest.json",
+    "sha256": "0bb02571b8eab5ea278f7ae8cc67e2e21ce3d0abc61065c6e3925f026b0b9e41"
+  },
+  "native_evidence_archive_bytes": 17326,
+  "native_evidence_archive_sha256": "e7ed45985b1e444966c59d1b0fedbd2db039083e16ad6c8abf401583848a3b13",
+  "native_root": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019",
+  "public_copies": {
+    "extension/job_ledger.json": {
+      "bytes": 4532,
+      "exact_native_bytes": true,
+      "public_copy": "extension/report/feasibility-20261020-1222225/job_ledger_snapshot.json",
+      "sha256": "fc8823b440c38a3880bd39cc4b1d18403500f437bcbe346c6bddba025babe56b"
+    },
+    "extension/logs/extension-feasibility-1222225.err": {
+      "bytes": 7070,
+      "exact_native_bytes": true,
+      "public_copy": "extension/report/feasibility-20261020-1222225/extension-feasibility-1222225.err",
+      "sha256": "ac464c44365b9bfe48adb9c8033adfdd2f11bfec0eca300385873b7d8b834692"
+    },
+    "extension/logs/extension-feasibility-1222225.out": {
+      "bytes": 1328,
+      "exact_native_bytes": true,
+      "public_copy": "extension/report/feasibility-20261020-1222225/extension-feasibility-1222225.out",
+      "sha256": "d54ffa0d28e161226a54f861501517c8ae67585d37ebad111994ca59189b6a3a"
+    },
+    "extension/runs/feasibility-20261020-1222225/accounting.json": {
+      "bytes": 819,
+      "exact_native_bytes": true,
+      "public_copy": "extension/report/feasibility-20261020-1222225/accounting.json",
+      "sha256": "d864ce6d17a8ee2afc7c421bf4af14a421920334a8c25798b4a5e3330ef41969"
+    },
+    "extension/runs/feasibility-20261020-1222225/complete.json": {
+      "bytes": 47628,
+      "exact_native_bytes": true,
+      "public_copy": "extension/report/feasibility-20261020-1222225/complete.json",
+      "sha256": "8cee12034e7c9f9f6f3334cdac2d3edf5504658ef8000c664761a16887440505"
+    },
+    "extension/runs/feasibility-20261020-1222225/native_qa.json": {
+      "bytes": 4184,
+      "exact_native_bytes": true,
+      "public_copy": "extension/report/feasibility-20261020-1222225/native_qa.json",
+      "sha256": "231aa7156bd5b2ae9622f464c2c501ee5aba4de25ecb1bc4775026e65a33f1e0"
+    },
+    "extension/source_install_receipt.json": {
+      "bytes": 2492,
+      "exact_native_bytes": true,
+      "public_copy": "extension/report/feasibility-20261020-1222225/source_install_receipt.json",
+      "sha256": "6a064c6d9d2794d85eaf47f3f11e6c6c1b51e9334f31a30f1b4a5b5562edb66e"
+    }
+  },
+  "schema": "extension-feasibility-public-delivery-v1",
+  "summary_is_post_audit_interpretation_not_native_execution": true
+}

@@ -1,0 +1,69 @@
+{
+  "bindings": {
+    "accounting.json": {
+      "bytes": 819,
+      "sha256": "d864ce6d17a8ee2afc7c421bf4af14a421920334a8c25798b4a5e3330ef41969"
+    },
+    "complete.json": {
+      "bytes": 47628,
+      "sha256": "8cee12034e7c9f9f6f3334cdac2d3edf5504658ef8000c664761a16887440505"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 4532,
+      "sha256": "fc8823b440c38a3880bd39cc4b1d18403500f437bcbe346c6bddba025babe56b"
+    },
+    "native_qa.json": {
+      "bytes": 4184,
+      "sha256": "231aa7156bd5b2ae9622f464c2c501ee5aba4de25ecb1bc4775026e65a33f1e0"
+    },
+    "source_install_receipt.json": {
+      "bytes": 2492,
+      "sha256": "6a064c6d9d2794d85eaf47f3f11e6c6c1b51e9334f31a30f1b4a5b5562edb66e"
+    }
+  },
+  "created_at_utc": "2026-10-20T23:07:49.210902+00:00",
+  "elapsed_seconds": 221,
+  "exit_code": "0:0",
+  "facts": {
+    "advanced_branch_keyword_pooled_density": 0.0703073630505646,
+    "advanced_complete_at8192_rows": 15000,
+    "advanced_source_repetition_median": 0.012574919874342783,
+    "advanced_truncated_training_rows": 0,
+    "finalized_pool_rows": 83029,
+    "pool_balanced_reasoning_tag_rows": 83029,
+    "pool_complete_with32_token_reserve_at16384": 80071,
+    "pool_complete_with32_token_reserve_at8192": 51111,
+    "random_branch_keyword_pooled_density": 0.0976283150801054,
+    "random_source_repetition_median": 0.018498926958231354,
+    "random_truncated_training_rows": 5806
+  },
+  "gpu_seconds": 0,
+  "historical_artifacts_modified": false,
+  "interpretation": {
+    "branch_proxy_limit": "Formatting-sensitive English keyword counts are not verified reasoning quality; lower density is not causal evidence of better training.",
+    "established_training_implementation_bug": false,
+    "explanation": "The earlier advanced examples already have complete, balanced serialization and lower source repetition/English branch-keyword density than random. Their generated collapse is not explained by malformed reasoning tags or prefix truncation in that arm. Retention, teacher/student mismatch and actual generated correctness deserve separate causal pilots.",
+    "generated_collapse_cause_established": false,
+    "structure_filter_alone_supported_as_sufficient_fix": false
+  },
+  "job_id": "1222225",
+  "native_tests": {
+    "errors": 0,
+    "failures": 0,
+    "run": 64,
+    "skips": 0,
+    "wrapper_syntax_passed": true
+  },
+  "new_benchmark_results_available": false,
+  "new_gpu_training_started": false,
+  "new_inference_started": false,
+  "next_steps_proposed_not_admitted": [
+    "Fresh labeled math/science development feasibility with exact and near-duplicate exclusions.",
+    "Seal pilot identities, data exposures, objective and scale controls, ranking and confirmation gates before GPU outcomes.",
+    "Native training-integration and maximum-length memory/EOS checks before actual training.",
+    "A separately identified answer-checked concise-response pilot, if independently labeled questions remain available."
+  ],
+  "schema": "extension-feasibility-interpretation-v1",
+  "stage": "CPU feasibility only",
+  "terminal_state": "COMPLETED"
+}

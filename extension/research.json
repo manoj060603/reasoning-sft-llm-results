@@ -1,0 +1,144 @@
+{
+  "schema": "reasoning-sft-extension-literature-review-v1",
+  "reviewed_at_utc": "2026-10-20T22:47:07.189303+00:00",
+  "scope": "Relevant primary research available by2026-10-20, emphasizing fixedQwen2.5-3B, reasoning data selection and preservation; not an exhaustive or globally ranked state-of-the-art survey.",
+  "papers": [
+    {
+      "method": "GRAPE",
+      "primary_url": "https://arxiv.org/abs/2502.04194",
+      "paper_version_date": "2025-02-06",
+      "mechanism": "Selects the highest target-model likelihood response among alternatives to the same instruction.",
+      "transfer_limit": "Our source has one response per question; cross-question NLL ranking is an adaptation, not a reproduction. Use within topic and length strata."
+    },
+    {
+      "method": "LESS",
+      "primary_url": "https://arxiv.org/abs/2402.04333",
+      "paper_version_date": "2024-02-06",
+      "mechanism": "Projected, optimizer-aware gradient similarity to task-development examples selects targeted instruction data.",
+      "transfer_limit": "Warm-up and per-example backward passes are expensive under the remaining budget; needs trustworthy independent development labels."
+    },
+    {
+      "method": "S2L",
+      "primary_url": "https://arxiv.org/abs/2403.07384",
+      "paper_version_date": "2024-03",
+      "mechanism": "Selects through clustering loss trajectories from a smaller proxy model.",
+      "transfer_limit": "Endpoint probe loss reduction is not a reproduction. Repeated scans and short-context original experiments limit transfer."
+    },
+    {
+      "method": "DavIR",
+      "primary_url": "https://arxiv.org/abs/2310.13008",
+      "paper_version_date": "2023-10",
+      "mechanism": "Uses relative reference-model loss improvement as a model-specific data-selection signal.",
+      "transfer_limit": "Close to the signal already tested. Loss reduction alone did not establish useful free-generation behavior in our experiment."
+    },
+    {
+      "method": "TEMP",
+      "primary_url": "https://arxiv.org/abs/2606.26797",
+      "paper_version_date": "2026-06-25",
+      "mechanism": "Uses early reasoning-token losses under perturbations for difficulty and gradient-related diversity signals.",
+      "transfer_limit": "Requires a usable fine-tuning trajectory and multiple scoring passes. Evidence is mainly 7B/8B, not our exact3B assignment."
+    },
+    {
+      "method": "Reasoning pattern filtering",
+      "primary_url": "https://arxiv.org/html/2604.01702v2",
+      "paper_version_date": "2026-04",
+      "mechanism": "Investigates transfer of branching-heavy reasoning behavior and filters highly branching trajectories.",
+      "transfer_limit": "English keyword density is a diagnostic proxy, not proof of invalid reasoning. Length-only pruning is not equivalent and can harm results."
+    },
+    {
+      "method": "Through the Valley",
+      "primary_url": "https://arxiv.org/html/2506.07712v2",
+      "paper_version_date": "2025-10-01",
+      "mechanism": "Documents limited-data long-CoT degradation in small models, including Qwen2.5-3B-Instruct.",
+      "transfer_limit": "Supports a mismatch hypothesis, not a diagnosis of our implementation. More training on our fixed15K is not demonstrated to repair it."
+    },
+    {
+      "method": "Small Models Struggle to Learn from Strong Reasoners",
+      "primary_url": "https://arxiv.org/abs/2502.12143",
+      "paper_version_date": "2025-11-13",
+      "mechanism": "Studies small-student learnability and mixed short/long reasoning supervision.",
+      "transfer_limit": "Changing or generating traces is a separate data intervention; retain original-pair provenance in the main assignment arm."
+    },
+    {
+      "method": "Capacity dependent data selection",
+      "primary_url": "https://arxiv.org/abs/2608.13721",
+      "paper_version_date": "2026-08-13",
+      "mechanism": "Reports that useful response likelihood depends on student capacity and training duration.",
+      "transfer_limit": "Avoid a universal lowest-loss or hardest-data rule. Same-question alternative-response experiments differ from our source."
+    },
+    {
+      "method": "ASFT",
+      "primary_url": "https://arxiv.org/abs/2509.23753",
+      "paper_version_date": "2026-02-01",
+      "mechanism": "Adds frozen-base forward KL regularization to detached online-probability-weighted dynamic SFT.",
+      "transfer_limit": "A training objective, not posthoc weight blending. Adds a reference forward and memory; does not win universally across settings."
+    },
+    {
+      "method": "PriFT",
+      "primary_url": "https://arxiv.org/abs/2606.09396",
+      "paper_version_date": "2026-06-08",
+      "mechanism": "Derives token weights from the frozen starting model, using probability or cumulative probability mass.",
+      "transfer_limit": "Can cache reference information, but normalization and effective update magnitude must be controlled. Published models and protocols differ."
+    },
+    {
+      "method": "RPSFT",
+      "primary_url": "https://arxiv.org/abs/2605.10973",
+      "paper_version_date": "2026-05-08",
+      "mechanism": "Preserves the projected top-singular-vector block of pretrained matrices during SFT.",
+      "transfer_limit": "Includes the exact3B model family but still has per-task regressions. SVD setup and regularizer integration consume scarce implementation/compute budget."
+    },
+    {
+      "method": "CIG-SFT",
+      "primary_url": "https://arxiv.org/abs/2610.12995",
+      "paper_version_date": "2026-10-09",
+      "mechanism": "Credits tokens by frozen-reference task-conditioned versus erased-input likelihood contrast, with a detached projected-policy weight.",
+      "transfer_limit": "Very recent. Main1.5B Pass@16 58.6 disagrees with matching appendix configurations56.7. Requires two cached passes; no directly comparable3B assignment result."
+    },
+    {
+      "method": "On-policy SFT",
+      "primary_url": "https://arxiv.org/abs/2602.13407",
+      "paper_version_date": "2026-02-13",
+      "mechanism": "Filters self-generated responses for correctness and conciseness before SFT.",
+      "transfer_limit": "Requires rollouts and reliable correctness labels; extra generation and altered targets make it a separate, less affordable arm."
+    },
+    {
+      "method": "Random selection at scale",
+      "primary_url": "https://aclanthology.org/2025.findings-emnlp.146/",
+      "paper_version_date": "2025-11",
+      "mechanism": "Finds that many self-scoring selectors struggle against random on large pools, with diversity and length important.",
+      "transfer_limit": "Supports strong controls and realistic selection claims; million-scale general SFT evidence is not an exact AceReason15K experiment."
+    },
+    {
+      "method": "GIST",
+      "primary_url": "https://arxiv.org/abs/2602.18584",
+      "paper_version_date": "2026-05-16",
+      "mechanism": "Uses a validation-gradient subspace to account for coupled LoRA optimization geometry.",
+      "transfer_limit": "Potentially cheaper than LESS in its setting; still needs gradient computation, reliable validation and a transfer test to fullSFT."
+    }
+  ],
+  "existing_evidence": {
+    "original_official_eight_macro": [
+      0.2930267835326862,
+      0.5286146036430917
+    ],
+    "advanced_official_eight_macro": [
+      0.18786957933172,
+      0.42954290783238835
+    ],
+    "incumbent_official_eight_macro": [
+      0.2894218107039082,
+      0.5555548698757204
+    ],
+    "advanced_length_finishes": 7526,
+    "advanced_samples": 15552,
+    "random_training_missing_eos_rows": 5806,
+    "advanced_training_missing_eos_rows": 0,
+    "diagnosis": "No demonstrated masking/accumulation/precision/consumption bug. Learned generation collapse and distribution mismatch are leading hypotheses, not established causes."
+  },
+  "recommendation": {
+    "selection": "Complete original traces; audit branching structure and base compatibility within topic/length strata; preserve coverage.",
+    "training": "Pilot a frozen-base-regularized SFT objective before one final fullSFT candidate.",
+    "scientific_claim": "Synthesis of published ideas; novelty and superiority unestablished.",
+    "evaluation": "Fresh independently labeled development and disjoint confirmation; unchanged assignment benchmark protocol; disclose all prior benchmark exposure."
+  }
+}

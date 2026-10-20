@@ -1,0 +1,39 @@
+{
+  "schema": "reasoning-sft-fresh-development-source-pins-v1",
+  "status": "metadata_only_no_data_downloaded",
+  "observed_at_utc": "2026-10-20T22:49:51.384749+00:00",
+  "sources": [
+    {
+      "repo_id": "EleutherAI/hendrycks_math",
+      "requested_revision": "refs/convert/parquet",
+      "resolved_revision": "fe39eaeb3783a7dd5d7e305da9a8db9b0c4e6b93",
+      "metadata_url": "https://huggingface.co/api/datasets/EleutherAI/hendrycks_math/revision/refs%2Fconvert%2Fparquet",
+      "files": [
+        "algebra/train/0000.parquet",
+        "counting_and_probability/train/0000.parquet",
+        "geometry/train/0000.parquet",
+        "intermediate_algebra/train/0000.parquet",
+        "number_theory/train/0000.parquet",
+        "prealgebra/train/0000.parquet",
+        "precalculus/train/0000.parquet"
+      ],
+      "purpose": "Development/confirmation only; no data downloaded.",
+      "license": null
+    },
+    {
+      "repo_id": "allenai/ai2_arc",
+      "requested_revision": "main",
+      "resolved_revision": "210d026faf9955653af8916fad021475a3f00453",
+      "metadata_url": "https://huggingface.co/api/datasets/allenai/ai2_arc/revision/main",
+      "files": [
+        "ARC-Challenge/train-00000-of-00001.parquet",
+        "ARC-Easy/train-00000-of-00001.parquet",
+        "README.md"
+      ],
+      "purpose": "Development/confirmation only; no data downloaded.",
+      "license": [
+        "cc-by-sa-4.0"
+      ]
+    }
+  ]
+}

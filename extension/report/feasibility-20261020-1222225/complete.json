@@ -1,0 +1,1815 @@
+{
+  "actual_training_cache_metadata_checks": {
+    "advanced": {
+      "cutoff": 8192,
+      "eos_note": "No EOS ID is inferred from text/features; overlength prefixes omit the original serialized tail.",
+      "original_serialized_tokens": 65018386,
+      "rows_dropped": 0,
+      "supervised_training_tokens": 63636440,
+      "target_rewriting": false,
+      "truncated_rows": 0
+    },
+    "random": {
+      "cutoff": 8192,
+      "eos_note": "No EOS ID is inferred from text/features; overlength prefixes omit the original serialized tail.",
+      "original_serialized_tokens": 112110507,
+      "rows_dropped": 0,
+      "supervised_training_tokens": 85547725,
+      "target_rewriting": false,
+      "truncated_rows": 5806
+    }
+  },
+  "cached_feature_metadata": {
+    "arguments": {
+      "cutoff": 8192,
+      "model": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "output": "deadline/artifacts",
+      "probe_size": 512,
+      "reservoir_size": 30000,
+      "seed": 20261019
+    },
+    "input_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+    "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "provenance": {
+      "code_sha256": "5cee76526c1b552e53b490c811c2e4c5506758985be735c13bc0945fb6a59d13",
+      "finalizer_code_sha256": "f7951fe2d33eaf62929eacd7f6e6ea55e1e5950692843a4095138be09a0e8289",
+      "local_tokenizer_files": {
+        "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+        "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "producer_code_sha256": "7432c951c854651bc25541b0976540435a28ae1e39ec70c7ed46f9b417b36779"
+    },
+    "resolved_tokenizer_commit": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "source_sha256": "f064d1a5fb39b9f493f678d5d6350a9acbfb2a2fa85400d0947fe72578ff28d8",
+    "tokenizer_sha256": "bed8717e51e28d72da3e331c3c6d91661bf2b390de929fb1b8ab337d33ac3853"
+  },
+  "code_sha256": {
+    "extension/__init__.py": "2a99bd8120f34a0ccf36d7d6f5dc02d7a24d5bdd4f8eaf422bd73b75b17a4a13",
+    "extension/cpu_feasibility.py": "1b0a8872f61a6e89191c16082c5ede531a38965658072855180a943effc35724",
+    "extension/cpu_feasibility.slurm": "3c450f680faca976efc5a2022ece602a369f2261bc41a3cb9c0a0da3fa0137ba",
+    "reasoning/data.py": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68",
+    "tests/test_extension_feasibility.py": "6e4bf3225e4a68840babc878961b0b6db71cbc5e76cb095905080a65c87d294f"
+  },
+  "complete": true,
+  "compute_end": {
+    "allocated_cpus": 8,
+    "allocated_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "checked_at_utc": "2026-10-20T23:03:35.062543+00:00",
+    "cuda_visible_devices": "",
+    "gpu_requested_or_allocated": false,
+    "hostname": "owl087",
+    "job_id": "1222225",
+    "node": "owl087",
+    "requested_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "scontrol": "JobId=1222225 JobName=sft-extension-feasibility UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1315 Nice=0 Account=tml_2026 QOS=owl_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:03:41 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-10-20T18:59:39 EligibleTime=2026-10-20T18:59:39 AccrueTime=2026-10-20T18:59:40 StartTime=2026-10-20T18:59:54 EndTime=2026-10-20T19:29:54 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T18:59:54 Scheduler=Backfill Partition=normal_q AllocNode:Sid=owl1:1083789 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl087 BatchHost=owl087 NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=64G,node=1,billing=20 AllocTRES=cpu=8,mem=64G,node=1,billing=20 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.slurm WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-feasibility-1222225.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-feasibility-1222225.out TresPerTask=cpu=8",
+    "scontrol_sha256": "639c636fa1420132530dcabce7186c21556640670ce389841939e4111c5d3d3b",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "compute_start": {
+    "allocated_cpus": 8,
+    "allocated_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "checked_at_utc": "2026-10-20T23:00:15.766872+00:00",
+    "cuda_visible_devices": "",
+    "gpu_requested_or_allocated": false,
+    "hostname": "owl087",
+    "job_id": "1222225",
+    "node": "owl087",
+    "requested_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "scontrol": "JobId=1222225 JobName=sft-extension-feasibility UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1315 Nice=0 Account=tml_2026 QOS=owl_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:21 TimeLimit=00:30:00 TimeMin=N/A SubmitTime=2026-10-20T18:59:39 EligibleTime=2026-10-20T18:59:39 AccrueTime=2026-10-20T18:59:40 StartTime=2026-10-20T18:59:54 EndTime=2026-10-20T19:29:54 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T18:59:54 Scheduler=Backfill Partition=normal_q AllocNode:Sid=owl1:1083789 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl087 BatchHost=owl087 NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=64G,node=1,billing=20 AllocTRES=cpu=8,mem=64G,node=1,billing=20 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.slurm WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-feasibility-1222225.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-feasibility-1222225.out TresPerTask=cpu=8",
+    "scontrol_sha256": "ae46496e1e4d3eb97b99f7ab348638839b8f555971e7195e980293178fdaf0dd",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "created_at_utc": "2026-10-20T23:03:35.062565+00:00",
+  "deadline": {
+    "checked_at_utc": "2026-10-20T23:00:15.766887+00:00",
+    "deadline_utc": "2026-10-28T03:59:00+00:00",
+    "guard_seconds": 5400
+  },
+  "definitions": {
+    "actions": "Read-only diagnostics: no selection, model inference, tokenizer loading, downloads, benchmark outcome reads or downstream admission.",
+    "branch_step_proxy": {
+      "case_insensitive_whole_words": [
+        "perhaps",
+        "another",
+        "alternatively"
+      ],
+      "scope": "Entire original output, split into nonempty newline-delimited steps",
+      "status": "Formatting-sensitive English-keyword diagnostic, biased across languages; not validated reasoning quality or selection policy"
+    },
+    "cluster_sentinels": "Cluster -1 is an unfitted producer sentinel; the frozen finalizer remaps unfitted rows to64, outside its real0–63 topics. Neither sentinel is a learned topic.",
+    "population_limit": "Feature-fit counts cover the finalized prepared pool, not all untouched 100K source records.",
+    "quantiles": "Linear interpolation at (n-1)*p, including min/max.",
+    "repetition": "One minus unique whitespace 8-gram count divided by total whitespace 8-gram count; zero below eight words.",
+    "stopping": "Source tag structure and existing prefix-truncation metadata only; no generated stopping behavior or teacher correctness was assessed.",
+    "think_tags": "Literal <think>/</think> counts; ordered balance uses a nonnegative nesting depth ending at zero; no-tag rows are balanced.",
+    "token_counts": "Previously cached exact native Qwen serialized counts; response span includes assistant template tail. No new tokenization was run."
+  },
+  "elapsed_seconds": 199.29692804906517,
+  "gpu_seconds_requested_or_used": 0,
+  "historical_preparation_counts": {
+    "eligible": 35415,
+    "heldout": 1000,
+    "pool": 83029,
+    "probes": 1024,
+    "reservoir": 30000
+  },
+  "input_files": {
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/prepared.json": {
+      "bytes": 177179,
+      "sha256": "d6e2f8578d7057372fac25ade8f3ffd365121b2effda3930c24d72023e33d2de"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/cache_meta.json": {
+      "bytes": 675,
+      "sha256": "9660b5c84336da9d78ea87fe4fa71e1cd17bb29050fca78c37a04f482f82752c"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/features.json": {
+      "bytes": 18765646,
+      "sha256": "c6ef548173b6b4e93a62fd5c43783ad49a6e3dc9b9437b3b31941ffef8c2b55f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/features.json.meta.json": {
+      "bytes": 1502,
+      "sha256": "d69155338e79e63690f3b9fd615a1026489046dbad239e96dd8cf14b91b51afc"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/finalized.json": {
+      "bytes": 772,
+      "sha256": "4e00639bfbc5431641c28b6605ccbc6ba71fe2132866b6606655e30b5c74df09"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/heldout.json": {
+      "bytes": 23032339,
+      "sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/model_identity.json": {
+      "bytes": 1559,
+      "sha256": "81af59dbb365b8559ad0d853dbda245aa4ac3ff0bedc03428e50fed65d7f7ae2"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/pool.json": {
+      "bytes": 1970428086,
+      "sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/preparation_complete.json": {
+      "bytes": 1880,
+      "sha256": "7fb88fb85f685eef6cbc5ffde2e83de00a87445fbf7db8e134b61640451b82ab"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/probeA_ids.json": {
+      "bytes": 35843,
+      "sha256": "6ae31826e4d06b517e9e290d653a9b3502056cc81c57e281ef0447a0918de4d6"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/probeB_ids.json": {
+      "bytes": 35843,
+      "sha256": "42c0b860943dae371ae692c1824504ced4b9e10e09801790324adaca6ed4ffa1"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/random_ids.json": {
+      "bytes": 1050003,
+      "sha256": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/selected/advanced.json": {
+      "bytes": 186336845,
+      "sha256": "511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/selected/dataset_info.json": {
+      "bytes": 371,
+      "sha256": "e434d6371c88b4162a4d5d64a1539cedd42325343666a9d21fa34cf78ad8b4e8"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/selected/random.json": {
+      "bytes": 356118384,
+      "sha256": "3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/selected/selection_manifest.json": {
+      "bytes": 8021286,
+      "sha256": "07e2b09fb92342447e0764fb73578279bb71383c26fb436d3d88b06333986e9d"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/selection_complete.json": {
+      "bytes": 2455,
+      "sha256": "6f9758b807eeadde27cc47f431265ef87e80e46d9ac28c0526836b69658039b0"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/source/data/acereason11_100k.json": {
+      "bytes": 2464606706,
+      "sha256": "f064d1a5fb39b9f493f678d5d6350a9acbfb2a2fa85400d0947fe72578ff28d8"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/cache_meta.json": {
+      "bytes": 1414,
+      "sha256": "71a51f9a88586872d352082e4fd15db9ad6b73fe1a191a0aafdf1ac08459aec6"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/dataset.json": {
+      "bytes": 186336845,
+      "sha256": "511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/selected_ids.json": {
+      "bytes": 1050003,
+      "sha256": "2241e6e39ab65fe465db8544d7635570ff8a67b7e95f764ac72ddcb1bb9d3d7f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/training.jsonl": {
+      "bytes": 535471428,
+      "sha256": "04d5e55bbb18065865f5cba94f44e7af83579b0695b0b948f67eb9ff42590d04"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/cache_meta.json": {
+      "bytes": 419042,
+      "sha256": "69de9dd0a9467af5943023c68d96fce6dbe4286b7121be58843c09c040532c55"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/dataset.json": {
+      "bytes": 356118384,
+      "sha256": "3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/selected_ids.json": {
+      "bytes": 1050003,
+      "sha256": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/training.jsonl": {
+      "bytes": 737075712,
+      "sha256": "9df472299c2e646383e0c6a9f6451fc8153ce548e81987e222e7fb59ef730b7d"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/transfer_meta.json": {
+      "bytes": 4625697,
+      "sha256": "4c63b8c4eb0d306a3ca7bbd7ff3b80e16e5a83d4638f92b3faa806162476956c"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/development/prepared.json": {
+      "bytes": 11709,
+      "sha256": "d68f9ebc4f5bc0981fe90af3f96c8c6adcecf936d34398e6ee5929a96762bcc1"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/__init__.py": {
+      "bytes": 79,
+      "sha256": "2a99bd8120f34a0ccf36d7d6f5dc02d7a24d5bdd4f8eaf422bd73b75b17a4a13"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.py": {
+      "bytes": 32044,
+      "sha256": "1b0a8872f61a6e89191c16082c5ede531a38965658072855180a943effc35724"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.slurm": {
+      "bytes": 4801,
+      "sha256": "3c450f680faca976efc5a2022ece602a369f2261bc41a3cb9c0a0da3fa0137ba"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/feasibility-20261020-1222225/native_qa.json": {
+      "bytes": 4184,
+      "sha256": "231aa7156bd5b2ae9622f464c2c501ee5aba4de25ecb1bc4775026e65a33f1e0"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/reasoning/data.py": {
+      "bytes": 3338,
+      "sha256": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_extension_feasibility.py": {
+      "bytes": 13563,
+      "sha256": "6e4bf3225e4a68840babc878961b0b6db71cbc5e76cb095905080a65c87d294f"
+    }
+  },
+  "input_stats_unchanged_at_closeout": true,
+  "native_qa": {
+    "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/feasibility-20261020-1222225/native_qa.json",
+    "sha256": "231aa7156bd5b2ae9622f464c2c501ee5aba4de25ecb1bc4775026e65a33f1e0",
+    "tests_run": 64
+  },
+  "old_prepared_source_checks": [
+    {
+      "matching_input_bindings": 18,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/prepared.json",
+      "sha256": "d6e2f8578d7057372fac25ade8f3ffd365121b2effda3930c24d72023e33d2de"
+    },
+    {
+      "matching_input_bindings": 18,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/development/prepared.json",
+      "sha256": "d68f9ebc4f5bc0981fe90af3f96c8c6adcecf936d34398e6ee5929a96762bcc1"
+    }
+  ],
+  "original_source": {
+    "duplicate_canonical_source_rows": 15907,
+    "invalid_source_rows": 0,
+    "prepared_and_heldout_original_pairs_verified": 84029,
+    "raw_source_rows": 100000,
+    "repository": "redsgnaoh/acereason11_100k",
+    "revision": "ce815bd726c0c4ffdc0912789754646910188195",
+    "sha256": "f064d1a5fb39b9f493f678d5d6350a9acbfb2a2fa85400d0947fe72578ff28d8",
+    "valid_unique_canonical_source_prompts": 84093
+  },
+  "output": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/feasibility-20261020-1222225",
+  "population_diagnostics": {
+    "advanced": {
+      "branch_steps": {
+        "nonempty_line_steps": 1718554,
+        "pooled_density": 0.0703073630505646,
+        "steps_with_keyword": 120827
+      },
+      "cluster_counts": {
+        "0": 184,
+        "1": 247,
+        "10": 204,
+        "11": 252,
+        "12": 199,
+        "13": 264,
+        "14": 165,
+        "15": 297,
+        "16": 271,
+        "17": 257,
+        "18": 290,
+        "19": 202,
+        "2": 185,
+        "20": 274,
+        "21": 187,
+        "22": 217,
+        "23": 204,
+        "24": 265,
+        "25": 305,
+        "26": 290,
+        "27": 232,
+        "28": 230,
+        "29": 213,
+        "3": 299,
+        "30": 289,
+        "31": 223,
+        "32": 229,
+        "33": 276,
+        "34": 175,
+        "35": 250,
+        "36": 225,
+        "37": 212,
+        "38": 232,
+        "39": 212,
+        "4": 185,
+        "40": 249,
+        "41": 265,
+        "42": 274,
+        "43": 211,
+        "44": 196,
+        "45": 264,
+        "46": 232,
+        "47": 184,
+        "48": 249,
+        "49": 227,
+        "5": 243,
+        "50": 249,
+        "51": 201,
+        "52": 240,
+        "53": 203,
+        "54": 229,
+        "55": 280,
+        "56": 217,
+        "57": 272,
+        "58": 219,
+        "59": 229,
+        "6": 132,
+        "60": 206,
+        "61": 200,
+        "62": 260,
+        "63": 278,
+        "7": 275,
+        "8": 272,
+        "9": 203
+      },
+      "complete_box_rows": 15000,
+      "exact_cached_token_fit": {
+        "16384": {
+          "complete_fraction": 1.0,
+          "complete_serialized_rows": 15000,
+          "overlength_rows": 0,
+          "prompt_at_or_over_limit": 0,
+          "rows_fitting_with_32_token_reserve": 15000,
+          "supervised_tokens_if_prefix_limited": 63636440
+        },
+        "32768": {
+          "complete_fraction": 1.0,
+          "complete_serialized_rows": 15000,
+          "overlength_rows": 0,
+          "prompt_at_or_over_limit": 0,
+          "rows_fitting_with_32_token_reserve": 15000,
+          "supervised_tokens_if_prefix_limited": 63636440
+        },
+        "8192": {
+          "complete_fraction": 1.0,
+          "complete_serialized_rows": 15000,
+          "overlength_rows": 0,
+          "prompt_at_or_over_limit": 0,
+          "rows_fitting_with_32_token_reserve": 15000,
+          "supervised_tokens_if_prefix_limited": 63636440
+        }
+      },
+      "id_order_sha256": "4ce0e3a4e27d38140f58d655a31a47ddea164932ea0052930a4e21f446509941",
+      "quantiles": {
+        "branch_step_density": {
+          "max": 0.8214285714285714,
+          "median": 0.05263157894736842,
+          "min": 0.0,
+          "p01": 0.0,
+          "p10": 0.005747126436781609,
+          "p25": 0.023809523809523808,
+          "p75": 0.1016949152542373,
+          "p90": 0.17647058823529413,
+          "p95": 0.25,
+          "p99": 0.4347866344605476
+        },
+        "characters": {
+          "max": 36438,
+          "median": 11215.0,
+          "min": 443,
+          "p01": 2208.98,
+          "p10": 4612.9,
+          "p25": 6850.25,
+          "p75": 15441.25,
+          "p90": 19330.1,
+          "p95": 21925.1,
+          "p99": 27212.190000000002
+        },
+        "prompt_tokens": {
+          "max": 704,
+          "median": 84.0,
+          "min": 35,
+          "p01": 44.0,
+          "p10": 56.0,
+          "p25": 66.0,
+          "p75": 108.0,
+          "p90": 137.0,
+          "p95": 161.0,
+          "p99": 226.0
+        },
+        "repetition": {
+          "max": 0.14780600461893767,
+          "median": 0.012574919874342783,
+          "min": 0.0,
+          "p01": 0.0,
+          "p10": 0.002171474094570958,
+          "p25": 0.0060623284761215646,
+          "p75": 0.02275667329921896,
+          "p90": 0.03694356913503917,
+          "p95": 0.04872217532392911,
+          "p99": 0.07768941383447991
+        },
+        "response_span_tokens": {
+          "max": 8104,
+          "median": 4295.0,
+          "min": 140,
+          "p01": 730.0,
+          "p10": 1681.0,
+          "p25": 2573.0,
+          "p75": 5755.25,
+          "p90": 6953.0,
+          "p95": 7470.049999999999,
+          "p99": 7914.0
+        },
+        "serialized_tokens": {
+          "max": 8160,
+          "median": 4388.5,
+          "min": 191,
+          "p01": 801.98,
+          "p10": 1765.9,
+          "p25": 2660.0,
+          "p75": 5846.25,
+          "p90": 7051.0,
+          "p95": 7574.0999999999985,
+          "p99": 8021.01
+        },
+        "whitespace_words": {
+          "max": 6180,
+          "median": 2149.0,
+          "min": 88,
+          "p01": 424.99,
+          "p10": 899.9000000000001,
+          "p25": 1334.0,
+          "p75": 2987.0,
+          "p90": 3761.0,
+          "p95": 4250.049999999999,
+          "p99": 5091.02
+        }
+      },
+      "rows": 15000,
+      "think_tags": {
+        "no_think_tags": 0,
+        "starts_think_close": 0,
+        "starts_think_open": 15000,
+        "think_balanced_ordered": 15000,
+        "think_close_tags": 15000,
+        "think_open_tags": 15000,
+        "unbalanced_or_misordered_rows": 0
+      },
+      "total_prompt_tokens": 1381946,
+      "total_response_span_tokens": 63636440,
+      "total_serialized_tokens": 65018386
+    },
+    "finalized_feature_population": {
+      "branch_steps": {
+        "nonempty_line_steps": 17517639,
+        "pooled_density": 0.09716828848910518,
+        "steps_with_keyword": 1702159
+      },
+      "cluster_counts": {
+        "0": 290,
+        "1": 553,
+        "10": 365,
+        "11": 590,
+        "12": 349,
+        "13": 727,
+        "14": 234,
+        "15": 999,
+        "16": 806,
+        "17": 620,
+        "18": 1165,
+        "19": 348,
+        "2": 294,
+        "20": 765,
+        "21": 296,
+        "22": 417,
+        "23": 358,
+        "24": 690,
+        "25": 1191,
+        "26": 991,
+        "27": 522,
+        "28": 473,
+        "29": 416,
+        "3": 1025,
+        "30": 952,
+        "31": 434,
+        "32": 470,
+        "33": 794,
+        "34": 261,
+        "35": 575,
+        "36": 472,
+        "37": 436,
+        "38": 473,
+        "39": 399,
+        "4": 299,
+        "40": 590,
+        "41": 726,
+        "42": 822,
+        "43": 379,
+        "44": 332,
+        "45": 700,
+        "46": 475,
+        "47": 288,
+        "48": 596,
+        "49": 446,
+        "5": 562,
+        "50": 604,
+        "51": 357,
+        "52": 528,
+        "53": 396,
+        "54": 458,
+        "55": 842,
+        "56": 425,
+        "57": 721,
+        "58": 433,
+        "59": 457,
+        "6": 146,
+        "60": 366,
+        "61": 343,
+        "62": 655,
+        "63": 836,
+        "64": 47614,
+        "7": 774,
+        "8": 758,
+        "9": 351
+      },
+      "complete_box_rows": 58936,
+      "exact_cached_token_fit": {
+        "16384": {
+          "complete_fraction": 0.9652049283985114,
+          "complete_serialized_rows": 80140,
+          "overlength_rows": 2889,
+          "prompt_at_or_over_limit": 0,
+          "rows_fitting_with_32_token_reserve": 80071,
+          "supervised_tokens_if_prefix_limited": 600262030
+        },
+        "32768": {
+          "complete_fraction": 1.0,
+          "complete_serialized_rows": 83029,
+          "overlength_rows": 0,
+          "prompt_at_or_over_limit": 0,
+          "rows_fitting_with_32_token_reserve": 83029,
+          "supervised_tokens_if_prefix_limited": 603080250
+        },
+        "8192": {
+          "complete_fraction": 0.6177239277842681,
+          "complete_serialized_rows": 51289,
+          "overlength_rows": 31740,
+          "prompt_at_or_over_limit": 0,
+          "rows_fitting_with_32_token_reserve": 51111,
+          "supervised_tokens_if_prefix_limited": 472137125
+        }
+      },
+      "id_order_sha256": "ccf58ac953c30d2fb03138ef09e04ca50a600cc4fa8c06004eb6f79f9723814e",
+      "quantiles": {
+        "branch_step_density": {
+          "max": 0.8360655737704918,
+          "median": 0.07692307692307693,
+          "min": 0.0,
+          "p01": 0.0,
+          "p10": 0.01876675603217158,
+          "p25": 0.039603960396039604,
+          "p75": 0.13924050632911392,
+          "p90": 0.2278870253756468,
+          "p95": 0.30158730158730157,
+          "p99": 0.45454545454545453
+        },
+        "characters": {
+          "max": 86510,
+          "median": 19074.0,
+          "min": 443,
+          "p01": 2609.2799999999997,
+          "p10": 6156.0,
+          "p25": 10557.0,
+          "p75": 31920.0,
+          "p90": 43709.0,
+          "p95": 49619.59999999999,
+          "p99": 58877.880000000005
+        },
+        "prompt_tokens": {
+          "max": 6178,
+          "median": 107.0,
+          "min": 34,
+          "p01": 46.0,
+          "p10": 62.0,
+          "p25": 79.0,
+          "p75": 170.0,
+          "p90": 451.0,
+          "p95": 606.0,
+          "p99": 928.0
+        },
+        "repetition": {
+          "max": 0.31868131868131866,
+          "median": 0.018233483305706844,
+          "min": 0.0,
+          "p01": 0.0,
+          "p10": 0.0045051539194628015,
+          "p25": 0.009798270893371708,
+          "p75": 0.029528158295281548,
+          "p90": 0.04376512193844339,
+          "p95": 0.0546650443313844,
+          "p99": 0.08228237981643494
+        },
+        "response_span_tokens": {
+          "max": 31671,
+          "median": 6389.0,
+          "min": 140,
+          "p01": 813.0,
+          "p10": 2040.0,
+          "p25": 3550.0,
+          "p75": 10467.0,
+          "p90": 14131.0,
+          "p95": 15592.599999999991,
+          "p99": 17419.160000000003
+        },
+        "serialized_tokens": {
+          "max": 31776,
+          "median": 6561.0,
+          "min": 191,
+          "p01": 937.28,
+          "p10": 2193.0,
+          "p25": 3709.0,
+          "p75": 10675.0,
+          "p90": 14367.0,
+          "p95": 15856.0,
+          "p99": 17586.440000000002
+        },
+        "whitespace_words": {
+          "max": 13024,
+          "median": 3561.0,
+          "min": 88,
+          "p01": 500.0,
+          "p10": 1156.0,
+          "p25": 1977.0,
+          "p75": 5864.0,
+          "p90": 8144.199999999997,
+          "p95": 9224.0,
+          "p99": 10649.720000000001
+        }
+      },
+      "rows": 83029,
+      "think_tags": {
+        "no_think_tags": 0,
+        "starts_think_close": 0,
+        "starts_think_open": 83029,
+        "think_balanced_ordered": 83029,
+        "think_close_tags": 83029,
+        "think_open_tags": 83029,
+        "unbalanced_or_misordered_rows": 0
+      },
+      "total_prompt_tokens": 15053770,
+      "total_response_span_tokens": 603080250,
+      "total_serialized_tokens": 618134020
+    },
+    "random": {
+      "branch_steps": {
+        "nonempty_line_steps": 3172133,
+        "pooled_density": 0.0976283150801054,
+        "steps_with_keyword": 309690
+      },
+      "cluster_counts": {
+        "0": 61,
+        "1": 96,
+        "10": 49,
+        "11": 100,
+        "12": 76,
+        "13": 126,
+        "14": 35,
+        "15": 176,
+        "16": 140,
+        "17": 109,
+        "18": 206,
+        "19": 65,
+        "2": 49,
+        "20": 145,
+        "21": 58,
+        "22": 73,
+        "23": 51,
+        "24": 105,
+        "25": 180,
+        "26": 189,
+        "27": 90,
+        "28": 78,
+        "29": 82,
+        "3": 164,
+        "30": 171,
+        "31": 74,
+        "32": 77,
+        "33": 129,
+        "34": 54,
+        "35": 103,
+        "36": 98,
+        "37": 80,
+        "38": 80,
+        "39": 77,
+        "4": 58,
+        "40": 113,
+        "41": 116,
+        "42": 157,
+        "43": 85,
+        "44": 49,
+        "45": 129,
+        "46": 85,
+        "47": 40,
+        "48": 100,
+        "49": 75,
+        "5": 106,
+        "50": 106,
+        "51": 65,
+        "52": 101,
+        "53": 71,
+        "54": 105,
+        "55": 146,
+        "56": 62,
+        "57": 161,
+        "58": 67,
+        "59": 84,
+        "6": 25,
+        "60": 75,
+        "61": 56,
+        "62": 113,
+        "63": 140,
+        "64": 8740,
+        "7": 136,
+        "8": 142,
+        "9": 46
+      },
+      "complete_box_rows": 10577,
+      "exact_cached_token_fit": {
+        "16384": {
+          "complete_fraction": 0.9643333333333334,
+          "complete_serialized_rows": 14465,
+          "overlength_rows": 535,
+          "prompt_at_or_over_limit": 0,
+          "rows_fitting_with_32_token_reserve": 14450,
+          "supervised_tokens_if_prefix_limited": 108830618
+        },
+        "32768": {
+          "complete_fraction": 1.0,
+          "complete_serialized_rows": 15000,
+          "overlength_rows": 0,
+          "prompt_at_or_over_limit": 0,
+          "rows_fitting_with_32_token_reserve": 15000,
+          "supervised_tokens_if_prefix_limited": 109366992
+        },
+        "8192": {
+          "complete_fraction": 0.6129333333333333,
+          "complete_serialized_rows": 9194,
+          "overlength_rows": 5806,
+          "prompt_at_or_over_limit": 0,
+          "rows_fitting_with_32_token_reserve": 9164,
+          "supervised_tokens_if_prefix_limited": 85547725
+        }
+      },
+      "id_order_sha256": "710d3733d0d5a556f85a656c075d473c20a669f5b678197c705c983ad53d3613",
+      "quantiles": {
+        "branch_step_density": {
+          "max": 0.7777777777777778,
+          "median": 0.07743553048330643,
+          "min": 0.0,
+          "p01": 0.0,
+          "p10": 0.018867924528301886,
+          "p25": 0.03987514182347526,
+          "p75": 0.140625,
+          "p90": 0.22916666666666666,
+          "p95": 0.30413491707754353,
+          "p99": 0.45206056236481623
+        },
+        "characters": {
+          "max": 85856,
+          "median": 19358.5,
+          "min": 443,
+          "p01": 2627.75,
+          "p10": 6168.9,
+          "p25": 10544.5,
+          "p75": 32158.5,
+          "p90": 43880.3,
+          "p95": 49422.05,
+          "p99": 58328.750000000015
+        },
+        "prompt_tokens": {
+          "max": 2980,
+          "median": 107.0,
+          "min": 36,
+          "p01": 46.0,
+          "p10": 62.0,
+          "p25": 79.0,
+          "p75": 174.0,
+          "p90": 454.10000000000036,
+          "p95": 611.0,
+          "p99": 911.0
+        },
+        "repetition": {
+          "max": 0.31868131868131866,
+          "median": 0.018498926958231354,
+          "min": 0.0,
+          "p01": 0.0,
+          "p10": 0.004483802770928858,
+          "p25": 0.009845288326300938,
+          "p75": 0.030119344042749824,
+          "p90": 0.04406508504800823,
+          "p95": 0.05502703163837243,
+          "p99": 0.0827772637500071
+        },
+        "response_span_tokens": {
+          "max": 23350,
+          "median": 6447.5,
+          "min": 140,
+          "p01": 821.99,
+          "p10": 2036.9,
+          "p25": 3555.0,
+          "p75": 10487.0,
+          "p90": 14146.500000000002,
+          "p95": 15643.05,
+          "p99": 17537.100000000002
+        },
+        "serialized_tokens": {
+          "max": 23505,
+          "median": 6608.5,
+          "min": 191,
+          "p01": 944.99,
+          "p10": 2192.8,
+          "p25": 3715.0,
+          "p75": 10708.0,
+          "p90": 14363.0,
+          "p95": 15888.099999999999,
+          "p99": 17679.04
+        },
+        "whitespace_words": {
+          "max": 12520,
+          "median": 3610.0,
+          "min": 88,
+          "p01": 505.0,
+          "p10": 1155.0,
+          "p25": 1978.0,
+          "p75": 5891.25,
+          "p90": 8138.0,
+          "p95": 9167.0,
+          "p99": 10598.02
+        }
+      },
+      "rows": 15000,
+      "think_tags": {
+        "no_think_tags": 0,
+        "starts_think_close": 0,
+        "starts_think_open": 15000,
+        "think_balanced_ordered": 15000,
+        "think_close_tags": 15000,
+        "think_open_tags": 15000,
+        "unbalanced_or_misordered_rows": 0
+      },
+      "total_prompt_tokens": 2743515,
+      "total_response_span_tokens": 109366992,
+      "total_serialized_tokens": 112110507
+    }
+  },
+  "populations": {
+    "advanced_rows": 15000,
+    "advanced_scored_reservoir_rows": 30000,
+    "broad_prepared_random_sampling_pool_rows": 82005,
+    "cached_feature_rows": 83029,
+    "finalized_prepared_pool_rows": 83029,
+    "random_advanced_overlap_rows": 2706,
+    "random_rows": 15000,
+    "raw_source_rows": 100000,
+    "reserved_probe_rows": 1024,
+    "source_heldout_rows": 1000
+  },
+  "root": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline",
+  "schema": "extension-cpu-feasibility-v1",
+  "versions": {
+    "executable": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/.venv/bin/python",
+    "installed_distributions": [
+      [
+        "GitPython",
+        "3.1.45"
+      ],
+      [
+        "Jinja2",
+        "3.1.6"
+      ],
+      [
+        "MarkupSafe",
+        "3.0.3"
+      ],
+      [
+        "Pebble",
+        "5.1.1"
+      ],
+      [
+        "PyYAML",
+        "6.0.3"
+      ],
+      [
+        "Pygments",
+        "2.19.2"
+      ],
+      [
+        "accelerate",
+        "1.12.0"
+      ],
+      [
+        "aiohappyeyeballs",
+        "2.6.1"
+      ],
+      [
+        "aiohttp",
+        "3.13.2"
+      ],
+      [
+        "aiosignal",
+        "1.4.0"
+      ],
+      [
+        "annotated-doc",
+        "0.0.4"
+      ],
+      [
+        "annotated-types",
+        "0.7.0"
+      ],
+      [
+        "anthropic",
+        "0.71.0"
+      ],
+      [
+        "antlr4-python3-runtime",
+        "4.7.2"
+      ],
+      [
+        "anyio",
+        "4.12.0"
+      ],
+      [
+        "apache-tvm-ffi",
+        "0.1.5"
+      ],
+      [
+        "astor",
+        "0.8.1"
+      ],
+      [
+        "asttokens",
+        "3.0.1"
+      ],
+      [
+        "async-timeout",
+        "5.0.1"
+      ],
+      [
+        "attrs",
+        "25.4.0"
+      ],
+      [
+        "beartype",
+        "0.14.1"
+      ],
+      [
+        "better-abc",
+        "0.0.3"
+      ],
+      [
+        "bidict",
+        "0.23.1"
+      ],
+      [
+        "bitsandbytes",
+        "0.49.0"
+      ],
+      [
+        "blake3",
+        "1.0.8"
+      ],
+      [
+        "cachetools",
+        "6.2.3"
+      ],
+      [
+        "cbor2",
+        "5.7.1"
+      ],
+      [
+        "certifi",
+        "2025.11.12"
+      ],
+      [
+        "charset-normalizer",
+        "3.4.4"
+      ],
+      [
+        "click",
+        "8.2.1"
+      ],
+      [
+        "cloudpickle",
+        "3.1.2"
+      ],
+      [
+        "compressed-tensors",
+        "0.12.2"
+      ],
+      [
+        "contourpy",
+        "1.3.2"
+      ],
+      [
+        "cuda-bindings",
+        "13.1.1"
+      ],
+      [
+        "cuda-pathfinder",
+        "1.3.3"
+      ],
+      [
+        "cuda-python",
+        "13.1.1"
+      ],
+      [
+        "cupy-cuda12x",
+        "13.6.0"
+      ],
+      [
+        "cycler",
+        "0.12.1"
+      ],
+      [
+        "datasets",
+        "4.4.1"
+      ],
+      [
+        "decorator",
+        "5.2.1"
+      ],
+      [
+        "depyf",
+        "0.20.0"
+      ],
+      [
+        "dill",
+        "0.4.0"
+      ],
+      [
+        "diskcache",
+        "5.6.3"
+      ],
+      [
+        "distro",
+        "1.9.0"
+      ],
+      [
+        "dnspython",
+        "2.8.0"
+      ],
+      [
+        "docstring_parser",
+        "0.17.0"
+      ],
+      [
+        "einops",
+        "0.8.1"
+      ],
+      [
+        "email-validator",
+        "2.3.0"
+      ],
+      [
+        "exceptiongroup",
+        "1.3.1"
+      ],
+      [
+        "executing",
+        "2.2.1"
+      ],
+      [
+        "fancy-einsum",
+        "0.0.3"
+      ],
+      [
+        "fastapi",
+        "0.124.4"
+      ],
+      [
+        "fastapi-cli",
+        "0.0.16"
+      ],
+      [
+        "fastapi-cloud-cli",
+        "0.6.0"
+      ],
+      [
+        "fastar",
+        "0.8.0"
+      ],
+      [
+        "fastrlock",
+        "0.8.3"
+      ],
+      [
+        "filelock",
+        "3.20.0"
+      ],
+      [
+        "flashinfer-python",
+        "0.5.3"
+      ],
+      [
+        "fonttools",
+        "4.61.1"
+      ],
+      [
+        "frozenlist",
+        "1.8.0"
+      ],
+      [
+        "fsspec",
+        "2025.10.0"
+      ],
+      [
+        "gguf",
+        "0.17.1"
+      ],
+      [
+        "gitdb",
+        "4.0.12"
+      ],
+      [
+        "h11",
+        "0.16.0"
+      ],
+      [
+        "hf-xet",
+        "1.2.0"
+      ],
+      [
+        "httpcore",
+        "1.0.9"
+      ],
+      [
+        "httptools",
+        "0.7.1"
+      ],
+      [
+        "httpx",
+        "0.28.1"
+      ],
+      [
+        "huggingface-hub",
+        "0.36.0"
+      ],
+      [
+        "idna",
+        "3.11"
+      ],
+      [
+        "interegular",
+        "0.3.3"
+      ],
+      [
+        "ipython",
+        "8.37.0"
+      ],
+      [
+        "jaxtyping",
+        "0.3.3"
+      ],
+      [
+        "jedi",
+        "0.19.2"
+      ],
+      [
+        "jiter",
+        "0.12.0"
+      ],
+      [
+        "jmespath",
+        "1.0.1"
+      ],
+      [
+        "joblib",
+        "1.5.2"
+      ],
+      [
+        "jsonlines",
+        "4.0.0"
+      ],
+      [
+        "jsonschema",
+        "4.25.1"
+      ],
+      [
+        "jsonschema-specifications",
+        "2025.9.1"
+      ],
+      [
+        "kiwisolver",
+        "1.4.9"
+      ],
+      [
+        "lark",
+        "1.2.2"
+      ],
+      [
+        "latex2sympy2",
+        "1.9.1"
+      ],
+      [
+        "llguidance",
+        "1.3.0"
+      ],
+      [
+        "llvmlite",
+        "0.44.0"
+      ],
+      [
+        "lm-format-enforcer",
+        "0.11.3"
+      ],
+      [
+        "loguru",
+        "0.7.3"
+      ],
+      [
+        "markdown-it-py",
+        "4.0.0"
+      ],
+      [
+        "matplotlib",
+        "3.10.8"
+      ],
+      [
+        "matplotlib-inline",
+        "0.2.1"
+      ],
+      [
+        "mdurl",
+        "0.1.2"
+      ],
+      [
+        "mistral_common",
+        "1.8.6"
+      ],
+      [
+        "model-hosting-container-standards",
+        "0.1.11"
+      ],
+      [
+        "mpmath",
+        "1.3.0"
+      ],
+      [
+        "msgpack",
+        "1.1.2"
+      ],
+      [
+        "msgspec",
+        "0.20.0"
+      ],
+      [
+        "multidict",
+        "6.7.0"
+      ],
+      [
+        "multiprocess",
+        "0.70.18"
+      ],
+      [
+        "narwhals",
+        "2.13.0"
+      ],
+      [
+        "networkx",
+        "3.4.2"
+      ],
+      [
+        "ninja",
+        "1.13.0"
+      ],
+      [
+        "nnsight",
+        "0.5.12"
+      ],
+      [
+        "numba",
+        "0.61.2"
+      ],
+      [
+        "numpy",
+        "1.26.4"
+      ],
+      [
+        "nvidia-cublas-cu12",
+        "12.8.4.1"
+      ],
+      [
+        "nvidia-cuda-cupti-cu12",
+        "12.8.90"
+      ],
+      [
+        "nvidia-cuda-nvrtc-cu12",
+        "12.8.93"
+      ],
+      [
+        "nvidia-cuda-runtime-cu12",
+        "12.8.90"
+      ],
+      [
+        "nvidia-cudnn-cu12",
+        "9.10.2.21"
+      ],
+      [
+        "nvidia-cudnn-frontend",
+        "1.16.0"
+      ],
+      [
+        "nvidia-cufft-cu12",
+        "11.3.3.83"
+      ],
+      [
+        "nvidia-cufile-cu12",
+        "1.13.1.3"
+      ],
+      [
+        "nvidia-curand-cu12",
+        "10.3.9.90"
+      ],
+      [
+        "nvidia-cusolver-cu12",
+        "11.7.3.90"
+      ],
+      [
+        "nvidia-cusparse-cu12",
+        "12.5.8.93"
+      ],
+      [
+        "nvidia-cusparselt-cu12",
+        "0.7.1"
+      ],
+      [
+        "nvidia-cutlass-dsl",
+        "4.3.3"
+      ],
+      [
+        "nvidia-ml-py",
+        "13.590.44"
+      ],
+      [
+        "nvidia-nccl-cu12",
+        "2.27.5"
+      ],
+      [
+        "nvidia-nvjitlink-cu12",
+        "12.8.93"
+      ],
+      [
+        "nvidia-nvshmem-cu12",
+        "3.3.20"
+      ],
+      [
+        "nvidia-nvtx-cu12",
+        "12.8.90"
+      ],
+      [
+        "openai",
+        "2.11.0"
+      ],
+      [
+        "openai-harmony",
+        "0.0.8"
+      ],
+      [
+        "opencv-python-headless",
+        "4.12.0.88"
+      ],
+      [
+        "outlines_core",
+        "0.2.11"
+      ],
+      [
+        "packaging",
+        "25.0"
+      ],
+      [
+        "pandas",
+        "2.3.3"
+      ],
+      [
+        "parso",
+        "0.8.5"
+      ],
+      [
+        "partial-json-parser",
+        "0.2.1.1.post7"
+      ],
+      [
+        "peft",
+        "0.18.0"
+      ],
+      [
+        "pexpect",
+        "4.9.0"
+      ],
+      [
+        "pillow",
+        "12.0.0"
+      ],
+      [
+        "pip",
+        "23.0.1"
+      ],
+      [
+        "pip",
+        "25.3"
+      ],
+      [
+        "platformdirs",
+        "4.5.1"
+      ],
+      [
+        "plotly",
+        "6.5.0"
+      ],
+      [
+        "prometheus-fastapi-instrumentator",
+        "7.1.0"
+      ],
+      [
+        "prometheus_client",
+        "0.23.1"
+      ],
+      [
+        "prompt_toolkit",
+        "3.0.52"
+      ],
+      [
+        "propcache",
+        "0.4.1"
+      ],
+      [
+        "protobuf",
+        "6.33.2"
+      ],
+      [
+        "psutil",
+        "7.1.3"
+      ],
+      [
+        "ptyprocess",
+        "0.7.0"
+      ],
+      [
+        "pure_eval",
+        "0.2.3"
+      ],
+      [
+        "py-cpuinfo",
+        "9.0.0"
+      ],
+      [
+        "pyarrow",
+        "22.0.0"
+      ],
+      [
+        "pybase64",
+        "1.4.3"
+      ],
+      [
+        "pycountry",
+        "24.6.1"
+      ],
+      [
+        "pydantic",
+        "2.12.5"
+      ],
+      [
+        "pydantic-extra-types",
+        "2.10.6"
+      ],
+      [
+        "pydantic_core",
+        "2.41.5"
+      ],
+      [
+        "pyparsing",
+        "3.2.5"
+      ],
+      [
+        "python-dateutil",
+        "2.9.0.post0"
+      ],
+      [
+        "python-dotenv",
+        "1.2.1"
+      ],
+      [
+        "python-engineio",
+        "4.12.3"
+      ],
+      [
+        "python-json-logger",
+        "4.0.0"
+      ],
+      [
+        "python-multipart",
+        "0.0.20"
+      ],
+      [
+        "python-socketio",
+        "5.15.0"
+      ],
+      [
+        "pytz",
+        "2025.2"
+      ],
+      [
+        "pyzmq",
+        "27.1.0"
+      ],
+      [
+        "ray",
+        "2.52.1"
+      ],
+      [
+        "referencing",
+        "0.37.0"
+      ],
+      [
+        "regex",
+        "2025.11.3"
+      ],
+      [
+        "requests",
+        "2.32.5"
+      ],
+      [
+        "rich",
+        "14.2.0"
+      ],
+      [
+        "rich-toolkit",
+        "0.17.0"
+      ],
+      [
+        "rignore",
+        "0.7.6"
+      ],
+      [
+        "rpds-py",
+        "0.30.0"
+      ],
+      [
+        "safetensors",
+        "0.7.0"
+      ],
+      [
+        "scikit-learn",
+        "1.7.2"
+      ],
+      [
+        "scipy",
+        "1.15.3"
+      ],
+      [
+        "seaborn",
+        "0.13.2"
+      ],
+      [
+        "sentencepiece",
+        "0.2.1"
+      ],
+      [
+        "sentry-sdk",
+        "2.47.0"
+      ],
+      [
+        "setproctitle",
+        "1.3.7"
+      ],
+      [
+        "setuptools",
+        "79.0.1"
+      ],
+      [
+        "setuptools",
+        "80.9.0"
+      ],
+      [
+        "shellingham",
+        "1.5.4"
+      ],
+      [
+        "simple-websocket",
+        "1.1.0"
+      ],
+      [
+        "six",
+        "1.17.0"
+      ],
+      [
+        "smmap",
+        "5.0.2"
+      ],
+      [
+        "sniffio",
+        "1.3.1"
+      ],
+      [
+        "stack-data",
+        "0.6.3"
+      ],
+      [
+        "starlette",
+        "0.50.0"
+      ],
+      [
+        "supervisor",
+        "4.3.0"
+      ],
+      [
+        "sympy",
+        "1.14.0"
+      ],
+      [
+        "tabulate",
+        "0.9.0"
+      ],
+      [
+        "threadpoolctl",
+        "3.6.0"
+      ],
+      [
+        "tiktoken",
+        "0.12.0"
+      ],
+      [
+        "timeout-decorator",
+        "0.5.0"
+      ],
+      [
+        "tokenizers",
+        "0.22.1"
+      ],
+      [
+        "toml",
+        "0.10.2"
+      ],
+      [
+        "tomli",
+        "2.3.0"
+      ],
+      [
+        "torch",
+        "2.9.0"
+      ],
+      [
+        "torchaudio",
+        "2.9.0"
+      ],
+      [
+        "torchvision",
+        "0.24.0"
+      ],
+      [
+        "tqdm",
+        "4.67.1"
+      ],
+      [
+        "traitlets",
+        "5.14.3"
+      ],
+      [
+        "transformer-lens",
+        "2.16.1"
+      ],
+      [
+        "transformers",
+        "4.57.3"
+      ],
+      [
+        "transformers-stream-generator",
+        "0.0.5"
+      ],
+      [
+        "triton",
+        "3.5.0"
+      ],
+      [
+        "trl",
+        "0.26.1"
+      ],
+      [
+        "typeguard",
+        "4.4.4"
+      ],
+      [
+        "typer",
+        "0.20.0"
+      ],
+      [
+        "typing-inspection",
+        "0.4.2"
+      ],
+      [
+        "typing_extensions",
+        "4.15.0"
+      ],
+      [
+        "tzdata",
+        "2025.2"
+      ],
+      [
+        "urllib3",
+        "2.6.2"
+      ],
+      [
+        "uvicorn",
+        "0.38.0"
+      ],
+      [
+        "uvloop",
+        "0.22.1"
+      ],
+      [
+        "vllm",
+        "0.12.0"
+      ],
+      [
+        "wadler_lindig",
+        "0.1.7"
+      ],
+      [
+        "wandb",
+        "0.23.1"
+      ],
+      [
+        "watchfiles",
+        "1.1.1"
+      ],
+      [
+        "wcwidth",
+        "0.2.14"
+      ],
+      [
+        "websocket-client",
+        "1.9.0"
+      ],
+      [
+        "websockets",
+        "15.0.1"
+      ],
+      [
+        "wheel",
+        "0.45.1"
+      ],
+      [
+        "word2number",
+        "1.1"
+      ],
+      [
+        "wsproto",
+        "1.3.2"
+      ],
+      [
+        "xgrammar",
+        "0.1.27"
+      ],
+      [
+        "xxhash",
+        "3.6.0"
+      ],
+      [
+        "yarl",
+        "1.22.0"
+      ]
+    ],
+    "platform": "Linux-5.14.0-687.26.1.el9_8.x86_64-x86_64-with-glibc2.34",
+    "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]"
+  }
+}

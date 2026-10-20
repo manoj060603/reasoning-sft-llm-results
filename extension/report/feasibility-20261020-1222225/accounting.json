@@ -1,0 +1,21 @@
+{
+  "command": [
+    "sacct",
+    "--clusters=owl",
+    "-j",
+    "1222225",
+    "--parsable2",
+    "--noheader",
+    "--format=JobIDRaw,JobName,State,ExitCode,ElapsedRaw,Start,End,AllocTRES"
+  ],
+  "complete": true,
+  "elapsed_seconds": 221,
+  "gpu_seconds": 0,
+  "job_id": "1222225",
+  "no_gpu_in_alloc_tres": true,
+  "observed_at_utc": "2026-10-20T23:05:31.821132+00:00",
+  "schema": "extension-terminal-cpu-accounting-v1",
+  "stderr": "",
+  "stdout": "1222225|sft-extension-feasibility|COMPLETED|0:0|221|2026-10-20T22:59:54|2026-10-20T23:03:35|billing=20,cpu=8,mem=64G,node=1\n1222225.batch|batch|COMPLETED|0:0|221|2026-10-20T22:59:54|2026-10-20T23:03:35|cpu=8,mem=64G,node=1\n1222225.extern|extern|COMPLETED|0:0|221|2026-10-20T22:59:54|2026-10-20T23:03:35|billing=20,cpu=8,mem=64G,node=1\n",
+  "timezone": "UTC"
+}

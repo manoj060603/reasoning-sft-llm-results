@@ -1,0 +1,153 @@
+{
+  "schema": "reasoning-sft-extension-prospective-pilot-review-v1",
+  "status": "proposed_unsealed_not_admitted",
+  "review_date": "2026-10-20",
+  "execution_authorized_by_this_artifact": false,
+  "jobs_submitted_by_this_review": false,
+  "scope": "Prospective scientific design advice only. The original experiment, viewed evaluations, source screens, published models and historical GPU ledger remain unchanged. Exact feasibility, identities, coefficients, rules and resource admission must be sealed before any GPU execution.",
+  "inputs_reviewed": [
+    "extension/campaign.json",
+    "extension/research.json",
+    "extension/development_source_metadata.json",
+    "extension/objectives.py",
+    "extension/report/feasibility-20261020-1222225/complete.json",
+    "deadline/report/primary-final-20261020T1708Z/audit.json",
+    "deadline/report/recovery-final-20261020T1730Z/evaluation_summary.json",
+    "deadline/report/anchor-v2-final-20261020/decision.json"
+  ],
+  "evidence_and_causal_limits": {
+    "observed": [
+      "The native CPU audit found all 83029 finalized source outputs begin with <think> and contain exactly one balanced think pair. Prior advanced 15000 targets were complete, balanced and boxed; missing EOS or malformed source tags cannot explain that arm's regression.",
+      "Prior advanced median response length was 4295 tokens versus 6447.5 for prior random. Advanced also had lower pooled English branch-keyword density (7.03% versus 9.76%) and lower median whitespace-eight-gram repetition (0.01257 versus 0.01850). A new branch/structure filter alone is therefore a weak primary causal hypothesis.",
+      "The historical random arm truncated 5806 targets at 8K, whereas advanced truncated none. The arms supervised 85547725 versus 63636440 tokens, so historical selection gains combine completeness, distribution and token exposure.",
+      "Both full-SFT arms degraded versus original across all eight official benchmarks. Fixed base anchoring recovered much of the generation behavior, but its official-eight advantage over original was not established by the conditional intervals. A subsequent source-confirmed scalar alternative was rejected. These findings motivate testing preservation during training; they do not prove a unique cause.",
+      "The CPU audit counted 51111 complete-with-32-token-reserve rows at 8K and 80071 at 16K. Structural capacity alone does not require moving the next controlled pilot to 16K. These are capacity counts, not the final eligible training population after all new exclusions."
+    ],
+    "not_established": [
+      "No demonstrated masking, optimizer-precision, example-consumption or tokenizer mismatch explains the advanced arm.",
+      "Teacher-forced loss, base likelihood and source teacher-answer agreement are not validated measures of free-generation correctness.",
+      "Frozen-reference KL on teacher-forced prefixes does not guarantee preservation on prefixes sampled by the student.",
+      "Fresh development questions can reduce new tuning leakage; they cannot make already-viewed official test sets pristine again. Future benchmark findings must retain the exploratory-history disclosure."
+    ]
+  },
+  "next_cpu_only_stage": {
+    "purpose": "Determine whether enough independently labeled development questions remain before fixing exact split IDs or admitting GPU work.",
+    "sources": {
+      "math": "Pinned EleutherAI/hendrycks_math official train only, using independently supplied correct answers; never its test split.",
+      "science": "Pinned allenai/ai2_arc ARC-Challenge official train only, using its official answer key; do not silently substitute ARC-Easy or claim this is a GPQA development set."
+    },
+    "exclusions_before_split": [
+      "All final nine benchmark normalized questions and known near-duplicates, without using their answers or outcomes for selection.",
+      "All prior random/advanced training questions, probe questions and all new training or selection-scoring questions.",
+      "Every viewed source validation question, including the old 64 and both v2 sets of 192, plus any new prompt/grader calibration questions.",
+      "All old scored reservoir questions where practicable. At minimum distinguish previously scored questions from untouched validation and do not call any trained or viewed question independent."
+    ],
+    "deduplication": "Reserve normalized-question groups before either training-set selection or splitting. Keep exact and near-duplicate groups in one split; record all removals and ambiguous overlaps. No label-derived or model-outcome-derived choice of surviving questions.",
+    "target_sizes_not_yet_feasibility_verified": {
+      "development": {"math_questions": 512, "arc_challenge_questions": 256},
+      "confirmation": {"math_questions": 1024, "arc_challenge_questions": 512},
+      "calibration_maximum": {"math_questions": 16, "arc_challenge_questions": 16}
+    },
+    "capacity_rule": "These are requested target counts, not currently frozen achievable counts. Publish the surviving capacities first. If counts cannot be met, revise and seal a smaller explicit design or add a separately pinned labeled source before any generation; do not silently refill with viewed, trained or benchmark questions.",
+    "stratification": "Stratify MATH by its official subject and difficulty metadata. For ARC use official partition and question/option-length strata. Allocate duplicate groups jointly and use the same frozen split for every role.",
+    "label_and_prompt_rule": "Labels are for grading only. Do not include the correct answer or a teacher solution in the generation prompt. All roles receive exactly identical native-Qwen prompts and option ordering. Calibrate grader/answer extraction only on the separate calibration set and then freeze it.",
+    "provenance": "Seal source revisions/file digests, exclusions, question-group IDs, split order, prompt/token hashes, answer hashes, grader code, model identities, sampling protocol and all selection/confirmation rules before GPU work. Verify source licensing/attribution separately before redistributing any new examples."
+  },
+  "proposed_zero_step_diagnostics": {
+    "maximum_gpu_hours_planning_target": 0.5,
+    "not_admitted": true,
+    "checks": [
+      "On a tiny sealed source-only batch, original base and zero-update save/reload must produce the same prompt tokenization, EOS configuration, masked-token counts and logits within a preset precision tolerance.",
+      "At initialization student equals frozen original reference: full-vocabulary forward KL must be numerically zero and its parameter gradient zero within a preset tolerance.",
+      "ASFT online-probability weights and frozen-prior probability weights must coincide at initialization, be detached and subsequently diverge only as the student changes. Reference parameters must receive no gradients.",
+      "Verify CE, CE+KL and weighted objectives share causal alignment, response-only masking including EOS, per-example token denominator, gradient accumulation, precision and optimizer update counting.",
+      "Measure reference-forward memory/runtime on the actual GPU before admitting the matrix; cache chosen-token prior probabilities only if exactly bound to tokenizer, original model, full prefix and masking. A chosen-token ratio is not the full-vocabulary forward KL."
+    ],
+    "gate": "Any serialization, mask, reference-gradient, finite-update or precision mismatch blocks training. Numerical tolerances and the exact diagnostic batch must be sealed before execution."
+  },
+  "proposed_pilot": {
+    "not_admitted": true,
+    "purpose": "A small mechanism screen, not the final assignment deliverable or a claim that a short pilot predicts the full 15000-example run.",
+    "data": {
+      "eligible_random": "Uniform 15000 unchanged canonical pairs from the new decontaminated complete-8K eligible population. Draw this control before inspecting any development outcomes.",
+      "selected": "A new source-only base-compatible selection of 15000 unchanged canonical pairs from exactly that eligible population. Prefer matching the random draw's topic-by-length cell counts, then ranking within cells, to isolate compatibility from completeness/length/topic redistribution. Permit overlap; do not force disjoint training arms.",
+      "selector_risk": "Global lowest NLL would favor easy or formulaic text; cross-question base likelihood is not GRAPE's same-prompt response comparison. Reserve a fixed coverage fraction and seal its exact rule before scoring. Do not build a selector from development answer agreement or benchmark results.",
+      "pilot_rows_per_arm": 2048,
+      "nested_subset_rule": "A fixed, source-only stratified 2048-row subset of each sealed 15000-row arm, with no row replacement based on generation outcomes. Every objective on a data arm receives exactly the same rows/order."
+    },
+    "matrix": [
+      {"cell": "E_CE", "data": "eligible_random", "objective": "plain CE", "learning_rate": 0.000002, "kl_beta": 0},
+      {"cell": "S_CE", "data": "selected", "objective": "plain CE", "learning_rate": 0.000002, "kl_beta": 0},
+      {"cell": "E_KL", "data": "eligible_random", "objective": "plain CE plus frozen-original forward KL", "learning_rate": 0.000002, "kl_beta": 0.05},
+      {"cell": "S_KL", "data": "selected", "objective": "plain CE plus frozen-original forward KL", "learning_rate": 0.000002, "kl_beta": 0.05},
+      {"cell": "E_ASFT", "data": "eligible_random", "objective": "detached online target-probability times CE plus frozen-original forward KL", "learning_rate": 0.000002, "kl_beta": 0.05},
+      {"cell": "E_PRIOR", "data": "eligible_random", "objective": "detached frozen-original target-probability times CE plus frozen-original forward KL", "learning_rate": 0.000002, "kl_beta": 0.05},
+      {"cell": "E_CE_HALF_LR", "data": "eligible_random", "objective": "plain CE lower-step-size control", "learning_rate": 0.000001, "kl_beta": 0}
+    ],
+    "matrix_interpretation": {
+      "selection": "Compare S_CE versus E_CE and S_KL versus E_KL. These estimate the selected-data effect under two objectives.",
+      "anchoring": "Compare E_KL versus E_CE and S_KL versus S_CE. This isolates adding the KL term from adding probability weights.",
+      "weighting": "Compare E_ASFT and E_PRIOR against E_KL, and against each other. This isolates online/frozen probability weighting on one fixed data arm.",
+      "smaller_updates": "Compare E_CE_HALF_LR with the preservation arms. This is a basic step-size control, not exact matching of Adam update geometry. Constant loss rescaling is not an equivalent control because Adam is approximately scale invariant.",
+      "unidentified_interactions": "This seven-cell screen does not estimate selection-by-probability-weighting interactions. Do not claim that it does, or silently transfer a winning E_ASFT/E_PRIOR objective onto the selected data. Such a combination needs its own prospectively admitted cell."
+    },
+    "common_training": {
+      "initialization": "Every cell starts from the exact original Qwen checkpoint. No previously trained SFT, merged recovery or scalar-search weights.",
+      "reference": "The same exact original Qwen checkpoint, frozen in evaluation mode; not a stronger teacher, EMA or previous SFT model.",
+      "full_parameter": true,
+      "cutoff": 8192,
+      "complete_targets_only": true,
+      "global_batch": 8,
+      "updates": 256,
+      "training_seed": 20261021,
+      "checkpoints": [64, 256],
+      "ranking_checkpoint": 256,
+      "precision_and_optimizer": "Use the verified FP32 master parameters/Adam states, BF16 autocast, response-only equal-example loss reduction and existing clipping/checkpointing conventions. Freeze warmup and the 256-update pilot schedule separately from the later full-run schedule.",
+      "reduction": "Divide each example by all its supervised tokens, then average examples; do not normalize by the sum of probability weights. Keep this identical across objectives and identify it as an adaptation where it differs from the paper.",
+      "coefficient_status": "Beta 0.05 is a proposed single shared pilot value consistent with the current prototype default, not a paper-optimal value or an admitted parameter. Freeze it or revise it before GPU work; no benchmark-driven coefficient sweep."
+    },
+    "required_logging": [
+      "Exact IDs, token counts, active-token/EOS counts, examples/updates consumed, finite parameters/gradients/moments and peak memory/runtime.",
+      "Plain CE, weighted CE, forward KL, mean and quantiles of effective weights, actual gradient norm and parameter-update norm. Record base-supported probability by trace segment, final-answer region and EOS.",
+      "Per-example and total supervised-token exposure; equal example counts do not imply equal token counts. Disclose any remaining cell-length/topic differences.",
+      "Generation correctness, length finishes, EOS finishes, answer extraction failures, missing boxed/option answers and repetition, always paired on identical questions/seeds."
+    ],
+    "planning_budget": "Measure the zero-step/reference overhead first. The campaign's proposed six GPU-hours is a planning target, not an assurance that seven runs plus development generation fit. Seal finite per-cell reservations and a total before admission; stop on exhausted reservations instead of silently extending them."
+  },
+  "proposed_development_rules": {
+    "not_sealed": true,
+    "roles": "Original base, the seven pilot cells, and optionally the already-published incumbent as an explicitly historical unranked reference. No additional role may be added after seeing development results without declaring a new tuning round.",
+    "sampling": {"samples_per_question": 8, "max_new_tokens": 8192, "temperature": 0.6, "top_p": 0.95, "seed": 20261021, "common_per_question_seeds": true},
+    "metrics": "Record-weighted p1 is the mean of eight correctness flags per question; p8 is whether any of the eight is correct. Average MATH and ARC equally for the two-domain macro; do not pool their different numbers of questions.",
+    "eligibility_gates": [
+      "Every run is complete and paired, with matching questions, prompts, grader, seeds, hardware/protocol and no correctness/extraction errors hidden from the metrics.",
+      "For each domain, p1 is no more than 1 percentage point below original and p8 no more than 2 points below original.",
+      "For each domain, length-finish rate is at most max(original, E_CE) plus 1 percentage point, and mean repetition at most max(original, E_CE) plus 0.01, using exact frozen definitions.",
+      "To advance as an improvement candidate, the two-domain p1 macro must exceed both original and E_CE, and the p8 macro must be at least both. These are operational screening gates, not statistical proof of superiority."
+    ],
+    "ranking": "Among eligible cells rank by two-domain p1 macro, then p8 macro. Exact ties use the predetermined simplicity order S_CE, E_CE_HALF_LR, S_KL, E_KL, E_PRIOR, E_ASFT. E_CE itself is a control and cannot strictly exceed itself; if none qualifies retain the delivered incumbent/original and do not claim an improved method.",
+    "checkpoint_rule": "Checkpoint 64 is for logged mechanism diagnostics only. Rank checkpoint 256 only; do not choose an earlier checkpoint retrospectively because its labels look better.",
+    "pilot_to_full_rule": "Advance at most one exact data/objective recipe to a full 15000-example run, with all full-run hyperparameters and optional two training seeds fixed before full training. A winner on eligible-random remains on that data; no untested selected-data substitution."
+  },
+  "proposed_confirmation_and_final_benchmark_rules": {
+    "not_sealed": true,
+    "confirmation_once": "After full 15000-example training, evaluate original, a freshly matched full E_CE control, and the single prospective candidate on the untouched confirmation split. If two candidate training seeds are predeclared, evaluate/report both and use their fixed mean; never select the better seed.",
+    "confirmation_sampling": {"samples_per_question": 8, "max_new_tokens": 32768, "temperature": 0.6, "top_p": 0.95, "seed": 20261021, "common_per_question_seeds": true},
+    "operational_acceptance": [
+      "All matching/completeness, per-domain p1/p8 retention floors, length and repetition gates from development pass on confirmation.",
+      "Candidate exceeds original and the matched E_CE control on both equal-domain p1 and p8 point estimates.",
+      "Do not retry another pilot cell, coefficient, checkpoint or seed on the same confirmation questions if the candidate fails. Preserve the negative outcome."
+    ],
+    "uncertainty": "Predeclare paired normalized-question-cluster bootstrap with 10000 resamples and fixed seed 20261019, stratified by domain for the equal-domain macro. Report 95% intervals versus original and matched E_CE for p1 and p8, without multiplicity adjustment. Operational point-estimate acceptance is not a statistically established improvement when intervals include zero. Intervals condition on fixed trained models and generated samples; source-label quality, training-seed and general sampling variance remain limitations.",
+    "power": "Even 1024 math and 512 science confirmation questions cannot reliably certify a one-point domain improvement or tight one-point noninferiority. A nonsignificant difference is not equivalence. ARC retention is a proxy and cannot establish GPQA or every-benchmark retention.",
+    "required_assignment_random_control": "The complete-eligible random control diagnoses mechanism but does not replace the assignment's random-from-the-broad-source comparison. Run one freshly drawn broad prepared-source random15000 control under the final chosen training recipe, with identical cutoff/optimizer/schedule/objective and declared truncation. Keep old historical results, but do not use their changed recipe as the only matched control.",
+    "official_evaluation": "Only the single preselected final recipe and predefined control/seed replications receive the frozen all-nine n8/32K benchmark protocol. Do not rank candidates or choose checkpoints from benchmark answers or scores. Report both supplied-eight macro outcomes, every task regression, auxiliary AIME25 separately, and conditional uncertainty. Both macros beating original is still not all sixteen individual official task/metric wins.",
+    "failure": "A failed source confirmation or failed final objective is a reportable result, not authorization for automatic searches. Further rounds require a fresh prospectively sealed design and fresh confirmation questions."
+  },
+  "paper_specific_risks": [
+    {"source": "https://arxiv.org/abs/2509.23753", "risk": "ASFT uses detached online probabilities plus KL anchoring. Online weights can reinforce tokens the student already prefers. Current equal-example normalization is an adaptation and must not be presented as exact paper reproduction; loss weight changes and preservation are separate factors."},
+    {"source": "https://arxiv.org/abs/2606.09396", "risk": "Frozen-prior weights avoid online feedback but still favor easy base-supported tokens, can suppress novel valid reasoning or EOS, and do not certify correctness. Current prior-probability plus KL is a synthesis, not a direct PriFT reproduction. Keep a CE+KL control and report effective weight/gradient direction rather than attributing every benefit to priors."},
+    {"source": "https://arxiv.org/abs/2502.04194", "risk": "Same-instruction alternative-response likelihood selection does not justify global lowest-loss selection across different questions. Topic/length coverage and moderate-difficulty retention remain necessary adaptations, with no guaranteed performance."}
+  ],
+  "weekly_automation_boundary": "The next autonomous action may prepare and inspect CPU-only labeled-source feasibility under its separately admitted wrapper. This artifact admits no GPU job, training, inference, benchmark run, publication or downstream automatic submission. Once feasibility is known, freeze a new plan with exact IDs, objective modes including CE+KL, script/source hashes, ranking/gates, deadlines and finite reservations; review and admit that plan separately."
+}

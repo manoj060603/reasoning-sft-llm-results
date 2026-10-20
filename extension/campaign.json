@@ -1,0 +1,105 @@
+{
+  "schema": "reasoning-sft-extension-campaign-v1",
+  "status": "research_complete_cpu_feasibility_preparation_unlimited_budget",
+  "authorization": {
+    "deadline_extension_user_report": "one week",
+    "new_deadline_eastern": "2026-10-27T23:59:00-04:00",
+    "new_deadline_utc": "2026-10-28T03:59:00+00:00",
+    "deadline_date_inferred_from_previous_deadline": true,
+    "latest_user_total_gpu_hour_limit": null,
+    "includes_prior_usage": null,
+    "latest_user_budget_clarification": "No, GPU hours are unlimited; interpreted as removing the previous48-hour cap for the new extension."
+  },
+  "preserve_completed_experiments": true,
+  "prior_closeout": "deadline/report/anchor-v2-final-20261020/closeout.json",
+  "budget": {
+    "new_user_global_cap_gpu_hours": null,
+    "historical_primary_and_followup_charged_gpu_hours": 39.65,
+    "historical_cap_and_ledger_remain_unchanged": true,
+    "historical_ledger": "deadline/job_ledger.json",
+    "new_extension_ledger": "extension/job_ledger.json",
+    "initial_internal_planning_target_additional_gpu_hours": 100,
+    "planning_target_is_not_a_user_limit_or_permission_to_submit_all_stages": true,
+    "maximum_initial_concurrent_gpu_allocations": 2,
+    "rules": [
+      "Every job has a finite wall-time and GPU request bound.",
+      "Stage admission requires an exact frozen plan, successful native QA, scheduler/ledger duplicate checks and deadline reserves.",
+      "No automatic spending through a failed gate.",
+      "Keep cumulative requested, actual terminal and open reserved GPU time separately; retain all failed attempts.",
+      "Do not rewrite the historical48-hour experiment or erase its39.65-hour final charge."
+    ]
+  },
+  "objectives": {
+    "primary": "Improve both supplied-eight equal-benchmark macro pass@1 and pass@8 over original under identical frozen benchmark generation/grading.",
+    "stretch": "Exceed original and strong controls on every individual supplied benchmark in both metrics.",
+    "no_guarantee_or_sota_claim": true,
+    "user_aspiration": "Beat comparable original/control scores across every supplied benchmark, on both pass@1 and pass@8.",
+    "claim_rule": "Improving the macro alone is not beating every benchmark. Report all16 per-task metric deltas and every regression; claim universal improvement only if actually observed, with uncertainty qualified."
+  },
+  "next_admitted_scope": "CPU-only feasibility audit; no training, inference, benchmark evaluation, publication or automatic downstream submission.",
+  "candidate_hypothesis": {
+    "selection": "Structure-aware base-compatible coverage selection from complete original source pairs, using existing frozen base-loss evidence where suitable.",
+    "training": "Anchored SFT or frozen-prior support weighting plus a base-distribution KL anchor; exact recipe remains unsealed pending CPU feasibility.",
+    "not_an_established_new_algorithm": true
+  },
+  "validation": {
+    "do_not_reuse_as_unseen": [
+      "old64source screen",
+      "v2source search192",
+      "v2source confirmation192"
+    ],
+    "old_short_prompt_eligible_unseen_rows_remaining": 270,
+    "fresh_label_sources_to_prepare": [
+      "MATH official training split",
+      "ARC-Challenge official training split"
+    ],
+    "purpose": "Math development plus independent science retention guard; not a substitute for GPQA or a claim of universal generalization.",
+    "exclusions": "All final benchmark question identities, all prior and new training/probe IDs, and previously viewed validation IDs; also exclude prior scored reservoir where feasible; log exact and near-duplicate audits.",
+    "seal_before_generation": true,
+    "must_freeze_exact_selection_and_acceptance_rules_before_gpu_pilot": true,
+    "final_test_sets_previously_viewed": true,
+    "report_future_benchmark_results_as_exploratory_comparisons": true
+  },
+  "guards": {
+    "all_heavy_work_and_tests_on_compute": true,
+    "no_login_or_local_model_data_processing": true,
+    "no_model_replacement": true,
+    "full_parameter_main_candidate": true,
+    "unchanged_final_benchmark_protocol": true,
+    "cap_remaining_final_candidates": 1,
+    "no_benchmark_based_reranking": true
+  },
+  "research": "extension/research.json",
+  "proposed_stages": [
+    {
+      "id": "cpu_feasibility",
+      "gpu_hours": 0,
+      "scope": "Cached source/feature/training population and style audit, no inference or downstream submission."
+    },
+    {
+      "id": "diagnostic",
+      "requested_gpu_hours_max": 0.5,
+      "scope": "Zero-update serialization/config equivalence and source-only stopping diagnostics."
+    },
+    {
+      "id": "source_pilot",
+      "requested_gpu_hours_max": 6,
+      "scope": "Small matched data-by-objective pilots; freeze question identities, normalization, gradient-scale controls, EOS checks and ranking before generation."
+    },
+    {
+      "id": "full_factorial",
+      "requested_gpu_hours_max": 72,
+      "scope": "Subject to pilot gate: eligible-random versus new15K selection crossed with CE, ASFT and proposed prior-anchored objective; at most two predefined training seeds, all fresh original initialization. Exact matrix is not yet admitted."
+    },
+    {
+      "id": "development_and_confirmation",
+      "requested_gpu_hours_max": 8,
+      "scope": "Independent math/science labeled development; one selected recipe and a disjoint confirmation gate. No benchmark-driven switch."
+    },
+    {
+      "id": "final_benchmarks",
+      "requested_gpu_hours_max": 12,
+      "scope": "At most one preselected recipe with prespecified seed replication; unchanged all-nine n8/32K/B200 benchmark protocol."
+    }
+  ]
+}

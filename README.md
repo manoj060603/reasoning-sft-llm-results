@@ -6,7 +6,49 @@ It compares that model with the original and a matched 15,000-example random
 control. Earlier team models are not used for initialization or probe scoring.
 
 This project addresses the [Virginia Tech reasoning SFT assignment](https://github.com/reds-lab/Project-Reasoning-SFT-LLM),
-due **October 20, 2026, at 11:59 p.m. Eastern**.
+with an original deadline of **October 20, 2026, at 11:59 p.m. Eastern**.
+
+## One week extension and new research phase
+
+The user reported a one-week extension on October 20, making the working
+deadline **October 27, 2026, at 11:59 p.m. Eastern**. The user subsequently
+removed the earlier 48-hour GPU cap for the new extension. Its jobs will still
+have bounded allocations and staged admission. The earlier **39.65-hour**
+charge, original cap, completed experiments and all five published artifacts
+below remain preserved as historical evidence.
+
+The [new research review](extension/research.json) covers 16 relevant primary
+sources on data selection, long-reasoning degradation and preservation during
+fine-tuning. The [extension campaign](extension/campaign.json) prioritizes a
+CPU feasibility audit, bounded diagnostic pilots, matched data-by-objective
+controls and seed replication before one final recipe receives unchanged
+nine-task evaluation. The leading hypothesis combines complete,
+structure-aware, base-compatible examples with an anchored training objective.
+This is a proposed synthesis of published ideas; superiority and novelty are
+not established. Exact training and acceptance rules must be sealed before
+GPU work. No new candidate benchmark result is claimed at this stage.
+
+The first [native CPU feasibility audit](extension/report/feasibility-20261020-1222225/complete.json)
+completed successfully in **221 seconds, with zero GPU use**. All **64 native
+checks** passed with no failures, errors or skips; the [QA receipt](extension/report/feasibility-20261020-1222225/native_qa.json)
+and [terminal accounting](extension/report/feasibility-20261020-1222225/accounting.json)
+bind the executed sources and real compute allocation.
+
+The audit verified the earlier exports against their original source pairs.
+All 15,000 advanced examples have balanced reasoning tags and fit the complete
+8K serialization, while 5,806 random examples lost their tails to prefix
+truncation. The advanced examples also already have lower source repetition
+and lower English branch-keyword density than random. These observations do
+not establish the cause of generated repetition or prove a better selector;
+they make another completeness or keyword filter alone an insufficient
+explanation of the earlier failure. There are **51,111 complete prepared-pool
+examples at 8K**, including a 32-token reserve, for an eligibility-matched
+control. This count covers the finalized pool, rather than all untouched
+100,000 source records.
+
+The next stage is to seal labeled development splits and small causal pilots
+for data compatibility, preservation objectives and a separately identified
+verified concise-response arm. No new GPU training or inference has started.
 
 ## Additional recovery follow-up: closed without promotion
 

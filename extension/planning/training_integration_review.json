@@ -1,0 +1,196 @@
+{
+  "schema": "extension-training-integration-review-v1",
+  "status": "accepted_read_only_planning_recommendation",
+  "artifact_type": "source_planning_not_runnable_code",
+  "tested": false,
+  "execution": false,
+  "native_integration_tests_executed": false,
+  "scientific_choices_sealed": false,
+  "scope": {
+    "proposed_new_runner": "extension/train.py",
+    "preserve_historical_sources_and_results": true,
+    "historical_runner": "deadline/train_full.py",
+    "objective_reference": "extension/objectives.py",
+    "no_implementation_or_admission_authorized_by_this_artifact": true,
+    "note": "This review records a possible integration. It is not a frozen experiment plan, native-QA receipt, memory-admission receipt, job request or result."
+  },
+  "initialization": {
+    "student": "Fresh full-parameter initialization from the pinned original checkpoint for every arm and seed; never initialize a new arm from an earlier trained, merged or recovery checkpoint.",
+    "base_repository": "Qwen/Qwen2.5-3B-Instruct",
+    "base_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "student_parameter_storage": "float32",
+    "optimizer_moment_storage": "float32",
+    "student_compute": "bfloat16 autocast",
+    "reference": "Separate copy of that same pinned original base, with identical tokenizer, native system mapping and forward inputs.",
+    "reference_parameter_storage_proposal": "bfloat16; verify zero-update numerical parity under the declared compute path",
+    "reference_guards": [
+      "Set eval mode, requires_grad_(False), and use_cache=False.",
+      "Store the reference on Trainer or in a closure, not as a registered child module of the student.",
+      "Exclude every reference parameter from optimizer groups and saved student checkpoints.",
+      "Use torch.no_grad for reference forwards; do not pass inference-mode tensors into checkpointed autograd without a separately verified conversion.",
+      "Bind actual base and tokenizer file hashes, not only a model name.",
+      "On explicit resume, reload the original reference and verify the exact extension recipe/cache/base/reference binding; do not resume across objectives or data arms."
+    ]
+  },
+  "integration_hook": {
+    "location": "A new extension Trainer.compute_loss override, analogous to deadline.train_full.trainer_class; do not call or modify the old main entry point.",
+    "steps": [
+      "Remove row_index and labels from the model-forward inputs.",
+      "For anchored modes, obtain frozen original-reference logits for the same input_ids, attention_mask and other declared inputs, with labels omitted and use_cache=False.",
+      "Obtain student logits with labels omitted and use_cache=False.",
+      "Perform exactly one causal shift: student_logits[:, :-1, :] predicts labels[:, 1:]; apply the identical position slice to reference logits.",
+      "Call extension.objectives.objective_loss with the aligned logits/targets and declared objective, beta, chunk_tokens and checkpoint_chunks settings.",
+      "Check finite scalar loss, update actual presentation consumption once, and return the loss. Return only detached, deliberately bounded outputs when requested.",
+      "Keep trainer.model_accepts_loss_kwargs=False and ignore HF num_items_in_batch; do not supply a competing Trainer compute_loss_func denominator."
+    ],
+    "avoid": [
+      "Do not pass labels through the CausalLM forward and then add another objective to outputs.loss.",
+      "Do not install the historical global memory_ce loss mapping for this external-objective runner.",
+      "Do not double-shift labels inside objective_loss; its inputs are already aligned.",
+      "Do not save full logits or graph-bearing metric tensors in training logs."
+    ],
+    "reuse_candidates": [
+      "Cache validation with explicit expected_rows and cutoff arguments.",
+      "Base/file identity helpers and complete saved-model finite FP32 scans.",
+      "Fixed data ordering and actual-consumption guards for an explicitly one-pass pilot.",
+      "FP32 parameter/moment checks, finite gradient clipping before optimizer mutation, and bound complete checkpoints."
+    ],
+    "historical_main_limitations": [
+      "Hardcodes 15000 examples, 1875 updates and 8192 cutoff; it cannot directly express a smaller or longer-context pilot.",
+      "Historical Consumption requires each unique example exactly once. Multiple epochs require a new explicit presentation schedule and corresponding resume checks, rather than weakening the guard.",
+      "A pilot subset divisible by accumulation minimizes initial integration changes; partial final updates still require their own native test."
+    ]
+  },
+  "objective_semantics": {
+    "notation": {
+      "p": "Trainable student conditional token distribution",
+      "q": "Frozen original-base conditional token distribution on the same teacher-forced context",
+      "y": "Original supervised target token"
+    },
+    "sft": "-log p(y)",
+    "asft": "stopgrad[p(y)] * (-log p(y)) + beta * KL(q || p)",
+    "prior_anchored": "q(y) * (-log p(y)) + beta * KL(q || p)",
+    "kl": "Forward KL from frozen base to student over the entire vocabulary at each active supervised position; a chosen-token log ratio is not a substitute.",
+    "normalization": "For every example, sum its token terms and divide by ALL its active supervised-token count; then average examples. Never divide by the sum of token weights.",
+    "gradient_weights": "Probability weights and reference inputs are detached. Only the student loss path carries gradients.",
+    "scientific_qualification": [
+      "The equal-example reduction is an ASFT normalization adaptation, not an exact reproduction of the paper's full training recipe.",
+      "The implemented prior_anchored objective uses raw frozen target probability. It is not PriFT-mass.",
+      "Prior weighting plus forward KL is an experimental synthesis; novelty and measured superiority are unestablished.",
+      "Weighted objectives change effective gradient scale. A lower reported weighted loss does not by itself demonstrate better learning or retention."
+    ]
+  },
+  "memory_review": {
+    "status": "source_derived_size_estimate_not_measured_peak_memory",
+    "assumed_batch_size": 1,
+    "example_sequence_length": 16384,
+    "assumed_vocabulary_size": 151936,
+    "must_verify_actual_model_config_on_compute": true,
+    "full_logits_bytes_formula": "batch * sequence_length * vocabulary_size * bytes_per_element",
+    "one_full_fp32_logits_tensor_gib": 9.2734375,
+    "one_full_bf16_logits_tensor_gib": 4.63671875,
+    "two_full_fp32_logits_tensors_gib": 18.546875,
+    "accelerate_behavior": "Pinned Accelerate1.12.0 wraps prepared native-AMP forwards with convert_outputs_to_fp32. Therefore external model(...).logits can be FP32 despite BF16 autocast.",
+    "objective_chunking_limit": "Checkpointed vocabulary chunks bound temporary log-softmax/reference-probability intermediates. Complete caller-supplied logits remain resident; this is not a streaming model forward.",
+    "excluded_from_size_estimate": [
+      "Student and reference parameter storage",
+      "Student gradients and FP32 Adam moments",
+      "Backbone activations, attention workspaces and checkpoint recomputation",
+      "Transient dtype conversions and CUDA allocator overhead"
+    ],
+    "admission_requirement": "Run a native actual-model maximum-declared-length forward/backward smoke check for every objective before admitting pilots. Record returned logits dtype and peak memory; do not assume the B200 fits from these tensor-size estimates.",
+    "optimization_policy": "Start with the straightforward reviewed external-loss path. Any later logits slicing, head streaming, altered AMP wrapping or custom backward requires its own equivalence and native memory tests."
+  },
+  "eos_and_serialization": {
+    "preserve_original_targets": true,
+    "require_complete_native_serialization_for_new_complete_target_arms": true,
+    "eos_audit": [
+      "Verify supervised EOS in complete cached examples, using the actual pinned tokenizer identity.",
+      "Verify the native assistant terminal suffix on compute; do not assume labels[-1] equals EOS because the template can append a newline.",
+      "Check the shift includes the first supervised response token, EOS and any supervised template tail while excluding prompt positions.",
+      "Record every declared truncation and missing-terminal-EOS case; never silently drop or repair an example."
+    ],
+    "weighted_stopping_risk": "Both weighted objectives can weaken EOS gradients when its online or reference target probability is low. Preserve the stated objective and diagnose this explicitly rather than adding an unplanned EOS bonus or probability floor."
+  },
+  "metrics_to_record": [
+    "Unweighted CE, weighted CE, forward KL and effective mean token weight, all with the declared equal-example reduction.",
+    "Active token counts per example and per update, actual unique/presentation counts and data-order identity.",
+    "EOS versus non-EOS CE, target probability weight and KL on actual terminal positions.",
+    "Pre-clipping gradient norm, clipping activity, learning rate and finite-update status.",
+    "Student/reference precision, optimizer-state precision, returned logits dtype and peak GPU memory.",
+    "Exact cache, source-selection, recipe, code, native-version, base/reference and output-checkpoint hashes.",
+    "Source-only development accuracy/teacher-agreement labeling, output length, length finishes, boxed completion and repetition as separately declared measures; no benchmark-driven checkpoint reranking."
+  ],
+  "required_native_qa": [
+    {
+      "id": "causal_model_loss_gradient_equivalence",
+      "execution": false,
+      "scope": "Native CPU, tiny causal model with no downloads",
+      "oracle": "The integrated CE hook matches manually shifted supervised CE and parameter gradients, including prompt masking, first answer token, EOS and template tail."
+    },
+    {
+      "id": "trainer_accumulation_and_tail",
+      "execution": false,
+      "scope": "Native pinned Transformers/Accelerate CPU integration",
+      "oracle": "Unequal target lengths match a manual equal-example optimizer update, rather than token weighting; a partial final accumulation group has the correct denominator and exact consumption."
+    },
+    {
+      "id": "fresh_initialization_and_frozen_reference",
+      "execution": false,
+      "scope": "Native CPU fixture and actual-model zero-update compute check",
+      "oracle": "Fresh model identities match the pinned original; zero-update KL is near zero under declared precision; ASFT and prior-weighted gradients match when p=q; reference gradients stay absent, weights unchanged, and parameters excluded from optimizer and student checkpoint."
+    },
+    {
+      "id": "resume_binding_and_presentations",
+      "execution": false,
+      "scope": "Native CPU deterministic fixture",
+      "oracle": "A complete bound checkpoint resumes the same optimizer state, data order and presentation schedule as uninterrupted training; changed objective, beta, reference, cache, code or schedule is rejected."
+    },
+    {
+      "id": "finite_update_and_precision_guards",
+      "execution": false,
+      "scope": "Native CPU numerical fixtures plus GPU precision admission",
+      "oracle": "Nonfinite loss/gradients fail before optimizer mutation; FP32 master parameters and Adam moments are enforced; detached diagnostics retain no graph."
+    },
+    {
+      "id": "actual_b200_longest_example_memory",
+      "execution": false,
+      "scope": "Explicitly admitted native B200 compute allocation",
+      "oracle": "Each objective completes forward/backward at the maximum declared sequence length with finite gradients; returned logits dtype, reference mode and measured peak memory are recorded before a pilot is admitted."
+    }
+  ],
+  "choices_requiring_a_separate_frozen_plan": [
+    "Exact pilot and final selected IDs, row counts, source exclusions and data-arm controls",
+    "Sequence cutoff and complete-target/EOS policy after CPU feasibility",
+    "Objective set, beta values and any gradient-scale control",
+    "Learning rate, epochs, update count, accumulation, seeds and checkpoint policy",
+    "Development and independent confirmation IDs, metrics, selection and acceptance rules",
+    "GPU resource bounds, concurrency, deadline reserve and downstream admission"
+  ],
+  "primary_citations": [
+    {
+      "title": "Accelerate v1.12.0 native AMP model-forward wrapping",
+      "url": "https://github.com/huggingface/accelerate/blob/v1.12.0/src/accelerate/accelerator.py#L1633"
+    },
+    {
+      "title": "Accelerate v1.12.0 recursive FP32 output conversion",
+      "url": "https://github.com/huggingface/accelerate/blob/v1.12.0/src/accelerate/utils/operations.py#L708"
+    },
+    {
+      "title": "Transformers v4.57.3 Qwen2 causal model logits and loss path",
+      "url": "https://github.com/huggingface/transformers/blob/v4.57.3/src/transformers/models/qwen2/modeling_qwen2.py#L379"
+    },
+    {
+      "title": "PyTorch2.9 autograd: no-grad and inference modes",
+      "url": "https://docs.pytorch.org/docs/2.9/notes/autograd.html#inference-mode"
+    },
+    {
+      "title": "Anchored SFT",
+      "url": "https://arxiv.org/abs/2509.23753"
+    },
+    {
+      "title": "PriFT",
+      "url": "https://arxiv.org/abs/2606.09396"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+Native QA complete: /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/feasibility-20261020-1222225/native_qa.json
+Verified source, cached features and unchanged training exports; aggregating text diagnostics.
+{"diagnosed_rows": 10000, "population_rows": 83029}
+{"diagnosed_rows": 20000, "population_rows": 83029}
+{"diagnosed_rows": 30000, "population_rows": 83029}
+{"diagnosed_rows": 40000, "population_rows": 83029}
+{"diagnosed_rows": 50000, "population_rows": 83029}
+{"diagnosed_rows": 60000, "population_rows": 83029}
+{"diagnosed_rows": 70000, "population_rows": 83029}
+{"diagnosed_rows": 80000, "population_rows": 83029}
+{
+  "complete": true,
+  "output": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/feasibility-20261020-1222225/complete.json",
+  "populations": {
+    "raw_source_rows": 100000,
+    "finalized_prepared_pool_rows": 83029,
+    "cached_feature_rows": 83029,
+    "source_heldout_rows": 1000,
+    "reserved_probe_rows": 1024,
+    "advanced_scored_reservoir_rows": 30000,
+    "broad_prepared_random_sampling_pool_rows": 82005,
+    "random_rows": 15000,
+    "advanced_rows": 15000,
+    "random_advanced_overlap_rows": 2706
+  }
+}
+Feasibility complete: /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/feasibility-20261020-1222225
