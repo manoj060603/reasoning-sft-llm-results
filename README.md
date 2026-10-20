@@ -10,33 +10,32 @@ due **October 20, 2026, at 11:59 p.m. Eastern**.
 
 ## Verified progress
 
-Verified snapshot: **October 20, 2026, at 12:53 p.m. Eastern / 16:53 UTC**.
-Both final training runs are complete. Original and primary advanced evaluation
-are **9/9 complete, including all eight supplied tasks**. Random evaluation is
-**8/9 complete, 7/8 supplied tasks**; only its GPQA result remains pending.
-Full trained-model macros and paired uncertainty await three-model closeout.
+Verified snapshot: **October 20, 2026, at 1:12 p.m. Eastern / 17:12 UTC**.
+Both full-SFT runs and all three primary evaluations are complete: **9/9 tasks
+per model, including all eight supplied tasks and supplementary AIME25**. The
+[native final audit](deadline/report/primary-final-20261020T1708Z/audit.json)
+verifies every result from eight raw responses per problem, with matched
+protocol, benchmark identities and hardware and no audit errors.
 
 | Stage | Verified state |
 |---|---|
 | Source preparation and both probes | Complete; 30,000 opposite-fold candidate scores |
 | New-method selection | Complete; 15,000 unchanged examples, zero training truncation |
 | Both final full-SFT models | Complete; 1,875 updates each, 15,000 unique examples used once, 434 finite FP32 tensors per model |
-| Original benchmark evaluation | All nine complete, including supplementary AIME25 |
-| Random-control evaluation | 8/9 complete: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, Minerva, OlympiadBench and supplementary AIME25 |
-| New-method evaluation | All nine complete, including GPQA and all eight supplied tasks |
-| Primary evaluation continuations | Advanced `1210310` completed; random `1210309` remains running on GPQA |
-| Final comparisons and Hugging Face publication | Pending; CPU closeout `1208135` depends on both continuations succeeding; publisher `1209745` depends on closeout |
+| Original, random and advanced evaluations | All nine complete for each model; full matched comparison verified |
+| Primary native CPU closeout | `1208135` completed successfully; final audit, uncertainty and publication package created |
+| Hugging Face publication | Publisher `1209745` running; verified upload-completion receipt and four public links remain pending |
 
-The original model's **official-eight macro is 29.30% pass@1 and 52.86% pass@8**.
-The [partial raw-result audit](deadline/report/partial-20261020T1010Z/results.md)
-reports the following percentages; every completed task has eight responses per
-problem and verified identities. Protocol, benchmark data and hardware agree;
-the full matched comparison remains incomplete. The [OlympiadBench audit](deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json)
-and [new primary GPQA audit](deadline/report/primary-gpqa-partial-20261020T1650Z/audit.json)
-compose the current coverage. The latter verifies advanced's complete all-nine
-identity and raw GPQA results; random-versus-advanced GPQA is still pending.
+**The advanced policy beats the prepared-source random control, but both SFT
+models regress from the original.** On the supplied-eight macro, advanced gains
+**2.5548 percentage points pass@1** over random (95% conditional bootstrap CI
+**[1.6733, 3.4813]**) and **6.2555 points pass@8** (**[3.1852, 9.5150]**).
+The [preserved native uncertainty](deadline/report/primary-final-20261020T1708Z/uncertainty.json)
+uses 10,000 paired normalized-question-cluster draws. These intervals condition
+on the fixed models and eight recorded outputs; they exclude training-seed and
+additional generation-sampling variance, with no multiple-comparison adjustment.
 
-| Task with measured results | Original pass@1 / pass@8 | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
+| Benchmark | Original pass@1 / pass@8 | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
 |---|---:|---:|---:|
 | AMC 2023 | 42.50% / 70.00% | 22.50% / 47.50% | 25.00% / 45.00% |
 | AIME24 | 7.92% / 23.33% | 0.42% / 3.33% | 2.50% / 13.33% |
@@ -45,28 +44,31 @@ identity and raw GPQA results; random-versus-advanced GPQA is still pending.
 | Kaoyan | 21.11% / 49.75% | 14.07% / 41.71% | 15.45% / 47.74% |
 | Minerva | 30.33% / 47.79% | 15.95% / 36.40% | 18.11% / 41.54% |
 | OlympiadBench | 28.26% / 51.85% | 17.15% / 38.37% | 18.87% / 40.44% |
-| GPQA | 28.41% / 69.70% | Pending | 14.14% / 54.04% |
+| GPQA | 28.41% / 69.70% | 9.22% / 41.41% | 14.14% / 54.04% |
 | AIME25, supplementary | 0.83% / 3.33% | 2.92% / 16.67% | 1.67% / 13.33% |
+| **Supplied-eight macro** | **29.30% / 52.86%** | **16.23% / 36.70%** | **18.79% / 42.95%** |
+| Supplemented seven, internal macro | 23.06% / 45.58% | 11.80% / 32.67% | 14.03% / 37.92% |
 
-Primary advanced trails the original on **all eight supplied tasks**; random
-trails the original on its seven completed supplied tasks. Both improve on
-supplementary AIME25. Advanced exceeds random on CN,
-Kaoyan, Minerva and OlympiadBench in both metrics. On MATH, advanced pass@1 is **51.225% versus 49.725%**
-for random, a **+1.50 percentage-point** difference; pass@8 ties at **78.20%**.
-Both remain below the original's 65.90% / 83.80%. Advanced also exceeds random
-on AIME24, has higher pass@1 but lower pass@8 on AMC, and trails random on
-AIME25. Findings remain mixed; no overall winner or significance is established.
+The [complete results table](deadline/report/primary-final-20261020T1708Z/results.md)
+uses equal benchmark weights for each stated macro. The supplementary seven-task
+macro is not a verified historical leaderboard result. Advanced has higher
+pass@1 than random on all eight supplied tasks; pass@8 is higher on six, tied
+on MATH and lower on AMC. It trails random on supplementary AIME25. Both SFT
+models are below original on all eight supplied tasks in both metrics; both
+improve on supplementary AIME25. Advanced's supplied-eight deficit versus
+original is **10.5157 points pass@1 and 9.9072 points pass@8**.
 
-MATH truncations are 1,235/4,000 advanced responses (30.875%) versus
-1,508/4,000 random (37.7%). CN has 159/240 advanced versus 215/240 random
-truncations; Kaoyan has 667/1,592 advanced versus 1,009/1,592 random. Minerva
-has 1,088/2,176 advanced responses truncated (50%), versus 1,269/2,176 random.
-Advanced GPQA has **954/1,584** length-limit finishes, versus **5/1,584** for
-the original; random GPQA remains pending. These counts do not establish what
-caused the accuracy differences.
-Full trained-model macros and paired uncertainty remain pending. Missing
-results are not zero. The primary experiment's selection method, models and
-evaluation protocol are unchanged in response to these scores.
+Generation behavior also regressed. Across the **15,552 supplied-task samples
+per model**, original has **152 length finishes (0.98%)**, random **9,010
+(57.93%)**, and advanced **7,526 (48.39%)**. Mean generated tokens per response
+are **1,084.50 / 19,998.02 / 17,324.52**, respectively. These pooled diagnostics
+have different weighting from the equal-benchmark accuracy macros. Advanced
+reduces excessive generation relative to random but remains far from original;
+finish reasons alone do not establish causation. The [report](deadline/FINAL_REPORT.md)
+includes per-task intervals, the accuracy-blind AMC repetition diagnostic, and
+limitations from unequal eligibility/token exposure and missing ablations.
+The primary selection method, models and evaluation protocol were not changed
+in response to the measured scores.
 
 A separate [post-hoc recovery experiment](deadline/recovery/plan.json) tests a
 fixed blend of 75% original weights and 25% advanced weights. Its CPU build
@@ -107,7 +109,7 @@ documents retaining six completed benchmarks and fully regenerating the unsaved
 Minerva batch under the frozen settings. No interrupted partial response enters
 the scores. Interrupted work is included in GPU accounting; its exact unsaved
 generated-token total is unknown. Both regenerated Minerva results were
-verified; advanced's primary continuation is now complete while random's runs.
+verified; both primary continuations have now completed, and their results passed native closeout.
 
 Native budget/pipeline checks previously passed **30 tests with no failures,
 errors or skips** in a compute allocation. Both initial evaluation parents
@@ -117,8 +119,7 @@ and [advanced proof](deadline/operations/gpu-budget-reconciliation-637c6b2ed6420
 therefore establish the primary-only terminal-plus-open-reservation bound of **47.05 of 48
 GPU-hours (169,380 seconds)**. This is **not actual elapsed GPU usage**.
 Before recovery, admitted requests totaled 70 hours; the 88-hour all-attempt history
-includes 18 hours verified never admitted. Final resource use, continuation
-success, comparisons and publication remain pending.
+includes 18 hours verified never admitted. Final resource reconciliation and publication remain pending; primary comparisons are complete.
 
 The recovery screen completed in 316 seconds and is charged 360 GPU-seconds
 under its [terminal accounting proof](deadline/operations/gpu-budget-reconciliation-e85de9ae41202753.json).
@@ -126,23 +127,34 @@ The initial benchmark stage timed out after 2,703 seconds; its
 [terminal proof](deadline/operations/gpu-budget-reconciliation-c0f4181a2d92af85.json)
 charges 2,760 seconds and retains seven completed tasks.
 
-**Current resource bound:** [advanced's completed continuation](deadline/operations/gpu-budget-reconciliation-b2705ce9203eb224.json)
-used 31,149 elapsed seconds and is conservatively charged 31,200. Verified closed
-charges total **102,900 seconds (28.583333 GPU-hours)**. With the full 16-hour
-random reservation and 0.75-hour recovery-continuation reservation, the
-[admission accounting](deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json)
-bounds commitment at **163,200 seconds = 45.333333 / 48 GPU-hours**, leaving
-**9,600 seconds** uncommitted. This bound is **not actual elapsed GPU usage**.
-Historical admitted requests total **72.25 hours**, and all-attempt requests
-**90.25 hours**. Primary CPU closeout `1208135` and publisher `1209745` retain
-their existing dependency chain. Final comparison, uncertainty and Hugging Face
-publication remain pending.
+**Historical resource bound, 16:53 UTC:** after advanced's completed continuation
+was charged 31,200 GPU-seconds, closed charges were 102,900 seconds. Adding the
+then-full random and recovery-continuation reservations gave
+**163,200 seconds = 45.333333 / 48 GPU-hours**. This preserved reservation snapshot
+is historical, not actual elapsed usage.
+
+**Current resource bound, 17:11:50 UTC:** random continuation `1210309` completed
+after **35,613 seconds** and is conservatively charged **35,640 GPU-seconds** by
+its [terminal proof](deadline/operations/gpu-budget-reconciliation-029e44effa49a4c6.json).
+Verified closed charges now total **138,540 seconds (38.483333 GPU-hours)**.
+The only remaining GPU reservation is the 2,700-second recovery continuation,
+so the bound is **141,240 seconds = 39.233333 / 48 GPU-hours**, with **31,560
+seconds** uncommitted. Final consumed use awaits recovery terminal accounting.
+Historical admitted requests remain **72.25 hours**, and all-attempt requests
+**90.25 hours**; no request history is erased.
+
+The [primary closeout receipt](deadline/operations/primary-closeout-complete-20261020.json)
+confirms CPU job `1208135` completed successfully in 159 seconds. It produced
+matched results, paired uncertainty and a verified [staged publication package](deadline/report/primary-final-20261020T1708Z/publication-package/package_manifest.json).
+Publisher `1209745` is running. Hugging Face publication remains pending its
+verified completion receipt and four public artifact links.
 
 ## Read the experiment
 
 - [Method, controls and execution workflow](deadline/README.md)
 - [Report draft and assignment answers](deadline/FINAL_REPORT.md)
-- [Current partial result audit](deadline/report/partial-20261020T1010Z/results.md)
+- [Complete primary results and audit](deadline/report/primary-final-20261020T1708Z/results.md)
+- [Paired uncertainty and generation diagnostics](deadline/report/primary-final-20261020T1708Z/uncertainty.json)
 - [Requirement-by-requirement checklist](deadline/assignment_checklist.json)
 - [Frozen scientific plan](deadline/experiment_plan.json)
 
@@ -173,10 +185,11 @@ plan was 42 GPU-hours; the fresh experiment's consumption cap remains 48 hours.
 Any unused-reservation reconciliation preserves historical requests and charges
 the full reservation for every open or unverified allocation.
 
-The final deliverables require matched original/random/new-method scores,
-uncertainty estimates, the completed report, two public model repositories and
-two public dataset repositories with verified contents. Source availability,
-queued jobs and upload code do not establish completed publication. Course
+Matched primary results, uncertainty estimates and their report interpretation
+are complete. Remaining delivery work includes verified links for two public
+model repositories and two public dataset repositories, final resource/source
+reconciliation and team submission. The publisher is in progress; source
+availability and upload calls do not establish verified publication. Course
 submission remains a human action.
 
 The code license is in [LICENSE](LICENSE). Published derivative model weights

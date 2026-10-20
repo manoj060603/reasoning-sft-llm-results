@@ -1,0 +1,559 @@
+{
+  "schema": "deadline-publication-metadata-v1",
+  "status": "staged_metadata_not_uploaded",
+  "rows_per_dataset": 15000,
+  "cutoff": 8192,
+  "selection_sha256": "6576564357f9d708c3b8263414490df1b340035e66e892193a13a7f762a24d56",
+  "plan_sha256": "080488bb494c52ca71d385b2f041821e8c71c2c994aa6439c1c6f24d8227635d",
+  "model_and_dataset_references": {
+    "random": {
+      "role": "random",
+      "folder": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model",
+      "dataset": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/dataset.json",
+      "dataset_sha256": "3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7",
+      "binding_sha256": "41ea3e2d1283c88a0e356f8def2a7027cb178e7b5e9a05c65f97b666921e0e70",
+      "recipe": {
+        "max_steps": 1875,
+        "per_device_batch": 1,
+        "accumulation": 8,
+        "learning_rate": 2e-06,
+        "lr_scheduler_type": "cosine",
+        "warmup_ratio": 0.03,
+        "weight_decay": 0.01,
+        "max_grad_norm": 1.0,
+        "bf16": true,
+        "gradient_checkpointing": true,
+        "attention": "sdpa",
+        "seed": 42,
+        "data_seed": 42,
+        "cutoff": 8192,
+        "loss": "per-example mean of shifted supervised-token CE; mean across update examples",
+        "full_parameter": true,
+        "optimizer": "adamw_torch",
+        "save_steps": 256,
+        "save_total_limit": 2,
+        "loss_kernel": "reasoning.memory_ce; BF16 logits and 128-token FP32 CE chunks",
+        "parameter_dtype": "float32",
+        "compute_dtype": "bfloat16_autocast",
+        "optimizer_moment_dtype": "float32",
+        "clipping": "finite-checked callback; native Trainer clipping disabled to fail before optimizer update"
+      },
+      "base": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "base_identity": {
+        "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+        "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00002.safetensors": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+        "model-00002-of-00002.safetensors": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+        "model.safetensors.index.json": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "truncated_training_rows": 5806,
+      "missing_supervised_eos_rows": 5806,
+      "finite_tensor_evidence": "training completion receipt; serialized weight hashes rechecked",
+      "model_verification": {
+        "tensors": 434,
+        "all_finite": true,
+        "parameter_dtype": "float32",
+        "parameter_names_verified": 434,
+        "files": {
+          "model-00001-of-00003.safetensors": "794471ad13476e2d5f8572aa31c1477b2aca2490f107176e2f72eb889299cc2b",
+          "model-00002-of-00003.safetensors": "8004054d70eebf0531ed0c3fa68d4baa87e869c59208398092fa0810e55a42ec",
+          "model-00003-of-00003.safetensors": "8f8ef6c4acaef6e4033c942c2d2cdb88d878fb0f8fe3ca1c99d8c4e470f4d26f"
+        },
+        "model_index_sha256": "88a50027f81c9f8a1f2c773b695ccc0a9a47e19107d6c70ccf531f322b5304e6"
+      }
+    },
+    "advanced": {
+      "role": "advanced",
+      "folder": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model",
+      "dataset": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/dataset.json",
+      "dataset_sha256": "511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199",
+      "binding_sha256": "dffdc0479f88066adce023778e1dd3cddf113f2df2ce8569fcde5af48e89d41a",
+      "recipe": {
+        "max_steps": 1875,
+        "per_device_batch": 1,
+        "accumulation": 8,
+        "learning_rate": 2e-06,
+        "lr_scheduler_type": "cosine",
+        "warmup_ratio": 0.03,
+        "weight_decay": 0.01,
+        "max_grad_norm": 1.0,
+        "bf16": true,
+        "gradient_checkpointing": true,
+        "attention": "sdpa",
+        "seed": 42,
+        "data_seed": 42,
+        "cutoff": 8192,
+        "loss": "per-example mean of shifted supervised-token CE; mean across update examples",
+        "full_parameter": true,
+        "optimizer": "adamw_torch",
+        "save_steps": 256,
+        "save_total_limit": 2,
+        "loss_kernel": "reasoning.memory_ce; BF16 logits and 128-token FP32 CE chunks",
+        "parameter_dtype": "float32",
+        "compute_dtype": "bfloat16_autocast",
+        "optimizer_moment_dtype": "float32",
+        "clipping": "finite-checked callback; native Trainer clipping disabled to fail before optimizer update"
+      },
+      "base": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "base_identity": {
+        "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+        "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00002.safetensors": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+        "model-00002-of-00002.safetensors": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+        "model.safetensors.index.json": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "truncated_training_rows": 0,
+      "missing_supervised_eos_rows": 0,
+      "finite_tensor_evidence": "training completion receipt; serialized weight hashes rechecked",
+      "model_verification": {
+        "tensors": 434,
+        "all_finite": true,
+        "parameter_dtype": "float32",
+        "parameter_names_verified": 434,
+        "files": {
+          "model-00001-of-00003.safetensors": "a974cccbecc6300f30a4100df98bbc54e32ae4a56068a143df8353fa93ce9647",
+          "model-00002-of-00003.safetensors": "31011c044710a4fabe4772fc14edb30c43fa92af3e3249c94f094b4aa2a65079",
+          "model-00003-of-00003.safetensors": "d76fee8999c5b8b1080bd7fcd52134248072848699cc1917679914af4379ef7f"
+        },
+        "model_index_sha256": "88a50027f81c9f8a1f2c773b695ccc0a9a47e19107d6c70ccf531f322b5304e6"
+      }
+    }
+  },
+  "verified_input_files": {
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/experiment_plan.json": {
+      "sha256": "080488bb494c52ca71d385b2f041821e8c71c2c994aa6439c1c6f24d8227635d",
+      "bytes": 3384
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/preparation_complete.json": {
+      "sha256": "7fb88fb85f685eef6cbc5ffde2e83de00a87445fbf7db8e134b61640451b82ab",
+      "bytes": 1880
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/selection_complete.json": {
+      "sha256": "6f9758b807eeadde27cc47f431265ef87e80e46d9ac28c0526836b69658039b0",
+      "bytes": 2455
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/model_identity.json": {
+      "sha256": "81af59dbb365b8559ad0d853dbda245aa4ac3ff0bedc03428e50fed65d7f7ae2",
+      "bytes": 1559
+    },
+    "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/51b83fbd4e2d363b60235b9c8d494046a83c1cbf": {
+      "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+      "bytes": 661
+    },
+    "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/bf077f03dc569cfb8a90b3ec1ad20365a620bad6": {
+      "sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+      "bytes": 242
+    },
+    "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0": {
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "bytes": 1671839
+    },
+    "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2": {
+      "sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+      "bytes": 3968658944
+    },
+    "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d": {
+      "sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+      "bytes": 2203268048
+    },
+    "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/38047c6284a25427043f0ab040f623a2a20dd093": {
+      "sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+      "bytes": 35581
+    },
+    "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/443909a61d429dff23010e5bddd28ff530edda00": {
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "bytes": 7031645
+    },
+    "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/07bfe0640cb5a0037f9322287fbfc682806cf672": {
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "bytes": 7305
+    },
+    "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/4783fe10ac3adce15ac8f358ef5462739852c569": {
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "bytes": 2776833
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/selected/advanced.json": {
+      "sha256": "511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199",
+      "bytes": 186336845
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/selected/dataset_info.json": {
+      "sha256": "e434d6371c88b4162a4d5d64a1539cedd42325343666a9d21fa34cf78ad8b4e8",
+      "bytes": 371
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/selected/random.json": {
+      "sha256": "3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7",
+      "bytes": 356118384
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/selected/selection_manifest.json": {
+      "sha256": "07e2b09fb92342447e0764fb73578279bb71383c26fb436d3d88b06333986e9d",
+      "bytes": 8021286
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/cache_meta.json": {
+      "sha256": "71a51f9a88586872d352082e4fd15db9ad6b73fe1a191a0aafdf1ac08459aec6",
+      "bytes": 1414
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/dataset.json": {
+      "sha256": "511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199",
+      "bytes": 186336845
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/selected_ids.json": {
+      "sha256": "2241e6e39ab65fe465db8544d7635570ff8a67b7e95f764ac72ddcb1bb9d3d7f",
+      "bytes": 1050003
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/training.jsonl": {
+      "sha256": "04d5e55bbb18065865f5cba94f44e7af83579b0695b0b948f67eb9ff42590d04",
+      "bytes": 535471428
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeA/probe_receipt.json": {
+      "sha256": "4352d5bbcdc24b93be86003567f616e7ad71b61fcf86ab0dad67286a95138004",
+      "bytes": 73063
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeA/adapter/adapter_model.safetensors": {
+      "sha256": "06826c06b9fe15e75eb6a9addc85ab29ed94ce47b09506bd87b34ca72f46d5f9",
+      "bytes": 59933632
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeB/probe_receipt.json": {
+      "sha256": "650c2799ab1b692e4c36a763774f997c7f951c36a822e0de46bec414acb78a75",
+      "bytes": 73063
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeB/adapter/adapter_model.safetensors": {
+      "sha256": "48646d78f92b4ab97f483a8bb732fa11586192c15f3f07a3934ddd751abeeb22",
+      "bytes": 59933632
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/scores_fold0/score_receipt.json": {
+      "sha256": "5ac1f6e2bfb6b030baaf2892b05e1d96d36199bc03ab2c7b53d413d4d70e52c0",
+      "bytes": 312195
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/scores_fold0/run_manifest.json": {
+      "sha256": "834efccf24ed9cfd4396fc80ad0907f286b6c26475b27cd37ba46caee7b59ece",
+      "bytes": 1009578
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/scores_fold0/scores.jsonl": {
+      "sha256": "d2939a5f4c75d5b9f060a3ef5e8e5503458c825398ab9b3dec2221dedf9a0869",
+      "bytes": 3205750
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/scores_fold1/score_receipt.json": {
+      "sha256": "40b1c0ec54ed6076d8aea7844dcb1cd0031197e507118c0e7785444797413ec5",
+      "bytes": 311198
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/scores_fold1/run_manifest.json": {
+      "sha256": "8c6d8a450fbd647ec080927df2f6035a056ccac394b737d8a746188fc68a1119",
+      "bytes": 1006362
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/scores_fold1/scores.jsonl": {
+      "sha256": "73fd83465bb665e07b9d4b06137d9ca43de8707d7b28978f3010c51803e85302",
+      "bytes": 3195372
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/pool.json": {
+      "sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "bytes": 1970428086
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/manifest.json": {
+      "sha256": "80e987b7a5cc15d7a64a35abe13f3fc38fd9fc5b3ac9e983d71bbaeed944f3da",
+      "bytes": 433756
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/complete.json": {
+      "sha256": "3096f82603f4df4790988ae955581cb7ce513fae54d875021936cea893ce62ec",
+      "bytes": 1045
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/cache_meta.json": {
+      "sha256": "69de9dd0a9467af5943023c68d96fce6dbe4286b7121be58843c09c040532c55",
+      "bytes": 419042
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/training.jsonl": {
+      "sha256": "9df472299c2e646383e0c6a9f6451fc8153ce548e81987e222e7fb59ef730b7d",
+      "bytes": 737075712
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/dataset.json": {
+      "sha256": "3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7",
+      "bytes": 356118384
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/selected_ids.json": {
+      "sha256": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9",
+      "bytes": 1050003
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/cache_audit.json": {
+      "sha256": "a066e679630a7ef745ba647ddfd16f8abbfdbf4d0c29df6a43262473b5305fb9",
+      "bytes": 714
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/consumption_final.json": {
+      "sha256": "54e3adde70506288445ca8f81dd89e664da7dd1811590df92d2a851f23d370d4",
+      "bytes": 154215
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/finite_updates.jsonl": {
+      "sha256": "2ca078b4f80f1349576c90907425758a42ab7e04760b63d7951cb723cb171665",
+      "bytes": 152701
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/model-00001-of-00003.safetensors": {
+      "sha256": "794471ad13476e2d5f8572aa31c1477b2aca2490f107176e2f72eb889299cc2b",
+      "bytes": 4982131536
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/model-00002-of-00003.safetensors": {
+      "sha256": "8004054d70eebf0531ed0c3fa68d4baa87e869c59208398092fa0810e55a42ec",
+      "bytes": 4932949336
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/model-00003-of-00003.safetensors": {
+      "sha256": "8f8ef6c4acaef6e4033c942c2d2cdb88d878fb0f8fe3ca1c99d8c4e470f4d26f",
+      "bytes": 2428723160
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/model.safetensors.index.json": {
+      "sha256": "88a50027f81c9f8a1f2c773b695ccc0a9a47e19107d6c70ccf531f322b5304e6",
+      "bytes": 35618
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/config.json": {
+      "sha256": "e3394fd18e601ef755377e1465daee07775b3df6799e39ad1c0805aa12b9791f",
+      "bytes": 1492
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/tokenizer_config.json": {
+      "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+      "bytes": 4686
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/tokenizer.json": {
+      "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+      "bytes": 11421896
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/added_tokens.json": {
+      "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+      "bytes": 605
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/chat_template.jinja": {
+      "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "bytes": 2507
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/generation_config.json": {
+      "sha256": "bee877e33ef166a0ebe065a65c0406f6c0be90040e3eb42e68932314b20e50cb",
+      "bytes": 217
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/merges.txt": {
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "bytes": 1671853
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/special_tokens_map.json": {
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "bytes": 613
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/vocab.json": {
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "bytes": 2776833
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/manifest.json": {
+      "sha256": "415aa571740dc5c6e215db762a0157b58a8cbdb45eccedc69eb7ae0086e21647",
+      "bytes": 4510
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/complete.json": {
+      "sha256": "c0d96498b3c1855dd36d554c0a9712b3d5db9201118de855f615536e71c6ecfd",
+      "bytes": 1046
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/cache_audit.json": {
+      "sha256": "823a230e2367248262639ba79d8d432373751fb9821f1c50bab376132773bc42",
+      "bytes": 699
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/consumption_final.json": {
+      "sha256": "fa0970141b79e7a4b4907340326bcff914b5136de9e8d11ef99216c1c96c4c6a",
+      "bytes": 154215
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/finite_updates.jsonl": {
+      "sha256": "87a002731bf4b47e15becea1930a79e1d0fcf4fd3e258995f064c6c74def7b6e",
+      "bytes": 152722
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/model-00001-of-00003.safetensors": {
+      "sha256": "a974cccbecc6300f30a4100df98bbc54e32ae4a56068a143df8353fa93ce9647",
+      "bytes": 4982131536
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/model-00002-of-00003.safetensors": {
+      "sha256": "31011c044710a4fabe4772fc14edb30c43fa92af3e3249c94f094b4aa2a65079",
+      "bytes": 4932949336
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/model-00003-of-00003.safetensors": {
+      "sha256": "d76fee8999c5b8b1080bd7fcd52134248072848699cc1917679914af4379ef7f",
+      "bytes": 2428723160
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/model.safetensors.index.json": {
+      "sha256": "88a50027f81c9f8a1f2c773b695ccc0a9a47e19107d6c70ccf531f322b5304e6",
+      "bytes": 35618
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/config.json": {
+      "sha256": "e3394fd18e601ef755377e1465daee07775b3df6799e39ad1c0805aa12b9791f",
+      "bytes": 1492
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/tokenizer_config.json": {
+      "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+      "bytes": 4686
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/tokenizer.json": {
+      "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+      "bytes": 11421896
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/added_tokens.json": {
+      "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+      "bytes": 605
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/chat_template.jinja": {
+      "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "bytes": 2507
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/generation_config.json": {
+      "sha256": "bee877e33ef166a0ebe065a65c0406f6c0be90040e3eb42e68932314b20e50cb",
+      "bytes": 217
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/merges.txt": {
+      "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+      "bytes": 1671853
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/special_tokens_map.json": {
+      "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+      "bytes": 613
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/vocab.json": {
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "bytes": 2776833
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/manifest.json": {
+      "sha256": "ae42667eeac86f7aebafbda1afd4f364bd95e422ff32ae9b7555202d48a9d68b",
+      "bytes": 149445
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/metrics.json": {
+      "sha256": "d9886e3c2df1892965eebd2869ada22520cb07bf181e94c1822f02d53fc12a5d",
+      "bytes": 1486
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/manifest.json": {
+      "sha256": "91b10bd128f10e7453dddc4bd02b4941d15d3a55795a17ab210bcb4c176e5aa4",
+      "bytes": 149898
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/metrics.json": {
+      "sha256": "6cc6edf6eb0ab7b045c9e8e937fa7ce6d57e3e8eef764c9416bfdf5f7df8dc60",
+      "bytes": 1530
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/manifest.json": {
+      "sha256": "4fa4bd9d6913ffff95b6a2a65d74966aa30782b78ad87ca9b98748560141a36a",
+      "bytes": 149900
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/metrics.json": {
+      "sha256": "64486065c515520115a582c13483b1704e2d47a14314b80998aabd6c807ec189",
+      "bytes": 1495
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/aime/batch_000000.json": {
+      "sha256": "01ab51176499d2c00328de60009700f8a58cd6210b549b4031f3f46fd121d141",
+      "bytes": 1493467
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/amc/batch_000000.json": {
+      "sha256": "75df4477a36bac719c3ba6a86f55db9580d1bd66c1349247e8b7a8296ba3e114",
+      "bytes": 960098
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/math/batch_000000.json": {
+      "sha256": "657dab8e119df929613de367e77feab9febfbddba999b05411e89dcc8a09898c",
+      "bytes": 8308162
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/cn_math_2024/batch_000000.json": {
+      "sha256": "b5d1bcd9ac4ccea1b3d164d4ca6b47d16ff5b15278a112364682e4edc523fb6b",
+      "bytes": 1151524
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/kaoyan/batch_000000.json": {
+      "sha256": "47777c2a6e43bad5a089b4db8cde9bc81c770cf12901dd13b253f936fa21d7a1",
+      "bytes": 3901544
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/minerva/batch_000000.json": {
+      "sha256": "f358f89e141c1fc4fe52e8e0c99f67e6ff61cb2325f9ce1fea8191fd659319ef",
+      "bytes": 4670649
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/olympiadbench/batch_000000.json": {
+      "sha256": "fec43bb811a56de7060ead51ec71ee662c2542227762a858299c7fae53b24e3b",
+      "bytes": 19553344
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/gpqa/batch_000000.json": {
+      "sha256": "d1e74c3c267c939136c240ceb3dcfbe9cdb5d02ddcbfef4e91f24ccce8f3f4f6",
+      "bytes": 4421102
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/model/training_args.bin": {
+      "sha256": "32795a80dd17a5d0942d2b7b2cb0c638aec01b134018fa5389f2b24613065d5d",
+      "bytes": 5969
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/aime/batch_000000.json": {
+      "sha256": "81d5bdee81253ad5b0fd283aec08659c94e84400f314594c835546c50d2a19f1",
+      "bytes": 21127700
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/amc/batch_000000.json": {
+      "sha256": "78cee883e4fe95f3557991728416ad2188f503ec476e209f5b17283ac66454eb",
+      "bytes": 19826591
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/math/batch_000000.json": {
+      "sha256": "fde0f34ec0b162a84eeea064059b35ce33035f4d85184fd68ea3b98d55292908",
+      "bytes": 157692819
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/cn_math_2024/batch_000000.json": {
+      "sha256": "162d9d3329ccab881b0c1cc9270b23b758f51e686d0f83199d7384f5601e5bf2",
+      "bytes": 20651929
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/kaoyan/batch_000000.json": {
+      "sha256": "c53d2a930a4948e7acaf3f943131ab8b35458a7a2c7562e5dc8b04137628a0a4",
+      "bytes": 110653744
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/minerva/batch_000000.json": {
+      "sha256": "526d803fe7d3bc20a1c5990b340b9a66c470777ead4b3b72cd258dff2006f1a6",
+      "bytes": 139080709
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/olympiadbench/batch_000000.json": {
+      "sha256": "6c2f190b67764906653560caaa95e0d2905a2240a2fbc132c82df3aac910cfa2",
+      "bytes": 364033684
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/gpqa/batch_000000.json": {
+      "sha256": "1bddce81b3498a0beb88a208b00eaa17de064af746ec4faebda08f5b4a26850c",
+      "bytes": 130480414
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model/training_args.bin": {
+      "sha256": "8e9b257035320fe1ac14bb9bd40c937ef5a65b3f24b97b9ddf95daafb7dd0539",
+      "bytes": 5969
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/aime/batch_000000.json": {
+      "sha256": "9cbcbf51f193024de820bc799e5a0ffb71cc44bf5c00412bab345dff8248e28b",
+      "bytes": 19717851
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/amc/batch_000000.json": {
+      "sha256": "51ab2d99aa3d174be8defe3c3efb28782198a34fad68435ae9a58b2a6349606d",
+      "bytes": 17723556
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/math/batch_000000.json": {
+      "sha256": "007777944772638d9f1ac1085adfbfe8234002a621b2012031e5fd30ddf1f1ca",
+      "bytes": 134354327
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/cn_math_2024/batch_000000.json": {
+      "sha256": "788d2bb605bc61c771c2c5e458618a11f8dac8d581abdc76d7bb4ac445b4fdbe",
+      "bytes": 16668423
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/kaoyan/batch_000000.json": {
+      "sha256": "98af47326e9b6b9d1636bb13fa78b268504c05f9fe038823bff3febb92981d9f",
+      "bytes": 77559219
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/minerva/batch_000000.json": {
+      "sha256": "e05c5abc3633a395224bd442b9d569f0e727b89926613b116858d338e0313ab2",
+      "bytes": 116124176
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/olympiadbench/batch_000000.json": {
+      "sha256": "378a476ce26bc9adb8909d5c64106798ac44c08721b27c460ec94ce2619c9f37",
+      "bytes": 323367350
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/gpqa/batch_000000.json": {
+      "sha256": "dad052e797002559535213e2880b9ba42c9ce9680ae78469090b7a23a15d9176",
+      "bytes": 113473333
+    }
+  },
+  "evaluation_scope": "mandatory supplied eight; optional AIME25 separately gated",
+  "source_copies_created": false,
+  "model_weight_copies_created": false,
+  "uploaded": false,
+  "publication_destinations": {
+    "random_model": null,
+    "advanced_model": null,
+    "random_dataset": null,
+    "advanced_dataset": null
+  },
+  "limitations": "The random control is uniform within the broad prepared source pool after deduplication, benchmark/source-heldout, prompt-capacity, and reserved-probe exclusions; it is not a literal uniform draw over the untouched original 100K rows. Original exported responses are unchanged. Random training may use declared 8K prefixes without an invented EOS. Advanced targets must fit completely. The advanced method combines eligibility filtering, reservoir construction, transfer gain, and coverage. Separate eligible-random and coverage-only ablations are needed to isolate their contributions. Relative teacher-forced loss reduction is a proxy, not mathematical verification or proof of causal data utility. Global novelty, state-of-the-art performance, and equivalence to a historical leaderboard are not established."
+}

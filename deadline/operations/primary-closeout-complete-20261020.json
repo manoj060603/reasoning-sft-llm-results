@@ -1,0 +1,42 @@
+{
+  "schema": "deadline-primary-closeout-complete-v1",
+  "complete": true,
+  "observed_at_utc": "2026-10-20T17:11:09.888970+00:00",
+  "job_id": "1208135",
+  "native_cpu_only": true,
+  "sacct_text": "1208135|1208135|COMPLETED|159|0:0|billing=20,cpu=8,mem=64G,node=1\n",
+  "actions": [
+    "matched three-model all9 raw audit",
+    "10000 paired normalized-question-cluster bootstrap",
+    "verified exact source/training/evaluation artifacts and staged primary four-destination publication metadata"
+  ],
+  "immutable_result_snapshot": "deadline/report/primary-final-20261020T1708Z",
+  "staged_package_files": {
+    "package_manifest.json": {
+      "sha256": "6dee6ba10ab887916e158679bf5848230d2afaedc5d8ac0d421c35a78e4b8516",
+      "bytes": 32355
+    },
+    "evaluation_summary.json": {
+      "sha256": "9f9f36d8382000401071802fd03045d83d0537bbb34d77b622d444093f812b46",
+      "bytes": 9668
+    },
+    "models/random/README.md": {
+      "sha256": "57415367db796498e8cceb1f37a149ae0e0d8a526db1f57c5d21573e582ddfee",
+      "bytes": 3339
+    },
+    "models/advanced/README.md": {
+      "sha256": "a4482c4707f0ab30cf40f3f6e6a4f32f3a4ef40b14c8a365962a933b01de3689",
+      "bytes": 3337
+    },
+    "datasets/random/README.md": {
+      "sha256": "7dbe884911538c49b90b3f94864be6d7804d7c0d4c59ae83f41be54f6ac09b6d",
+      "bytes": 2079
+    },
+    "datasets/advanced/README.md": {
+      "sha256": "d4977441a77c7cd2c0e03754b877ba78913d54a19a3a1c5fef71dbea2463dd3f",
+      "bytes": 2140
+    }
+  },
+  "hugging_face_upload_complete": false,
+  "course_submission_performed": false
+}

@@ -1,10 +1,10 @@
 # Draft report: Cross-fitted Transfer Gain with Coverage for Reasoning SFT
 
-**Snapshot: 20 October 2026, 12:53 p.m. Eastern / 16:53 UTC.** Both final full-SFT runs are complete: each performed 1,875 updates, used all 15,000 unique examples exactly once, and saved 434 verified finite FP32 tensors. Original and primary advanced evaluation are **9/9 complete**, covering all eight supplied tasks and supplementary AIME25. Random evaluation is **8/9 complete (7/8 supplied)**, with GPQA still running. Full trained-model macros, the matched three-model closeout, paired uncertainty, final Hugging Face links and course submission remain pending. The separate unchanged recovery continuation is running with seven saved tasks retained; its OlympiadBench and GPQA results remain pending. Pending entries are not zero scores.
+**Snapshot: 20 October 2026, 1:12 p.m. Eastern / 17:12 UTC.** Both full-SFT runs and all three primary evaluations are complete: each model has nine raw-verified tasks, including all eight supplied benchmarks and supplementary AIME25. Native CPU closeout produced a matched audit, complete macros, paired uncertainty and publication metadata. The advanced policy improves over the prepared-source random control, while both SFT models perform worse than the original on every supplied task. Hugging Face publication is in progress; verified artifact links, final resource reconciliation and team submission remain pending. The separate recovery experiment retains seven audited tasks and is still evaluating OlympiadBench and GPQA; its results do not replace the primary experiment.
 
 We investigate whether a source-only selection policy can improve reasoning SFT over a random control. Two small LoRA training runs measure how examples in the opposite source fold respond to adaptation. The final selector combines relative response-loss reduction with structural eligibility and topic/length coverage. Both final models start from the original Qwen2.5-3B-Instruct checkpoint. Previous team checkpoints and scores are not results of this experiment.
 
-The original model achieves an equal-benchmark macro of **29.30267835% pass@1 and 52.86146036% pass@8** across the supplied eight tasks. These establish the fresh baseline; they do not establish an improvement from fine-tuning. The [assignment](https://github.com/reds-lab/Project-Reasoning-SFT-LLM#8-submission) calls for original and fine-tuned performance, comparison and analysis, final hyperparameters, and the data-selection method. Each is covered below, with incomplete results explicitly marked.
+The original model achieves **29.30267835% pass@1 / 52.86146036% pass@8** on the supplied-eight equal-benchmark macro, compared with random **16.23217035% / 36.69876417%** and advanced **18.78695793% / 42.95429078%**. Advanced exceeds random by **2.5548 percentage points pass@1** and **6.2555 points pass@8**; their conditional 95% paired bootstrap intervals are **[1.6733, 3.4813]** and **[3.1852, 9.5150]** points. This answers the assignment's random-control comparison positively for this fixed experiment, while the comparison against the original is negative. The [assignment](https://github.com/reds-lab/Project-Reasoning-SFT-LLM#8-submission) asks for original and fine-tuned performance, comparison and analysis, final hyperparameters, and the selection method; all primary findings are reported below.
 
 ## 1. Data and comparison scope
 
@@ -93,66 +93,94 @@ MATH has **500 actual JSON records**. The official file and local copy are byte-
 
 The saved random checkpoint emitted a Mistral-regex warning from Transformers 4.57.3's local-model detection heuristic. A [read-only audit inside the evaluation allocation](operations/tokenizer-equivalence-random.json) confirmed identical complete tokenizer backends, vocabulary, special tokens, chat templates, and rendered/tokenized inputs for all 1,974 benchmark records, plus ten diagnostic encode/decode cases. The original configuration records Transformers 4.43.1 and the newly saved configuration records 4.57.3, which triggers the heuristic differently. The [pinned implementation](https://github.com/huggingface/transformers/blob/v4.57.3/src/transformers/tokenization_utils_base.py) only replaces the regex when its fix flag is true; no flag was changed here. Evaluation continued with the frozen configuration.
 
-When all three raw evaluations are complete and matched, uncertainty analysis will use 10,000 paired bootstrap draws of normalized-question clusters. Duplicate questions travel together; each draw retains record weights within a benchmark, and macros average independent within-benchmark draws equally. These percentile intervals condition on the fixed trained models and eight recorded responses. They do not estimate training-seed variation or uncertainty from new generation samples, and no multiple-comparison adjustment is applied. Partial or aggregate-only evidence cannot produce a complete uncertainty macro.
+The completed [native uncertainty analysis](report/primary-final-20261020T1708Z/uncertainty.json) uses 10,000 paired percentile bootstrap draws, seed `20261019`, of normalized-question clusters. Duplicate questions travel together; each draw retains record weights within a benchmark, and macros average independent within-benchmark draws equally. Kaoyan retains 199 records in 195 normalized-question clusters. The 95% intervals condition on the fixed trained models and eight recorded responses. They exclude training-seed variation and uncertainty from additional generation samples, and no multiple-comparison adjustment is applied. These limits apply to every interval reported below.
 
-## 5. Current performance results
+## 5. Complete primary performance results
 
-The [10:10 UTC partial audit](report/partial-20261020T1010Z/audit.json) verifies raw eight-sample predictions for all nine original-model tasks and seven tasks for each trained model, with no per-run audit errors. Completed records match across roles in protocol, benchmark data and hardware. The [15:24 UTC native audit](report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json) additionally verifies OlympiadBench for all three primary roles. The [new primary GPQA audit](report/primary-gpqa-partial-20261020T1650Z/audit.json) verifies advanced GPQA and composes complete advanced all-nine coverage (1,974 problems, 15,792 samples), with matched original/advanced protocol, data, ordered IDs and hardware and no audit errors. Only random GPQA is still missing; the full three-model comparison remains incomplete. The retained [original metrics](report/original_metrics.json) and [evaluation manifest](report/original_evaluation_manifest.json) preserve the complete baseline evidence. Values below are percentages; truncations count samples ending at the output/context limit, out of eight samples per problem.
+The [native final audit](report/primary-final-20261020T1708Z/audit.json), produced by CPU closeout `1208135`, verifies all nine benchmarks for original, random and advanced from raw eight-sample predictions. All per-run and comparison errors are empty; generation settings, grader/evaluator, software, benchmark data, ordered record identities and hardware match. Each model has 1,974 questions and 15,792 recorded responses across all nine tasks. The supplied eight contain 1,944 questions and 15,552 responses per model. The [snapshot receipt](report/primary-final-20261020T1708Z/snapshot.json) binds the exact native audit, uncertainty and result-table files. Earlier immutable partial audits remain historical evidence.
 
-| Benchmark | Problems | Original pass@1 | Original pass@8 | Original truncated samples | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
-| --- | ---: | ---: | ---: | ---: | --- | --- |
-| AIME 2024 | 30 | 7.92% | 23.33% | 10 | 0.42% / 3.33% | 2.50% / 13.33% |
-| AMC 2023 | 40 | 42.50% | 70.00% | 3 | 22.50% / 47.50% | 25.00% / 45.00% |
-| MATH | 500 | 65.90% | 83.80% | 19 | 49.73% / 78.20% | 51.23% / 78.20% |
-| CN_MATH_2024 | 30 | 10.00% | 26.67% | 8 | 0.83% / 6.67% | 5.00% / 23.33% |
-| Kaoyan | 199 | 21.11% | 49.75% | 3 | 14.07% / 41.71% | 15.45% / 47.74% |
-| Minerva | 272 | 30.33% | 47.79% | 5 | 15.95% / 36.40% | 18.11% / 41.54% |
-| OlympiadBench | 675 | 28.26% | 51.85% | 99 | 17.15% / 38.37% | 18.87% / 40.44% |
-| GPQA | 198 | 28.41% | 69.70% | 5 | Pending | 14.14% / 54.04% |
-| AIME25, supplementary | 30 | 0.83% | 3.33% | 0 | 2.92% / 16.67% | 1.67% / 13.33% |
+Values below are percentages. All macro values use unrounded benchmark scores.
 
-| Complete benchmark set | Original pass@1 | Original pass@8 | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
-| --- | ---: | ---: | --- | --- |
-| Supplied eight, equal-benchmark macro | 29.30267835% | 52.86146036% | Pending | Pending |
-| Supplemented seven, internal macro | 23.06258478% | 45.58452613% | Pending | Pending |
+| Benchmark | Problems | Original pass@1 / pass@8 | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
+| --- | ---: | ---: | ---: | ---: |
+| AIME 2024 | 30 | 7.92% / 23.33% | 0.42% / 3.33% | 2.50% / 13.33% |
+| AMC 2023 | 40 | 42.50% / 70.00% | 22.50% / 47.50% | 25.00% / 45.00% |
+| MATH | 500 | 65.90% / 83.80% | 49.73% / 78.20% | 51.23% / 78.20% |
+| CN_MATH_2024 | 30 | 10.00% / 26.67% | 0.83% / 6.67% | 5.00% / 23.33% |
+| Kaoyan | 199 | 21.11% / 49.75% | 14.07% / 41.71% | 15.45% / 47.74% |
+| Minerva | 272 | 30.33% / 47.79% | 15.95% / 36.40% | 18.11% / 41.54% |
+| OlympiadBench | 675 | 28.26% / 51.85% | 17.15% / 38.37% | 18.87% / 40.44% |
+| GPQA | 198 | 28.41% / 69.70% | 9.22% / 41.41% | 14.14% / 54.04% |
+| AIME25, supplementary | 30 | 0.83% / 3.33% | 2.92% / 16.67% | 1.67% / 13.33% |
 
-Macros use unrounded benchmark values. AIME25 is supplementary and excluded from the supplied-eight macro. The full three-model comparison remains incomplete because random GPQA is pending. Advanced now has all eight supplied task results, but its full macro is intentionally held for matched three-role closeout. No trained-model full macro, paired confidence interval, overall winner or leaderboard position is reported here.
-
-The completed tasks also show frequent output/context-limit termination:
-
-| Task | Responses per role | Random truncated responses | Advanced truncated responses |
+| Complete benchmark set | Original pass@1 / pass@8 | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
 | --- | ---: | ---: | ---: |
-| AMC | 320 | 190 | 169 |
-| AIME24 | 240 | 204 | 192 |
-| MATH | 4,000 | 1,508 (37.7%) | 1,235 (30.875%) |
-| CN_MATH_2024 | 240 | 215 (89.5833%) | 159 (66.25%) |
-| Kaoyan | 1,592 | 1,009 | 667 |
-| Minerva | 2,176 | 1,269 | 1,088 (50%) |
-| OlympiadBench | 5,400 | 3,526 | 3,062 |
-| GPQA | 1,584 | Pending | 954 |
-| AIME25, supplementary | 240 | 203 | 185 |
+| Supplied eight, equal-benchmark macro | 29.30267835% / 52.86146036% | 16.23217035% / 36.69876417% | 18.78695793% / 42.95429078% |
+| Supplemented seven, internal macro | 23.06258478% / 45.58452613% | 11.80462326% / 32.67477809% | 14.03390430% / 37.91918947% |
 
-These are raw finish-reason diagnostics, not a quantitative repetition metric or proof that truncation alone caused the accuracy differences.
+AIME25 is supplementary and excluded from the supplied-eight macro. The seven-task figure is an internal aggregate, not a verified historical leaderboard rank.
+
+The preserved uncertainty file also records generation diagnostics. Length finishes count responses ending at the output/context limit, not necessarily incorrect responses.
+
+| Task | Responses per role | Original length finishes | Random length finishes | Advanced length finishes |
+| --- | ---: | ---: | ---: | ---: |
+| AMC | 320 | 3 | 190 | 169 |
+| AIME24 | 240 | 10 | 204 | 192 |
+| MATH | 4,000 | 19 | 1,508 | 1,235 |
+| CN_MATH_2024 | 240 | 8 | 215 | 159 |
+| Kaoyan | 1,592 | 3 | 1,009 | 667 |
+| Minerva | 2,176 | 5 | 1,269 | 1,088 |
+| OlympiadBench | 5,400 | 99 | 3,526 | 3,062 |
+| GPQA | 1,584 | 5 | 1,089 | 954 |
+| AIME25, supplementary | 240 | 0 | 203 | 185 |
+
+| Pooled supplied-eight generation diagnostic | Original | Random | Advanced |
+| --- | ---: | ---: | ---: |
+| Recorded responses | 15,552 | 15,552 | 15,552 |
+| Length finishes | 152 | 9,010 | 7,526 |
+| Length-finish rate | 0.98% | 57.93% | 48.39% |
+| Mean generated tokens per response | 1,084.50 | 19,998.02 | 17,324.52 |
+
+These diagnostics pool recorded responses and therefore have different weighting from the equal-benchmark accuracy macros. Advanced generates shorter outputs and reaches the limit less often than random, but both SFT arms remain far more verbose than original. These associations do not prove that truncation alone caused their accuracy regressions.
 
 ## 6. Comparison and interpretation
 
-The primary selection results show a **negative comparison against the original**: advanced performs worse in both metrics on all eight supplied tasks, including GPQA. Random performs worse on its seven completed supplied tasks; its GPQA comparison is pending. Both trained models perform better than the original on supplementary AIME25. Advanced-versus-random task differences remain mixed. Advanced improves over random in both metrics on AIME24, CN_MATH_2024, Kaoyan, Minerva and OlympiadBench, has higher pass@1 but lower pass@8 on AMC, and trails random on AIME25.
+The complete primary result has two parts. **Advanced improves over the prepared-source random control**, with higher pass@1 on every supplied task and a positive supplied-eight macro difference in both metrics. Pass@8 is higher on six supplied tasks, tied on MATH and lower on AMC. **Both SFT models regress from the original on all eight supplied tasks in both metrics.** Both improve over original on supplementary AIME25, where advanced trails random. No leaderboard position or state-of-the-art result is established.
 
-On the 500-problem MATH task, advanced pass@1 is **51.225%**, versus **49.725%** for random: **+1.50 percentage points**. Their pass@8 scores tie at **78.20%**. Both are below the original's **65.90% pass@1 / 83.80% pass@8**.
+The following differences and 95% paired cluster-bootstrap intervals are in **percentage points**, copied from the native uncertainty artifact:
 
-For CN_MATH_2024, advanced scores **5.00% / 23.3333%**, versus random **0.8333% / 6.6667%**, while the original scores **10.00% / 26.6667%** (pass@1 / pass@8). Kaoyan advanced scores **15.4523% / 47.7387%**, versus random **14.0704% / 41.7085%**, below the original's **21.1055% / 49.7487%**. The corresponding raw truncation counts are 159/240 advanced versus 215/240 random for CN and 667/1,592 versus 1,009/1,592 for Kaoyan. These are measured per-task differences, not a complete macro or evidence that the selection method is generally superior. Paired confidence intervals have not been computed, and significance is not established. AMC has 40 problems, each AIME/CN task has 30, and Kaoyan has 199.
+| Macro comparison | Pass@1 delta [95% CI] | Pass@8 delta [95% CI] |
+| --- | ---: | ---: |
+| Advanced − random, supplied eight | +2.5548 [1.6733, 3.4813] | +6.2555 [3.1852, 9.5150] |
+| Advanced − original, supplied eight | −10.5157 [−12.1662, −8.9820] | −9.9072 [−13.4104, −6.5129] |
+| Advanced − random, internal seven | +2.2293 [1.3228, 3.1623] | +5.2444 [2.2177, 8.3882] |
+| Advanced − original, internal seven | −9.0287 [−10.6391, −7.5160] | −7.6653 [−11.2364, −4.0049] |
 
-On Minerva, advanced scores **18.1066% pass@1 / 41.5441% pass@8**, versus random **15.9467% / 36.3971%** and original **30.3309% / 47.7941%**. Advanced exceeds random in both measured metrics, while both remain below the original. Advanced has 1,088/2,176 responses truncated (50%), versus 1,269/2,176 for random. This is another per-task observation; complete macros, paired intervals and a general superiority claim remain unavailable.
+The supplied-eight advanced-minus-random intervals are entirely above zero, while advanced-minus-original intervals are entirely below zero. This supports improvement over this random control and a regression against original **conditional on these fixed runs and outputs**. It does not establish stability across training seeds or isolate a causal transfer-gain effect. The eight-sample generation realization is fixed, and multiple comparisons are unadjusted.
 
-On GPQA, advanced scores **14.141414% pass@1 / 54.040404% pass@8**, versus original **28.409091% / 69.696970%**, with **954/1,584** advanced length-limit finishes versus **5/1,584** original. The raw audit matches all-nine protocol, data, IDs and hardware. Random-versus-advanced GPQA, complete three-role macros and paired intervals remain pending. These findings do not establish that the advanced policy improved the original model or isolate which selection/training component caused the regression.
+| Advanced − random by task | Pass@1 delta [95% CI], points | Pass@8 delta [95% CI], points |
+| --- | ---: | ---: |
+| AIME24 | +2.08 [−0.42, 5.42] | +10.00 [−3.33, 23.33] |
+| AMC | +2.50 [−1.56, 6.56] | −2.50 [−12.50, 7.50] |
+| MATH | +1.500 [−0.125, 3.075] | 0.00 [−2.80, 2.80] |
+| CN_MATH_2024 | +4.17 [1.25, 7.50] | +16.67 [3.33, 30.00] |
+| Kaoyan | +1.38 [−0.82, 3.57] | +6.03 [0.00, 12.25] |
+| Minerva | +2.16 [0.37, 4.00] | +5.15 [0.74, 9.56] |
+| OlympiadBench | +1.72 [0.69, 2.80] | +2.07 [−0.74, 5.04] |
+| GPQA | +4.92 [2.84, 7.01] | +12.63 [5.05, 20.20] |
+| AIME25, supplementary | −1.25 [−2.92, 0.00] | −3.33 [−10.00, 0.00] |
 
-The final comparison will report each SFT arm against the original, then advanced against random on every task and on the complete supplied-eight macro. Pass@1 and pass@8 should be considered together with output lengths and truncation. The **primary experiment's** selection method, trained checkpoints and scientific evaluation settings are unchanged in response to these partial scores. Its operational continuations address runtime only.
+Many task intervals include or touch zero, despite positive point differences. For example, advanced MATH is 51.225% / 78.20%, versus random 49.725% / 78.20% and original 65.90% / 83.80%; its +1.50-point pass@1 difference has an interval crossing zero. GPQA is 14.141414% / 54.040404% for advanced versus random 9.217172% / 41.414141% and original 28.409091% / 69.696970%. Complete per-task advanced-versus-original intervals, exact values, cluster details and diagnostic availability are preserved in [uncertainty.json](report/primary-final-20261020T1708Z/uncertainty.json).
+
+The **primary experiment's** selection method, trained checkpoints and scientific evaluation settings were unchanged in response to the measured scores. Its operational continuations addressed runtime only. Both arms received the same example count and optimizer recipe, but not equal supervised tokens or eligibility: the complete-target advanced policy avoids the 5,806 truncated random training prefixes and generates fewer unfinished outputs. The comparison tests that whole policy; it cannot attribute its gain solely to transfer scoring.
 
 A later [accuracy-blind AMC diagnostic](operations/stopping-diagnostic-20261020-amc.json) quantifies generated repetition without inspecting answers or correctness. Across 320 responses per role, median output length is 765 tokens for the original and 32,526 for advanced. Repeated word eight-gram fraction exceeds 25% in 5 original responses and 162 advanced responses. Advanced has 169 length-limit finishes versus 3 for the original; only 6 of those 169 advanced length-limit responses contain any boxed-answer marker, which does not imply correctness. Actual EOS settings match across roles, and advanced has zero missing supervised EOS markers. These observations establish repetitive, unfinished generation on AMC; they do not prove that repetition alone caused the accuracy regression. Prior research also reports degradation from limited long-CoT supervision in models of at most 3B parameters, including Qwen2.5; that is context rather than a causal diagnosis of this run ([Through the Valley](https://arxiv.org/abs/2506.07712v2)).
 
+Random's missing supervised EOS markers may aggravate stopping problems, but they cannot be the sole explanation because advanced has none missing. Both models learn from teacher-forced targets limited to 8K, while free generation can continue to the native 32K context limit. The combination of repetitive unfinished generation and a teacher-loss selection proxy is consistent with learning a long-thinking style without reliable free-generation control. This is a hypothesis, not a demonstrated causal effect of full-parameter SFT, model capacity, or a particular training component.
+
 The current pair tests the **whole advanced policy**: complete-target structural filtering, reservoir construction, transfer-gain ranking, and coverage allocation. It does not isolate the causal contribution of transfer gain. In particular, complete-target selection changes response lengths and EOS survival relative to the broad random control, while the supervised-token budgets differ substantially. Separate eligible-pool random and coverage-only arms on the same reservoir, quotas, and training recipe would be needed to separate these contributions. Neither ablation has been run.
 
-Only one final training seed is used. Small benchmarks, duplicate questions, rule-based grading, lexical-only contamination controls, and the limited source domain constrain interpretation. All-positive probe gains also show why the score should be treated as a learning proxy: reduced teacher-forced loss does not establish solution correctness, improved free generation, or causal training utility. A negative or mixed result would still answer the experiment; superiority, statistical significance, novelty, and state-of-the-art performance are not assumed.
+Only one final training seed is used. Small benchmarks, duplicate questions, rule-based grading, lexical-only contamination controls, and the limited source domain constrain interpretation. All-positive probe gains also show why the score should be treated as a learning proxy: reduced teacher-forced loss does not establish solution correctness, improved free generation, or causal training utility. The measured result answers the assignment comparison: advanced beats this random control under the stated conditional uncertainty, while failing to improve the original. Global novelty and state-of-the-art performance are not established.
 
 ### Separate exploratory recovery
 
@@ -201,10 +229,13 @@ Recovery approaches the original on MATH and Minerva, with slightly lower pass@1
 | Advanced original dataset export | `511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199` |
 | Random original dataset export | `3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7` |
 | Original metrics JSON at this snapshot | `d9886e3c2df1892965eebd2869ada22520cb07bf181e94c1822f02d53fc12a5d` |
+| Final primary native audit | `4021099030f13a46de912752a040a020fb66acdba2c1ef9f5f05303fbb7800b5` |
+| Final primary native uncertainty | `e16b3b8c63cdbeddfcd1a41995e53278442df92f7bcf642edaf5d34463003823` |
+| Final primary native result table | `4244c5b4dc92d2a1d6452c06dc40219fd44751d0dacc24d6d90aec1ca07f4928` |
 
 The reproducibility record includes selected question IDs, source reservations, actual probe and score receipts, source/model hashes, cache masks, finite-update logs, exact consumption receipts, final tensor checks and evaluation manifests. The [frozen plan](experiment_plan.json), [implementation overview](README.md), and [assignment checklist](assignment_checklist.json) describe the execution contract. Heavy training and verification run in ARC compute allocations. The original plan reserved 42 GPU-hours with a fixed 48 GPU-hour consumption cap.
 
-After VPN access was restored and native checks passed, two unchanged [evaluation continuations](operations/evaluation-runtime-contingency.md) were admitted: random `1210309`, one GPU for 16 hours, and advanced `1210310`, one GPU for 12 hours, each after its parent evaluation terminated. Advanced continuation `1210310` is now **COMPLETED**; random `1210309` remains **RUNNING** on GPQA. Start guards required 19 and 15 hours respectively before the assignment deadline, including three hours for closeout/publication. The [admission receipt](operations/evaluation-continuation-admission.json) records CPU closeout `1208135` depending on successful completion of both continuations and publisher `1209745` depending on closeout. Running evaluations and queued successors do not establish final completion or publication.
+After VPN access was restored and native checks passed, two unchanged [evaluation continuations](operations/evaluation-runtime-contingency.md) were admitted: random `1210309`, one GPU for 16 hours, and advanced `1210310`, one GPU for 12 hours, each after its parent evaluation terminated. Both primary continuations are now **COMPLETED**, and the native final audit verifies all nine tasks for each role. Start guards required 19 and 15 hours respectively before the assignment deadline, including three hours for closeout/publication. The [admission receipt](operations/evaluation-continuation-admission.json) records CPU closeout `1208135` depending on successful completion of both continuations and publisher `1209745` depending on closeout. The [primary closeout receipt](operations/primary-closeout-complete-20261020.json) confirms native CPU job `1208135` subsequently completed successfully in 159 seconds, producing the final audit, paired uncertainty and [staged publication package](report/primary-final-20261020T1708Z/publication-package/package_manifest.json). Publisher `1209745` is running; its verified completion receipt and public artifact links remain pending.
 
 The [resume record](operations/evaluation-resume-20261020.json) preserves the operational history: six complete benchmark files per role were validated and retained; the interrupted, unsaved Minerva batch was regenerated in full under the frozen per-problem seeds. No partial response from the interrupted batch enters the scored results. The new 10:10 UTC raw audit establishes completion of both regenerated Minerva batches. Exact unsaved generated-token totals from the interrupted work are unknown; they are not estimated from progress counters. All interrupted allocation time remains included in GPU accounting.
 
@@ -217,18 +248,20 @@ The [random reconciliation](operations/gpu-budget-reconciliation-d155f13d26ffca6
 
 The recovery development allocation completed in 316 seconds and is conservatively charged 360 GPU-seconds (0.10 hour), replacing its original 0.75-hour reservation only after the [terminal accounting proof](operations/gpu-budget-reconciliation-e85de9ae41202753.json). This reduced the bound to 47.15 hours. The initial benchmark allocation then reached its 45-minute limit after 2,703 seconds, retaining seven complete tasks; its [terminal accounting](operations/gpu-budget-reconciliation-c0f4181a2d92af85.json) charges 2,760 seconds. At that historical stage, terminal charges plus full live primary reservations gave 47.9167 / 48 hours, and further recovery admission awaited capacity reclamation.
 
-**Current resource snapshot, 16:53 UTC:** advanced continuation `1210310` completed after **31,149 elapsed seconds**, conservatively charged **31,200 GPU-seconds** by its [exact terminal reconciliation](operations/gpu-budget-reconciliation-b2705ce9203eb224.json). Closed charges across primary and recovery work now total **102,900 seconds (28.583333 hours)**. Adding the full **16-hour random** and **0.75-hour recovery-continuation** reservations produces **163,200 seconds = 45.333333 / 48 GPU-hours**, with **9,600 seconds** of uncommitted capacity. The [continuation admission proof](operations/recovery-benchmark-continuation-1-admission-20261020.json) records this bound. It is not actual elapsed GPU usage; final use awaits terminal accounting for both live jobs. Historical admitted requests total **72.25 hours**, while all-attempt requests total **90.25 hours**, including the 18 hours verified never admitted. CPU preparation allocated no GPU. The original 48-hour cap covers all primary and recovery work. Primary CPU finalizer `1208135` and publisher `1209745` retain their existing dependencies; recovery remains a separate experiment and publication identity.
+**Historical resource snapshot, 16:53 UTC:** advanced continuation `1210310` completed after **31,149 elapsed seconds**, conservatively charged **31,200 GPU-seconds** by its [exact terminal reconciliation](operations/gpu-budget-reconciliation-b2705ce9203eb224.json). Closed charges then totaled **102,900 seconds (28.583333 hours)**. Adding the full **16-hour random** and **0.75-hour recovery-continuation** reservations gave **163,200 seconds = 45.333333 / 48 GPU-hours**. The [continuation admission proof](operations/recovery-benchmark-continuation-1-admission-20261020.json) preserves that historical bound; it is not actual elapsed GPU usage.
+
+**Current resource snapshot, 17:11:50 UTC:** random continuation `1210309` completed after **35,613 elapsed seconds**, charged **35,640 GPU-seconds** by its [terminal reconciliation](operations/gpu-budget-reconciliation-029e44effa49a4c6.json). Closed charges across primary and recovery work total **138,540 seconds (38.483333 hours)**. The only remaining GPU reservation is **2,700 seconds** for recovery continuation `1216562`, producing **141,240 seconds = 39.233333 / 48 GPU-hours**, with **31,560 seconds** uncommitted. This remains a conservative closed-plus-open bound; final consumption awaits recovery terminal accounting. Historical admitted requests remain **72.25 hours**, while all-attempt requests total **90.25 hours**, including the 18 hours verified never admitted. CPU preparation, closeout and publication allocate no GPU. The 48-hour cap covers all primary and recovery work; no request history is erased. Primary CPU finalizer `1208135` has completed and publisher `1209745` is running; recovery remains a separate experiment and publication identity.
 
 **Built with Qwen.** The [3B base model card](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/aa8e72537993ba99e69dfaafa59ed015b17504d1/README.md) declares `license: other`, `license_name: qwen-research`, and links to the [Qwen Research License](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/aa8e72537993ba99e69dfaafa59ed015b17504d1/LICENSE). The [NVIDIA AceReason-1.1-SFT card](https://huggingface.co/datasets/nvidia/AceReason-1.1-SFT#license) declares CC BY 4.0. Dataset attribution must credit NVIDIA and the actual redsgnaoh class subset separately; a separate license for that subset has not been verified or asserted here.
 
 **Source publication update, 20 October 2026:** the implementation is public in [manoj060603/reasoning-sft-llm-results](https://github.com/manoj060603/reasoning-sft-llm-results). The historical [45e4d38 snapshot](https://github.com/manoj060603/reasoning-sft-llm-results/commit/45e4d38784f1fdad4c033031f3b2d4c32c6c94b2) and its [receipt](report/source_publication_receipt.json) preserve earlier source evidence. A later anonymous Git fetch verified that public snapshot [3003d58](https://github.com/manoj060603/reasoning-sft-llm-results/commit/3003d5860e829135ebda53f7e1826a92927eb1f1) has the entire tree `386e161cc13632530f171c055158e0f56f27506c`, equal to local commit `62e98f15e3e6775e0502ee00079e7701a74562ea`. That snapshot includes the primary 10:10 UTC audit, separately labeled recovery code, and sealed recovery checkpoint/source-screen provenance. Source publication does not establish completed recovery generation, benchmark improvement, Hugging Face artifact publication or course submission.
 
-Two trained-model URLs, two original-dataset URLs, final comparisons and this completed report remain pending. The publication packager will recheck completed selection, training, weights, and matched evaluation receipts before staging cards and a manifest. Staging metadata is not an upload or course submission. The final deliverables must include usable repository and model/dataset links, a current README, and this completed report. The team must submit them by **20 October 2026 at 11:59 p.m. Eastern**.
+The primary comparisons and report interpretation are complete. Two trained-model URLs, two original-dataset URLs, final resource/source reconciliation and team submission remain pending. Native packaging completed after its checks of selection, training, weights and matched evaluation receipts, creating a package manifest, evaluation summary and model/dataset cards with status `staged_metadata_not_uploaded`. Publisher `1209745` is in progress. Staging metadata or a running upload is not verified Hugging Face publication or course submission. The final deliverables must include usable repository and model/dataset links, a current README, and this completed report. The team must submit them by **20 October 2026 at 11:59 p.m. Eastern**.
 
 ## Final reconciliation before submission
 
 - Retain both completed training receipts, checkpoint hashes, exact consumption, timing, memory and runtime evidence; check that the final published artifacts match them.
 - Reconcile the random cache hash, original export hash, missing-supervised-EOS count, and both arms' token/row receipts with the final artifacts.
-- Replace every pending score only from complete matched evaluations; update per-task results, both macro definitions, paired uncertainty, and length/truncation diagnostics.
-- Write the measured comparison and conclusion, including negative or mixed outcomes; retain the broad-source control, token-budget, one-seed, and missing-ablation limitations.
+- Retain the complete matched primary audit, both macro definitions, paired uncertainty and generation diagnostics; add any recovery result only through its separate audit and identity.
+- Preserve the measured conclusion: advanced improves over this random control while both SFT models regress from original; retain the broad-source control, token-budget, one-seed and missing-ablation limitations.
 - Verify publication links, cards, data/model hashes, final source commit, team details, README consistency, and the course submission receipt; update this snapshot's status and date.

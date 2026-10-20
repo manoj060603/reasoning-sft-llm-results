@@ -1,0 +1,21 @@
+{
+  "schema": "deadline-primary-final-native-artifact-snapshot-v1",
+  "observed_at_utc": "2026-10-20T17:09:28.770016+00:00",
+  "native_compute_job_id": "1208135",
+  "scope": "Exact outputs from native primary CPU closeout; all three roles have all9 raw benchmarks and matched protocol/data/hardware; no generation, grading or uncertainty recomputation here.",
+  "artifacts": {
+    "audit.json": {
+      "sha256": "4021099030f13a46de912752a040a020fb66acdba2c1ef9f5f05303fbb7800b5",
+      "bytes": 10809
+    },
+    "uncertainty.json": {
+      "sha256": "e16b3b8c63cdbeddfcd1a41995e53278442df92f7bcf642edaf5d34463003823",
+      "bytes": 107744
+    },
+    "results.md": {
+      "sha256": "4244c5b4dc92d2a1d6452c06dc40219fd44751d0dacc24d6d90aec1ca07f4928",
+      "bytes": 1575
+    }
+  },
+  "publication_complete": false
+}

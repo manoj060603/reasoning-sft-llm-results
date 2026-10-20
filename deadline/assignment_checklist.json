@@ -1,6 +1,6 @@
 {
   "schema": "reasoning-sft-assignment-checklist-v1",
-  "status": "Execution snapshot at 2026-10-20 16:53 UTC: original and primary advanced have 9/9 tasks raw-audited (all eight supplied tasks). Random has 8/9; its GPQA is running. Recovery has seven tasks audited and its unchanged-protocol continuation is running. Full matched comparison, uncertainty, Hugging Face publication and course submission remain pending.",
+  "status": "All primary original/random/advanced evaluations are complete on all nine tasks (all eight supplied tasks plus supplementary AIME25), with matched raw audits and conditional paired uncertainty. Advanced improves over random in the supplied-eight macro but remains below original. Native primary CPU closeout and publication packaging completed; Hugging Face publication is running. Recovery has seven tasks audited and its unchanged final two-benchmark continuation is running. Final links/report handoff and team course submission remain pending.",
   "assignment_url": "https://github.com/reds-lab/Project-Reasoning-SFT-LLM",
   "deadline_eastern": "2026-10-20T23:59:00-04:00",
   "current_experiment": "Cross-fitted Transfer Gain with Coverage; fresh original-base initialization",
@@ -165,7 +165,7 @@
       "id": "A09",
       "mandatory": true,
       "requirement": "Evaluate both fine-tuned models and compare them with the original.",
-      "status": "original_advanced_complete_random_gpqa_pending_full_comparison_pending",
+      "status": "complete_matched_all_three_models_all_nine_raw_evaluations",
       "evidence_paths": [
         "deadline/results/random",
         "deadline/results/advanced",
@@ -175,7 +175,9 @@
         "deadline/operations/evaluation-continuation-admission.json",
         "deadline/operations/evaluation-resume-20261020.json",
         "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json",
-        "deadline/report/primary-gpqa-partial-20261020T1650Z/audit.json"
+        "deadline/report/primary-gpqa-partial-20261020T1650Z/audit.json",
+        "deadline/report/primary-final-20261020T1708Z/audit.json",
+        "deadline/report/primary-final-20261020T1708Z/results.md"
       ],
       "completion_evidence_required": [
         "complete supplied-eight results for all three models",
@@ -184,18 +186,20 @@
         "partial results explicitly labeled",
         "broad source-random and advanced complete-target population differences disclosed"
       ],
-      "evidence_note": "Original and primary advanced have 9/9 tasks raw-verified, including all eight supplied benchmarks. Random has 8/9 (7/8 supplied), with GPQA running. Completed protocol, data and hardware identities agree. The advanced GPQA audit binds 198 questions/eight samples each and evaluated weights to the completed training receipt. Full matched macros remain pending."
+      "evidence_note": "All three primary models have all nine tasks raw-verified with eight responses per problem, matching protocol/data/hardware and no audit errors. Eight supplied tasks are complete for each; AIME25 is supplementary."
     },
     {
       "id": "A10",
       "mandatory": true,
       "requirement": "Answer whether the advanced selection beats the random control and analyze why.",
-      "status": "partial_mixed_task_comparison_full_analysis_and_uncertainty_pending",
+      "status": "complete_fixed_run_comparison_and_conditional_uncertainty",
       "evidence_paths": [
         "deadline/report_outline.json",
         "deadline/report/results.md",
         "deadline/FINAL_REPORT.md",
-        "deadline/report/partial-20261020T1010Z/results.md"
+        "deadline/report/partial-20261020T1010Z/results.md",
+        "deadline/report/primary-final-20261020T1708Z/audit.json",
+        "deadline/report/primary-final-20261020T1708Z/uncertainty.json"
       ],
       "completion_evidence_required": [
         "measured advanced-versus-control comparison",
@@ -204,13 +208,13 @@
         "sampling-population limitation"
       ],
       "scope_note": "The whole advanced selection policy is compared with broad prepared-source random sampling. Do not attribute a difference solely to transfer gain. A guaranteed positive improvement or statistical significance is not an assignment completion requirement.",
-      "evidence_note": "Primary advanced trails original on all eight supplied tasks; random trails original on its seven completed supplied tasks. Both exceed original on supplementary AIME25. Advanced beats random pass@1 on their seven completed supplied tasks; across eight completed paired tasks, its pass@8 wins five, ties MATH, and trails AMC and AIME25. Random GPQA is pending, so no complete matched macro, paired uncertainty or overall winner is claimed. Primary method remains unchanged; post-hoc recovery is separately labeled."
+      "evidence_note": "Advanced supplied-eight macro is 18.786958%/42.954291%, versus random 16.232170%/36.698764% and original 29.302678%/52.861460% (pass@1/pass@8). Advanced-minus-random gains are 2.554788pp [1.673294,3.481305] and 6.255527pp [3.185237,9.515005] conditional 95% bootstrap intervals. Both SFT arms trail original on all eight supplied tasks. Whole selection-policy effect is not isolated transfer-gain causality; one final training seed, recorded generations and unadjusted multiple comparisons limit inference."
     },
     {
       "id": "A11",
       "mandatory": true,
       "requirement": "Report the final model hyperparameters and data-selection strategy.",
-      "status": "actual_training_recipe_reconciled_final_resource_and_result_reconciliation_pending",
+      "status": "complete_training_recipe_selection_and_primary_results_recovery_resource_accounting_pending",
       "evidence_paths": [
         "deadline/experiment_plan.json",
         "deadline/report_outline.json",
@@ -226,7 +230,8 @@
         "deadline/operations/gpu-budget-reconciliation-637c6b2ed64206b8.json",
         "deadline/operations/evaluation-resume-20261020.json",
         "deadline/operations/gpu-budget-reconciliation-b2705ce9203eb224.json",
-        "deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json"
+        "deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json",
+        "deadline/operations/gpu-budget-reconciliation-029e44effa49a4c6.json"
       ],
       "completion_evidence_required": [
         "actual model/data revisions",
@@ -234,7 +239,7 @@
         "precision and loss normalization",
         "runtime, hardware, resource and truncation disclosures"
       ],
-      "evidence_note": "Training recipe and consumption are reconciled. Advanced continuation completed after 31,149 seconds, charged 31,200 seconds. After admitting the unchanged 45-minute recovery continuation, verified terminal charges plus full live reservations total 163,200 GPU-seconds (45.3333/48 hours); actual final consumption remains pending. Historical requests are preserved."
+      "evidence_note": "Training recipe, selected data, exact example consumption and primary terminal GPU use are reconciled. Current total terminal charges plus the full live recovery reservation are 141,240 seconds (39.233333/48 GPU-hours). Recovery final resource accounting remains pending."
     },
     {
       "id": "A12",
@@ -277,7 +282,7 @@
       "id": "A14",
       "mandatory": true,
       "requirement": "Push the trained models to Hugging Face.",
-      "status": "pending_publication",
+      "status": "publication_in_progress_not_yet_anonymously_verified",
       "evidence_paths": [],
       "completion_evidence_required": [
         "usable random-control model repository/link",
@@ -290,7 +295,7 @@
       "id": "A15",
       "mandatory": true,
       "requirement": "Push both random and advanced datasets to Hugging Face.",
-      "status": "pending_publication",
+      "status": "publication_in_progress_not_yet_anonymously_verified",
       "evidence_paths": [],
       "completion_evidence_required": [
         "two accessible dataset repository links",
@@ -303,7 +308,7 @@
       "id": "A16",
       "mandatory": true,
       "requirement": "Deliver the final report containing original performance, trained-model results, comparison, hyperparameters, and selection method.",
-      "status": "narrative_draft_with_completed_training_and_partial_measured_comparison_full_results_pending",
+      "status": "complete_primary_results_available_narrative_reconciliation_and_verified_links_pending",
       "evidence_paths": [
         "deadline/FINAL_REPORT.md",
         "deadline/report/audit.json",
@@ -429,8 +434,8 @@
   "last_reconciled_utc": "2026-10-20T10:10:00+00:00",
   "requested_repository_owner": "manoj060603",
   "team_submission_action": "Team-owned action; no course-system submission is performed by this experiment automation.",
-  "last_verified_cluster_snapshot_utc": "2026-10-20T16:53:00+00:00",
-  "current_access_note": "Advanced evaluation completed all nine tasks and its GPQA raw audit passed. Random GPQA remains running. Recovery continuation 1216562 started at 12:51:19 Eastern with identical model/protocol/output, retaining seven saved tasks. CPU finalizer and publisher dependencies are unchanged.",
+  "last_verified_cluster_snapshot_utc": "2026-10-20T17:11:50+00:00",
+  "current_access_note": "All primary evaluations and native CPU closeout are complete. Four primary Hugging Face artifact uploads are in progress; no anonymous completion receipt yet. Recovery continuation 1216562 remains running on its final two benchmarks with seven audited tasks retained.",
   "current_execution_evidence": {
     "partial_audit": "deadline/report/partial-20261020T1010Z/audit.json",
     "training_complete": {
@@ -439,18 +444,52 @@
     },
     "complete_tasks": {
       "original": 9,
-      "random": 8,
+      "random": 9,
       "advanced": 9
     },
-    "trained_model_full_macros": null,
-    "uncertainty": null,
+    "trained_model_full_macros": {
+      "original": {
+        "official_eight_macro": {
+          "pass_at_1": 0.2930267835326862,
+          "pass_at_8": 0.5286146036430917
+        },
+        "supplemented_historical_seven_macro": {
+          "pass_at_1": 0.23062584784687948,
+          "pass_at_8": 0.45584526130639047
+        }
+      },
+      "random": {
+        "official_eight_macro": {
+          "pass_at_1": 0.16232170350073052,
+          "pass_at_8": 0.3669876416520113
+        },
+        "supplemented_historical_seven_macro": {
+          "pass_at_1": 0.11804623257226346,
+          "pass_at_8": 0.32674778093563195
+        }
+      },
+      "advanced": {
+        "official_eight_macro": {
+          "pass_at_1": 0.18786957933172,
+          "pass_at_8": 0.42954290783238835
+        },
+        "supplemented_historical_seven_macro": {
+          "pass_at_1": 0.14033904304577524,
+          "pass_at_8": 0.37919189466558667
+        }
+      }
+    },
+    "uncertainty": "deadline/report/primary-final-20261020T1708Z/uncertainty.json",
     "continuations": {
       "random": {
         "job_id": "1210309",
         "requested_gpu_hours": 16,
         "afterany_parent": "1208059",
         "deadline_reserve_hours": 19,
-        "observed_state": "RUNNING"
+        "observed_state": "COMPLETED",
+        "elapsed_seconds": 35613,
+        "charged_gpu_seconds": 35640,
+        "terminal_accounting": "deadline/operations/gpu-budget-reconciliation-029e44effa49a4c6.json"
       },
       "advanced": {
         "job_id": "1210310",
@@ -465,14 +504,19 @@
     },
     "closeout": {
       "job_id": "1208135",
-      "dependency": "afterok:1210309:1210310"
+      "dependency": "afterok:1210309:1210310",
+      "observed_state": "COMPLETED",
+      "elapsed_seconds": 159,
+      "receipt": "deadline/operations/primary-closeout-complete-20261020.json"
     },
     "publisher": {
       "job_id": "1209745",
-      "dependency": "afterok:1208135"
+      "dependency": "afterok:1208135",
+      "observed_state": "RUNNING",
+      "upload_complete": false
     },
     "admission_receipt": "deadline/operations/evaluation-continuation-admission.json",
-    "conservative_gpu_hours_bound": 45.333333333333336,
+    "conservative_gpu_hours_bound": 39.233333333333334,
     "gpu_hours_cap": 48,
     "historical_admitted_requested_gpu_hours": 72.25,
     "all_attempt_requested_gpu_hours": 90.25,
@@ -480,10 +524,10 @@
     "final_terminal_resource_accounting": "pending",
     "complete_official_eight_tasks": {
       "original": 8,
-      "random": 7,
+      "random": 8,
       "advanced": 8
     },
-    "gpu_resource_figure_interpretation": "45.3333/48 hours comprises verified terminal charges plus full live random-evaluation and 45-minute recovery-continuation reservations; it is not actual elapsed GPU consumption. Advanced continuation is charged 31,200 seconds after 31,149 elapsed. No original request is erased; the cap still covers primary and recovery work.",
+    "gpu_resource_figure_interpretation": "39.233333/48 hours comprises all verified terminal GPU charges plus the full live 45-minute recovery continuation reservation. Primary random continuation used 35,613 elapsed seconds and is charged 35,640. Final actual GPU use awaits terminal recovery accounting; all original requests are preserved.",
     "partial_math_comparison": {
       "problems": 500,
       "samples_per_problem": 8,
@@ -514,9 +558,7 @@
       "paired_uncertainty": "pending"
     },
     "remaining_tasks_per_trained_model": {
-      "random": [
-        "gpqa"
-      ],
+      "random": [],
       "advanced": []
     },
     "partial_kaoyan": {
@@ -886,8 +928,8 @@
       }
     },
     "partial_olympiadbench_audit": "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json",
-    "conservative_committed_gpu_seconds": 163200,
-    "uncommitted_gpu_seconds": 9600,
+    "conservative_committed_gpu_seconds": 141240,
+    "uncommitted_gpu_seconds": 31560,
     "partial_gpqa": {
       "original": {
         "problems": 198,
@@ -904,10 +946,275 @@
         "truncated_samples": 954
       }
     },
-    "partial_gpqa_audit": "deadline/report/primary-gpqa-partial-20261020T1650Z/audit.json"
+    "partial_gpqa_audit": "deadline/report/primary-gpqa-partial-20261020T1650Z/audit.json",
+    "primary_results": {
+      "original": {
+        "aime": {
+          "problems": 30,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.07916666666666666,
+          "pass_at_8": 0.23333333333333334,
+          "truncated_samples": 10
+        },
+        "amc": {
+          "problems": 40,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.425,
+          "pass_at_8": 0.7,
+          "truncated_samples": 3
+        },
+        "math": {
+          "problems": 500,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.659,
+          "pass_at_8": 0.838,
+          "truncated_samples": 19
+        },
+        "cn_math_2024": {
+          "problems": 30,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.1,
+          "pass_at_8": 0.26666666666666666,
+          "truncated_samples": 8
+        },
+        "kaoyan": {
+          "problems": 199,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.21105527638190955,
+          "pass_at_8": 0.49748743718592964,
+          "truncated_samples": 3
+        },
+        "minerva": {
+          "problems": 272,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.30330882352941174,
+          "pass_at_8": 0.47794117647058826,
+          "truncated_samples": 5
+        },
+        "olympiadbench": {
+          "problems": 675,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.2825925925925926,
+          "pass_at_8": 0.5185185185185185,
+          "truncated_samples": 99
+        },
+        "gpqa": {
+          "problems": 198,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.2840909090909091,
+          "pass_at_8": 0.696969696969697,
+          "truncated_samples": 5
+        },
+        "aime25": {
+          "problems": 30,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.008333333333333333,
+          "pass_at_8": 0.03333333333333333,
+          "truncated_samples": 0
+        }
+      },
+      "random": {
+        "aime": {
+          "problems": 30,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.004166666666666667,
+          "pass_at_8": 0.03333333333333333,
+          "truncated_samples": 204
+        },
+        "amc": {
+          "problems": 40,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.225,
+          "pass_at_8": 0.475,
+          "truncated_samples": 190
+        },
+        "math": {
+          "problems": 500,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.49725,
+          "pass_at_8": 0.782,
+          "truncated_samples": 1508
+        },
+        "cn_math_2024": {
+          "problems": 30,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.008333333333333333,
+          "pass_at_8": 0.06666666666666667,
+          "truncated_samples": 215
+        },
+        "kaoyan": {
+          "problems": 199,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.1407035175879397,
+          "pass_at_8": 0.41708542713567837,
+          "truncated_samples": 1009
+        },
+        "minerva": {
+          "problems": 272,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.15946691176470587,
+          "pass_at_8": 0.3639705882352941,
+          "truncated_samples": 1269
+        },
+        "olympiadbench": {
+          "problems": 675,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.17148148148148148,
+          "pass_at_8": 0.3837037037037037,
+          "truncated_samples": 3526
+        },
+        "gpqa": {
+          "problems": 198,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.09217171717171717,
+          "pass_at_8": 0.41414141414141414,
+          "truncated_samples": 1089
+        },
+        "aime25": {
+          "problems": 30,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.029166666666666667,
+          "pass_at_8": 0.16666666666666666,
+          "truncated_samples": 203
+        }
+      },
+      "advanced": {
+        "aime": {
+          "problems": 30,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.025,
+          "pass_at_8": 0.13333333333333333,
+          "truncated_samples": 192
+        },
+        "amc": {
+          "problems": 40,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.25,
+          "pass_at_8": 0.45,
+          "truncated_samples": 169
+        },
+        "math": {
+          "problems": 500,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.51225,
+          "pass_at_8": 0.782,
+          "truncated_samples": 1235
+        },
+        "cn_math_2024": {
+          "problems": 30,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.05,
+          "pass_at_8": 0.23333333333333334,
+          "truncated_samples": 159
+        },
+        "kaoyan": {
+          "problems": 199,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.15452261306532664,
+          "pass_at_8": 0.47738693467336685,
+          "truncated_samples": 667
+        },
+        "minerva": {
+          "problems": 272,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.18106617647058823,
+          "pass_at_8": 0.41544117647058826,
+          "truncated_samples": 1088
+        },
+        "olympiadbench": {
+          "problems": 675,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.1887037037037037,
+          "pass_at_8": 0.40444444444444444,
+          "truncated_samples": 3062
+        },
+        "gpqa": {
+          "problems": 198,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.1414141414141414,
+          "pass_at_8": 0.5404040404040404,
+          "truncated_samples": 954
+        },
+        "aime25": {
+          "problems": 30,
+          "samples_per_problem": 8,
+          "pass_at_1": 0.016666666666666666,
+          "pass_at_8": 0.13333333333333333,
+          "truncated_samples": 185
+        }
+      }
+    },
+    "primary_final_audit": "deadline/report/primary-final-20261020T1708Z/audit.json",
+    "conditional_official_macro_comparisons": {
+      "advanced_vs_random": {
+        "pass_at_1": {
+          "advanced": 0.18786957933172,
+          "comparator": 0.16232170350073052,
+          "delta": 0.02554787583098947,
+          "delta_pp": 2.554787583098947,
+          "ci95": [
+            0.016732935407381078,
+            0.03481304891825709
+          ],
+          "ci95_pp": [
+            1.6732935407381078,
+            3.4813048918257086
+          ]
+        },
+        "pass_at_8": {
+          "advanced": 0.42954290783238835,
+          "comparator": 0.3669876416520113,
+          "delta": 0.06255526618037704,
+          "delta_pp": 6.255526618037704,
+          "ci95": [
+            0.03185236969781568,
+            0.09515005009481205
+          ],
+          "ci95_pp": [
+            3.1852369697815677,
+            9.515005009481206
+          ]
+        }
+      },
+      "advanced_vs_original": {
+        "pass_at_1": {
+          "advanced": 0.18786957933172,
+          "comparator": 0.2930267835326862,
+          "delta": -0.10515720420096619,
+          "delta_pp": -10.515720420096619,
+          "ci95": [
+            -0.12166177337424884,
+            -0.08981962107286097
+          ],
+          "ci95_pp": [
+            -12.166177337424884,
+            -8.981962107286098
+          ]
+        },
+        "pass_at_8": {
+          "advanced": 0.42954290783238835,
+          "comparator": 0.5286146036430917,
+          "delta": -0.0990716958107033,
+          "delta_pp": -9.90716958107033,
+          "ci95": [
+            -0.1341043879083934,
+            -0.06512916663568048
+          ],
+          "ci95_pp": [
+            -13.41043879083934,
+            -6.512916663568048
+          ]
+        }
+      }
+    },
+    "uncertainty_scope": {
+      "conditioning": "Fixed trained models and their eight recorded outputs per problem; excludes training-seed and additional generation-sampling variance.",
+      "multiple_comparison_adjustment": false,
+      "historical_leaderboard_equivalence_verified": false
+    }
   },
-  "last_verified_result_snapshot_utc": "2026-10-20T16:52:00.519668+00:00",
-  "operational_update_utc": "2026-10-20T16:53:00+00:00",
+  "last_verified_result_snapshot_utc": "2026-10-20T17:08:00+00:00",
+  "operational_update_utc": "2026-10-20T17:11:50+00:00",
   "reviewed_implementation_commit_scope": "b092f29 is a historical primary implementation review; later operational and recovery changes have separately recorded native receipts.",
   "report_closeout_obligations": [
     "FinalCPUjob creates audit/uncertainty/package metadata, not the finished narrative; reconcile FINAL_REPORT.md,README and this checklist manually with complete results and verified links.",
