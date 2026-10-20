@@ -1,0 +1,220 @@
+{
+  "schema": "deadline-anchor-search-screen-v1",
+  "phase": "decision",
+  "complete": true,
+  "accepted": false,
+  "winner": "incumbent",
+  "proposed_winner": "alpha0125",
+  "gate": {
+    "accepted": false,
+    "checks": {
+      "pass_at_1_floor": false,
+      "pass_at_8_floor": false,
+      "length_finish_ceiling": true,
+      "mean_repetition_ceiling": true,
+      "strictly_greater_harmonic_score": false
+    },
+    "length_finish_ceiling": 64,
+    "mean_repetition_ceiling": 0.06566288909734443
+  },
+  "model_path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/model",
+  "metrics": {
+    "original": {
+      "rows": 192,
+      "samples": 1536,
+      "agreeing_samples": 396,
+      "solved_questions": 100,
+      "pass_at_1": 0.2578125,
+      "pass_at_8": 0.5208333333333334,
+      "harmonic_score": 0.34489966555183943,
+      "length_finishes": 33,
+      "boxed_completions": 1503,
+      "output_tokens": 1335576,
+      "mean_repetition_8gram": 0.047894887106919644
+    },
+    "incumbent": {
+      "rows": 192,
+      "samples": 1536,
+      "agreeing_samples": 436,
+      "solved_questions": 101,
+      "pass_at_1": 0.2838541666666667,
+      "pass_at_8": 0.5260416666666666,
+      "harmonic_score": 0.368736602357985,
+      "length_finishes": 48,
+      "boxed_completions": 1488,
+      "output_tokens": 1484057,
+      "mean_repetition_8gram": 0.05566288909734443
+    },
+    "alpha0125": {
+      "rows": 192,
+      "samples": 1536,
+      "agreeing_samples": 399,
+      "solved_questions": 93,
+      "pass_at_1": 0.259765625,
+      "pass_at_8": 0.484375,
+      "harmonic_score": 0.3381725721784777,
+      "length_finishes": 38,
+      "boxed_completions": 1498,
+      "output_tokens": 1386718,
+      "mean_repetition_8gram": 0.05129752579711375
+    }
+  },
+  "prepared_sha256": "d6e2f8578d7057372fac25ade8f3ffd365121b2effda3930c24d72023e33d2de",
+  "plan_sha256": "f703aba665002f5a0eff60e4580255a961583d39ce2047c1b92ddb515affaaf4",
+  "selection_sha256": "6221370dcd0e25aaa48f74d9078e9dca657016bb49386d60e099c951af9f59dc",
+  "role_proofs": {
+    "original": {
+      "complete_sha256": "55305d8b5bf9425d1cd78f68a2e48aa2724eccba4892b39ea26cbce005375726",
+      "manifest_sha256": "9e6beea33bc9f87ae5324e091c8d374de2a97b42011c46cac491d817b1e20253",
+      "observations_sha256": "a13bf8bf5e2a7592bccc09ed1fb0aa975d5442bdd5fba1e323123c849ac76e65"
+    },
+    "incumbent": {
+      "complete_sha256": "ba8e5ea551318b63d5d803b9e95b05625b9508c967d8a420d151f3081e22e22b",
+      "manifest_sha256": "dd1bfa55dab1551fc8478a6385b73895c726a7496b0344300cf81b283ac54dc2",
+      "observations_sha256": "d6c093a5d4d0f8ca44ec671fb5759755485f17b9fb926b9a2bb0baecc2b1fd82"
+    },
+    "alpha0125": {
+      "complete_sha256": "b09c66d58fe28e0ad5742cf16660dba04fdad9667020b9f4d3c700294f3328f4",
+      "manifest_sha256": "b802821c15b4a058944f2b6d0ea48fa7b412e0ed34d1c72e0be24dbe8f43a324",
+      "observations_sha256": "fe341378938b3856d15a7a8273e703d2a242f2f6b614f9844c6c0536eb90b484"
+    }
+  },
+  "source_audit": {
+    "artifacts": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts",
+    "files": {
+      "heldout.json": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3",
+      "pool.json": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "preparation_complete.json": "7fb88fb85f685eef6cbc5ffde2e83de00a87445fbf7db8e134b61640451b82ab",
+      "model_identity.json": "81af59dbb365b8559ad0d853dbda245aa4ac3ff0bedc03428e50fed65d7f7ae2",
+      "source/data/acereason11_100k.json": "f064d1a5fb39b9f493f678d5d6350a9acbfb2a2fa85400d0947fe72578ff28d8",
+      "transfer_meta.json": "4c63b8c4eb0d306a3ca7bbd7ff3b80e16e5a83d4638f92b3faa806162476956c",
+      "probeA_ids.json": "6ae31826e4d06b517e9e290d653a9b3502056cc81c57e281ef0447a0918de4d6",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeA/probe_receipt.json": "4352d5bbcdc24b93be86003567f616e7ad71b61fcf86ab0dad67286a95138004",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeA/run_manifest.json": "6f7db54ee2a6a315489af738763cd21d6de78155fd1c256a07500131d6c126c7",
+      "probeB_ids.json": "42c0b860943dae371ae692c1824504ced4b9e10e09801790324adaca6ed4ffa1",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeB/probe_receipt.json": "650c2799ab1b692e4c36a763774f997c7f951c36a822e0de46bec414acb78a75",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/probeB/run_manifest.json": "3e73ca4dd36e143e144c9b418367b1832696ffcca5679858ebb07918f21d0e21",
+      "selected/selection_manifest.json": "07e2b09fb92342447e0764fb73578279bb71383c26fb436d3d88b06333986e9d",
+      "training/random/selected_ids.json": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9",
+      "selected/random.json": "3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7",
+      "training/random/dataset.json": "3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7",
+      "training/random/cache_meta.json": "69de9dd0a9467af5943023c68d96fce6dbe4286b7121be58843c09c040532c55",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/manifest.json": "80e987b7a5cc15d7a64a35abe13f3fc38fd9fc5b3ac9e983d71bbaeed944f3da",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/random/complete.json": "3096f82603f4df4790988ae955581cb7ce513fae54d875021936cea893ce62ec",
+      "training/advanced/selected_ids.json": "2241e6e39ab65fe465db8544d7635570ff8a67b7e95f764ac72ddcb1bb9d3d7f",
+      "selected/advanced.json": "511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199",
+      "training/advanced/dataset.json": "511fbcc1f947c93d7c62f02497265332c4bab57bb228279bc5f9c41467f04199",
+      "training/advanced/cache_meta.json": "71a51f9a88586872d352082e4fd15db9ad6b73fe1a191a0aafdf1ac08459aec6",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/manifest.json": "415aa571740dc5c6e215db762a0157b58a8cbdb45eccedc69eb7ae0086e21647",
+      "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/complete.json": "c0d96498b3c1855dd36d554c0a9712b3d5db9201118de855f615536e71c6ecfd",
+      "random_ids.json": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9"
+    },
+    "population_counts": {
+      "entire_prepared_pool": 83029,
+      "probeA": 512,
+      "probeB": 512,
+      "random": 15000,
+      "advanced": 15000
+    },
+    "disjointness": "exact normalized canonical prompt identities; not semantic equivalence"
+  },
+  "models": {
+    "original": {
+      "path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "files": {
+        "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+        "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00002.safetensors": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+        "model-00002-of-00002.safetensors": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+        "model.safetensors.index.json": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "incumbent": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/model",
+      "files": {
+        "LICENSE": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+        "NOTICE": "13ba3e070a8a64020760ed8cf39b30fe20ec298cf7a0ee2dbba2a26d47082449",
+        "config.json": "79624335d945b5ca71c0f99fe10d64de5b20231aeed57768cb08e9b094f21aae",
+        "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00006.safetensors": "542ac258274d6f69398371ef0fc04b4ca218080066d75ade06c405a71321e8c1",
+        "model-00002-of-00006.safetensors": "b804d0df475b07658266e79facbc4f4c2b5ccfcf26217c010e04bb2c0c148998",
+        "model-00003-of-00006.safetensors": "d05b792d5d4e9ebc0f939bc680ff17205ce01fa33629132549eb95782fbef3a1",
+        "model-00004-of-00006.safetensors": "462596d965ebf2f8ac2c6a5aceb8e5c0093d9455f0547ff0c2d963b7faff8afc",
+        "model-00005-of-00006.safetensors": "23ddb724e03670764bfa271bd801fc6928f8719442a4be47af2332459883bbd1",
+        "model-00006-of-00006.safetensors": "aa76a669be6dc254478b10f94895790c60c50344e083c19dece67ae84d373462",
+        "model.safetensors.index.json": "5a2c6bfe556466ee7cea4d8ee2a8cb754b09727ff27287b325da09ff5c1a258e",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "alpha0125": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/candidates/alpha0125/model",
+      "files": {
+        "LICENSE": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+        "NOTICE": "4a83f5e5fc670abf10a20264f375799160ada52671f97fa4a7df182678b13079",
+        "config.json": "79624335d945b5ca71c0f99fe10d64de5b20231aeed57768cb08e9b094f21aae",
+        "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00006.safetensors": "2379b5c592e3523f8758bbe6c6765ddc22900f177f81d35f65d314b192578d86",
+        "model-00002-of-00006.safetensors": "9d311eaf3c4816b1a26717cb8277061ea8c7f007ef678140114f1ea2a80ad4d7",
+        "model-00003-of-00006.safetensors": "cbdddb8ce574c9f536c2df8e7dff219dd64c8390d7a99b3370821d57e47c1bfd",
+        "model-00004-of-00006.safetensors": "a82bec572ac1b2fa1805263791773cc8fb270b7f5dbe98a2b9dcbf1e372040be",
+        "model-00005-of-00006.safetensors": "8446290a005c0cdc14e8524b66ae9c6109601746652b3db863b1b0adaa7ff79b",
+        "model-00006-of-00006.safetensors": "0c60d48e9f0677d83c1a75ba68f72b8cd7693ecd86ec0f79bb40cb083a1b04fe",
+        "model.safetensors.index.json": "5a2c6bfe556466ee7cea4d8ee2a8cb754b09727ff27287b325da09ff5c1a258e",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    },
+    "alpha0375": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/candidates/alpha0375/model",
+      "files": {
+        "LICENSE": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+        "NOTICE": "d1db060aa0244012c72cc1e939507394a816e3d978f32f16ae413933817a7e05",
+        "config.json": "79624335d945b5ca71c0f99fe10d64de5b20231aeed57768cb08e9b094f21aae",
+        "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model-00001-of-00006.safetensors": "3f3a6b5bca445f1d915fd0a5980728884b707db70b54c4fbeb7a71fa511071fd",
+        "model-00002-of-00006.safetensors": "e7199e9cbc3dcaf046d4a1b697cf9aee9fcb218def95faa538d8b2aca8cc682e",
+        "model-00003-of-00006.safetensors": "61b7fdb62d2a8cc6f08283a00900e37197230ccb13fa255248e43eb0a362cfe6",
+        "model-00004-of-00006.safetensors": "88955443ea0fca13670e594f4141a82fe3397022b3f22781a0c59bcd2732b16e",
+        "model-00005-of-00006.safetensors": "1c59c9045e2ae92ec5e03c6a01dd411d818002ff94be774f8df6f74891a2ecd8",
+        "model-00006-of-00006.safetensors": "db40502e9d9bdf204a9aa94688fb99bc26dd51190709f65b9f24797dd0585224",
+        "model.safetensors.index.json": "5a2c6bfe556466ee7cea4d8ee2a8cb754b09727ff27287b325da09ff5c1a258e",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    }
+  },
+  "runtime_environment": {
+    "versions": {
+      "vllm": "0.12.0",
+      "transformers": "4.57.3",
+      "torch": "2.9.0",
+      "sympy": "1.14.0",
+      "antlr4-python3-runtime": "4.7.2",
+      "latex2sympy2": "1.9.1"
+    },
+    "hardware": {
+      "name": "NVIDIA B200",
+      "total_memory": 191495471104,
+      "capability": [
+        10,
+        0
+      ]
+    }
+  },
+  "exploratory": true,
+  "posthoc_after_primary_outcomes": true,
+  "teacher_agreement_is_not_truth": true,
+  "no_retry_other_candidate": true,
+  "benchmark_based_candidate_selection": false
+}

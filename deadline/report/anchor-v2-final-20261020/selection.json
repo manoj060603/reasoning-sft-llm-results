@@ -1,0 +1,133 @@
+{
+  "schema": "deadline-anchor-search-screen-v1",
+  "phase": "selection",
+  "complete": true,
+  "accepted": true,
+  "winner": "alpha0125",
+  "gates": {
+    "alpha0125": {
+      "accepted": true,
+      "checks": {
+        "pass_at_1_floor": true,
+        "pass_at_8_floor": true,
+        "length_finish_ceiling": true,
+        "mean_repetition_ceiling": true,
+        "strictly_greater_harmonic_score": true
+      },
+      "length_finish_ceiling": 53,
+      "mean_repetition_ceiling": 0.06487963015848232
+    },
+    "alpha0375": {
+      "accepted": false,
+      "checks": {
+        "pass_at_1_floor": true,
+        "pass_at_8_floor": true,
+        "length_finish_ceiling": false,
+        "mean_repetition_ceiling": false,
+        "strictly_greater_harmonic_score": true
+      },
+      "length_finish_ceiling": 53,
+      "mean_repetition_ceiling": 0.06487963015848232
+    }
+  },
+  "model_path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/candidates/alpha0125/model",
+  "metrics": {
+    "original": {
+      "rows": 192,
+      "samples": 1536,
+      "agreeing_samples": 451,
+      "solved_questions": 98,
+      "pass_at_1": 0.2936197916666667,
+      "pass_at_8": 0.5104166666666666,
+      "harmonic_score": 0.3727901484480432,
+      "length_finishes": 32,
+      "boxed_completions": 1505,
+      "output_tokens": 1338557,
+      "mean_repetition_8gram": 0.05091249944628511
+    },
+    "incumbent": {
+      "rows": 192,
+      "samples": 1536,
+      "agreeing_samples": 445,
+      "solved_questions": 97,
+      "pass_at_1": 0.2897135416666667,
+      "pass_at_8": 0.5052083333333334,
+      "harmonic_score": 0.3682517745017746,
+      "length_finishes": 37,
+      "boxed_completions": 1499,
+      "output_tokens": 1475806,
+      "mean_repetition_8gram": 0.054879630158482316
+    },
+    "alpha0125": {
+      "rows": 192,
+      "samples": 1536,
+      "agreeing_samples": 462,
+      "solved_questions": 102,
+      "pass_at_1": 0.30078125,
+      "pass_at_8": 0.53125,
+      "harmonic_score": 0.3840962441314554,
+      "length_finishes": 29,
+      "boxed_completions": 1507,
+      "output_tokens": 1346640,
+      "mean_repetition_8gram": 0.04954068527233071
+    },
+    "alpha0375": {
+      "rows": 192,
+      "samples": 1536,
+      "agreeing_samples": 479,
+      "solved_questions": 104,
+      "pass_at_1": 0.3118489583333333,
+      "pass_at_8": 0.5416666666666666,
+      "harmonic_score": 0.39581744215611486,
+      "length_finishes": 56,
+      "boxed_completions": 1480,
+      "output_tokens": 1638945,
+      "mean_repetition_8gram": 0.06498617613707396
+    }
+  },
+  "prepared_sha256": "d6e2f8578d7057372fac25ade8f3ffd365121b2effda3930c24d72023e33d2de",
+  "plan_sha256": "f703aba665002f5a0eff60e4580255a961583d39ce2047c1b92ddb515affaaf4",
+  "role_proofs": {
+    "original": {
+      "complete_sha256": "fa5c0ba8121fdf5478ffd12ab3f43391fb51815bd8b561949b79623c38f7aa1e",
+      "manifest_sha256": "1276ccdd85c15615140746a8b0bcc4f925b8c8ada5b1fa26ef4e581f744c76df",
+      "observations_sha256": "718256b07ab917ba49d3ee40e7d813f95fe172c0db3b0152a46dde6c2bed06a0"
+    },
+    "incumbent": {
+      "complete_sha256": "c7eff81a69a55aeef4c10fac25072afa71298917dcfebb15386aef98c071964e",
+      "manifest_sha256": "d5c1b7bf3f91c5fbf861d3e7bc5f83ed190f0d09c37b57def5d332ec1717310a",
+      "observations_sha256": "9b30112b00e4b2f21b7bcc70678c98223ae1bdc765541f715f5be7f5cb497402"
+    },
+    "alpha0125": {
+      "complete_sha256": "eaf7ae30e876827cb29025740a293b14a5270ad90e5a727a72f23abeb21eae5e",
+      "manifest_sha256": "3a14dcf692a47e1e61160377687f10ead52eb8e40c53da9ce9a1d793ba88982c",
+      "observations_sha256": "da954a9cbf1e3b5861d0255db0a3db0e9b25bdbc4435100a6a1eea695676cd69"
+    },
+    "alpha0375": {
+      "complete_sha256": "7e68287813bcbe6f7ada206b4bde23b5d5629019242adeb0e1f901922fc2ff47",
+      "manifest_sha256": "be8436cf41f03b09494633e22d8fa054dd924ea75161a850df8d85d2685b0848",
+      "observations_sha256": "60172f96fe6058269de559b5eb8d21597625e91b558b0c91cb64067b549e7454"
+    }
+  },
+  "runtime_environment": {
+    "versions": {
+      "vllm": "0.12.0",
+      "transformers": "4.57.3",
+      "torch": "2.9.0",
+      "sympy": "1.14.0",
+      "antlr4-python3-runtime": "4.7.2",
+      "latex2sympy2": "1.9.1"
+    },
+    "hardware": {
+      "name": "NVIDIA B200",
+      "total_memory": 191495471104,
+      "capability": [
+        10,
+        0
+      ]
+    }
+  },
+  "exploratory": true,
+  "teacher_agreement_is_not_truth": true,
+  "benchmark_based_candidate_selection": false
+}

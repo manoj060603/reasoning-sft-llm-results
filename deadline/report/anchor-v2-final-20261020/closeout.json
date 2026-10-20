@@ -1,0 +1,91 @@
+{
+  "schema": "deadline-anchor-v2-negative-closeout-v1",
+  "complete": true,
+  "outcome": "rejected_on_independent_source_confirmation",
+  "observed_at_utc": "2026-10-20T20:42:08.540501+00:00",
+  "plan_sha256": "f703aba665002f5a0eff60e4580255a961583d39ce2047c1b92ddb515affaaf4",
+  "scientific_implementation_commit": "9c246dd7385a0fe93877eacbcf673bb94585b2cd",
+  "prepared_sha256": "d6e2f8578d7057372fac25ade8f3ffd365121b2effda3930c24d72023e33d2de",
+  "source_run_arc": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2",
+  "selection": {
+    "path": "selection.json",
+    "sha256": "6221370dcd0e25aaa48f74d9078e9dca657016bb49386d60e099c951af9f59dc",
+    "winner": "alpha0125",
+    "accepted": true
+  },
+  "decision": {
+    "path": "decision.json",
+    "sha256": "d0ae08c203e8156852bba9e7af007d8969e7bcb07733dbebf858b4bad0ffa01e",
+    "accepted": false,
+    "proposed_winner": "alpha0125",
+    "retained_winner": "incumbent",
+    "failed_checks": [
+      "pass_at_1_floor",
+      "pass_at_8_floor",
+      "strictly_greater_harmonic_score"
+    ]
+  },
+  "teacher_agreement_is_not_verified_ground_truth": true,
+  "source_selection_is_not_benchmark_accuracy": true,
+  "search_rows": 192,
+  "confirmation_rows": 192,
+  "samples_per_question": 8,
+  "source_job": {
+    "job_id": "1219074",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "start_utc": "2026-10-20T19:53:23+00:00",
+    "end_utc": "2026-10-20T20:29:26+00:00",
+    "elapsed_seconds": 2163,
+    "allocated_gpus": 1,
+    "gpu": "NVIDIA B200",
+    "charged_gpu_seconds": 2220,
+    "sacct_text": "1219074|1219074|COMPLETED|0:0|2163|2026-10-20T19:53:23|2026-10-20T20:29:26|billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1\n"
+  },
+  "benchmark_job_submitted": false,
+  "candidate_benchmark_results": null,
+  "new_checkpoint_published": false,
+  "alternate_candidate_retry": false,
+  "additional_gpu_work_planned": false,
+  "native_observation_archive": {
+    "path": "native-source-evidence.tar.gz",
+    "sha256": "7b2d15a4393e15bfa10b0cc7a950bb4510aadcf968c6654319c217176c43642e",
+    "inventory": "source-evidence-inventory.json"
+  },
+  "gpu_accounting": {
+    "reconciliation": "deadline/operations/gpu-budget-reconciliation-be6bf2aca0eee450.json",
+    "reconciliation_file_sha256": "7c9da24065c9f09d0bc045ed4a3ca607f549f49b365b2ebffe3d31a35ecc2381",
+    "audit_sha256": "be6bf2aca0eee4500181ac911c113f2d7fc7d2ffc7faaeef779724fb44ededca",
+    "all_experiment_actual_elapsed_gpu_seconds": 142188,
+    "all_experiment_actual_elapsed_gpu_hours": 39.49666666666667,
+    "all_experiment_conservative_charged_gpu_seconds": 142740,
+    "all_experiment_conservative_charged_gpu_hours": 39.65,
+    "cap_gpu_hours": 48,
+    "cumulative_admitted_requested_gpu_hours": 73.75,
+    "cumulative_all_attempt_requested_gpu_hours": 91.75,
+    "historical_requests_preserved": true
+  },
+  "incumbent_benchmark_macro_supplied_eight": {
+    "pass_at_1": 0.2894218107039082,
+    "pass_at_8": 0.5555548698757204
+  },
+  "original_benchmark_macro_supplied_eight": {
+    "pass_at_1": 0.2930267835326862,
+    "pass_at_8": 0.5286146036430917
+  },
+  "objective_both_benchmark_metrics_above_original_demonstrated": false,
+  "retained_incumbent_url": "https://huggingface.co/adversarialbandit/qwen25-3b-base75-advanced25-posthoc-20261020",
+  "retained_incumbent_commit": "51814ba26ab0dc052447aee1612bebcffdba43f2",
+  "prior_five_public_artifacts_preserved": true,
+  "technical_assignment_delivery_remains_complete": true,
+  "course_submission_performed": false,
+  "remaining_manual_action": "Team submits existing complete technical artifacts to its course system before the deadline.",
+  "final_scheduler_snapshot": {
+    "observed_at_utc": "2026-10-20T20:43:37.404131+00:00",
+    "command": "squeue --clusters=owl --array --states=all --noheader --user=manoj663 --format=%i",
+    "stdout": "",
+    "anchor_benchmark_role_absent": true,
+    "anchor_publisher_role_absent": true,
+    "candidate_benchmark_directory_absent": true
+  }
+}

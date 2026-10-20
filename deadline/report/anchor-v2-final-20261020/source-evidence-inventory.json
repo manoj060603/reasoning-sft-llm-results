@@ -1,0 +1,109 @@
+{
+  "schema": "deadline-anchor-source-evidence-archive-v1",
+  "archive": "native-source-evidence.tar.gz",
+  "sha256": "7b2d15a4393e15bfa10b0cc7a950bb4510aadcf968c6654319c217176c43642e",
+  "bytes": 835380,
+  "contents": {
+    "prepared.json": {
+      "bytes": 177179,
+      "sha256": "d6e2f8578d7057372fac25ade8f3ffd365121b2effda3930c24d72023e33d2de"
+    },
+    "selection.json": {
+      "bytes": 4547,
+      "sha256": "6221370dcd0e25aaa48f74d9078e9dca657016bb49386d60e099c951af9f59dc"
+    },
+    "decision.json": {
+      "bytes": 13520,
+      "sha256": "d0ae08c203e8156852bba9e7af007d8969e7bcb07733dbebf858b4bad0ffa01e"
+    },
+    "gpu_allocation.json": {
+      "bytes": 455,
+      "sha256": "398989c8789b8797aba85f7c572a0cb914dfb715ca6084908beadfc2370586fb"
+    },
+    "screen/search/alpha0375/observations.json": {
+      "bytes": 300123,
+      "sha256": "60172f96fe6058269de559b5eb8d21597625e91b558b0c91cb64067b549e7454"
+    },
+    "screen/search/alpha0375/complete.json": {
+      "bytes": 667,
+      "sha256": "7e68287813bcbe6f7ada206b4bde23b5d5629019242adeb0e1f901922fc2ff47"
+    },
+    "screen/search/alpha0375/manifest.json": {
+      "bytes": 21314,
+      "sha256": "be8436cf41f03b09494633e22d8fa054dd924ea75161a850df8d85d2685b0848"
+    },
+    "screen/search/alpha0125/observations.json": {
+      "bytes": 298536,
+      "sha256": "da954a9cbf1e3b5861d0255db0a3db0e9b25bdbc4435100a6a1eea695676cd69"
+    },
+    "screen/search/alpha0125/complete.json": {
+      "bytes": 647,
+      "sha256": "eaf7ae30e876827cb29025740a293b14a5270ad90e5a727a72f23abeb21eae5e"
+    },
+    "screen/search/alpha0125/manifest.json": {
+      "bytes": 21314,
+      "sha256": "3a14dcf692a47e1e61160377687f10ead52eb8e40c53da9ce9a1d793ba88982c"
+    },
+    "screen/search/original/observations.json": {
+      "bytes": 298780,
+      "sha256": "718256b07ab917ba49d3ee40e7d813f95fe172c0db3b0152a46dde6c2bed06a0"
+    },
+    "screen/search/original/complete.json": {
+      "bytes": 664,
+      "sha256": "fa5c0ba8121fdf5478ffd12ab3f43391fb51815bd8b561949b79623c38f7aa1e"
+    },
+    "screen/search/original/manifest.json": {
+      "bytes": 20679,
+      "sha256": "1276ccdd85c15615140746a8b0bcc4f925b8c8ada5b1fa26ef4e581f744c76df"
+    },
+    "screen/search/incumbent/observations.json": {
+      "bytes": 299656,
+      "sha256": "9b30112b00e4b2f21b7bcc70678c98223ae1bdc765541f715f5be7f5cb497402"
+    },
+    "screen/search/incumbent/complete.json": {
+      "bytes": 666,
+      "sha256": "c7eff81a69a55aeef4c10fac25072afa71298917dcfebb15386aef98c071964e"
+    },
+    "screen/search/incumbent/manifest.json": {
+      "bytes": 21283,
+      "sha256": "d5c1b7bf3f91c5fbf861d3e7bc5f83ed190f0d09c37b57def5d332ec1717310a"
+    },
+    "screen/confirmation/alpha0125/observations.json": {
+      "bytes": 299459,
+      "sha256": "fe341378938b3856d15a7a8273e703d2a242f2f6b614f9844c6c0536eb90b484"
+    },
+    "screen/confirmation/alpha0125/complete.json": {
+      "bytes": 654,
+      "sha256": "b09c66d58fe28e0ad5742cf16660dba04fdad9667020b9f4d3c700294f3328f4"
+    },
+    "screen/confirmation/alpha0125/manifest.json": {
+      "bytes": 21382,
+      "sha256": "b802821c15b4a058944f2b6d0ea48fa7b412e0ed34d1c72e0be24dbe8f43a324"
+    },
+    "screen/confirmation/original/observations.json": {
+      "bytes": 299612,
+      "sha256": "a13bf8bf5e2a7592bccc09ed1fb0aa975d5442bdd5fba1e323123c849ac76e65"
+    },
+    "screen/confirmation/original/complete.json": {
+      "bytes": 664,
+      "sha256": "55305d8b5bf9425d1cd78f68a2e48aa2724eccba4892b39ea26cbce005375726"
+    },
+    "screen/confirmation/original/manifest.json": {
+      "bytes": 20747,
+      "sha256": "9e6beea33bc9f87ae5324e091c8d374de2a97b42011c46cac491d817b1e20253"
+    },
+    "screen/confirmation/incumbent/observations.json": {
+      "bytes": 300032,
+      "sha256": "d6c093a5d4d0f8ca44ec671fb5759755485f17b9fb926b9a2bb0baecc2b1fd82"
+    },
+    "screen/confirmation/incumbent/complete.json": {
+      "bytes": 671,
+      "sha256": "ba8e5ea551318b63d5d803b9e95b05625b9508c967d8a420d151f3081e22e22b"
+    },
+    "screen/confirmation/incumbent/manifest.json": {
+      "bytes": 21351,
+      "sha256": "dd1bfa55dab1551fc8478a6385b73895c726a7496b0344300cf81b283ac54dc2"
+    }
+  },
+  "scope": "Exact native prepared receipt, allocation, search and confirmation manifests, per-sample observations and terminal selection/decision; contains hashes and agreement/diagnostic flags, no model weights or generated text."
+}

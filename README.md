@@ -8,9 +8,9 @@ control. Earlier team models are not used for initialization or probe scoring.
 This project addresses the [Virginia Tech reasoning SFT assignment](https://github.com/reds-lab/Project-Reasoning-SFT-LLM),
 due **October 20, 2026, at 11:59 p.m. Eastern**.
 
-## Additional recovery follow-up
+## Additional recovery follow-up: closed without promotion
 
-A separate follow-up, authorized October 20 after delivery, is testing **12.5%
+A separate follow-up, authorized October 20 after delivery, tested **12.5%
 and 37.5% advanced-weight blends** against the original and the published 25%
 recovery. Its [prospective plan](deadline/anchor_search/plan.json) uses 192 fresh
 source-heldout search questions and 192 disjoint confirmation questions, eight
@@ -32,19 +32,21 @@ inside the frozen deadline reserve. Job `1219074` obtained an earlier backfill
 allocation despite the previous 23:34 UTC queue estimate. Its [native allocation
 seal](deadline/report/anchor-v2-preparation-20261020/gpu_allocation.json) records
 the full 90-minute limit and one GPU; the [earlier backfill adjustment](deadline/operations/anchor-v2-backfill-adjustment-20261020.json)
-changed no scientific setting. The original, incumbent and both new blends are
-being tested on the fresh search split. If one passes the unchanged search and
-separate confirmation gates, the pipeline submits its full nine-task benchmark
-evaluation automatically. No new candidate benchmark result exists yet.
+changed no scientific setting. The original, incumbent and both new blends
+completed the fresh search split. The 12.5% candidate was selected, then failed
+independent confirmation. **The published 25% incumbent is retained; no new
+candidate benchmark was admitted.** The final outcome is detailed
+[below](#separate-validation-guided-follow-up-no-promotion).
 The separate closeout/publisher passed [20 native CPU checks](deadline/operations/anchor-followup-publication-native-qa-20261020-attempt1.json)
-and is ready to audit all five roles, compute conditional uncertainty and publish
-only the exact confirmed checkpoint after all nine raw benchmark tasks complete.
+and was prepared to audit all five roles, compute conditional uncertainty and
+publish only a confirmed checkpoint after all nine raw benchmark tasks. It did
+not run because confirmation failed; no new checkpoint was published.
 These checks performed no network access or upload.
 
-The admitted source reservation gives a conservative bound of **40.533333 / 48
-GPU-hours**. If its single accepted candidate later admits the separate three-hour
-benchmark allocation, the bound would be **43.533333 / 48 hours**, before any
-new terminal reconciliation. Source selection uses teacher agreement, which is
+At source admission, the conservative reservation bound was **40.533333 / 48
+GPU-hours**. A later three-hour candidate benchmark would have produced a
+**43.533333 / 48-hour** bound before terminal reconciliation; that benchmark was
+not admitted. These are historical reservation bounds. Source selection uses teacher agreement, which is
 not verified ground truth. All previously completed assignment artifacts remain
 available regardless of this exploratory follow-up.
 
@@ -270,6 +272,44 @@ The code license is in [LICENSE](LICENSE). Published derivative model weights
 must carry the [pinned upstream Qwen Research License](deadline/licenses/Qwen2.5-3B-Instruct.LICENSE),
 attribution and modification notices. Dataset provenance and upstream license
 details are recorded in the report and generated dataset cards.
+
+## Separate validation-guided follow-up: no promotion
+
+A later [frozen source-only search](deadline/anchor_search/plan.json) tested
+advanced-weight fractions 0.125 and 0.375 on 192 fresh held-out questions, with
+192 disjoint questions reserved for independent confirmation. Earlier published
+models and benchmark results were preserved. The [search selection](deadline/report/anchor-v2-final-20261020/selection.json)
+chose 0.125, with teacher-agreement pass@1 **30.078125%**, pass@8 **53.125%** and
+harmonic score **0.3840962441**. The 0.375 candidate failed the search length and
+repetition limits.
+
+Independent confirmation did **not** support promotion:
+
+| Source confirmation, 192 questions | Teacher-agreement pass@1 | Teacher-agreement pass@8 |
+|---|---:|---:|
+| Original | 25.78125% | 52.08333% |
+| Incumbent 75% base / 25% advanced | 28.38542% | 52.60417% |
+| Candidate 87.5% base / 12.5% advanced | 25.97656% | 48.43750% |
+
+The [complete decision](deadline/report/anchor-v2-final-20261020/decision.json)
+is **accepted=false**: the candidate failed the fixed agreement floors and had
+lower harmonic score than incumbent, despite passing the confirmation quality
+limits. The published 75/25 incumbent is retained. No new candidate benchmarks,
+Hugging Face checkpoint publication or alternate-candidate retry followed.
+These are source-teacher agreement proxies, not verified truth or benchmark
+accuracy. The [follow-up closeout](deadline/report/anchor-v2-final-20261020/closeout.json)
+records this negative result and its separate resource accounting. The 17:31 GPU
+totals above cover the earlier primary/fixed recovery; later launch reservation
+bounds are explicitly historical.
+
+Source job `1219074` completed successfully at **20:29:26 UTC / 4:29 p.m.
+Eastern**, using 2,163 seconds on one B200. Including this follow-up, actual
+elapsed GPU use is **39.496667 hours** and the per-allocation rounded charge is
+**39.65 / 48 hours**, supported by the [terminal reconciliation](deadline/operations/gpu-budget-reconciliation-be6bf2aca0eee450.json).
+The [native evidence archive](deadline/report/anchor-v2-final-20261020/native-source-evidence.tar.gz)
+preserves all seven source-role observations, manifests and completion receipts,
+with [SHA-256 inventory](deadline/report/anchor-v2-final-20261020/source-evidence-inventory.json).
+There is no pending experiment or additional demonstrated benchmark gain.
 
 ## Preserved earlier work
 

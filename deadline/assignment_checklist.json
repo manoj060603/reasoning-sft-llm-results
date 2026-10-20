@@ -1434,5 +1434,16 @@
     "FinalCPUjob creates audit/uncertainty/package metadata, not the finished narrative; reconcile FINAL_REPORT.md,README and this checklist manually with complete results and verified links.",
     "Keep primary random/advanced artifact identities; any recovery artifact needs separate identity, model card and provenance.",
     "Course submission is team-owned; this automation must not send messages or submit to the course system."
-  ]
+  ],
+  "separate_validation_selected_recovery_followup": {
+    "status": "complete_negative_confirmation_incumbent_retained",
+    "closeout": "deadline/report/anchor-v2-final-20261020/closeout.json",
+    "candidate_benchmarks_run": false,
+    "new_checkpoint_published": false,
+    "prior_artifacts_preserved": true,
+    "prospective_both_metric_improvement_demonstrated": false,
+    "actual_elapsed_gpu_hours_including_followup": 39.49666666666667,
+    "conservative_charged_gpu_hours_including_followup": 39.65,
+    "scope": "Separate exploratory follow-up after primary/fixed-recovery delivery; teacher-agreement confirmation failed. Earlier dated primary/fixed-recovery receipts and totals remain historical unchanged."
+  }
 }
