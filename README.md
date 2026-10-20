@@ -10,10 +10,11 @@ due **October 20, 2026, at 11:59 p.m. Eastern**.
 
 ## Verified progress
 
-Verified snapshot: **October 20, 2026, at 11:24 a.m. Eastern / 15:24 UTC**.
-Both final training runs are complete. Each trained model has eight audited
-completed tasks, including supplementary AIME25: **8/9 total, 7/8 supplied
-tasks**. Only GPQA remains pending for both models.
+Verified snapshot: **October 20, 2026, at 12:53 p.m. Eastern / 16:53 UTC**.
+Both final training runs are complete. Original and primary advanced evaluation
+are **9/9 complete, including all eight supplied tasks**. Random evaluation is
+**8/9 complete, 7/8 supplied tasks**; only its GPQA result remains pending.
+Full trained-model macros and paired uncertainty await three-model closeout.
 
 | Stage | Verified state |
 |---|---|
@@ -22,15 +23,18 @@ tasks**. Only GPQA remains pending for both models.
 | Both final full-SFT models | Complete; 1,875 updates each, 15,000 unique examples used once, 434 finite FP32 tensors per model |
 | Original benchmark evaluation | All nine complete, including supplementary AIME25 |
 | Random-control evaluation | 8/9 complete: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, Minerva, OlympiadBench and supplementary AIME25 |
-| New-method evaluation | 8/9 complete: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, Minerva, OlympiadBench and supplementary AIME25 |
-| Evaluation continuations | Running: random `1210309` (16-hour allocation), advanced `1210310` (12-hour allocation); both initial six-hour parents timed out |
+| New-method evaluation | All nine complete, including GPQA and all eight supplied tasks |
+| Primary evaluation continuations | Advanced `1210310` completed; random `1210309` remains running on GPQA |
 | Final comparisons and Hugging Face publication | Pending; CPU closeout `1208135` depends on both continuations succeeding; publisher `1209745` depends on closeout |
 
 The original model's **official-eight macro is 29.30% pass@1 and 52.86% pass@8**.
 The [partial raw-result audit](deadline/report/partial-20261020T1010Z/results.md)
 reports the following percentages; every completed task has eight responses per
 problem and verified identities. Protocol, benchmark data and hardware agree;
-the full matched comparison remains incomplete. The [15:24 UTC native audit](deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json) additionally verifies OlympiadBench for all three primary roles.
+the full matched comparison remains incomplete. The [OlympiadBench audit](deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json)
+and [new primary GPQA audit](deadline/report/primary-gpqa-partial-20261020T1650Z/audit.json)
+compose the current coverage. The latter verifies advanced's complete all-nine
+identity and raw GPQA results; random-versus-advanced GPQA is still pending.
 
 | Task with measured results | Original pass@1 / pass@8 | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
 |---|---:|---:|---:|
@@ -41,10 +45,12 @@ the full matched comparison remains incomplete. The [15:24 UTC native audit](dea
 | Kaoyan | 21.11% / 49.75% | 14.07% / 41.71% | 15.45% / 47.74% |
 | Minerva | 30.33% / 47.79% | 15.95% / 36.40% | 18.11% / 41.54% |
 | OlympiadBench | 28.26% / 51.85% | 17.15% / 38.37% | 18.87% / 40.44% |
+| GPQA | 28.41% / 69.70% | Pending | 14.14% / 54.04% |
 | AIME25, supplementary | 0.83% / 3.33% | 2.92% / 16.67% | 1.67% / 13.33% |
 
-Both trained models trail the original on all seven currently completed supplied
-tasks and improve on supplementary AIME25. Advanced exceeds random on CN,
+Primary advanced trails the original on **all eight supplied tasks**; random
+trails the original on its seven completed supplied tasks. Both improve on
+supplementary AIME25. Advanced exceeds random on CN,
 Kaoyan, Minerva and OlympiadBench in both metrics. On MATH, advanced pass@1 is **51.225% versus 49.725%**
 for random, a **+1.50 percentage-point** difference; pass@8 ties at **78.20%**.
 Both remain below the original's 65.90% / 83.80%. Advanced also exceeds random
@@ -55,7 +61,9 @@ MATH truncations are 1,235/4,000 advanced responses (30.875%) versus
 1,508/4,000 random (37.7%). CN has 159/240 advanced versus 215/240 random
 truncations; Kaoyan has 667/1,592 advanced versus 1,009/1,592 random. Minerva
 has 1,088/2,176 advanced responses truncated (50%), versus 1,269/2,176 random.
-These finish-reason counts do not establish what caused the accuracy differences.
+Advanced GPQA has **954/1,584** length-limit finishes, versus **5/1,584** for
+the original; random GPQA remains pending. These counts do not establish what
+caused the accuracy differences.
 Full trained-model macros and paired uncertainty remain pending. Missing
 results are not zero. The primary experiment's selection method, models and
 evaluation protocol are unchanged in response to these scores.
@@ -73,9 +81,9 @@ Initial recovery benchmark job `1214775` started at **14:54:26 UTC**, using the
 same all-nine, eight-sample, 32K protocol in a bounded 45-minute allocation.
 The [native manifest audit](deadline/operations/recovery-evaluation-manifest-audit-20261020.json)
 confirms matching protocol, data, IDs, grader, runtime and B200 hardware. Its
-full-suite results remain pending; any identical-protocol continuation needs
-fresh resource reclamation and deadline reserves. Primary SFT checkpoints,
-results and publication identities remain separate. The first recovery task is
+full-suite results remain pending. That first stage reached its time limit,
+retaining seven complete tasks. Primary SFT checkpoints, results and publication
+identities remain separate. The first recovery task is
 [raw-audited AMC](deadline/report/recovery-benchmark-partial-20261020T1502Z/audit.json):
 **39.0625% pass@1 / 75.00% pass@8**, versus advanced **25.00% / 45.00%** and
 original **42.50% / 70.00%**. Recovery improves over advanced in both metrics on
@@ -88,14 +96,18 @@ retain exact comparisons. MATH pass@1 remains below original; CN exceeds origina
 in both recorded metrics, and Kaoyan ties original pass@1 with higher pass@8.
 Minerva is also verified at **29.4577% / 48.1618%**, versus original **30.3309% / 47.7941%** ([native audit](deadline/report/recovery-benchmark-partial-20261020T1535Z/minerva-audit.json)).
 Only OlympiadBench and GPQA remain outside the audited recovery snapshot.
-No full macro or significance is established.
+An [unchanged recovery continuation](deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json),
+job `1216562`, is **running**, starting at **12:51:19 p.m. Eastern / 16:51:19 UTC**
+with a 45-minute allocation ending at **1:36:19 p.m. Eastern / 17:36:19 UTC**.
+It retains the initial seven saved tasks and uses the same model, protocol and
+output directory. No recovery full macro or significance is established.
 
 The [runtime continuation record](deadline/operations/evaluation-resume-20261020.json)
 documents retaining six completed benchmarks and fully regenerating the unsaved
 Minerva batch under the frozen settings. No interrupted partial response enters
 the scores. Interrupted work is included in GPU accounting; its exact unsaved
-generated-token total is unknown. Both continuations are now running and the
-new audit verifies completed regenerated Minerva results.
+generated-token total is unknown. Both regenerated Minerva results were
+verified; advanced's primary continuation is now complete while random's runs.
 
 Native budget/pipeline checks previously passed **30 tests with no failures,
 errors or skips** in a compute allocation. Both initial evaluation parents
@@ -109,15 +121,22 @@ includes 18 hours verified never admitted. Final resource use, continuation
 success, comparisons and publication remain pending.
 
 The recovery screen completed in 316 seconds and is charged 360 GPU-seconds
-under the [terminal accounting proof](deadline/operations/gpu-budget-reconciliation-e85de9ae41202753.json).
-The first benchmark stage reached its 45-minute limit after 2,703 seconds;
-seven completed tasks are retained. Its [terminal accounting proof](deadline/operations/gpu-budget-reconciliation-c0f4181a2d92af85.json)
-charges 2,760 GPU-seconds, including the overrun rounded upward. The current
-terminal-plus-open-reservation bound is **47.9167 / 48 GPU-hours (172,500 seconds)**,
-leaving five minutes of uncommitted capacity. Further recovery evaluation awaits
-verified unused-capacity reclamation after a primary continuation ends.
-Historical admitted requests are 71.50 hours; all-attempt requests are 89.50 hours.
-These are separate from actual elapsed use. A continuation has not been admitted.
+under its [terminal accounting proof](deadline/operations/gpu-budget-reconciliation-e85de9ae41202753.json).
+The initial benchmark stage timed out after 2,703 seconds; its
+[terminal proof](deadline/operations/gpu-budget-reconciliation-c0f4181a2d92af85.json)
+charges 2,760 seconds and retains seven completed tasks.
+
+**Current resource bound:** [advanced's completed continuation](deadline/operations/gpu-budget-reconciliation-b2705ce9203eb224.json)
+used 31,149 elapsed seconds and is conservatively charged 31,200. Verified closed
+charges total **102,900 seconds (28.583333 GPU-hours)**. With the full 16-hour
+random reservation and 0.75-hour recovery-continuation reservation, the
+[admission accounting](deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json)
+bounds commitment at **163,200 seconds = 45.333333 / 48 GPU-hours**, leaving
+**9,600 seconds** uncommitted. This bound is **not actual elapsed GPU usage**.
+Historical admitted requests total **72.25 hours**, and all-attempt requests
+**90.25 hours**. Primary CPU closeout `1208135` and publisher `1209745` retain
+their existing dependency chain. Final comparison, uncertainty and Hugging Face
+publication remain pending.
 
 ## Read the experiment
 

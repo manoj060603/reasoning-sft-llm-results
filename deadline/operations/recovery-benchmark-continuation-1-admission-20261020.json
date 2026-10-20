@@ -1,0 +1,228 @@
+{
+  "schema": "deadline-recovery-benchmark-continuation-admission-v1",
+  "admitted_at_utc": "2026-10-20T16:51:18.063286+00:00",
+  "role": "recovery_evaluation_continuation_1",
+  "job_id": "1216562",
+  "script": "deadline/operations/recovery-evaluate-initial.slurm",
+  "arguments": [
+    "deadline/recovery-runs/base-anchor-75-25-20261020",
+    "deadline/operations/recovery-native-qa-20261020-attempt1.json",
+    "deadline/operations/recovery-initial-eval-preflight-20261020.json"
+  ],
+  "dependency": "afterany:1214775",
+  "requested_gpu_seconds": 2700,
+  "required_deadline_reserve_hours": 9.75,
+  "same_frozen_model_protocol_output": true,
+  "retains_validated_complete_atomic_batches": true,
+  "no_new_method_coefficient_or_decoding": true,
+  "before": {
+    "policy": "verified-terminal-allocations-plus-full-open-reservations-v1",
+    "cap_gpu_seconds": 172800,
+    "cumulative_admitted_requested_gpu_seconds": 257400,
+    "cumulative_all_attempt_requested_gpu_seconds": 322200,
+    "conservative_committed_gpu_seconds": 160500,
+    "additional_requested_gpu_seconds": 0,
+    "projected_gpu_seconds": 160500,
+    "remaining_gpu_seconds": 12300,
+    "within_cap": true,
+    "roles": {
+      "original_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 3600,
+        "basis": "verified terminal allocation accounting"
+      },
+      "probes_and_scores": {
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 9540,
+        "basis": "verified terminal allocation accounting"
+      },
+      "random_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 6780,
+        "basis": "verified terminal allocation accounting"
+      },
+      "transfer_selection": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "advanced_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 5340,
+        "basis": "verified terminal allocation accounting"
+      },
+      "random_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21660,
+        "basis": "verified terminal allocation accounting"
+      },
+      "advanced_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21660,
+        "basis": "verified terminal allocation accounting"
+      },
+      "final_results": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "publication_preflight": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "huggingface_publication": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "random_evaluation_continuation": {
+        "requested_gpu_seconds": 57600,
+        "charged_gpu_seconds": 57600,
+        "basis": "full requested reservation"
+      },
+      "advanced_evaluation_continuation": {
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 31200,
+        "basis": "verified terminal allocation accounting"
+      },
+      "recovery_preparation": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "recovery_development": {
+        "requested_gpu_seconds": 2700,
+        "charged_gpu_seconds": 360,
+        "basis": "verified terminal allocation accounting"
+      },
+      "recovery_evaluation_initial": {
+        "requested_gpu_seconds": 2700,
+        "charged_gpu_seconds": 2760,
+        "basis": "verified terminal allocation accounting"
+      }
+    },
+    "historical_attempt_charges": [
+      {
+        "role": "original_evaluation",
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      },
+      {
+        "role": "probes_and_scores",
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      }
+    ]
+  },
+  "after": {
+    "policy": "verified-terminal-allocations-plus-full-open-reservations-v1",
+    "cap_gpu_seconds": 172800,
+    "cumulative_admitted_requested_gpu_seconds": 260100,
+    "cumulative_all_attempt_requested_gpu_seconds": 324900,
+    "conservative_committed_gpu_seconds": 163200,
+    "additional_requested_gpu_seconds": 0,
+    "projected_gpu_seconds": 163200,
+    "remaining_gpu_seconds": 9600,
+    "within_cap": true,
+    "roles": {
+      "original_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 3600,
+        "basis": "verified terminal allocation accounting"
+      },
+      "probes_and_scores": {
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 9540,
+        "basis": "verified terminal allocation accounting"
+      },
+      "random_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 6780,
+        "basis": "verified terminal allocation accounting"
+      },
+      "transfer_selection": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "advanced_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 5340,
+        "basis": "verified terminal allocation accounting"
+      },
+      "random_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21660,
+        "basis": "verified terminal allocation accounting"
+      },
+      "advanced_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21660,
+        "basis": "verified terminal allocation accounting"
+      },
+      "final_results": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "publication_preflight": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "huggingface_publication": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "random_evaluation_continuation": {
+        "requested_gpu_seconds": 57600,
+        "charged_gpu_seconds": 57600,
+        "basis": "full requested reservation"
+      },
+      "advanced_evaluation_continuation": {
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 31200,
+        "basis": "verified terminal allocation accounting"
+      },
+      "recovery_preparation": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "recovery_development": {
+        "requested_gpu_seconds": 2700,
+        "charged_gpu_seconds": 360,
+        "basis": "verified terminal allocation accounting"
+      },
+      "recovery_evaluation_initial": {
+        "requested_gpu_seconds": 2700,
+        "charged_gpu_seconds": 2760,
+        "basis": "verified terminal allocation accounting"
+      },
+      "recovery_evaluation_continuation_1": {
+        "requested_gpu_seconds": 2700,
+        "charged_gpu_seconds": 2700,
+        "basis": "full requested reservation"
+      }
+    },
+    "historical_attempt_charges": [
+      {
+        "role": "original_evaluation",
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      },
+      {
+        "role": "probes_and_scores",
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      }
+    ]
+  },
+  "model_runtime_weight_verification": "Compute entry wrapper will rehash fixed recovery weights and validate gate/QA; no model work on login."
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "deadline-primary-advanced-gpqa-partial-raw-audit-v1",
+  "complete": true,
+  "created_at_utc": "2026-10-20T16:52:00.519668+00:00",
+  "compute": {
+    "job_id": "1210309",
+    "step_id": "1",
+    "hostname": "owl-sr002",
+    "cuda_visible_devices": ""
+  },
+  "scope": "Raw GPQA original-versus-primary-advanced audit only; no regrading, generation or large-weight reads. All-nine advanced coverage composes prior raw audits with this GPQA check; no trained full macros or CIs computed.",
+  "auditor_sha256": "d8465b346b5a51dd0c30287202265b7e195014649d31fd19ac7588ede9408cb2",
+  "benchmark": "gpqa",
+  "expected_problems": 198,
+  "samples_per_problem": 8,
+  "pair_comparison": {
+    "matched": true,
+    "errors": [],
+    "all_nine_protocol_data_ordered_ID_hardware_identities_match": true
+  },
+  "runs": {
+    "original": {
+      "metrics": {
+        "problems": 198,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.2840909090909091,
+        "pass_at_8": 0.696969696969697,
+        "truncated_samples": 5
+      },
+      "evidence": "raw eight-sample predictions verified",
+      "errors": [],
+      "manifest": {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/manifest.json",
+        "sha256": "ae42667eeac86f7aebafbda1afd4f364bd95e422ff32ae9b7555202d48a9d68b",
+        "bytes": 149445
+      },
+      "raw_batches": [
+        {
+          "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/gpqa/batch_000000.json",
+          "sha256": "d1e74c3c267c939136c240ceb3dcfbe9cdb5d02ddcbfef4e91f24ccce8f3f4f6",
+          "bytes": 4421102
+        }
+      ]
+    },
+    "advanced": {
+      "metrics": {
+        "problems": 198,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.1414141414141414,
+        "pass_at_8": 0.5404040404040404,
+        "truncated_samples": 954
+      },
+      "evidence": "raw eight-sample predictions verified",
+      "errors": [],
+      "manifest": {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/manifest.json",
+        "sha256": "4fa4bd9d6913ffff95b6a2a65d74966aa30782b78ad87ca9b98748560141a36a",
+        "bytes": 149900
+      },
+      "raw_batches": [
+        {
+          "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/gpqa/batch_000000.json",
+          "sha256": "dad052e797002559535213e2880b9ba42c9ce9680ae78469090b7a23a15d9176",
+          "bytes": 113473333
+        }
+      ]
+    }
+  },
+  "advanced_all_nine_coverage": {
+    "complete": true,
+    "benchmarks": [
+      "aime",
+      "amc",
+      "math",
+      "cn_math_2024",
+      "kaoyan",
+      "minerva",
+      "olympiadbench",
+      "gpqa",
+      "aime25"
+    ],
+    "problems": 1974,
+    "samples": 15792,
+    "model_identity_matches_training_receipt": true,
+    "training_complete_sha256": "c0d96498b3c1855dd36d554c0a9712b3d5db9201118de855f615536e71c6ecfd",
+    "current_metrics_sha256": "64486065c515520115a582c13483b1704e2d47a14314b80998aabd6c807ec189",
+    "prior_native_proofs": [
+      {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/report/partial-20261020T1010Z/audit.json",
+        "sha256": "40d006c375dd30bf79d7cfc811ce3b78ee7c4101bbac3d135282bdfd20d8a62a"
+      },
+      {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json",
+        "sha256": "1569f8593bc018ae01084c41f7125f407de8992476cbfa7752cb6701fae8c65b"
+      }
+    ]
+  },
+  "full_three_role_macros_or_CIs_computed": false
+}

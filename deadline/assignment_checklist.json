@@ -1,6 +1,6 @@
 {
   "schema": "reasoning-sft-assignment-checklist-v1",
-  "status": "Execution snapshot at 2026-10-20 15:24 UTC: both final full-SFT models have 8/9 tasks raw-audited (7/8 supplied tasks); original has 9/9. Only GPQA remains for the primary trained models. Recovery has 7/9 tasks audited separately (15:36 UTC Minerva audit). Full comparison, uncertainty, Hugging Face publication and course submission are pending.",
+  "status": "Execution snapshot at 2026-10-20 16:53 UTC: original and primary advanced have 9/9 tasks raw-audited (all eight supplied tasks). Random has 8/9; its GPQA is running. Recovery has seven tasks audited and its unchanged-protocol continuation is running. Full matched comparison, uncertainty, Hugging Face publication and course submission remain pending.",
   "assignment_url": "https://github.com/reds-lab/Project-Reasoning-SFT-LLM",
   "deadline_eastern": "2026-10-20T23:59:00-04:00",
   "current_experiment": "Cross-fitted Transfer Gain with Coverage; fresh original-base initialization",
@@ -165,7 +165,7 @@
       "id": "A09",
       "mandatory": true,
       "requirement": "Evaluate both fine-tuned models and compare them with the original.",
-      "status": "partial_eight_tasks_per_trained_model_full_macros_pending",
+      "status": "original_advanced_complete_random_gpqa_pending_full_comparison_pending",
       "evidence_paths": [
         "deadline/results/random",
         "deadline/results/advanced",
@@ -174,7 +174,8 @@
         "deadline/report/partial-20261020T1010Z/results.md",
         "deadline/operations/evaluation-continuation-admission.json",
         "deadline/operations/evaluation-resume-20261020.json",
-        "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json"
+        "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json",
+        "deadline/report/primary-gpqa-partial-20261020T1650Z/audit.json"
       ],
       "completion_evidence_required": [
         "complete supplied-eight results for all three models",
@@ -183,7 +184,7 @@
         "partial results explicitly labeled",
         "broad source-random and advanced complete-target population differences disclosed"
       ],
-      "evidence_note": "Original has 9/9 tasks complete. Random and primary advanced each have 8/9 tasks raw-verified, including OlympiadBench (675 problems, eight samples each). Completed protocol, data and hardware identities agree. Each trained model has 7/8 supplied tasks complete; only GPQA is pending. Full macros remain pending."
+      "evidence_note": "Original and primary advanced have 9/9 tasks raw-verified, including all eight supplied benchmarks. Random has 8/9 (7/8 supplied), with GPQA running. Completed protocol, data and hardware identities agree. The advanced GPQA audit binds 198 questions/eight samples each and evaluated weights to the completed training receipt. Full matched macros remain pending."
     },
     {
       "id": "A10",
@@ -203,7 +204,7 @@
         "sampling-population limitation"
       ],
       "scope_note": "The whole advanced selection policy is compared with broad prepared-source random sampling. Do not attribute a difference solely to transfer gain. A guaranteed positive improvement or statistical significance is not an assignment completion requirement.",
-      "evidence_note": "Both primary trained models trail the original on all seven completed supplied tasks and exceed the original on supplementary AIME25. Advanced beats random in pass@1 on all seven completed supplied tasks. Across the eight completed tasks, advanced pass@8 wins five, ties MATH, and trails AMC and AIME25. Full macros, paired uncertainty and an overall winner remain pending. The primary scientific method is unchanged; post-hoc recovery results are reported separately."
+      "evidence_note": "Primary advanced trails original on all eight supplied tasks; random trails original on its seven completed supplied tasks. Both exceed original on supplementary AIME25. Advanced beats random pass@1 on their seven completed supplied tasks; across eight completed paired tasks, its pass@8 wins five, ties MATH, and trails AMC and AIME25. Random GPQA is pending, so no complete matched macro, paired uncertainty or overall winner is claimed. Primary method remains unchanged; post-hoc recovery is separately labeled."
     },
     {
       "id": "A11",
@@ -223,7 +224,9 @@
         "deadline/operations/evaluation-continuation-admission.json",
         "deadline/operations/gpu-budget-reconciliation-d155f13d26ffca69.json",
         "deadline/operations/gpu-budget-reconciliation-637c6b2ed64206b8.json",
-        "deadline/operations/evaluation-resume-20261020.json"
+        "deadline/operations/evaluation-resume-20261020.json",
+        "deadline/operations/gpu-budget-reconciliation-b2705ce9203eb224.json",
+        "deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json"
       ],
       "completion_evidence_required": [
         "actual model/data revisions",
@@ -231,7 +234,7 @@
         "precision and loss normalization",
         "runtime, hardware, resource and truncation disclosures"
       ],
-      "evidence_note": "Both final training settings and completion/runtime evidence are reconciled. Both initial evaluation parents timed out and each is charged 21,660 seconds, including elapsed overrun. Conservative terminal-plus-open-reservation bound is 169,380 seconds (47.05/48 hours), not actual elapsed usage. Final continuation accounting and complete comparison remain pending."
+      "evidence_note": "Training recipe and consumption are reconciled. Advanced continuation completed after 31,149 seconds, charged 31,200 seconds. After admitting the unchanged 45-minute recovery continuation, verified terminal charges plus full live reservations total 163,200 GPU-seconds (45.3333/48 hours); actual final consumption remains pending. Historical requests are preserved."
     },
     {
       "id": "A12",
@@ -426,8 +429,8 @@
   "last_reconciled_utc": "2026-10-20T10:10:00+00:00",
   "requested_repository_owner": "manoj060603",
   "team_submission_action": "Team-owned action; no course-system submission is performed by this experiment automation.",
-  "last_verified_cluster_snapshot_utc": "2026-10-20T15:50:50.852271+00:00",
-  "current_access_note": "Both primary GPQA evaluations remain running with 8/9 tasks verified each. Recovery initial allocation ended at its time limit with seven tasks saved; OlympiadBench and GPQA recovery results await an identical-protocol continuation after fresh capacity is verified. Closeout and publication dependencies are unchanged.",
+  "last_verified_cluster_snapshot_utc": "2026-10-20T16:53:00+00:00",
+  "current_access_note": "Advanced evaluation completed all nine tasks and its GPQA raw audit passed. Random GPQA remains running. Recovery continuation 1216562 started at 12:51:19 Eastern with identical model/protocol/output, retaining seven saved tasks. CPU finalizer and publisher dependencies are unchanged.",
   "current_execution_evidence": {
     "partial_audit": "deadline/report/partial-20261020T1010Z/audit.json",
     "training_complete": {
@@ -437,7 +440,7 @@
     "complete_tasks": {
       "original": 9,
       "random": 8,
-      "advanced": 8
+      "advanced": 9
     },
     "trained_model_full_macros": null,
     "uncertainty": null,
@@ -454,7 +457,10 @@
         "requested_gpu_hours": 12,
         "afterany_parent": "1208060",
         "deadline_reserve_hours": 15,
-        "observed_state": "RUNNING"
+        "observed_state": "COMPLETED",
+        "elapsed_seconds": 31149,
+        "charged_gpu_seconds": 31200,
+        "terminal_accounting": "deadline/operations/gpu-budget-reconciliation-b2705ce9203eb224.json"
       }
     },
     "closeout": {
@@ -466,18 +472,18 @@
       "dependency": "afterok:1208135"
     },
     "admission_receipt": "deadline/operations/evaluation-continuation-admission.json",
-    "conservative_gpu_hours_bound": 47.916666666666664,
+    "conservative_gpu_hours_bound": 45.333333333333336,
     "gpu_hours_cap": 48,
-    "historical_admitted_requested_gpu_hours": 71.5,
-    "all_attempt_requested_gpu_hours": 89.5,
+    "historical_admitted_requested_gpu_hours": 72.25,
+    "all_attempt_requested_gpu_hours": 90.25,
     "verified_unadmitted_requested_gpu_hours": 18,
     "final_terminal_resource_accounting": "pending",
     "complete_official_eight_tasks": {
       "original": 8,
       "random": 7,
-      "advanced": 7
+      "advanced": 8
     },
-    "gpu_resource_figure_interpretation": "47.9167/48 hours comprises verified terminal GPU charges plus full live primary reservations, not actual elapsed consumption. Recovery development is charged 360 seconds, and initial benchmark allocation 2,760 seconds after 2,703 elapsed. Only five minutes are uncommitted; an identical-protocol recovery continuation awaits fresh verified capacity.",
+    "gpu_resource_figure_interpretation": "45.3333/48 hours comprises verified terminal charges plus full live random-evaluation and 45-minute recovery-continuation reservations; it is not actual elapsed GPU consumption. Advanced continuation is charged 31,200 seconds after 31,149 elapsed. No original request is erased; the cap still covers primary and recovery work.",
     "partial_math_comparison": {
       "problems": 500,
       "samples_per_problem": 8,
@@ -507,9 +513,12 @@
       "responses_per_role": 240,
       "paired_uncertainty": "pending"
     },
-    "remaining_tasks_per_trained_model": [
-      "gpqa"
-    ],
+    "remaining_tasks_per_trained_model": {
+      "random": [
+        "gpqa"
+      ],
+      "advanced": []
+    },
     "partial_kaoyan": {
       "original_pass_at_1": 0.21105527638190955,
       "original_pass_at_8": 0.49748743718592964,
@@ -816,7 +825,9 @@
         "deadline/operations/recovery-evaluation-manifest-audit-20261020.json",
         "deadline/operations/recovery-benchmark-initial-admission-20261020.json",
         "deadline/operations/gpu-budget-reconciliation-e85de9ae41202753.json",
-        "deadline/operations/gpu-budget-reconciliation-c0f4181a2d92af85.json"
+        "deadline/operations/gpu-budget-reconciliation-c0f4181a2d92af85.json",
+        "deadline/operations/gpu-budget-reconciliation-b2705ce9203eb224.json",
+        "deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json"
       ],
       "fixed_gate_accepted": true,
       "development_elapsed_seconds": 316,
@@ -828,7 +839,7 @@
       "initial_benchmark_requested_gpu_hours": 0.75,
       "initial_benchmark_limit_minutes": 45,
       "full_suite_complete": false,
-      "future_continuation_admitted": false,
+      "future_continuation_admitted": true,
       "complete_tasks": 7,
       "partial_benchmark_audit": "deadline/report/recovery-benchmark-partial-20261020T1502Z/audit.json",
       "partial_benchmark_audits": [
@@ -843,7 +854,13 @@
         "olympiadbench",
         "gpqa"
       ],
-      "initial_charged_gpu_seconds": 2760
+      "initial_charged_gpu_seconds": 2760,
+      "continuation_job_id": "1216562",
+      "continuation_state": "RUNNING",
+      "continuation_start_eastern": "2026-10-20T12:51:19-04:00",
+      "continuation_limit_minutes": 45,
+      "continuation_end_eastern": "2026-10-20T13:36:19-04:00",
+      "continuation_admission_receipt": "deadline/operations/recovery-benchmark-continuation-1-admission-20261020.json"
     },
     "partial_olympiadbench": {
       "original": {
@@ -869,11 +886,28 @@
       }
     },
     "partial_olympiadbench_audit": "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json",
-    "conservative_committed_gpu_seconds": 172500,
-    "uncommitted_gpu_seconds": 300
+    "conservative_committed_gpu_seconds": 163200,
+    "uncommitted_gpu_seconds": 9600,
+    "partial_gpqa": {
+      "original": {
+        "problems": 198,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.2840909090909091,
+        "pass_at_8": 0.696969696969697,
+        "truncated_samples": 5
+      },
+      "advanced": {
+        "problems": 198,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.1414141414141414,
+        "pass_at_8": 0.5404040404040404,
+        "truncated_samples": 954
+      }
+    },
+    "partial_gpqa_audit": "deadline/report/primary-gpqa-partial-20261020T1650Z/audit.json"
   },
-  "last_verified_result_snapshot_utc": "2026-10-20T15:24:09.783015+00:00",
-  "operational_update_utc": "2026-10-20T15:50:50.852271+00:00",
+  "last_verified_result_snapshot_utc": "2026-10-20T16:52:00.519668+00:00",
+  "operational_update_utc": "2026-10-20T16:53:00+00:00",
   "reviewed_implementation_commit_scope": "b092f29 is a historical primary implementation review; later operational and recovery changes have separately recorded native receipts.",
   "report_closeout_obligations": [
     "FinalCPUjob creates audit/uncertainty/package metadata, not the finished narrative; reconcile FINAL_REPORT.md,README and this checklist manually with complete results and verified links.",
