@@ -1,0 +1,81 @@
+{
+  "schema": "deadline-source-heldout-recovery-screen-v1",
+  "complete": true,
+  "exploratory": true,
+  "post_primary_observation": true,
+  "primary_runs_immutable": true,
+  "metric": "source teacher boxed-answer agreement; not truth or benchmark accuracy",
+  "protocol": {
+    "n": 1,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "seed": 20261020,
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "dtype": "bfloat16",
+    "max_num_seqs": 64,
+    "gpu_memory_utilization": 0.85,
+    "tensor_parallel_size": 1,
+    "generation_config": "vllm",
+    "top_k": -1,
+    "min_p": 0.0,
+    "repetition_penalty": 1.0,
+    "system": "Please reason step by step, and put your final answer within \\boxed{}.",
+    "prompt_token_limit": 2048,
+    "rows": 64,
+    "prompt_input": "explicit native token IDs; no additional special tokens",
+    "selection": "sha256(seed:source-heldout-screen:id), ascending",
+    "teacher_metric": "source teacher boxed-answer agreement; not truth",
+    "gate": {
+      "agreement_ge_advanced": true,
+      "agreement_ge_base_minus": 2,
+      "length_finishes_max_fraction_of_advanced": 0.5
+    }
+  },
+  "metrics": {
+    "base": {
+      "rows": 64,
+      "teacher_agreement": 18,
+      "length_finishes": 1,
+      "boxed_completions": 63,
+      "output_tokens": 52307,
+      "mean_repetition_8gram": 0.050675989374749555
+    },
+    "advanced": {
+      "rows": 64,
+      "teacher_agreement": 10,
+      "length_finishes": 49,
+      "boxed_completions": 20,
+      "output_tokens": 237076,
+      "mean_repetition_8gram": 0.18155585082900946
+    },
+    "recovery": {
+      "rows": 64,
+      "teacher_agreement": 19,
+      "length_finishes": 1,
+      "boxed_completions": 63,
+      "output_tokens": 52852,
+      "mean_repetition_8gram": 0.06369274684485497
+    }
+  },
+  "gate": {
+    "accepted": true,
+    "checks": {
+      "agreement_ge_advanced": true,
+      "agreement_ge_base_minus_two": true,
+      "length_finishes_at_most_half_advanced": true
+    }
+  },
+  "prepared_sha256": "d68f9ebc4f5bc0981fe90af3f96c8c6adcecf936d34398e6ee5929a96762bcc1",
+  "role_receipt_sha256": {
+    "base": "84f6b2b5d2ec15b498efd9c9f834d9faae4ce10074b7b206f7117b433eab4f40",
+    "advanced": "c24284d07ed770d47ccbc0b33694aaedb442df09b150fc92700a35b25ebe78a1",
+    "recovery": "d8b8c59ddeb9b4d5a3f12bb8555f8e9c90bfbaad47caba2e8e3c0d7acd8bc92b"
+  },
+  "limitations": [
+    "64 source-only prompts, one sample each, one fixed seed",
+    "Teacher solutions may be incorrect; agreement is not ground truth",
+    "Exploratory recovery was proposed after primary benchmark observations",
+    "No primary benchmark gains or complete assignment comparisons are inferred"
+  ]
+}

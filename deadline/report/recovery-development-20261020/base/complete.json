@@ -1,0 +1,15 @@
+{
+  "schema": "deadline-source-heldout-recovery-screen-v1",
+  "complete": true,
+  "role": "base",
+  "metrics": {
+    "rows": 64,
+    "teacher_agreement": 18,
+    "length_finishes": 1,
+    "boxed_completions": 63,
+    "output_tokens": 52307,
+    "mean_repetition_8gram": 0.050675989374749555
+  },
+  "manifest_sha256": "95ac98b7a4d813b62ddfc6a3153db9d3f177cec43a8c2bb8a63c52dca62d6898",
+  "observations_sha256": "1781ecaa4f0760ef2b084215d56dfc84231629efe5ab022b2bd9eb92b51f8dab"
+}

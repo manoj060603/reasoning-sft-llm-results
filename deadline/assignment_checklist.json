@@ -425,7 +425,7 @@
   "last_reconciled_utc": "2026-10-20T10:10:00+00:00",
   "requested_repository_owner": "manoj060603",
   "team_submission_action": "Team-owned action; no course-system submission is performed by this experiment automation.",
-  "last_verified_cluster_snapshot_utc": "2026-10-20T14:18:23+00:00",
+  "last_verified_cluster_snapshot_utc": "2026-10-20T14:58:58+00:00",
   "current_access_note": "Both evaluation continuations are running after their initial six-hour evaluation parents timed out. Six completed benchmarks per role were retained; unsaved Minerva was regenerated in full and is now raw-audited complete. Closeout and publication remain dependency-gated and pending.",
   "current_execution_evidence": {
     "partial_audit": "deadline/report/partial-20261020T1010Z/audit.json",
@@ -465,10 +465,10 @@
       "dependency": "afterok:1208135"
     },
     "admission_receipt": "deadline/operations/evaluation-continuation-admission.json",
-    "conservative_gpu_hours_bound": 47.8,
+    "conservative_gpu_hours_bound": 47.9,
     "gpu_hours_cap": 48,
-    "historical_admitted_requested_gpu_hours": 70.75,
-    "all_attempt_requested_gpu_hours": 88.75,
+    "historical_admitted_requested_gpu_hours": 71.5,
+    "all_attempt_requested_gpu_hours": 89.5,
     "verified_unadmitted_requested_gpu_hours": 18,
     "final_terminal_resource_accounting": "pending",
     "complete_official_eight_tasks": {
@@ -476,7 +476,7 @@
       "random": 6,
       "advanced": 6
     },
-    "gpu_resource_figure_interpretation": "47.80/48 is verified terminal GPU charges plus full live primary and recovery reservations, not actual elapsed consumption. It includes the 45-minute recovery screen reservation. No full recovery benchmark allocation has been admitted; historical requests remain separate.",
+    "gpu_resource_figure_interpretation": "47.90/48 is verified terminal GPU charges plus full live primary and initial recovery benchmark reservations, not actual elapsed consumption. Development316 seconds is charged360 seconds after exact terminal accounting. A later recovery continuation requires fresh verified capacity.",
     "partial_math_comparison": {
       "problems": 500,
       "samples_per_problem": 8,
@@ -523,7 +523,7 @@
       "responses_per_role": 1592,
       "paired_uncertainty": "pending"
     },
-    "conservative_gpu_seconds_bound": 172080,
+    "conservative_gpu_seconds_bound": 172440,
     "evaluation_resume": {
       "receipt": "deadline/operations/evaluation-resume-20261020.json",
       "scientific_protocol_unchanged": true,
@@ -578,22 +578,82 @@
       },
       "source_only_screen_rows": 64,
       "gpu_development_job_id": "1214124",
-      "gpu_development_state": "PENDING",
+      "gpu_development_state": "COMPLETED",
       "requested_gpu_hours": 0.75,
-      "screen_metrics": null,
-      "benchmark_results": null,
-      "full_candidate_benchmark_admitted": false,
+      "screen_metrics": {
+        "base": {
+          "teacher_agreement": 18,
+          "length_finishes": 1
+        },
+        "advanced": {
+          "teacher_agreement": 10,
+          "length_finishes": 49
+        },
+        "recovery": {
+          "teacher_agreement": 19,
+          "length_finishes": 1
+        }
+      },
+      "benchmark_results": {
+        "amc": {
+          "original": {
+            "problems": 40,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.425,
+            "pass_at_8": 0.7,
+            "truncated_samples": 3
+          },
+          "random": {
+            "problems": 40,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.225,
+            "pass_at_8": 0.475,
+            "truncated_samples": 190
+          },
+          "advanced": {
+            "problems": 40,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.25,
+            "pass_at_8": 0.45,
+            "truncated_samples": 169
+          },
+          "recovery": {
+            "problems": 40,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.390625,
+            "pass_at_8": 0.75,
+            "truncated_samples": 4
+          }
+        }
+      },
       "metric_scope": "One sample per source question, at most 4K output tokens, measuring source teacher-answer agreement and stopping; not primary 32K/eight-sample benchmark accuracy.",
       "evidence_paths": [
         "deadline/operations/recovery-native-qa-20261020-attempt1.json",
         "deadline/operations/recovery-merge-20261020-receipt.json",
         "deadline/operations/recovery-screen-preparation-20261020-receipt.json",
-        "deadline/operations/recovery-screen-ids-20261020.json"
-      ]
+        "deadline/operations/recovery-screen-ids-20261020.json",
+        "deadline/report/recovery-development-20261020/summary.json",
+        "deadline/operations/recovery-evaluation-manifest-audit-20261020.json",
+        "deadline/operations/recovery-benchmark-initial-admission-20261020.json",
+        "deadline/operations/gpu-budget-reconciliation-e85de9ae41202753.json"
+      ],
+      "fixed_gate_accepted": true,
+      "development_elapsed_seconds": 316,
+      "development_charged_gpu_seconds": 360,
+      "development_summary": "deadline/report/recovery-development-20261020/summary.json",
+      "benchmark_evaluation_initial_admitted": true,
+      "initial_benchmark_job_id": "1214775",
+      "initial_benchmark_state": "RUNNING",
+      "initial_benchmark_requested_gpu_hours": 0.75,
+      "initial_benchmark_limit_minutes": 45,
+      "full_suite_complete": false,
+      "future_continuation_admitted": false,
+      "complete_tasks": 1,
+      "partial_benchmark_audit": "deadline/report/recovery-benchmark-partial-20261020T1502Z/audit.json"
     }
   },
   "last_verified_result_snapshot_utc": "2026-10-20T10:10:00+00:00",
-  "operational_update_utc": "2026-10-20T14:18:23+00:00",
+  "operational_update_utc": "2026-10-20T14:58:58+00:00",
   "reviewed_implementation_commit_scope": "b092f29 is a historical primary implementation review; later operational and recovery changes have separately recorded native receipts.",
   "report_closeout_obligations": [
     "FinalCPUjob creates audit/uncertainty/package metadata, not the finished narrative; reconcile FINAL_REPORT.md,README and this checklist manually with complete results and verified links.",

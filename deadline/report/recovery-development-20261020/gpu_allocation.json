@@ -1,0 +1,13 @@
+{
+  "compute": {
+    "slurm_job_id": "1214124",
+    "slurm_step_id": null,
+    "slurmd_nodename": "owl-sr001",
+    "cuda_visible_devices": "0"
+  },
+  "job_id": "1214124",
+  "time_limit_seconds": 2700,
+  "scheduler_record_sha256": "4254cb5972fee0d504e44c9a9e14bb8f2b008fa782cd9b74c8707ba9f8f7f760",
+  "reserve_seconds": 10800,
+  "deadline_utc": "2026-10-21T03:59:00+00:00"
+}

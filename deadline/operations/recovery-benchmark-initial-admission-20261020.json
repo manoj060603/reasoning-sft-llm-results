@@ -1,0 +1,37 @@
+{
+  "schema": "deadline-recovery-benchmark-stage-admission-v1",
+  "observed_at_utc": "2026-10-20T14:57:39.412906+00:00",
+  "role": "recovery_evaluation_initial",
+  "job_id": "1214775",
+  "original_admission_entry": {
+    "status": "submitted",
+    "command": [
+      "sbatch",
+      "--clusters=owl",
+      "--parsable",
+      "deadline/operations/recovery-evaluate-initial.slurm",
+      "deadline/recovery-runs/base-anchor-75-25-20261020",
+      "deadline/operations/recovery-native-qa-20261020-attempt1.json",
+      "deadline/operations/recovery-initial-eval-preflight-20261020.json"
+    ],
+    "requested_gpu_hours": 0.75,
+    "requested_at_utc": "2026-10-20T14:54:13.875953+00:00",
+    "job_id": "1214775",
+    "scheduler_response": "1214775;owl"
+  },
+  "scheduler_record": "JobId=1214775 JobName=sft-recovery-eval-initial UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1315 Nice=0 Account=tml_2026 QOS=owl_b200_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:03:13 TimeLimit=00:45:00 TimeMin=N/A SubmitTime=2026-10-20T10:54:13 EligibleTime=2026-10-20T10:54:13 AccrueTime=2026-10-20T10:54:13 StartTime=2026-10-20T10:54:26 EndTime=2026-10-20T11:39:26 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T10:54:26 Scheduler=Backfill Partition=b200_normal_q AllocNode:Sid=owl1:3406612 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl-sr001 BatchHost=owl-sr001 NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=64G,node=1,billing=320,gres/gpu=1 AllocTRES=cpu=8,mem=64G,node=1,billing=320,gres/gpu=1,gres/gpu:b200=1 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/operations/recovery-evaluate-initial.slurm SubmitLine=sbatch --clusters=owl --parsable deadline/operations/recovery-evaluate-initial.slurm deadline/recovery-runs/base-anchor-75-25-20261020 deadline/operations/recovery-native-qa-20261020-attempt1.json deadline/operations/recovery-initial-eval-preflight-20261020.json WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/logs/recovery-eval-initial-1214775.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/logs/recovery-eval-initial-1214775.out TresPerNode=gres/gpu:1 TresPerTask=cpu=8\n",
+  "scheduler_record_sha256": "63b89778d4d492e5ea6201b2bb9b2ee4156031ea6b3327ad45e44b00567b4155",
+  "time_limit_seconds": 2700,
+  "requested_gpu_hours": 0.75,
+  "conservative_gpu_seconds_bound": 172440,
+  "cap_gpu_seconds": 172800,
+  "development_elapsed_seconds": 316,
+  "development_charged_gpu_seconds": 360,
+  "development_summary_sha256": "01a6136acda4a40e9e239a7f05146056f605e4a482bcdbc7a74c93ce4c6d798f",
+  "native_initial_preflight_sha256": "db045065ca7b7ddcf91f2aa90c619673e8e405826af604f2c6ff14f80c3c9c39",
+  "benchmark_output": "deadline/recovery-runs/base-anchor-75-25-20261020/benchmarks",
+  "partial_stage_only": true,
+  "future_continuation_admitted": false,
+  "scientific_scope": "Fixed recovery model and unchanged primary all-nine 8-sample32K protocol. Complete cached benchmark batches may be retained if a later identical-protocol continuation is admitted after verified resource reclamation. No incomplete raw responses enter scores.",
+  "gpu_accounting_proof": "deadline/operations/gpu-budget-reconciliation-e85de9ae41202753.json"
+}

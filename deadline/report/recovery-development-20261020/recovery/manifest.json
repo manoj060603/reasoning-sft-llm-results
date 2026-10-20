@@ -1,0 +1,74 @@
+{
+  "schema": "deadline-source-heldout-recovery-screen-v1",
+  "phase": "run",
+  "role": "recovery",
+  "protocol": {
+    "n": 1,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "seed": 20261020,
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "dtype": "bfloat16",
+    "max_num_seqs": 64,
+    "gpu_memory_utilization": 0.85,
+    "tensor_parallel_size": 1,
+    "generation_config": "vllm",
+    "top_k": -1,
+    "min_p": 0.0,
+    "repetition_penalty": 1.0,
+    "system": "Please reason step by step, and put your final answer within \\boxed{}.",
+    "prompt_token_limit": 2048,
+    "rows": 64,
+    "prompt_input": "explicit native token IDs; no additional special tokens",
+    "selection": "sha256(seed:source-heldout-screen:id), ascending",
+    "teacher_metric": "source teacher boxed-answer agreement; not truth",
+    "gate": {
+      "agreement_ge_advanced": true,
+      "agreement_ge_base_minus": 2,
+      "length_finishes_max_fraction_of_advanced": 0.5
+    }
+  },
+  "prepared_sha256": "d68f9ebc4f5bc0981fe90af3f96c8c6adcecf936d34398e6ee5929a96762bcc1",
+  "model": {
+    "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/model",
+    "files": {
+      "LICENSE": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9",
+      "NOTICE": "13ba3e070a8a64020760ed8cf39b30fe20ec298cf7a0ee2dbba2a26d47082449",
+      "config.json": "79624335d945b5ca71c0f99fe10d64de5b20231aeed57768cb08e9b094f21aae",
+      "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "model-00001-of-00006.safetensors": "542ac258274d6f69398371ef0fc04b4ca218080066d75ade06c405a71321e8c1",
+      "model-00002-of-00006.safetensors": "b804d0df475b07658266e79facbc4f4c2b5ccfcf26217c010e04bb2c0c148998",
+      "model-00003-of-00006.safetensors": "d05b792d5d4e9ebc0f939bc680ff17205ce01fa33629132549eb95782fbef3a1",
+      "model-00004-of-00006.safetensors": "462596d965ebf2f8ac2c6a5aceb8e5c0093d9455f0547ff0c2d963b7faff8afc",
+      "model-00005-of-00006.safetensors": "23ddb724e03670764bfa271bd801fc6928f8719442a4be47af2332459883bbd1",
+      "model-00006-of-00006.safetensors": "aa76a669be6dc254478b10f94895790c60c50344e083c19dece67ae84d373462",
+      "model.safetensors.index.json": "5a2c6bfe556466ee7cea4d8ee2a8cb754b09727ff27287b325da09ff5c1a258e",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "allocation": {
+    "compute": {
+      "slurm_job_id": "1214124",
+      "slurm_step_id": null,
+      "slurmd_nodename": "owl-sr001",
+      "cuda_visible_devices": "0"
+    },
+    "job_id": "1214124",
+    "time_limit_seconds": 2700,
+    "scheduler_record_sha256": "7ba8f08cab692b8a1651bab9fcbd7a083414a1fa3a8a245aff0506c2f660c1c9",
+    "reserve_seconds": 10800,
+    "deadline_utc": "2026-10-21T03:59:00+00:00"
+  },
+  "versions": {
+    "vllm": "0.12.0",
+    "transformers": "4.57.3",
+    "torch": "2.9.0",
+    "sympy": "1.14.0",
+    "antlr4-python3-runtime": "4.7.2",
+    "latex2sympy2": "1.9.1"
+  }
+}

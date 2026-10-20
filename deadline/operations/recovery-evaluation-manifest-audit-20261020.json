@@ -1,0 +1,133 @@
+{
+  "schema": "deadline-recovery-evaluation-manifest-audit-v1",
+  "complete": true,
+  "created_at_utc": "2026-10-20T14:58:58.256044+00:00",
+  "scope": "Read-only manifest identity comparison; no model weight rehash, generation, scoring or benchmark completion inferred. Recovery remains post-hoc and separate from primary.",
+  "compute": {
+    "job_id": "1210310",
+    "step_id": "5",
+    "hostname": "owl-sr001",
+    "cuda_visible_devices": ""
+  },
+  "manifest_files": {
+    "original": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/manifest.json",
+      "sha256": "ae42667eeac86f7aebafbda1afd4f364bd95e422ff32ae9b7555202d48a9d68b",
+      "bytes": 149445
+    },
+    "advanced": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/manifest.json",
+      "sha256": "4fa4bd9d6913ffff95b6a2a65d74966aa30782b78ad87ca9b98748560141a36a",
+      "bytes": 149900
+    },
+    "recovery": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/benchmarks/manifest.json",
+      "sha256": "17c11ab91b445b65ea16ad7f8115001b1d636ec9788daa914bc7823cf4c019dc",
+      "bytes": 149810
+    }
+  },
+  "merge_receipt_sha256": "6f68fd45dabeddafc5896ac0e46659725dbfba9d7f68ca1a4248e2796f7ca1b8",
+  "protocol": {
+    "seed": 0,
+    "n": 8,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "max_tokens": 32768,
+    "max_model_len": 32768,
+    "system": "Please reason step by step, and put your final answer within \\boxed{}.",
+    "generation_config": "vllm",
+    "top_k": -1,
+    "min_p": 0.0,
+    "repetition_penalty": 1.0,
+    "batch_size": 1024,
+    "tensor_parallel_size": 1,
+    "max_num_seqs": 128,
+    "gpu_memory_utilization": 0.85,
+    "versions": {
+      "vllm": "0.12.0",
+      "transformers": "4.57.3",
+      "torch": "2.9.0",
+      "sympy": "1.14.0",
+      "antlr4-python3-runtime": "4.7.2",
+      "latex2sympy2": "1.9.1"
+    },
+    "grader_sha256": {
+      "grader.py": "43d858572b1dadda6fe3ec327db123bb5362fccd271ae58329c57f0c10521383",
+      "parser.py": "8d04ceb93e9ef50d61157fd1c8826a5cbf8d7f64cda85459f1166e19d8784208",
+      "math_normalization.py": "9c0484a01b76bd4582bfe61c8ee55df375dbc09782f1b587fc21b21dd80e23a0"
+    },
+    "evaluator_sha256": "55181149a1010cd60a5979e859e2fcd6ee5d1a3abb8d4fbf33cee4b18586c316"
+  },
+  "hardware": [
+    {
+      "gpu": "NVIDIA B200",
+      "capability": [
+        10,
+        0
+      ],
+      "total_memory": 191495471104
+    }
+  ],
+  "benchmark_counts": {
+    "amc": 40,
+    "aime25": 30,
+    "aime": 30,
+    "math": 500,
+    "cn_math_2024": 30,
+    "kaoyan": 199,
+    "minerva": 272,
+    "olympiadbench": 675,
+    "gpqa": 198
+  },
+  "benchmark_data_sha256": {
+    "amc": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4",
+    "aime25": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d",
+    "aime": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc",
+    "math": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94",
+    "cn_math_2024": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533",
+    "kaoyan": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7",
+    "minerva": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d",
+    "olympiadbench": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f",
+    "gpqa": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f"
+  },
+  "reference_comparisons": [
+    {
+      "reference": "original",
+      "all_protocol_fields_match": true,
+      "hardware_match": true,
+      "all_nine_data_count_and_ordered_ID_maps_match": true
+    },
+    {
+      "reference": "advanced",
+      "all_protocol_fields_match": true,
+      "hardware_match": true,
+      "all_nine_data_count_and_ordered_ID_maps_match": true
+    }
+  ],
+  "model_identity_checks": {
+    "original": {
+      "model_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "identity_entries": 9,
+      "all_inventory_shared_sha256_match": true,
+      "all_weights_index_config_tokenizer_bound": true,
+      "extra_nonloaded_training_metadata": []
+    },
+    "advanced": {
+      "model_path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/runs/advanced/model",
+      "identity_entries": 14,
+      "all_inventory_shared_sha256_match": true,
+      "all_weights_index_config_tokenizer_bound": true,
+      "extra_nonloaded_training_metadata": [
+        "training_args.bin"
+      ]
+    },
+    "recovery": {
+      "model_path": "deadline/recovery-runs/base-anchor-75-25-20261020/model",
+      "identity_entries": 13,
+      "all_inventory_shared_sha256_match": true,
+      "all_weights_index_config_tokenizer_bound": true,
+      "extra_nonloaded_training_metadata": []
+    }
+  },
+  "validation_errors": []
+}

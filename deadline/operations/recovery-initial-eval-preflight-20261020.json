@@ -1,0 +1,37 @@
+{
+  "schema": "deadline-recovery-initial-eval-preflight-v1",
+  "success": true,
+  "created_at_utc": "2026-10-20T14:53:26.786275+00:00",
+  "allocation": {
+    "slurm_job_id": "1210310",
+    "slurm_step_id": "2",
+    "slurmd_nodename": "owl-sr001",
+    "cuda_visible_devices": ""
+  },
+  "hostname": "owl-sr001",
+  "gpu_seconds_reserved": 2700,
+  "deadline_reserve_hours": 9.75,
+  "shell_syntax_valid": true,
+  "fixed_development_gate_valid": true,
+  "original_native_qa_tests": 31,
+  "source_sha256": {
+    "deadline/operations/recovery-evaluate-initial.slurm": "d26767b920da79bfc6ea4f40397a107c90b0cdc29276d2f90011f8d8a66a17d1",
+    "deadline/operations/recovery-evaluate.slurm": "46456d300891e9c2fd234eabad2757c22895f71ba204f7dd0523e39b7d9a2b9e",
+    "deadline/operations/recovery_preflight.py": "d9446b5d2621cca67e1c4d4897217477157d25986bfb1edd9645de5cdbda86ac",
+    "deadline/recovery/screen.py": "f531d07db77738a08d4104231449e854e74956c4e8b51daf479eedf682ea74e8",
+    "deadline/recovery/common.py": "4964ac176ca47dc609d3e0e8395f0892015925fd4c7d17d638a3ec7cb4608630",
+    "deadline/recovery/merge.py": "b8439c2b53b7ae5b5626945e42edb321f80960afb4b844b963c27be4836f9443",
+    "reasoning/evaluate.py": "55181149a1010cd60a5979e859e2fcd6ee5d1a3abb8d4fbf33cee4b18586c316",
+    "deadline/pipeline.py": "a5ac9133ca764079b28e6e5e9edd2181b18af8baf43ee9de20ebd0af5842ca00",
+    "deadline/gpu_budget.py": "12bfc726cc3abf434eae3afa65e5064f5c26920dcd2b02d5e50c3040d8ed845e"
+  },
+  "input_receipt_sha256": {
+    "deadline/operations/recovery-native-qa-20261020-attempt1.json": "66d0b4d55d1069b3aa2eef117fb4018c155f6896d246c1d55f4442c8e132d4bc",
+    "deadline/recovery-runs/base-anchor-75-25-20261020/complete.json": "6f68fd45dabeddafc5896ac0e46659725dbfba9d7f68ca1a4248e2796f7ca1b8",
+    "deadline/recovery-runs/base-anchor-75-25-20261020/development/summary.json": "01a6136acda4a40e9e239a7f05146056f605e4a482bcdbc7a74c93ce4c6d798f",
+    "deadline/recovery-runs/base-anchor-75-25-20261020/development/prepared.json": "d68f9ebc4f5bc0981fe90af3f96c8c6adcecf936d34398e6ee5929a96762bcc1",
+    "deadline/recovery/plan.json": "f7210518343d43eaf7f8342b66b33ae4e06df8cdee46af0e72991c9adb7912e5",
+    "deadline/experiment_plan.json": "080488bb494c52ca71d385b2f041821e8c71c2c994aa6439c1c6f24d8227635d"
+  },
+  "scope": "New 45-minute entry wrapper only. Uses the existing QA-bound benchmark wrapper via bash with unchanged all-nine model, seeds, 32K/eight-sample generation and output path. A later continuation requires separate verified admission."
+}

@@ -61,14 +61,25 @@ evaluation protocol are unchanged in response to these scores.
 
 A separate [post-hoc recovery experiment](deadline/recovery/plan.json) tests a
 fixed blend of 75% original weights and 25% advanced weights. Its CPU build
-verified 434 finite FP32 tensors, and 31 native checks passed. A 64-question
-source-heldout development screen is sealed and queued as job `1214124` at the
-14:18 UTC operational snapshot. It measures one-sample teacher-answer agreement
-under a 4K output limit; no recovery generation result or benchmark improvement
-is available. The [report](deadline/FINAL_REPORT.md) distinguishes this candidate
-from the primary SFT experiment and its publication artifacts. Full recovery
-benchmark evaluation requires a passed fixed development gate, verified GPU
-budget capacity and deadline reserves.
+verified 434 finite FP32 tensors, and 31 native checks passed. The fixed
+[64-question source-heldout screen](deadline/report/recovery-development-20261020/summary.json)
+passed: teacher-answer matches were original **18/64**, advanced **10/64** and
+recovery **19/64**; length-limit finishes were **1/64**, **49/64** and **1/64**.
+This one-sample, 4K development result supports restored stopping versus advanced;
+it does not establish benchmark improvement or superiority to the original.
+
+Initial recovery benchmark job `1214775` started at **14:54:26 UTC**, using the
+same all-nine, eight-sample, 32K protocol in a bounded 45-minute allocation.
+The [native manifest audit](deadline/operations/recovery-evaluation-manifest-audit-20261020.json)
+confirms matching protocol, data, IDs, grader, runtime and B200 hardware. Its
+full-suite results remain pending; any identical-protocol continuation needs
+fresh resource reclamation and deadline reserves. Primary SFT checkpoints,
+results and publication identities remain separate. The first recovery task is
+[raw-audited AMC](deadline/report/recovery-benchmark-partial-20261020T1502Z/audit.json):
+**39.0625% pass@1 / 75.00% pass@8**, versus advanced **25.00% / 45.00%** and
+original **42.50% / 70.00%**. Recovery improves over advanced in both metrics on
+AMC, while original retains higher pass@1. Full-suite results and significance
+remain unestablished.
 
 The [runtime continuation record](deadline/operations/evaluation-resume-20261020.json)
 documents retaining six completed benchmarks and fully regenerating the unsaved
@@ -88,10 +99,12 @@ Historical admitted requests remain 70 hours; the 88-hour all-attempt history
 includes 18 hours verified never admitted. Final resource use, continuation
 success, comparisons and publication remain pending.
 
-The recovery screen's later 0.75-hour reservation raises the current conservative
-bound to **47.80 / 48 GPU-hours (172,080 seconds)**. Historical admitted requests
-are now 70.75 hours; all-attempt requests are 88.75 hours. These are separate from
-actual elapsed use. No full recovery benchmark allocation has been admitted.
+The recovery screen completed in 316 seconds and is charged 360 GPU-seconds
+under the [terminal accounting proof](deadline/operations/gpu-budget-reconciliation-e85de9ae41202753.json).
+After reclaiming its unused reservation and admitting the 45-minute first
+benchmark stage, the current bound is **47.90 / 48 GPU-hours (172,440 seconds)**.
+Historical admitted requests are 71.50 hours; all-attempt requests are 89.50 hours.
+These are separate from actual elapsed use. A continuation has not been admitted.
 
 ## Read the experiment
 
