@@ -18,7 +18,10 @@ responses each. Only one candidate passing both fixed source stages may receive
 a full unchanged nine-task benchmark evaluation. This is exploratory work after
 prior benchmark observations; it does not replace the delivered experiment.
 
-CPU preparation `1218896` is running. Its [32 native checks](deadline/operations/anchor-v2-native-qa-20261020-attempt1.json)
+CPU preparation retry `1218982` is running after `1218896` stopped before
+generation because ARC lacked a copy of the sealed prior exclusion IDs. The
+[operational retry receipt](deadline/operations/anchor-v2-prepare-retry-20261020.json)
+preserves that failure and exact-byte repair; no GPU time was used. The [32 native checks](deadline/operations/anchor-v2-native-qa-20261020-attempt1.json)
 passed with zero failures, errors or skips; no new candidate benchmark result
 exists yet. The B200 source-stage reservation is 1.5 GPU-hours and the conditional
 benchmark reservation is 3 hours, keeping the conservative total bound at

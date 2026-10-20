@@ -1,0 +1,16 @@
+{
+  "schema": "deadline-anchor-v2-preparation-operational-retry-v1",
+  "created_at_utc": "2026-10-20T18:58:02.087864+00:00",
+  "original_job_id": "1218896",
+  "original_sacct": "1218896|1218896|FAILED|1:0|152|billing=24,cpu=8,mem=96G,node=1",
+  "original_output_preserved": "deadline/anchor-search-runs/validation-v2-20261020",
+  "failure": "Missing ARC copy of already sealed old64 source exclusion IDs; no new generation or GPU allocation occurred.",
+  "repair": "Copied exact unchanged old64 ID bytes, SHA verified, to expected operations path.",
+  "exclusion_ids_sha256": "af899b05afe502400cebb6c2197a7fd454f66114198733838ffd7913f9975d8e",
+  "scientific_plan_and_code_unchanged": true,
+  "native_QA_reused": "deadline/operations/anchor-v2-native-qa-20261020-attempt1.json",
+  "tests_passed": 32,
+  "retry_wrapper_sha256": "f788c72b1d48c1d27bf805f8009ec450c64d36d8025a994f56d9f70fbfb69c21",
+  "new_output": "deadline/anchor-search-runs/validation-v2-20261020-attempt2",
+  "live_scheduler": "1218896 sft-anchor-v2-prepare FAILED\n"
+}
