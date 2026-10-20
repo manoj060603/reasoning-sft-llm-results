@@ -1,0 +1,15 @@
+{
+  "compute": {
+    "slurm_job_id": "1219074",
+    "slurm_step_id": null,
+    "slurmd_nodename": "owl-sr001",
+    "cuda_visible_devices": "0"
+  },
+  "job_id": "1219074",
+  "time_limit_seconds": 5400,
+  "allocated_gpus": 1,
+  "scheduler_record_sha256": "c0910ccb8295560e04070fc479f24cce71d8c1d0ad6d3141e1371481e20b2cb6",
+  "started_at_utc": "2026-10-20T19:53:44.146701+00:00",
+  "start_reserve_hours": 6.5,
+  "deadline_utc": "2026-10-21T03:59:00+00:00"
+}

@@ -27,14 +27,15 @@ passed with zero failures, errors or skips. The [operational retry](deadline/ope
 retains the initial missing-metadata failure and unchanged exclusion-ID repair;
 neither CPU attempt used a GPU.
 
-**19:15 UTC scheduling snapshot:** B200 source job `1219074` is queued. Its
-current scheduler estimate is **23:34 UTC / 7:34 p.m. Eastern**, later than the
-frozen development start cutoff of **21:29 UTC / 5:29 p.m. Eastern**. Estimates
-can change, but the extra follow-up is now at risk from GPU availability. A
-[backfill adjustment](deadline/operations/anchor-v2-backfill-adjustment-20261020.json)
-lets the same queued job accept a 75–90-minute allocation; it changes no model,
-question, generation setting, decision gate or deadline reserve. Every source
-role must still complete. No new candidate benchmark result exists yet.
+**Source validation started at 19:53:23 UTC / 3:53 p.m. Eastern** on a B200,
+inside the frozen deadline reserve. Job `1219074` obtained an earlier backfill
+allocation despite the previous 23:34 UTC queue estimate. Its [native allocation
+seal](deadline/report/anchor-v2-preparation-20261020/gpu_allocation.json) records
+the full 90-minute limit and one GPU; the [earlier backfill adjustment](deadline/operations/anchor-v2-backfill-adjustment-20261020.json)
+changed no scientific setting. The original, incumbent and both new blends are
+being tested on the fresh search split. If one passes the unchanged search and
+separate confirmation gates, the pipeline submits its full nine-task benchmark
+evaluation automatically. No new candidate benchmark result exists yet.
 
 The admitted source reservation gives a conservative bound of **40.533333 / 48
 GPU-hours**. If its single accepted candidate later admits the separate three-hour
