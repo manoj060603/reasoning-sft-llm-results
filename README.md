@@ -56,8 +56,19 @@ truncations; Kaoyan has 667/1,592 advanced versus 1,009/1,592 random. Minerva
 has 1,088/2,176 advanced responses truncated (50%), versus 1,269/2,176 random.
 These finish-reason counts do not establish what caused the accuracy differences.
 Full trained-model macros and paired uncertainty remain pending. Missing
-results are not zero. The selection method, models and evaluation protocol
-are unchanged in response to these scores.
+results are not zero. The primary experiment's selection method, models and
+evaluation protocol are unchanged in response to these scores.
+
+A separate [post-hoc recovery experiment](deadline/recovery/plan.json) tests a
+fixed blend of 75% original weights and 25% advanced weights. Its CPU build
+verified 434 finite FP32 tensors, and 31 native checks passed. A 64-question
+source-heldout development screen is sealed and queued as job `1214124` at the
+14:18 UTC operational snapshot. It measures one-sample teacher-answer agreement
+under a 4K output limit; no recovery generation result or benchmark improvement
+is available. The [report](deadline/FINAL_REPORT.md) distinguishes this candidate
+from the primary SFT experiment and its publication artifacts. Full recovery
+benchmark evaluation requires a passed fixed development gate, verified GPU
+budget capacity and deadline reserves.
 
 The [runtime continuation record](deadline/operations/evaluation-resume-20261020.json)
 documents retaining six completed benchmarks and fully regenerating the unsaved
@@ -76,6 +87,11 @@ GPU-hours (169,380 seconds)**. This is **not actual elapsed GPU usage**.
 Historical admitted requests remain 70 hours; the 88-hour all-attempt history
 includes 18 hours verified never admitted. Final resource use, continuation
 success, comparisons and publication remain pending.
+
+The recovery screen's later 0.75-hour reservation raises the current conservative
+bound to **47.80 / 48 GPU-hours (172,080 seconds)**. Historical admitted requests
+are now 70.75 hours; all-attempt requests are 88.75 hours. These are separate from
+actual elapsed use. No full recovery benchmark allocation has been admitted.
 
 ## Read the experiment
 
@@ -98,12 +114,12 @@ transfer-gain ablation.
 The [fresh source snapshot](https://github.com/manoj060603/reasoning-sft-llm-results/commit/45e4d38784f1fdad4c033031f3b2d4c32c6c94b2)
 is public and verified against its corresponding local source tree; see the
 [publication receipt](deadline/report/source_publication_receipt.json).
-A [verified source snapshot](https://github.com/manoj060603/reasoning-sft-llm-results/commit/c8aea2fd0d66ff9d3ef46461984d08c10bf57433)
-matches local commit `90b861fa847f395b2ca5cc580eb89c8223c990c8` and entire tree
-`2c2761cb009d9ddd951e22811ceff46a8c2ac70a`. This records verified source history. The new
-10:10 UTC partial audit and this documentation update are prepared for a
-subsequent source publication. Source publication does not establish
-publication of model or dataset artifacts.
+A [verified source snapshot](https://github.com/manoj060603/reasoning-sft-llm-results/commit/3003d5860e829135ebda53f7e1826a92927eb1f1)
+matches local commit `62e98f15e3e6775e0502ee00079e7701a74562ea` and entire tree
+`386e161cc13632530f171c055158e0f56f27506c`. It includes the primary 10:10 UTC
+partial audit and separately labeled recovery preparation. Source publication
+does not establish completed recovery generation, benchmark gains, or publication
+of model and dataset artifacts.
 
 Heavy preparation, training, evaluation and native checks run in ARC compute
 allocations. Exact source revisions, selected IDs, actual example consumption,

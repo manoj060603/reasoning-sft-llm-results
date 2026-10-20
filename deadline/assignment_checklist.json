@@ -396,17 +396,17 @@
   ],
   "handoff_slots": {
     "repository_url": "https://github.com/manoj060603/reasoning-sft-llm-results",
-    "repository_commit": "c8aea2fd0d66ff9d3ef46461984d08c10bf57433",
+    "repository_commit": "3003d5860e829135ebda53f7e1826a92927eb1f1",
     "random_model_url": null,
     "advanced_model_url": null,
     "random_dataset_url": null,
     "advanced_dataset_url": null,
     "final_report_path": "deadline/FINAL_REPORT.md (draft; both training runs complete, full trained-model results pending)",
     "course_submission_receipt": null,
-    "repository_local_source_commit": "90b861fa847f395b2ca5cc580eb89c8223c990c8",
-    "repository_tree": "2c2761cb009d9ddd951e22811ceff46a8c2ac70a",
+    "repository_local_source_commit": "62e98f15e3e6775e0502ee00079e7701a74562ea",
+    "repository_tree": "386e161cc13632530f171c055158e0f56f27506c",
     "pinned_source_publication_receipt_commit": "45e4d38784f1fdad4c033031f3b2d4c32c6c94b2",
-    "publication_note": "Verified public source snapshot is recorded as past source history. New 10:10 UTC audit and documentation are prepared for a subsequent update; HF artifacts remain unpublished."
+    "publication_note": "Verified public source snapshot includes the primary 10:10 UTC audit and separate recovery code, CPU checks, merge provenance and sealed source-screen IDs. Exact tree equality was checked by anonymous Git fetch. Hugging Face artifacts and recovery performance remain pending."
   },
   "reviewed_implementation_commit": "b092f29",
   "benchmark_count_audit": {
@@ -425,7 +425,7 @@
   "last_reconciled_utc": "2026-10-20T10:10:00+00:00",
   "requested_repository_owner": "manoj060603",
   "team_submission_action": "Team-owned action; no course-system submission is performed by this experiment automation.",
-  "last_verified_cluster_snapshot_utc": "2026-10-20T10:10:00+00:00",
+  "last_verified_cluster_snapshot_utc": "2026-10-20T14:18:23+00:00",
   "current_access_note": "Both evaluation continuations are running after their initial six-hour evaluation parents timed out. Six completed benchmarks per role were retained; unsaved Minerva was regenerated in full and is now raw-audited complete. Closeout and publication remain dependency-gated and pending.",
   "current_execution_evidence": {
     "partial_audit": "deadline/report/partial-20261020T1010Z/audit.json",
@@ -465,10 +465,10 @@
       "dependency": "afterok:1208135"
     },
     "admission_receipt": "deadline/operations/evaluation-continuation-admission.json",
-    "conservative_gpu_hours_bound": 47.05,
+    "conservative_gpu_hours_bound": 47.8,
     "gpu_hours_cap": 48,
-    "historical_admitted_requested_gpu_hours": 70,
-    "all_attempt_requested_gpu_hours": 88,
+    "historical_admitted_requested_gpu_hours": 70.75,
+    "all_attempt_requested_gpu_hours": 88.75,
     "verified_unadmitted_requested_gpu_hours": 18,
     "final_terminal_resource_accounting": "pending",
     "complete_official_eight_tasks": {
@@ -476,7 +476,7 @@
       "random": 6,
       "advanced": 6
     },
-    "gpu_resource_figure_interpretation": "47.05/48 is the conservative verified-terminal-plus-full-open-reservation bound, not actual elapsed GPU consumption. It includes all interrupted allocation time and rounded terminal overruns; final continuation accounting remains pending.",
+    "gpu_resource_figure_interpretation": "47.80/48 is verified terminal GPU charges plus full live primary and recovery reservations, not actual elapsed consumption. It includes the 45-minute recovery screen reservation. No full recovery benchmark allocation has been admitted; historical requests remain separate.",
     "partial_math_comparison": {
       "problems": 500,
       "samples_per_problem": 8,
@@ -523,7 +523,7 @@
       "responses_per_role": 1592,
       "paired_uncertainty": "pending"
     },
-    "conservative_gpu_seconds_bound": 169380,
+    "conservative_gpu_seconds_bound": 172080,
     "evaluation_resume": {
       "receipt": "deadline/operations/evaluation-resume-20261020.json",
       "scientific_protocol_unchanged": true,
@@ -562,7 +562,42 @@
       "responses_per_role": 2176,
       "problems": 272,
       "paired_uncertainty": "pending"
+    },
+    "primary_before_recovery_development_gpu_hours_bound": 47.05,
+    "posthoc_recovery": {
+      "relationship_to_primary": "Separate exploratory FP32 interpolation of 75% original and 25% advanced weights, designed after primary outcomes. It does not alter primary selection, training, evaluation or publication.",
+      "plan": "deadline/recovery/plan.json",
+      "cpu_preparation_job_id": "1214044",
+      "cpu_preparation_state": "COMPLETED",
+      "finite_fp32_tensors": 434,
+      "native_cpu_checks": {
+        "tests": 31,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0
+      },
+      "source_only_screen_rows": 64,
+      "gpu_development_job_id": "1214124",
+      "gpu_development_state": "PENDING",
+      "requested_gpu_hours": 0.75,
+      "screen_metrics": null,
+      "benchmark_results": null,
+      "full_candidate_benchmark_admitted": false,
+      "metric_scope": "One sample per source question, at most 4K output tokens, measuring source teacher-answer agreement and stopping; not primary 32K/eight-sample benchmark accuracy.",
+      "evidence_paths": [
+        "deadline/operations/recovery-native-qa-20261020-attempt1.json",
+        "deadline/operations/recovery-merge-20261020-receipt.json",
+        "deadline/operations/recovery-screen-preparation-20261020-receipt.json",
+        "deadline/operations/recovery-screen-ids-20261020.json"
+      ]
     }
   },
-  "last_verified_result_snapshot_utc": "2026-10-20T10:10:00+00:00"
+  "last_verified_result_snapshot_utc": "2026-10-20T10:10:00+00:00",
+  "operational_update_utc": "2026-10-20T14:18:23+00:00",
+  "reviewed_implementation_commit_scope": "b092f29 is a historical primary implementation review; later operational and recovery changes have separately recorded native receipts.",
+  "report_closeout_obligations": [
+    "FinalCPUjob creates audit/uncertainty/package metadata, not the finished narrative; reconcile FINAL_REPORT.md,README and this checklist manually with complete results and verified links.",
+    "Keep primary random/advanced artifact identities; any recovery artifact needs separate identity, model card and provenance.",
+    "Course submission is team-owned; this automation must not send messages or submit to the course system."
+  ]
 }
