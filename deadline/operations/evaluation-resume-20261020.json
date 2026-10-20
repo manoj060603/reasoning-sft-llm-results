@@ -1,0 +1,76 @@
+{
+  "schema": "deadline-evaluation-resume-record-v1",
+  "recorded_at_utc": "2026-10-20T09:26:46.593537+00:00",
+  "evidence_scope": "Existing scheduler accounting, evaluator logs, manifests, metrics and small file metadata; no new experiment or model change.",
+  "plan_sha256": "080488bb494c52ca71d385b2f041821e8c71c2c994aa6439c1c6f24d8227635d",
+  "evaluator_source_sha256": "55181149a1010cd60a5979e859e2fcd6ee5d1a3abb8d4fbf33cee4b18586c316",
+  "scientific_protocol_unchanged": true,
+  "retained_samples_per_problem": 8,
+  "completed_benchmarks_preserved": [
+    "amc",
+    "aime25",
+    "aime",
+    "math",
+    "cn_math_2024",
+    "kaoyan"
+  ],
+  "interrupted_benchmark": "minerva",
+  "resume_policy": "Validate and skip complete saved benchmarks; regenerate the unsaved Minerva benchmark batch in full under the frozen per-problem seeds. No interrupted partial response enters the scored results.",
+  "unsaved_generated_token_totals": null,
+  "unsaved_token_count_limitation": "The stopped allocations generated work that was not saved as a complete batch. Logs retain progress counters, but exact unsaved generated token totals are unavailable and are not inferred. All allocation time is retained in GPU accounting.",
+  "roles": {
+    "random": {
+      "parent_job_id": "1208059",
+      "parent_state": "TIMEOUT",
+      "parent_elapsed_seconds": 21616,
+      "parent_charged_gpu_seconds": 21660,
+      "accounting_end_eastern": "2026-10-20T03:12:51-04:00",
+      "cancellation_log_eastern": "2026-10-20T03:12:52.004-04:00",
+      "continuation_job_id": "1210309",
+      "continuation_start_eastern": "2026-10-20T03:12:55-04:00",
+      "node": "owl-sr002",
+      "gpu": "NVIDIA B200",
+      "last_visible_interrupted_progress": {
+        "processed_samples": 416,
+        "total_samples": 2176
+      },
+      "continuation_initial_progress": {
+        "processed_samples": 0,
+        "total_samples": 2176
+      },
+      "model_manifest_protocol_match": true,
+      "six_complete_benchmark_files_retained": true,
+      "resumed_minerva_saved_eastern": "2026-10-20T05:22:44-04:00",
+      "accounting_proof": "deadline/operations/gpu-budget-reconciliation-d155f13d26ffca69.json"
+    },
+    "advanced": {
+      "parent_job_id": "1208060",
+      "parent_state": "TIMEOUT",
+      "parent_elapsed_seconds": 21608,
+      "parent_charged_gpu_seconds": 21660,
+      "accounting_end_eastern": "2026-10-20T04:03:51-04:00",
+      "cancellation_log_eastern": "2026-10-20T04:03:51.003-04:00",
+      "continuation_job_id": "1210310",
+      "continuation_start_eastern": "2026-10-20T04:03:54-04:00",
+      "node": "owl-sr001",
+      "gpu": "NVIDIA B200",
+      "last_visible_interrupted_progress": {
+        "processed_samples": 1592,
+        "total_samples": 2176
+      },
+      "continuation_initial_progress": {
+        "processed_samples": 0,
+        "total_samples": 2176
+      },
+      "model_manifest_protocol_match": true,
+      "six_complete_benchmark_files_retained": true,
+      "resumed_minerva_saved_eastern": null,
+      "accounting_proof": "deadline/operations/gpu-budget-reconciliation-637c6b2ed64206b8.json"
+    }
+  },
+  "conservative_terminal_plus_open_reservation_bound_gpu_seconds": 169380,
+  "conservative_bound_gpu_hours": 47.05,
+  "gpu_hours_cap": 48,
+  "bound_is_actual_elapsed_usage": false,
+  "full_evaluation_complete": false
+}
