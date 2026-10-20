@@ -1,6 +1,6 @@
 {
   "schema": "reasoning-sft-assignment-checklist-v1",
-  "status": "execution snapshot at 2026-10-20 05:25 UTC: both datasets, selection and final full-SFT training complete; original 9/9, random 5/9 and advanced 4/9 raw evaluations verified; continuation jobs admitted; full comparison, uncertainty, Hugging Face publication and submission pending",
+  "status": "execution snapshot at 2026-10-20 06:55 UTC: both datasets, selection and final full-SFT training complete; original 9/9 and both trained models 6/9 raw evaluations verified (5/8 supplied tasks each); continuation jobs admitted; full comparison, uncertainty, Hugging Face publication and submission pending",
   "assignment_url": "https://github.com/reds-lab/Project-Reasoning-SFT-LLM",
   "deadline_eastern": "2026-10-20T23:59:00-04:00",
   "current_experiment": "Cross-fitted Transfer Gain with Coverage; fresh original-base initialization",
@@ -165,13 +165,13 @@
       "id": "A09",
       "mandatory": true,
       "requirement": "Evaluate both fine-tuned models and compare them with the original.",
-      "status": "partial_five_random_four_advanced_tasks_full_macros_pending",
+      "status": "partial_six_tasks_per_trained_model_full_macros_pending",
       "evidence_paths": [
         "deadline/results/random",
         "deadline/results/advanced",
         "deadline/report/audit.json",
-        "deadline/report/partial-20261020T0525Z/audit.json",
-        "deadline/report/partial-20261020T0525Z/results.md",
+        "deadline/report/partial-20261020T0655Z/audit.json",
+        "deadline/report/partial-20261020T0655Z/results.md",
         "deadline/operations/evaluation-continuation-admission.json"
       ],
       "completion_evidence_required": [
@@ -181,7 +181,7 @@
         "partial results explicitly labeled",
         "broad source-random and advanced complete-target population differences disclosed"
       ],
-      "evidence_note": "Original 9/9 complete; random 5/9 complete (AMC, AIME24, MATH, CN_MATH_2024, supplementary AIME25); advanced 4/9 complete (AMC, AIME24, MATH, supplementary AIME25). All completed tasks are verified from raw eight-sample predictions with no per-run audit errors; completed protocol/data/hardware identities agree. Random lacks 4 tasks and advanced lacks 5, including advanced CN. Their supplied-eight coverage is 4/8 and 3/8; full macros remain pending."
+      "evidence_note": "Original 9/9 complete; random and advanced each 6/9 complete (AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, supplementary AIME25). All completed tasks are verified from raw eight-sample predictions with no per-run audit errors; completed protocol/data/hardware identities agree. Each trained model has 5/8 supplied tasks complete and awaits Minerva, OlympiadBench and GPQA. Full macros remain pending."
     },
     {
       "id": "A10",
@@ -192,7 +192,7 @@
         "deadline/report_outline.json",
         "deadline/report/results.md",
         "deadline/FINAL_REPORT.md",
-        "deadline/report/partial-20261020T0525Z/results.md"
+        "deadline/report/partial-20261020T0655Z/results.md"
       ],
       "completion_evidence_required": [
         "measured advanced-versus-control comparison",
@@ -201,7 +201,7 @@
         "sampling-population limitation"
       ],
       "scope_note": "The whole advanced selection policy is compared with broad prepared-source random sampling. Do not attribute a difference solely to transfer gain. A guaranteed positive improvement or statistical significance is not an assignment completion requirement.",
-      "evidence_note": "Both trained models trail original on AMC/AIME24/MATH and exceed original on supplementary AIME25. Advanced-minus-random MATH pass@1 is +1.50 percentage points (51.225% versus 49.725%); pass@8 ties at 78.20%. Both models remain below original 65.90%/83.80%. Random CN is measured below original; advanced CN is absent. Findings remain mixed; no overall winner, significance, CIs or SOTA claim is established. Scientific method/protocol unchanged in response to scores."
+      "evidence_note": "Both trained models trail original on all five completed supplied tasks and exceed original on supplementary AIME25. Advanced exceeds random on CN and Kaoyan in both metrics, and on MATH pass@1 by 1.50 percentage points with pass@8 tied; both models remain below original on all three tasks. Earlier AMC/AIME25 findings remain mixed. No overall winner, significance, CIs or SOTA claim is established; full macros remain pending. Scientific method/protocol unchanged in response to scores."
     },
     {
       "id": "A11",
@@ -299,7 +299,7 @@
       "evidence_paths": [
         "deadline/FINAL_REPORT.md",
         "deadline/report/audit.json",
-        "deadline/report/partial-20261020T0525Z/audit.json"
+        "deadline/report/partial-20261020T0655Z/audit.json"
       ],
       "completion_evidence_required": [
         "final report document",
@@ -350,7 +350,7 @@
       "status": "supplementary_aime25_complete_for_all_three_internal_seven_macro_pending",
       "evidence_paths": [
         "deadline/artifacts/benchmarks/aime25/test.jsonl",
-        "deadline/report/partial-20261020T0525Z/audit.json"
+        "deadline/report/partial-20261020T0655Z/audit.json"
       ],
       "completion_evidence_required": [
         "pinned supplementary data and complete matched evaluations"
@@ -392,17 +392,17 @@
   ],
   "handoff_slots": {
     "repository_url": "https://github.com/manoj060603/reasoning-sft-llm-results",
-    "repository_commit": "d00576f0125c009ed28db557a4a0e4d8b3aff9c6",
+    "repository_commit": "9b4fc76812d785a850177d6b2eb82f85f4d52596",
     "random_model_url": null,
     "advanced_model_url": null,
     "random_dataset_url": null,
     "advanced_dataset_url": null,
     "final_report_path": "deadline/FINAL_REPORT.md (draft; both training runs complete, full trained-model results pending)",
     "course_submission_receipt": null,
-    "repository_local_source_commit": "9e6477fac49c0187e7d02a5027acaa5f50d70b07",
-    "repository_tree": "5dabfa8d4010779ec3eff4c8690836e1ad1874ac",
+    "repository_local_source_commit": "76473ac63605c7e936ae7644f85330511cdc4d22",
+    "repository_tree": "6ea9781a1de7dca2448623aed4390b38e74b4516",
     "pinned_source_publication_receipt_commit": "45e4d38784f1fdad4c033031f3b2d4c32c6c94b2",
-    "publication_note": "Verified public source includes the earlier training/partial-evaluation evidence and continuation wrapper. New 05:25 UTC partial audit and documentation are prepared for a subsequent update; HF artifacts remain unpublished."
+    "publication_note": "Verified public source snapshot includes completed-training and 05:25 UTC partial-evaluation evidence. New 06:55 UTC audit and documentation are prepared for a subsequent update; HF artifacts remain unpublished."
   },
   "reviewed_implementation_commit": "b092f29",
   "benchmark_count_audit": {
@@ -418,21 +418,21 @@
       "finding": "The README table says 499, but the actual official file and local copy both contain 500 valid JSON records. The last record has no trailing newline; keep MATH=500 in evaluation and audit."
     }
   },
-  "last_reconciled_utc": "2026-10-20T05:25:00+00:00",
+  "last_reconciled_utc": "2026-10-20T06:55:00+00:00",
   "requested_repository_owner": "manoj060603",
   "team_submission_action": "Team-owned action; no course-system submission is performed by this experiment automation.",
   "last_verified_cluster_snapshot_utc": "2026-10-20T03:25:36.274636+00:00",
   "current_access_note": "VPN and ARC access restored. Native 30 guard checks and exact scheduler accounting verified; both evaluation continuations admitted. Successful continuation, closeout and publication are not inferred from admission.",
   "current_execution_evidence": {
-    "partial_audit": "deadline/report/partial-20261020T0525Z/audit.json",
+    "partial_audit": "deadline/report/partial-20261020T0655Z/audit.json",
     "training_complete": {
       "random": true,
       "advanced": true
     },
     "complete_tasks": {
       "original": 9,
-      "random": 5,
-      "advanced": 4
+      "random": 6,
+      "advanced": 6
     },
     "trained_model_full_macros": null,
     "uncertainty": null,
@@ -467,8 +467,8 @@
     "final_terminal_resource_accounting": "pending",
     "complete_official_eight_tasks": {
       "original": 8,
-      "random": 4,
-      "advanced": 3
+      "random": 5,
+      "advanced": 5
     },
     "gpu_resource_figure_interpretation": "47.0167/48 is the conservative allocation/reservation bound from admitted accounting, not actual elapsed GPU consumption. Final terminal resource accounting remains pending.",
     "partial_math_comparison": {
@@ -488,12 +488,36 @@
       "paired_uncertainty": "pending"
     },
     "partial_cn_math_2024": {
+      "original_pass_at_1": 0.1,
+      "original_pass_at_8": 0.26666666666666666,
+      "original_truncated_samples": 8,
       "random_pass_at_1": 0.008333333333333333,
       "random_pass_at_8": 0.06666666666666667,
       "random_truncated_samples": 215,
+      "advanced_pass_at_1": 0.05,
+      "advanced_pass_at_8": 0.23333333333333334,
+      "advanced_truncated_samples": 159,
       "responses_per_role": 240,
-      "advanced": "missing in authoritative snapshot"
+      "paired_uncertainty": "pending"
+    },
+    "remaining_tasks_per_trained_model": [
+      "minerva",
+      "olympiadbench",
+      "gpqa"
+    ],
+    "partial_kaoyan": {
+      "original_pass_at_1": 0.21105527638190955,
+      "original_pass_at_8": 0.49748743718592964,
+      "original_truncated_samples": 3,
+      "random_pass_at_1": 0.1407035175879397,
+      "random_pass_at_8": 0.41708542713567837,
+      "random_truncated_samples": 1009,
+      "advanced_pass_at_1": 0.15452261306532664,
+      "advanced_pass_at_8": 0.47738693467336685,
+      "advanced_truncated_samples": 667,
+      "responses_per_role": 1592,
+      "paired_uncertainty": "pending"
     }
   },
-  "last_verified_result_snapshot_utc": "2026-10-20T05:25:00+00:00"
+  "last_verified_result_snapshot_utc": "2026-10-20T06:55:00+00:00"
 }

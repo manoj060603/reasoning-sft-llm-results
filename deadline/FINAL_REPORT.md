@@ -1,6 +1,6 @@
 # Draft report: Cross-fitted Transfer Gain with Coverage for Reasoning SFT
 
-**Snapshot: 20 October 2026, 1:25 a.m. Eastern / 05:25 UTC.** Both final full-SFT runs are complete: each performed 1,875 updates, used all 15,000 unique examples exactly once, and saved 434 verified finite FP32 tensors. The original-model evaluation is complete on the supplied eight benchmarks and supplementary AIME25. The random control has **5/9 completed tasks**, including MATH and CN_MATH_2024; the advanced model has **4/9**, including MATH. Both counts include supplementary AIME25, so their supplied-eight coverage is 4/8 and 3/8 respectively. Four random and five advanced tasks, complete macros, paired uncertainty, final Hugging Face links and course submission remain pending. VPN/ARC access is restored; unchanged evaluation continuations and dependency-gated closeout/publication have been admitted. Pending entries are not zero scores.
+**Snapshot: 20 October 2026, 2:55 a.m. Eastern / 06:55 UTC.** Both final full-SFT runs are complete: each performed 1,875 updates, used all 15,000 unique examples exactly once, and saved 434 verified finite FP32 tensors. The original-model evaluation is complete on the supplied eight benchmarks and supplementary AIME25. Both trained models have **6/9 completed tasks**: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan and supplementary AIME25. Their supplied-eight coverage is **5/8 each**. Minerva, OlympiadBench and GPQA, complete macros, paired uncertainty, final Hugging Face links and course submission remain pending. Unchanged evaluation continuations and dependency-gated closeout/publication have been admitted. Pending entries are not zero scores.
 
 We investigate whether a source-only selection policy can improve reasoning SFT over a random control. Two small LoRA training runs measure how examples in the opposite source fold respond to adaptation. The final selector combines relative response-loss reduction with structural eligibility and topic/length coverage. Both final models start from the original Qwen2.5-3B-Instruct checkpoint. Previous team checkpoints and scores are not results of this experiment.
 
@@ -97,15 +97,15 @@ When all three raw evaluations are complete and matched, uncertainty analysis wi
 
 ## 5. Current performance results
 
-The [05:25 UTC partial audit](report/partial-20261020T0525Z/audit.json) verifies raw eight-sample predictions for all nine original-model tasks, five random-control tasks and four advanced-model tasks, with no per-run audit errors. Completed records match across roles in protocol, benchmark data and hardware. Four random tasks and five advanced tasks are missing; the overall comparison remains incomplete. Advanced CN_MATH_2024 is absent from this snapshot and is not inferred from ongoing evaluation. The retained [original metrics](report/original_metrics.json) and [evaluation manifest](report/original_evaluation_manifest.json) preserve the complete baseline evidence. Values below are percentages; truncations count samples ending at the output/context limit, out of eight samples per problem.
+The [06:55 UTC partial audit](report/partial-20261020T0655Z/audit.json) verifies raw eight-sample predictions for all nine original-model tasks and six tasks for each trained model, with no per-run audit errors. Completed records match across roles in protocol, benchmark data and hardware. Both trained models still lack Minerva, OlympiadBench and GPQA; the full comparison remains incomplete. The retained [original metrics](report/original_metrics.json) and [evaluation manifest](report/original_evaluation_manifest.json) preserve the complete baseline evidence. Values below are percentages; truncations count samples ending at the output/context limit, out of eight samples per problem.
 
 | Benchmark | Problems | Original pass@1 | Original pass@8 | Original truncated samples | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
 | --- | ---: | ---: | ---: | ---: | --- | --- |
 | AIME 2024 | 30 | 7.92% | 23.33% | 10 | 0.42% / 3.33% | 2.50% / 13.33% |
 | AMC 2023 | 40 | 42.50% | 70.00% | 3 | 22.50% / 47.50% | 25.00% / 45.00% |
 | MATH | 500 | 65.90% | 83.80% | 19 | 49.73% / 78.20% | 51.23% / 78.20% |
-| CN_MATH_2024 | 30 | 10.00% | 26.67% | 8 | 0.83% / 6.67% | Pending |
-| Kaoyan | 199 | 21.11% | 49.75% | 3 | Pending | Pending |
+| CN_MATH_2024 | 30 | 10.00% | 26.67% | 8 | 0.83% / 6.67% | 5.00% / 23.33% |
+| Kaoyan | 199 | 21.11% | 49.75% | 3 | 14.07% / 41.71% | 15.45% / 47.74% |
 | Minerva | 272 | 30.33% | 47.79% | 5 | Pending | Pending |
 | OlympiadBench | 675 | 28.26% | 51.85% | 99 | Pending | Pending |
 | GPQA | 198 | 28.41% | 69.70% | 5 | Pending | Pending |
@@ -116,7 +116,7 @@ The [05:25 UTC partial audit](report/partial-20261020T0525Z/audit.json) verifies
 | Supplied eight, equal-benchmark macro | 29.30267835% | 52.86146036% | Pending | Pending |
 | Supplemented seven, internal macro | 23.06258478% | 45.58452613% | Pending | Pending |
 
-Macros use unrounded benchmark values. AIME25 is supplementary and excluded from the supplied-eight macro. The audit correctly marks the full comparison **unmatched** because four random and five advanced tasks remain incomplete. No trained-model full macro, paired confidence interval, overall winner or leaderboard position is available.
+Macros use unrounded benchmark values. AIME25 is supplementary and excluded from the supplied-eight macro. The audit correctly marks the full comparison **unmatched** because Minerva, OlympiadBench and GPQA remain incomplete for both trained models. No trained-model full macro, paired confidence interval, overall winner or leaderboard position is available.
 
 The completed tasks also show frequent output/context-limit termination:
 
@@ -125,16 +125,19 @@ The completed tasks also show frequent output/context-limit termination:
 | AMC | 320 | 190 | 169 |
 | AIME24 | 240 | 204 | 192 |
 | MATH | 4,000 | 1,508 (37.7%) | 1,235 (30.875%) |
-| CN_MATH_2024 | 240 | 215 (89.5833%) | Pending |
+| CN_MATH_2024 | 240 | 215 (89.5833%) | 159 (66.25%) |
+| Kaoyan | 1,592 | 1,009 | 667 |
 | AIME25, supplementary | 240 | 203 | 185 |
 
 These are raw finish-reason diagnostics, not a quantitative repetition metric or proof that truncation alone caused the accuracy differences.
 
 ## 6. Comparison and interpretation
 
-The partial findings are **mixed**. Both trained models perform worse than the original on AMC, AIME24 and MATH in both metrics. Both perform better than the original on supplementary AIME25. Advanced improves over random on AIME24, has higher pass@1 but lower pass@8 on AMC, and trails random on AIME25.
+The partial findings are **mixed**. Both trained models perform worse than the original on all five completed supplied tasks: AMC, AIME24, MATH, CN_MATH_2024 and Kaoyan. Both perform better than the original on supplementary AIME25. Advanced improves over random in both metrics on AIME24, CN_MATH_2024 and Kaoyan, has higher pass@1 but lower pass@8 on AMC, and trails random on AIME25.
 
-On the 500-problem MATH task, advanced pass@1 is **51.225%**, versus **49.725%** for random: **+1.50 percentage points**. Their pass@8 scores tie at **78.20%**. Both are below the original's **65.90% pass@1 / 83.80% pass@8**. The random control also trails the original on CN_MATH_2024; no advanced CN score is available for a paired comparison in this snapshot. Paired confidence intervals have not yet been computed. These observations establish neither significance nor an overall winner; AMC has 40 problems and each AIME/CN task has 30.
+On the 500-problem MATH task, advanced pass@1 is **51.225%**, versus **49.725%** for random: **+1.50 percentage points**. Their pass@8 scores tie at **78.20%**. Both are below the original's **65.90% pass@1 / 83.80% pass@8**.
+
+For CN_MATH_2024, advanced scores **5.00% / 23.3333%**, versus random **0.8333% / 6.6667%**, while the original scores **10.00% / 26.6667%** (pass@1 / pass@8). Kaoyan advanced scores **15.4523% / 47.7387%**, versus random **14.0704% / 41.7085%**, below the original's **21.1055% / 49.7487%**. The corresponding raw truncation counts are 159/240 advanced versus 215/240 random for CN and 667/1,592 versus 1,009/1,592 for Kaoyan. These are measured per-task differences, not a complete macro or evidence that the selection method is generally superior. Paired confidence intervals have not been computed, and significance is not established. AMC has 40 problems, each AIME/CN task has 30, and Kaoyan has 199.
 
 The final comparison will report each SFT arm against the original, then advanced against random on every task and on the complete supplied-eight macro. Pass@1 and pass@8 should be considered together with output lengths and truncation. Diagnostics report output tokens/characters and finish reasons; they do **not** currently provide a quantitative generated-repetition analysis. The method, trained checkpoints and scientific evaluation settings are unchanged in response to these partial scores. Operational continuations address runtime only.
 
@@ -163,7 +166,7 @@ Verified closed allocations total 7.0167 GPU-hours after separately rounding all
 
 **Built with Qwen.** The [3B base model card](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/aa8e72537993ba99e69dfaafa59ed015b17504d1/README.md) declares `license: other`, `license_name: qwen-research`, and links to the [Qwen Research License](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/aa8e72537993ba99e69dfaafa59ed015b17504d1/LICENSE). The [NVIDIA AceReason-1.1-SFT card](https://huggingface.co/datasets/nvidia/AceReason-1.1-SFT#license) declares CC BY 4.0. Dataset attribution must credit NVIDIA and the actual redsgnaoh class subset separately; a separate license for that subset has not been verified or asserted here.
 
-**Source publication update, 20 October 2026:** the fresh implementation and its earlier evidence snapshot are public in [manoj060603/reasoning-sft-llm-results](https://github.com/manoj060603/reasoning-sft-llm-results), with verified snapshot commit [45e4d38](https://github.com/manoj060603/reasoning-sft-llm-results/commit/45e4d38784f1fdad4c033031f3b2d4c32c6c94b2). A public Git fetch confirmed that its entire tree equals local source commit `cb08e18a3b1bbfe58e8db814a2a2e54a6471d29b`; the [source publication receipt](report/source_publication_receipt.json) records the mapping. This receipt establishes that source snapshot only. The [latest verified public source update](https://github.com/manoj060603/reasoning-sft-llm-results/commit/d00576f0125c009ed28db557a4a0e4d8b3aff9c6) matches local commit `9e6477fac49c0187e7d02a5027acaa5f50d70b07` and entire tree `5dabfa8d4010779ec3eff4c8690836e1ad1874ac`. That update includes the continuation wrapper and earlier completed-training/partial-evaluation evidence. The new 05:25 UTC partial audit and this report update are prepared for the next source publication. Training and partial evaluation completion are established by their separate receipts, not by source publication.
+**Source publication update, 20 October 2026:** the fresh implementation and its earlier evidence snapshot are public in [manoj060603/reasoning-sft-llm-results](https://github.com/manoj060603/reasoning-sft-llm-results), with verified snapshot commit [45e4d38](https://github.com/manoj060603/reasoning-sft-llm-results/commit/45e4d38784f1fdad4c033031f3b2d4c32c6c94b2). A public Git fetch confirmed that its entire tree equals local source commit `cb08e18a3b1bbfe58e8db814a2a2e54a6471d29b`; the [source publication receipt](report/source_publication_receipt.json) records the mapping. This receipt establishes that source snapshot only. A [verified public source snapshot](https://github.com/manoj060603/reasoning-sft-llm-results/commit/9b4fc76812d785a850177d6b2eb82f85f4d52596) matches local commit `76473ac63605c7e936ae7644f85330511cdc4d22` and entire tree `6ea9781a1de7dca2448623aed4390b38e74b4516`. That snapshot includes the completed-training and 05:25 UTC partial-evaluation evidence. The new 06:55 UTC audit and this report update are prepared for a subsequent source publication. Training and partial evaluation completion are established by their separate receipts, not by source publication.
 
 Two trained-model URLs, two original-dataset URLs, final comparisons and this completed report remain pending. The publication packager will recheck completed selection, training, weights, and matched evaluation receipts before staging cards and a manifest. Staging metadata is not an upload or course submission. The final deliverables must include usable repository and model/dataset links, a current README, and this completed report. The team must submit them by **20 October 2026 at 11:59 p.m. Eastern**.
 
