@@ -1,0 +1,39 @@
+{
+  "files": {
+    "extension/job_ledger.json": {
+      "bytes": 12016,
+      "sha256": "436b393022f8548360d70919debf7d67083c4882b76448f823c0436a65872e2f"
+    },
+    "extension/labeled_source_install_receipt.json": {
+      "bytes": 3271,
+      "sha256": "77df627ae44903daac9c4e1575aedc7ee40ff6fe27b816fe1bedf63bf571ac07"
+    },
+    "extension/logs/extension-labeled-feasibility-1222926.err": {
+      "bytes": 11801,
+      "sha256": "70ddd0bb6711a096d1c547ad08a137c59f7959253b8cf004cfaa015a127727fe"
+    },
+    "extension/logs/extension-labeled-feasibility-1222926.out": {
+      "bytes": 984,
+      "sha256": "c4360600836a98de70f7b766437b8fec89c6d1d9419d58762fb0d71c7c2e1ab1"
+    },
+    "extension/runs/labeled-feasibility-20261020-1222926/accounting.json": {
+      "bytes": 823,
+      "sha256": "a93a348efb28bf6b43a0dabb154fe085eeeb98809c3adb4afb1574f024e38632"
+    },
+    "extension/runs/labeled-feasibility-20261020-1222926/complete.json": {
+      "bytes": 37541,
+      "sha256": "6c225e606b0086649fa6d578d6a846f37594b893eefcee117ead22e8fb2c3458"
+    },
+    "extension/runs/labeled-feasibility-20261020-1222926/native_qa.json": {
+      "bytes": 8355,
+      "sha256": "c5d12f7d0c9bf40ac80f5c685a5db289ff88e1699c6b1628afa1fab120db5945"
+    },
+    "extension/runs/labeled-feasibility-20261020-1222926/started.json": {
+      "bytes": 4642,
+      "sha256": "5e125e4437e4e45e9663fa5efe9c5a9f5f44d9b4c0c056f912b2d68db2dd52ad"
+    }
+  },
+  "job_id": "1222926",
+  "raw_labeled_records_included": false,
+  "schema": "extension-labeled-native-evidence-v1"
+}

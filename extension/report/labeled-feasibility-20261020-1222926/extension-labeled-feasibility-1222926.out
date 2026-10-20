@@ -1,0 +1,27 @@
+{"native_qa_complete": true, "tests": 108, "output": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926"}
+{
+  "complete": true,
+  "counts": {
+    "arc_challenge:direct_excluded": 0,
+    "arc_challenge:label_valid": 1119,
+    "arc_challenge:propagated_excluded": 0,
+    "arc_challenge:quarantined": 0,
+    "arc_challenge:raw": 1119,
+    "arc_challenge:surviving": 1119,
+    "math:direct_excluded": 1482,
+    "math:label_valid": 7496,
+    "math:propagated_excluded": 1,
+    "math:quarantined": 4,
+    "math:raw": 7500,
+    "math:surviving": 6013
+  },
+  "groups": {
+    "all_label_valid_components": 8529,
+    "surviving_components": 7077,
+    "surviving_records": 7132,
+    "quarantined_records": 4,
+    "direct_excluded_records": 1482,
+    "propagated_excluded_records": 1
+  }
+}
+Labeled feasibility complete: /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926

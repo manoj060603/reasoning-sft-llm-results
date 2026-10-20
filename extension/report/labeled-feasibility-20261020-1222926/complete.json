@@ -1,0 +1,684 @@
+{
+  "actions": {
+    "automatic_downstream": false,
+    "generation": false,
+    "splits_chosen": false,
+    "training": false
+  },
+  "benchmark_readiness": {
+    "benchmark_counts": {
+      "aime": 30,
+      "aime25": 30,
+      "amc": 40,
+      "cn_math_2024": 30,
+      "gpqa": 198,
+      "kaoyan": 199,
+      "math": 500,
+      "minerva": 272,
+      "olympiadbench": 675
+    },
+    "benchmark_hashes": {
+      "aime": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc",
+      "aime25": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d",
+      "amc": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4",
+      "cn_math_2024": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533",
+      "gpqa": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f",
+      "kaoyan": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7",
+      "math": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94",
+      "minerva": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d",
+      "olympiadbench": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f"
+    },
+    "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmark_readiness.json",
+    "sha256": "9f0d2480881672ba07c3c9a4143dec12b55625d721c1ce0ed45e6bfd82082754"
+  },
+  "complete": true,
+  "compute_end": {
+    "allocated_cpus": 8,
+    "allocated_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "checked_at_utc": "2026-10-20T23:39:27.397873+00:00",
+    "cuda_visible_devices": "",
+    "gpu_requested_or_allocated": false,
+    "hostname": "owl069",
+    "job_id": "1222926",
+    "node": "owl069",
+    "requested_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "scontrol": "JobId=1222926 JobName=sft-extension-labeled-feasibility UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1315 Nice=0 Account=tml_2026 QOS=owl_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:53 TimeLimit=02:00:00 TimeMin=N/A SubmitTime=2026-10-20T19:38:12 EligibleTime=2026-10-20T19:38:12 AccrueTime=2026-10-20T19:38:13 StartTime=2026-10-20T19:38:34 EndTime=2026-10-20T21:38:34 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T19:38:34 Scheduler=Backfill Partition=normal_q AllocNode:Sid=owl1:1220240 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl069 BatchHost=owl069 NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=64G,node=1,billing=20 AllocTRES=cpu=8,mem=64G,node=1,billing=20 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_feasibility.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_feasibility.slurm WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-labeled-feasibility-1222926.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-labeled-feasibility-1222926.out TresPerTask=cpu=8",
+    "scontrol_sha256": "7e5c2e3f2a136512e4d932755cabafed17b8e6335684c81dd8211785fa99cb62",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "compute_start": {
+    "allocated_cpus": 8,
+    "allocated_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "checked_at_utc": "2026-10-20T23:38:56.588740+00:00",
+    "cuda_visible_devices": "",
+    "gpu_requested_or_allocated": false,
+    "hostname": "owl069",
+    "job_id": "1222926",
+    "node": "owl069",
+    "requested_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "scontrol": "JobId=1222926 JobName=sft-extension-labeled-feasibility UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1315 Nice=0 Account=tml_2026 QOS=owl_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:22 TimeLimit=02:00:00 TimeMin=N/A SubmitTime=2026-10-20T19:38:12 EligibleTime=2026-10-20T19:38:12 AccrueTime=2026-10-20T19:38:13 StartTime=2026-10-20T19:38:34 EndTime=2026-10-20T21:38:34 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T19:38:34 Scheduler=Backfill Partition=normal_q AllocNode:Sid=owl1:1220240 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl069 BatchHost=owl069 NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=64G,node=1,billing=20 AllocTRES=cpu=8,mem=64G,node=1,billing=20 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_feasibility.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_feasibility.slurm WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-labeled-feasibility-1222926.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-labeled-feasibility-1222926.out TresPerTask=cpu=8",
+    "scontrol_sha256": "9b89e70cc7a38c90ff2951a87d01c9faabe52b77f873eb1c16bd04c3a7968e56",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "counts": {
+    "arc_challenge:direct_excluded": 0,
+    "arc_challenge:label_valid": 1119,
+    "arc_challenge:propagated_excluded": 0,
+    "arc_challenge:quarantined": 0,
+    "arc_challenge:raw": 1119,
+    "arc_challenge:surviving": 1119,
+    "math:direct_excluded": 1482,
+    "math:label_valid": 7496,
+    "math:propagated_excluded": 1,
+    "math:quarantined": 4,
+    "math:raw": 7500,
+    "math:surviving": 6013
+  },
+  "created_at_utc": "2026-10-20T23:39:27.397890+00:00",
+  "direct_reason_counts": {
+    "benchmark_math": 17,
+    "previously_scored_reservoir": 1351,
+    "prior_advanced_training": 877,
+    "prior_probeA_training": 19,
+    "prior_probeB_training": 21,
+    "prior_random_training": 320,
+    "viewed_anchor_confirmation": 4,
+    "viewed_anchor_search": 10,
+    "viewed_recovery_source": 1
+  },
+  "downloaded_sources": [
+    {
+      "declared_license": "mit",
+      "field_present": true,
+      "file": "README.md",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/license-card/README.md",
+      "recorded_values": [
+        "mit"
+      ],
+      "repository": "EleutherAI/hendrycks_math",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "role": "license_card",
+      "sha256": "2372e22a154ca3ed5865378e270b32d8ed5b615c4592fad42630a731a950bcc0"
+    },
+    {
+      "file": "algebra/train/0000.parquet",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/algebra/train/0000.parquet",
+      "repository": "EleutherAI/hendrycks_math",
+      "revision": "fe39eaeb3783a7dd5d7e305da9a8db9b0c4e6b93",
+      "rows": 1744,
+      "sha256": "73347f5b55869f21ff094361025dbd12d291e971aa4d72142eacee10438e449f"
+    },
+    {
+      "file": "counting_and_probability/train/0000.parquet",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/counting_and_probability/train/0000.parquet",
+      "repository": "EleutherAI/hendrycks_math",
+      "revision": "fe39eaeb3783a7dd5d7e305da9a8db9b0c4e6b93",
+      "rows": 771,
+      "sha256": "d37ae017930df41678edee50dcde18c17fb06afaff9eb505c1b95f1002bfcb31"
+    },
+    {
+      "file": "geometry/train/0000.parquet",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/geometry/train/0000.parquet",
+      "repository": "EleutherAI/hendrycks_math",
+      "revision": "fe39eaeb3783a7dd5d7e305da9a8db9b0c4e6b93",
+      "rows": 870,
+      "sha256": "9dbf5e5b55499e696e0ba72da9d85d4f0be3acbf7eaa6cb014b0fc78bb63784f"
+    },
+    {
+      "file": "intermediate_algebra/train/0000.parquet",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/intermediate_algebra/train/0000.parquet",
+      "repository": "EleutherAI/hendrycks_math",
+      "revision": "fe39eaeb3783a7dd5d7e305da9a8db9b0c4e6b93",
+      "rows": 1295,
+      "sha256": "0c87f3798ebdfb915b1f9b6fc13c1a8d064c3cb91631ccbe85b83ed5d71150f6"
+    },
+    {
+      "file": "number_theory/train/0000.parquet",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/number_theory/train/0000.parquet",
+      "repository": "EleutherAI/hendrycks_math",
+      "revision": "fe39eaeb3783a7dd5d7e305da9a8db9b0c4e6b93",
+      "rows": 869,
+      "sha256": "81c08649149b39811f2d1d7ddf5dfccf6c4c8044a2e169cfb24db09160c941f4"
+    },
+    {
+      "file": "prealgebra/train/0000.parquet",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/prealgebra/train/0000.parquet",
+      "repository": "EleutherAI/hendrycks_math",
+      "revision": "fe39eaeb3783a7dd5d7e305da9a8db9b0c4e6b93",
+      "rows": 1205,
+      "sha256": "765b526fb5c0b8385cb7be2c16bf4f6f28cf71f2bc15c826abfbb5fa7f8616cc"
+    },
+    {
+      "file": "precalculus/train/0000.parquet",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/precalculus/train/0000.parquet",
+      "repository": "EleutherAI/hendrycks_math",
+      "revision": "fe39eaeb3783a7dd5d7e305da9a8db9b0c4e6b93",
+      "rows": 746,
+      "sha256": "28bb1ff95525c8d32521509bef91de76339659f5467a381e6e8deea204538f0e"
+    },
+    {
+      "declared_license": "cc-by-sa-4.0",
+      "field_present": true,
+      "file": "README.md",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/arc_challenge/license-card/README.md",
+      "recorded_values": [
+        "cc-by-sa-4.0"
+      ],
+      "repository": "allenai/ai2_arc",
+      "revision": "210d026faf9955653af8916fad021475a3f00453",
+      "role": "license_card",
+      "sha256": "4a293e352253d771604725c978adcea71ee6504e89ed40e1cb0024ecafa9b37e"
+    },
+    {
+      "file": "ARC-Challenge/train-00000-of-00001.parquet",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/arc_challenge/ARC-Challenge/train-00000-of-00001.parquet",
+      "repository": "allenai/ai2_arc",
+      "revision": "210d026faf9955653af8916fad021475a3f00453",
+      "rows": 1119,
+      "sha256": "e488c1587ffdcfc8443f916c53488a95cd471c5790e0746c6bfe4cecf20962cb"
+    }
+  ],
+  "elapsed_seconds": 30.81161270197481,
+  "exclusions": [
+    {
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/pool.json",
+      "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/selected_ids.json",
+      "question_field": null,
+      "question_records": 15000,
+      "reason": "prior_random_training",
+      "sha256": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9"
+    },
+    {
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/pool.json",
+      "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/selected_ids.json",
+      "question_field": null,
+      "question_records": 15000,
+      "reason": "prior_advanced_training",
+      "sha256": "2241e6e39ab65fe465db8544d7635570ff8a67b7e95f764ac72ddcb1bb9d3d7f"
+    },
+    {
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/pool.json",
+      "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/probeA_ids.json",
+      "question_field": null,
+      "question_records": 512,
+      "reason": "prior_probeA_training",
+      "sha256": "6ae31826e4d06b517e9e290d653a9b3502056cc81c57e281ef0447a0918de4d6"
+    },
+    {
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/pool.json",
+      "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/probeB_ids.json",
+      "question_field": null,
+      "question_records": 512,
+      "reason": "prior_probeB_training",
+      "sha256": "42c0b860943dae371ae692c1824504ced4b9e10e09801790324adaca6ed4ffa1"
+    },
+    {
+      "format": "id_list",
+      "json_pointer": "/reservoir_ids",
+      "lookup": "deadline/artifacts/pool.json",
+      "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/transfer_meta.json",
+      "question_field": null,
+      "question_records": 30000,
+      "reason": "previously_scored_reservoir",
+      "sha256": "4c63b8c4eb0d306a3ca7bbd7ff3b80e16e5a83d4638f92b3faa806162476956c"
+    },
+    {
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/heldout.json",
+      "lookup_sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/operations/recovery-screen-ids-20261020.json",
+      "question_field": null,
+      "question_records": 64,
+      "reason": "viewed_recovery_source",
+      "sha256": "af899b05afe502400cebb6c2197a7fd454f66114198733838ffd7913f9975d8e"
+    },
+    {
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/heldout.json",
+      "lookup_sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/search_ids.json",
+      "question_field": null,
+      "question_records": 192,
+      "reason": "viewed_anchor_search",
+      "sha256": "4581332873fef806bbbaf7842b27bc44f02ccd666445e93d920dcbf46b2d53da"
+    },
+    {
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/heldout.json",
+      "lookup_sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3",
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/confirmation_ids.json",
+      "question_field": null,
+      "question_records": 192,
+      "reason": "viewed_anchor_confirmation",
+      "sha256": "69002547f908773102ef3a41286668f84a7ab4fe088c350239aaf4bd3f4c6f9b"
+    },
+    {
+      "format": "benchmark_jsonl",
+      "json_pointer": "",
+      "lookup": null,
+      "lookup_sha256": null,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/aime/test.jsonl",
+      "question_field": "problem",
+      "question_records": 30,
+      "reason": "benchmark_aime",
+      "sha256": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc"
+    },
+    {
+      "format": "benchmark_jsonl",
+      "json_pointer": "",
+      "lookup": null,
+      "lookup_sha256": null,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/aime25/test.jsonl",
+      "question_field": "question",
+      "question_records": 30,
+      "reason": "benchmark_aime25",
+      "sha256": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d"
+    },
+    {
+      "format": "benchmark_jsonl",
+      "json_pointer": "",
+      "lookup": null,
+      "lookup_sha256": null,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/amc/test.jsonl",
+      "question_field": "question",
+      "question_records": 40,
+      "reason": "benchmark_amc",
+      "sha256": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4"
+    },
+    {
+      "format": "benchmark_jsonl",
+      "json_pointer": "",
+      "lookup": null,
+      "lookup_sha256": null,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/cn_math_2024/test.jsonl",
+      "question_field": "problem",
+      "question_records": 30,
+      "reason": "benchmark_cn_math_2024",
+      "sha256": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533"
+    },
+    {
+      "format": "benchmark_jsonl",
+      "json_pointer": "",
+      "lookup": null,
+      "lookup_sha256": null,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/gpqa/test.jsonl",
+      "question_field": "question",
+      "question_records": 198,
+      "reason": "benchmark_gpqa",
+      "sha256": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f"
+    },
+    {
+      "format": "benchmark_jsonl",
+      "json_pointer": "",
+      "lookup": null,
+      "lookup_sha256": null,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/kaoyan/test.jsonl",
+      "question_field": "problem",
+      "question_records": 199,
+      "reason": "benchmark_kaoyan",
+      "sha256": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7"
+    },
+    {
+      "format": "benchmark_jsonl",
+      "json_pointer": "",
+      "lookup": null,
+      "lookup_sha256": null,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/math/test.jsonl",
+      "question_field": "problem",
+      "question_records": 500,
+      "reason": "benchmark_math",
+      "sha256": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94"
+    },
+    {
+      "format": "benchmark_jsonl",
+      "json_pointer": "",
+      "lookup": null,
+      "lookup_sha256": null,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/minerva/test.jsonl",
+      "question_field": "question",
+      "question_records": 272,
+      "reason": "benchmark_minerva",
+      "sha256": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d"
+    },
+    {
+      "format": "benchmark_jsonl",
+      "json_pointer": "",
+      "lookup": null,
+      "lookup_sha256": null,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/olympiadbench/test.jsonl",
+      "question_field": "question",
+      "question_records": 675,
+      "reason": "benchmark_olympiadbench",
+      "sha256": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f"
+    },
+    {
+      "format": "benchmark_jsonl",
+      "json_pointer": "",
+      "lookup": null,
+      "lookup_sha256": null,
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/amc/test.jsonl",
+      "question_field": "problem",
+      "question_records": 40,
+      "reason": "benchmark_amc",
+      "sha256": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4"
+    }
+  ],
+  "gpu_seconds_requested_or_used": 0,
+  "groups": {
+    "all_label_valid_components": 8529,
+    "direct_excluded_records": 1482,
+    "propagated_excluded_records": 1,
+    "quarantined_records": 4,
+    "surviving_components": 7077,
+    "surviving_records": 7132
+  },
+  "input_files": {
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/confirmation_ids.json": {
+      "bytes": 13443,
+      "sha256": "69002547f908773102ef3a41286668f84a7ab4fe088c350239aaf4bd3f4c6f9b"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/search_ids.json": {
+      "bytes": 13443,
+      "sha256": "4581332873fef806bbbaf7842b27bc44f02ccd666445e93d920dcbf46b2d53da"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmark_readiness.json": {
+      "bytes": 152861,
+      "sha256": "9f0d2480881672ba07c3c9a4143dec12b55625d721c1ce0ed45e6bfd82082754"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/aime/test.jsonl": {
+      "bytes": 146233,
+      "sha256": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/aime25/test.jsonl": {
+      "bytes": 15903,
+      "sha256": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/amc/test.jsonl": {
+      "bytes": 27631,
+      "sha256": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/cn_math_2024/test.jsonl": {
+      "bytes": 9946,
+      "sha256": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/gpqa/test.jsonl": {
+      "bytes": 154144,
+      "sha256": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/kaoyan/test.jsonl": {
+      "bytes": 192892,
+      "sha256": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/math/test.jsonl": {
+      "bytes": 446563,
+      "sha256": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/minerva/test.jsonl": {
+      "bytes": 130303,
+      "sha256": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/olympiadbench/test.jsonl": {
+      "bytes": 251176,
+      "sha256": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/heldout.json": {
+      "bytes": 23032339,
+      "sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/pool.json": {
+      "bytes": 1970428086,
+      "sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/probeA_ids.json": {
+      "bytes": 35843,
+      "sha256": "6ae31826e4d06b517e9e290d653a9b3502056cc81c57e281ef0447a0918de4d6"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/probeB_ids.json": {
+      "bytes": 35843,
+      "sha256": "42c0b860943dae371ae692c1824504ced4b9e10e09801790324adaca6ed4ffa1"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/selected_ids.json": {
+      "bytes": 1050003,
+      "sha256": "2241e6e39ab65fe465db8544d7635570ff8a67b7e95f764ac72ddcb1bb9d3d7f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/selected_ids.json": {
+      "bytes": 1050003,
+      "sha256": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/transfer_meta.json": {
+      "bytes": 4625697,
+      "sha256": "4c63b8c4eb0d306a3ca7bbd7ff3b80e16e5a83d4638f92b3faa806162476956c"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/operations/recovery-screen-ids-20261020.json": {
+      "bytes": 4483,
+      "sha256": "af899b05afe502400cebb6c2197a7fd454f66114198733838ffd7913f9975d8e"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/__init__.py": {
+      "bytes": 79,
+      "sha256": "2a99bd8120f34a0ccf36d7d6f5dc02d7a24d5bdd4f8eaf422bd73b75b17a4a13"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/campaign.json": {
+      "bytes": 5649,
+      "sha256": "1407fa170f5b962249c54a294cbadf2b9b96fa90ab6101ad46037301be183dfe"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.py": {
+      "bytes": 32044,
+      "sha256": "1b0a8872f61a6e89191c16082c5ede531a38965658072855180a943effc35724"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.slurm": {
+      "bytes": 4801,
+      "sha256": "3c450f680faca976efc5a2022ece602a369f2261bc41a3cb9c0a0da3fa0137ba"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_source_metadata.json": {
+      "bytes": 1437,
+      "sha256": "6a00b4f8f52b496c66d27270009d0c71116d676d024454f950af60730548f994"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_feasibility.py": {
+      "bytes": 33130,
+      "sha256": "0afb5f61050e2e7c6350ee9a68ffe47779159f85bf81f684b97536331b6b67da"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_feasibility.slurm": {
+      "bytes": 5252,
+      "sha256": "a2c099805f3a53cfdb59a4c1cf773e91f4f9d8e101b084062b3cb09b5e80728e"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_plan.json": {
+      "bytes": 10259,
+      "sha256": "d44572f18e3de76dea44b243a7427b8cac64cf5d87a294ae005b544412f28d80"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_submission.py": {
+      "bytes": 17855,
+      "sha256": "f1dab8e359603b754ead6dcfd364acb2b4a3a6da31d961f0445e9a8e05cff13a"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/objectives.py": {
+      "bytes": 9223,
+      "sha256": "c56bd73d9824284b0393e23812bfcb4d4496fb518296de5fc35c9ec17bd06fde"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/research.json": {
+      "bytes": 8331,
+      "sha256": "c81e9a4c966fea1441b77a87e3036fd4cacb2e61f9e2417b8150040252236aca"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/arc_challenge/ARC-Challenge/train-00000-of-00001.parquet": {
+      "bytes": 189909,
+      "sha256": "e488c1587ffdcfc8443f916c53488a95cd471c5790e0746c6bfe4cecf20962cb"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/arc_challenge/license-card/README.md": {
+      "bytes": 9001,
+      "sha256": "4a293e352253d771604725c978adcea71ee6504e89ed40e1cb0024ecafa9b37e"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/algebra/train/0000.parquet": {
+      "bytes": 505186,
+      "sha256": "73347f5b55869f21ff094361025dbd12d291e971aa4d72142eacee10438e449f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/counting_and_probability/train/0000.parquet": {
+      "bytes": 329354,
+      "sha256": "d37ae017930df41678edee50dcde18c17fb06afaff9eb505c1b95f1002bfcb31"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/geometry/train/0000.parquet": {
+      "bytes": 549388,
+      "sha256": "9dbf5e5b55499e696e0ba72da9d85d4f0be3acbf7eaa6cb014b0fc78bb63784f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/intermediate_algebra/train/0000.parquet": {
+      "bytes": 575154,
+      "sha256": "0c87f3798ebdfb915b1f9b6fc13c1a8d064c3cb91631ccbe85b83ed5d71150f6"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/license-card/README.md": {
+      "bytes": 3926,
+      "sha256": "2372e22a154ca3ed5865378e270b32d8ed5b615c4592fad42630a731a950bcc0"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/number_theory/train/0000.parquet": {
+      "bytes": 308653,
+      "sha256": "81c08649149b39811f2d1d7ddf5dfccf6c4c8044a2e169cfb24db09160c941f4"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/prealgebra/train/0000.parquet": {
+      "bytes": 383626,
+      "sha256": "765b526fb5c0b8385cb7be2c16bf4f6f28cf71f2bc15c826abfbb5fa7f8616cc"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/precalculus/train/0000.parquet": {
+      "bytes": 353745,
+      "sha256": "28bb1ff95525c8d32521509bef91de76339659f5467a381e6e8deea204538f0e"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/native_qa.json": {
+      "bytes": 8355,
+      "sha256": "c5d12f7d0c9bf40ac80f5c685a5db289ff88e1699c6b1628afa1fab120db5945"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/submission.py": {
+      "bytes": 16062,
+      "sha256": "fd0d9adc589aa6e6b9287df50801679e46d227c1a46d6a27c22a8b963907bb0a"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/reasoning/data.py": {
+      "bytes": 3338,
+      "sha256": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_extension_feasibility.py": {
+      "bytes": 13563,
+      "sha256": "6e4bf3225e4a68840babc878961b0b6db71cbc5e76cb095905080a65c87d294f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_extension_objectives.py": {
+      "bytes": 12567,
+      "sha256": "306caa2e01c1c9aa6ce1799c535bbe3d530549838ff160320750beda576639aa"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_extension_submission.py": {
+      "bytes": 13784,
+      "sha256": "0cd3949f92389e19112ed99a1d191690dad5ae5b63dc6e68d15b87fded5db50c"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_labeled_feasibility.py": {
+      "bytes": 19447,
+      "sha256": "f3114f0431c91e99eda6b53abb36f4424cebed193c4ed7d0e508496b9819d0f1"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_labeled_submission.py": {
+      "bytes": 20563,
+      "sha256": "a51f4837a0780cb432170d5f0989ee84dc9e80532451962d38c4be1568881531"
+    }
+  },
+  "input_stats_unchanged_at_closeout": true,
+  "lexical_criterion": {
+    "jaccard_denominator": 5,
+    "jaccard_numerator": 4,
+    "normalization": "NFKC casefold whitespace; preserve numbers/operators",
+    "search": "exact inverted index",
+    "shingle_tokens": 3,
+    "short_question_policy": "exact normalized equality when fewer than3tokens",
+    "tokenization": "word-or-single-nonwhitespace-character"
+  },
+  "limitations": "Exact for the declared lexical criterion, not a semantic decontamination guarantee. Official boxed answers are extracted, not independently verified. License metadata is preserved without inventing a license for the parquet conversion.",
+  "native_qa": {
+    "code_sha256": {
+      "extension/__init__.py": "2a99bd8120f34a0ccf36d7d6f5dc02d7a24d5bdd4f8eaf422bd73b75b17a4a13",
+      "extension/campaign.json": "1407fa170f5b962249c54a294cbadf2b9b96fa90ab6101ad46037301be183dfe",
+      "extension/cpu_feasibility.py": "1b0a8872f61a6e89191c16082c5ede531a38965658072855180a943effc35724",
+      "extension/cpu_feasibility.slurm": "3c450f680faca976efc5a2022ece602a369f2261bc41a3cb9c0a0da3fa0137ba",
+      "extension/development_source_metadata.json": "6a00b4f8f52b496c66d27270009d0c71116d676d024454f950af60730548f994",
+      "extension/labeled_feasibility.py": "0afb5f61050e2e7c6350ee9a68ffe47779159f85bf81f684b97536331b6b67da",
+      "extension/labeled_feasibility.slurm": "a2c099805f3a53cfdb59a4c1cf773e91f4f9d8e101b084062b3cb09b5e80728e",
+      "extension/labeled_plan.json": "d44572f18e3de76dea44b243a7427b8cac64cf5d87a294ae005b544412f28d80",
+      "extension/labeled_submission.py": "f1dab8e359603b754ead6dcfd364acb2b4a3a6da31d961f0445e9a8e05cff13a",
+      "extension/objectives.py": "c56bd73d9824284b0393e23812bfcb4d4496fb518296de5fc35c9ec17bd06fde",
+      "extension/research.json": "c81e9a4c966fea1441b77a87e3036fd4cacb2e61f9e2417b8150040252236aca",
+      "extension/submission.py": "fd0d9adc589aa6e6b9287df50801679e46d227c1a46d6a27c22a8b963907bb0a",
+      "reasoning/data.py": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68",
+      "tests/test_extension_feasibility.py": "6e4bf3225e4a68840babc878961b0b6db71cbc5e76cb095905080a65c87d294f",
+      "tests/test_extension_objectives.py": "306caa2e01c1c9aa6ce1799c535bbe3d530549838ff160320750beda576639aa",
+      "tests/test_extension_submission.py": "0cd3949f92389e19112ed99a1d191690dad5ae5b63dc6e68d15b87fded5db50c",
+      "tests/test_labeled_feasibility.py": "f3114f0431c91e99eda6b53abb36f4424cebed193c4ed7d0e508496b9819d0f1",
+      "tests/test_labeled_submission.py": "a51f4837a0780cb432170d5f0989ee84dc9e80532451962d38c4be1568881531"
+    },
+    "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/native_qa.json",
+    "sha256": "c5d12f7d0c9bf40ac80f5c685a5db289ff88e1699c6b1628afa1fab120db5945",
+    "tests_run": 108
+  },
+  "output_sha256": {
+    "excluded.jsonl": "3bd9d05421e5eb221759a6347795513026ed3f0c3b4037db7b1baa071017144f",
+    "groups.json": "a333abab42471a1f990e4ac670c1f0e0b56a48fe7aaee0930332cd1f525d4c0d",
+    "quarantined.jsonl": "25c78446728aff2df00a44fc0825147d45cc1b135829b44aa4d98f3cb9861d4a",
+    "surviving.jsonl": "f1304725d60087666fa2c3995fe7b4b344067ad28d1f2af35e8dbc5dab4e0551",
+    "surviving_ids.json": "d2d6e77998f1cadfc79f418fa315eec88d8a6c97c9cb7120bb5c3de976cc5098"
+  },
+  "plan_sha256": "d44572f18e3de76dea44b243a7427b8cac64cf5d87a294ae005b544412f28d80",
+  "propagation": "Connected components across all label-valid new records; any direct prior/benchmark match excludes the entire component. No old-exclusion-to-old-exclusion graph.",
+  "schema": "extension-labeled-feasibility-v1",
+  "screening_scope": "MATH problem; ARC question stem and separately rendered stem plus all original ordered choice labels/text. Main ARC question identity uses stem only. Correct answer keys and solution text never enter question identities or exclusion text.",
+  "source_metadata": {
+    "observed_at_utc": "2026-10-20T22:49:51.384749+00:00",
+    "schema": "reasoning-sft-fresh-development-source-pins-v1",
+    "sources": [
+      {
+        "files": [
+          "algebra/train/0000.parquet",
+          "counting_and_probability/train/0000.parquet",
+          "geometry/train/0000.parquet",
+          "intermediate_algebra/train/0000.parquet",
+          "number_theory/train/0000.parquet",
+          "prealgebra/train/0000.parquet",
+          "precalculus/train/0000.parquet"
+        ],
+        "license": null,
+        "metadata_url": "https://huggingface.co/api/datasets/EleutherAI/hendrycks_math/revision/refs%2Fconvert%2Fparquet",
+        "purpose": "Development/confirmation only; no data downloaded.",
+        "repo_id": "EleutherAI/hendrycks_math",
+        "requested_revision": "refs/convert/parquet",
+        "resolved_revision": "fe39eaeb3783a7dd5d7e305da9a8db9b0c4e6b93"
+      },
+      {
+        "files": [
+          "ARC-Challenge/train-00000-of-00001.parquet",
+          "ARC-Easy/train-00000-of-00001.parquet",
+          "README.md"
+        ],
+        "license": [
+          "cc-by-sa-4.0"
+        ],
+        "metadata_url": "https://huggingface.co/api/datasets/allenai/ai2_arc/revision/main",
+        "purpose": "Development/confirmation only; no data downloaded.",
+        "repo_id": "allenai/ai2_arc",
+        "requested_revision": "main",
+        "resolved_revision": "210d026faf9955653af8916fad021475a3f00453"
+      }
+    ],
+    "status": "metadata_only_no_data_downloaded"
+  },
+  "versions": {
+    "huggingface_hub": "0.36.0",
+    "pyarrow": "22.0.0",
+    "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]"
+  }
+}

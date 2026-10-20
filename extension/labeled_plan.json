@@ -1,0 +1,250 @@
+{
+  "automatic_downstream": false,
+  "benchmark_readiness": {
+    "path": "deadline/artifacts/benchmark_readiness.json",
+    "sha256": "9f0d2480881672ba07c3c9a4143dec12b55625d721c1ce0ed45e6bfd82082754"
+  },
+  "choose_splits": false,
+  "cpu_only": true,
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "exclusions": [
+    {
+      "expected_rows": 15000,
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/pool.json",
+      "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "path": "deadline/artifacts/training/random/selected_ids.json",
+      "reason": "prior_random_training",
+      "sha256": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9"
+    },
+    {
+      "expected_rows": 15000,
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/pool.json",
+      "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "path": "deadline/artifacts/training/advanced/selected_ids.json",
+      "reason": "prior_advanced_training",
+      "sha256": "2241e6e39ab65fe465db8544d7635570ff8a67b7e95f764ac72ddcb1bb9d3d7f"
+    },
+    {
+      "expected_rows": 512,
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/pool.json",
+      "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "path": "deadline/artifacts/probeA_ids.json",
+      "reason": "prior_probeA_training",
+      "sha256": "6ae31826e4d06b517e9e290d653a9b3502056cc81c57e281ef0447a0918de4d6"
+    },
+    {
+      "expected_rows": 512,
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/pool.json",
+      "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "path": "deadline/artifacts/probeB_ids.json",
+      "reason": "prior_probeB_training",
+      "sha256": "42c0b860943dae371ae692c1824504ced4b9e10e09801790324adaca6ed4ffa1"
+    },
+    {
+      "expected_rows": 30000,
+      "format": "id_list",
+      "json_pointer": "/reservoir_ids",
+      "lookup": "deadline/artifacts/pool.json",
+      "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "path": "deadline/artifacts/transfer_meta.json",
+      "reason": "previously_scored_reservoir",
+      "sha256": "4c63b8c4eb0d306a3ca7bbd7ff3b80e16e5a83d4638f92b3faa806162476956c"
+    },
+    {
+      "expected_rows": 64,
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/heldout.json",
+      "lookup_sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3",
+      "path": "deadline/operations/recovery-screen-ids-20261020.json",
+      "reason": "viewed_recovery_source",
+      "sha256": "af899b05afe502400cebb6c2197a7fd454f66114198733838ffd7913f9975d8e"
+    },
+    {
+      "expected_rows": 192,
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/heldout.json",
+      "lookup_sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3",
+      "path": "deadline/anchor-search-runs/validation-v2-20261020-attempt2/search_ids.json",
+      "reason": "viewed_anchor_search",
+      "sha256": "4581332873fef806bbbaf7842b27bc44f02ccd666445e93d920dcbf46b2d53da"
+    },
+    {
+      "expected_rows": 192,
+      "format": "id_list",
+      "json_pointer": "",
+      "lookup": "deadline/artifacts/heldout.json",
+      "lookup_sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3",
+      "path": "deadline/anchor-search-runs/validation-v2-20261020-attempt2/confirmation_ids.json",
+      "reason": "viewed_anchor_confirmation",
+      "sha256": "69002547f908773102ef3a41286668f84a7ab4fe088c350239aaf4bd3f4c6f9b"
+    },
+    {
+      "expected_rows": 30,
+      "format": "benchmark_jsonl",
+      "path": "deadline/artifacts/benchmarks/aime/test.jsonl",
+      "question_field": "problem",
+      "reason": "benchmark_aime",
+      "sha256": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc"
+    },
+    {
+      "expected_rows": 30,
+      "format": "benchmark_jsonl",
+      "path": "deadline/artifacts/benchmarks/aime25/test.jsonl",
+      "question_field": "question",
+      "reason": "benchmark_aime25",
+      "sha256": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d"
+    },
+    {
+      "expected_rows": 40,
+      "format": "benchmark_jsonl",
+      "path": "deadline/artifacts/benchmarks/amc/test.jsonl",
+      "question_field": "question",
+      "reason": "benchmark_amc",
+      "sha256": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4"
+    },
+    {
+      "expected_rows": 30,
+      "format": "benchmark_jsonl",
+      "path": "deadline/artifacts/benchmarks/cn_math_2024/test.jsonl",
+      "question_field": "problem",
+      "reason": "benchmark_cn_math_2024",
+      "sha256": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533"
+    },
+    {
+      "expected_rows": 198,
+      "format": "benchmark_jsonl",
+      "path": "deadline/artifacts/benchmarks/gpqa/test.jsonl",
+      "question_field": "question",
+      "reason": "benchmark_gpqa",
+      "sha256": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f"
+    },
+    {
+      "expected_rows": 199,
+      "format": "benchmark_jsonl",
+      "path": "deadline/artifacts/benchmarks/kaoyan/test.jsonl",
+      "question_field": "problem",
+      "reason": "benchmark_kaoyan",
+      "sha256": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7"
+    },
+    {
+      "expected_rows": 500,
+      "format": "benchmark_jsonl",
+      "path": "deadline/artifacts/benchmarks/math/test.jsonl",
+      "question_field": "problem",
+      "reason": "benchmark_math",
+      "sha256": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94"
+    },
+    {
+      "expected_rows": 272,
+      "format": "benchmark_jsonl",
+      "path": "deadline/artifacts/benchmarks/minerva/test.jsonl",
+      "question_field": "question",
+      "reason": "benchmark_minerva",
+      "sha256": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d"
+    },
+    {
+      "expected_rows": 675,
+      "format": "benchmark_jsonl",
+      "path": "deadline/artifacts/benchmarks/olympiadbench/test.jsonl",
+      "question_field": "question",
+      "reason": "benchmark_olympiadbench",
+      "sha256": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f"
+    },
+    {
+      "expected_rows": 40,
+      "format": "benchmark_jsonl",
+      "path": "deadline/artifacts/benchmarks/amc/test.jsonl",
+      "question_field": "problem",
+      "reason": "benchmark_amc",
+      "sha256": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4"
+    }
+  ],
+  "future_training_must_exclude_all_reserved_development_groups": true,
+  "grouping_policy": {
+    "exclusion_propagation": "Exclude entire labeled component if any member directly matches a declared prior or benchmark exclusion",
+    "scope": "Declared lexical near-duplicates only; not a semantic decontamination guarantee. ARC stem and rendered choices may both be screened, never the answer key.",
+    "within_labeled": "connected components across all label-valid records"
+  },
+  "historical_inputs_read_only": true,
+  "label_policy": {
+    "arc": "Preserve exact choice labels/text/order. Official answerKey must match exactly one choice; otherwise quarantine with explicit reason",
+    "identities": "Answer-independent normalized questions; keep ARC choices separate from correct answer",
+    "math": "Final balanced boxed answer from official solution; unextractable answer is quarantined with explicit ID/reason and unavailable to generation",
+    "no_model_outcomes": true,
+    "unsupported_structural_schema": "fail closed"
+  },
+  "model_inference": false,
+  "native_qa_required": true,
+  "near_duplicate": {
+    "jaccard_denominator": 5,
+    "jaccard_numerator": 4,
+    "normalization": "NFKC casefold whitespace; preserve numbers/operators",
+    "search": "exact inverted index",
+    "shingle_tokens": 3,
+    "short_question_policy": "exact normalized equality when fewer than3tokens",
+    "tokenization": "word-or-single-nonwhitespace-character"
+  },
+  "output_policy": {
+    "capacity_shortfall_is_reportable_not_a_failed_training_gate": true,
+    "exclusive_run_directory": true,
+    "no_split_choice": true,
+    "no_training_or_generation": true,
+    "public_aggregate_and_provenance_only": true,
+    "quarantine_and_exclusion_ids_with_reasons": true,
+    "raw_labeled_records_remain_private_until_licensed_publication_review": true,
+    "surviving_records_and_group_ids": true
+  },
+  "reserve_seconds": 172800,
+  "schema": "extension-labeled-feasibility-plan-v1",
+  "science_limit": "ARC-Challenge is a general science retention guard, not a GPQA proxy that establishes graduate-level capability.",
+  "source_metadata": "extension/development_source_metadata.json",
+  "sources": [
+    {
+      "expected_rows": 7500,
+      "files": [
+        "algebra/train/0000.parquet",
+        "counting_and_probability/train/0000.parquet",
+        "geometry/train/0000.parquet",
+        "intermediate_algebra/train/0000.parquet",
+        "number_theory/train/0000.parquet",
+        "prealgebra/train/0000.parquet",
+        "precalculus/train/0000.parquet"
+      ],
+      "kind": "math",
+      "license_card": {
+        "declared_license": "mit",
+        "filename": "README.md",
+        "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3"
+      },
+      "repo_id": "EleutherAI/hendrycks_math",
+      "revision": "fe39eaeb3783a7dd5d7e305da9a8db9b0c4e6b93"
+    },
+    {
+      "expected_rows": 1119,
+      "files": [
+        "ARC-Challenge/train-00000-of-00001.parquet"
+      ],
+      "kind": "arc_challenge",
+      "license_card": {
+        "declared_license": "cc-by-sa-4.0",
+        "filename": "README.md",
+        "revision": "210d026faf9955653af8916fad021475a3f00453"
+      },
+      "repo_id": "allenai/ai2_arc",
+      "revision": "210d026faf9955653af8916fad021475a3f00453"
+    }
+  ],
+  "status": "prospective_cpu_capacity_audit_only",
+  "wall_time_seconds": 7200,
+  "workload_limit": "Two pinned official training sources only, no model/tokenizer, no reference scoring, no test outcomes, no downstream job."
+}

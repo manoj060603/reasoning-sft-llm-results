@@ -50,6 +50,27 @@ The next stage is to seal labeled development splits and small causal pilots
 for data compatibility, preservation objectives and a separately identified
 verified concise-response arm. No new GPU training or inference has started.
 
+The next [labeled-data capacity audit](extension/report/labeled-feasibility-20261020-1222926/complete.json)
+also completed successfully: **54 seconds, zero GPUs, all 108 native checks
+passed**. Pinned official training sources contain 7,500 MATH records and 1,119
+ARC-Challenge records. Screening against prior training, probes, the scored
+reservoir, viewed validation and all nine benchmark question sets leaves
+**6,013 usable MATH records and 1,119 ARC-Challenge records**, in 7,077 retained
+question groups. Four MATH records have unresolved boxed-answer extraction;
+1,483 more are excluded directly or through a related question group.
+The [prospective CPU plan](extension/labeled_plan.json), [native QA](extension/report/labeled-feasibility-20261020-1222926/native_qa.json)
+and [accounting](extension/report/labeled-feasibility-20261020-1222926/accounting.json)
+preserve the exact execution.
+
+The screening is complete for its declared lexical criterion: normalized token
+trigram-set Jaccard similarity of at least 0.8, with connected-group exclusion.
+It does not guarantee removal of every semantic paraphrase. Correct answer
+keys and solution text do not enter the matching. These surviving counts are
+sufficient for the proposed development and confirmation targets, subject to
+whole-group allocation. **No splits have yet been chosen, and no new model
+has been trained or benchmarked.** ARC-Challenge supplies a general science
+retention check; it does not establish GPQA performance.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%
