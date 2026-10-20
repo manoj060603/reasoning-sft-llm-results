@@ -1,0 +1,251 @@
+{
+  "schema": "deadline-four-role-partial-benchmark-audit-v1",
+  "created_at_utc": "2026-10-20T15:07:03.558976+00:00",
+  "allocation": {
+    "slurm_job_id": "1210310",
+    "slurm_step_id": "7",
+    "slurmd_nodename": "owl-sr001",
+    "cuda_visible_devices": ""
+  },
+  "benchmarks": [
+    "amc",
+    "aime25",
+    "aime"
+  ],
+  "benchmark_counts": {
+    "amc": 40,
+    "aime25": 30,
+    "aime": 30
+  },
+  "samples_per_problem": 8,
+  "runs": {
+    "original": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original",
+      "benchmarks": {
+        "amc": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 40,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.425,
+            "pass_at_8": 0.7,
+            "truncated_samples": 3
+          }
+        },
+        "aime25": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.008333333333333333,
+            "pass_at_8": 0.03333333333333333,
+            "truncated_samples": 0
+          }
+        },
+        "aime": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.07916666666666666,
+            "pass_at_8": 0.23333333333333334,
+            "truncated_samples": 10
+          }
+        }
+      },
+      "errors": [],
+      "official_eight_macro": null,
+      "supplemented_historical_seven_macro": null
+    },
+    "random": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random",
+      "benchmarks": {
+        "amc": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 40,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.225,
+            "pass_at_8": 0.475,
+            "truncated_samples": 190
+          }
+        },
+        "aime25": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.029166666666666667,
+            "pass_at_8": 0.16666666666666666,
+            "truncated_samples": 203
+          }
+        },
+        "aime": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.004166666666666667,
+            "pass_at_8": 0.03333333333333333,
+            "truncated_samples": 204
+          }
+        }
+      },
+      "errors": [],
+      "official_eight_macro": null,
+      "supplemented_historical_seven_macro": null
+    },
+    "advanced": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced",
+      "benchmarks": {
+        "amc": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 40,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.25,
+            "pass_at_8": 0.45,
+            "truncated_samples": 169
+          }
+        },
+        "aime25": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.016666666666666666,
+            "pass_at_8": 0.13333333333333333,
+            "truncated_samples": 185
+          }
+        },
+        "aime": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.025,
+            "pass_at_8": 0.13333333333333333,
+            "truncated_samples": 192
+          }
+        }
+      },
+      "errors": [],
+      "official_eight_macro": null,
+      "supplemented_historical_seven_macro": null
+    },
+    "recovery": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/benchmarks",
+      "benchmarks": {
+        "amc": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 40,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.390625,
+            "pass_at_8": 0.75,
+            "truncated_samples": 4
+          }
+        },
+        "aime25": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.025,
+            "pass_at_8": 0.1,
+            "truncated_samples": 3
+          }
+        },
+        "aime": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.0625,
+            "pass_at_8": 0.23333333333333334,
+            "truncated_samples": 19
+          }
+        }
+      },
+      "errors": [],
+      "official_eight_macro": null,
+      "supplemented_historical_seven_macro": null
+    }
+  },
+  "comparison": {
+    "matched": true,
+    "errors": []
+  },
+  "file_evidence": {
+    "original": {
+      "manifest_sha256": "ae42667eeac86f7aebafbda1afd4f364bd95e422ff32ae9b7555202d48a9d68b",
+      "benchmarks": {
+        "amc": {
+          "batch_000000.json": "75df4477a36bac719c3ba6a86f55db9580d1bd66c1349247e8b7a8296ba3e114"
+        },
+        "aime25": {
+          "batch_000000.json": "8c140327e77d6141bfaa7ebbe27fbb933e44f486d5d0fcdcb41add3b57c1b2f3"
+        },
+        "aime": {
+          "batch_000000.json": "01ab51176499d2c00328de60009700f8a58cd6210b549b4031f3f46fd121d141"
+        }
+      }
+    },
+    "random": {
+      "manifest_sha256": "91b10bd128f10e7453dddc4bd02b4941d15d3a55795a17ab210bcb4c176e5aa4",
+      "benchmarks": {
+        "amc": {
+          "batch_000000.json": "78cee883e4fe95f3557991728416ad2188f503ec476e209f5b17283ac66454eb"
+        },
+        "aime25": {
+          "batch_000000.json": "7ec1a662331d54a4910031b13bdff147fc3097144d99174a34ec03222b143234"
+        },
+        "aime": {
+          "batch_000000.json": "81d5bdee81253ad5b0fd283aec08659c94e84400f314594c835546c50d2a19f1"
+        }
+      }
+    },
+    "advanced": {
+      "manifest_sha256": "4fa4bd9d6913ffff95b6a2a65d74966aa30782b78ad87ca9b98748560141a36a",
+      "benchmarks": {
+        "amc": {
+          "batch_000000.json": "51ab2d99aa3d174be8defe3c3efb28782198a34fad68435ae9a58b2a6349606d"
+        },
+        "aime25": {
+          "batch_000000.json": "7b56452043274c1d330370931c4ac9c2547bd5d5564c3b9bc76fa2c9e296c0e2"
+        },
+        "aime": {
+          "batch_000000.json": "9cbcbf51f193024de820bc799e5a0ffb71cc44bf5c00412bab345dff8248e28b"
+        }
+      }
+    },
+    "recovery": {
+      "manifest_sha256": "17c11ab91b445b65ea16ad7f8115001b1d636ec9788daa914bc7823cf4c019dc",
+      "benchmarks": {
+        "amc": {
+          "batch_000000.json": "a163a7289d90e4baa4837ecf340b14cf7df6eee156847b599cbf1787a46233db"
+        },
+        "aime25": {
+          "batch_000000.json": "4db484ae0762d07805eb62e8aec6f4e7ba9d695eb185aad92bc7d8bf0746059b"
+        },
+        "aime": {
+          "batch_000000.json": "1c5f267a844f16e6a0051ddd2556e52ba587693e504e2eb858b303ee4ee23ac7"
+        }
+      }
+    }
+  },
+  "auditor_sha256": "d8465b346b5a51dd0c30287202265b7e195014649d31fd19ac7588ede9408cb2",
+  "scope": "Three completed tasks only:AMC,AIME24,and supplementaryAIME25. Complete recovery macros/paired uncertainty remain pending. No overall winner/significance/SOTA is established."
+}

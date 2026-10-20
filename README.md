@@ -10,10 +10,10 @@ due **October 20, 2026, at 11:59 p.m. Eastern**.
 
 ## Verified progress
 
-Verified snapshot: **October 20, 2026, at 6:10 a.m. Eastern / 10:10 UTC**.
-Both final training runs are complete. Each trained model has seven audited
-completed tasks, including supplementary AIME25: **7/9 total, 6/8 supplied
-tasks**. Only OlympiadBench and GPQA remain pending for both models.
+Verified snapshot: **October 20, 2026, at 11:24 a.m. Eastern / 15:24 UTC**.
+Both final training runs are complete. Each trained model has eight audited
+completed tasks, including supplementary AIME25: **8/9 total, 7/8 supplied
+tasks**. Only GPQA remains pending for both models.
 
 | Stage | Verified state |
 |---|---|
@@ -21,8 +21,8 @@ tasks**. Only OlympiadBench and GPQA remain pending for both models.
 | New-method selection | Complete; 15,000 unchanged examples, zero training truncation |
 | Both final full-SFT models | Complete; 1,875 updates each, 15,000 unique examples used once, 434 finite FP32 tensors per model |
 | Original benchmark evaluation | All nine complete, including supplementary AIME25 |
-| Random-control evaluation | 7/9 complete: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, Minerva and supplementary AIME25 |
-| New-method evaluation | 7/9 complete: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, Minerva and supplementary AIME25 |
+| Random-control evaluation | 8/9 complete: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, Minerva, OlympiadBench and supplementary AIME25 |
+| New-method evaluation | 8/9 complete: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, Minerva, OlympiadBench and supplementary AIME25 |
 | Evaluation continuations | Running: random `1210309` (16-hour allocation), advanced `1210310` (12-hour allocation); both initial six-hour parents timed out |
 | Final comparisons and Hugging Face publication | Pending; CPU closeout `1208135` depends on both continuations succeeding; publisher `1209745` depends on closeout |
 
@@ -30,7 +30,7 @@ The original model's **official-eight macro is 29.30% pass@1 and 52.86% pass@8**
 The [partial raw-result audit](deadline/report/partial-20261020T1010Z/results.md)
 reports the following percentages; every completed task has eight responses per
 problem and verified identities. Protocol, benchmark data and hardware agree;
-the full matched comparison remains incomplete.
+the full matched comparison remains incomplete. The [15:24 UTC native audit](deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json) additionally verifies OlympiadBench for all three primary roles.
 
 | Task with measured results | Original pass@1 / pass@8 | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
 |---|---:|---:|---:|
@@ -40,11 +40,12 @@ the full matched comparison remains incomplete.
 | CN_MATH_2024 | 10.00% / 26.67% | 0.83% / 6.67% | 5.00% / 23.33% |
 | Kaoyan | 21.11% / 49.75% | 14.07% / 41.71% | 15.45% / 47.74% |
 | Minerva | 30.33% / 47.79% | 15.95% / 36.40% | 18.11% / 41.54% |
+| OlympiadBench | 28.26% / 51.85% | 17.15% / 38.37% | 18.87% / 40.44% |
 | AIME25, supplementary | 0.83% / 3.33% | 2.92% / 16.67% | 1.67% / 13.33% |
 
-Both trained models trail the original on all six currently completed supplied
+Both trained models trail the original on all seven currently completed supplied
 tasks and improve on supplementary AIME25. Advanced exceeds random on CN,
-Kaoyan and Minerva in both metrics. On MATH, advanced pass@1 is **51.225% versus 49.725%**
+Kaoyan, Minerva and OlympiadBench in both metrics. On MATH, advanced pass@1 is **51.225% versus 49.725%**
 for random, a **+1.50 percentage-point** difference; pass@8 ties at **78.20%**.
 Both remain below the original's 65.90% / 83.80%. Advanced also exceeds random
 on AIME24, has higher pass@1 but lower pass@8 on AMC, and trails random on
@@ -79,7 +80,13 @@ results and publication identities remain separate. The first recovery task is
 **39.0625% pass@1 / 75.00% pass@8**, versus advanced **25.00% / 45.00%** and
 original **42.50% / 70.00%**. Recovery improves over advanced in both metrics on
 AMC, while original retains higher pass@1. Full-suite results and significance
-remain unestablished.
+remain unestablished. Recovery now has six audited tasks:
+MATH **65.325% / 84.60%**, CN Math **12.50% / 33.33%**, and Kaoyan
+**21.1055% / 54.2714%** are also verified. The [five-task audit](deadline/report/recovery-benchmark-partial-20261020T1521Z/audit.json)
+and [additional Kaoyan audit](deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json)
+retain exact comparisons. MATH pass@1 remains below original; CN exceeds original
+in both recorded metrics, and Kaoyan ties original pass@1 with higher pass@8.
+No full macro or significance is established.
 
 The [runtime continuation record](deadline/operations/evaluation-resume-20261020.json)
 documents retaining six completed benchmarks and fully regenerating the unsaved

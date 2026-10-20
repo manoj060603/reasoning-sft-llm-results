@@ -1,6 +1,6 @@
 {
   "schema": "reasoning-sft-assignment-checklist-v1",
-  "status": "execution snapshot at 2026-10-20 10:10 UTC: both datasets, selection and final full-SFT training complete; original 9/9 and both trained models 7/9 raw evaluations verified (6/8 supplied tasks each); continuations running; full comparison, uncertainty, Hugging Face publication and submission pending",
+  "status": "Execution snapshot at 2026-10-20 15:24 UTC: both final full-SFT models have 8/9 tasks raw-audited (7/8 supplied tasks); original has 9/9. Only GPQA remains for the primary trained models. Recovery has 6/9 tasks audited separately. Full comparison, uncertainty, Hugging Face publication and course submission are pending.",
   "assignment_url": "https://github.com/reds-lab/Project-Reasoning-SFT-LLM",
   "deadline_eastern": "2026-10-20T23:59:00-04:00",
   "current_experiment": "Cross-fitted Transfer Gain with Coverage; fresh original-base initialization",
@@ -165,7 +165,7 @@
       "id": "A09",
       "mandatory": true,
       "requirement": "Evaluate both fine-tuned models and compare them with the original.",
-      "status": "partial_seven_tasks_per_trained_model_full_macros_pending",
+      "status": "partial_eight_tasks_per_trained_model_full_macros_pending",
       "evidence_paths": [
         "deadline/results/random",
         "deadline/results/advanced",
@@ -173,7 +173,8 @@
         "deadline/report/partial-20261020T1010Z/audit.json",
         "deadline/report/partial-20261020T1010Z/results.md",
         "deadline/operations/evaluation-continuation-admission.json",
-        "deadline/operations/evaluation-resume-20261020.json"
+        "deadline/operations/evaluation-resume-20261020.json",
+        "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json"
       ],
       "completion_evidence_required": [
         "complete supplied-eight results for all three models",
@@ -182,7 +183,7 @@
         "partial results explicitly labeled",
         "broad source-random and advanced complete-target population differences disclosed"
       ],
-      "evidence_note": "Original 9/9 complete; random and advanced each 7/9 complete (AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, Minerva, supplementary AIME25). All completed tasks are verified from raw eight-sample predictions with no per-run audit errors; completed protocol/data/hardware identities agree. Each trained model has 6/8 supplied tasks complete and awaits OlympiadBench and GPQA. Full macros remain pending."
+      "evidence_note": "Original has 9/9 tasks complete. Random and primary advanced each have 8/9 tasks raw-verified, including OlympiadBench (675 problems, eight samples each). Completed protocol, data and hardware identities agree. Each trained model has 7/8 supplied tasks complete; only GPQA is pending. Full macros remain pending."
     },
     {
       "id": "A10",
@@ -202,7 +203,7 @@
         "sampling-population limitation"
       ],
       "scope_note": "The whole advanced selection policy is compared with broad prepared-source random sampling. Do not attribute a difference solely to transfer gain. A guaranteed positive improvement or statistical significance is not an assignment completion requirement.",
-      "evidence_note": "Both trained models trail original on all six completed supplied tasks and exceed original on supplementary AIME25. Advanced exceeds random on CN, Kaoyan and Minerva in both metrics, and on MATH pass@1 by 1.50 percentage points with pass@8 tied. Minerva advanced is 18.1066%/41.5441% versus random 15.9467%/36.3971%, below original 30.3309%/47.7941%. Earlier AMC/AIME25 findings remain mixed. No overall winner, significance, CIs or SOTA claim is established; full macros remain pending. Scientific method/protocol unchanged in response to scores."
+      "evidence_note": "Both primary trained models trail the original on all seven completed supplied tasks and exceed the original on supplementary AIME25. Advanced beats random in pass@1 on all seven completed supplied tasks. Across the eight completed tasks, advanced pass@8 wins five, ties MATH, and trails AMC and AIME25. Full macros, paired uncertainty and an overall winner remain pending. The primary scientific method is unchanged; post-hoc recovery results are reported separately."
     },
     {
       "id": "A11",
@@ -425,8 +426,8 @@
   "last_reconciled_utc": "2026-10-20T10:10:00+00:00",
   "requested_repository_owner": "manoj060603",
   "team_submission_action": "Team-owned action; no course-system submission is performed by this experiment automation.",
-  "last_verified_cluster_snapshot_utc": "2026-10-20T14:58:58+00:00",
-  "current_access_note": "Both evaluation continuations are running after their initial six-hour evaluation parents timed out. Six completed benchmarks per role were retained; unsaved Minerva was regenerated in full and is now raw-audited complete. Closeout and publication remain dependency-gated and pending.",
+  "last_verified_cluster_snapshot_utc": "2026-10-20T15:24:09.783015+00:00",
+  "current_access_note": "Both primary evaluation continuations are running GPQA after completing OlympiadBench. Each primary trained model has 8/9 tasks verified. Closeout and publication dependencies are unchanged. Recovery benchmark stage 1214775 is a separate 45-minute allocation.",
   "current_execution_evidence": {
     "partial_audit": "deadline/report/partial-20261020T1010Z/audit.json",
     "training_complete": {
@@ -435,8 +436,8 @@
     },
     "complete_tasks": {
       "original": 9,
-      "random": 7,
-      "advanced": 7
+      "random": 8,
+      "advanced": 8
     },
     "trained_model_full_macros": null,
     "uncertainty": null,
@@ -473,8 +474,8 @@
     "final_terminal_resource_accounting": "pending",
     "complete_official_eight_tasks": {
       "original": 8,
-      "random": 6,
-      "advanced": 6
+      "random": 7,
+      "advanced": 7
     },
     "gpu_resource_figure_interpretation": "47.90/48 is verified terminal GPU charges plus full live primary and initial recovery benchmark reservations, not actual elapsed consumption. Development316 seconds is charged360 seconds after exact terminal accounting. A later recovery continuation requires fresh verified capacity.",
     "partial_math_comparison": {
@@ -507,7 +508,6 @@
       "paired_uncertainty": "pending"
     },
     "remaining_tasks_per_trained_model": [
-      "olympiadbench",
       "gpqa"
     ],
     "partial_kaoyan": {
@@ -624,6 +624,156 @@
             "pass_at_8": 0.75,
             "truncated_samples": 4
           }
+        },
+        "aime25": {
+          "original": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.008333333333333333,
+            "pass_at_8": 0.03333333333333333,
+            "truncated_samples": 0
+          },
+          "random": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.029166666666666667,
+            "pass_at_8": 0.16666666666666666,
+            "truncated_samples": 203
+          },
+          "advanced": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.016666666666666666,
+            "pass_at_8": 0.13333333333333333,
+            "truncated_samples": 185
+          },
+          "recovery": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.025,
+            "pass_at_8": 0.1,
+            "truncated_samples": 3
+          }
+        },
+        "aime": {
+          "original": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.07916666666666666,
+            "pass_at_8": 0.23333333333333334,
+            "truncated_samples": 10
+          },
+          "random": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.004166666666666667,
+            "pass_at_8": 0.03333333333333333,
+            "truncated_samples": 204
+          },
+          "advanced": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.025,
+            "pass_at_8": 0.13333333333333333,
+            "truncated_samples": 192
+          },
+          "recovery": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.0625,
+            "pass_at_8": 0.23333333333333334,
+            "truncated_samples": 19
+          }
+        },
+        "math": {
+          "original": {
+            "problems": 500,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.659,
+            "pass_at_8": 0.838,
+            "truncated_samples": 19
+          },
+          "random": {
+            "problems": 500,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.49725,
+            "pass_at_8": 0.782,
+            "truncated_samples": 1508
+          },
+          "advanced": {
+            "problems": 500,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.51225,
+            "pass_at_8": 0.782,
+            "truncated_samples": 1235
+          },
+          "recovery": {
+            "problems": 500,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.65325,
+            "pass_at_8": 0.846,
+            "truncated_samples": 27
+          }
+        },
+        "cn_math_2024": {
+          "original": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.1,
+            "pass_at_8": 0.26666666666666666,
+            "truncated_samples": 8
+          },
+          "random": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.008333333333333333,
+            "pass_at_8": 0.06666666666666667,
+            "truncated_samples": 215
+          },
+          "advanced": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.05,
+            "pass_at_8": 0.23333333333333334,
+            "truncated_samples": 159
+          },
+          "recovery": {
+            "problems": 30,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.125,
+            "pass_at_8": 0.3333333333333333,
+            "truncated_samples": 6
+          }
+        },
+        "kaoyan": {
+          "original": {
+            "problems": 199,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.21105527638190955,
+            "pass_at_8": 0.49748743718592964,
+            "truncated_samples": 3
+          },
+          "random": {
+            "problems": 199,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.1407035175879397,
+            "pass_at_8": 0.41708542713567837,
+            "truncated_samples": 1009
+          },
+          "advanced": {
+            "problems": 199,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.15452261306532664,
+            "pass_at_8": 0.47738693467336685,
+            "truncated_samples": 667
+          },
+          "recovery": {
+            "problems": 199,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.21105527638190955,
+            "pass_at_8": 0.542713567839196,
+            "truncated_samples": 1
+          }
         }
       },
       "metric_scope": "One sample per source question, at most 4K output tokens, measuring source teacher-answer agreement and stopping; not primary 32K/eight-sample benchmark accuracy.",
@@ -648,12 +798,40 @@
       "initial_benchmark_limit_minutes": 45,
       "full_suite_complete": false,
       "future_continuation_admitted": false,
-      "complete_tasks": 1,
-      "partial_benchmark_audit": "deadline/report/recovery-benchmark-partial-20261020T1502Z/audit.json"
-    }
+      "complete_tasks": 6,
+      "partial_benchmark_audit": "deadline/report/recovery-benchmark-partial-20261020T1502Z/audit.json",
+      "partial_benchmark_audits": [
+        "deadline/report/recovery-benchmark-partial-20261020T1521Z/audit.json",
+        "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json"
+      ]
+    },
+    "partial_olympiadbench": {
+      "original": {
+        "problems": 675,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.2825925925925926,
+        "pass_at_8": 0.5185185185185185,
+        "truncated_samples": 99
+      },
+      "random": {
+        "problems": 675,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.17148148148148148,
+        "pass_at_8": 0.3837037037037037,
+        "truncated_samples": 3526
+      },
+      "advanced": {
+        "problems": 675,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.1887037037037037,
+        "pass_at_8": 0.40444444444444444,
+        "truncated_samples": 3062
+      }
+    },
+    "partial_olympiadbench_audit": "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json"
   },
-  "last_verified_result_snapshot_utc": "2026-10-20T10:10:00+00:00",
-  "operational_update_utc": "2026-10-20T14:58:58+00:00",
+  "last_verified_result_snapshot_utc": "2026-10-20T15:24:09.783015+00:00",
+  "operational_update_utc": "2026-10-20T15:24:09.783015+00:00",
   "reviewed_implementation_commit_scope": "b092f29 is a historical primary implementation review; later operational and recovery changes have separately recorded native receipts.",
   "report_closeout_obligations": [
     "FinalCPUjob creates audit/uncertainty/package metadata, not the finished narrative; reconcile FINAL_REPORT.md,README and this checklist manually with complete results and verified links.",

@@ -1,6 +1,6 @@
 # Draft report: Cross-fitted Transfer Gain with Coverage for Reasoning SFT
 
-**Snapshot: 20 October 2026, 6:10 a.m. Eastern / 10:10 UTC.** Both final full-SFT runs are complete: each performed 1,875 updates, used all 15,000 unique examples exactly once, and saved 434 verified finite FP32 tensors. The original-model evaluation is complete on the supplied eight benchmarks and supplementary AIME25. Both trained models have **7/9 completed tasks**: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, Minerva and supplementary AIME25. Their supplied-eight coverage is **6/8 each**. Only OlympiadBench and GPQA, complete macros, paired uncertainty, final Hugging Face links and course submission remain pending. Both unchanged evaluation continuations are running; final closeout and publication remain dependency-gated. Pending entries are not zero scores.
+**Snapshot: 20 October 2026, 11:24 a.m. Eastern / 15:24 UTC.** Both final full-SFT runs are complete: each performed 1,875 updates, used all 15,000 unique examples exactly once, and saved 434 verified finite FP32 tensors. The original-model evaluation is complete on the supplied eight benchmarks and supplementary AIME25. Both trained models have **8/9 completed tasks**: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, Minerva, OlympiadBench and supplementary AIME25. Their supplied-eight coverage is **7/8 each**. Only GPQA, complete macros, paired uncertainty, final Hugging Face links and course submission remain pending. Both unchanged evaluation continuations are running; final closeout and publication remain dependency-gated. Pending entries are not zero scores.
 
 We investigate whether a source-only selection policy can improve reasoning SFT over a random control. Two small LoRA training runs measure how examples in the opposite source fold respond to adaptation. The final selector combines relative response-loss reduction with structural eligibility and topic/length coverage. Both final models start from the original Qwen2.5-3B-Instruct checkpoint. Previous team checkpoints and scores are not results of this experiment.
 
@@ -97,7 +97,7 @@ When all three raw evaluations are complete and matched, uncertainty analysis wi
 
 ## 5. Current performance results
 
-The [10:10 UTC partial audit](report/partial-20261020T1010Z/audit.json) verifies raw eight-sample predictions for all nine original-model tasks and seven tasks for each trained model, with no per-run audit errors. Completed records match across roles in protocol, benchmark data and hardware. Both trained models still lack OlympiadBench and GPQA; the full comparison remains incomplete. The retained [original metrics](report/original_metrics.json) and [evaluation manifest](report/original_evaluation_manifest.json) preserve the complete baseline evidence. Values below are percentages; truncations count samples ending at the output/context limit, out of eight samples per problem.
+The [10:10 UTC partial audit](report/partial-20261020T1010Z/audit.json) verifies raw eight-sample predictions for all nine original-model tasks and seven tasks for each trained model, with no per-run audit errors. Completed records match across roles in protocol, benchmark data and hardware. The [15:24 UTC native audit](report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json) additionally verifies OlympiadBench for all three primary roles. Both trained models still lack GPQA; the full comparison remains incomplete. The retained [original metrics](report/original_metrics.json) and [evaluation manifest](report/original_evaluation_manifest.json) preserve the complete baseline evidence. Values below are percentages; truncations count samples ending at the output/context limit, out of eight samples per problem.
 
 | Benchmark | Problems | Original pass@1 | Original pass@8 | Original truncated samples | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
 | --- | ---: | ---: | ---: | ---: | --- | --- |
@@ -107,7 +107,7 @@ The [10:10 UTC partial audit](report/partial-20261020T1010Z/audit.json) verifies
 | CN_MATH_2024 | 30 | 10.00% | 26.67% | 8 | 0.83% / 6.67% | 5.00% / 23.33% |
 | Kaoyan | 199 | 21.11% | 49.75% | 3 | 14.07% / 41.71% | 15.45% / 47.74% |
 | Minerva | 272 | 30.33% | 47.79% | 5 | 15.95% / 36.40% | 18.11% / 41.54% |
-| OlympiadBench | 675 | 28.26% | 51.85% | 99 | Pending | Pending |
+| OlympiadBench | 675 | 28.26% | 51.85% | 99 | 17.15% / 38.37% | 18.87% / 40.44% |
 | GPQA | 198 | 28.41% | 69.70% | 5 | Pending | Pending |
 | AIME25, supplementary | 30 | 0.83% | 3.33% | 0 | 2.92% / 16.67% | 1.67% / 13.33% |
 
@@ -116,7 +116,7 @@ The [10:10 UTC partial audit](report/partial-20261020T1010Z/audit.json) verifies
 | Supplied eight, equal-benchmark macro | 29.30267835% | 52.86146036% | Pending | Pending |
 | Supplemented seven, internal macro | 23.06258478% | 45.58452613% | Pending | Pending |
 
-Macros use unrounded benchmark values. AIME25 is supplementary and excluded from the supplied-eight macro. The audit correctly marks the full comparison **unmatched** because OlympiadBench and GPQA remain incomplete for both trained models. No trained-model full macro, paired confidence interval, overall winner or leaderboard position is available.
+Macros use unrounded benchmark values. AIME25 is supplementary and excluded from the supplied-eight macro. The audit correctly marks the full comparison **unmatched** because GPQA remains incomplete for both trained models. No trained-model full macro, paired confidence interval, overall winner or leaderboard position is available.
 
 The completed tasks also show frequent output/context-limit termination:
 
@@ -128,13 +128,14 @@ The completed tasks also show frequent output/context-limit termination:
 | CN_MATH_2024 | 240 | 215 (89.5833%) | 159 (66.25%) |
 | Kaoyan | 1,592 | 1,009 | 667 |
 | Minerva | 2,176 | 1,269 | 1,088 (50%) |
+| OlympiadBench | 5,400 | 3,526 | 3,062 |
 | AIME25, supplementary | 240 | 203 | 185 |
 
 These are raw finish-reason diagnostics, not a quantitative repetition metric or proof that truncation alone caused the accuracy differences.
 
 ## 6. Comparison and interpretation
 
-The partial findings are **mixed**. Both trained models perform worse than the original on all six completed supplied tasks: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan and Minerva. Both perform better than the original on supplementary AIME25. Advanced improves over random in both metrics on AIME24, CN_MATH_2024, Kaoyan and Minerva, has higher pass@1 but lower pass@8 on AMC, and trails random on AIME25.
+The partial findings are **mixed**. Both trained models perform worse than the original on all seven completed supplied tasks: AMC, AIME24, MATH, CN_MATH_2024, Kaoyan, Minerva and OlympiadBench. Both perform better than the original on supplementary AIME25. Advanced improves over random in both metrics on AIME24, CN_MATH_2024, Kaoyan, Minerva and OlympiadBench, has higher pass@1 but lower pass@8 on AMC, and trails random on AIME25.
 
 On the 500-problem MATH task, advanced pass@1 is **51.225%**, versus **49.725%** for random: **+1.50 percentage points**. Their pass@8 scores tie at **78.20%**. Both are below the original's **65.90% pass@1 / 83.80% pass@8**.
 
@@ -168,6 +169,19 @@ The completed [development screen](report/recovery-development-20261020/summary.
 Recovery satisfies the predeclared agreement and stopping gate. This supports restored stopping versus advanced in this development setting. The one additional teacher match versus the original is not credible evidence of superiority; teacher agreement is not verified ground-truth accuracy or benchmark improvement. The coefficient, IDs, generation settings and gate were not changed after these outputs.
 
 After exact terminal accounting reclaimed the unused development reservation, initial benchmark job `1214775` started at **14:54:26 UTC**, with a 45-minute allocation scheduled to reach its time limit at 15:39:26 UTC. Its [native entry preflight](operations/recovery-initial-eval-preflight-20261020.json) and [manifest audit](operations/recovery-evaluation-manifest-audit-20261020.json) bind the same fixed model and all-nine, eight-sample, 32K primary protocol, data, ordered IDs, grader, runtime and B200 hardware. The [admission receipt](operations/recovery-benchmark-initial-admission-20261020.json) establishes this bounded first stage, not completion of the benchmark suite. A later [15:02 UTC native partial audit](report/recovery-benchmark-partial-20261020T1502Z/audit.json) verifies the first recovery benchmark: AMC (40 problems, eight samples each). Recovery scores **39.0625% pass@1 / 75.00% pass@8**, versus original **42.50% / 70.00%**, random **22.50% / 47.50%**, and advanced **25.00% / 45.00%**. Recovery has 4 length-limit finishes out of 320 responses, versus advanced's 169 and original's 3. It improves over both trained arms on this task; the original retains higher pass@1 while recovery has higher pass@8. This one-task comparison establishes neither overall superiority nor significance. Full recovery macros and paired uncertainty remain pending. If it stops before all benchmarks finish, only completed atomic batches can be retained; a later identical-protocol continuation requires new verified GPU capacity and deadline reserves. The primary publisher still binds the original random/advanced trained checkpoints; any recovery publication requires its own identity and provenance.
+
+The recovery snapshot now covers **six of nine tasks**, using the [five-task native audit](report/recovery-benchmark-partial-20261020T1521Z/audit.json) and [additional Kaoyan audit](report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json). Values below are pass@1 / pass@8 percentages; Minerva, OlympiadBench and GPQA remain outside this audited recovery snapshot.
+
+| Recovery benchmark snapshot | Original | Random | Primary advanced | Recovery |
+| --- | ---: | ---: | ---: | ---: |
+| AMC | 42.50% / 70.00% | 22.50% / 47.50% | 25.00% / 45.00% | 39.06% / 75.00% |
+| AIME24 | 7.92% / 23.33% | 0.42% / 3.33% | 2.50% / 13.33% | 6.25% / 23.33% |
+| MATH | 65.90% / 83.80% | 49.73% / 78.20% | 51.23% / 78.20% | 65.33% / 84.60% |
+| CN_MATH_2024 | 10.00% / 26.67% | 0.83% / 6.67% | 5.00% / 23.33% | 12.50% / 33.33% |
+| Kaoyan | 21.11% / 49.75% | 14.07% / 41.71% | 15.45% / 47.74% | 21.11% / 54.27% |
+| AIME25, supplementary | 0.83% / 3.33% | 2.92% / 16.67% | 1.67% / 13.33% | 2.50% / 10.00% |
+
+Recovery approaches the original on MATH, with slightly lower pass@1 and higher pass@8; CN exceeds the original in both recorded metrics, and Kaoyan ties original pass@1 with higher pass@8. Supplementary AIME25 remains mixed against the trained controls. These are measured partial-task differences, without full-suite macros or paired confidence intervals; general superiority and significance remain unestablished.
 
 ## 7. Provenance and delivery status
 

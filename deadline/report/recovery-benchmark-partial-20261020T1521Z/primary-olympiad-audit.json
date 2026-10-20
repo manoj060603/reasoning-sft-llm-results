@@ -1,0 +1,66 @@
+{
+  "schema": "deadline-primary-olympiad-partial-audit-v1",
+  "created_at_utc": "2026-10-20T15:21:19.431713+00:00",
+  "allocation": {
+    "slurm_job_id": "1210310",
+    "slurm_step_id": "8",
+    "slurmd_nodename": "owl-sr001",
+    "cuda_visible_devices": ""
+  },
+  "protocol_data_and_hardware_matched": true,
+  "runs": {
+    "original": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original",
+      "benchmarks": {
+        "olympiadbench": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 675,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.2825925925925926,
+            "pass_at_8": 0.5185185185185185,
+            "truncated_samples": 99
+          }
+        }
+      },
+      "errors": [],
+      "official_eight_macro": null,
+      "supplemented_historical_seven_macro": null
+    },
+    "advanced": {
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced",
+      "benchmarks": {
+        "olympiadbench": {
+          "status": "complete",
+          "evidence": "raw eight-sample predictions verified",
+          "metrics": {
+            "problems": 675,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.1887037037037037,
+            "pass_at_8": 0.40444444444444444,
+            "truncated_samples": 3062
+          }
+        }
+      },
+      "errors": [],
+      "official_eight_macro": null,
+      "supplemented_historical_seven_macro": null
+    }
+  },
+  "file_evidence": {
+    "original": {
+      "manifest_sha256": "ae42667eeac86f7aebafbda1afd4f364bd95e422ff32ae9b7555202d48a9d68b",
+      "raw_batch_sha256": {
+        "batch_000000.json": "fec43bb811a56de7060ead51ec71ee662c2542227762a858299c7fae53b24e3b"
+      }
+    },
+    "advanced": {
+      "manifest_sha256": "4fa4bd9d6913ffff95b6a2a65d74966aa30782b78ad87ca9b98748560141a36a",
+      "raw_batch_sha256": {
+        "batch_000000.json": "378a476ce26bc9adb8909d5c64106798ac44c08721b27c460ec94ce2619c9f37"
+      }
+    }
+  },
+  "scope": "Original and primary advanced OlympiadBench only; random and GPQA/fullcomparison remain pending."
+}
