@@ -1,0 +1,18 @@
+{
+  "benchmark_readiness_binding_sha256": "7ab02901b50dff6496f5e794c48e7101eb3dae2f47e5816ffc91c8890866d5dc",
+  "benchmark_readiness_sha256": "9f0d2480881672ba07c3c9a4143dec12b55625d721c1ce0ed45e6bfd82082754",
+  "complete": true,
+  "native_preflight": {
+    "errors": 0,
+    "failures": 0,
+    "grader": {
+      "cases": 6,
+      "timed_and_untimed": "passed"
+    },
+    "skipped": 0,
+    "tests_run": 123
+  },
+  "producer_sha256": "ca8857c88423bed94452dd6365d0a7f54a4f688625b9bd512aa77ec7319f0695",
+  "schema": "deadline-original-evaluation-bootstrap-v1",
+  "slurm_job_id": "8067759"
+}

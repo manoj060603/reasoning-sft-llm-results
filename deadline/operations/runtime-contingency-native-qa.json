@@ -1,0 +1,29 @@
+{
+  "complete": true,
+  "checked_at_utc": "2026-10-20T03:19:43.452449+00:00",
+  "host": "owl-sr002",
+  "slurm_job_id": "1208059",
+  "slurm_step_id": "3",
+  "cuda_visible_devices": "",
+  "source_commit": "c14c5992742f95af508fd59b5fb0a741fc09c11e",
+  "tests": 30,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "evaluation_argument_tails_identical": true,
+  "wrapper_shell_syntax_valid": true,
+  "prior_attempt": {
+    "outcome": "module import failed before the intended tests ran; corrected to existing unittest discover invocation",
+    "log": "deadline/operations/runtime-contingency-native-qa-import-failure.log",
+    "sha256": "4c967a7da09f54aefc73c11cd00adf4a53ccda950feb36c046f669219e94a83b"
+  },
+  "files_sha256": {
+    "deadline/gpu_budget.py": "12bfc726cc3abf434eae3afa65e5064f5c26920dcd2b02d5e50c3040d8ed845e",
+    "deadline/pipeline.py": "a5ac9133ca764079b28e6e5e9edd2181b18af8baf43ee9de20ebd0af5842ca00",
+    "deadline/reconcile_gpu_budget.py": "fffb29d687ee9900d2a2f9a7239f871170e549d8c86b8dc578636250e4bab35a",
+    "tests/test_deadline_gpu_budget.py": "81dadea37b0039c5291db0fef9cfe46ad9af1d4510a4b0dc730be691ed607504",
+    "tests/test_deadline_pipeline.py": "3653832aaa665e7715e21055fd47ba0f49a2f2fb7e435ce6e25beee85eb38936",
+    "deadline/gpu_eval_extended.slurm": "5f8fbfe3f32a9cc8989e29ea3ae98def5b29b3c2efb368be7b9716240b5fddf8",
+    "deadline/gpu_eval_extended_12h.slurm": "ccbd656fdfce2369b7e4a0641c51648c9b4ab300f374781f260e16b746189915"
+  }
+}

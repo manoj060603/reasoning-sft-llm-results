@@ -1,0 +1,40 @@
+{
+  "schema": "deadline-runtime-length-diagnostic-v1",
+  "benchmark": "amc",
+  "role": "random",
+  "accuracy_inspected": false,
+  "created_at_utc": "2026-10-20T01:43:38.309615+00:00",
+  "raw_file": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/amc/batch_000000.json",
+  "raw_file_sha256": "78cee883e4fe95f3557991728416ad2188f503ec476e209f5b17283ac66454eb",
+  "raw_file_bytes": 19826591,
+  "raw_file_mtime_utc": "2026-10-20T01:33:17.131167+00:00",
+  "records": 40,
+  "samples": 320,
+  "total_output_tokens": 6634502,
+  "mean_output_tokens": 20732.81875,
+  "median_output_tokens": 32597.5,
+  "p90_output_tokens": 32702,
+  "p90_method": "nearest rank",
+  "min_output_tokens": 655,
+  "max_output_tokens": 32720,
+  "finish_reasons": {
+    "stop": 130,
+    "length": 190
+  },
+  "truncated_samples": 190,
+  "approximate_job_start_to_saved_batch_seconds": 1242.1311674118042,
+  "job_start_et": "2026-10-19T21:12:35-04:00",
+  "job_start_source": "Slurm start time verified by parent",
+  "generation_elapsed_seconds_from_vllm_log": 1111,
+  "benchmark_output_tokens_per_generation_second": 5971.64896489649,
+  "allocation": {
+    "job_id": "1208059",
+    "step_id": "1",
+    "hostname": "owl-sr002",
+    "step_cpus": "1",
+    "step_gpus": null,
+    "cuda_visible_devices": null,
+    "command": "srun --jobid=1208059 --overlap --gres=none --nodes=1 --ntasks=1 --cpus-per-task=1 --cpu-bind=none",
+    "gpu_models_loaded": false
+  }
+}

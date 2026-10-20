@@ -1,6 +1,6 @@
 {
   "schema": "reasoning-sft-assignment-checklist-v1",
-  "status": "execution snapshot: original measured; both datasets and advanced selection complete; random training complete/evaluation running; advanced training running; comparisons and publication pending",
+  "status": "execution snapshot: both datasets, selection and final full-SFT training complete; original 9/9 and random 3/9 / advanced 3/9 raw evaluations verified; continuation jobs admitted; full comparison, uncertainty, Hugging Face publication and submission pending",
   "assignment_url": "https://github.com/reds-lab/Project-Reasoning-SFT-LLM",
   "deadline_eastern": "2026-10-20T23:59:00-04:00",
   "current_experiment": "Cross-fitted Transfer Gain with Coverage; fresh original-base initialization",
@@ -10,7 +10,7 @@
       "id": "A01",
       "mandatory": true,
       "requirement": "Set up usable ARC training and evaluation environments and record versions.",
-      "status": "gpu_runtime_verified_native_test_receipt_pending_mirror",
+      "status": "complete_native_preflight_and_gpu_runtime_verified",
       "evidence_paths": [
         "deadline/prepare_transfer.slurm",
         "deadline/finalize_preparation.slurm",
@@ -18,14 +18,18 @@
         "deadline/gpu_eval.slurm",
         "deadline/report/original_evaluation_manifest.json",
         "deadline/report/random_training_runtime.json",
-        "deadline/report/random_training_receipt.json"
+        "deadline/report/random_training_receipt.json",
+        "deadline/report/advanced_training_receipt.json",
+        "deadline/report/advanced_training_runtime.json",
+        "deadline/report/evaluation_bootstrap_preflight-8067759.json",
+        "deadline/operations/runtime-contingency-native-qa.json"
       ],
       "completion_evidence_required": [
         "successful native test oracle",
         "GPU runtime checks",
         "environment versions and hardware receipts"
       ],
-      "evidence_note": "Committed receipts establish successful B200 training/evaluation and actual software versions. The already-run native test-oracle receipt still needs to be mirrored from ARC for portable completion evidence; source code alone is insufficient."
+      "evidence_note": "Mirrored evidence establishes B200 training/evaluation with actual runtime versions. Bootstrap preflight ran 123 tests plus 6 grader cases with 0 failures/errors/skips. Later continuation guard preflight ran 30 budget/pipeline tests with 0 failures/errors/skips inside existing compute allocation 1208059. These are separate scoped checks, not an assertion that every current source file has been rerun under one native test invocation."
     },
     {
       "id": "A02",
@@ -141,8 +145,10 @@
       "id": "A08",
       "mandatory": true,
       "requirement": "Fine-tune a fresh original-base model on the advanced selection.",
-      "status": "pending_training_completion",
+      "status": "complete_native_full_training_and_exact_consumption",
       "evidence_paths": [
+        "deadline/report/advanced_training_receipt.json",
+        "deadline/report/advanced_training_runtime.json",
         "deadline/runs/advanced/manifest.json",
         "deadline/runs/advanced/complete.json",
         "deadline/runs/advanced/consumption_final.json"
@@ -152,17 +158,21 @@
         "1,875 finite updates",
         "one use of all 15K unique rows",
         "complete finite final model"
-      ]
+      ],
+      "evidence_note": "Verified 1,875 updates, 15,000 unique rows and 15,000 presentations, 0 padding; 434 finite FP32 tensors with all 3 shard hashes. Completion is supported by the receipt, not inferred from scheduler submission."
     },
     {
       "id": "A09",
       "mandatory": true,
       "requirement": "Evaluate both fine-tuned models and compare them with the original.",
-      "status": "pending_measured_results",
+      "status": "partial_three_tasks_per_trained_model_full_macros_pending",
       "evidence_paths": [
         "deadline/results/random",
         "deadline/results/advanced",
-        "deadline/report/audit.json"
+        "deadline/report/audit.json",
+        "deadline/report/partial-20261020T0325Z/audit.json",
+        "deadline/report/partial-20261020T0325Z/results.md",
+        "deadline/operations/evaluation-continuation-admission.json"
       ],
       "completion_evidence_required": [
         "complete supplied-eight results for all three models",
@@ -170,16 +180,19 @@
         "pass@1 and pass@8 reported",
         "partial results explicitly labeled",
         "broad source-random and advanced complete-target population differences disclosed"
-      ]
+      ],
+      "evidence_note": "Original 9/9 complete; random and advanced each 3/9 complete (AMC, AIME24, supplementary AIME25), all from raw eight-sample predictions and no per-run audit errors. Completed protocol/data/hardware identities agree. Each trained model still lacks 6 tasks and full macros; whole official-eight comparison remains incomplete."
     },
     {
       "id": "A10",
       "mandatory": true,
       "requirement": "Answer whether the advanced selection beats the random control and analyze why.",
-      "status": "pending_analysis",
+      "status": "partial_mixed_task_comparison_full_analysis_and_uncertainty_pending",
       "evidence_paths": [
         "deadline/report_outline.json",
-        "deadline/report/results.md"
+        "deadline/report/results.md",
+        "deadline/FINAL_REPORT.md",
+        "deadline/report/partial-20261020T0325Z/results.md"
       ],
       "completion_evidence_required": [
         "measured advanced-versus-control comparison",
@@ -187,25 +200,33 @@
         "honest negative/mixed finding if applicable",
         "sampling-population limitation"
       ],
-      "scope_note": "The whole advanced selection policy is compared with broad prepared-source random sampling. Do not attribute a difference solely to transfer gain. A guaranteed positive improvement or statistical significance is not an assignment completion requirement."
+      "scope_note": "The whole advanced selection policy is compared with broad prepared-source random sampling. Do not attribute a difference solely to transfer gain. A guaranteed positive improvement or statistical significance is not an assignment completion requirement.",
+      "evidence_note": "Both trained models trail original on AMC/AIME24 and exceed original on supplementary AIME25. Advanced versus random is mixed across tasks/metrics. No overall winner, significant benefit, or SOTA result follows; paired CIs and full-macro analysis remain pending. Scientific method/protocol unchanged in response to scores."
     },
     {
       "id": "A11",
       "mandatory": true,
       "requirement": "Report the final model hyperparameters and data-selection strategy.",
-      "status": "drafted_pending_actual_run_reconciliation",
+      "status": "actual_training_recipe_reconciled_final_resource_and_result_reconciliation_pending",
       "evidence_paths": [
         "deadline/experiment_plan.json",
         "deadline/report_outline.json",
         "deadline/runs/random/manifest.json",
-        "deadline/runs/advanced/manifest.json"
+        "deadline/runs/advanced/manifest.json",
+        "deadline/FINAL_REPORT.md",
+        "deadline/report/random_training_receipt.json",
+        "deadline/report/advanced_training_receipt.json",
+        "deadline/report/random_training_runtime.json",
+        "deadline/report/advanced_training_runtime.json",
+        "deadline/operations/evaluation-continuation-admission.json"
       ],
       "completion_evidence_required": [
         "actual model/data revisions",
         "selection/probe/final-training settings",
         "precision and loss normalization",
         "runtime, hardware, resource and truncation disclosures"
-      ]
+      ],
+      "evidence_note": "Both final training settings and completion/runtime evidence are reconciled. Current conservative GPU bound 47.0167/48; final terminal resource use and complete benchmark comparison are still pending."
     },
     {
       "id": "A12",
@@ -215,7 +236,8 @@
       "evidence_paths": [
         "deadline/FINAL_REPORT.md",
         "deadline/report/random_training_runtime.json",
-        "deadline/train_full.py"
+        "deadline/train_full.py",
+        "deadline/report/advanced_training_runtime.json"
       ],
       "completion_evidence_required": [
         "state native Transformers Trainer was used",
@@ -273,10 +295,11 @@
       "id": "A16",
       "mandatory": true,
       "requirement": "Deliver the final report containing original performance, trained-model results, comparison, hyperparameters, and selection method.",
-      "status": "narrative_draft_created_trained_results_pending",
+      "status": "narrative_draft_with_completed_training_and_partial_measured_comparison_full_results_pending",
       "evidence_paths": [
         "deadline/FINAL_REPORT.md",
-        "deadline/report/audit.json"
+        "deadline/report/audit.json",
+        "deadline/report/partial-20261020T0325Z/audit.json"
       ],
       "completion_evidence_required": [
         "final report document",
@@ -324,14 +347,16 @@
       "id": "O03",
       "mandatory": false,
       "requirement": "Evaluate supplementary AIME25 and report the seven-task internal macro.",
-      "status": "planned_supplement",
+      "status": "supplementary_aime25_complete_for_all_three_internal_seven_macro_pending",
       "evidence_paths": [
-        "deadline/artifacts/benchmarks/aime25/test.jsonl"
+        "deadline/artifacts/benchmarks/aime25/test.jsonl",
+        "deadline/report/partial-20261020T0325Z/audit.json"
       ],
       "completion_evidence_required": [
         "pinned supplementary data and complete matched evaluations"
       ],
-      "scope_note": "The supplied benchmark archive contains eight tasks. AIME25 supports an additional internal comparison, not verified historical equivalence."
+      "scope_note": "The supplied benchmark archive contains eight tasks. AIME25 supports an additional internal comparison, not verified historical equivalence.",
+      "evidence_note": "AIME25 has complete raw eight-sample predictions for all 3 roles. The internal seven-task macro remains pending because other trained-model tasks are incomplete."
     },
     {
       "id": "O04",
@@ -367,13 +392,16 @@
   ],
   "handoff_slots": {
     "repository_url": "https://github.com/manoj060603/reasoning-sft-llm-results",
-    "repository_commit": "45e4d38784f1fdad4c033031f3b2d4c32c6c94b2",
+    "repository_commit": "e0ab46b518cb5e9950e06d98ad9dc6d8f4b7868d",
     "random_model_url": null,
     "advanced_model_url": null,
     "random_dataset_url": null,
     "advanced_dataset_url": null,
-    "final_report_path": "deadline/FINAL_REPORT.md (draft; trained results pending)",
-    "course_submission_receipt": null
+    "final_report_path": "deadline/FINAL_REPORT.md (draft; both training runs complete, full trained-model results pending)",
+    "course_submission_receipt": null,
+    "repository_local_source_commit": "4bcfb1979e27459e32024116ced22baad38696cd",
+    "repository_tree": "7a3ba419b3e1876021b77593b50664cad6a4a60f",
+    "pinned_source_publication_receipt_commit": "45e4d38784f1fdad4c033031f3b2d4c32c6c94b2"
   },
   "reviewed_implementation_commit": "b092f29",
   "benchmark_count_audit": {
@@ -389,9 +417,52 @@
       "finding": "The README table says 499, but the actual official file and local copy both contain 500 valid JSON records. The last record has no trailing newline; keep MATH=500 in evaluation and audit."
     }
   },
-  "last_reconciled_utc": "2026-10-20T02:57:11.274912+00:00",
+  "last_reconciled_utc": "2026-10-20T03:25:36.274636+00:00",
   "requested_repository_owner": "manoj060603",
   "team_submission_action": "Team-owned action; no course-system submission is performed by this experiment automation.",
-  "last_verified_cluster_snapshot_utc": "2026-10-20T01:42:21+00:00",
-  "current_access_note": "Cisco reports that its saved VT Traffic VPN session expired (Max time exceeded). Reconnection has opened login.vt.edu and awaits human sign-in/Duo. No subsequent scheduler or receipt progress is inferred."
+  "last_verified_cluster_snapshot_utc": "2026-10-20T03:25:36.274636+00:00",
+  "current_access_note": "VPN and ARC access restored. Native30 guard checks and exact scheduler accounting verified; both evaluation continuations admitted. Successful continuation, closeout and publication are not inferred from admission.",
+  "current_execution_evidence": {
+    "partial_audit": "deadline/report/partial-20261020T0325Z/audit.json",
+    "training_complete": {
+      "random": true,
+      "advanced": true
+    },
+    "complete_tasks": {
+      "original": 9,
+      "random": 3,
+      "advanced": 3
+    },
+    "trained_model_full_macros": null,
+    "uncertainty": null,
+    "continuations": {
+      "random": {
+        "job_id": "1210309",
+        "requested_gpu_hours": 16,
+        "afterany_parent": "1208059",
+        "deadline_reserve_hours": 19
+      },
+      "advanced": {
+        "job_id": "1210310",
+        "requested_gpu_hours": 12,
+        "afterany_parent": "1208060",
+        "deadline_reserve_hours": 15
+      }
+    },
+    "closeout": {
+      "job_id": "1208135",
+      "dependency": "afterok:1210309:1210310"
+    },
+    "publisher": {
+      "job_id": "1209745",
+      "dependency": "afterok:1208135"
+    },
+    "admission_receipt": "deadline/operations/evaluation-continuation-admission.json",
+    "conservative_gpu_hours_bound": 47.016666666666666,
+    "gpu_hours_cap": 48,
+    "historical_admitted_requested_gpu_hours": 70,
+    "all_attempt_requested_gpu_hours": 88,
+    "verified_unadmitted_requested_gpu_hours": 18,
+    "final_terminal_resource_accounting": "pending"
+  }
 }

@@ -1,6 +1,6 @@
 # Draft report: Cross-fitted Transfer Gain with Coverage for Reasoning SFT
 
-**Snapshot after random-control training completed on 19 October 2026, 9:12 p.m. Eastern / 20 October, 01:12 UTC.** The original-model evaluation is complete on all eight supplied benchmarks and supplementary AIME25. Both 15,000-example datasets have been selected and exported. Random-control training is complete and its evaluation has started; advanced training is in progress. Fine-tuned-model results, paired comparisons, final publication links, and submission remain pending in this report. Pending entries are not zero scores.
+**Snapshot: 19 October 2026, 11:25 p.m. Eastern / 20 October, 03:25 UTC.** Both final full-SFT runs are complete: each performed 1,875 updates, used all 15,000 unique examples exactly once, and saved 434 verified finite FP32 tensors. The original-model evaluation is complete on the supplied eight benchmarks and supplementary AIME25. The random and advanced models each have three audited completed tasks: AMC, AIME24 and supplementary AIME25. Their six remaining tasks, complete macros, paired uncertainty, final Hugging Face links and course submission are pending. VPN/ARC access is restored; unchanged evaluation continuations and dependency-gated closeout/publication have been admitted. Pending entries are not zero scores.
 
 We investigate whether a source-only selection policy can improve reasoning SFT over a random control. Two small LoRA training runs measure how examples in the opposite source fold respond to adaptation. The final selector combines relative response-loss reduction with structural eligibility and topic/length coverage. Both final models start from the original Qwen2.5-3B-Instruct checkpoint. Previous team checkpoints and scores are not results of this experiment.
 
@@ -46,7 +46,7 @@ The initial 4K CPU capacity audit found only 15,938 eligible complete targets, b
 
 ## 3. Final model hyperparameters
 
-The following recipe is fixed for **both** final SFT arms. The random arm has a verified training-completion receipt; the advanced arm remains in progress. Its completion, exact consumption, finite-state checks, runtime, and final checkpoint hashes must still be reconciled with the finished run receipts. The current report does not infer completion from a queued or running job.
+The following recipe was used for **both** completed final SFT arms. Mirrored training-completion and runtime receipts establish the actual update counts, exact example consumption, model integrity and runtime for each arm. They establish training completion rather than benchmark superiority.
 
 | Setting | Random and advanced final models |
 | --- | --- |
@@ -67,7 +67,15 @@ The following recipe is fixed for **both** final SFT arms. The random arm has a 
 | Training and data seed | `42` |
 | Checkpoint policy | Every 256 updates; retain two; evaluate the fixed final checkpoint |
 
-The [random training receipt](report/random_training_receipt.json) confirms **1,875 updates, 15,000 unique examples, exactly 15,000 presentations, and zero padding presentations**. Its serialized model contains 434 verified finite FP32 tensors, with hashes for all three weight shards. Training through final verification took 6,646.64 seconds (110.78 minutes); peak PyTorch allocated GPU memory was 61,797,884,416 bytes (57.55 GiB). The [runtime receipt](report/random_training_runtime.json) records one NVIDIA B200, Torch 2.9.0, Transformers 4.57.3, and Accelerate 1.12.0. These checks establish training completion and artifact integrity; they do not establish benchmark improvement.
+The [random training receipt](report/random_training_receipt.json) and [advanced training receipt](report/advanced_training_receipt.json) each confirm **1,875 updates, 15,000 unique examples, exactly 15,000 presentations, and zero padding presentations**. Each serialized model contains 434 verified finite FP32 tensors, with hashes for all three weight shards.
+
+| Completed-run measurement | Random | Advanced |
+| --- | ---: | ---: |
+| Training through final verification | 6,646.64 seconds / 110.78 minutes | 5,226.94 seconds / 87.12 minutes |
+| Peak PyTorch allocated GPU memory | 61,797,884,416 bytes | 61,806,027,264 bytes |
+| Verified finite FP32 tensors | 434 | 434 |
+
+The [random runtime](report/random_training_runtime.json) and [advanced runtime](report/advanced_training_runtime.json) receipts both record one NVIDIA B200, Torch 2.9.0, Transformers 4.57.3 and Accelerate 1.12.0. These timings describe training through final model verification; scheduler allocation time also includes job setup and is accounted for separately. The mirrored [native bootstrap preflight](report/evaluation_bootstrap_preflight-8067759.json) records 123 tests and six timed/untimed grader cases, with zero failures, errors or skips. The later [continuation guard preflight](operations/runtime-contingency-native-qa.json) records 30 passing budget/pipeline tests in an existing compute allocation, identical evaluation argument tails and valid wrapper syntax.
 
 The loss masks the system and user prompt. It averages shifted supervised-token cross entropy **within each example**, then averages the eight examples contributing to an update. This avoids implicitly assigning a larger update weight to a longer response. Native Qwen end markers and template trailers remain supervised when present; prefix-truncated random examples can lose them. Parameter storage and Adam moments stay FP32 so small learning-rate updates can accumulate rather than being rounded directly into BF16 parameter storage.
 
@@ -89,30 +97,34 @@ When all three raw evaluations are complete and matched, uncertainty analysis wi
 
 ## 5. Current performance results
 
-The [current audit](report/audit.json) verifies eight responses and correctness flags for every original-model record on all nine evaluated benchmarks, with no audit errors. The retained [original metrics](report/original_metrics.json) agree with that audit, and the [evaluation manifest](report/original_evaluation_manifest.json) records the protocol and benchmark identities. Values below are percentages; truncations count samples ending at the output/context limit, out of eight samples per problem.
+The [03:25 UTC partial audit](report/partial-20261020T0325Z/audit.json) verifies raw eight-sample predictions for all nine original-model tasks and three tasks each for the random and advanced models, with no per-run audit errors. Completed records match across roles in protocol, benchmark data and hardware; the overall comparison remains incomplete because six tasks are missing for each trained model. The retained [original metrics](report/original_metrics.json) and [evaluation manifest](report/original_evaluation_manifest.json) preserve the complete baseline evidence. Values below are percentages; truncations count samples ending at the output/context limit, out of eight samples per problem.
 
 | Benchmark | Problems | Original pass@1 | Original pass@8 | Original truncated samples | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
 | --- | ---: | ---: | ---: | ---: | --- | --- |
-| AIME 2024 | 30 | 7.92% | 23.33% | 10 | Pending | Pending |
-| AMC 2023 | 40 | 42.50% | 70.00% | 3 | Pending | Pending |
+| AIME 2024 | 30 | 7.92% | 23.33% | 10 | 0.42% / 3.33% | 2.50% / 13.33% |
+| AMC 2023 | 40 | 42.50% | 70.00% | 3 | 22.50% / 47.50% | 25.00% / 45.00% |
 | MATH | 500 | 65.90% | 83.80% | 19 | Pending | Pending |
 | CN_MATH_2024 | 30 | 10.00% | 26.67% | 8 | Pending | Pending |
 | Kaoyan | 199 | 21.11% | 49.75% | 3 | Pending | Pending |
 | Minerva | 272 | 30.33% | 47.79% | 5 | Pending | Pending |
 | OlympiadBench | 675 | 28.26% | 51.85% | 99 | Pending | Pending |
 | GPQA | 198 | 28.41% | 69.70% | 5 | Pending | Pending |
-| AIME25, supplementary | 30 | 0.83% | 3.33% | 0 | Pending | Pending |
+| AIME25, supplementary | 30 | 0.83% | 3.33% | 0 | 2.92% / 16.67% | 1.67% / 13.33% |
 
 | Complete benchmark set | Original pass@1 | Original pass@8 | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
 | --- | ---: | ---: | --- | --- |
 | Supplied eight, equal-benchmark macro | 29.30267835% | 52.86146036% | Pending | Pending |
 | Supplemented seven, internal macro | 23.06258478% | 45.58452613% | Pending | Pending |
 
-Macros use unrounded benchmark values. AIME25 is supplementary and is excluded from the supplied-eight macro. At this snapshot, the audit correctly marks the three-model comparison **unmatched** because random and advanced evaluation results are absent. No fine-tuning delta, confidence interval, winner, or leaderboard position can yet be reported.
+Macros use unrounded benchmark values. AIME25 is supplementary and excluded from the supplied-eight macro. The audit correctly marks the full comparison **unmatched** because six required tasks remain incomplete in each trained-model run. No trained-model full macro, paired confidence interval, overall winner or leaderboard position is available.
+
+The completed tasks also show long-response behavior: random/advanced truncated samples number 190/169 of 320 on AMC, 204/192 of 240 on AIME24, and 203/185 of 240 on AIME25. These observations are finish-reason diagnostics, not a quantitative repetition metric or proof that truncation alone caused the accuracy differences.
 
 ## 6. Comparison and interpretation
 
-The completed baseline supplies a common reference. The final comparison will first report each SFT arm against that original model, then advanced against random on each task and on the complete supplied-eight macro. Pass@1 and pass@8 should be considered together with output lengths and truncation. The planned diagnostics report output tokens/characters and finish reasons; they do **not** currently provide a quantitative generated-repetition analysis.
+The partial findings are **mixed**. Both trained models perform worse than the original on AMC and AIME24 in both metrics. Both perform better than the original on supplementary AIME25. Advanced improves over random on AIME24, has higher pass@1 but lower pass@8 on AMC, and trails random on AIME25. AMC has 40 problems and each AIME task has 30; paired confidence intervals have not yet been computed. These observations cannot establish a broad win or statistical significance.
+
+The final comparison will report each SFT arm against the original, then advanced against random on every task and on the complete supplied-eight macro. Pass@1 and pass@8 should be considered together with output lengths and truncation. Diagnostics report output tokens/characters and finish reasons; they do **not** currently provide a quantitative generated-repetition analysis. The method, trained checkpoints and scientific evaluation settings are unchanged in response to these partial scores. Operational continuations address runtime only.
 
 The current pair tests the **whole advanced policy**: complete-target structural filtering, reservoir construction, transfer-gain ranking, and coverage allocation. It does not isolate the causal contribution of transfer gain. In particular, complete-target selection changes response lengths and EOS survival relative to the broad random control, while the supervised-token budgets differ substantially. Separate eligible-pool random and coverage-only arms on the same reservoir, quotas, and training recipe would be needed to separate these contributions. Neither ablation has been run.
 
@@ -131,17 +143,21 @@ Only one final training seed is used. Small benchmarks, duplicate questions, rul
 | Random original dataset export | `3709a2ece0468d5346130dc4e6075610fb11234cd5f407c2bf26a64d791abec7` |
 | Original metrics JSON at this snapshot | `d9886e3c2df1892965eebd2869ada22520cb07bf181e94c1822f02d53fc12a5d` |
 
-The reproducibility record includes selected question IDs, source reservations, actual probe and score receipts, source/model hashes, cache masks, finite-update logs, exact consumption receipts, final tensor checks, and evaluation manifests. The [frozen plan](experiment_plan.json), [implementation overview](README.md), and [assignment checklist](assignment_checklist.json) describe the execution contract. Heavy training and verification run in ARC compute allocations. The original plan reserved 42 GPU-hours with a 48 GPU-hour cap. A [runtime contingency](operations/evaluation-runtime-contingency.md) prepares a longer unchanged evaluation after the first control batch produced unusually long answers; it preserves original requested hours and reclaims only verified terminal unused reservations. This preparation has not yet established a new admission. Final consumed resources remain to be reconciled.
+The reproducibility record includes selected question IDs, source reservations, actual probe and score receipts, source/model hashes, cache masks, finite-update logs, exact consumption receipts, final tensor checks and evaluation manifests. The [frozen plan](experiment_plan.json), [implementation overview](README.md), and [assignment checklist](assignment_checklist.json) describe the execution contract. Heavy training and verification run in ARC compute allocations. The original plan reserved 42 GPU-hours with a fixed 48 GPU-hour consumption cap.
+
+After VPN access was restored and native checks passed, two unchanged [evaluation continuations](operations/evaluation-runtime-contingency.md) were admitted: random `1210309`, one GPU for 16 hours after parent `1208059` terminates, and advanced `1210310`, one GPU for 12 hours after parent `1208060` terminates. Start guards require 19 and 15 hours respectively before the assignment deadline, including three hours for closeout/publication. The [admission receipt](operations/evaluation-continuation-admission.json) records CPU closeout `1208135` depending on successful completion of both continuations and publisher `1209745` depending on closeout. Queuing these stages does not establish successful execution or publication.
+
+Verified closed allocations total 7.0167 GPU-hours after separately rounding allocated elapsed times up to whole minutes. Full reservations for both initial trained-model evaluation parents (12 hours) and both continuations (28 hours) produce a **47.0167 / 48 GPU-hour** conservative bound. Historical admitted requests total **70 hours**, distinct from the **88-hour** all-attempt request history, which includes 18 hours verified never admitted. No historical request is erased; open or unverified allocations retain their full reservation. Final consumed resources must still be reconciled after terminal accounting is available.
 
 **Built with Qwen.** The [3B base model card](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/aa8e72537993ba99e69dfaafa59ed015b17504d1/README.md) declares `license: other`, `license_name: qwen-research`, and links to the [Qwen Research License](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/aa8e72537993ba99e69dfaafa59ed015b17504d1/LICENSE). The [NVIDIA AceReason-1.1-SFT card](https://huggingface.co/datasets/nvidia/AceReason-1.1-SFT#license) declares CC BY 4.0. Dataset attribution must credit NVIDIA and the actual redsgnaoh class subset separately; a separate license for that subset has not been verified or asserted here.
 
-**Source publication update, 20 October 2026:** the fresh implementation and current evidence are public in [manoj060603/reasoning-sft-llm-results](https://github.com/manoj060603/reasoning-sft-llm-results), with verified snapshot commit [45e4d38](https://github.com/manoj060603/reasoning-sft-llm-results/commit/45e4d38784f1fdad4c033031f3b2d4c32c6c94b2). A public Git fetch confirmed that its entire tree equals local source commit `cb08e18a3b1bbfe58e8db814a2a2e54a6471d29b`; the [source publication receipt](report/source_publication_receipt.json) records the mapping. This update does not establish new training or benchmark completion.
+**Source publication update, 20 October 2026:** the fresh implementation and its earlier evidence snapshot are public in [manoj060603/reasoning-sft-llm-results](https://github.com/manoj060603/reasoning-sft-llm-results), with verified snapshot commit [45e4d38](https://github.com/manoj060603/reasoning-sft-llm-results/commit/45e4d38784f1fdad4c033031f3b2d4c32c6c94b2). A public Git fetch confirmed that its entire tree equals local source commit `cb08e18a3b1bbfe58e8db814a2a2e54a6471d29b`; the [source publication receipt](report/source_publication_receipt.json) records the mapping. This receipt establishes that source snapshot only. A [later public source update](https://github.com/manoj060603/reasoning-sft-llm-results/commit/e0ab46b518cb5e9950e06d98ad9dc6d8f4b7868d) was independently verified against local commit `4bcfb1979e27459e32024116ced22baad38696cd`; the 12-hour wrapper and current training/evaluation evidence are prepared for a subsequent update. Training and partial evaluation completion in this report are established by their separate receipts, not by source publication.
 
 Two trained-model URLs, two original-dataset URLs, final comparisons and this completed report remain pending. The publication packager will recheck completed selection, training, weights, and matched evaluation receipts before staging cards and a manifest. Staging metadata is not an upload or course submission. The final deliverables must include usable repository and model/dataset links, a current README, and this completed report. The team must submit them by **20 October 2026 at 11:59 p.m. Eastern**.
 
 ## Final reconciliation before submission
 
-- Verify both final models completed 1,875 finite updates and consumed all 15,000 unique examples once; record checkpoint hashes, timing, peak memory, and actual runtime versions.
+- Retain both completed training receipts, checkpoint hashes, exact consumption, timing, memory and runtime evidence; check that the final published artifacts match them.
 - Reconcile the random cache hash, original export hash, missing-supervised-EOS count, and both arms' token/row receipts with the final artifacts.
 - Replace every pending score only from complete matched evaluations; update per-task results, both macro definitions, paired uncertainty, and length/truncation diagnostics.
 - Write the measured comparison and conclusion, including negative or mixed outcomes; retain the broad-source control, token-budget, one-seed, and missing-ablation limitations.

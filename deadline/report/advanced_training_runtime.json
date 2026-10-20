@@ -1,0 +1,12 @@
+{
+  "gpu": "NVIDIA B200",
+  "device_count": 1,
+  "starting_step": 0,
+  "binding_sha256": "dffdc0479f88066adce023778e1dd3cddf113f2df2ce8569fcde5af48e89d41a",
+  "versions": {
+    "torch": "2.9.0",
+    "transformers": "4.57.3",
+    "accelerate": "1.12.0",
+    "safetensors": "0.7.0"
+  }
+}

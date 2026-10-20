@@ -1,5 +1,13 @@
 # Evaluation runtime contingency — October 19, 2026
 
+**Current status, October 20 at 03:26 UTC:** both continuations are admitted.
+Random job **1210309** reserves 16 GPU-hours after parent 1208059 terminates;
+advanced job **1210310** reserves 12 GPU-hours after parent 1208060 terminates.
+The [native guard receipt](runtime-contingency-native-qa.json) records 30 passing
+checks and identical evaluation argument tails. The [admission receipt](evaluation-continuation-admission.json)
+records the 47.0167-hour conservative bound and verified downstream dependencies.
+The sections below preserve the preparation history.
+
 The first random-control AMC batch produced 6,634,502 generated tokens across
 320 responses; 190 responses (59.375%) stopped at the length limit. Generation
 took 1,111 seconds and the first saved result arrived about 1,242 seconds after
@@ -53,3 +61,71 @@ The new guard tests must pass inside a compute allocation before admission.
 After successful admission, the final CPU results job must depend on successful
 completion of the continuation as well as the original and advanced results.
 The four-artifact publisher remains gated on successful final CPU checks.
+
+## Access-restoration update: paired continuation requests
+
+ARC access has been restored. Fresh scheduler accounting reports advanced
+training **COMPLETED** after **5,294 seconds**. Its one-GPU allocation rounds
+up to 89 minutes, or 1.4833 GPU-hours. Together with the four terminal
+allocations listed above, all verified closed allocations total **421 minutes
+(7.0167 GPU-hours)**. Both existing six-hour trained-model evaluations are
+still running and retain their full reservations. This supersedes the earlier
+three-open-role estimate; it does not infer complete evaluation results.
+
+The revised operational plan prepares a **16-hour random continuation** and a
+**12-hour advanced continuation**, each after termination of its own existing
+evaluation. The conservative bound is:
+
+| Budget component | GPU-hours |
+|---|---:|
+| Verified closed allocations, rounded up separately | 7.0167 |
+| Two existing six-hour evaluation parents, full reservations | 12.0000 |
+| Proposed random continuation, one GPU for 16 hours | 16.0000 |
+| Proposed advanced continuation, one GPU for 12 hours | 12.0000 |
+| **Allocated-plus-open bound** | **47.0167 / 48.0000** |
+
+Historical admitted requested hours would be **42 + 16 + 12 = 70 GPU-hours** after both
+admissions. That cumulative request history remains distinct from the
+conservative consumption bound; it is preserved rather than rewritten.
+
+The advanced wrapper is `deadline/gpu_eval_extended_12h.slurm`. It reserves
+15 hours before the deadline on actual start: 12 hours for evaluation and
+three hours for final CPU checks and publication. Its admission must also
+require at least 15 hours. The random wrapper retains its 16-hour limit and
+19-hour reserve. Both reuse the original role-specific output directories
+and unchanged scientific protocol, including all benchmarks, eight samples,
+prompts, seed, generation limits, grader and model identity.
+
+**Prepared, not yet admitted:** no continuation job IDs or scheduler submissions
+are recorded by this update. Admission still requires native guard checks,
+locked ledger reconciliation against exact terminal accounting and fresh
+expanded queue identities, and independent cap and deadline checks. Final CPU
+closeout and publication dependencies must be updated to the successful
+continuation jobs. Model weights, selected datasets and scientific settings remain unchanged.
+
+## Verified admission and downstream repair
+
+Both jobs were admitted after native compute-allocation guard checks and locked
+terminal-accounting reconciliation. Their actual scheduler records confirm one
+B200, eight CPU cores, 64GB RAM, the authorized short QoS and respective
+16-hour/12-hour limits. Each has `afterany` on its own existing parent, so there
+is no concurrent writer to a role's result directory. No model, benchmark,
+sample-count, context, generation, seed or grader setting was changed.
+
+Final CPU job 1208135 now requires successful jobs 1210309 and 1210310. Original
+evaluation 1207982 had already completed successfully and its fulfilled scheduler
+dependency was not re-added. Publisher 1209745 still requires successful final
+CPU checks. The original requested submission commands remain in the ledger;
+the dependency update is recorded separately with its previous value.
+
+The 70-hour admitted request history is separate from two earlier verified
+unadmitted attempts totaling 18 requested hours. All-attempt request history is
+therefore 88 hours, with zero allocated GPU time charged for those proven
+unadmitted attempts. The hard consumption cap remains 48 hours; completed-use
+ceilings plus all open reservations total 47.0167 hours at admission. Final
+consumption remains to be reconciled after all allocations terminate.
+
+Both final training runs are complete. At the partial native result audit,
+each trained model had three saved benchmarks; complete comparisons and
+Hugging Face publication remain pending. Queue/start uncertainty and the
+deadline guards still apply.

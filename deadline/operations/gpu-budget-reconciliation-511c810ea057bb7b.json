@@ -1,0 +1,354 @@
+{
+  "schema": "deadline-gpu-budget-reconciliation-v1",
+  "policy": "verified-terminal-allocations-plus-full-open-reservations-v1",
+  "reconciled_at_utc": "2026-10-20T03:20:55.297982+00:00",
+  "original_requested_gpu_hours": {
+    "original_evaluation": 6,
+    "probes_and_scores": 12,
+    "random_training": 6,
+    "transfer_selection": 0,
+    "advanced_training": 6,
+    "random_evaluation": 6,
+    "advanced_evaluation": 6,
+    "final_results": 0,
+    "publication_preflight": 0,
+    "huggingface_publication": 0
+  },
+  "evidence": {
+    "original_evaluation": {
+      "schema": "deadline-terminal-gpu-accounting-v1",
+      "policy": "verified-terminal-allocations-plus-full-open-reservations-v1",
+      "role": "original_evaluation",
+      "job_id": "1207982",
+      "cluster": "owl",
+      "requested_gpu_seconds": 21600,
+      "charged_gpu_seconds": 3600,
+      "allocations": [
+        {
+          "job_id": "1207982",
+          "job_id_raw": "1207982",
+          "state": "COMPLETED",
+          "elapsed_seconds": 3564,
+          "allocated_gpus": 1,
+          "rounded_elapsed_seconds": 3600,
+          "charged_gpu_seconds": 3600,
+          "alloc_tres": "billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1"
+        }
+      ],
+      "source": {
+        "sacct_text": "1207982|1207982|COMPLETED|3564|billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1\n",
+        "observed_at_utc": "2026-10-20T03:20:55.265691+00:00",
+        "live_job_ids": [
+          "1208059",
+          "1208060",
+          "1208135",
+          "1209745"
+        ],
+        "sacct_fields": [
+          "JobIDRaw",
+          "JobID",
+          "State",
+          "ElapsedRaw",
+          "AllocTRES"
+        ],
+        "allocation_only": true,
+        "live_ids_expanded": true
+      },
+      "evidence_sha256": "efc0efa9a49db07b5fbdb3db38ed17bacbe575f11739a592561a5f32cdce3dc4"
+    },
+    "probes_and_scores": {
+      "schema": "deadline-terminal-gpu-accounting-v1",
+      "policy": "verified-terminal-allocations-plus-full-open-reservations-v1",
+      "role": "probes_and_scores",
+      "job_id": "1208021",
+      "cluster": "owl",
+      "requested_gpu_seconds": 43200,
+      "charged_gpu_seconds": 9540,
+      "allocations": [
+        {
+          "job_id": "1208021_0",
+          "job_id_raw": "1208041",
+          "state": "COMPLETED",
+          "elapsed_seconds": 5189,
+          "allocated_gpus": 1,
+          "rounded_elapsed_seconds": 5220,
+          "charged_gpu_seconds": 5220,
+          "alloc_tres": "billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1"
+        },
+        {
+          "job_id": "1208021_1",
+          "job_id_raw": "1208021",
+          "state": "COMPLETED",
+          "elapsed_seconds": 4299,
+          "allocated_gpus": 1,
+          "rounded_elapsed_seconds": 4320,
+          "charged_gpu_seconds": 4320,
+          "alloc_tres": "billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1"
+        }
+      ],
+      "source": {
+        "sacct_text": "1208041|1208021_0|COMPLETED|5189|billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1\n1208021|1208021_1|COMPLETED|4299|billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1\n",
+        "observed_at_utc": "2026-10-20T03:20:55.273715+00:00",
+        "live_job_ids": [
+          "1208059",
+          "1208060",
+          "1208135",
+          "1209745"
+        ],
+        "sacct_fields": [
+          "JobIDRaw",
+          "JobID",
+          "State",
+          "ElapsedRaw",
+          "AllocTRES"
+        ],
+        "allocation_only": true,
+        "live_ids_expanded": true
+      },
+      "evidence_sha256": "4c860aee23d0c3b1ff845522fd7bc1ae9f35dfd31e84b095db5467786d005b58"
+    },
+    "random_training": {
+      "schema": "deadline-terminal-gpu-accounting-v1",
+      "policy": "verified-terminal-allocations-plus-full-open-reservations-v1",
+      "role": "random_training",
+      "job_id": "1208033",
+      "cluster": "owl",
+      "requested_gpu_seconds": 21600,
+      "charged_gpu_seconds": 6780,
+      "allocations": [
+        {
+          "job_id": "1208033",
+          "job_id_raw": "1208033",
+          "state": "COMPLETED",
+          "elapsed_seconds": 6734,
+          "allocated_gpus": 1,
+          "rounded_elapsed_seconds": 6780,
+          "charged_gpu_seconds": 6780,
+          "alloc_tres": "billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1"
+        }
+      ],
+      "source": {
+        "sacct_text": "1208033|1208033|COMPLETED|6734|billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1\n",
+        "observed_at_utc": "2026-10-20T03:20:55.281968+00:00",
+        "live_job_ids": [
+          "1208059",
+          "1208060",
+          "1208135",
+          "1209745"
+        ],
+        "sacct_fields": [
+          "JobIDRaw",
+          "JobID",
+          "State",
+          "ElapsedRaw",
+          "AllocTRES"
+        ],
+        "allocation_only": true,
+        "live_ids_expanded": true
+      },
+      "evidence_sha256": "22f07d167c0f8ecd4100fc69e3a458be86d29af28c43ad6c34c1751c3a4fc520"
+    },
+    "advanced_training": {
+      "schema": "deadline-terminal-gpu-accounting-v1",
+      "policy": "verified-terminal-allocations-plus-full-open-reservations-v1",
+      "role": "advanced_training",
+      "job_id": "1208058",
+      "cluster": "owl",
+      "requested_gpu_seconds": 21600,
+      "charged_gpu_seconds": 5340,
+      "allocations": [
+        {
+          "job_id": "1208058",
+          "job_id_raw": "1208058",
+          "state": "COMPLETED",
+          "elapsed_seconds": 5294,
+          "allocated_gpus": 1,
+          "rounded_elapsed_seconds": 5340,
+          "charged_gpu_seconds": 5340,
+          "alloc_tres": "billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1"
+        }
+      ],
+      "source": {
+        "sacct_text": "1208058|1208058|COMPLETED|5294|billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1\n",
+        "observed_at_utc": "2026-10-20T03:20:55.288545+00:00",
+        "live_job_ids": [
+          "1208059",
+          "1208060",
+          "1208135",
+          "1209745"
+        ],
+        "sacct_fields": [
+          "JobIDRaw",
+          "JobID",
+          "State",
+          "ElapsedRaw",
+          "AllocTRES"
+        ],
+        "allocation_only": true,
+        "live_ids_expanded": true
+      },
+      "evidence_sha256": "4416f6be4a64d655c30e84458e5c60a0e2408cc4e23c2ac61d75df5ab0c3e420"
+    }
+  },
+  "live_job_ids": [
+    "1208059",
+    "1208060",
+    "1208135",
+    "1209745"
+  ],
+  "before": {
+    "policy": "verified-terminal-allocations-plus-full-open-reservations-v1",
+    "cap_gpu_seconds": 172800,
+    "cumulative_admitted_requested_gpu_seconds": 151200,
+    "cumulative_all_attempt_requested_gpu_seconds": 216000,
+    "conservative_committed_gpu_seconds": 151200,
+    "additional_requested_gpu_seconds": 0,
+    "projected_gpu_seconds": 151200,
+    "remaining_gpu_seconds": 21600,
+    "within_cap": true,
+    "roles": {
+      "original_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21600,
+        "basis": "full requested reservation"
+      },
+      "probes_and_scores": {
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 43200,
+        "basis": "full requested reservation"
+      },
+      "random_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21600,
+        "basis": "full requested reservation"
+      },
+      "transfer_selection": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "advanced_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21600,
+        "basis": "full requested reservation"
+      },
+      "random_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21600,
+        "basis": "full requested reservation"
+      },
+      "advanced_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21600,
+        "basis": "full requested reservation"
+      },
+      "final_results": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "publication_preflight": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "huggingface_publication": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      }
+    },
+    "historical_attempt_charges": [
+      {
+        "role": "original_evaluation",
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      },
+      {
+        "role": "probes_and_scores",
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      }
+    ]
+  },
+  "after": {
+    "policy": "verified-terminal-allocations-plus-full-open-reservations-v1",
+    "cap_gpu_seconds": 172800,
+    "cumulative_admitted_requested_gpu_seconds": 151200,
+    "cumulative_all_attempt_requested_gpu_seconds": 216000,
+    "conservative_committed_gpu_seconds": 68460,
+    "additional_requested_gpu_seconds": 0,
+    "projected_gpu_seconds": 68460,
+    "remaining_gpu_seconds": 104340,
+    "within_cap": true,
+    "roles": {
+      "original_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 3600,
+        "basis": "verified terminal allocation accounting"
+      },
+      "probes_and_scores": {
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 9540,
+        "basis": "verified terminal allocation accounting"
+      },
+      "random_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 6780,
+        "basis": "verified terminal allocation accounting"
+      },
+      "transfer_selection": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "advanced_training": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 5340,
+        "basis": "verified terminal allocation accounting"
+      },
+      "random_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21600,
+        "basis": "full requested reservation"
+      },
+      "advanced_evaluation": {
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 21600,
+        "basis": "full requested reservation"
+      },
+      "final_results": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "publication_preflight": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      },
+      "huggingface_publication": {
+        "requested_gpu_seconds": 0,
+        "charged_gpu_seconds": 0,
+        "basis": "full requested reservation"
+      }
+    },
+    "historical_attempt_charges": [
+      {
+        "role": "original_evaluation",
+        "requested_gpu_seconds": 21600,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      },
+      {
+        "role": "probes_and_scores",
+        "requested_gpu_seconds": 43200,
+        "charged_gpu_seconds": 0,
+        "basis": "prior explicit zero-admission scheduler evidence"
+      }
+    ]
+  },
+  "audit_sha256": "511c810ea057bb7b5916ca9e7c37d574c752242941b242cf78e2db90e0bc8f1a"
+}

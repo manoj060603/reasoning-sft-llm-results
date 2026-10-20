@@ -10,39 +10,55 @@ due **October 20, 2026, at 11:59 p.m. Eastern**.
 
 ## Verified progress
 
-Last successful scheduler check: **October 19, 2026, at 9:42 p.m. Eastern**.
-Subsequent ARC SSH and OnDemand connections timed out. This is an access failure;
-it does not establish that the running cluster jobs failed or stopped.
-The Cisco VT Traffic VPN session expired; its reconnect now awaits Virginia
-Tech sign-in and Duo in Brave.
+Verified snapshot: **October 19, 2026, at 11:25 p.m. Eastern / October 20,
+03:25 UTC**. VPN and ARC access are restored. Both final training runs have
+completed; the first three benchmarks for each trained model are audited.
 
 | Stage | Verified state |
 |---|---|
 | Source preparation and both probes | Complete; 30,000 opposite-fold candidate scores |
 | New-method selection | Complete; 15,000 unchanged examples, zero training truncation |
-| Random-control full SFT | Complete; 1,875 updates, 15,000 unique examples, finite final FP32 weights |
-| New-method full SFT | Running at last check; 1,461 / 1,875 updates |
-| Original benchmark evaluation | All nine complete, including the supplementary AIME25 task |
-| Random-control evaluation | Running at last check; full benchmark suite incomplete |
-| New-method evaluation | Queued behind its training; no benchmark results verified yet |
-| Final comparisons and artifact publication | Pending |
+| Both final full-SFT models | Complete; 1,875 updates each, 15,000 unique examples used once, 434 finite FP32 tensors per model |
+| Original benchmark evaluation | All nine complete, including supplementary AIME25 |
+| Random-control evaluation | AMC, AIME24 and supplementary AIME25 complete; six tasks pending |
+| New-method evaluation | AMC, AIME24 and supplementary AIME25 complete; six tasks pending |
+| Evaluation continuations | Admitted: random `1210309` (16 hours), advanced `1210310` (12 hours), after their respective parent evaluations terminate |
+| Final comparisons and Hugging Face publication | Pending; CPU closeout `1208135` depends on both continuations succeeding; publisher `1209745` depends on closeout |
 
 The original model's **official-eight macro is 29.30% pass@1 and 52.86% pass@8**.
-These are fresh matched-protocol baseline measurements. Neither a complete
-trained-model comparison nor a state-of-the-art result has been established.
-Missing results are pending, not zero.
+The [partial raw-result audit](deadline/report/partial-20261020T0325Z/results.md)
+reports the following percentages; every completed task has eight responses per
+problem and verified identities. Protocol, benchmark data and hardware agree;
+the full matched comparison remains incomplete.
 
-The control's first benchmark generated unusually long responses. A
-[16-hour evaluation continuation](deadline/operations/evaluation-runtime-contingency.md)
-is prepared with the same evaluation settings, but has **not been admitted**.
-It requires restored ARC access, native budget checks, verified GPU accounting
-and an updated final-results dependency. Deadline completion remains uncertain.
+| Completed task | Original pass@1 / pass@8 | Random pass@1 / pass@8 | Advanced pass@1 / pass@8 |
+|---|---:|---:|---:|
+| AMC 2023 | 42.50% / 70.00% | 22.50% / 47.50% | 25.00% / 45.00% |
+| AIME24 | 7.92% / 23.33% | 0.42% / 3.33% | 2.50% / 13.33% |
+| AIME25, supplementary | 0.83% / 3.33% | 2.92% / 16.67% | 1.67% / 13.33% |
+
+Both trained models trail the original on AMC and AIME24 and improve on
+supplementary AIME25. Advanced-versus-random differences are mixed across tasks
+and metrics. These small-task observations establish neither an overall winner
+nor statistical significance. Both trained-model macros and paired uncertainty
+remain pending; missing results are not zero. The selection method, models and
+evaluation protocol are unchanged in response to these scores.
+
+The [runtime continuation plan](deadline/operations/evaluation-runtime-contingency.md)
+retains the original evaluation settings and saved results. Native budget and
+pipeline checks passed **30 tests with no failures, errors or skips** in the
+running evaluation allocation. Verified closed allocations plus full open
+reservations now bound consumption at **47.0167 of 48 GPU-hours**. Historical
+admitted requests total 70 hours; the 88-hour all-attempt history additionally
+includes 18 hours verified never admitted. These figures describe distinct
+accounting quantities. Continuation success and deadline completion remain
+uncertain.
 
 ## Read the experiment
 
 - [Method, controls and execution workflow](deadline/README.md)
 - [Report draft and assignment answers](deadline/FINAL_REPORT.md)
-- [Measured result audit](deadline/report/results.md)
+- [Current partial result audit](deadline/report/partial-20261020T0325Z/results.md)
 - [Requirement-by-requirement checklist](deadline/assignment_checklist.json)
 - [Frozen scientific plan](deadline/experiment_plan.json)
 
@@ -57,8 +73,13 @@ transfer-gain ablation.
 ## Reproducibility and delivery
 
 The [fresh source snapshot](https://github.com/manoj060603/reasoning-sft-llm-results/commit/45e4d38784f1fdad4c033031f3b2d4c32c6c94b2)
-is public and verified against the entire local Git tree; see the
+is public and verified against its corresponding local source tree; see the
 [publication receipt](deadline/report/source_publication_receipt.json).
+A [subsequent source update](https://github.com/manoj060603/reasoning-sft-llm-results/commit/e0ab46b518cb5e9950e06d98ad9dc6d8f4b7868d)
+was verified against local commit `4bcfb1979e27459e32024116ced22baad38696cd`;
+the new 12-hour wrapper and current result evidence are being
+prepared for the next source update. Publication of source does not establish
+publication of model or dataset artifacts.
 
 Heavy preparation, training, evaluation and native checks run in ARC compute
 allocations. Exact source revisions, selected IDs, actual example consumption,
