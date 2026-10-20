@@ -102,16 +102,20 @@ errors or skips** in a compute allocation. Both initial evaluation parents
 ended at their time limit after 21,616 and 21,608 seconds; each is conservatively
 charged 21,660 GPU-seconds. The [random accounting proof](deadline/operations/gpu-budget-reconciliation-d155f13d26ffca69.json)
 and [advanced proof](deadline/operations/gpu-budget-reconciliation-637c6b2ed64206b8.json)
-therefore update the terminal-plus-open-reservation bound to **47.05 of 48
+therefore establish the primary-only terminal-plus-open-reservation bound of **47.05 of 48
 GPU-hours (169,380 seconds)**. This is **not actual elapsed GPU usage**.
-Historical admitted requests remain 70 hours; the 88-hour all-attempt history
+Before recovery, admitted requests totaled 70 hours; the 88-hour all-attempt history
 includes 18 hours verified never admitted. Final resource use, continuation
 success, comparisons and publication remain pending.
 
 The recovery screen completed in 316 seconds and is charged 360 GPU-seconds
 under the [terminal accounting proof](deadline/operations/gpu-budget-reconciliation-e85de9ae41202753.json).
-After reclaiming its unused reservation and admitting the 45-minute first
-benchmark stage, the current bound is **47.90 / 48 GPU-hours (172,440 seconds)**.
+The first benchmark stage reached its 45-minute limit after 2,703 seconds;
+seven completed tasks are retained. Its [terminal accounting proof](deadline/operations/gpu-budget-reconciliation-c0f4181a2d92af85.json)
+charges 2,760 GPU-seconds, including the overrun rounded upward. The current
+terminal-plus-open-reservation bound is **47.9167 / 48 GPU-hours (172,500 seconds)**,
+leaving five minutes of uncommitted capacity. Further recovery evaluation awaits
+verified unused-capacity reclamation after a primary continuation ends.
 Historical admitted requests are 71.50 hours; all-attempt requests are 89.50 hours.
 These are separate from actual elapsed use. A continuation has not been admitted.
 

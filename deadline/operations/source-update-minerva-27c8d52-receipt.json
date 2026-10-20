@@ -1,0 +1,21 @@
+{
+  "schema": "deadline-source-update-v1",
+  "complete": true,
+  "at_utc": "2026-10-20T15:39:33.540225+00:00",
+  "local_commit": "27c8d52d373f4042c82d20f61be5adc2fb3cca81",
+  "public_commit": "33384316064681d8847f2bd1014314e10c68202d",
+  "local_tree": "a6109f5d934ef5cb2c5f557b8a26f99f19d56141",
+  "archive_sha256": "f122601fc226fc49657c652f5c980490c171de4430d5c2963b7e9ca79147d787",
+  "manifest_sha256": "a1d42d8c30b01a77091c534ed9a9b5b8675973b141a40e17ef8fd803edc475fb",
+  "frozen_plan_sha256": "080488bb494c52ca71d385b2f041821e8c71c2c994aa6439c1c6f24d8227635d",
+  "installed": [
+    "README.md",
+    "deadline/FINAL_REPORT.md",
+    "deadline/assignment_checklist.json"
+  ],
+  "already_identical": [
+    "deadline/operations/source-update-results-0097387-receipt.json",
+    "deadline/report/recovery-benchmark-partial-20261020T1535Z/minerva-audit.json"
+  ],
+  "scope": "Documentation and native evidence only; no model, data, evaluation protocol, job or dependency changes."
+}

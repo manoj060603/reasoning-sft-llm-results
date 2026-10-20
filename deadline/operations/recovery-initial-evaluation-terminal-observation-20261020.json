@@ -1,0 +1,28 @@
+{
+  "schema": "deadline-recovery-bounded-stage-terminal-observation-v1",
+  "observed_at_utc": "2026-10-20T15:40:51.122527+00:00",
+  "job_id": "1214775",
+  "role": "recovery_evaluation_initial",
+  "state": "TIMEOUT",
+  "elapsed_seconds": 2703,
+  "rounded_elapsed_gpu_seconds_pending_reconciliation": 2760,
+  "requested_gpu_seconds": 2700,
+  "sacct_text": "1214775|1214775|TIMEOUT|2703|billing=320,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=64G,node=1\n",
+  "squeue_all_states_text": "1210310|RUNNING\n1210309|RUNNING\n1214775|TIMEOUT\n1209745|PENDING\n1208135|PENDING\n",
+  "retained_saved_benchmarks": [
+    "amc",
+    "aime25",
+    "aime",
+    "math",
+    "cn_math_2024",
+    "kaoyan",
+    "minerva"
+  ],
+  "not_complete": [
+    "olympiadbench",
+    "gpqa"
+  ],
+  "ledger_reconciled": false,
+  "reason": "Strict reconciliation refused while the terminal job remains in Slurm all-states listing. Retain reservation and do not admit another GPU job; retry only after scheduler metadata settles.",
+  "no_new_job_submitted": true
+}

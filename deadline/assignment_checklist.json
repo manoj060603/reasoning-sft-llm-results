@@ -426,8 +426,8 @@
   "last_reconciled_utc": "2026-10-20T10:10:00+00:00",
   "requested_repository_owner": "manoj060603",
   "team_submission_action": "Team-owned action; no course-system submission is performed by this experiment automation.",
-  "last_verified_cluster_snapshot_utc": "2026-10-20T15:24:09.783015+00:00",
-  "current_access_note": "Both primary evaluation continuations are running GPQA after completing OlympiadBench. Each primary trained model has 8/9 tasks verified. Closeout and publication dependencies are unchanged. Recovery benchmark stage 1214775 is a separate 45-minute allocation.",
+  "last_verified_cluster_snapshot_utc": "2026-10-20T15:50:50.852271+00:00",
+  "current_access_note": "Both primary GPQA evaluations remain running with 8/9 tasks verified each. Recovery initial allocation ended at its time limit with seven tasks saved; OlympiadBench and GPQA recovery results await an identical-protocol continuation after fresh capacity is verified. Closeout and publication dependencies are unchanged.",
   "current_execution_evidence": {
     "partial_audit": "deadline/report/partial-20261020T1010Z/audit.json",
     "training_complete": {
@@ -466,7 +466,7 @@
       "dependency": "afterok:1208135"
     },
     "admission_receipt": "deadline/operations/evaluation-continuation-admission.json",
-    "conservative_gpu_hours_bound": 47.9,
+    "conservative_gpu_hours_bound": 47.916666666666664,
     "gpu_hours_cap": 48,
     "historical_admitted_requested_gpu_hours": 71.5,
     "all_attempt_requested_gpu_hours": 89.5,
@@ -477,7 +477,7 @@
       "random": 7,
       "advanced": 7
     },
-    "gpu_resource_figure_interpretation": "47.90/48 is verified terminal GPU charges plus full live primary and initial recovery benchmark reservations, not actual elapsed consumption. Development316 seconds is charged360 seconds after exact terminal accounting. A later recovery continuation requires fresh verified capacity.",
+    "gpu_resource_figure_interpretation": "47.9167/48 hours comprises verified terminal GPU charges plus full live primary reservations, not actual elapsed consumption. Recovery development is charged 360 seconds, and initial benchmark allocation 2,760 seconds after 2,703 elapsed. Only five minutes are uncommitted; an identical-protocol recovery continuation awaits fresh verified capacity.",
     "partial_math_comparison": {
       "problems": 500,
       "samples_per_problem": 8,
@@ -815,7 +815,8 @@
         "deadline/report/recovery-development-20261020/summary.json",
         "deadline/operations/recovery-evaluation-manifest-audit-20261020.json",
         "deadline/operations/recovery-benchmark-initial-admission-20261020.json",
-        "deadline/operations/gpu-budget-reconciliation-e85de9ae41202753.json"
+        "deadline/operations/gpu-budget-reconciliation-e85de9ae41202753.json",
+        "deadline/operations/gpu-budget-reconciliation-c0f4181a2d92af85.json"
       ],
       "fixed_gate_accepted": true,
       "development_elapsed_seconds": 316,
@@ -823,7 +824,7 @@
       "development_summary": "deadline/report/recovery-development-20261020/summary.json",
       "benchmark_evaluation_initial_admitted": true,
       "initial_benchmark_job_id": "1214775",
-      "initial_benchmark_state": "RUNNING",
+      "initial_benchmark_state": "TIMEOUT",
       "initial_benchmark_requested_gpu_hours": 0.75,
       "initial_benchmark_limit_minutes": 45,
       "full_suite_complete": false,
@@ -834,7 +835,15 @@
         "deadline/report/recovery-benchmark-partial-20261020T1521Z/audit.json",
         "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json",
         "deadline/report/recovery-benchmark-partial-20261020T1535Z/minerva-audit.json"
-      ]
+      ],
+      "initial_elapsed_seconds": 2703,
+      "initial_terminal_observation": "deadline/operations/recovery-initial-evaluation-terminal-observation-20261020.json",
+      "terminal_budget_reconciliation": "deadline/operations/gpu-budget-reconciliation-c0f4181a2d92af85.json",
+      "remaining_tasks": [
+        "olympiadbench",
+        "gpqa"
+      ],
+      "initial_charged_gpu_seconds": 2760
     },
     "partial_olympiadbench": {
       "original": {
@@ -859,10 +868,12 @@
         "truncated_samples": 3062
       }
     },
-    "partial_olympiadbench_audit": "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json"
+    "partial_olympiadbench_audit": "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json",
+    "conservative_committed_gpu_seconds": 172500,
+    "uncommitted_gpu_seconds": 300
   },
   "last_verified_result_snapshot_utc": "2026-10-20T15:24:09.783015+00:00",
-  "operational_update_utc": "2026-10-20T15:24:09.783015+00:00",
+  "operational_update_utc": "2026-10-20T15:50:50.852271+00:00",
   "reviewed_implementation_commit_scope": "b092f29 is a historical primary implementation review; later operational and recovery changes have separately recorded native receipts.",
   "report_closeout_obligations": [
     "FinalCPUjob creates audit/uncertainty/package metadata, not the finished narrative; reconcile FINAL_REPORT.md,README and this checklist manually with complete results and verified links.",
