@@ -1,0 +1,108 @@
+{
+  "schema": "deadline-validation-anchor-search-plan-v1",
+  "frozen_at_utc": "2026-10-20T18:48:45.032828+00:00",
+  "relationship_to_delivered_experiment": "New user-authorized exploratory follow-up after primary and fixed-recovery benchmark outcomes were viewed. All delivered plans, models, outputs and public artifacts remain immutable. This is not a confirmatory benchmark study or a novelty/SOTA claim.",
+  "method": "Validation-selected global base anchoring; no new training, layerwise search, decoding changes or benchmark-based candidate selection.",
+  "alpha_advanced_candidates": {
+    "alpha0125": 0.125,
+    "alpha0375": 0.375
+  },
+  "controls": {
+    "original": 0.0,
+    "incumbent": 0.25
+  },
+  "formula": "theta(alpha) = (1-alpha)*theta_original + alpha*theta_advanced, serialized and checked in FP32.",
+  "source_selection": {
+    "heldout_rows": 1000,
+    "exclude_previously_viewed_screen_rows": 64,
+    "previous_screen_ids_sha256": "af899b05afe502400cebb6c2197a7fd454f66114198733838ffd7913f9975d8e",
+    "eligible": "unchanged source teacher with boxed final answer and native prompt <=2048 tokens",
+    "seed": 20261021,
+    "ordering": "ascending sha256 of 20261021:anchor-v2:<canonical prompt id>",
+    "search_rows": 192,
+    "confirmation_rows": 192,
+    "disjoint_from": [
+      "entire prepared training pool",
+      "both probe reservations",
+      "both actual 15K training datasets",
+      "previous 64-question recovery development screen"
+    ],
+    "selection_occurs_before_new_generation": true
+  },
+  "source_protocol": {
+    "n": 8,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "seed": 20261021,
+    "per_question_seed": "(20261021 + int(canonical_prompt_id[:8],16)) % 2**31",
+    "max_tokens": 4096,
+    "max_model_len": 8192,
+    "max_num_seqs": 128,
+    "gpu_memory_utilization": 0.85,
+    "dtype": "bfloat16",
+    "tensor_parallel_size": 1,
+    "generation_config": "vllm",
+    "top_k": -1,
+    "min_p": 0.0,
+    "repetition_penalty": 1.0,
+    "native_prompt_tokens": true,
+    "metric": "source teacher-answer agreement, not verified truth; pass@1 = fraction of eight agreeing responses and pass@8 = fraction of questions with any agreement"
+  },
+  "selection_rule": {
+    "score": "harmonic mean of source pass@1 and pass@8; zero if both zero",
+    "candidate_pass_at_1_floor": "both original - 0.01 and incumbent - 0.01",
+    "candidate_pass_at_8_floor": "both original - 0.02 and incumbent - 0.02",
+    "length_finish_ceiling": "max(original_count,incumbent_count)+ceil(0.01*rows*n)",
+    "mean_repetition_8gram_ceiling": "max(original,incumbent)+0.01",
+    "promotion": "strictly greater harmonic score than incumbent with all floors/ceilings met",
+    "ranking": "highest harmonic score, then highest pass@1, then smaller alpha; exact tie with incumbent retains incumbent",
+    "complete_all_four_search_roles_required": true,
+    "maximum_new_candidates_promoted": 1
+  },
+  "confirmation": {
+    "roles": [
+      "original",
+      "incumbent",
+      "one selected new candidate"
+    ],
+    "gate": "the identical fixed floors/ceilings and strict harmonic improvement over incumbent on the disjoint confirmation split",
+    "no_second_candidate_after_failed_confirmation": true,
+    "limited_power": "Operational development gate only; 192 teacher-labeled clusters cannot establish sub-percentage-point superiority or general truth."
+  },
+  "benchmark": {
+    "admission": "only one candidate with accepted sealed source confirmation",
+    "evaluator_sha256": "55181149a1010cd60a5979e859e2fcd6ee5d1a3abb8d4fbf33cee4b18586c316",
+    "tasks": [
+      "amc",
+      "aime25",
+      "aime",
+      "math",
+      "cn_math_2024",
+      "kaoyan",
+      "minerva",
+      "olympiadbench",
+      "gpqa"
+    ],
+    "protocol": "unchanged primary eight-sample 32K protocol, seed0, batch1024, TP1, BF16, maxseq128, gpuutil0.85, same B200/data/grader/runtime",
+    "reuse": "retain matched original/random/advanced/incumbent benchmark controls; every genuinely new weight candidate requires all nine fresh outputs",
+    "no_reranking_or_second_candidate_after_benchmark_results": true,
+    "success_definition": "The candidate exceeds original in BOTH pass@1 and pass@8 on the equal-benchmark macro over the eight supplied tasks. Every individual task and supplementary AIME25 is still reported, including regressions. Point-estimate success is distinct from conditional uncertainty or general superiority."
+  },
+  "resources": {
+    "unchanged_total_gpu_hour_cap": 48,
+    "prior_final_conservative_gpu_hours": 39.03333333333333,
+    "development_gpu_reservation_hours": 1.5,
+    "benchmark_gpu_reservation_hours": 3.0,
+    "deadline_utc": "2026-10-21T03:59:00+00:00",
+    "development_start_reserve_hours": 6.5,
+    "benchmark_start_reserve_hours": 5.0,
+    "closeout_wall_clock_reserve_hours": 2.0,
+    "all_model_data_work_and_tests_on_compute_allocations": true,
+    "inspect_scheduler_and_locked_ledger_before_every_submission": true
+  },
+  "stopping": "If no search candidate passes, or the single candidate fails confirmation, preserve the delivered incumbent and report no demonstrated further improvement. Incomplete/failed experiments remain labeled. No benchmark score may change this plan or trigger another candidate.",
+  "literature": [
+    "https://arxiv.org/abs/2203.05482",
+    "https://arxiv.org/abs/2407.08699"
+  ]
+}

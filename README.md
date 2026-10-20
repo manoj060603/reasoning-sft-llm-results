@@ -8,6 +8,23 @@ control. Earlier team models are not used for initialization or probe scoring.
 This project addresses the [Virginia Tech reasoning SFT assignment](https://github.com/reds-lab/Project-Reasoning-SFT-LLM),
 due **October 20, 2026, at 11:59 p.m. Eastern**.
 
+## Additional recovery follow-up
+
+A separate follow-up, authorized October 20 after delivery, is testing **12.5%
+and 37.5% advanced-weight blends** against the original and the published 25%
+recovery. Its [prospective plan](deadline/anchor_search/plan.json) uses 192 fresh
+source-heldout search questions and 192 disjoint confirmation questions, eight
+responses each. Only one candidate passing both fixed source stages may receive
+a full unchanged nine-task benchmark evaluation. This is exploratory work after
+prior benchmark observations; it does not replace the delivered experiment.
+
+CPU preparation `1218896` is running. Its [32 native checks](deadline/operations/anchor-v2-native-qa-20261020-attempt1.json)
+passed with zero failures, errors or skips; no new candidate benchmark result
+exists yet. The B200 source-stage reservation is 1.5 GPU-hours and the conditional
+benchmark reservation is 3 hours, keeping the conservative total bound at
+43.533333 / 48 GPU-hours if both are admitted. Selection and confirmation use
+source teacher agreement, which is not verified ground truth.
+
 ## Verified progress
 
 Verified snapshot: **October 20, 2026, at 1:41 p.m. Eastern / 17:41 UTC**.

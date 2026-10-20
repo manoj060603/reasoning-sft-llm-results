@@ -1,0 +1,19 @@
+{
+  "schema": "deadline-anchor-v2-source-install-v1",
+  "installed_at_utc": "2026-10-20T18:53:49.200564+00:00",
+  "local_commit": "9c246dd7385a0fe93877eacbcf673bb94585b2cd",
+  "archive_sha256": "7f235cee322192033e8f8e2dfcf47ba3414090eb325a5c86432b060a4ba42734",
+  "files": {
+    "deadline/anchor_search/plan.json": "f703aba665002f5a0eff60e4580255a961583d39ce2047c1b92ddb515affaaf4",
+    "tests/test_anchor_merge.py": "8fbaabe8d3caa804a7c26a978f308cdd68bff17494c60a3bffd13c22ef96b9e3",
+    "deadline/anchor_search/preflight.py": "1bf8bad59d1ab9829616ba96b664c6127ae83f88206fabbcd31ecb45c64e6986",
+    "deadline/anchor_search/screen.py": "d983b719b98857d69b7972355f1511fbcdd6976e3576d9456a3d3928684cb7c3",
+    "deadline/anchor_search/evaluate.slurm": "f41ba01ed55e06f5926d799811c37f95a857019a8a8fb299c8b6b0f279936238",
+    "tests/test_anchor_selection.py": "00acedc4d9a1b69b4051c7f469c712531f5c0396e59c2313daf9b04d7cd597d2",
+    "deadline/anchor_search/development.slurm": "45d2f612a03bf3b5b9cb5a25041b4f7614fc0d7c32393729e456c3cbe94617b5",
+    "deadline/anchor_search/__init__.py": "4a5ac5ce015b264202bce884b90e40919997d0fe6f047dc362b57434f0a8c487",
+    "deadline/anchor_search/prepare.slurm": "8987b70c5c8cb3f467c088dbead98ddaca20aa26e21d8b84da866e9fe22ff738",
+    "deadline/anchor_search/core.py": "c8fa754b67cffe46c9b1fcf1b18c85a1cf178983576d1351138ebb2ee53993bb"
+  },
+  "previous_scientific_artifacts_unchanged": true
+}

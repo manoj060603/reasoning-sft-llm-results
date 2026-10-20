@@ -1,0 +1,45 @@
+{
+  "schema": "deadline-anchor-native-qa-v1",
+  "created_at_utc": "2026-10-20T18:54:09.064263+00:00",
+  "hostname": "owl011",
+  "allocation": {
+    "slurm_job_id": "1218896",
+    "slurm_step_id": null,
+    "slurmd_nodename": "owl011",
+    "cuda_visible_devices": ""
+  },
+  "code_sha256": {
+    "deadline/anchor_search/__init__.py": "4a5ac5ce015b264202bce884b90e40919997d0fe6f047dc362b57434f0a8c487",
+    "deadline/anchor_search/core.py": "c8fa754b67cffe46c9b1fcf1b18c85a1cf178983576d1351138ebb2ee53993bb",
+    "deadline/anchor_search/development.slurm": "45d2f612a03bf3b5b9cb5a25041b4f7614fc0d7c32393729e456c3cbe94617b5",
+    "deadline/anchor_search/evaluate.slurm": "f41ba01ed55e06f5926d799811c37f95a857019a8a8fb299c8b6b0f279936238",
+    "deadline/anchor_search/plan.json": "f703aba665002f5a0eff60e4580255a961583d39ce2047c1b92ddb515affaaf4",
+    "deadline/anchor_search/preflight.py": "1bf8bad59d1ab9829616ba96b664c6127ae83f88206fabbcd31ecb45c64e6986",
+    "deadline/anchor_search/prepare.slurm": "8987b70c5c8cb3f467c088dbead98ddaca20aa26e21d8b84da866e9fe22ff738",
+    "deadline/anchor_search/screen.py": "d983b719b98857d69b7972355f1511fbcdd6976e3576d9456a3d3928684cb7c3",
+    "deadline/gpu_budget.py": "12bfc726cc3abf434eae3afa65e5064f5c26920dcd2b02d5e50c3040d8ed845e",
+    "deadline/pipeline.py": "a5ac9133ca764079b28e6e5e9edd2181b18af8baf43ee9de20ebd0af5842ca00",
+    "deadline/recovery/common.py": "4964ac176ca47dc609d3e0e8395f0892015925fd4c7d17d638a3ec7cb4608630",
+    "deadline/recovery/merge.py": "b8439c2b53b7ae5b5626945e42edb321f80960afb4b844b963c27be4836f9443",
+    "deadline/recovery/screen.py": "f531d07db77738a08d4104231449e854e74956c4e8b51daf479eedf682ea74e8",
+    "eval/utils/grader.py": "43d858572b1dadda6fe3ec327db123bb5362fccd271ae58329c57f0c10521383",
+    "eval/utils/math_normalization.py": "9c0484a01b76bd4582bfe61c8ee55df375dbc09782f1b587fc21b21dd80e23a0",
+    "eval/utils/parser.py": "8d04ceb93e9ef50d61157fd1c8826a5cbf8d7f64cda85459f1166e19d8784208",
+    "reasoning/benchmark.py": "c26126e78cf31612fbc288a22726f23bb5998e643809ff449595a29a5bcc4c9f",
+    "reasoning/data.py": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68",
+    "reasoning/evaluate.py": "55181149a1010cd60a5979e859e2fcd6ee5d1a3abb8d4fbf33cee4b18586c316",
+    "reasoning/features.py": "5cee76526c1b552e53b490c811c2e4c5506758985be735c13bc0945fb6a59d13",
+    "tests/test_anchor_merge.py": "8fbaabe8d3caa804a7c26a978f308cdd68bff17494c60a3bffd13c22ef96b9e3",
+    "tests/test_anchor_selection.py": "00acedc4d9a1b69b4051c7f469c712531f5c0396e59c2313daf9b04d7cd597d2"
+  },
+  "tests_run": 32,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "success": true,
+  "shell_syntax_checks": [
+    "deadline/anchor_search/development.slurm",
+    "deadline/anchor_search/evaluate.slurm",
+    "deadline/anchor_search/prepare.slurm"
+  ]
+}
