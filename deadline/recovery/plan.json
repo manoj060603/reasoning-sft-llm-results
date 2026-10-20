@@ -1,0 +1,48 @@
+{
+  "schema": "deadline-posthoc-base-anchor-recovery-plan-v1",
+  "status": "fixed before any recovery generation; untested exploratory candidate",
+  "relationship_to_primary": "Exploratory recovery designed after viewing primary benchmark results and long-response diagnostics. It does not replace, retune or change the frozen primary selection/training/evaluation experiment.",
+  "candidate": "One fixed full-weight base-anchored interpolation: theta_recovery = 0.75 * theta_original_base + 0.25 * theta_advanced_final, computed and stored in FP32.",
+  "alpha_advanced": 0.25,
+  "alpha_base": 0.75,
+  "alpha_sweep": false,
+  "benchmark_based_candidate_selection": false,
+  "screen": {
+    "purpose": "Source-only development evidence; teacher-answer agreement is not verified ground truth and is not benchmark improvement.",
+    "source": "Exactly 1000 original source-heldout rows at deadline/artifacts/heldout.json, disjoint from the prepared training pool, final training sets and both probe reservations.",
+    "selection": "Deterministic 64 eligible native prompts, at most 2048 prompt tokens, with an extractable final boxed teacher answer; selected IDs and hashes saved before any generation.",
+    "rows": 64,
+    "selection_seed": 20261020,
+    "roles": ["base", "advanced", "recovery"],
+    "base_role_meaning": "Original pinned base model, never a previous team checkpoint.",
+    "samples_per_question": 1,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "seed": 20261020,
+    "maximum_new_tokens": 4096,
+    "maximum_context": 8192,
+    "dtype": "bfloat16",
+    "maximum_sequences": 64,
+    "gpu_memory_utilization": 0.85,
+    "system_prompt": "Same fixed primary system prompt and native template.",
+    "grader": "Existing primary rule-based grader, interpreted only as teacher-answer agreement.",
+    "outputs": "Selected IDs, input/model/code hashes and answer-free per-example diagnostics; no source solutions or raw generations exported.",
+    "single_gpu_allocation_maximum_minutes": 45
+  },
+  "fixed_gate": {
+    "teacher_answer_agreement_count": "recovery >= advanced AND recovery >= original - 2, each out of the same fixed 64 examples",
+    "length_finishes": "2 * recovery_length_finishes <= advanced_length_finishes; if advanced has zero, recovery must have zero",
+    "meaning": "Passing is development evidence only. No alpha, threshold, IDs, generation settings or gate changes after observing these results."
+  },
+  "admission": {
+    "automatic_submission": false,
+    "full_benchmark_admission": "Forbidden until terminal GPU-budget reclamation, the unchanged 48-GPU-hour cap, and completion/publication deadline reserves permit a separately labeled additional evaluation.",
+    "primary_runs": "Preserve all primary weights, data, raw outputs and publication gates unchanged. No primary incomplete result is replaced by a recovery result."
+  },
+  "limitations": [
+    "Post-hoc design after primary outcomes; one coefficient and one development screen do not establish novelty, general superiority or SOTA.",
+    "Weight interpolation is a hypothesis about reducing harmful drift; it is not additional data selection or additional SFT.",
+    "A 64-example, one-sample teacher-agreement screen has limited power and does not prove general reasoning correctness or benchmark improvement.",
+    "No recovery result, GPU admission or Hugging Face publication exists merely because this code and plan exist."
+  ]
+}

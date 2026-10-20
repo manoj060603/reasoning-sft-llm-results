@@ -1,0 +1,251 @@
+{
+  "schema": "deadline-accuracy-blind-stopping-diagnostic-v1",
+  "created_at_utc": "2026-10-20T13:42:05.660585+00:00",
+  "benchmark": "amc",
+  "accuracy_inspected": false,
+  "questions_answers_or_correctness_used": false,
+  "generation_or_models_loaded": false,
+  "method": "Aggregate saved output_tokens, finish reasons, think/boxed markers, word8gram repetition. No grading or answer selection. Box markers do not imply correctness.",
+  "allocation": {
+    "job_id": "1210310",
+    "step_id": "1",
+    "hostname": "owl-sr001",
+    "cuda_visible_devices": ""
+  },
+  "roles": {
+    "original": {
+      "raw_sha256": "75df4477a36bac719c3ba6a86f55db9580d1bd66c1349247e8b7a8296ba3e114",
+      "raw_bytes": 960098,
+      "records": 40,
+      "samples": 320,
+      "finish_reasons": {
+        "stop": 317,
+        "length": 3
+      },
+      "output_tokens": {
+        "min": 260,
+        "median": 765.0,
+        "mean": 1130.653125,
+        "p90_nearest_rank": 1391,
+        "max": 32701
+      },
+      "response_word8_repetition": {
+        "min": 0.0,
+        "median": 0.01367525363504607,
+        "mean": 0.04053444407511155,
+        "p90_nearest_rank": 0.11358574610244987,
+        "max": 0.9605868814729575
+      },
+      "last512word8_repetition": {
+        "min": 0.0,
+        "median": 0.013861386138613874,
+        "mean": 0.041391298455081355,
+        "p90_nearest_rank": 0.11485148514851484,
+        "max": 0.8277227722772278
+      },
+      "structural_counts": {
+        "starts_think": 0,
+        "contains_think_open": 0,
+        "contains_think_close": 0,
+        "contains_boxed": 317,
+        "length_finish_with_boxed": 0,
+        "output_exceeds_8192_tokens": 3,
+        "repetition8_above_25_percent": 5,
+        "tail512_repetition8_above_25_percent": 7
+      },
+      "actual_model_stop_metadata": {
+        "config.json": {
+          "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+          "values": {
+            "eos_token_id": 151645,
+            "max_position_embeddings": 32768,
+            "use_cache": true
+          }
+        },
+        "generation_config.json": {
+          "sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+          "values": {
+            "eos_token_id": [
+              151645,
+              151643
+            ],
+            "pad_token_id": 151643
+          }
+        },
+        "tokenizer_config.json": {
+          "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+          "values": {
+            "eos_token": "<|im_end|>",
+            "pad_token": "<|endoftext|>",
+            "model_max_length": 131072
+          }
+        }
+      },
+      "training_cache_audit": null
+    },
+    "random": {
+      "raw_sha256": "78cee883e4fe95f3557991728416ad2188f503ec476e209f5b17283ac66454eb",
+      "raw_bytes": 19826591,
+      "records": 40,
+      "samples": 320,
+      "finish_reasons": {
+        "stop": 130,
+        "length": 190
+      },
+      "output_tokens": {
+        "min": 655,
+        "median": 32597.5,
+        "mean": 20732.81875,
+        "p90_nearest_rank": 32702,
+        "max": 32720
+      },
+      "response_word8_repetition": {
+        "min": 0.0,
+        "median": 0.6983496011110544,
+        "mean": 0.5054646466518722,
+        "p90_nearest_rank": 0.9264366961564197,
+        "max": 0.9869379354021532
+      },
+      "last512word8_repetition": {
+        "min": 0.0,
+        "median": 0.44356435643564357,
+        "mean": 0.41991285158104896,
+        "p90_nearest_rank": 0.9108910891089109,
+        "max": 0.996039603960396
+      },
+      "structural_counts": {
+        "starts_think": 320,
+        "contains_think_open": 320,
+        "contains_think_close": 130,
+        "contains_boxed": 132,
+        "length_finish_with_boxed": 2,
+        "output_exceeds_8192_tokens": 201,
+        "repetition8_above_25_percent": 187,
+        "tail512_repetition8_above_25_percent": 174
+      },
+      "actual_model_stop_metadata": {
+        "config.json": {
+          "sha256": "e3394fd18e601ef755377e1465daee07775b3df6799e39ad1c0805aa12b9791f",
+          "values": {
+            "eos_token_id": 151645,
+            "pad_token_id": 151643,
+            "max_position_embeddings": 32768,
+            "rope_scaling": null,
+            "use_cache": true
+          }
+        },
+        "generation_config.json": {
+          "sha256": "bee877e33ef166a0ebe065a65c0406f6c0be90040e3eb42e68932314b20e50cb",
+          "values": {
+            "eos_token_id": [
+              151645,
+              151643
+            ],
+            "pad_token_id": 151643
+          }
+        },
+        "tokenizer_config.json": {
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "values": {
+            "eos_token": "<|im_end|>",
+            "pad_token": "<|endoftext|>",
+            "model_max_length": 131072
+          }
+        }
+      },
+      "training_cache_audit": {
+        "sha256": "a066e679630a7ef745ba647ddfd16f8abbfdbf4d0c29df6a43262473b5305fb9",
+        "fields": {
+          "rows": 15000,
+          "supervised_tokens": 85547725,
+          "truncated_rows": 5806,
+          "dataset_role": "random",
+          "supervised_eos_missing_rows": 5806,
+          "eos_token_id": 151645
+        }
+      }
+    },
+    "advanced": {
+      "raw_sha256": "51ab2d99aa3d174be8defe3c3efb28782198a34fad68435ae9a58b2a6349606d",
+      "raw_bytes": 17723556,
+      "records": 40,
+      "samples": 320,
+      "finish_reasons": {
+        "stop": 151,
+        "length": 169
+      },
+      "output_tokens": {
+        "min": 597,
+        "median": 32526.0,
+        "mean": 19158.125,
+        "p90_nearest_rank": 32701,
+        "max": 32720
+      },
+      "response_word8_repetition": {
+        "min": 0.0,
+        "median": 0.2611256034915608,
+        "mean": 0.4384485091609002,
+        "p90_nearest_rank": 0.9273915687069315,
+        "max": 0.9828986412619085
+      },
+      "last512word8_repetition": {
+        "min": 0.0,
+        "median": 0.08514851485148511,
+        "mean": 0.32696529360945087,
+        "p90_nearest_rank": 0.8772277227722772,
+        "max": 0.994059405940594
+      },
+      "structural_counts": {
+        "starts_think": 320,
+        "contains_think_open": 320,
+        "contains_think_close": 153,
+        "contains_boxed": 157,
+        "length_finish_with_boxed": 6,
+        "output_exceeds_8192_tokens": 188,
+        "repetition8_above_25_percent": 162,
+        "tail512_repetition8_above_25_percent": 145
+      },
+      "actual_model_stop_metadata": {
+        "config.json": {
+          "sha256": "e3394fd18e601ef755377e1465daee07775b3df6799e39ad1c0805aa12b9791f",
+          "values": {
+            "eos_token_id": 151645,
+            "pad_token_id": 151643,
+            "max_position_embeddings": 32768,
+            "rope_scaling": null,
+            "use_cache": true
+          }
+        },
+        "generation_config.json": {
+          "sha256": "bee877e33ef166a0ebe065a65c0406f6c0be90040e3eb42e68932314b20e50cb",
+          "values": {
+            "eos_token_id": [
+              151645,
+              151643
+            ],
+            "pad_token_id": 151643
+          }
+        },
+        "tokenizer_config.json": {
+          "sha256": "0a04a9d7d4a62b28482bdfe726c122756de85714fb64166ace92ae75b8f57614",
+          "values": {
+            "eos_token": "<|im_end|>",
+            "pad_token": "<|endoftext|>",
+            "model_max_length": 131072
+          }
+        }
+      },
+      "training_cache_audit": {
+        "sha256": "823a230e2367248262639ba79d8d432373751fb9821f1c50bab376132773bc42",
+        "fields": {
+          "rows": 15000,
+          "supervised_tokens": 63636440,
+          "truncated_rows": 0,
+          "dataset_role": "advanced",
+          "supervised_eos_missing_rows": 0,
+          "eos_token_id": 151645
+        }
+      }
+    }
+  }
+}

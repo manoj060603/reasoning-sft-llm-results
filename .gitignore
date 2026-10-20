@@ -2,6 +2,7 @@
 __pycache__/
 deadline/artifacts/
 deadline/runs/
+deadline/recovery-runs/
 deadline/logs/
 deadline/results/
 deadline/hf/

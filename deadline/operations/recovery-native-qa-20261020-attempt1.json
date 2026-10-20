@@ -1,0 +1,35 @@
+{
+  "schema": "deadline-recovery-native-qa-v1",
+  "created_at_utc": "2026-10-20T14:03:05.351566+00:00",
+  "hostname": "owl008",
+  "allocation": {
+    "slurm_job_id": "1214044",
+    "slurm_step_id": null,
+    "slurmd_nodename": "owl008",
+    "cuda_visible_devices": ""
+  },
+  "plan_sha256": "f7210518343d43eaf7f8342b66b33ae4e06df8cdee46af0e72991c9adb7912e5",
+  "code_sha256": {
+    "deadline/operations/recovery-development.slurm": "f2138186b03497d0484e56ee8867d74eafbdde58710bad8e87451152783c8dcf",
+    "deadline/operations/recovery-evaluate.slurm": "46456d300891e9c2fd234eabad2757c22895f71ba204f7dd0523e39b7d9a2b9e",
+    "deadline/operations/recovery-prepare.slurm": "8d9c862a79beae4c94087dc347c3c9fd56354ef2875654850f2e79bbde19b3e2",
+    "deadline/operations/recovery_preflight.py": "d9446b5d2621cca67e1c4d4897217477157d25986bfb1edd9645de5cdbda86ac",
+    "deadline/recovery/__init__.py": "6500fdd15cb8b3148bc8fe6c9014a419ad0b64b268d5067d3d9ccdd215adb48d",
+    "deadline/recovery/common.py": "4964ac176ca47dc609d3e0e8395f0892015925fd4c7d17d638a3ec7cb4608630",
+    "deadline/recovery/merge.py": "b8439c2b53b7ae5b5626945e42edb321f80960afb4b844b963c27be4836f9443",
+    "deadline/recovery/plan.json": "f7210518343d43eaf7f8342b66b33ae4e06df8cdee46af0e72991c9adb7912e5",
+    "deadline/recovery/screen.py": "f531d07db77738a08d4104231449e854e74956c4e8b51daf479eedf682ea74e8",
+    "tests/test_deadline_recovery_merge.py": "5abb62e19a8fdcd94feea12221b792a058581ab093457578d36349c091b87abc",
+    "tests/test_deadline_recovery_screen.py": "66f9d9f47cae12ccf269949ea0462b357d0d2ad03a52005755ee31acec61fd07"
+  },
+  "tests_run": 31,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "success": true,
+  "shell_syntax_checks": [
+    "recovery-prepare.slurm",
+    "recovery-development.slurm",
+    "recovery-evaluate.slurm"
+  ]
+}
