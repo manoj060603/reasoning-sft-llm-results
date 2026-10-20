@@ -18,15 +18,30 @@ responses each. Only one candidate passing both fixed source stages may receive
 a full unchanged nine-task benchmark evaluation. This is exploratory work after
 prior benchmark observations; it does not replace the delivered experiment.
 
-CPU preparation retry `1218982` is running after `1218896` stopped before
-generation because ARC lacked a copy of the sealed prior exclusion IDs. The
-[operational retry receipt](deadline/operations/anchor-v2-prepare-retry-20261020.json)
-preserves that failure and exact-byte repair; no GPU time was used. The [32 native checks](deadline/operations/anchor-v2-native-qa-20261020-attempt1.json)
-passed with zero failures, errors or skips; no new candidate benchmark result
-exists yet. The B200 source-stage reservation is 1.5 GPU-hours and the conditional
-benchmark reservation is 3 hours, keeping the conservative total bound at
-43.533333 / 48 GPU-hours if both are admitted. Selection and confirmation use
-source teacher agreement, which is not verified ground truth.
+CPU preparation retry `1218982` **completed successfully in 252 seconds**.
+Both new checkpoints have six finite FP32 shards and 434 checked tensors. The
+[preparation receipt](deadline/operations/anchor-v2-preparation-complete-20261020.json)
+and [native source/model/split seal](deadline/report/anchor-v2-preparation-20261020/prepared.json)
+preserve exact identities. The [32 native checks](deadline/operations/anchor-v2-native-qa-20261020-attempt1.json)
+passed with zero failures, errors or skips. The [operational retry](deadline/operations/anchor-v2-prepare-retry-20261020.json)
+retains the initial missing-metadata failure and unchanged exclusion-ID repair;
+neither CPU attempt used a GPU.
+
+**19:15 UTC scheduling snapshot:** B200 source job `1219074` is queued. Its
+current scheduler estimate is **23:34 UTC / 7:34 p.m. Eastern**, later than the
+frozen development start cutoff of **21:29 UTC / 5:29 p.m. Eastern**. Estimates
+can change, but the extra follow-up is now at risk from GPU availability. A
+[backfill adjustment](deadline/operations/anchor-v2-backfill-adjustment-20261020.json)
+lets the same queued job accept a 75–90-minute allocation; it changes no model,
+question, generation setting, decision gate or deadline reserve. Every source
+role must still complete. No new candidate benchmark result exists yet.
+
+The admitted source reservation gives a conservative bound of **40.533333 / 48
+GPU-hours**. If its single accepted candidate later admits the separate three-hour
+benchmark allocation, the bound would be **43.533333 / 48 hours**, before any
+new terminal reconciliation. Source selection uses teacher agreement, which is
+not verified ground truth. All previously completed assignment artifacts remain
+available regardless of this exploratory follow-up.
 
 ## Verified progress
 

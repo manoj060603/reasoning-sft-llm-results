@@ -1,0 +1,23 @@
+{
+  "schema": "deadline-anchor-v2-backfill-adjustment-v1",
+  "created_at_utc": "2026-10-20T19:14:56.361705+00:00",
+  "job_id": "1219074",
+  "action": "Enable an optional75-minute backfill allocation while retaining the90-minute maximum and unchanged1.5GPU-hour ledger reservation.",
+  "reason": "All usable B200s occupied; current UTC scheduler estimate23:34 is beyond frozen development start reserve. No alternate tested account/resource profile improved estimated admission.",
+  "command": [
+    "scontrol",
+    "--clusters=owl",
+    "update",
+    "JobId=1219074",
+    "TimeMin=01:15:00"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "scheduler_before": "JobId=1219074 JobName=sft-anchor-v2-source UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1315 Nice=0 Account=tml_2026 QOS=owl_b200_normal_short JobState=PENDING Reason=Priority Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:30:00 TimeMin=N/A SubmitTime=2026-10-20T19:02:43 EligibleTime=2026-10-20T19:02:45 AccrueTime=2026-10-20T19:02:46 StartTime=2026-10-20T23:34:09 EndTime=2026-10-21T01:04:09 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T19:14:50 Scheduler=Main Partition=b200_normal_q AllocNode:Sid=owl048:458061 ReqNodeList=(null) ExcNodeList=(null) NodeList= SchedNodeList=owl-sr002 NumNodes=1-1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=64G,node=1,billing=320,gres/gpu=1 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor_search/development.slurm SubmitLine=sbatch --clusters=owl --parsable --dependency=afterok:1218982 deadline/anchor_search/development.slurm deadline/anchor-search-runs/validation-v2-20261020-attempt2 deadline/operations/anchor-v2-native-qa-20261020-attempt1.json WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/logs/anchor-source-1219074.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/logs/anchor-source-1219074.out TresPerNode=gres/gpu:1 TresPerTask=cpu=8",
+  "scheduler_after": "JobId=1219074 JobName=sft-anchor-v2-source UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1315 Nice=0 Account=tml_2026 QOS=owl_b200_normal_short JobState=PENDING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:00 TimeLimit=01:30:00 TimeMin=01:15:00 SubmitTime=2026-10-20T19:02:43 EligibleTime=2026-10-20T19:02:45 AccrueTime=2026-10-20T19:02:46 StartTime=2026-10-20T23:34:09 EndTime=2026-10-21T01:04:09 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T19:14:50 Scheduler=Main Partition=b200_normal_q AllocNode:Sid=owl048:458061 ReqNodeList=(null) ExcNodeList=(null) NodeList= SchedNodeList=owl-sr002 NumNodes=1-1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=64G,node=1,billing=320,gres/gpu=1 AllocTRES=(null) Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor_search/development.slurm SubmitLine=sbatch --clusters=owl --parsable --dependency=afterok:1218982 deadline/anchor_search/development.slurm deadline/anchor-search-runs/validation-v2-20261020-attempt2 deadline/operations/anchor-v2-native-qa-20261020-attempt1.json WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/logs/anchor-source-1219074.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/logs/anchor-source-1219074.out TresPerNode=gres/gpu:1 TresPerTask=cpu=8",
+  "scientific_plan_code_splits_models_and_generation_unchanged": true,
+  "frozen_6_5_hour_start_reserve_unchanged": true,
+  "all_source_roles_still_required_no_partial_promotion": true,
+  "no_new_job_or_duplicate_submission": true
+}

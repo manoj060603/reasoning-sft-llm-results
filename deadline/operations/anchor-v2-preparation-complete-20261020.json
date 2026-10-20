@@ -1,0 +1,37 @@
+{
+  "schema": "deadline-anchor-v2-preparation-complete-v1",
+  "complete": true,
+  "observed_at_utc": "2026-10-20T19:10:11.692413+00:00",
+  "cpu_job_id": "1218982",
+  "root": "deadline/anchor-search-runs/validation-v2-20261020-attempt2",
+  "prepared_sha256": "d6e2f8578d7057372fac25ade8f3ffd365121b2effda3930c24d72023e33d2de",
+  "plan_sha256": "f703aba665002f5a0eff60e4580255a961583d39ce2047c1b92ddb515affaaf4",
+  "selection_counts": {
+    "heldout_rows": 1000,
+    "eligible_before_exclusion": 718,
+    "excluded_previous_screen_rows": 64,
+    "eligible_unused_rows": 654
+  },
+  "split_ids_sha256": {
+    "search": "4581332873fef806bbbaf7842b27bc44f02ccd666445e93d920dcbf46b2d53da",
+    "confirmation": "69002547f908773102ef3a41286668f84a7ab4fe088c350239aaf4bd3f4c6f9b"
+  },
+  "candidate_merge_receipts": {
+    "alpha0125": {
+      "receipt_sha256": "63d8c7275656fea5a787c041dcbd8d657071e4e2f2ead9a2ac2fcad24a83a0fb",
+      "alpha_advanced": 0.125,
+      "shards": 6,
+      "finite_fp32_tensors": 434
+    },
+    "alpha0375": {
+      "receipt_sha256": "8d497f7c45dab1d605a31a29bb90045de85fae93518949915e31a285ce09dde0",
+      "alpha_advanced": 0.375,
+      "shards": 6,
+      "finite_fp32_tensors": 434
+    }
+  },
+  "development_job_id": "1219074",
+  "development_reserved_gpu_hours": 1.5,
+  "conservative_cumulative_gpu_hour_bound_with_source_reservation": 40.53333333333333,
+  "new_benchmark_results_exist": false
+}
