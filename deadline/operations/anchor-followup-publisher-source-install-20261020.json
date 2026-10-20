@@ -1,0 +1,12 @@
+{
+  "schema": "deadline-anchor-followup-publisher-source-install-v1",
+  "created_at_utc": "2026-10-20T20:10:57.088835+00:00",
+  "local_commit": "9e40c8320c3ff26bd4f6ade25b2b4b726e32ddc7",
+  "archive_sha256": "6ea8d199ba846982403013ef22b30dec04b5498dde42546a9badfe76613fd8a9",
+  "files": {
+    "tests/test_validation_anchor_publication.py": "f52c11e7611a48d259f410ca6cbf29345fcadd525ce6cd447f2e267bf4ad1395",
+    "deadline/publish_anchor_followup.py": "c8daf0139d2011c053a3fc0385cbd29e05f2352cb1060d1446be3fd0c3dac957",
+    "deadline/operations/publish_anchor_followup.slurm": "4b87c38e6b1ca07663b12190beb6997e0b5c9399294ceeba14713d17474ec867"
+  },
+  "frozen_scientific_code_unchanged": true
+}

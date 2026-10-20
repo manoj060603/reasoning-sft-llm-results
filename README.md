@@ -36,6 +36,10 @@ changed no scientific setting. The original, incumbent and both new blends are
 being tested on the fresh search split. If one passes the unchanged search and
 separate confirmation gates, the pipeline submits its full nine-task benchmark
 evaluation automatically. No new candidate benchmark result exists yet.
+The separate closeout/publisher passed [20 native CPU checks](deadline/operations/anchor-followup-publication-native-qa-20261020-attempt1.json)
+and is ready to audit all five roles, compute conditional uncertainty and publish
+only the exact confirmed checkpoint after all nine raw benchmark tasks complete.
+These checks performed no network access or upload.
 
 The admitted source reservation gives a conservative bound of **40.533333 / 48
 GPU-hours**. If its single accepted candidate later admits the separate three-hour

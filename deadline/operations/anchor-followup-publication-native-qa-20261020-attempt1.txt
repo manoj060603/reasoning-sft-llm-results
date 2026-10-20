@@ -1,0 +1,25 @@
+test_aime25_protocol_hardware_and_model_tampering_are_refused (test_validation_anchor_publication.SourceAndEvaluationGuardTests) ... ok
+test_altered_control_metrics_cannot_be_called_unchanged (test_validation_anchor_publication.SourceAndEvaluationGuardTests) ... ok
+test_exact_both_candidate_alphas_are_supported (test_validation_anchor_publication.SourceAndEvaluationGuardTests) ... ok
+test_five_complete_raw_roles_and_exact_loaded_identity_are_accepted (test_validation_anchor_publication.SourceAndEvaluationGuardTests) ... ok
+test_missing_hardware_from_every_role_is_not_a_matched_b200_claim (test_validation_anchor_publication.SourceAndEvaluationGuardTests) ... ok
+test_missing_ninth_task_aggregate_evidence_or_fifth_role_is_refused (test_validation_anchor_publication.SourceAndEvaluationGuardTests) ... ok
+test_missing_or_rejected_source_confirmation_is_refused (test_validation_anchor_publication.SourceAndEvaluationGuardTests) ... ok
+test_old_repository_collision_is_refused (test_validation_anchor_publication.SourceAndEvaluationGuardTests) ... ok
+test_prior_publication_is_required_before_staging (test_validation_anchor_publication.SourceAndEvaluationGuardTests) ... ok
+test_protected_state_paths_are_refused_without_writes (test_validation_anchor_publication.SourceAndEvaluationGuardTests) ... ok
+test_wrong_winner_alpha_path_parent_or_finite_proof_is_refused (test_validation_anchor_publication.SourceAndEvaluationGuardTests) ... ok
+test_accepted_lost_shard_commit_is_not_reuploaded (test_validation_anchor_publication.TransactionTests) ... ok
+test_anonymous_visibility_or_hash_failure_prevents_completion (test_validation_anchor_publication.TransactionTests) ... ok
+test_complete_negative_benchmark_goal_can_be_published_honestly (test_validation_anchor_publication.TransactionTests) ... ok
+test_existing_conflicting_or_unknown_empty_repository_is_not_adopted (test_validation_anchor_publication.TransactionTests) ... ok
+test_identical_retry_is_idempotent (test_validation_anchor_publication.TransactionTests) ... ok
+test_scoped_native_qa_is_required_before_remote_operations (test_validation_anchor_publication.TransactionTests) ... ok
+test_wrong_account_prevents_remote_writes (test_validation_anchor_publication.TransactionTests) ... ok
+test_empty_macro_missing_task_wrong_point_or_wrong_seed_is_refused (test_validation_anchor_publication.UncertaintyBindingTests) ... ok
+test_native_candidate_and_incumbent_aliases_are_explicit (test_validation_anchor_publication.UncertaintyBindingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.091s
+
+OK
