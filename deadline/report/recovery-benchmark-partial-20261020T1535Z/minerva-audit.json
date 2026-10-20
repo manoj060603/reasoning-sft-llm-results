@@ -1,0 +1,114 @@
+{
+  "schema": "deadline-minerva-four-role-partial-raw-audit-v1",
+  "complete": true,
+  "created_at_utc": "2026-10-20T15:36:16.608468+00:00",
+  "compute": {
+    "job_id": "1210310",
+    "step_id": "10",
+    "hostname": "owl-sr001",
+    "cuda_visible_devices": ""
+  },
+  "scope": "Only saved Minerva all four roles; existing correctness flags and metrics reconciled, no regrading/generation/weights read. No full macro or overall superiority inferred.",
+  "auditor_sha256": "d8465b346b5a51dd0c30287202265b7e195014649d31fd19ac7588ede9408cb2",
+  "benchmark": "minerva",
+  "expected_problems": 272,
+  "samples_per_problem": 8,
+  "comparison": {
+    "matched": true,
+    "errors": []
+  },
+  "runs": {
+    "original": {
+      "metrics": {
+        "problems": 272,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.30330882352941174,
+        "pass_at_8": 0.47794117647058826,
+        "truncated_samples": 5
+      },
+      "evidence": "raw eight-sample predictions verified",
+      "errors": [],
+      "manifest": {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/manifest.json",
+        "sha256": "ae42667eeac86f7aebafbda1afd4f364bd95e422ff32ae9b7555202d48a9d68b",
+        "bytes": 149445
+      },
+      "raw_batches": [
+        {
+          "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/original/minerva/batch_000000.json",
+          "sha256": "f358f89e141c1fc4fe52e8e0c99f67e6ff61cb2325f9ce1fea8191fd659319ef",
+          "bytes": 4670649
+        }
+      ]
+    },
+    "random": {
+      "metrics": {
+        "problems": 272,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.15946691176470587,
+        "pass_at_8": 0.3639705882352941,
+        "truncated_samples": 1269
+      },
+      "evidence": "raw eight-sample predictions verified",
+      "errors": [],
+      "manifest": {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/manifest.json",
+        "sha256": "91b10bd128f10e7453dddc4bd02b4941d15d3a55795a17ab210bcb4c176e5aa4",
+        "bytes": 149898
+      },
+      "raw_batches": [
+        {
+          "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/random/minerva/batch_000000.json",
+          "sha256": "526d803fe7d3bc20a1c5990b340b9a66c470777ead4b3b72cd258dff2006f1a6",
+          "bytes": 139080709
+        }
+      ]
+    },
+    "advanced": {
+      "metrics": {
+        "problems": 272,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.18106617647058823,
+        "pass_at_8": 0.41544117647058826,
+        "truncated_samples": 1088
+      },
+      "evidence": "raw eight-sample predictions verified",
+      "errors": [],
+      "manifest": {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/manifest.json",
+        "sha256": "4fa4bd9d6913ffff95b6a2a65d74966aa30782b78ad87ca9b98748560141a36a",
+        "bytes": 149900
+      },
+      "raw_batches": [
+        {
+          "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/results/advanced/minerva/batch_000000.json",
+          "sha256": "e05c5abc3633a395224bd442b9d569f0e727b89926613b116858d338e0313ab2",
+          "bytes": 116124176
+        }
+      ]
+    },
+    "recovery": {
+      "metrics": {
+        "problems": 272,
+        "samples_per_problem": 8,
+        "pass_at_1": 0.2945772058823529,
+        "pass_at_8": 0.48161764705882354,
+        "truncated_samples": 9
+      },
+      "evidence": "raw eight-sample predictions verified",
+      "errors": [],
+      "manifest": {
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/benchmarks/manifest.json",
+        "sha256": "17c11ab91b445b65ea16ad7f8115001b1d636ec9788daa914bc7823cf4c019dc",
+        "bytes": 149810
+      },
+      "raw_batches": [
+        {
+          "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/recovery-runs/base-anchor-75-25-20261020/benchmarks/minerva/batch_000000.json",
+          "sha256": "839de773af0e83693e83566eba03676036f89242439e64653104e70f4f6b4b8a",
+          "bytes": 5303035
+        }
+      ]
+    }
+  }
+}

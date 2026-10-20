@@ -1,0 +1,23 @@
+{
+  "schema": "deadline-source-update-v1",
+  "complete": true,
+  "at_utc": "2026-10-20T15:32:39.120038+00:00",
+  "local_commit": "00973874510d9fe92c99fcfa31b4d60ac6072155",
+  "public_commit": "2a1b23f144994947285af7c756fc647c2bedde79",
+  "local_tree": "23b7aa222bf1f50275aaabdda68cf0262dbcbc24",
+  "archive_sha256": "acfcafab84dec2926375d53304bb0bfd01f4f6d7751f4ad78915f8a9585e2b6d",
+  "manifest_sha256": "d19b8c8711bf8e59af5a915cfba5d11a743aa6a5ccbbbe42be99ff004540ad93",
+  "frozen_plan_sha256": "080488bb494c52ca71d385b2f041821e8c71c2c994aa6439c1c6f24d8227635d",
+  "installed": [
+    "README.md",
+    "deadline/FINAL_REPORT.md",
+    "deadline/assignment_checklist.json"
+  ],
+  "already_identical": [
+    "deadline/report/recovery-benchmark-partial-20261020T1507Z/audit.json",
+    "deadline/report/recovery-benchmark-partial-20261020T1521Z/audit.json",
+    "deadline/report/recovery-benchmark-partial-20261020T1521Z/primary-olympiad-audit.json",
+    "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json"
+  ],
+  "scope": "Documentation and native evidence only; no model, data, evaluation protocol, job or dependency changes."
+}

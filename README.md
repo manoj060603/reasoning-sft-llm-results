@@ -80,12 +80,14 @@ results and publication identities remain separate. The first recovery task is
 **39.0625% pass@1 / 75.00% pass@8**, versus advanced **25.00% / 45.00%** and
 original **42.50% / 70.00%**. Recovery improves over advanced in both metrics on
 AMC, while original retains higher pass@1. Full-suite results and significance
-remain unestablished. Recovery now has six audited tasks:
+remain unestablished. Recovery now has seven audited tasks:
 MATH **65.325% / 84.60%**, CN Math **12.50% / 33.33%**, and Kaoyan
 **21.1055% / 54.2714%** are also verified. The [five-task audit](deadline/report/recovery-benchmark-partial-20261020T1521Z/audit.json)
 and [additional Kaoyan audit](deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json)
 retain exact comparisons. MATH pass@1 remains below original; CN exceeds original
 in both recorded metrics, and Kaoyan ties original pass@1 with higher pass@8.
+Minerva is also verified at **29.4577% / 48.1618%**, versus original **30.3309% / 47.7941%** ([native audit](deadline/report/recovery-benchmark-partial-20261020T1535Z/minerva-audit.json)).
+Only OlympiadBench and GPQA remain outside the audited recovery snapshot.
 No full macro or significance is established.
 
 The [runtime continuation record](deadline/operations/evaluation-resume-20261020.json)

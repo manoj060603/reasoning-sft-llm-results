@@ -1,6 +1,6 @@
 {
   "schema": "reasoning-sft-assignment-checklist-v1",
-  "status": "Execution snapshot at 2026-10-20 15:24 UTC: both final full-SFT models have 8/9 tasks raw-audited (7/8 supplied tasks); original has 9/9. Only GPQA remains for the primary trained models. Recovery has 6/9 tasks audited separately. Full comparison, uncertainty, Hugging Face publication and course submission are pending.",
+  "status": "Execution snapshot at 2026-10-20 15:24 UTC: both final full-SFT models have 8/9 tasks raw-audited (7/8 supplied tasks); original has 9/9. Only GPQA remains for the primary trained models. Recovery has 7/9 tasks audited separately (15:36 UTC Minerva audit). Full comparison, uncertainty, Hugging Face publication and course submission are pending.",
   "assignment_url": "https://github.com/reds-lab/Project-Reasoning-SFT-LLM",
   "deadline_eastern": "2026-10-20T23:59:00-04:00",
   "current_experiment": "Cross-fitted Transfer Gain with Coverage; fresh original-base initialization",
@@ -774,6 +774,36 @@
             "pass_at_8": 0.542713567839196,
             "truncated_samples": 1
           }
+        },
+        "minerva": {
+          "original": {
+            "problems": 272,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.30330882352941174,
+            "pass_at_8": 0.47794117647058826,
+            "truncated_samples": 5
+          },
+          "random": {
+            "problems": 272,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.15946691176470587,
+            "pass_at_8": 0.3639705882352941,
+            "truncated_samples": 1269
+          },
+          "advanced": {
+            "problems": 272,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.18106617647058823,
+            "pass_at_8": 0.41544117647058826,
+            "truncated_samples": 1088
+          },
+          "recovery": {
+            "problems": 272,
+            "samples_per_problem": 8,
+            "pass_at_1": 0.2945772058823529,
+            "pass_at_8": 0.48161764705882354,
+            "truncated_samples": 9
+          }
         }
       },
       "metric_scope": "One sample per source question, at most 4K output tokens, measuring source teacher-answer agreement and stopping; not primary 32K/eight-sample benchmark accuracy.",
@@ -798,11 +828,12 @@
       "initial_benchmark_limit_minutes": 45,
       "full_suite_complete": false,
       "future_continuation_admitted": false,
-      "complete_tasks": 6,
+      "complete_tasks": 7,
       "partial_benchmark_audit": "deadline/report/recovery-benchmark-partial-20261020T1502Z/audit.json",
       "partial_benchmark_audits": [
         "deadline/report/recovery-benchmark-partial-20261020T1521Z/audit.json",
-        "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json"
+        "deadline/report/recovery-benchmark-partial-20261020T1524Z/additional-audit.json",
+        "deadline/report/recovery-benchmark-partial-20261020T1535Z/minerva-audit.json"
       ]
     },
     "partial_olympiadbench": {
