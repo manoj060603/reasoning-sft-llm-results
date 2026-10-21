@@ -1,0 +1,109 @@
+{
+  "assertions_owner": "Exact assertions in the pinned32 standalone-controller tiny CPU test module; no stage override",
+  "claims": {
+    "intended_inherited_cpu_training_step_fixture_scope": true,
+    "actual_original_3b_weights_loaded": false,
+    "actual_unique17_pilot_driver_established": false,
+    "automatic_downstream": false,
+    "automatic_retry": false,
+    "backward_cuda_recompute_established": false,
+    "gpu_or_training_admitted": false,
+    "native_bf16_cuda_admission_established": false,
+    "native_original_model_or_memory_admission": false,
+    "older_tests_replayed": false,
+    "original_model_full_train_loop_established": false,
+    "private_cache_or_source_data_opened": false,
+    "small_hook_parameter_count_is_not_native434_proof": true,
+    "tiny_random_cpu_qwen_standalone_fixture_scope_only": true,
+    "tokenizer_loaded": false
+  },
+  "cpu_bootstrap": {
+    "outside_source_inventory": true,
+    "path": "extension/operations/submit-standalone-training-step-qa-20261021.py"
+  },
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "expected_tests": 32,
+  "historical_ledger": {
+    "path": "deadline/job_ledger.json",
+    "sha256": "9fc4dfa2506ccd33580bab3e5f4c4e91d0731e221c4f88ac9778e54800dc141d"
+  },
+  "historical_native_qa": {
+    "head_native_tools80": {
+      "accounting_sha256": "ea6b2c341453532d845654606973980b19d37f3fb70c9ea58121817fcbaad261",
+      "complete_schema": "extension-head-native-tools-qa-complete-v1",
+      "complete_sha256": "bd5f2187db80e1e561283e507f218b8bbcd858bd967503cbcf4c10055beb01e0",
+      "directory": "extension/report/head-native-tools-qa-20261021-1230042",
+      "job_id": "1230042",
+      "name": "sft-extension-head-native-tools-qa",
+      "native_qa_sha256": "8db43ab6633e3986f442869e784a46c763a51359d4393f7d2f129ce3704e602e",
+      "plan_path": "extension/head_native_tools_qa_plan.json",
+      "qa_schema": "extension-head-native-tools-native-qa-v1",
+      "row_elapsed": [
+        50,
+        50,
+        50
+      ],
+      "source_files": 11,
+      "test_counts": {
+        "test_checkpointed_head_native_observation.py": 24,
+        "test_native_bf16_projection_comparison.py": 24,
+        "test_paired_training_step_controller.py": 32
+      },
+      "tests": 80
+    }
+  },
+  "native_qa_schema": "extension-standalone-training-step-native-qa-v1",
+  "parent_sources": {
+    "expected_files": 198,
+    "inventory_key": "protected_source_inventory",
+    "path": "extension/report/full-pool-tools-qa-20261021-1230197/evidence_manifest.json",
+    "schema": "extension-full-pool-tools-qa-evidence-v1",
+    "sha256": "a241bdcf4ed8fd9cb3c83ccd89158753a9e6459f7f1c37c187ff494e5f54c661"
+  },
+  "prior_ledger": {
+    "entries": 34,
+    "entries_sha256": "882703da0a4106b77b2450f02cc787e249eae8f0a4e46321c6a12dbdf5be8416",
+    "path": "extension/report/full-pool-tools-qa-20261021-1230197/job_ledger_snapshot.json",
+    "sha256": "12b92a578a9f19c6ac2841e1e9242eb6963bd5885291392415c92cb98875bd0e"
+  },
+  "protocol_sha256": {},
+  "qualifications": [
+    "New32 tiny CPU fixtures only: three standalone inherited training_step backwards, raw/clipped dense oracles, unchanged weights/empty Adam/scheduler, group1/RNG/consumption/cleanup guards. No old test module TestCase is discovered or replayed.",
+    "The real original3B/434/BF16 CUDA/recompute/original-file/shadow/save/reload/long-memory/unique17 full.train gates remain unproved and unadmitted by this CPU stage.",
+    "Exact prior34 admission records, historical ledger and protected198 source bytes are verified before imports and after tests. The historical CPU80 source/numerical/observation/controller scope is verified from native receipts and all allocation/batch/extern accounting rows, never rerun.",
+    "No private data/cache/tokenizer/original checkpoints are opened. CPU2/8GiB/30-minute allocation, source5 and separate fixed outside bootstrap must be reviewed and bound before execution. No automatic retry or downstream."
+  ],
+  "resources": {
+    "cpus": 2,
+    "gpus": 0,
+    "ram_gib": 8,
+    "reserve_seconds": 172800,
+    "wall_time_seconds": 1800
+  },
+  "reviewed_input_sha256": {
+    "extension/standalone_training_step_controller.py": "3565bf08c76594682102f3f8ddc12551a2380df78d3980d7f8d25f8cae6894f0",
+    "tests/test_standalone_training_step_controller.py": "d530499f13cad30e62032dca2fe4264fc85442b212aac0586db07751fd6970fa"
+  },
+  "role": "standalone_training_step_qa_20261021_v1",
+  "runtime_versions": {
+    "accelerate": "1.12.0",
+    "implementation": "cpython",
+    "numpy": "1.26.4",
+    "python": "3.10.19",
+    "safetensors": "0.7.0",
+    "torch": "2.9.0",
+    "transformers": "4.57.3"
+  },
+  "schema": "extension-standalone-training-step-qa-plan-v1",
+  "source_files": [
+    "extension/standalone_training_step_controller.py",
+    "extension/standalone_training_step_qa.py",
+    "extension/standalone_training_step_qa.slurm",
+    "extension/standalone_training_step_qa_plan.json",
+    "tests/test_standalone_training_step_controller.py"
+  ],
+  "status": "prospective_root_sealed_prior34_protected198_unadmitted",
+  "test_patterns": {
+    "test_standalone_training_step_controller.py": 32
+  }
+}

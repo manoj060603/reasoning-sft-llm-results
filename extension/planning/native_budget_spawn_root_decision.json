@@ -1,0 +1,25 @@
+{
+  "automatic_downstream": false,
+  "created_at_utc": "2026-10-21T11:25:00.240516+00:00",
+  "decision": "Trusted multiprocessing spawn may import frozen native_tensor_comparison and Torch CPU library code while unpickling the actual supervisor-owned ScratchBudget before entering run_case. This is not a child pre-Torch allocation guard.",
+  "hard_blockers": [
+    "Exact outer supervisor/context/plan/admission transcript schema and reviewed implementation absent.",
+    "New native CPU QA and source/accounting/partial-write/phase evidence absent.",
+    "No GPU job, real-model validation, training or pilot admitted."
+  ],
+  "mandatory_child_before_cuda_or_model_work": [
+    "Revalidate source, actual current allocation/environment/deadline and inherited parent/spawn/snapshot identity immediately.",
+    "Require torch.cuda.is_initialized()==False before any CUDA query/initialization, model/tokenizer/data operation or diagnostic tensor construction.",
+    "No child ScratchBudget constructor, counter reset or ad hoc field restoration. Trusted spawn transfers the actual simple object fields, with cumulative bytes and later parent reconciliation unchanged."
+  ],
+  "mandatory_parent_before_class_import_or_spawn": [
+    "Actual assigned compute allocation/source/environment/deadline/current-job and one-use stage context verified.",
+    "No local/login-node model, tokenizer, data, tests or tensor work. ScratchBudget instantiated exactly once on actual compute with160GiB initial free check.",
+    "Trusted source-bound spawn target, parent PID and nonce, immutable budget/source/current-job snapshot and exact VALUE digest bound to guarded context. No untrusted pickle files."
+  ],
+  "numerical_or_resource_limits_changed": false,
+  "parent_abi_file_sha256": "a6d31d9a77747cbec1ae8243806152695d4a6fad4cd14645e450e9e2b41b70d5",
+  "proof_limits": "The trusted source-bound fresh spawn lifecycle establishes intended pre-entry behavior; there is no claim of a general runtime enumeration proving that arbitrary Python code allocated no CPU tensors. Source, provenance and immediate uninitialized-CUDA checks remain distinct.",
+  "schema": "extension-native-budget-spawn-root-decision-v1",
+  "status": "prospective_root_approved_no_execution_or_admission"
+}

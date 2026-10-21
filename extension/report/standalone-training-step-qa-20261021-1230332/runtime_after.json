@@ -1,0 +1,22 @@
+{
+  "job_id": "1230332",
+  "native_execution_or_population_proof": false,
+  "runtime": {
+    "actual_original_model_or_cuda_loaded": false,
+    "cuda_initialized": false,
+    "default_device": "cpu",
+    "default_dtype": "torch.float32",
+    "dont_write_bytecode": true,
+    "implementation": "cpython",
+    "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]",
+    "versions": {
+      "accelerate": "1.12.0",
+      "numpy": "1.26.4",
+      "safetensors": "0.7.0",
+      "torch": "2.9.0",
+      "transformers": "4.57.3"
+    }
+  },
+  "schema": "extension-standalone-training-step-runtime-v1",
+  "unchanged_from_before": true
+}

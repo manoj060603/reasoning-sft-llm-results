@@ -1,0 +1,92 @@
+{
+  "actual_model_comparison_performed": false,
+  "approved_at_utc": "2026-10-21T11:20:52.450012+00:00",
+  "automatic_admission": false,
+  "budget_and_supervisor": {
+    "common_shadow": "One raw initial shadow per GA9 objective, after exact both-students-original post-LR0 identity. Candidate-only standard checkpoint per objective; no dense checkpoint/second shadow.",
+    "comparison_app_scratch_limit_bytes": 134217728,
+    "constructor_in_actual_compute_allocation": true,
+    "cumulative_write_cap_bytes": 120259084288,
+    "free_reserve_bytes": 34359738368,
+    "host_budget_bytes": 137438953472,
+    "initial_free_bytes": 171798691840,
+    "one_actual_ScratchBudget_constructor_per_stage": true,
+    "reconciliation": "Parent joins each child and source-verifies the returned cumulative charges, actual closed/partial file inventory and remaining planned writes before any next child. Any child failure stops this version and preserves all partial evidence. External checkpoint/config/tokenizer/log/transient writes require explicit conservative pre-write bounds and reconciliation; no admission until implemented and natively tested.",
+    "trusted_spawn_only": "Pass actual simple budget object plus immutable source/currentjob/phase snapshot and VALUE digest through trusted multiprocessing spawn arguments. No untrusted pickle files, child constructor or counter reset."
+  },
+  "case_order": [
+    {
+      "objective": "sft",
+      "subcase": "standalone"
+    },
+    {
+      "objective": "sft",
+      "subcase": "ga9"
+    },
+    {
+      "objective": "ce_kl",
+      "subcase": "standalone"
+    },
+    {
+      "objective": "ce_kl",
+      "subcase": "ga9"
+    },
+    {
+      "objective": "asft",
+      "subcase": "standalone"
+    },
+    {
+      "objective": "asft",
+      "subcase": "ga9"
+    },
+    {
+      "objective": "prior_anchored",
+      "subcase": "standalone"
+    },
+    {
+      "objective": "prior_anchored",
+      "subcase": "ga9"
+    }
+  ],
+  "entry_abi": "run_case(context, case, output, allocation, *, scratch_budget, budget_snapshot)",
+  "fresh_processes": "Eight sequential trusted-spawn children inside one future finite single-B200 allocation. Each child loads two fresh original FP32 students and one separate frozen original FP32 reference; standalone and GA9 never share consumed models/Trainers. No retry, automatic downstream, offload, sequential-state fallback, precision/backend/context changes or long/pilot admission.",
+  "hard_blockers_before_gpu": [
+    "Exact actual worker/native primitives and outer supervisor/controller/context/plan/resources/source inventories remain unauthored or unreviewed.",
+    "Native CPU QA for every new helper and operational source plus exact finite fixed-role admission remains required.",
+    "Actual original-file/cache/exclusion/tokenizer/current-allocation/runtime/backend/FP32/BF16/SDPA/recompute/all434/RSS/headroom/save/reload/scratch evidence remains required."
+  ],
+  "numerical_values_changed_from_frozen_protocol": false,
+  "parent_protocols": {
+    "extension/planning/checkpointed_head_native_numerical_protocol.json": "27cedace388a17f3b97a0b1466e119c59a4d63913085263c689c8cfbbb003cb3",
+    "extension/planning/projection_and_standalone_native_phase_protocol.json": "0eb3532165b704c82b0be575f913c20342c4afcb163fd662c4f373ff3f5d7486"
+  },
+  "projection_phase": {
+    "aligned_views": "[0,P-1:L-1,:] in ascending active target order",
+    "candidate_chunk_rows_maximum": 128,
+    "full_host_or_disk_oracle_copy": false,
+    "maximum_L": 512,
+    "maximum_oracle_bytes": 155582464,
+    "oracle_dtype": "bfloat16",
+    "oracle_shape": "[1,L,151936], original full GEMM including prompt and unused last position",
+    "release_before_next_original_student_reference_or_witness": true,
+    "retained_full_original_oracles": 1
+  },
+  "schema": "extension-checkpointed-head-native-case-root-abi-v1",
+  "separate_original_identity_and_reload_phases": {
+    "comparison_reduction": "Bounded <=128-position blocks; actual original root forwards with the same full-L shape, no chunked-forward substitution and no inferred numeric identity from hashes. Release both outputs before the next pair.",
+    "instrumentation": "Projection/identity/reload forwards are explicitly distinct graph-free phases, never counted as training presentations or backwards. Worker must use actual observer API to keep control forwards from contaminating training/recompute telemetry; source review must resolve this before use.",
+    "maximum_L": 512,
+    "maximum_two_fp32_output_bytes": 622329856,
+    "paired_original_root_forward_outputs_maximum": 2,
+    "retained_dtype": "float32 on assigned CUDA0",
+    "temporary_casts_and_workspace": "BF16 root outputs and FP32 cast transients are separately included in measured whole-process/stage GPU peaks and strict headroom. The622329856 bound describes retained FP32 outputs, not total memory. No full-vocabulary host/disk copy.",
+    "unchanged_bounds": {
+      "same_path_reload_logit_max_abs": 0.001,
+      "zero_update_ce_abs": 1e-05,
+      "zero_update_forward_kl_abs": 1e-05,
+      "zero_update_logit_max_abs": 0.001
+    }
+  },
+  "status": "prospective_root_approved_no_job_admission",
+  "worker_path": "extension/checkpointed_head_native_case.py"
+}

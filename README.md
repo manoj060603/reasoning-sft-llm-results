@@ -426,6 +426,16 @@ were verified through receipts. All 198 protected sources and the previous 33
 ledger entries were preserved. The real 82,961-pair cache, topic fit, random
 draw, original-model scoring and training remain separate unadmitted stages.
 
+The [standalone training-step CPU stage](extension/report/standalone-training-step-qa-20261021-1230332/delivery_summary.json)
+then **passed all 32 new checks** in a **45-second, zero-GPU allocation**.
+Tiny CPU Qwen fixtures compare three independent group-one gradients before
+and after the owned clipping guard, while weights, empty Adam state and the
+scheduler remain unchanged. They also check RNG progression, consumed objects,
+partial failures and cleanup. The historical 80-check scope was verified from
+receipts. All 204 protected sources and the previous 34 ledger entries were
+preserved. This does not establish original-3B/434-parameter BF16 GPU behavior,
+original-file provenance, save/reload, long-context memory or pilot admission.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%
