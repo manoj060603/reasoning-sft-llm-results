@@ -1,0 +1,81 @@
+{
+  "schema": "extension-checkpointed-head-trainer-qa-plan-v1",
+  "status": "draft_unadmitted_root_sealed_prior30_and_protected164",
+  "role": "checkpointed_head_trainer_qa_20261021_v1",
+  "test_pattern": "test_checkpointed_head_trainer.py",
+  "expected_tests": 24,
+  "native_qa_schema": "extension-checkpointed-head-trainer-native-qa-v1",
+  "source_files": [
+    "extension/checkpointed_head_trainer.py",
+    "extension/checkpointed_head_trainer_qa.py",
+    "extension/checkpointed_head_trainer_qa.slurm",
+    "extension/checkpointed_head_trainer_qa_plan.json",
+    "tests/test_checkpointed_head_trainer.py"
+  ],
+  "reviewed_input_sha256": {
+    "extension/checkpointed_head_trainer.py": "971c5e88bcfff7ed80bea74edcd07624dadd97253a1a1ce30b25d6741f876082",
+    "tests/test_checkpointed_head_trainer.py": "7395cf2db8757ae35a5ac5639c75188329ff69d2338d28fcda6abe7f339de876"
+  },
+  "cpu_bootstrap": {
+    "path": "extension/operations/submit-checkpointed-head-trainer-qa-20261021.py",
+    "outside_source_inventory": true
+  },
+  "resources": {
+    "cpus": 2,
+    "ram_gib": 8,
+    "gpus": 0,
+    "wall_time_seconds": 1200,
+    "reserve_seconds": 172800
+  },
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "runtime_versions": {
+    "torch": "2.9.0",
+    "transformers": "4.57.3",
+    "accelerate": "1.12.0",
+    "safetensors": "0.7.0"
+  },
+  "numerical_assertions_owner": "Exact prospective assertions in the pinned24-test module; no stage tolerance override",
+  "prior_ledger": {
+    "path": "extension/report/calibration-grading-v2-complete-20261021-1229272/job_ledger_snapshot.json",
+    "sha256": "45b5e4079769501dd25252cf1f5f40028a65e52950416912ad558525258287f8",
+    "entries": 30,
+    "entries_sha256": "16ea2631674c0c3deabc304bd9b75372f0b7ce6b0775031e8bfe4337b40d0cbf"
+  },
+  "historical_ledger": {
+    "path": "deadline/job_ledger.json",
+    "sha256": "9fc4dfa2506ccd33580bab3e5f4c4e91d0731e221c4f88ac9778e54800dc141d"
+  },
+  "parent_sources": {
+    "path": "extension/report/calibration-grading-v2-complete-20261021-1229272/evidence_manifest.json",
+    "sha256": "4b63e356555cdcbdbd93ca3717efdc7239a36c0854fc89f42cba1da5fa635a91",
+    "schema": "extension-calibration-grading-complete-evidence-v1",
+    "inventory_key": "protected_source_inventory",
+    "expected_files": 164
+  },
+  "claims": {
+    "tiny_random_cpu_qwen_fixture_scope_only": true,
+    "mocked_accelerator_fixture_scope": true,
+    "fixture_parameter_count_override_is_not_native_434_proof": true,
+    "older_tests_replayed": false,
+    "actual_original_3b_weights_loaded": false,
+    "actual_434_parameter_admission_established": false,
+    "private_cache_or_source_data_opened": false,
+    "tokenizer_loaded": false,
+    "native_bf16_cuda_admission_established": false,
+    "backward_recompute_admission_established": false,
+    "real_model_checkpoint_reload_admission_established": false,
+    "long_context_memory_admission_established": false,
+    "pilot_or_training_admitted": false,
+    "automatic_retry": false,
+    "automatic_downstream": false
+  },
+  "qualifications": [
+    "Root sealed the exact terminal calibration-grading-v2 prior30 snapshot and protected164 public source manifest. This prospective stage remains unadmitted until a separate reviewed metadata bootstrap binds its exact sources and current CPU allocation; no implicit latest ledger, substituted history or source glob is accepted.",
+    "A separate outside-source5 metadata bootstrap must bind the actual plan SHA, all5 source records, exact30-entry prior snapshot, parent manifest SHA, bootstrap source, current assigned CPU2/8GiB/20-minute role and48-hour deadline reserve. No source embeds its own file hash and there is no automatic downstream admission.",
+    "Before importing torch, Transformers, the Trainer or tests, verify the real RUNNING zero-GPU CPU allocation and every parent164 source byte, including the frozen checkpointed-head loss and preserving Trainer. Run exactly24 tests with zero failures, errors, skips, expected failures or unexpected successes; no prior36/32/other scope is replayed or aliased.",
+    "The real-HF fixtures construct tiny randomly initialized original Qwen2 class objects on CPU. A parameter-count override exists only inside the explicit tiny fixture, and the unpatched434 rejection is exercised separately. Mocked Accelerator context seams are fixture guard checks, not observed native BF16 or CUDA behavior.",
+    "The exact loss/gradient/update tolerances and assertions belong to the pinned prospective24-test source. This stage does not replace, relax or adapt them after observing results. Successful completion records only those CPU fixture assertions and current-runtime/provenance checks.",
+    "Tiny CPU model construction, standard tiny save/reload and GA8 tail comparisons do not establish original3B initialization, all434 real-model gradients/moments, native BF16/Accelerate behavior, backward or checkpoint recompute instrumentation, real-model save/reload or long-context memory/headroom. Those still require a separate later actual-model GPU admission and measured evidence.",
+    "No private corpus, calibration data, real cache, tokenizer, original checkpoint or benchmark outcome is opened. Fresh owner-only output records started/nativeQA/complete or failure with actual compute/time/test scope and all-source/history stability; no resume, retry, publication or job submission occurs in the controller."
+  ]
+}

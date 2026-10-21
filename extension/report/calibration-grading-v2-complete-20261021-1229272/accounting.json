@@ -1,0 +1,24 @@
+{
+  "allocated_gpus": 0,
+  "command": [
+    "sacct",
+    "--clusters=owl",
+    "-j",
+    "1229272",
+    "--parsable2",
+    "--noheader",
+    "--format=JobIDRaw,JobName,State,ExitCode,ElapsedRaw,Start,End,AllocTRES"
+  ],
+  "complete": true,
+  "elapsed_seconds": 165,
+  "exit_code": "0:0",
+  "gpu_seconds": 0,
+  "job_id": "1229272",
+  "no_gpu_in_alloc_tres": true,
+  "observed_at_utc": "2026-10-21T07:30:10.414351+00:00",
+  "schema": "extension-terminal-cpu-accounting-v1",
+  "state": "COMPLETED",
+  "stderr": "",
+  "stdout": "1229272|sft-extension-calibration-grading-v2|COMPLETED|0:0|165|2026-10-21T07:25:04|2026-10-21T07:27:49|billing=4,cpu=2,mem=8G,node=1\n1229272.batch|batch|COMPLETED|0:0|165|2026-10-21T07:25:04|2026-10-21T07:27:49|cpu=2,mem=8G,node=1\n1229272.extern|extern|COMPLETED|0:0|165|2026-10-21T07:25:04|2026-10-21T07:27:49|billing=4,cpu=2,mem=8G,node=1\n",
+  "timezone": "UTC"
+}

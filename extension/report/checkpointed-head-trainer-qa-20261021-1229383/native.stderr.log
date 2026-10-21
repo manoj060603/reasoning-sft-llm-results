@@ -1,0 +1,29 @@
+test_adapter_dispatch_compile_and_offload_markers_are_refused (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_all_four_modes_match_independent_dense_loss_and_tied_parameter_gradients (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_cache_enabled_or_non_sdpa_configuration_is_refused (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_compile_is_rejected_before_trainer_or_model_mutation (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_distributed_fsdp_deepspeed_and_nonidentity_unwrap_are_refused (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_explicit_accelerator_context_surrounds_reference_student_and_head_helper (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_forward_exception_removes_only_temporary_hooks_without_masking_original_error (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_forward_metadata_is_bounded_detached_and_never_recompute_admission (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_fp32_leaf_and_full_trainability_guards_reject_lower_precision_or_frozen_student (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_invalid_masks_zero_active_and_missing_eos_fail_before_backbone (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_non_original_root_or_backbone_class_is_refused (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_num_items_is_ignored_without_extra_loss_scaling_and_outputs_are_scalar (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_optimizer_contains_student_once_and_fp32_moments_exclude_reference (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_original_bias_free_tied_linear_boundary_rejects_untie_bias_and_subclass (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_original_model_forward_and_checkpoint_target_are_not_rebound (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_real_hf_ga8_nine_examples_and_partial_tail_match_independent_cekl_updates (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_real_hf_ga8_nine_examples_and_partial_tail_match_independent_sft_updates (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_reference_forward_is_no_grad_normal_detached_and_unchanged (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_reference_overlap_wrong_class_and_non_fp32_storage_are_refused (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_resume_repeated_train_and_hf_evaluation_prediction_remain_explicitly_unsupported (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_scalar_metric_boundary_rejects_graph_vector_and_nonfinite_values (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_sole_shift_preserves_eos_tail_and_omits_root_full_logits_forward (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_standard_save_reload_keeps_tied_student_without_reference_checkpoint_state (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+test_tiny_real_qwen_fixture_does_not_satisfy_unpatched434_admission (test_checkpointed_head_trainer.CheckpointedHeadTrainerTests) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.646s
+
+OK

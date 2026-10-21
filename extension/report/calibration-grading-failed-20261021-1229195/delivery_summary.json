@@ -1,0 +1,40 @@
+{
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "cache_json_parsed": false,
+  "complete": false,
+  "elapsed_allocation_seconds": 7,
+  "errors": 0,
+  "failures": 0,
+  "gpu_seconds": 0,
+  "grades_observed": 0,
+  "grading_complete": false,
+  "job_id": "1229195",
+  "native_qa_passed": true,
+  "observed_mode": "0o770",
+  "offending_input_folder": "extension/runs/source-readiness-v2-retry-1226240",
+  "private_closed_generated_files_hashed_only_before_guard": true,
+  "private_failure_hash": {
+    "bytes": 1030,
+    "sha256": "b4b0c3685bc9c2d03d98ca904d161c4e6c0f6f4dbe4c3120b2d022c3ce87b829"
+  },
+  "private_worker_log_hashes": {
+    "worker.stderr.private.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "worker.stdout.private.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "protected_source_files": 160,
+  "qualification": "All32 synthetic tests passed. First native grading attempt failed its private cache-folder permissions before opening/parsing cache or grading; no correctness result. Preserve this failed role and source before a separately versioned operational repair.",
+  "raw_private_records_included": false,
+  "reason": "Private input folder must remain owner-only",
+  "required_mode": "0o700",
+  "schema": "extension-calibration-grading-failure-delivery-v1",
+  "skipped": 0,
+  "source_files": 5,
+  "tests_run": 32
+}

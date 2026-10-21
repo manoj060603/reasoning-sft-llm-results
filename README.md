@@ -359,6 +359,42 @@ tied-weight gradients and FP32 Adam updates under the prospective tolerances.
 These use synthetic tensors and small modules. Qwen integration, actual BF16
 CUDA comparisons and full-context memory admission remain outstanding.
 
+The first independent calibration-grading allocation, **1229195**, then
+[passed all 32 synthetic checks](extension/report/calibration-grading-failed-20261021-1229195/delivery_summary.json)
+but **failed after seven seconds before parsing the cache or grading any
+response**. The old cache folder had mode 770, while the new loader requires
+owner-only access. A separate [permission repair](extension/report/calibration-permissions-repair-20261021/repair.json)
+tightened the folder and cache to modes 700 and 600, preserving their bytes,
+all 160 executed sources, and both ledgers. The failed role remains failed
+and produced no grades.
+
+The [separate grading-v2 allocation, 1229272](extension/report/calibration-grading-v2-complete-20261021-1229272/delivery_summary.json),
+then **completed in 165 seconds, with zero GPUs**. It reran the same 32
+regression checks and processed all 256 responses with the unchanged source
+grader. No grading errors occurred. On the **16-question-per-domain engineering
+calibration set**, using the fixed 8K-output/16K-total-context source profile,
+the original model obtained:
+
+| Calibration domain | Correct samples | Pass@1 | Pass@8 |
+| --- | ---: | ---: | ---: |
+| MATH | 83 / 128 | 64.84% | 81.25% |
+| ARC-Challenge | 119 / 128 | 92.97% | 100.00% |
+
+Two MATH length finishes without a final box and one invalid ARC answer label
+remain in the denominators. These are small original-model engineering
+baselines, not candidate gains, final benchmark scores, or GPQA evidence.
+Calibration outcomes do not authorize changing the parser, generation profile,
+or method-ranking rules. Raw answers and grade receipts remain private.
+
+The [checkpointed-head Trainer fixture stage](extension/report/checkpointed-head-trainer-qa-20261021-1229383/delivery_summary.json)
+also **passed all 24 checks** in a **40-second, zero-GPU allocation**. Tiny,
+randomly initialized CPU Qwen classes test original-model ownership, tied
+weights, gradients, reference isolation, saving, and actual Trainer accumulation
+with a final partial batch. Mocked interfaces check explicit autocast placement.
+These checks establish no original-3B BF16, all-434-parameter, backward
+recomputation, or full-context memory admission. Those native gates still
+precede any new training pilot.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%

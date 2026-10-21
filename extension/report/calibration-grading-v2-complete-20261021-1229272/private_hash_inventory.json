@@ -1,0 +1,20 @@
+{
+  "grades_hashed_without_parsing": true,
+  "private_files": {
+    "grades.private.json": {
+      "bytes": 1043553,
+      "sha256": "f1d74eae03f2cb86da689b2c28fed0c88d4ae01d53d9138ba2a2599ecddb3ba8"
+    },
+    "worker.stderr.private.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "worker.stdout.private.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "raw_private_grades_or_logs_exported": false,
+  "schema": "extension-calibration-grading-terminal-private-hashes-v1",
+  "worker_logs_sealed_only_after_terminal_accounting": true
+}

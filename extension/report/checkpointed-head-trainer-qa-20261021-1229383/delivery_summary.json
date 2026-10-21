@@ -1,0 +1,23 @@
+{
+  "actual_original_3b_weights_loaded": false,
+  "all434_native_gradient_update_admitted": false,
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "checkpoint_recompute_admitted": false,
+  "complete": true,
+  "elapsed_allocation_seconds": 40,
+  "errors": 0,
+  "failures": 0,
+  "gpu_seconds": 0,
+  "job_id": "1229383",
+  "long_context_memory_admitted": false,
+  "native_bf16_cuda_admitted": false,
+  "older_tests_replayed": false,
+  "pilot_or_training_admitted": false,
+  "qualification": "Exactly24 CPU fixtures passed, including tiny randomly initialized Qwen classes, explicit-autocast seams, dense gradients, tied save/reference isolation and actualHF GA8 nine-row tail comparisons. These do not establish original3B/all434/BF16CUDA/recomputation/native memory or model improvement.",
+  "raw_private_records_included": false,
+  "schema": "extension-checkpointed-head-trainer-qa-delivery-v1",
+  "skipped": 0,
+  "tests_run": 24,
+  "tiny_random_cpu_qwen_fixture_scope_only": true
+}

@@ -1,0 +1,79 @@
+{
+  "accuracy_driven_retuning_permitted": false,
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "benchmark_accuracy_established": false,
+  "calibration_engineering_only": true,
+  "complete": true,
+  "domains": {
+    "arc_challenge": {
+      "all_grades_rankable": true,
+      "box_status_counts": {
+        "ok": 128
+      },
+      "correct_samples": 119,
+      "denominator": 128,
+      "grading_errors": 0,
+      "length_finishes": 0,
+      "mean_repetition_8gram": 0.009625731165175403,
+      "native_eos_observed": 128,
+      "output_tokens": 34743,
+      "pass_at_1": 0.9296875,
+      "pass_at_8": 1.0,
+      "record_count": 16,
+      "sample_count": 128,
+      "status_counts": {
+        "graded": 127,
+        "invalid_option_label": 1
+      },
+      "stop_finishes": 128,
+      "stop_reason_counts": {
+        "none": 128
+      }
+    },
+    "math": {
+      "all_grades_rankable": true,
+      "box_status_counts": {
+        "missing_box": 2,
+        "ok": 126
+      },
+      "correct_samples": 83,
+      "denominator": 128,
+      "grading_errors": 0,
+      "length_finishes": 2,
+      "mean_repetition_8gram": 0.05046306708872795,
+      "native_eos_observed": 126,
+      "output_tokens": 100964,
+      "pass_at_1": 0.6484375,
+      "pass_at_8": 0.8125,
+      "record_count": 16,
+      "sample_count": 128,
+      "status_counts": {
+        "graded": 126,
+        "missing_box": 2
+      },
+      "stop_finishes": 126,
+      "stop_reason_counts": {
+        "none": 128
+      }
+    }
+  },
+  "elapsed_allocation_seconds": 165,
+  "errors": 0,
+  "failures": 0,
+  "gpu_seconds": 0,
+  "grading_complete": true,
+  "job_id": "1229272",
+  "method_ranking_permitted": false,
+  "native_qa_passed": true,
+  "new_model_improvement_established": false,
+  "new_test_methods": 0,
+  "qualification": "All256 original-calibration samples were processed under the unchanged sealed source grader. Errors retain denominator1. These small engineering calibration estimates are not independently selected method gains, assignment benchmark scores or GPQA evidence. Failed1229195 and its byte-preserving permission repair remain unchanged.",
+  "raw_private_records_included": false,
+  "record_count": 32,
+  "same32_regression_replayed": true,
+  "sample_count": 256,
+  "schema": "extension-calibration-grading-complete-delivery-v1",
+  "skipped": 0,
+  "tests_run": 32
+}

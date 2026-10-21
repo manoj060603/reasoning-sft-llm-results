@@ -1,0 +1,107 @@
+{
+  "schema": "extension-calibration-grading-plan-v1",
+  "status": "draft_unadmitted_first_native_calibration_grading_requires_review_and_current_job",
+  "role": "calibration_grading_20261021_v1",
+  "source_files": [
+    "extension/calibration_grading.py",
+    "extension/calibration_grading.slurm",
+    "extension/calibration_grading_plan.json",
+    "extension/calibration_grading_stage.py",
+    "tests/test_calibration_grading.py"
+  ],
+  "reviewed_input_sha256": {
+    "extension/calibration_grading.py": "ec20d82bdc8ca7c4528253fe18d01ae35b9f0d74ae9bd347eb30e14bfe9012a4",
+    "tests/test_calibration_grading.py": "721c7eae4006429062e08e04335d8d1705693b89e07711671d47752719c46c66"
+  },
+  "native_qa": {
+    "schema": "extension-calibration-grading-native-qa-v1",
+    "test_pattern": "test_calibration_grading.py",
+    "expected_tests": 32,
+    "older_tests_replayed": false
+  },
+  "resources": {
+    "cpus": 2,
+    "ram_gib": 8,
+    "gpus": 0,
+    "wall_time_seconds": 3600,
+    "reserve_seconds": 172800
+  },
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "cpu_bootstrap": {
+    "path": "extension/operations/submit-calibration-grading-20261021.py",
+    "outside_source_inventory": true
+  },
+  "prior_ledger": {
+    "path": "extension/report/head-objective-qa-20261021-1228995/job_ledger_snapshot.json",
+    "sha256": "866953e00a642f8115bfa565e5ffb4593cf6db6130601b027efb0bf296259bd7",
+    "entries": 28,
+    "entries_sha256": "4464fe9ce68a448b9655c3ff828ef40080ec46936ec80a52108ac464ff2f347b"
+  },
+  "historical_ledger": {
+    "path": "deadline/job_ledger.json",
+    "sha256": "9fc4dfa2506ccd33580bab3e5f4c4e91d0731e221c4f88ac9778e54800dc141d"
+  },
+  "parent_sources": {
+    "path": "extension/report/head-objective-qa-20261021-1228995/evidence_manifest.json",
+    "sha256": "7f1f0a1f2b0c74e603d23c4204ce465eaa33db5e53eb2e6a52211907fef3cbc3",
+    "inventory_key": "protected_source_inventory",
+    "expected_files": 154
+  },
+  "generation_public_evidence": {
+    "directory": "extension/report/source-generation-v3-complete-20261021-1228872",
+    "pins": {
+      "complete.json": "cc46a0b2629c3c1f94f8018cefe73be359c6d91153c1cebf44e363dd5e0f6381",
+      "accounting.json": "a5da4eb91d9717351b900fb59f460f93491fd25759fd71ab5b44cbc8c880e530",
+      "private_hash_inventory.json": "3910bd706f9d353efb0226885b8ec282931405bad869dcd78c90abb1f299dfb3",
+      "evidence_manifest.json": "0cd7ebd074aaca4035d27070cdd3db776cb8d5479078fcab3dbc299e5a6f1a5d",
+      "provenance.json": "42f774923a210ec3ed6f368c6742972ef29a3a0dc3cfaa2715b730721c49cc92"
+    }
+  },
+  "private_inputs": {
+    "generation_directory": "extension/runs/source-generation-original-v3-1228872",
+    "raw_complete_sha256": "2d2869b76b14af823c377d98ca524922b2ed1ed8d50e4282a4e826842de2c119",
+    "cache": {
+      "path": "extension/runs/source-readiness-v2-retry-1226240/calibration_prompt_cache.json",
+      "sha256": "6b9e9ff88a23aa73b9ea34cb4618d5858d0a23ef606e2892639fb953bbfede65"
+    }
+  },
+  "worker_protocol": {
+    "path": "extension/planning/source_grader_v2_protocol.json",
+    "sha256": "c2cd03ac8281116810da029eed76116b21dfe5a7d78772765d9773c2ff216e2a"
+  },
+  "runtime_versions": {
+    "accelerate": "1.12.0",
+    "antlr4-python3-runtime": "4.7.2",
+    "latex2sympy2": "1.9.1",
+    "regex": "2025.11.3",
+    "safetensors": "0.7.0",
+    "sympy": "1.14.0",
+    "torch": "2.9.0",
+    "transformers": "4.57.3",
+    "vllm": "0.12.0",
+    "word2number": "1.1"
+  },
+  "claims": {
+    "calibration_engineering_only": true,
+    "method_ranking_permitted": false,
+    "accuracy_driven_retuning_permitted": false,
+    "intermediate_reasoning_verified": false,
+    "model_or_tokenizer_loaded": false,
+    "generation_performed": false,
+    "selection_performed": false,
+    "training_performed": false,
+    "benchmark_accuracy_established": false,
+    "bf16_training_or_memory_admission_established": false,
+    "automatic_retry": false,
+    "automatic_downstream": false
+  },
+  "qualifications": [
+    "This prospective draft is not an admission or executed result. Root must review, freeze and separately admit exactly this one fresh CPU role. The outside-inventory bootstrap binds all5 source files and this plan against exact prior28/current-role metadata, protected154 and immutable historical ledger; no hash cycle embeds the plan SHA in itself.",
+    "On actual CPU2/8GiB/one-hour allocation, first run exactly32 synthetic tests with zero failures, errors, skips, expected failures or unexpected successes. No older test scope is replayed. Only the sealed successful native QA permits private input reads and default frozen v2 grading.",
+    "The sanitized public complete receipt has different bytes from the native raw complete. Its explicit raw_native_complete link and the terminal private_hash_inventory bind raw complete2d2869..., all37 closed JSON files and terminal worker/Slurm logs after job1228872 COMPLETED0:0 in117 seconds. Hash all of them and reject symlinks, owner-only private-permission violations or any size/hash instability; parse only the cache, raw complete and32 needed record files on compute.",
+    "Grade all256 original samples in fixed32-record/index0..7 order, sequentially, through unchanged source_evaluation_v2.grade_response. Its MATH worker keeps10-second setup,5-second comparison and.55-second cleanup join budgets, one fresh worker per response, with exact five comparator source/path/runtime proofs. At most128 MATH samples imply1990.4 seconds of declared lifecycle budgets; this is not a guarantee against uninterruptible OS calls. Slurm caps the whole stage at3600 seconds.",
+    "Unsupported/missing answers and nonrankable worker errors retain denominator1. Cleanup failure or an invalid receipt preserves the helper exception.result/observed grades privately, then aborts without retry, parser adaptation, response rewriting, refill or continuation. No incomplete stage publishes pass estimates.",
+    "Only a fully validated32x8 processing pass may write complete=true. Per-domain pass@1 is mean(correct/8), pass@8 is mean(any correct), and stopping/length/output-token/whitespace8gram diagnostics reuse frozen definitions. This is source calibration engineering, not verified reasoning, method ranking, benchmark accuracy or accuracy-driven tuning.",
+    "Run directory mode700 and private JSON/log files mode600 keep source rows, gold, extracted answers, grades and failure tracebacks on ARC. Public summaries contain only aggregates and hashes. Worker descriptor logs remain explicitly unsealed until terminal external closeout; completion inventories include only closed JSON outputs. No automatic downstream work follows."
+  ]
+}

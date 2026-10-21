@@ -1,0 +1,47 @@
+test_abort_or_unknown_engine_finish_prevents_all_grading_calls (test_calibration_grading.CalibrationGradingTests) ... ok
+test_cache_membership_order_domain_and_complete_population_are_fixed (test_calibration_grading.CalibrationGradingTests) ... ok
+test_cache_or_complete_byte_tampering_cannot_self_repin (test_calibration_grading.CalibrationGradingTests) ... ok
+test_cleanup_exception_carries_its_denominator_and_partial_inventory_then_stops (test_calibration_grading.CalibrationGradingTests) ... ok
+test_complete_output_and_length_totals_must_match_every_private_sample (test_calibration_grading.CalibrationGradingTests) ... ok
+test_domain_pass_estimators_match_an_independent_full_denominator_oracle (test_calibration_grading.CalibrationGradingTests) ... ok
+test_duplicate_nonfinite_malformed_and_nonobject_json_inputs_fail_closed (test_calibration_grading.CalibrationGradingTests) ... ok
+test_eight_sample_indices_must_be_complete_unique_ordered_plain_integers (test_calibration_grading.CalibrationGradingTests) ... ok
+test_even_whitespace_change_in_a_private_record_breaks_its_file_seal (test_calibration_grading.CalibrationGradingTests) ... ok
+test_exact_record_file_set_and_explicit_pin_key_set_are_required (test_calibration_grading.CalibrationGradingTests) ... ok
+test_expected_comparator_five_paths_hashes_and_versions_are_pinned (test_calibration_grading.CalibrationGradingTests) ... ok
+test_fixture_and_native_interface_flags_are_explicit_and_strict (test_calibration_grading.CalibrationGradingTests) ... ok
+test_fixture_file_pins_never_implicitly_admit_native_generation (test_calibration_grading.CalibrationGradingTests) ... ok
+test_grading_calls_are_exactly_sequential32_by8_with_original_text_and_seed_order (test_calibration_grading.CalibrationGradingTests) ... ok
+test_injected_grader_requires_fixture_inputs_and_no_default_worker_is_started_in_fixtures (test_calibration_grading.CalibrationGradingTests) ... ok
+test_input_bytes_and_size_bounds_are_enforced_before_grade_calls (test_calibration_grading.CalibrationGradingTests) ... ok
+test_length_finishes_and_native_stops_use_only_frozen_completion_definitions (test_calibration_grading.CalibrationGradingTests) ... ok
+test_malformed_status_denominator_identity_or_nonjson_receipt_aborts_without_retry (test_calibration_grading.CalibrationGradingTests) ... ok
+test_mutable_grader_arguments_are_isolated_and_raw_inputs_never_change (test_calibration_grading.CalibrationGradingTests) ... ok
+test_nonrankable_worker_errors_preserve_denominator_one_and_all_128_domain_samples (test_calibration_grading.CalibrationGradingTests) ... ok
+test_opaque_request_ids_finished_state_and_record_schema_are_not_inferred (test_calibration_grading.CalibrationGradingTests) ... ok
+test_original_model_and_tokenizer_identities_are_bound_to_the_prepared_cache (test_calibration_grading.CalibrationGradingTests) ... ok
+test_private_grade_inventory_hash_and_fixed_repetition_definition_are_reproducible (test_calibration_grading.CalibrationGradingTests) ... ok
+test_public_result_contains_aggregate_hashes_without_questions_answers_or_record_ids (test_calibration_grading.CalibrationGradingTests) ... ok
+test_pure_source_has_no_cli_admission_or_file_io (test_calibration_grading.CalibrationGradingTests) ... ok
+test_raw_text_tokens_hashes_native_eos_and_vocabulary_are_validated (test_calibration_grading.CalibrationGradingTests) ... ok
+test_record_order_seed_prompt_and_loaded_identity_mutations_fail_before_grading (test_calibration_grading.CalibrationGradingTests) ... ok
+test_returned_cleanup_error_or_unfinished_cleanup_also_blocks_next_sample (test_calibration_grading.CalibrationGradingTests) ... ok
+test_source_plan_profile_snapshot_and_generation_scope_bindings_are_required (test_calibration_grading.CalibrationGradingTests) ... ok
+test_strict_last_box_percentage_and_original_arc_labels_are_not_adapted (test_calibration_grading.CalibrationGradingTests) ... ok
+test_unexpected_grader_exception_preserves_prior_observations_without_manufacturing_a_grade (test_calibration_grading.CalibrationGradingTests) ... ok
+test_valid_proof_distinguishes_real_file_bytes_and_canonical_value_hashes (test_calibration_grading.CalibrationGradingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 4.552s
+
+OK
+Traceback (most recent call last):
+  File "/home/manoj663/.conda/envs/reasoning/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/manoj663/.conda/envs/reasoning/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/calibration_grading_stage.py", line 444, in <module>
+    main()
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/calibration_grading_stage.py", line 438, in main
+    except BaseException: raise RuntimeError("Calibration grading stage failed. See private evidence.") from None
+RuntimeError: Calibration grading stage failed. See private evidence.

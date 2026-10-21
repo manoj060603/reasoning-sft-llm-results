@@ -1,0 +1,70 @@
+{
+  "after": {
+    "cache": {
+      "device": 49,
+      "gid": 22825097,
+      "inode": 968002930,
+      "mode": "0o600",
+      "symlink": false,
+      "uid": 22825097
+    },
+    "cache_file": {
+      "bytes": 248071,
+      "sha256": "6b9e9ff88a23aa73b9ea34cb4618d5858d0a23ef606e2892639fb953bbfede65"
+    },
+    "folder": {
+      "device": 49,
+      "gid": 22825097,
+      "inode": 25896347,
+      "mode": "0o700",
+      "symlink": false,
+      "uid": 22825097
+    }
+  },
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "before": {
+    "cache": {
+      "device": 49,
+      "gid": 22825097,
+      "inode": 968002930,
+      "mode": "0o660",
+      "symlink": false,
+      "uid": 22825097
+    },
+    "cache_file": {
+      "bytes": 248071,
+      "sha256": "6b9e9ff88a23aa73b9ea34cb4618d5858d0a23ef606e2892639fb953bbfede65"
+    },
+    "folder": {
+      "device": 49,
+      "gid": 22825097,
+      "inode": 25896347,
+      "mode": "0o770",
+      "symlink": false,
+      "uid": 22825097
+    }
+  },
+  "cache_path": "extension/runs/source-readiness-v2-retry-1226240/calibration_prompt_cache.json",
+  "complete": true,
+  "created_at_utc": "2026-10-21T07:15:01.375031+00:00",
+  "extension_ledger_unchanged": true,
+  "failed_job_id": "1229195",
+  "failed_public_manifest": {
+    "bytes": 26860,
+    "path": "extension/report/calibration-grading-failed-20261021-1229195/evidence_manifest.json",
+    "sha256": "3e77bdb0d2bbfe641e0df0961a1a9d393b7e97e58748acd97e524af7eb69dd5f"
+  },
+  "folder_path": "extension/runs/source-readiness-v2-retry-1226240",
+  "grading_performed": false,
+  "historical_ledger_unchanged": true,
+  "input_bytes_unchanged": true,
+  "ledger_sha256": "e0dfe0d97245e8c49972a234c18ad988354824be20a3be4a3575ea41dc9ed1c4",
+  "model_tokenizer_or_generation_performed": false,
+  "only_permission_modes_changed": true,
+  "protected_source_files": 160,
+  "protected_sources_unchanged": true,
+  "qualification": "Owner-only permissions tightened from770/660 to700/600. No content/source/scientific settings changed; failed1229195 remains failed. A new reviewed role is required before any grading.",
+  "raw_private_records_included": false,
+  "schema": "extension-calibration-private-permissions-repair-v1"
+}
