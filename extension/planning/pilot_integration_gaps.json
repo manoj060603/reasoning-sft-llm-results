@@ -1,0 +1,78 @@
+{
+  "schema": "extension-pilot-integration-gap-review-v1",
+  "status": "proposal_only_unsealed_unadmitted",
+  "authorizes_execution_or_downstream": false,
+  "historical_or_frozen_sources_changed": false,
+  "tests_data_tokenizers_models_or_jobs_executed": false,
+  "purpose": "Identify the smallest remaining source-only and actual-driver prerequisites for a bounded preservation pilot. Recommendations do not admit a job, change a frozen protocol, or establish successful GPU memory, integration or accuracy results.",
+  "state_at_review": {
+    "reported_native_cpu_gates": "Root reports the separate scientific410-check and metadata46-check CPU gates passed. These scopes do not establish source-readiness-v2 success or actual-model/GPU correctness.",
+    "pending_gpu_roles": [
+      {"job_id": "1224577", "scope": "Original native short/long four-objective GA2 diagnostic", "success_established_here": false},
+      {"job_id": "1225727", "scope": "Separate joint-memory diagnostic using17 presentations of four repeated private witnesses with GA8", "success_established_here": false}
+    ],
+    "source_readiness_v2": "The new86-source/474-check CPU preparation and its separate10-second setup plus5-second comparison worker are frozen but unadmitted at this review. Old465 and old5-second end-to-end source-grader scopes remain failed evidence; neither is silently repaired.",
+    "preservation_boundary": "Keep all current79 scientific sources, the pending GPU plans/caches/commands and all historical outputs byte-identical. This review recommends new prospective versions only; it implements no runner or cache changes."
+  },
+  "priority_findings": [
+    {
+      "id": "I1",
+      "location": "extension/pilot_driver.py:227 and extension/pilot_driver.py:785",
+      "gap": "The current driver requires parity_row_id to be a selected training example with at most512 total tokens. A truly broad unconditioned R draw, its2048-row prefix, or an independently selected S subset need not contain such a short row. The existing four-witness preparation proves only that short examples exist in the broad population.",
+      "recommended_resolution": "Before drawing or scoring outcomes, prospectively version a future driver/cache ABI to bind one fixed original-source parity-only witness outside the training examples/consumption ledger. Seal its unchanged bytes, original tokenizer/EOS serialization, source and exclusion identities and selection rule. Use that same witness across all cells; exclude it from examples seen, gradients, updates, training-token exposure and data-selection claims. Native actual-driver checks must exercise the new ABI before any pilot.",
+      "prohibited_shortcuts": "Do not insert a parity example into R/S, redraw or refill a random sample, condition broad eligibility on short length, duplicate a training example, or reinterpret a diagnostic witness as a training presentation. If the current ABI is retained instead, a missing in-draw short witness must stop the prospectively sealed attempt without redrawing."
+    },
+    {
+      "id": "I2",
+      "location": "extension/pilot_driver.py:142, extension/pilot_driver.py:224 and extension/pilot_driver.py:588",
+      "gap": "A successful repeated-four-witness joint diagnostic can supply the long_after_adam_admission shape receipt. It is not the separately required accumulation8_admission receipt from the actual pilot_driver integration_diagnostic stage. The main driver deliberately rejects repeated canonical training IDs.",
+      "recommended_resolution": "Prepare a separate17-unique-row, complete native512-token integration cache, with unequal active target lengths and deterministic predeclared ID/order selection after the same reserved-source plus all-nine benchmark exclusions. If17 suitable unique rows do not exist, stop and prospectively resolve the diagnostic design; do not reuse the four witnesses repeatedly or silently substitute rows. Use the actual driver and its current/new prospective ABI to run8+8+1 presentations and3 updates, final save/reload only, with fresh original weights.",
+      "per_objective_binding": "Obtain separately bound successful actual-driver integration evidence for sft/beta0, ce_kl/beta0.05, asft/beta0.05 and prior_anchored/beta0.05, with identical fixed precision/backend/chunking/GA8 settings. A different objective/beta cannot borrow a receipt. The CE half-LR cell also needs its exact prospective LR vector bound by CPU schedule oracles; do not claim a beta/objective or recipe not actually tested.",
+      "required_native_evidence": "Bind plan/cache/code and current job; exact unique once-only consumption, equal-example8+8+1 tail scaling, LR/scheduler/save boundaries, finite434 trainable tensors/moments, isolated unchanged reference, checkpoint isolation/reload, native serialization, actual headroom and terminal accounting. Short-only integration does not replace the separate sufficiently long post-Adam forward with434 resident gradient tensors and an earlier backward in that update."
+    },
+    {
+      "id": "I3",
+      "location": "extension/source_evaluation_v2.py and extension/source_readiness_v2.py",
+      "gap": "Pure render/extract/grade/sample helpers and a CPU calibration prompt cache do not implement actual source generation, a complete eight-sample result manifest, role aggregation or its GPU admission.",
+      "smallest_next_source_stage": "After successful source-readiness-v2, separately freeze and natively test a minimal source-generation collector using only the sealed32 calibration records and original model. Consume private verified prompt_token_ids; keep labels entirely outside generation. Resolve exact vLLM/model/tokenizer/runtime settings and actual EOS151645; bind record seed, sample index0..7, engine output index, prompt/model hashes, raw text/tokens, finish/stop reasons and response hashes. Run one original-model calibration pass under the unchanged n8/8192-new/16384-context profile and no extra stops, with a separately admitted finite bound and no automatic downstream job.",
+      "engineering_acceptance": "All32 requests and256 samples must be complete, unique and paired to immutable prompt/protocol identities. Extraction failure is incorrect, length finish remains counted, abort/worker error/timeout is nonrankable and retains its denominator, and cleanup error is persisted privately then aborts the caller. Persist raw evidence privately and public aggregate/hash metadata only. Measure throughput, token counts, memory and maximum-length behavior; calibration accuracy must not select prompts, caps, seeds, parsers or recipes.",
+      "repair_boundary": "An evidenced implementation failure may justify a separately bound repair with its original receipt preserved. Poor accuracy, unboxed responses or long reasoning are model outcomes and do not authorize repeated calibration tuning or replacing the sealed records."
+    },
+    {
+      "id": "I4",
+      "gap": "The CPU source audit serialized four witnesses, not the full eligible population, the15000-row R/S draws or the2048-row pilot caches. The complete original-base compatibility scores and fresh full-population coverage features are not established by old scores or old cluster64 sentinel labels.",
+      "recommended_resolution": "Freeze a CPU full-population source/cache/feature plan first: apply both immutable exclusion components before fitting, scoring or selection; validate native complete32768 serialization and EOS/tail without truncation, dropping, rewriting or refill; seal all82961 eligible IDs and input hashes. Fit the proposed question-only coverage features on that entire eligible population with exact libraries/order/seed/rank guards. Separately admit one frozen-original full-supervised-token mean-CE score for every eligible original target, including its native EOS/tail and excluding prompt labels. Bind complete score coverage, finite values, active counts, exact model/tokenizer/code and measured throughput. No old prefix loss or partial-score fallback.",
+      "selection_freeze": "Draw R once uniformly without replacement from sorted broad eligible IDs with the predeclared seed; preserve order. Seal S topic-by-full-length quotas matched to R, fixed half-low-CE plus seeded-coverage membership, tie/seed namespaces, R/S overlap and tags. Seal nested R/S2048 subsets and matched cell-order exposure before outcomes. The lower-CE component measures base compatibility, not verified target correctness or guaranteed learning value."
+    },
+    {
+      "id": "I5",
+      "gap": "Seven-cell definitions and ranking/promotion statements remain proposals, and source-only helpers do not yet establish complete per-role scoring/aggregation or finishable end-to-end reservations.",
+      "recommended_resolution": "Seal exact seven cells, one ranking checkpoint256, controls, source-development roles, all per-domain retention/length/repetition gates, tie order and the random-only-winner policy before any pilot generation. Retain checkpoint64 for diagnostics only. Direct combined selection-method promotion is supported only for S_CE or S_KL with their matching R control; an R_ASFT/R_PRIOR/R_halfLR winner cannot be silently transferred to S or trigger an automatic eighth cell.",
+      "evaluation_preflight": "Prepare the fixed768-record development prompt cache and validate its source gold/extraction support before pilot outcomes, while keeping prompts gold-blind and complete. Do not inspect or tune to independent confirmation answer formats during this engineering stage. An unsupported or failed grader state stops readiness rather than dropping/refilling a question. Freeze whole-group shard identities, output inventory, record-weighted within-domain p1=c/8 and p8=any-correct, then equal-domain aggregation and paired component uncertainty. Require all declared samples and roles before ranking.",
+      "deadline_and_claim_limits": "Measured original calibration throughput alone is not a safe collapsed-model decode bound. Reserve bounded complete training and source generation, full replication, one confirmation and unchanged final benchmarking with the48-hour closeout reserve before admitting an unfinishable pilot campaign. Matching coarse cells/example counts does not match exact supervised-token exposure; report per-arm active-token totals and all regressions."
+    }
+  ],
+  "recommended_stage_dependencies": [
+    {"stage": "A", "work": "Complete and audit the existing two pending native GPU diagnostics and separately admitted readiness-v2 CPU preparation", "requires": [], "admits_by_itself": "No pilot, model selection or source generation"},
+    {"stage": "B", "work": "Freeze minimal source generator/collector plus one original-only32-record calibration", "requires": ["A: successful readiness-v2 and exact original/runtime prerequisites"], "admits_by_itself": "Only the one finite calibration job under its new native QA/admission"},
+    {"stage": "C", "work": "Prospectively resolve external parity ABI; prepare unique17-row short integration and full source feature/cache/score plans", "requires": ["A: successful native objective/shape prerequisites"], "parallel_note": "CPU preparation may be planned in parallel with B, but no recipe/score or model job is automatically admitted"},
+    {"stage": "D", "work": "Natively admit the actual unique-row driver GA8 integration for each objective/beta; complete full eligible original-base scoring and R/S selection/cache audits", "requires": ["C: new exact QA, plan/cache proofs and per-job admission", "A: separate long-after-Adam joint shape success"], "admits_by_itself": "No pilot until every applicable gate and data/recipe freeze is complete"},
+    {"stage": "E", "work": "Seal finite seven-cell pilot, paired768-record development evaluation and promotion/control policy", "requires": ["B: complete fixed calibration/throughput evidence", "D: complete native driver and data/score evidence", "Prospective end-to-end deadline reservations"], "admits_by_itself": "Only explicitly admitted finite pilot/evaluation roles; never confirmation or final benchmark ranking"},
+    {"stage": "F", "work": "Train fresh full15000-pair paired-seed roles under the one prospectively promoted recipe, then open single-use confirmation once", "requires": ["E: complete prospectively eligible winner and exact full-run/control freeze"], "failure_rule": "Confirmation failure ends that round without runner-up, seed, checkpoint, beta or parser replacement"}
+  ],
+  "scientific_limits": [
+    "Teacher-forced base KL need not preserve sampled free-generation prefixes; source8K development is a deliberate proxy for unchanged32K final benchmarks.",
+    "ARC is a retention guard, not GPQA or Chinese-domain equivalence. Passing source gates cannot establish every final benchmark or metric improves.",
+    "Two fixed training seeds and unadjusted conditional component bootstrap intervals do not establish general training-seed variance or universal superiority.",
+    "Official tests have already been viewed historically; preserve that exploratory history even when the new selection/confirmation round is prospectively frozen.",
+    "A pending or partly complete diagnostic is not a successful memory, numerical, consumption or generation result. No new benchmark score, recipe improvement or SOTA claim is made here."
+  ],
+  "read_only_sources": [
+    {"path": "extension/pilot_driver.py", "sha256": "e6b707537298d1b42f21e744dafef4e5edcd604a79ee95d37c2906738d2b9d1a"},
+    {"path": "extension/planning/pilot_freeze_readiness.json", "sha256": "70b7ce6c5eeb99076f1573c822b489dea3e5da38c086df57684bdd59614802fb"},
+    {"path": "extension/source_readiness_v2_plan.json", "sha256": "40479982fe3b43e27f51ec27f28a2cf39f76a464ceffdc576e1f38268f0a6a3b"},
+    {"path": "extension/joint_memory_admission.py", "sha256": "4fcce77d633ea13baab8630c8485fccade52a5026eb51c4a5a75806c712f95fe"},
+    {"path": "extension/source_evaluation_v2.py", "sha256": "639e3964a750f3af77d90b4aa4aa6f5e166fd20d494c07abeb2eb08a29e226c4"}
+  ],
+  "work_performed": "Read static source/planning files and small source hashes; created only this new planning JSON. No old source edits, tests, real data/tokenizer/model execution, queue actions, submissions, commits or publication."
+}

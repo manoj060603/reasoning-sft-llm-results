@@ -1,0 +1,16 @@
+{
+  "actual_model_or_memory_admission_established": false,
+  "automatic_downstream": false,
+  "complete": true,
+  "elapsed_allocation_seconds": 4,
+  "errors": 0,
+  "failures": 0,
+  "gpu_seconds": 0,
+  "job_id": "1225720",
+  "schema": "extension-joint-gpu-metadata-qa-delivery-v1",
+  "scope": "Only joint-GPU metadata admission and Slurm GRES, capacity, duplicate, terminal CPU and receipt/provenance oracles; no model, private data, source grader or scientific410 replay.",
+  "skipped": 0,
+  "source_commit": "25a640235c77d3bfed9f377d9811d7a292301025",
+  "source_inventory_files": 4,
+  "tests_run": 46
+}

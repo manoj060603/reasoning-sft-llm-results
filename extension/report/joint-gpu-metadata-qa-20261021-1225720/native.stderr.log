@@ -1,0 +1,51 @@
+test_all_mandatory_cpu_rows_required (test_joint_gpu_admission.AccountingTests) ... ok
+test_complete_eight_field_accounting_and_optional_step (test_joint_gpu_admission.AccountingTests) ... ok
+test_compute_proof_rejects_login_owner_gpu_and_hash_changes (test_joint_gpu_admission.AccountingTests) ... ok
+test_cpu_failed_or_active_steps_rejected (test_joint_gpu_admission.AccountingTests) ... ok
+test_cpu_proof_accepts_preserved_stripped_newline_hash (test_joint_gpu_admission.AccountingTests) ... ok
+test_elapsed_timestamps_command_and_timezone_binding (test_joint_gpu_admission.AccountingTests) ... ok
+test_gpu_unknown_resources_duplicate_rows_and_arrays_rejected (test_joint_gpu_admission.AccountingTests) ... ok
+test_changed_submitted_binding_and_renamed_job_rejected (test_joint_gpu_admission.AdmissionTests) ... ok
+test_current_gpu_resources_and_duplicate_identity_rejected (test_joint_gpu_admission.AdmissionTests) ... ok
+test_deadline_requires_whole_allocation_plus_48_hour_reserve (test_joint_gpu_admission.AdmissionTests) ... ok
+test_earlier_cpu_stage_active_or_renamed_rejected (test_joint_gpu_admission.AdmissionTests) ... ok
+test_exact_submit_handoff_and_matching_idempotence (test_joint_gpu_admission.AdmissionTests) ... ok
+test_ledger_change_after_live_snapshot_is_not_overwritten (test_joint_gpu_admission.AdmissionTests) ... ok
+test_missing_or_tampered_current_job_receipt_cannot_appear_complete (test_joint_gpu_admission.AdmissionTests) ... ok
+test_pending_plus_running_gpu_capacity_blocks_without_ledger_write (test_joint_gpu_admission.AdmissionTests) ... ok
+test_receipt_write_failure_keeps_accepted_job_uncertain (test_joint_gpu_admission.AdmissionTests) ... ok
+test_rejection_malformed_output_or_stderr_requires_reconciliation (test_joint_gpu_admission.AdmissionTests) ... ok
+test_sealed_reconciled_no_id_prior_allows_submit_and_idempotence (test_joint_gpu_admission.AdmissionTests) ... ok
+test_source_or_receipt_changes_after_queue_block_submission (test_joint_gpu_admission.AdmissionTests) ... ok
+test_submission_environment_cannot_override_gpu_or_array_directives (test_joint_gpu_admission.AdmissionTests) ... ok
+test_timeout_journals_uncertainty_and_never_retries (test_joint_gpu_admission.AdmissionTests) ... ok
+test_unknown_or_altered_uncertain_no_id_prior_blocks_before_sbatch (test_joint_gpu_admission.AdmissionTests) ... ok
+test_untracked_same_name_rejected (test_joint_gpu_admission.AdmissionTests) ... ok
+test_extra_ledger_role_or_changed_prior_entry_blocks (test_joint_gpu_admission.EvidenceTests) ... ok
+test_full_scientific_and_parser_qa_graph (test_joint_gpu_admission.EvidenceTests) ... ok
+test_historical_ledger_is_only_read_and_pinned (test_joint_gpu_admission.EvidenceTests) ... ok
+test_inventory_cannot_follow_private_cache_or_outside_sources (test_joint_gpu_admission.EvidenceTests) ... ok
+test_metadata_native_failure_or_skip_never_qualifies (test_joint_gpu_admission.EvidenceTests) ... ok
+test_metadata_qa_sha_is_mandatory_and_exact (test_joint_gpu_admission.EvidenceTests) ... ok
+test_parser_accounting_must_be_successful_and_same_job (test_joint_gpu_admission.EvidenceTests) ... ok
+test_parser_cpu_entry_must_bind_actual_qa_sources_and_job (test_joint_gpu_admission.EvidenceTests) ... ok
+test_parser_qa_old_scope_and_test_count_cannot_be_reused (test_joint_gpu_admission.EvidenceTests) ... ok
+test_parser_source_and_test_actual_bytes_are_required (test_joint_gpu_admission.EvidenceTests) ... ok
+test_paths_escape_and_symlinks_are_rejected (test_joint_gpu_admission.EvidenceTests) ... ok
+test_pinned_scientific_receipts_cannot_be_replaced_consistently (test_joint_gpu_admission.EvidenceTests) ... ok
+test_scientific_source_mutation_rejected (test_joint_gpu_admission.EvidenceTests) ... ok
+test_wrapper_unknown_options_or_gpu_count_changes_rejected (test_joint_gpu_admission.EvidenceTests) ... ok
+test_arrays_duplicate_rows_and_unknown_states_rejected (test_joint_gpu_admission.ResourceParserTests) ... ok
+test_explicit_zero_resource_forms (test_joint_gpu_admission.ResourceParserTests) ... ok
+test_nonterminal_states_conservatively_count (test_joint_gpu_admission.ResourceParserTests) ... ok
+test_one_other_gpu_allows_exactly_second_allocation (test_joint_gpu_admission.ResourceParserTests) ... ok
+test_queue_allocation_and_pending_count (test_joint_gpu_admission.ResourceParserTests) ... ok
+test_real_slurm_gpu_forms_and_typed_variants (test_joint_gpu_admission.ResourceParserTests) ... ok
+test_snapshot_stderr_and_timeout_fail_closed (test_joint_gpu_admission.ResourceParserTests) ... ok
+test_snapshot_uses_four_fields_and_all_user_allocations (test_joint_gpu_admission.ResourceParserTests) ... ok
+test_unknown_gres_is_not_silently_zero (test_joint_gpu_admission.ResourceParserTests) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 1.158s
+
+OK

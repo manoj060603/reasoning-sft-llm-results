@@ -1,0 +1,63 @@
+{
+  "schema": "extension-source-readiness-v2-plan-v1",
+  "status": "prospective_unadmitted",
+  "cpu_only": true,
+  "prepare_calibration_prompts": true,
+  "training": false,
+  "model_inference": false,
+  "automatic_downstream": false,
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "wall_time_seconds": 7200,
+  "reserve_seconds": 172800,
+  "resources": {"cpus": 8, "memory_gib": 64, "gpus": 0},
+  "legacy_plan": {
+    "path": "extension/source_readiness_plan.json",
+    "sha256": "70c6823627d8bc93ce927665b87b943e1bf22f1ddc99eb2fd511a778696b590d"
+  },
+  "worker_protocol": {
+    "path": "extension/planning/source_grader_v2_protocol.json",
+    "sha256": "c2cd03ac8281116810da029eed76116b21dfe5a7d78772765d9773c2ff216e2a"
+  },
+  "predecessor_joint_qa": {
+    "path": "extension/report/joint-memory-qa-20261021-1225557/complete.json",
+    "sha256": "66a6ba25cea01a70ee3a945d1dce9cddf474915ab6b32e506de3058d23a8f51f"
+  },
+  "new_frozen_sources": {
+    "extension/source_evaluation_v2.py": "639e3964a750f3af77d90b4aa4aa6f5e166fd20d494c07abeb2eb08a29e226c4",
+    "tests/test_source_evaluation_v2.py": "57c2b630f2d9b77da0dab279e4f3ba00faac8d2f6a4edc6344b82ef7c9c5010a"
+  },
+  "calibration": {
+    "split": "calibration",
+    "record_count": 32,
+    "domain_counts": {"math": 16, "arc_challenge": 16},
+    "group_count": 32,
+    "maximum_prompt_tokens": 8192,
+    "validate_gold_only_calibration": true,
+    "gold_self_comparison": true,
+    "drop_refill_or_replace": false
+  },
+  "generation_profile": "unchanged_legacy_plan.source_generation_profile",
+  "source_generated_answers_used": false,
+  "confirmation_outputs_opened": false,
+  "native_qa": {
+    "legacy_patterns": [
+      "test_extension_*.py", "test_labeled_*.py", "test_preserving_*.py", "test_development_*.py",
+      "test_preservation_development_seal_v2.py", "test_preservation_retry_submission.py",
+      "test_preservation_data.py", "test_native_model_admission.py", "test_smoke_preparation.py",
+      "test_smoke_submission.py", "test_pilot_driver.py", "test_joint_memory_admission.py"
+    ],
+    "legacy_counts": [64, 44, 36, 48, 17, 21, 30, 36, 21, 24, 44, 25],
+    "legacy_tests": 410,
+    "v2_helper_tests": 40,
+    "new_readiness_tests": 24,
+    "new_patterns": ["test_source_evaluation_v2.py", "test_source_readiness_v2.py"],
+    "source_inventory_files": 86,
+    "old465_scope_replayed": false
+  },
+  "outputs": {
+    "metadata": ["started.json", "unit_qa.json", "unit_qa_failure.json", "complete.json", "failure.json"],
+    "private": ["calibration_prompt_cache.json", "calibration_gold_prechecks.json", "calibration_failure_private.json"],
+    "raw_labels_prompts_or_ids_public": false
+  },
+  "qualification": "The new source worker has separate10s setup and5s comparison deadline budgets plus0.55s cleanup joins, not an OS syscall timing guarantee. This does not validate the old5s end-to-end or465-test scope, change the immutable32 calibration records/source generation profile/final benchmarks, admit model inference/training, or trigger downstream submission."
+}

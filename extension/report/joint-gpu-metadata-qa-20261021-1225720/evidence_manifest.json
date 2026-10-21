@@ -1,0 +1,46 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 885,
+      "sha256": "76f0fc0983bab7ab9152c3daf8f3743c7216a5eea38f833c323c9dffb3af1981"
+    },
+    "complete.json": {
+      "bytes": 344,
+      "sha256": "55fcd29d2dee64780a7e867b1fd7c40722edbedadfc2beffa55486152f2cfb89"
+    },
+    "delivery_summary.json": {
+      "bytes": 604,
+      "sha256": "98c302256a5c85389fe949bc0c7af74d718d6c13ddfaf5f671c53e6221cac9b7"
+    },
+    "executed_cpu_admission.py": {
+      "bytes": 6235,
+      "sha256": "d6078c88c5450e83425b78ac1eecf9f6fbc5e800bfd7989a07d1fee9dfa499b5"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 218261,
+      "sha256": "e5fc88e901a68c2771163bb504c1d55e813789e251ee7c8a6f572763ebe093bc"
+    },
+    "native.stderr.log": {
+      "bytes": 4835,
+      "sha256": "8407aff9aeae83f0dd93e39a66c4398c9b0718bb7471a2433a7d0d433a20f5a2"
+    },
+    "native.stdout.log": {
+      "bytes": 87,
+      "sha256": "44b315eec2d0f73033f72cd3c5fce03e20d5cf903216a2f7bff7499b0887e32b"
+    },
+    "native_qa.json": {
+      "bytes": 280033,
+      "sha256": "d15f2a5de33c4fdb20a1a4b20b91e55ac3fb6d247f998a9712c061484deef39b"
+    },
+    "source_install_receipt.json": {
+      "bytes": 14078,
+      "sha256": "e60d38a36290b6eefa0611d2a19a982260c488def71565b28abc479156719cff"
+    },
+    "started.json": {
+      "bytes": 756,
+      "sha256": "06094c697ba792418a06639dbcdcccb9a56246699db9a64a5386c5091033d294"
+    }
+  },
+  "private_data_included": false,
+  "schema": "extension-joint-gpu-metadata-qa-evidence-v1"
+}

@@ -148,6 +148,41 @@ cause. The scorer and timeout remain unchanged, the failed QA remains failed,
 and source-grading reliability is still awaiting an explicit operational repair
 and fresh native validation.
 
+The separate [joint-memory CPU QA](extension/report/joint-memory-qa-20261021-1225557/delivery_summary.json)
+completed in **48 seconds with zero GPUs**. All **410 scoped checks** passed:
+341 legacy checks, 44 pilot-driver checks and 25 joint-diagnostic checks.
+This scope uses synthetic CPU fixtures and binds 79 source files. It explicitly
+excludes the source-grader tests; it establishes neither grader repair nor
+actual Qwen/B200 memory feasibility.
+
+The separate [GPU admission metadata checks](extension/report/joint-gpu-metadata-qa-20261021-1225720/delivery_summary.json)
+then passed **all 46 tests in a four-second CPU allocation**, using zero GPUs.
+They cover scheduler GPU formats, the two-allocation limit, duplicate blocking,
+terminal CPU receipts and exact source bindings. They do not replay the 410
+scientific checks or establish actual model feasibility. The second bounded
+B200 diagnostic is now admitted as **1225727**, with its [exact admission
+receipt](extension/operations/joint-memory-admission-job-1225727.json). It tests
+a long forward after Adam state and accumulated gradients coexist, across all
+four objectives, using 17 disposable presentations and a final partial batch.
+Both B200 diagnostics remain queued as of **02:37 UTC on October 21**. Their
+combined open reservation is four GPU-hours; extension GPU use is still zero
+at that snapshot. No pilot, generated development score or new benchmark has
+started. A separate unique-example, actual pilot-driver accumulation check is
+also required before long pilots.
+
+The separately versioned source worker uses a prospectively frozen ten-second
+setup budget, followed by five seconds for comparison and a bounded cleanup.
+Its [new CPU attempt](extension/report/source-readiness-v2-failed-20261021-1225820/delivery_summary.json)
+ran **474 checks in a 71-second, zero-GPU allocation**: 472 passed and two
+readiness fixtures errored. Both errors came from a fixture passing an absolute
+plan path to the required relative-path guard; the actual job wrapper uses a
+relative path. The 410 legacy checks and all 40 new worker checks, including
+the pinned public scalar comparisons, passed. The overall stage remains failed
+and stopped before preparing the private calibration cache. Its exact sources,
+logs and accounting are preserved. A separate fixture repair must receive fresh
+native validation; these observations establish neither full grading readiness
+nor the earlier five-second end-to-end contract.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%

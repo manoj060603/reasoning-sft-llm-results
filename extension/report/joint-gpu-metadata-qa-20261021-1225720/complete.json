@@ -1,0 +1,11 @@
+{
+  "actual_model_or_memory_admission_established": false,
+  "automatic_downstream": false,
+  "complete": true,
+  "cpu_only": true,
+  "gpu_seconds": 0,
+  "job_id": "1225720",
+  "native_qa_sha256": "d15f2a5de33c4fdb20a1a4b20b91e55ac3fb6d247f998a9712c061484deef39b",
+  "schema": "extension-joint-gpu-metadata-qa-complete-v1",
+  "tests_run": 46
+}

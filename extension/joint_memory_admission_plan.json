@@ -1,0 +1,113 @@
+{
+  "schema": "extension-joint-memory-admission-plan-v1",
+  "status": "prospective_unadmitted_diagnostic_only",
+  "diagnostic_only": true,
+  "automatic_downstream": false,
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "case_order": ["sft", "ce_kl", "asft", "prior_anchored"],
+  "diagnostic_repeat_ids": true,
+  "optimizer_updates": 3,
+  "presentation_roles": [
+    "short0", "short1", "short2", "short0", "short1", "short2", "short0", "short1",
+    "long", "long", "short0", "short1", "short2", "short0", "short1", "short2", "short0"
+  ],
+  "inputs": {
+    "native_plan": {
+      "path": "extension/native_model_admission_plan.json",
+      "sha256": "94b6d9bc5e46acc0d5a9e3f409d88544f7e091873c2150af705b92c6313b758e"
+    },
+    "prepared": {
+      "path": "extension/runs/native-smoke-preparation-1224497/prepared.json",
+      "sha256": "d1bb1875a293c71f2a108df4b287b3bb2ab35b3168cd6505b5bd91a98fd66457"
+    }
+  },
+  "settings": {
+    "accumulation": 8,
+    "microbatch": 1,
+    "student_dtype": "float32",
+    "reference_dtype": "float32",
+    "bf16": true,
+    "attention": "sdpa",
+    "gradient_checkpointing": true,
+    "use_reentrant": false,
+    "checkpoint_chunks": true,
+    "chunk_tokens": 128,
+    "optimizer": "adamw_torch",
+    "learning_rate": 0.000002,
+    "weight_decay": 0.01,
+    "clip_norm": 1.0,
+    "seed": 20261021,
+    "beta": 0.05,
+    "scheduler": "cosine_prefix",
+    "warmup_steps": 57,
+    "total_steps": 1875,
+    "resume": false
+  },
+  "resources": {
+    "gpu_type": "B200",
+    "gpus": 1,
+    "host_cpus": 8,
+    "host_ram_gib": 128,
+    "scratch_free_gib": 160,
+    "wall_time_seconds": 7200,
+    "reserve_seconds": 172800,
+    "maximum_initial_concurrent_gpu_allocations": 2
+  },
+  "tolerances": {
+    "logit_max_abs": 0.001,
+    "ce_abs": 0.00001,
+    "kl_abs": 0.00001,
+    "reload_logit_max_abs": 0.001,
+    "headroom_min_bytes": 17179869184,
+    "headroom_fraction": 0.1
+  },
+  "cpu_qa": {
+    "schema": "extension-joint-memory-admission-native-qa-v1",
+    "expected_total_tests": 410,
+    "inventory_files": 79,
+    "test_patterns": [
+      "test_extension_*.py", "test_labeled_*.py", "test_preserving_*.py", "test_development_*.py",
+      "test_preservation_development_seal_v2.py", "test_preservation_retry_submission.py",
+      "test_preservation_data.py", "test_native_model_admission.py", "test_smoke_preparation.py",
+      "test_smoke_submission.py", "test_pilot_driver.py", "test_joint_memory_admission.py"
+    ],
+    "expected_counts": [64, 44, 36, 48, 17, 21, 30, 36, 21, 24, 44, 25],
+    "scope": "The legacy341 regression checks,44 pilot-driver checks and25 joint diagnostic checks only. Tiny synthetic CPU models and synthetic metadata fixtures; no original weights, private witnesses, corpus processing, tokenization or generation.",
+    "explicitly_not_executed_or_admitted": [
+      "tests/test_source_evaluation.py",
+      "tests/test_source_readiness.py",
+      "tests/test_source_readiness_submission.py",
+      "tests/test_source_readiness_retry_submission.py",
+      "extension/source_grader_diagnostic.py"
+    ],
+    "qualification": "The73 earlier sources remain hash-bound, including grader files. Exclusion from this execution scope is not a grader repair, grader admission or a successful full465-test replay. This diagnostic never calls the source grader."
+  },
+  "workload": {
+    "fresh_subprocess_original_student_reference_each_mode": true,
+    "student_parameter_tensors": 434,
+    "first_long_position_zero_based": 8,
+    "second_long_position_zero_based": 9,
+    "required_before_second_long": "At least one completed Adam update, all434 student Adam moment sets, all434 finite FP32 accumulated gradients and exactly one successful backward in the current accumulation group.",
+    "source_selection_performed": false,
+    "original_pairs_rewritten": false,
+    "repetition_qualification": "Only the four existing sealed witnesses are repeated under this disposable17-presentation schedule. This is not a one-pass training subset and does not relax the main pilot's unique-ID guard.",
+    "checkpoint": "One final disposable student checkpoint per mode after update3; full finite FP32 inventory, reference isolation and short reload parity. No checkpoint ranking, continuation or reuse as pilot initialization."
+  },
+  "failure_rules": [
+    "No model work without new successful CPU QA and a separate exact current-job GPU admission.",
+    "A failed mode, missing receipt, OOM, nonfinite value or insufficient headroom stops the collection without retry or downstream admission.",
+    "Do not change precision, context, schedule, chunk size, thresholds, source witnesses or objective after observing a failure.",
+    "Keep the original73-source history, previous diagnostic receipts and every partial attempt unchanged."
+  ],
+  "qualifications": [
+    "This source plan and its future CPU fixtures do not establish B200 memory feasibility or training efficacy.",
+    "The earlier GA2 long-first-Adam case plus shortGA8 tail check did not prove the joint long-after-Adam peak.",
+    "Only complete matched native evidence may later be considered for the exact tested model, objective and token envelope. No scientific matrix, source-selection recipe or pilot is admitted here.",
+    "A separate one-use source-bound CPU admission adapter and a separate GPU admission adapter are still required; neither wrapper submits anything."
+  ],
+  "publication": {
+    "raw_witnesses_private": true,
+    "no_model_or_dataset_upload": true,
+    "source_and_aggregate_metadata_only": true
+  }
+}

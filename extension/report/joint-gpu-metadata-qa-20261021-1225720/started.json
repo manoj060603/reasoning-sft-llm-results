@@ -1,0 +1,23 @@
+{
+  "expected_tests": 46,
+  "job_id": "1225720",
+  "schema": "extension-joint-gpu-metadata-qa-start-v1",
+  "source_inventory": {
+    "extension/joint_gpu_admission.py": {
+      "bytes": 35584,
+      "sha256": "ddfa7519d44b81fec2d2a4628b2c471dd8116a29dedeceadaf376d2fc2571a73"
+    },
+    "extension/joint_gpu_metadata_qa.py": {
+      "bytes": 5784,
+      "sha256": "0a35a993e8e96fd50a14419175dd58915dd00afba0a8ccae5eda76e834f26d8b"
+    },
+    "extension/joint_gpu_metadata_qa.slurm": {
+      "bytes": 1187,
+      "sha256": "ff624f8ace15b904d453086168fefb4edecfa191a2d975f48233f4215dffcd9e"
+    },
+    "tests/test_joint_gpu_admission.py": {
+      "bytes": 36645,
+      "sha256": "bea04f48f09a055b5198632ac5b85e75ee90bfb71982f5e97c3adc7345c60de6"
+    }
+  }
+}

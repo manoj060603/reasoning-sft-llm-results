@@ -1,0 +1,24 @@
+{
+  "actual_model_or_memory_admission_established": false,
+  "automatic_downstream": false,
+  "complete": true,
+  "elapsed_allocation_seconds": 48,
+  "errors": 0,
+  "failures": 0,
+  "full_source_readiness_465_scope_replayed": false,
+  "gpu_seconds": 0,
+  "job_id": "1225557",
+  "private_cache_replayed": false,
+  "schema": "extension-joint-memory-qa-delivery-v1",
+  "scientific_source_commit": "2f56bae059e73d27cb63f9c7b6690f62521d5c91",
+  "scope": {
+    "joint_memory": 25,
+    "legacy": 341,
+    "pilot_driver": 44
+  },
+  "skipped": 0,
+  "source_grader_admitted": false,
+  "source_grader_executed": false,
+  "source_inventory_files": 79,
+  "tests_run": 410
+}

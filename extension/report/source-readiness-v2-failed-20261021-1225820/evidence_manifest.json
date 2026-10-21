@@ -1,0 +1,42 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 895,
+      "sha256": "f126490b505da796081cd750b17bd6868c45b9955f45763e9e20ab4d20876151"
+    },
+    "delivery_summary.json": {
+      "bytes": 1165,
+      "sha256": "3d6251ea113f9d1428e570ae08e14c286a112a580a44c3c614bfa67e2fd875c8"
+    },
+    "executed_cpu_admission.py": {
+      "bytes": 14060,
+      "sha256": "888326d7a3540656b02e168e4719c46eee2136d593ba04a999f11c8da2f345a3"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 272859,
+      "sha256": "48dafdc5a9bc8e5664b56ba6c3d94af35e82d731c92f7cf9ce465743b2034503"
+    },
+    "native.stderr.log": {
+      "bytes": 59489,
+      "sha256": "1772d40d9b73a54996084bef7815c2dc894943ae325f60eb376615e2c4f1dc82"
+    },
+    "native.stdout.log": {
+      "bytes": 1737,
+      "sha256": "2aee177b7b50b8cf11ce802afa0eab4c43eff60a5dd28d18f416ef4169edcd26"
+    },
+    "source_install_receipt.json": {
+      "bytes": 27288,
+      "sha256": "7f0d0dc304ced0559c09a626a14527a761bb67184bd0d47979eb4f51cba644c4"
+    },
+    "started.json": {
+      "bytes": 13536,
+      "sha256": "e8243cf233eb230d88425e09db6f972bc5f4e31f0d1d0ccb82687b61f299deef"
+    },
+    "unit_qa_failure.json": {
+      "bytes": 25917,
+      "sha256": "6cd6a0f4a039bb20f8aaf7697846f25e4b3b0473d2177017b1e4152f707ba09f"
+    }
+  },
+  "private_data_included": false,
+  "schema": "extension-source-readiness-v2-failed-evidence-v1"
+}
