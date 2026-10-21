@@ -1,0 +1,22 @@
+{
+  "job_id": "1230197",
+  "native_execution_or_population_proof": false,
+  "runtime": {
+    "implementation": "cpython",
+    "native_blas_or_scorer_proof": false,
+    "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]",
+    "python_version": "3.10.19",
+    "random_source_file_bytes": 33221,
+    "random_source_file_sha256": "ce80a2471965e64ae93caea14490f16850432e65dce87f15edfe25b6f562f8d1",
+    "random_source_path": "/home/manoj663/.conda/envs/reasoning/lib/python3.10/random.py",
+    "random_source_stat": [
+      49,
+      5000732800,
+      33221,
+      1761172993442581415,
+      1769400862576684290
+    ],
+    "real_population_draw_performed": false
+  },
+  "schema": "extension-full-pool-tools-runtime-v1"
+}

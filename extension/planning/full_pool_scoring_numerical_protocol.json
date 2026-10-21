@@ -1,0 +1,111 @@
+{
+  "actual_native_numeric_success_established": false,
+  "execution_admitted": false,
+  "failure_rule": "Any missing/changed source/cache/row, nonfinite, incomplete CE/component/count, wrong dtype/dispatch/runtime, numerical/repeat miss or strict memory/resource failure stops the version, keeps all earlier successes and failures privately, and admits no implicit retry, backend/dtype/context/mixture alternative, partial-score selection, fit/draw, pilot or benchmark.",
+  "frozen_at_utc": "2026-10-21T10:48:49.583227+00:00",
+  "immutable_score_definition": {
+    "backbone": "Whole complete microbatch1 native sequence with all original context, original model.model under actual CUDA BF16 autocast/SDPA, use_cache=False; no response restart or sliding windows. No long root model full-vocabulary return.",
+    "causal_shift": "For native original unshifted IDs x and promptP, targets j=P..L-1 use hidden j-1. Count every original response/EOS/tail token, zero prompt supervision, no padding; require P>=1,A=L-P>0,L<=32736 with32 unused reserve in32768 context. Shift once externally.",
+    "head": "Original unchanged tied lm_head on already aligned active predecessor hidden rows in rank2 chunks of exactly128 except final tail; observe actual BF16 output. FP32 log_softmax over the entire151936 vocabulary, then gather original target; no sampled/topk/truncated vocabulary.",
+    "parameter_storage": "All434 original unique FP32 Parameters with original tied input/output weight; eval/no_grad, not inference_mode; unchanged original files before/after; no gradient/reference/optimizer/Trainer/updates.",
+    "reduction": "Convert each finite FP32 token NLL scalar to binary64 and add starting+0.0 in ascending original target j order. The running sum is Python binary64 addition, not torch chunk.sum or math.fsum; independently ordered EOS/nonEOS/tail subset sums and exact counts. Divide total once byA. Save finite JSON binary64 and exact float.hex for sum/mean/components. No cross-row reduction or batch-size-dependent scoring.",
+    "repository": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "independent_cpu_oracles": {
+    "loss_sum_mean_absolute_tolerance": 1e-06,
+    "relative_tolerance": 1e-05,
+    "requirements": "Independent full-vocab dense FP32 negative-logsoftmax and explicit per-target binary64 loop oracle; exact active/EOS/nonEOS/tail counts; exact one shift; compare every token NLL, ordered sum/mean and component float/hex serialization. Synthetic CPU FP32 proof does not establish BF16CUDA.",
+    "scope": "Prospectively tested new scorer/reduction code on admittedCPU only, using tiny synthetic tensors, unequal prompt/target lengths and EOS plus nonempty tail spanning128 boundaries. No real records or native admission alias."
+  },
+  "independent_review": "Audit read-only review of prior e7cc1b4d found no numeric/backend contradiction; explicitly carry the existing parentS5 R-before-ANY-CE condition and remove ambiguous broad prerequisite wording. This clarification changes no numeric threshold or scientific selection rule.",
+  "memory_resources": {
+    "gpu": "One actual assigned B200 with strict max(17179869184bytes,.1*actualtotal) free using maxallocated/reservedpeaks+maximumsamplednonallocator; sampleddriveruse qualified; measure all model/load/oracle/backbone/head/reduction phases. Inference success does not admit backward/Adam/reference-bearing training.",
+    "host": "Actual finite128GiB host allocation, bounded<=1M-element comparisons/<=128MiB declaredcomparisonhostscratch, directRSS evidence and separately measured tokenizer/source/model library paths. No fullhost gradient/state/logit clones.",
+    "probe_and_full": "Existing proposed30min probe and12h fullscore ceilings are NOT admissions. Freeze exact code/fullcache/parts/currentledger/wrapper/nativeQA and length-aware full-runtime safety margin before each allocation. All-usermax2 pending/runningGPU and48h finalreserve retained."
+  },
+  "native_short_dense_vs_chunk": {
+    "ce_means": {
+      "absolute_tolerance": 0.0002,
+      "applies_to": [
+        "all_active",
+        "eos",
+        "non_eos_when_count_positive",
+        "tail_when_count_positive"
+      ],
+      "relative_tolerance": 0.002,
+      "sum_comparison": "Compare each ordered sum divided by its EXACT positive subset count with the same mean bounds; record raw sums, never apply one scalar threshold to a long sum. Empty subsets require exact0count/+0sum and are not divided."
+    },
+    "dense_oracle": "Original dense full-short [1,L,H] head projection->[1,L,151936] under same BF16; at mostONE graphfree actual short CUDA oracle(max155582464B), never a disk/fullCPU copy. Compare candidate active128 head chunks to original predecessor zero-copy views, preserving fullL GEMM shape.",
+    "head_logits": {
+      "all_active_full_vocab_relative_l2_maximum": 0.005,
+      "helper_scope": "CPU80 synthetic24 proof only; caller owns original positions/files/AMP/source/actualGPU and exactA*151936 coverage.",
+      "helper_source_sha256": "a1fcf8637450c5b15fa990dfcd26cb267b54b87b59e10a4735bf25324da4fb22",
+      "per_element": "abs(candidate-dense)<=max(.001,BF16ULP(max(abs(candidate),abs(dense))))"
+    },
+    "identity_control": "Separately replay the same full-short dense original path twice with original unchanged weights and require same-path maxabsolute logits<=.001, CEmean<=1e-5. Dense-vs-chunk ULP/CE tolerances never replace this tighter original identity gate.",
+    "witnesses": "The same three preexisting private <=512 complete original witnesses, with sealed source/token/cache/native suffix hashes before the probe, not chosen by CE. Run prior to length-only timing scores under the same scorer path."
+  },
+  "operation_specific_blocking_order": [
+    {
+      "operation": "Before any real full-pool fit/draw/probe/score",
+      "requires": "Independent root/peer numeric-definition freeze plus all applicable reviewed code, nativeCPUQA, source/runtime, exact current-ledger/current-job resources and exclusion/preparation guards. Numeric bounds are frozen here BEFORE outcomes; successful GPU probe is not required before the prerequisite R draw."
+    },
+    {
+      "operation": "Once-only R draw",
+      "requires": "Complete native82961cache/eligible/exclusion seal, exact source/Python3.10.19/random.py and selector provenance/nativeCPUQA and a specifically admittedCPU stage. Seal ordered/sorted R IDs and receipt FILE hash ONCE before ANY new scorer CE exists, including three short numerical checks, timing witnesses or repeats. No CE/quality-conditioned refill or redraw. Topic-fit output cannot condition R."
+    },
+    {
+      "operation": "First scorer CE, including numerical checks and probe/repeats",
+      "requires": "The immutable original R FILE receipt and exact population/cache identities are verified and bound before model/scorer work, plus exact original model/runtime/QA/backend/current-job admission. Use only presealed external short numerical witnesses and the fixed length-rank witnesses; do not add samples after viewing values."
+    },
+    {
+      "operation": "Full scoring",
+      "requires": "Complete correct fixed short numeric and length-only memory/throughput probe; conservative length-aware finite reservation/safety margin and48h delivery reserve; exact source/cache/scorepart schemas/exclusiveFILE-VALUE manifests/no-resume/privacy/current-job admission. Score all82961once inascendingID, no probe-value substitution."
+    },
+    {
+      "operation": "S membership and pilot selection",
+      "requires": "Complete82961score reconciliation and learned full-question topic assignment/runtime/parameter/source evidence, exact frozenR receipt and selector/nativeCPUQA, separate finiteCPU admission. No partial-score/topic prefix or oldsentinel substitution."
+    }
+  ],
+  "protected188_changed": false,
+  "purpose": "Resolve U4 numerical/repeat/backend choices prospectively. This definition is independent of all calibration correctness, source CE, development or benchmark outcomes. Source/cache/topic/runtime/QA/admission/resource blockers remain. It implements and executes nothing.",
+  "root_decision": {
+    "approved": true,
+    "exact_independently_reviewed_proposal_sha256": "7f56c0969cd294304c7a4914b593e238747840bb44144ceb3156cb0409f21e7d",
+    "numeric_values_changed_from_review": false,
+    "scope": "Freeze the exact U4 scoring numeric, repeat, backend metadata and operation-specific R-before-ANY-new-scorer-CE order prospectively. This does not admit cache preparation, topic fitting, realR draw, model scoring/probe, selection, GPU work or downstream training; all operation-specific nativeQA/source/current-job/resource gates remain.",
+    "uses_calibration_correctness_or_new_scores": false
+  },
+  "root_scientific_approval_sha256": "785b445913cc7c9c76c56474db4c89eb01a39c65bfbb50d1e8f87f7a6d0bfdc6",
+  "runtime_flags": {
+    "allocator": "Retain exact pre-import PYTORCH_CUDA_ALLOC_CONF=backend:native,expandable_segments:True; native public backend plus pinned private snapshot setting true/string required, no empty_cache/rounding/max-split/search/disabled caching. Same experimental/privateAPI limitation as allocator-v4 applies.",
+    "dispatch": "Record actual source-bound backbone/head shapes and autocast dtypes plus observed SDPA kernel family on the assigned B200. Enabled flags/configuration alone do not establish dispatch; all enabled defaults remain fixed, no forced alternate kernel to repair parity.",
+    "expected": {
+      "cuda_matmul_allow_bf16_reduced_precision_reduction": true,
+      "cuda_matmul_allow_fp16_reduced_precision_reduction": true,
+      "cuda_matmul_allow_tf32": false,
+      "cudnn_allow_tf32": true,
+      "cudnn_sdp_enabled": true,
+      "flash_sdp_enabled": true,
+      "float32_matmul_precision": "highest",
+      "math_sdp_enabled": true,
+      "mem_efficient_sdp_enabled": true
+    },
+    "source_metadata": "CPU80 before/after read-only metadata, not prior actual GPU/scorer proof. This proposal pins the observed values, introduces no flag sweep or numerical fallback. Future GPU import must observe same values before model tensors and atcloseout, fail unsupported/mismatch."
+  },
+  "same_path_repeat_policy": {
+    "applies_to": "Every active token and all positive-count component means; exact counts/token/mask/source identities and full context mustmatch. Per-token compare streaming bounded128-position data; no whole vocabulary/repeated model snapshot.",
+    "fixed_observations": "On the fixed length-only timing witness order chosen by the approved9rational-rank rule, run the intended COMPLETE scorer path twice per witness with same unchanged model/cache/device/runtime and no refit/reset/reload/fallback. Original order/IDs frozen before scoring. No CE value decides which row is repeated.",
+    "mean_ce_maximum_absolute_difference": 1e-06,
+    "qualification": "These deliberately strict repeat gates may reject an otherwise valid nondeterministic path. Such a failure stops this prospective version and preserves evidence; it is not permission to set deterministic/backend flags, loosen tolerances or choose another path after outcomes.",
+    "selection_score": "Full82961 pass later computes each eligible record once in ascendingID, independently of probe receiptvalues. Probe results never replace full scores or remove rows. One full pass record is the declared compatibility score; no averaging/best repeat/minimum selection.",
+    "token_nll_maximum_absolute_difference": 1e-05
+  },
+  "schema": "extension-full-pool-scoring-numerical-protocol-v1",
+  "scientific_parent": {
+    "path": "extension/planning/full_pool_selector_prospective_protocol.json",
+    "sha256": "160948a0477c6f234a587ac2cc32297f5dc229ba6c0e3a83cea89242fd3adc29"
+  },
+  "status": "root_frozen_numerical_definitions_before_any_full_pool_outcomes_no_execution_admission"
+}

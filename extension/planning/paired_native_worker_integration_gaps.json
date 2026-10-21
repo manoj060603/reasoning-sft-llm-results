@@ -1,0 +1,38 @@
+{
+  "cpu80_complete_sha256": "bd5f2187db80e1e561283e507f218b8bbcd858bd967503cbcf4c10055beb01e0",
+  "findings": [
+    {
+      "decision": "Root accepts the independent read-only design recommendation prospectively: separate fresh process per standalone objective subcase (actual group1, Accelerator divisor1), three actual inherited training_step/gradient comparisons with gradient clearing and no optimizer/scheduler steps, then release process and use fresh models/Trainers for frozen GA9. This remains unimplemented/unadmitted and needs source, native CPU fixtures, plan and actual GPU admission. Do not reset or reuse consumed Trainers.",
+      "evidence": "Frozen numerical protocol requires each of three standalone short-witness raw gradients plus accumulated gradients. Frozen controller covers only the nine-presentation groups8+1 boundaries and requires consumption counter start0. CPU80 passed that declared scope; it did not add a standalone native stage.",
+      "id": "N1",
+      "prohibited_resolution": [
+        "Do not delete or reinterpret the three standalone gates.",
+        "Do not patch frozen controller or reset a consumed-example counter to conceal extra backwards.",
+        "Do not infer standalone gradients from accumulated differences or relax the absolute tolerance by accumulation scaling.",
+        "Do not introduce manual backward or a second accumulation division."
+      ],
+      "proposal": "Separately reviewed and natively tested standalone subcase for each objective, using actual prepared inherited Trainer.training_step on three unchanged short witnesses with cleared gradients between them and no optimizer updates. Release the entire paired original-model process, then use a fresh independent process with two fresh original students and separate original reference for the unchanged nine-presentation controller subcase. The exact preparation, RNG, scalar unscaling, gradient comparisons and consumption counters need a prospective source/CPU QA plan."
+    },
+    {
+      "decision": "Original common-shadow/candidate-only-save scope confirmed by exact source review; no numerical or save requirement changed. Exact byte accounting and live tensor/RSS/CUDA/phase implementation remain blockers before admission.",
+      "evidence": "Exact original parent review4ed665 lines38/39/85 and frozen controller protocol1c9c lines77/80 ALREADY prescribe one common post-LR0 shadow per objective and candidate-only standard save/reload. This resolves the apparent two-shadow/two-save ambiguity. RawFP32 model bytes approximate12.344GB; four shadows plus four candidate checkpoints approximate98.752GB (~92GiB), leaving a bounded remainder of112GiB for other declared writes. No actual filesystem phase has been measured here.",
+      "id": "N2",
+      "prohibited_resolution": [
+        "Do not increase112GiB stagewrites or lower160GiB initialfree/32GiBreserve.",
+        "Do not delete failed evidence or use unverified existing shadows to fit.",
+        "Do not claim common initial bytes prove each branch phase without exact original/dense/candidate equality and independent version/phase identities.",
+        "Do not serialize full logits as extra oracle copies or insert an undeclared projection disk spool.",
+        "Do not claim dense serialized reload; the original reviewed save/reload scope is candidate-only."
+      ],
+      "proposal": "Implement the ALREADY specified single common initial shadow only after exact dense==candidate==original/reference postLR0, bind both initial phase identities and compare both actual stored update2 deltas against that same verified initial. Save/reload candidate only through the original standard class with all original keys. Account exact save shards/transients, native tokenizer/config/manifests/logs and remaining writes+32GiB reserve before every write/case. Full-short dense oracle logits may only use the separately declared <=512 dense oracle phase with bounded comparisons; no extra saved full-logit oracle copies."
+    }
+  ],
+  "frozen_controller_source_sha256": "9e446719e34f2370a00967066813b28acb6bf0a072cfade473eda3ef5e59e726",
+  "independent_design_review": "Retention reviewed N1 standalone fresh process and exact original common-shadow/candidate-only-save scope. No tests/models/data/jobs executed.",
+  "models_tests_inputs_or_jobs_executed": false,
+  "numeric_protocol_file_sha256": "27cedace388a17f3b97a0b1466e119c59a4d63913085263c689c8cfbbb003cb3",
+  "protected188_changed": false,
+  "schema": "extension-paired-native-worker-integration-gaps-v1",
+  "status": "prospective_root_review_proposal_not_execution_admission",
+  "unchanged_gates": "All numerical tolerances, original/reference and same-path reload parity, contexts, BF16 compute/FP32 storage and Adam, SDPA/chunk128, objective beta and strict memory headroom remain unchanged. No automatic retry, fallback, long or pilot admission."
+}

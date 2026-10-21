@@ -416,6 +416,16 @@ previous 32 ledger entries were preserved. Original-3B BF16 comparisons,
 all-434-parameter evidence, actual backward recomputation, process memory,
 long-context feasibility and the separate training-pilot gates remain open.
 
+The [selector and binary-cache CPU stage](extension/report/full-pool-tools-qa-20261021-1230197/delivery_summary.json)
+then **passed all 64 new checks** in a **three-second, zero-GPU allocation**.
+Its 32 selector and 32 cache fixtures use fabricated populations and private
+temporary files. They cover the fixed mixture and nested selection rules,
+complete binary storage, corruption detection and exclusive completion. The
+actual Python/random source identity remained unchanged; the earlier 80 checks
+were verified through receipts. All 198 protected sources and the previous 33
+ledger entries were preserved. The real 82,961-pair cache, topic fit, random
+draw, original-model scoring and training remain separate unadmitted stages.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%

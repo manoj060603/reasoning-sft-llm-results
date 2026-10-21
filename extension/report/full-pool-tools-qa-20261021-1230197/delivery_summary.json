@@ -1,0 +1,67 @@
+{
+  "actual_full_pool_scores_produced": false,
+  "actual_pool_serialized_or_cache_prepared": false,
+  "actual_source_or_benchmark_inputs_opened": false,
+  "actual_topic_fit_performed": false,
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "complete": true,
+  "elapsed_allocation_seconds": 3,
+  "errors": 0,
+  "failures": 0,
+  "gpu_or_training_admitted": false,
+  "gpu_seconds": 0,
+  "job_id": "1230197",
+  "native_blas_or_scorer_behavior_established": false,
+  "native_original_pair_prefix_eos_or_tail_proven": false,
+  "older_tests_replayed": false,
+  "qualification": "Exactly64 new stdlib CPU fixtures passed:32 selector mathematical/guard fixtures plus32 private binary-cache format/integrity fixtures on small fabricated populations. HistoricalCPU80 receipts were verified, not replayed. This does not serialize native82961 pairs, fit real questions, draw realR15000, score a model, verify nativeBLAS or admit GPU/training/pilot/model-improvement work.",
+  "raw_private_records_included": false,
+  "real_random_15000_draw_performed": false,
+  "runtime_after": {
+    "implementation": "cpython",
+    "native_blas_or_scorer_proof": false,
+    "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]",
+    "python_version": "3.10.19",
+    "random_source_file_bytes": 33221,
+    "random_source_file_sha256": "ce80a2471965e64ae93caea14490f16850432e65dce87f15edfe25b6f562f8d1",
+    "random_source_path": "/home/manoj663/.conda/envs/reasoning/lib/python3.10/random.py",
+    "random_source_stat": [
+      49,
+      5000732800,
+      33221,
+      1761172993442581415,
+      1769400862576684290
+    ],
+    "real_population_draw_performed": false
+  },
+  "runtime_before": {
+    "implementation": "cpython",
+    "native_blas_or_scorer_proof": false,
+    "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]",
+    "python_version": "3.10.19",
+    "random_source_file_bytes": 33221,
+    "random_source_file_sha256": "ce80a2471965e64ae93caea14490f16850432e65dce87f15edfe25b6f562f8d1",
+    "random_source_path": "/home/manoj663/.conda/envs/reasoning/lib/python3.10/random.py",
+    "random_source_stat": [
+      49,
+      5000732800,
+      33221,
+      1761172993442581415,
+      1769400862576684290
+    ],
+    "real_population_draw_performed": false
+  },
+  "runtime_unchanged": true,
+  "schema": "extension-full-pool-tools-qa-delivery-v1",
+  "semantic_decontamination_established": false,
+  "skipped": 0,
+  "small_fabricated_populations_only": true,
+  "synthetic_stdlib_selector_and_file_cache_fixture_scope_only": true,
+  "test_counts": {
+    "test_full_pool_cache.py": 32,
+    "test_full_pool_selection.py": 32
+  },
+  "tests_run": 64,
+  "tokenizer_or_model_loaded": false
+}
