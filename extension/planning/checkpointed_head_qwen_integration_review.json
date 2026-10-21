@@ -1,0 +1,109 @@
+{
+  "schema": "extension-checkpointed-head-qwen-integration-review-v1",
+  "status": "proposal_only_unimplemented_untested_unadmitted",
+  "review_date_utc": "2026-10-21",
+  "scope": "Minimum explicit actual-Qwen integration of the separately drafted pure checkpointed-head objective. This planning file changes no protected148 source, helper, test, runner, scientific plan or receipt. No imports, tests, models, data, tokenizer, scheduler action, commit or publication was executed for this review.",
+  "recommended_route": "A: a new versioned single-GPU Trainer subclass retaining the original Qwen2ForCausalLM as Trainer.model, overriding compute_loss with an explicit self.accelerator.autocast() context around reference backbone, student backbone and checkpointed-head objective. Keep reference ownership on Trainer and save only the original student.",
+  "draft_prerequisites_not_passed_evidence": {
+    "helper": {"path": "extension/checkpointed_head_objectives.py", "sha256": "a0c02ac3730f616d7ccd0fcb2b768af60387cea15e9cf82c1050b9deb60d7a34"},
+    "synthetic_tests": {"path": "tests/test_checkpointed_head_objectives.py", "sha256": "c442f7d873c31778676f6ade1b322cdd239a19ec4d6c4086b3dbaac846c3a3c0", "authored_tests": 36},
+    "cpu_scope": "The separate CPU36 controller/plan/wrapper have static review only at the time of this review. Even a later passed synthetic CPU scope does not establish actual Qwen/BF16, Trainer accumulation, checkpoint reload or long-context headroom.",
+    "native_bf16_numerical_tolerances": "Must be prospectively sealed and independently reviewed before any actual Qwen comparison. Existing CPU1e-6 scalar/metric and gradient rtol1e-5/atol1e-6 gates do not automatically define an acceptable CUDA BF16 difference. Never relax numerical gates after outcomes."
+  },
+  "actual_amp_boundary_found": {
+    "local_old_path": "extension/preserving_trainer.py compute_loss calls the reference root under explicit torch.autocast, then calls the prepared student root. Its loss consumes full external logits.",
+    "pinned_trainer": "HF4.57.3 compute_loss_context_manager delegates to autocast_smart_context_manager; that creates a context only for use_cpu_amp and otherwise returns nullcontext. GPU BF16 cannot be inferred from this context alone.",
+    "pinned_accelerate": "Accelerate1.12 prepares the root model.forward with native autocast and recursive FP32 output conversion. Calling the child original_student.model directly does not invoke that root forward wrapper.",
+    "failure_to_prevent": "A new compute_loss that calls original_student.model directly without an explicit accelerator.autocast context can silently execute a different FP32 compute/memory path despite TrainingArguments.bf16=true.",
+    "unwrapping_constraint": "Use unwrap_model with keep_fp32_wrapper=true and keep_torch_compile=true, then require the result is the already verified original student. Do not request keep_fp32_wrapper=false: the pinned implementation removes the mixed-precision wrapper by rebinding model.forward. Reject compilation/distributed wrappers rather than silently adapting them."
+  },
+  "route_a_minimum_design": {
+    "model_boundary": "Retain the exact original Qwen2ForCausalLM object as Trainer.model and the only optimizer/save target. A separate new Trainer class may reuse the existing initialization, response validation, optimizer and finite-update contracts, but must replace its compute_loss path rather than call the old full-logit compute_loss.",
+    "restricted_runtime": "Require one assigned B200, one process, accelerator distributed_type NO, no DataParallel/DDP/FSDP/DeepSpeed, PEFT, quantization, device-map/offload, compilation, extra trainable wrapper or second optimizer. Resolve the original model through the public unwrap API without removing its standard AMP wrapper; require object and unique Parameter identities remain unchanged.",
+    "explicit_compute_sequence": [
+      "Run the unchanged response_batch validation on native input_ids/labels/attention_mask/optional position_ids; retain exactly the complete EOS/terminal tail and masked prompt/padding. No internal HF label loss is requested.",
+      "Enter self.accelerator.autocast() and assert the actual CUDA autocast state is enabled with dtype bfloat16. Do not merely trust args.bf16, a model config string or output dtype.",
+      "For anchored modes, invoke reference.model through its normal module call under torch.no_grad and the same explicit autocast context. Reference stays eval-mode, FP32 storage and normal detached output tensors; do not use inference_mode. This precedes the student pass, matching the old reference-first order.",
+      "Invoke original_student.model through its normal module call with the same native forward inputs and use_cache=false. Preserve the original final normalization, position IDs, masks, RoPE, SDPA and non-reentrant decoder-layer checkpoint configuration.",
+      "Apply the sole external causal shift to final-normalized hidden states[:, :-1] and labels[:, 1:]. Pass the SAME original student.lm_head and model.embed_tokens.weight alias, and analogous separate frozen reference aliases, into checkpointed_head_loss. Keep the explicit autocast context active through this call.",
+      "Return the differentiable scalar loss plus only bounded detached diagnostic values. Set model_accepts_loss_kwargs=false, do not pass a custom num_items_in_batch denominator and do not call the old eos_metrics path, which requires full logits and another projection."
+    ],
+    "gradient_and_identity_contract": "All434 unique original student Parameters remain FP32 and trainable, including the exact input-embedding/lm_head tied Parameter. Optimizer membership equals that set exactly once. Head and backbone gradients both reach the shared leaf. The reference full-model objects/storage are disjoint; no reference Parameter belongs to the optimizer or saved student state.",
+    "ownership": "Trainer is not an nn.Module, so its existing reference_model attribute need not become a student submodule. Keep a strong reference there; never attach the reference as an attribute of the Qwen student. Reference projection inside the helper's activation-checkpoint region remains no_grad; exclusion from saved student checkpoints is a separate required invariant.",
+    "instrumentation": "Use bounded public forward/pre-forward hooks or new explicit call-site observations on the original backbones/head, and remove handles at closeout. Do not copy old diagnostic callbacks that reassign model.forward/reference.forward, and do not install global forward, CE, AMP, checkpoint or library patches. Checkpoint recomputation must not increment consumed-example counts or duplicate optimizer/scheduler events.",
+    "save_advantage": "Keeping the original PreTrainedModel as Trainer.model retains its normal save_pretrained handling, original state-key namespace and tied-weight serialization. Preserve the existing private exact tensor inventory, required tokenizer/config artifacts and actual reload proof; this advantage is a design expectation, not a passed save test.",
+    "limitation": "Bypassing the root forward is approved only for this separately sealed single-process child-module route. It is not a general distributed integration: future DDP/FSDP root hooks or compilation could be bypassed and require a new design."
+  },
+  "route_b_loss_only_module_comparison": {
+    "credible_route": "A separate nn.Module could register the original student as its sole child, retain a weakref to a separately strongly owned frozen reference, and compute only loss/bounded metrics in its forward. Calling this prepared root would use Accelerate's ordinary outer autocast and avoid external full-logit conversion.",
+    "additional_contracts": [
+      "A regular assigned reference Module would register recursively in wrapper parameters/state/train propagation; use a weakref only with a separate strong lifetime owner and fail closed if it expires. Prove no reference parameter or buffer enters wrapper state, optimizer, save output or train mode.",
+      "Registering student changes named/state keys to a wrapper prefix. The optimizer may still see the same434 unique objects, but old FQN/inventory/save checks no longer apply directly. Preserve the original tied alias rather than copying the embedding/head.",
+      "An ordinary nn.Module wrapper is not a PreTrainedModel. Pinned Trainer._save can fall back to saving its state_dict rather than an original Qwen checkpoint/config; raw tied aliases also need deliberate safe-serialization handling. A new explicit original-student save/reload path would be mandatory.",
+      "Trainer's gradient-checkpointing enable/config/model metadata and save interfaces would require explicit delegation to the original student. The wrapper forward/compute_loss signature must still preserve the once-only shift, loss kwargs policy, partial accumulation denominator and detached bounded output semantics."
+    ],
+    "decision": "This can be safe with new proofs, but adds parameter naming, checkpoint schema, lifetime and metadata delegation surfaces. It is larger than routeA for the currently restricted one-GPU experiment; do not implement both or choose between them using source/benchmark outcomes."
+  },
+  "prospective_runtime_observation_requirements": {
+    "precision": "Inside actual student/reference backbone entry and every student/reference head projection, record bounded CUDA-autocast enabled/dtype, grad-enabled/training state, parameter dtype, input/output shape and dtype. Distinguish no-grad parity from training and checkpoint recomputation. Student/reference head outputs must actually be BF16 under the declared context; objective loss/log-softmax computation remains FP32 by pinned helper plus observed scalar dtype.",
+    "hidden_dtype": "Record actual final-normalized hidden dtype; do not require it to be BF16 solely because autocast is enabled. The helper deliberately accepts FP32 or BF16 hidden states with FP32 original head storage.",
+    "bounded_projection": "During chunk training, every original head call projects at most128 active rows over the full151936 vocabulary. No long root CausalLM forward or external full-LxV output is allowed. Full logits are permitted only for explicitly bounded short dense-oracle/reload checks, in their separately labeled phases.",
+    "recomputation": "At least one actual backward must observe head checkpoint recomputation after the outer compute_loss autocast block has exited, with captured BF16 autocast restored. Decoder checkpoint recomputation and actual SDPA operators must also be observed; configuration declarations alone are insufficient.",
+    "reference": "Check all434 reference tensors remain FP32, eval, gradient-free, unchanged by streamed tensor-byte inventory; assert object/storage disjointness from student and absence from optimizer/checkpoint both before and after preparation, training and save.",
+    "full_student": "Compare all434 unique student Parameter identities, names, dtypes, optimizer coverage, finite gradients and FP32 Adam moments. Verify both the backbone and original tied embedding/head receive the expected gradients, not only hidden-state or head-only gradients."
+  },
+  "minimum_admission_sequence": [
+    {
+      "stage": "synthetic_cpu_math_prerequisite",
+      "required": "Separately reviewed source5/current-job CPU36 success at its frozen prospective tolerances, with exact helper/test hashes. It proves only tiny synthetic mathematics. No older test scope, failed collector scope or GA2 Qwen receipt may be relabeled as this proof."
+    },
+    {
+      "stage": "actual_qwen_short_dense_vs_chunk_gate",
+      "required": "A new finite single-B200 current-job plan, installed-source inventory, sealed native cache and explicit original student/reference file identities. For EACH of the four objectives, compare fresh same-source dense and chunk implementations on the same predeclared short native inputs under actual BF16 autocast: normalized states, bounded logits, scalar/CE/weightedCE/KL/weight and EOS/tail metrics, all434 gradients, clip norm, FP32 moments and actual updated weights. No selected-parameter or hash-only substitute for numerical gradient/update comparison.",
+      "resource_detail_to_seal": "Choose a bounded paired-state comparison arrangement and explicit host/scratch limits before admission. Streaming per-parameter FP32 comparisons or sequential fresh processes can avoid retaining duplicate whole-model gradient/moment copies on GPU; this review does not implement or claim that mechanism. Keep the later long-memory worker fresh so dense-oracle allocator history cannot be mistaken for its envelope.",
+      "tolerance_detail_to_seal": "Use an independently reviewed prospective BF16 loss/logit/gradient/update comparison policy, including zero-gradient and relative-error denominators. Record every failed tensor/metric guard privately and stop; no dtype/tolerance/context/coefficient adjustment after observing the comparison."
+    },
+    {
+      "stage": "actual_trainer_ga8_short_tail_and_lr_gate",
+      "required": "Retain pinned HF4.57.3/Accelerate1.12 behavior, model_accepts_loss_kwargs=false, microbatch1, SequentialSampler, dataloader_drop_last=false and no manual backward or accumulation division. A prospectively fixed9-presentation short diagnostic can use the three already sealed short witnesses in explicitly repeated cyclic order to exercise groups8+1 and two updates; repeats are diagnostic-only, not a unique-row pilot proof.",
+      "critical_lr_zero_rule": "The unchanged full-horizon cosine prefix has warmup57/total1875. LambdaLR starts at factor(0)=0: update1 uses LR0 and can initialize moments without changing weights. Require actual observed LR0 at update1, positive learning_rate/57 at update2, scheduler advancement after each update, all434 moments and at least one FP32 weight change after the nonzero update. Do not substitute the old GA2 constant-LR diagnostic and call it the joint schedule.",
+      "tail_rule": "Actual Trainer current_gradient_accumulation_steps must be8 then1, with per-example loss scaled once by those actual group lengths. Consumption begins once per actual batch and backward completes once, even when decoder/head recompute. Match exact native token/mask/EOS hashes, forward/backward/update order, used/after-scheduler LR vectors and independent consumption oracle."
+    },
+    {
+      "stage": "original_student_save_reload_gate_before_long",
+      "required": "Save ONLY the actual original student through the intended Trainer/original save path. Verify exact434 unique FP32 tensor inventory, original state names/tied alias, required tokenizer/config files, no reference/wrapper prefixes or tensors, and no partial/mismatched load. Reload with the standard pinned original Qwen class from the saved artifact, retie correctly, and compare bounded short dense outputs and checkpointed objective under actual BF16. Record source and saved-weight provenance independently."
+    },
+    {
+      "stage": "separately_admitted_joint_long_gate",
+      "required": "Only after independent review of the preceding actual numerical/Trainer/save receipts, consider one new current-job four-objective17-presentation GA8 diagnostic with the unchanged complete31776-token witness, native EOS/tail, beta/chunk128, FP32 storage/BF16/SDPA and fixed allocator policy. The second long forward must observe434 Adam states,434 resident gradient tensors and one prior backward in that group. Preserve8+8+1/3update/cosine-prefix/finite/reference/save/reload/current-allocation gates and strict max(16GiB,10%) headroom without weakening.",
+      "memory_rule": "Measure the whole process and all phases, including finite scans, head backward, Adam, saved reload and actual driver allocations. Retain allocated/reserved peaks plus sampled nonallocator contribution; smaller theoretical logits do not prove fit. Fresh process per objective; stop at first real failure with no automatic variant/retry/downstream."
+    },
+    {
+      "stage": "separate_unique_row_actual_driver_and_science",
+      "required": "A passed repeated-witness joint memory diagnostic still does not satisfy the actual pilot driver's separate unique-row GA8 integration receipt. Keep that stage, exact training exposures/source reservation, development and single-use confirmation distinct. No pilot ranking, benchmark tuning, extra dataset choice or accuracy claim is authorized by this engineering proposal."
+    }
+  ],
+  "local_read_only_basis": [
+    "extension/native_model_admission_v2.py: original loading, non-reentrant decoder checkpoints, OrderedTrainer, finite/optimizer/save/reload gates",
+    "extension/joint_memory_allocator_v4.py: MeasuredTrainer,17 repeated diagnostic presentations, pre-forward occupancy, GA8 groups, cosine-prefix LR and existing local forward-rebinding instrumentation that must not be copied into the new route",
+    "extension/preserving_trainer.py: response_batch, separate reference ownership, compute_loss, model_accepts_loss_kwargs=false, full-student optimizer coverage and finite-update callback",
+    "extension/pilot_driver.py: ConsumptionLedger, SequentialSampler, actual row hashes, backward/update events, cosine_factor, independent integration-diagnostic requirement"
+  ],
+  "primary_sources": [
+    {"url": "https://raw.githubusercontent.com/huggingface/transformers/v4.57.3/src/transformers/trainer.py", "locations": ["compute_loss_context_manager/autocast_smart_context_manager around lines3617-3637", "training_step accumulation scaling around lines3710-3721", "_save around lines3940-3966"], "evidence": "GPU compute_loss need not get an autocast context from Trainer; its loss-contract flag controls accumulation scaling. Saving a plain wrapper can follow a state_dict fallback rather than original PreTrainedModel.save_pretrained."},
+    {"url": "https://raw.githubusercontent.com/huggingface/accelerate/v1.12.0/src/accelerate/accelerator.py", "locations": ["root native-AMP wrapping around lines1633-1644", "unwrap_model around lines2953-2982", "autocast around lines3819-3841"], "evidence": "AMP preparation wraps the root forward. The public explicit autocast context uses accelerator native-AMP policy; unwrap_model defaults to keeping the precision wrapper. Actual runtime context remains a required observation."},
+    {"url": "https://raw.githubusercontent.com/huggingface/accelerate/v1.12.0/src/accelerate/utils/modeling.py", "locations": ["get_mixed_precision_context_manager around lines1891-1930"], "evidence": "For enabled native AMP and BF16 on the single-process CUDA path it returns torch.autocast with bfloat16; with native AMP disabled it returns nullcontext. An explicit call must therefore be checked at runtime."},
+    {"url": "https://raw.githubusercontent.com/huggingface/accelerate/v1.12.0/src/accelerate/utils/other.py", "locations": ["extract_model_from_parallel around lines200-275"], "evidence": "Removing the precision wrapper changes model.forward; default keep_fp32_wrapper=true avoids that removal. This design does not request mutation as an unwrapping shortcut."},
+    {"url": "https://raw.githubusercontent.com/huggingface/transformers/v4.57.3/src/transformers/models/qwen2/modeling_qwen2.py", "locations": ["Qwen2Model around lines281-360", "Qwen2ForCausalLM around lines365-430"], "evidence": "The child backbone returns final normalized hidden states; the original CausalLM forward then applies its separate lm_head. The proposed explicit route schedules those existing modules while retaining the original model as the saved/optimized object."},
+    {"url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.9.0/torch/nn/modules/module.py", "locations": ["__setattr__ module registration around lines1798-1843"], "evidence": "Assigning a Module to an nn.Module registers it as a child. A loss wrapper's reference ownership must therefore be deliberately outside registered model state; Trainer ownership avoids this new model-tree surface."},
+    {"url": "https://docs.pytorch.org/docs/2.9/checkpoint.html", "evidence": "Checkpoint recomputation can differ if callable state changes; explicit non-reentrant mode and independent forward/backward parity are necessary. Documentation does not establish the proposed native integration's correctness."},
+    {"url": "https://huggingface.co/docs/accelerate/v1.12.0/en/package_reference/accelerator#accelerate.Accelerator.autocast", "evidence": "Public Accelerator.autocast applies configured mixed precision inside its explicit context. This is the supported route proposed instead of relying on an outer model call that is no longer invoked."}
+  ],
+  "remaining_prospective_choices": [
+    "Exact separately versioned Trainer/worker source inventory and current-job schemas; this file implements none.",
+    "Actual BF16 loss/logit/all-parameter-gradient/update tolerances and paired-state comparison storage/resource mechanism, frozen before actual model outcomes.",
+    "Exact finite short-stage resources and9-presentation diagnostic schedule, followed by a separate manual long-stage admission only if every prerequisite is satisfied.",
+    "Exact original-only student save artifact and numerical reload comparison contract, with no reference inclusion or wrapper alias assumptions."
+  ],
+  "limits": "The recommendation is supported by pinned code and static integration reasoning, not actual Qwen execution. Pure-helper CPU tests, prior GA2 success, partial allocator-v4 results, collector CPU60 success or source generation admission cannot substitute for the new runtime/dtype/gradient/update/save/memory proofs. No method-performance or benchmark superiority is claimed."
+}

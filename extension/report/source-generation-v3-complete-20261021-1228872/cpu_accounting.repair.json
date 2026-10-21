@@ -1,0 +1,24 @@
+{
+  "cause": "First closeout requested JobName%80, while frozen validator requires exact JobName selector. Both exports show the same successful14-second zero-GPU allocation. The corrected export repeats the required exact command; no CPU test or GPU job was replayed.",
+  "corrected_accounting": {
+    "bytes": 891,
+    "sha256": "e35b0231286ecc7023578f897b91284fe1eaeef5b21be24d692497897f5d3229"
+  },
+  "cpu60_tests_replayed": false,
+  "created_at_utc": "2026-10-21T06:29:34.303530+00:00",
+  "failure_phase": "Pre-submission metadata validation, before any ledger journal or scheduler call",
+  "job_id": "1228844",
+  "ledger_unchanged": {
+    "bytes": 771144,
+    "sha256": "c82eac10f32f505345c59b31e4f5cb40fa28ada68a845956765355f2e32bbd62"
+  },
+  "literal_rejection": "Exact bounded terminal sacct command/output is required",
+  "new_gpu_admitted": false,
+  "original_accounting": {
+    "bytes": 894,
+    "sha256": "7992cdd4bd93e8f66480826597f4bac951e01ced5bc1bfb71239b086fce228c9"
+  },
+  "original_export_and_public_report_preserved": true,
+  "schema": "extension-source-generation-v3-accounting-repair-v1",
+  "science_source_or_protocol_changed": false
+}

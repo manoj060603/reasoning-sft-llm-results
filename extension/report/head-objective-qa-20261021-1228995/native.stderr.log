@@ -1,0 +1,44 @@
+test_anchored_modes_require_complete_eval_frozen_disjoint_reference_tuple (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_bf16_hidden_without_explicit_caller_autocast_is_rejected (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_chunk_size_and_eos_id_are_strictly_bounded_plain_integers (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_empty_malformed_or_unsupported_hidden_metadata_is_rejected (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_every_example_must_have_an_active_target_even_if_other_rows_have_many (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_head_must_be_original_bias_free_fp32_trainable_linear_with_exact_tied_parameter (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_inference_hidden_tensors_are_rejected_instead_of_silently_cloned (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_invalid_mode_beta_or_checkpoint_control_fails_closed (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_no_grad_scoring_and_zero_eos_groups_return_finite_detached_metrics (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_nonfinite_head_weights_and_finite_input_projection_overflow_fail_closed (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_nonfinite_hidden_at_masked_positions_is_rejected_before_any_projection (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_partial_optional_sft_reference_is_invalid (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_target_shape_dtype_and_invalid_ids_reject_every_ignore_code_except_minus100 (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_wrong_reference_shape_vocabulary_and_cross_device_metadata_are_rejected (test_checkpointed_head_objectives.CheckpointedHeadGuardTests) ... ok
+test_actual_native_eos_and_post_eos_tail_both_contribute_in_a_synthetic_vocabulary (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_all_four_losses_metrics_and_hidden_head_gradients_match_independent_dense (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_already_aligned_inputs_are_not_shifted_or_shortened (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_analytic_four_mode_gradient_proves_weight_detach_and_forward_kl_direction (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_asft_probability_weight_is_detached_rather_than_a_differentiated_factor (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_checkpoint_keeps_trainable_head_gradient_when_hidden_has_no_gradient (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_delayed_backward_across_many_distinct_chunks_does_not_capture_the_last_iteration (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_eos_and_non_eos_diagnostics_have_equal_example_means_with_zero_groups (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_equal_example_normalization_differs_from_pooled_active_token_mean (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_checkpointed_head_objectives.py:227: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  self.assertGreater(abs(float(loss - (row_ce * torch.tensor([3., 1.])).sum() / 4)), 1.)
+ok
+test_equal_reference_has_zero_kl_and_ce_kl_plain_ce_gradient (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_kl_uses_the_entire_reference_distribution_beyond_gold_probability (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_metrics_are_exactly_bounded_detached_scalars_or_per_example_vectors (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_modes_and_fixed_chunk_envelope_are_explicit (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_reference_hidden_is_detached_and_frozen_reference_head_never_changes (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_weight_sum_is_never_the_denominator (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_zero_beta_ce_kl_equals_plain_ce_loss_and_all_student_gradients (test_checkpointed_head_objectives.DenseHeadNumericalTests) ... ok
+test_all_original_head_calls_are_bounded_active_rows_and_metrics_add_no_projection (test_checkpointed_head_objectives.ProjectionBoundaryTests) ... ok
+test_fully_masked_windows_are_not_projected_but_valid_tail_windows_are (test_checkpointed_head_objectives.ProjectionBoundaryTests) ... ok
+test_noncontiguous_normal_hidden_views_match_dense (test_checkpointed_head_objectives.ProjectionBoundaryTests) ... ok
+test_sft_accepts_complete_reference_but_does_not_project_it (test_checkpointed_head_objectives.ProjectionBoundaryTests) ... ok
+test_fp32_adam_update_and_both_moments_match_dense_for_every_unique_student_parameter (test_checkpointed_head_objectives.TiedHeadGradientAndUpdateTests) ... ok
+test_tied_embedding_plus_projection_gradient_is_the_sum_of_both_independent_paths (test_checkpointed_head_objectives.TiedHeadGradientAndUpdateTests) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 6.486s
+
+OK

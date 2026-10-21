@@ -1,0 +1,182 @@
+{
+  "closed_json_files": {
+    "engine-config/generation_config.json": {
+      "bytes": 24,
+      "sha256": "d5513acbf141afd5d7ddf7f8f0e382d48f7eba14e087fd866a93db14106d2d1e"
+    },
+    "engine_outputs.private.json": {
+      "bytes": 2580021,
+      "sha256": "238acfb5c30a6982dfa99a5111362bd927589661fb428c4dd16efbe8ae498357"
+    },
+    "engine_proof.private.json": {
+      "bytes": 26875,
+      "sha256": "4c9be27975f1282b7c67155ab3253a3a495c8226c8ea58b2b324cfa99ea30aef"
+    },
+    "record-00.private.json": {
+      "bytes": 114221,
+      "sha256": "f4b9ac51c363280da997d3d4e387c027d147622a2013a4833590679002b56356"
+    },
+    "record-01.private.json": {
+      "bytes": 50972,
+      "sha256": "d94aa5cf4850a3bd610f474b40d8db64835fae9cfc00bd96ee190996c54832db"
+    },
+    "record-02.private.json": {
+      "bytes": 43227,
+      "sha256": "427894c4218f7f70e6360d6d26c7afc6af6399d1e173a9aaf628fad83d2c0341"
+    },
+    "record-03.private.json": {
+      "bytes": 102124,
+      "sha256": "f199c53f1037484d1b517befc9689bafe6f95de2bb334b72abdc28a906c706c3"
+    },
+    "record-04.private.json": {
+      "bytes": 63803,
+      "sha256": "5bf23d8671f7a77a1f894b638ccb67b04047fb28354a0a0350d02606d70815e6"
+    },
+    "record-05.private.json": {
+      "bytes": 55573,
+      "sha256": "7aa3a74f9d628dc5d34429aa66f9f58a89ad3a33cce3a9b080cb68360ce8586d"
+    },
+    "record-06.private.json": {
+      "bytes": 40690,
+      "sha256": "8ec37294d916870267b36de28ff183e87145beb1ac7c95a0471c9c391db2d77f"
+    },
+    "record-07.private.json": {
+      "bytes": 105528,
+      "sha256": "622dee607808d11e5b9e9834c55118c9ac532dbc56d1eccc2261c4ed251a5c0e"
+    },
+    "record-08.private.json": {
+      "bytes": 175885,
+      "sha256": "cba4ba29732d271331231e0678ad7ecb06aa7db42f5d17549adeedf6a5e35804"
+    },
+    "record-09.private.json": {
+      "bytes": 210686,
+      "sha256": "7eee47e41d0935e8442e7d73ac28fde7478b1f3d8d13644936e5732a1d611242"
+    },
+    "record-10.private.json": {
+      "bytes": 43013,
+      "sha256": "0515315cef49063d7ffe1f4407df4c2e214569cd9a5d947b0806f62e90e5868a"
+    },
+    "record-11.private.json": {
+      "bytes": 87860,
+      "sha256": "d6580f933a0e5f05aa336f4f51de4b283cb6c32bbdf27b21c47b55b75e0c2a60"
+    },
+    "record-12.private.json": {
+      "bytes": 73917,
+      "sha256": "c26a6384df600eb9f92ba4d2d5dce44daab9b52b86c6eaa903fe30313d00dd01"
+    },
+    "record-13.private.json": {
+      "bytes": 153671,
+      "sha256": "cd8defc8643629e3d8ca69b32b7d46fb43b1d8640a9e1d1ffc94b18599599d53"
+    },
+    "record-14.private.json": {
+      "bytes": 43988,
+      "sha256": "5c055cd2bd9ece3752f1e9d5726c2bc5a6041887caa55e78a6cd72d727b93cd8"
+    },
+    "record-15.private.json": {
+      "bytes": 50987,
+      "sha256": "d9f3cc553b36c1cf8721efec3a5cca0225aba25dfaa4d83eb9df5556519393b5"
+    },
+    "record-16.private.json": {
+      "bytes": 224491,
+      "sha256": "91d9288be7452cd04c73d3af93e21c0505e1efdacbd30e26f04441b5a31a261d"
+    },
+    "record-17.private.json": {
+      "bytes": 54134,
+      "sha256": "9a2c6b30b4538deee6c950f593ee9b73182d1015c907dfbc209732561295dcff"
+    },
+    "record-18.private.json": {
+      "bytes": 55056,
+      "sha256": "5be7e9697575fb136dacc5c96ae1666bfed5c9ed33d2ccad5c53e31885d385e6"
+    },
+    "record-19.private.json": {
+      "bytes": 57465,
+      "sha256": "734271120f612e5bbc0a9104cb361877feb6a17bb871209aceab8c99d259e4d3"
+    },
+    "record-20.private.json": {
+      "bytes": 42408,
+      "sha256": "cb359cc93aa97a41dc013426e436db3790b2e5385b522c0e155d154621f536da"
+    },
+    "record-21.private.json": {
+      "bytes": 41475,
+      "sha256": "6656af1e0a9d8018d9752cf5298a81a4d134626adb2439f7a6e393ad5abcee8f"
+    },
+    "record-22.private.json": {
+      "bytes": 43900,
+      "sha256": "a2a12e8549f4c6bce9fc8b65e15b94517763cc80f14f9dd0f8d120791c3ad50c"
+    },
+    "record-23.private.json": {
+      "bytes": 42793,
+      "sha256": "4b31252d4687067e1ddcb81fd4f9afd04ae46d765b4cff651870987519cda109"
+    },
+    "record-24.private.json": {
+      "bytes": 53223,
+      "sha256": "ac1f9c4644f0f9203f0df4ed8f45d6545d6fdd5e37f58da62c0fcd9ef0f313c3"
+    },
+    "record-25.private.json": {
+      "bytes": 41163,
+      "sha256": "80108b54f26078d3d39d67363501082399e9fcb659bbab119f6bef3b84bf21e3"
+    },
+    "record-26.private.json": {
+      "bytes": 84135,
+      "sha256": "5ec75143c53d01164698fa2587e7ac73328c5b19861eef42e44e457aa369964b"
+    },
+    "record-27.private.json": {
+      "bytes": 31714,
+      "sha256": "b362758775da2eb77c0e15075a85390851d6bdef6aeb4c1e70f7065f300d0195"
+    },
+    "record-28.private.json": {
+      "bytes": 49542,
+      "sha256": "c0cd5ccac33bdeaab4a116bf9d2d30e824f492eef56ee1e7e8789bf63edb7bec"
+    },
+    "record-29.private.json": {
+      "bytes": 49238,
+      "sha256": "c8c486ba4519b9ab17a425782068d9446c8fbf3db94934689acbb83206c23fb9"
+    },
+    "record-30.private.json": {
+      "bytes": 38642,
+      "sha256": "a1250aadf5ad449ab3011a4b7b7208509885fabedf709bbba0b60e8fe9ccde7a"
+    },
+    "record-31.private.json": {
+      "bytes": 53430,
+      "sha256": "1560b18185bb215e11c895309969644639a93abebe23c0aa3240a2b912118713"
+    },
+    "requests.private.json": {
+      "bytes": 61677,
+      "sha256": "f7158e3fb2f7217b9fda10080e2e28bfa739d104fb72e31625154f4c997b6540"
+    },
+    "started.json": {
+      "bytes": 20534,
+      "sha256": "bf7a5c165689c5d919f48cec7cc8d07f7c6a0bfeb8c2b92266ae75f96430ec5c"
+    }
+  },
+  "generated_texts_token_records_request_ids_or_private_logs_exported": false,
+  "private_outputs_hashed_without_parsing": true,
+  "raw_complete": {
+    "bytes": 31303,
+    "path": "extension/runs/source-generation-original-v3-1228872/complete.json",
+    "private_contents_exported": false,
+    "sha256": "2d2869b76b14af823c377d98ca524922b2ed1ed8d50e4282a4e826842de2c119"
+  },
+  "schema": "extension-source-generation-terminal-private-hashes-v1",
+  "terminal_slurm_log_hashes": {
+    "extension/logs/extension-original-source-calibration-v3-1228872.err": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "extension/logs/extension-original-source-calibration-v3-1228872.out": {
+      "bytes": 108,
+      "sha256": "02d80648b8ead94b0621a09cb84e75c452073630edba88c33bbce232b75013c5"
+    }
+  },
+  "terminal_worker_log_hashes": {
+    "engine.stderr.private.log": {
+      "bytes": 2963,
+      "sha256": "efa3b59d7baf34fb334cec6ed807ba5a9578fbde3df69a796935a564eb7812dc"
+    },
+    "engine.stdout.private.log": {
+      "bytes": 7285,
+      "sha256": "0965e86a7de0057218dc32140a2bdf8fce06629bf6f6bf60ff723ab4267a14f1"
+    }
+  },
+  "worker_logs_sealed_only_after_verified_terminal_accounting": true
+}

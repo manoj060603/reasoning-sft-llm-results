@@ -325,13 +325,39 @@ zero-GPU allocation. A negative accounting-mutation test expected
 No calibration model or source generation ran. A separately versioned fixture
 repair and fresh admission are required before the first calibration pass.
 
+The [versioned v3 CPU retry](extension/report/source-generation-v3-qa-20261021-1228844/delivery_summary.json)
+then **passed all 60 checks** in a **14-second, zero-GPU allocation**. The
+earlier failed suite remains failed. An explicit
+[accounting-format repair](extension/report/source-generation-v3-accounting-repair-20261021-1228844/repair.json)
+preserves the first export and repeats the exact command required by the frozen
+admission guard; no CPU test or GPU experiment was replayed for that repair.
+
+Original-model calibration GPU **1228872** subsequently
+[completed successfully](extension/report/source-generation-v3-complete-20261021-1228872/delivery_summary.json)
+in **117 seconds**, ending at **06:31:47 UTC**. All **32 requests and 256
+samples** completed in one generation call. Actual vLLM, per-request sampling,
+native prompt replay and the sole EOS151645 stop configuration were verified.
+The outputs contain **135,707 tokens**, with **two length finishes** counted
+among the samples. Raw requests, responses, tokens and worker logs remain
+private on ARC; public evidence contains aggregates and hashes. Independent
+grading has not run, so there is no source accuracy or benchmark improvement
+claim. Terminal extension GPU consumption is now **2,319 seconds (0.644167
+hours)**, with all fourteen originally requested GPU-hours preserved. This
+original calibration's throughput does not bound a collapsed model's runtime.
+
 A [new memory design review](extension/planning/long_context_memory_design_review.json)
 proposes checkpointing the original tied output projection together with the
 exact full-vocabulary objective in bounded token chunks. This targets full
 logit materialization while retaining the original context, precision,
 objectives and headroom. It is an unadmitted engineering proposal requiring
 independent loss, tied-weight gradient, update and actual-memory comparisons.
-It establishes no numerical equivalence, memory success or accuracy gain.
+It establishes no actual-model numerical equivalence, memory success or
+accuracy gain. Its separate [native CPU fixture stage](extension/report/head-objective-qa-20261021-1228995/delivery_summary.json)
+subsequently **passed all 36 tests** in **23 seconds, with zero GPUs**.
+Independent dense comparisons cover all four losses, EOS/tail metrics,
+tied-weight gradients and FP32 Adam updates under the prospective tolerances.
+These use synthetic tensors and small modules. Qwen integration, actual BF16
+CUDA comparisons and full-context memory admission remain outstanding.
 
 ## Additional recovery follow-up: closed without promotion
 

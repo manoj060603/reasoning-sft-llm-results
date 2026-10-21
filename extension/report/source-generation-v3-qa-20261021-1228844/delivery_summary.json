@@ -1,0 +1,28 @@
+{
+  "actual_vllm_interface_established": false,
+  "automatic_downstream": false,
+  "complete": true,
+  "elapsed_allocation_seconds": 14,
+  "errors": 0,
+  "experiment_model_loaded": false,
+  "failures": 0,
+  "gpu_seconds": 0,
+  "job_id": "1228844",
+  "new_gpu_admitted_at_this_snapshot": false,
+  "old_failed_cpu60_passed": false,
+  "old_failed_cpu60_replayed": false,
+  "old_fixture_failure_preserved": true,
+  "parent478_identity65_allocator97_replayed": false,
+  "private_cache_opened": false,
+  "protected_source_files_at_closeout": 148,
+  "qualification": "This fresh corrected40 plus versioned20 CPU suite passed. The old failed60 remains failed. Actual generation requires a separately admitted finite GPU job, which may establish the native interface on its sole fixed calibration batch.",
+  "schema": "extension-source-generation-v3-qa-delivery-v1",
+  "scope": {
+    "corrected_v3_collector": 40,
+    "versioned_v3_metadata": 20
+  },
+  "separate_metadata_source_files": 4,
+  "skipped": 0,
+  "source_files": 128,
+  "tests_run": 60
+}

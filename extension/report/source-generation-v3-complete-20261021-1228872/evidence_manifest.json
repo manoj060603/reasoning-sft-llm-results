@@ -1,0 +1,52 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 1088,
+      "sha256": "a5da4eb91d9717351b900fb59f460f93491fd25759fd71ab5b44cbc8c880e530"
+    },
+    "admission.json": {
+      "bytes": 14545,
+      "sha256": "c27eb9b312e22f63981c465b6477b50578df3cdeb202da82890673815f23603b"
+    },
+    "complete.json": {
+      "bytes": 22919,
+      "sha256": "cc46a0b2629c3c1f94f8018cefe73be359c6d91153c1cebf44e363dd5e0f6381"
+    },
+    "cpu_accounting.corrected.json": {
+      "bytes": 891,
+      "sha256": "e35b0231286ecc7023578f897b91284fe1eaeef5b21be24d692497897f5d3229"
+    },
+    "cpu_accounting.repair.json": {
+      "bytes": 1160,
+      "sha256": "5eac08996e09769d6f897e8a66f8bfb067340cfefc6111f1c23c44a42bc7bd0f"
+    },
+    "delivery_summary.json": {
+      "bytes": 1368,
+      "sha256": "1950183d28e66aed9091210b4d2f7aeab0687c60fba6ed6a54c61a1b99c5766a"
+    },
+    "engine.sanitized.json": {
+      "bytes": 3827,
+      "sha256": "d45208d6d0990fd1c79a4625baa650a8b89ae0e0b20fe495b13628d55a53d2c0"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 829883,
+      "sha256": "debf44d94dc2c1b7985cccd80fce3b558c89d0da9032163847b6e3cead17158e"
+    },
+    "private_hash_inventory.json": {
+      "bytes": 6633,
+      "sha256": "3910bd706f9d353efb0226885b8ec282931405bad869dcd78c90abb1f299dfb3"
+    },
+    "provenance.json": {
+      "bytes": 25742,
+      "sha256": "42f774923a210ec3ed6f368c6742972ef29a3a0dc3cfaa2715b730721c49cc92"
+    },
+    "scheduler_snapshot.json": {
+      "bytes": 485,
+      "sha256": "5f6ac76d8f12cfc565614d3228ebfb67e9328efce283c7b17e25eda16480785b"
+    }
+  },
+  "private_outputs_and_logs_hashed_not_copied": true,
+  "raw_private_records_included": false,
+  "schema": "extension-source-generation-v3-complete-sanitized-evidence-v1",
+  "source148_handoff_private_hashes_and_both_ledgers_unchanged_before_after": true
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "extension-head-objective-qa-plan-v1",
+  "status": "sealed_prospective_history_pending_native_cpu_qa",
+  "role": "head_objective_qa_20261021_v1",
+  "test_pattern": "test_checkpointed_head_objectives.py",
+  "expected_tests": 36,
+  "native_qa_schema": "extension-head-objective-native-qa-v1",
+  "source_files": [
+    "extension/checkpointed_head_objectives.py",
+    "extension/head_objective_qa.py",
+    "extension/head_objective_qa.slurm",
+    "extension/head_objective_qa_plan.json",
+    "tests/test_checkpointed_head_objectives.py"
+  ],
+  "reviewed_input_sha256": {
+    "extension/checkpointed_head_objectives.py": "a0c02ac3730f616d7ccd0fcb2b768af60387cea15e9cf82c1050b9deb60d7a34",
+    "tests/test_checkpointed_head_objectives.py": "c442f7d873c31778676f6ade1b322cdd239a19ec4d6c4086b3dbaac846c3a3c0"
+  },
+  "cpu_bootstrap": {
+    "path": "extension/operations/submit-head-objective-qa-20261021.py",
+    "outside_source_inventory": true
+  },
+  "resources": {
+    "cpus": 2,
+    "ram_gib": 8,
+    "gpus": 0,
+    "wall_time_seconds": 1200,
+    "reserve_seconds": 172800
+  },
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "runtime_versions": {
+    "torch": "2.9.0",
+    "transformers": "4.57.3",
+    "accelerate": "1.12.0",
+    "safetensors": "0.7.0"
+  },
+  "tolerances": {
+    "loss_atol": 1e-06,
+    "metrics_atol": 1e-06,
+    "gradient_and_update_rtol": 1e-05,
+    "gradient_and_update_atol": 1e-06
+  },
+  "prior_ledger": {
+    "path": "extension/report/source-generation-v3-complete-20261021-1228872/job_ledger_snapshot.json",
+    "sha256": "debf44d94dc2c1b7985cccd80fce3b558c89d0da9032163847b6e3cead17158e",
+    "entries": 27,
+    "entries_sha256": "6b5e576fbc4fdadc6d72984adce369b88a5e626bb2ea1275d31e40dd6a4f5c58"
+  },
+  "historical_ledger": {
+    "path": "deadline/job_ledger.json",
+    "sha256": "9fc4dfa2506ccd33580bab3e5f4c4e91d0731e221c4f88ac9778e54800dc141d"
+  },
+  "claims": {
+    "synthetic_cpu_fixture_scope_only": true,
+    "older_tests_replayed": false,
+    "actual_qwen_model_loaded": false,
+    "private_cache_or_source_data_opened": false,
+    "tokenizer_loaded": false,
+    "gpu_or_bf16_cuda_admission_established": false,
+    "long_context_memory_admission_established": false,
+    "pilot_or_training_admitted": false,
+    "automatic_retry": false,
+    "automatic_downstream": false
+  },
+  "qualifications": [
+    "This is an unadmitted CPU-only proposal. Root must seal a specific post-generation-admission prior ledger snapshot and historical ledger SHA before the plan validates; no implicit latest-history substitution is accepted.",
+    "The exact36 new tests use synthetic FP32 tensors and tiny original tied Linear heads. No older test scope is replayed or relabeled, and no private cache, source data, tokenizer or Qwen/backbone/checkpoint is opened.",
+    "The all-four-objective dense loss/metrics/gradients/tied-weight/Adam and guard oracles must execute on the assigned CPU before any mathematical fixture success is claimed. Their tolerances are prospective and remain unchanged after outcomes.",
+    "No successful CPU result establishes native BF16 CUDA parity, Qwen integration, full-context head/backbone memory, real-model training or GPU admission. Those require separate future reviews and current-job evidence.",
+    "The plan does not embed its own file SHA. A separate outside-inventory bootstrap binds all five actual source records plus this plan SHA, fixed prior history, its own source SHA, finite CPU allocation and current-role journal. The controller verifies these bindings before importing torch or tests."
+  ]
+}

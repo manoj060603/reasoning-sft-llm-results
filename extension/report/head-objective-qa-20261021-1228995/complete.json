@@ -1,0 +1,44 @@
+{
+  "actual_qwen_model_loaded": false,
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "complete": true,
+  "cpu_only": true,
+  "created_at_utc": "2026-10-21T06:46:49.709596+00:00",
+  "gpu_or_bf16_cuda_admission_established": false,
+  "gpu_seconds": 0,
+  "input_snapshot_unchanged": true,
+  "job_id": "1228995",
+  "long_context_memory_admission_established": false,
+  "native_qa_sha256": "7e160735bcc8e3de3b9e34b8c9819e36a61e8e704ab19ca5bf8f7972d8095cc1",
+  "older_tests_replayed": false,
+  "pilot_or_training_admitted": false,
+  "plan_sha256": "6edb85a678111f6d6af40045a894c81e006e1f5580ff12e6ba34c82bb1071227",
+  "private_cache_or_source_data_opened": false,
+  "schema": "extension-head-objective-qa-complete-v1",
+  "source_inventory": {
+    "extension/checkpointed_head_objectives.py": {
+      "bytes": 16862,
+      "sha256": "a0c02ac3730f616d7ccd0fcb2b768af60387cea15e9cf82c1050b9deb60d7a34"
+    },
+    "extension/head_objective_qa.py": {
+      "bytes": 19965,
+      "sha256": "27bc2b4ed077d4f6933dca73f2e16f847d7c8e872bdf9365cf0305f7d868fc6f"
+    },
+    "extension/head_objective_qa.slurm": {
+      "bytes": 3388,
+      "sha256": "04e7da41047abf3bdd8ccf820353bf78f3df0f9a2be944499f4b7d848fedda32"
+    },
+    "extension/head_objective_qa_plan.json": {
+      "bytes": 3582,
+      "sha256": "6edb85a678111f6d6af40045a894c81e006e1f5580ff12e6ba34c82bb1071227"
+    },
+    "tests/test_checkpointed_head_objectives.py": {
+      "bytes": 37956,
+      "sha256": "c442f7d873c31778676f6ade1b322cdd239a19ec4d6c4086b3dbaac846c3a3c0"
+    }
+  },
+  "synthetic_cpu_fixture_scope_only": true,
+  "tests_run": 36,
+  "tokenizer_loaded": false
+}

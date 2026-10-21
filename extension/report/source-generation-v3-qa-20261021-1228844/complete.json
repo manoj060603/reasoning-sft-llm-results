@@ -1,0 +1,18 @@
+{
+  "actual_vllm_interface_established": false,
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "complete": true,
+  "cpu_only": true,
+  "failed_cpu_snapshot_sha256": "d0f5853e09dad982993d60b4b6576aaf7acb469314a5dd6e2036b1f680c37710",
+  "gpu_seconds": 0,
+  "job_id": "1228844",
+  "native_qa_sha256": "84a02c7538cc81b197f5410dd27d328c1aa2d6607157bb5fafc0b419050c594e",
+  "old_failed_cpu60_passed": false,
+  "old_failed_cpu60_replayed": false,
+  "old_fixture_failure_preserved": true,
+  "operational_parent_sha256": "dda716348b18d146b2c0dc0a655157c156b85ad8d22e7b03375723fc4ba13a99",
+  "retry_failure_sha256": "9781f83b2625b08d49162693a1ef016f594a7149fb661a988df86ecc7fac58db",
+  "schema": "extension-source-generation-v3-qa-complete-v1",
+  "tests_run": 60
+}

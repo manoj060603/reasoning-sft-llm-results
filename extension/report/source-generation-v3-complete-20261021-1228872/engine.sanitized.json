@@ -1,0 +1,119 @@
+{
+  "constructor": {
+    "dtype": "bfloat16",
+    "gpu_memory_utilization": 0.85,
+    "max_model_len": 16384,
+    "max_num_seqs": 128,
+    "seed": 20261021,
+    "tensor_parallel_size": 1,
+    "trust_remote_code": false
+  },
+  "diff_sampling_parameters": {},
+  "effective_native_eos_only": [
+    151645
+  ],
+  "effective_output_kind": "FINAL_ONLY",
+  "generate_elapsed_seconds": 38.43890440603718,
+  "generated_records_opened_or_graded_by_exporter": false,
+  "hardware": {
+    "bf16_supported": true,
+    "driver_version": "595.91.07",
+    "logical_cuda_device": 0,
+    "name": "NVIDIA B200",
+    "schema": "extension-assigned-gpu-identity-v2",
+    "uuid": "GPU-01a47cfa-b80a-34b3-abbe-933d5c54fc54",
+    "visible_cuda_device_count": 1
+  },
+  "installed_implementation_hashes": [
+    {
+      "filename": "model.py",
+      "sha256": "cd499922b66ee992cec10fd186aaf9d1e26b05b6c28fe6caaf6bb57e835b10a7"
+    },
+    {
+      "filename": "llm.py",
+      "sha256": "17203e1bccdfd5ba60279c0e0918ba36971cb3c269b417fb38c37a16608b6fdd"
+    },
+    {
+      "filename": "outputs.py",
+      "sha256": "aa12a287145dd1a566f2b2fc0ef562573062ba816b397db81c7fca9f7d64fc22"
+    },
+    {
+      "filename": "sampling_params.py",
+      "sha256": "ce351acf9ff36cb16b0f98786798001a05d348b7644f92bd2e2757a2176f106e"
+    },
+    {
+      "filename": "input_processor.py",
+      "sha256": "8daf3fe354f2acf792f860f5c79f94c530c5deedc4d9367790ddc5baf8788568"
+    }
+  ],
+  "labels_entered_engine": false,
+  "memory_qualification": "Driver use is sampled. Parent allocator peaks exclude vLLM worker allocations; this is not a measured whole-process peak/headroom admission.",
+  "memory_samples": {
+    "after_generate": {
+      "parent_allocated_bytes": 0,
+      "parent_peak_allocated_bytes": 0,
+      "parent_reserved_bytes": 0,
+      "sampled_driver_used_bytes": 165532139520,
+      "total_bytes": 191495471104
+    },
+    "before_engine": {
+      "parent_allocated_bytes": 0,
+      "parent_peak_allocated_bytes": 0,
+      "parent_reserved_bytes": 0,
+      "sampled_driver_used_bytes": 656080896,
+      "total_bytes": 191495471104
+    },
+    "before_generate": {
+      "parent_allocated_bytes": 0,
+      "parent_peak_allocated_bytes": 0,
+      "parent_reserved_bytes": 0,
+      "sampled_driver_used_bytes": 165060280320,
+      "total_bytes": 191495471104
+    }
+  },
+  "native_engine": true,
+  "native_generation_fields": {
+    "eos_token_id": 151645,
+    "transformers_version": "4.57.3"
+  },
+  "one_generate_call": true,
+  "original_repository": "Qwen/Qwen2.5-3B-Instruct",
+  "original_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "parameter_sets": 32,
+  "per_record_seed_values_exported": false,
+  "private_engine_receipt": {
+    "bytes": 26875,
+    "path": "extension/runs/source-generation-original-v3-1228872/engine_proof.private.json",
+    "private_contents_exported": false,
+    "sha256": "4c9be27975f1282b7c67155ab3253a3a495c8226c8ea58b2b324cfa99ea30aef"
+  },
+  "quantization": null,
+  "recorded_parameter_sets_sha256": "7ad12f39a2ed239695edc0b5f89049307c3adc8f8a1a0237d8d68f22025ea9ba",
+  "recorded_seed_bindings_agree_before_and_after_clone": true,
+  "runtime_eos_config": {
+    "content": {
+      "eos_token_id": 151645
+    },
+    "relative_path": "engine-config/generation_config.json",
+    "sha256": "d5513acbf141afd5d7ddf7f8f0e382d48f7eba14e087fd866a93db14106d2d1e"
+  },
+  "sampling": {
+    "detokenize": true,
+    "frequency_penalty": 0.0,
+    "ignore_eos": false,
+    "max_tokens": 8192,
+    "min_p": 0.0,
+    "min_tokens": 0,
+    "n": 8,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "stop": [],
+    "stop_token_ids": [],
+    "temperature": 0.6,
+    "top_k": -1,
+    "top_p": 0.95,
+    "truncate_prompt_tokens": null
+  },
+  "schema": "extension-source-generation-v3-engine-sanitized-v1",
+  "vllm_version": "0.12.0"
+}

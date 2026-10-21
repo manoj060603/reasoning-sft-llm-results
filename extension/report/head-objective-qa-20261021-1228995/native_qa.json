@@ -1,0 +1,135 @@
+{
+  "actual_qwen_model_loaded": false,
+  "admission_binding_sha256": "06bd21cf83010ca78f92d308a53cc64f36f527138e211d139a6deeb39d4d0f9f",
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "code_sha256": {
+    "extension/checkpointed_head_objectives.py": "a0c02ac3730f616d7ccd0fcb2b768af60387cea15e9cf82c1050b9deb60d7a34",
+    "extension/head_objective_qa.py": "27bc2b4ed077d4f6933dca73f2e16f847d7c8e872bdf9365cf0305f7d868fc6f",
+    "extension/head_objective_qa.slurm": "04e7da41047abf3bdd8ccf820353bf78f3df0f9a2be944499f4b7d848fedda32",
+    "extension/head_objective_qa_plan.json": "6edb85a678111f6d6af40045a894c81e006e1f5580ff12e6ba34c82bb1071227",
+    "tests/test_checkpointed_head_objectives.py": "c442f7d873c31778676f6ade1b322cdd239a19ec4d6c4086b3dbaac846c3a3c0"
+  },
+  "compute_end": {
+    "allocated_cpus": 2,
+    "allocated_ram_gib": 8,
+    "allocated_tres": "cpu=2,mem=8G,node=1,billing=4",
+    "checked_at_utc": "2026-10-21T06:46:49.702249+00:00",
+    "command": [
+      "scontrol",
+      "--clusters=owl",
+      "show",
+      "job",
+      "--oneliner",
+      "1228995"
+    ],
+    "cuda_visible_devices": "",
+    "gpu_requested_or_allocated": false,
+    "hostname": "owl141",
+    "job_id": "1228995",
+    "node": "owl141",
+    "scontrol": "JobId=1228995 JobName=sft-extension-head-objective-qa UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1315 Nice=0 Account=tml_2026 QOS=owl_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:19 TimeLimit=00:20:00 TimeMin=N/A SubmitTime=2026-10-21T02:46:03 EligibleTime=2026-10-21T02:46:03 AccrueTime=2026-10-21T02:46:04 StartTime=2026-10-21T02:46:30 EndTime=2026-10-21T03:06:30 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-21T02:46:30 Scheduler=Backfill Partition=normal_q AllocNode:Sid=owl1:2792279 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl141 BatchHost=owl141 NumNodes=1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=8G,node=1,billing=4 AllocTRES=cpu=2,mem=8G,node=1,billing=4 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=8G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/head_objective_qa.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/head_objective_qa.slurm WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-head-objective-qa-1228995.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-head-objective-qa-1228995.out TresPerTask=cpu=2",
+    "scontrol_sha256": "0b51d89fe7d33ac833c37992b39d08cbd353a75994b666082770e19d52e30d60",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "compute_proof": {
+    "allocated_cpus": 2,
+    "allocated_ram_gib": 8,
+    "allocated_tres": "cpu=2,mem=8G,node=1,billing=4",
+    "checked_at_utc": "2026-10-21T06:46:31.913125+00:00",
+    "command": [
+      "scontrol",
+      "--clusters=owl",
+      "show",
+      "job",
+      "--oneliner",
+      "1228995"
+    ],
+    "cuda_visible_devices": "",
+    "gpu_requested_or_allocated": false,
+    "hostname": "owl141",
+    "job_id": "1228995",
+    "node": "owl141",
+    "scontrol": "JobId=1228995 JobName=sft-extension-head-objective-qa UserId=manoj663(22825097) GroupId=22825097(22825097) MCS_label=N/A Priority=1315 Nice=0 Account=tml_2026 QOS=owl_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:01 TimeLimit=00:20:00 TimeMin=N/A SubmitTime=2026-10-21T02:46:03 EligibleTime=2026-10-21T02:46:03 AccrueTime=2026-10-21T02:46:04 StartTime=2026-10-21T02:46:30 EndTime=2026-10-21T03:06:30 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-21T02:46:30 Scheduler=Backfill Partition=normal_q AllocNode:Sid=owl1:2792279 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl141 BatchHost=owl141 NumNodes=1 NumCPUs=2 NumTasks=1 CPUs/Task=2 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=2,mem=8G,node=1,billing=4 AllocTRES=cpu=2,mem=8G,node=1,billing=4 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=2 MinMemoryNode=8G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/head_objective_qa.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/head_objective_qa.slurm WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-head-objective-qa-1228995.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-head-objective-qa-1228995.out TresPerTask=cpu=2",
+    "scontrol_sha256": "94c4cb3de81d2cff4335430ba502c1ef4fabf10a6c220a545e0dd308ac367eba",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "cpu_bootstrap_sha256": "bfb818f6b9ea8bc17c8d1cad2981a276a4c6c74644a685c7713ef4b8a35eb5b5",
+  "created_at_utc": "2026-10-21T06:46:49.702265+00:00",
+  "deadline_guard": {
+    "checked_at_utc": "2026-10-21T06:46:31.913139+00:00",
+    "deadline_utc": "2026-10-28T03:59:00+00:00",
+    "guard_seconds": 174000
+  },
+  "errors": 0,
+  "expected_failures": 0,
+  "expected_tests": 36,
+  "failures": 0,
+  "gpu_disabled": true,
+  "gpu_or_bf16_cuda_admission_established": false,
+  "historical_ledger": {
+    "bytes": 129364,
+    "sha256": "9fc4dfa2506ccd33580bab3e5f4c4e91d0731e221c4f88ac9778e54800dc141d"
+  },
+  "input_snapshot_unchanged": true,
+  "job_id": "1228995",
+  "long_context_memory_admission_established": false,
+  "node": "owl141",
+  "older_tests_replayed": false,
+  "pilot_or_training_admitted": false,
+  "plan_sha256": "6edb85a678111f6d6af40045a894c81e006e1f5580ff12e6ba34c82bb1071227",
+  "prior_entries_sha256": "6b5e576fbc4fdadc6d72984adce369b88a5e626bb2ea1275d31e40dd6a4f5c58",
+  "prior_snapshot": {
+    "bytes": 829883,
+    "sha256": "debf44d94dc2c1b7985cccd80fce3b558c89d0da9032163847b6e3cead17158e"
+  },
+  "private_cache_or_source_data_opened": false,
+  "schema": "extension-head-objective-native-qa-v1",
+  "skipped": 0,
+  "source_inventory": {
+    "extension/checkpointed_head_objectives.py": {
+      "bytes": 16862,
+      "sha256": "a0c02ac3730f616d7ccd0fcb2b768af60387cea15e9cf82c1050b9deb60d7a34"
+    },
+    "extension/head_objective_qa.py": {
+      "bytes": 19965,
+      "sha256": "27bc2b4ed077d4f6933dca73f2e16f847d7c8e872bdf9365cf0305f7d868fc6f"
+    },
+    "extension/head_objective_qa.slurm": {
+      "bytes": 3388,
+      "sha256": "04e7da41047abf3bdd8ccf820353bf78f3df0f9a2be944499f4b7d848fedda32"
+    },
+    "extension/head_objective_qa_plan.json": {
+      "bytes": 3582,
+      "sha256": "6edb85a678111f6d6af40045a894c81e006e1f5580ff12e6ba34c82bb1071227"
+    },
+    "tests/test_checkpointed_head_objectives.py": {
+      "bytes": 37956,
+      "sha256": "c442f7d873c31778676f6ade1b322cdd239a19ec4d6c4086b3dbaac846c3a3c0"
+    }
+  },
+  "started_at_utc": "2026-10-21T06:46:32.041272+00:00",
+  "started_sha256": "bbb8fdf67178d63a114c640e1be87f6caa018df9f0d80643ca4ca8e91422704f",
+  "success": true,
+  "synthetic_cpu_fixture_scope_only": true,
+  "test_counts": {
+    "test_checkpointed_head_objectives.py": 36
+  },
+  "test_elapsed_seconds": 17.656852859072387,
+  "test_pattern": "test_checkpointed_head_objectives.py",
+  "tests_run": 36,
+  "tokenizer_loaded": false,
+  "unexpected_successes": 0,
+  "versions": {
+    "accelerate": "1.12.0",
+    "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]",
+    "safetensors": "0.7.0",
+    "torch": "2.9.0",
+    "transformers": "4.57.3"
+  },
+  "wrapper_syntax_passed": true
+}
