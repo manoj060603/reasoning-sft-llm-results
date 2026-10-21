@@ -1,0 +1,63 @@
+{
+  "job_id": "1230464",
+  "runtime": {
+    "dont_write_bytecode": true,
+    "implementation": "cpython",
+    "native_population_or_gpu_proven": false,
+    "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]",
+    "runtime_source_evidence": {
+      "input_files": {
+        "/home/manoj663/.conda/envs/reasoning/lib/python3.10/random.py": {
+          "bytes": 33221,
+          "sha256": "ce80a2471965e64ae93caea14490f16850432e65dce87f15edfe25b6f562f8d1"
+        },
+        "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/numpy/version.py": {
+          "bytes": 216,
+          "sha256": "3932e74a1d0d19f5b22fc56b9c88f435db7f29939397567e903f427fe8d13266"
+        },
+        "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/scipy/version.py": {
+          "bytes": 318,
+          "sha256": "a271fdebc4f15ae566cd3c8ca9686bcf52e123dd5d2254b1618acbd9d4292ebc"
+        },
+        "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/sklearn/base.py": {
+          "bytes": 47777,
+          "sha256": "a2ad39c5ff6491d04c35738e942860def0e80d6800aeb1690cfd68bf46be8d91"
+        },
+        "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/sklearn/cluster/_kmeans.py": {
+          "bytes": 81743,
+          "sha256": "2e0da803f41cc870df45c59a24cd2da93c46d064785fef3e8d5c2e4912d9c803"
+        },
+        "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py": {
+          "bytes": 11708,
+          "sha256": "9fe23f1ebc98fc0bf27050d95adf30296119f2719433c05962e6011ed6faaa3d"
+        },
+        "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/sklearn/feature_extraction/text.py": {
+          "bytes": 77416,
+          "sha256": "876f0d334735f77174822fabff287fab5602ccff8973a5430ebc70548916da62"
+        },
+        "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/sklearn/preprocessing/_data.py": {
+          "bytes": 127903,
+          "sha256": "1255040a0eb9c99f58775d55cf34f675cf61539f7c0a0dd0d6a36cb1f0da1e15"
+        },
+        "extension/operations/full-pool-runtime-source-metadata-20261021.json": {
+          "bytes": 2422,
+          "sha256": "5788c73cff4f26607c9af604a11634334cdec15a0b7b687c48968fac06b73436"
+        }
+      },
+      "native_runtime_or_population_proven": false,
+      "receipt": {
+        "bytes": 2422,
+        "path": "extension/operations/full-pool-runtime-source-metadata-20261021.json",
+        "sha256": "5788c73cff4f26607c9af604a11634334cdec15a0b7b687c48968fac06b73436"
+      }
+    },
+    "scope": "topics_parent_stdlib_only_no_scientific_import",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "schema": "extension-native-pair-topics-stdlib-runtime-v1"
+}

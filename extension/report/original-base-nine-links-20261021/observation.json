@@ -1,0 +1,20 @@
+{
+  "corpus_or_private_prepared_parsed": false,
+  "expected_file_sha256_from": {
+    "bytes": 5044,
+    "path": "extension/smoke_preparation_plan.json",
+    "sha256": "42ac6063786baf0a114507bfae7287dc709210601cd204098936f135a47508a0"
+  },
+  "logical_link_count": 9,
+  "map_file": {
+    "bytes": 8334,
+    "sha256": "ee0c7dfdeb7ce33c10f7ddfe6f1d1fd822258b2905a5198b088345da7c293602"
+  },
+  "model_identity_receipt_sha256": "81af59dbb365b8559ad0d853dbda245aa4ac3ff0bedc03428e50fed65d7f7ae2",
+  "model_or_tokenizer_loaded": false,
+  "native_file_sha_validation_still_required": true,
+  "observed_at_utc": "2026-10-21T11:47:56.273921+00:00",
+  "physical_model_or_tokenizer_bytes_read_or_hashed_now": false,
+  "qualification": "Only logical symlink text and logical/physical stat metadata observed. Row sha256 fields are unchanged expected pins, not newly measured heavy-file hashes. Exact current map must be revalidated before/after future native loads and physical hashes measured on admitted compute.",
+  "schema": "extension-original-base-nine-links-source-observation-v1"
+}

@@ -1,0 +1,41 @@
+{
+  "base_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "current_ledger": {
+    "bytes": 1089154,
+    "sha256": "d3604315040d6358a214ada525181e1ef08166fbd67cc9dff9e326642c45f8d4"
+  },
+  "directory_stat": {
+    "ctime_ns": 1769713162455394153,
+    "dev": 48,
+    "gid": 22825097,
+    "ino": 5217628470,
+    "mode": 16888,
+    "mtime_ns": 1769713162455394153,
+    "nlink": 2,
+    "size": 4608,
+    "uid": 22825097
+  },
+  "directory_stat_stable_during_scan": true,
+  "exact_immediate_names": [
+    "config.json",
+    "generation_config.json",
+    "merges.txt",
+    "model-00001-of-00002.safetensors",
+    "model-00002-of-00002.safetensors",
+    "model.safetensors.index.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "vocab.json"
+  ],
+  "exact_nine_names_only": true,
+  "link_and_physical_stats_match_map": true,
+  "map_file": {
+    "bytes": 8334,
+    "sha256": "ee0c7dfdeb7ce33c10f7ddfe6f1d1fd822258b2905a5198b088345da7c293602"
+  },
+  "metadata_only": true,
+  "observed_at_utc": "2026-10-21T12:00:25.134414+00:00",
+  "physical_file_bytes_read_or_hashed": false,
+  "qualification": "Immediate names and link/stat metadata only. Expected byte hashes in map were inherited pins; actual physical model/tokenizer hashing remains required on admitted compute before use.",
+  "schema": "extension-original-base-nine-closed-namespace-observation-v1"
+}

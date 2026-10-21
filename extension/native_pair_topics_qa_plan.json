@@ -1,0 +1,218 @@
+{
+  "schema": "extension-native-pair-topics-qa-plan-v1",
+  "status": "prospective_source7_prior35_protected204_unadmitted",
+  "role": "native_pair_topics_qa_20261021_v1",
+  "native_qa_schema": "extension-native-pair-topics-native-qa-v1",
+  "assertions_owner": "Exact pinned new topics32 first, then new pair-hooks32; no old-scope discovery or stage override",
+  "expected_tests": 64,
+  "test_patterns": {
+    "test_full_pool_topics.py": 32,
+    "test_checkpointed_head_native_pair_hooks.py": 32
+  },
+  "test_order": [
+    "test_full_pool_topics.py",
+    "test_checkpointed_head_native_pair_hooks.py"
+  ],
+  "source_files": [
+    "extension/checkpointed_head_native_pair_hooks.py",
+    "extension/full_pool_topics.py",
+    "extension/native_pair_topics_qa.py",
+    "extension/native_pair_topics_qa.slurm",
+    "extension/native_pair_topics_qa_plan.json",
+    "tests/test_checkpointed_head_native_pair_hooks.py",
+    "tests/test_full_pool_topics.py"
+  ],
+  "reviewed_input_sha256": {
+    "extension/checkpointed_head_native_pair_hooks.py": "6295f4144f82bc009195aa04cd0c2a384ffa0a83909d01c7aeb59c0390edf862",
+    "tests/test_checkpointed_head_native_pair_hooks.py": "f65ee07fd0f1f9bcb29d87fcb9d5f096ce009728e6b10179235839e1df64976a",
+    "extension/full_pool_topics.py": "55d5ae814ef9df94f972400c6ddccda7abecf42950a767d457aedc60d3f9db1c",
+    "tests/test_full_pool_topics.py": "5d7ed0e1ee162411538c4a8ba0f48d5654a4cfb98ae1371800ef2cf2bb68fbd1"
+  },
+  "cpu_bootstrap": {
+    "path": "extension/operations/submit-native-pair-topics-qa-20261021.py",
+    "outside_source_inventory": true
+  },
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "resources": {
+    "cpus": 2,
+    "ram_gib": 8,
+    "gpus": 0,
+    "wall_time_seconds": 1800,
+    "reserve_seconds": 172800
+  },
+  "runtime_versions": {
+    "accelerate": "1.12.0",
+    "implementation": "cpython",
+    "numpy": "1.26.4",
+    "python": "3.10.19",
+    "safetensors": "0.7.0",
+    "torch": "2.9.0",
+    "transformers": "4.57.3",
+    "joblib": "1.5.2",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.15.3",
+    "threadpoolctl": "3.6.0"
+  },
+  "historical_ledger": {
+    "path": "deadline/job_ledger.json",
+    "sha256": "9fc4dfa2506ccd33580bab3e5f4c4e91d0731e221c4f88ac9778e54800dc141d"
+  },
+  "historical_native_qa": {
+    "head_native_tools80": {
+      "accounting_sha256": "ea6b2c341453532d845654606973980b19d37f3fb70c9ea58121817fcbaad261",
+      "complete_schema": "extension-head-native-tools-qa-complete-v1",
+      "complete_sha256": "bd5f2187db80e1e561283e507f218b8bbcd858bd967503cbcf4c10055beb01e0",
+      "directory": "extension/report/head-native-tools-qa-20261021-1230042",
+      "job_id": "1230042",
+      "name": "sft-extension-head-native-tools-qa",
+      "native_qa_sha256": "8db43ab6633e3986f442869e784a46c763a51359d4393f7d2f129ce3704e602e",
+      "plan_path": "extension/head_native_tools_qa_plan.json",
+      "qa_schema": "extension-head-native-tools-native-qa-v1",
+      "row_elapsed": [
+        50,
+        50,
+        50
+      ],
+      "source_files": 11,
+      "test_counts": {
+        "test_checkpointed_head_native_observation.py": 24,
+        "test_native_bf16_projection_comparison.py": 24,
+        "test_paired_training_step_controller.py": 32
+      },
+      "tests": 80
+    },
+    "standalone32": {
+      "directory": "extension/report/standalone-training-step-qa-20261021-1230332",
+      "job_id": "1230332",
+      "name": "sft-extension-standalone-training-step-qa",
+      "tests": 32,
+      "row_elapsed": [
+        45,
+        45,
+        45
+      ],
+      "source_files": 5,
+      "test_counts": {
+        "test_standalone_training_step_controller.py": 32
+      },
+      "plan_path": "extension/standalone_training_step_qa_plan.json",
+      "qa_schema": "extension-standalone-training-step-native-qa-v1",
+      "complete_schema": "extension-standalone-training-step-qa-complete-v1",
+      "native_qa_sha256": "33ea7e0f51d36b494084f60e5ac60c62ccb0c0fc308f1f89c7a0c0de8fb5dfd9",
+      "complete_sha256": "8981e7ebc7a21df64961d38ae0a577b69525390f74111bbee188a2d8ec3e4946",
+      "accounting_sha256": "c614357250626101b7e4e182c448ac88c1e9e1e5403feac9ad17a363b21b8690"
+    }
+  },
+  "prior_ledger": {
+    "path": "extension/report/standalone-training-step-qa-20261021-1230332/job_ledger_snapshot.json",
+    "sha256": "6c82cb0c6ad1241d1f89add0ed270d7cf0fb808c0864bf050b8d8692914670eb",
+    "entries": 35,
+    "entries_sha256": "e4355d016fecb811bdacca205f921bf57ca8683e95734cb6fc63c60163f5108c"
+  },
+  "parent_sources": {
+    "path": "extension/report/standalone-training-step-qa-20261021-1230332/evidence_manifest.json",
+    "sha256": "c76f477ff2c2298d6d3934e89038e8f5f8c97ef198d931f71d8bfbcefa4cfd78",
+    "schema": "extension-standalone-training-step-qa-evidence-v1",
+    "inventory_key": "protected_source_inventory",
+    "expected_files": 204
+  },
+  "protocol_sha256": {
+    "extension/planning/checkpointed_head_native_numerical_protocol.json": "27cedace388a17f3b97a0b1466e119c59a4d63913085263c689c8cfbbb003cb3",
+    "extension/planning/full_pool_selector_prospective_protocol.json": "160948a0477c6f234a587ac2cc32297f5dc229ba6c0e3a83cea89242fd3adc29",
+    "extension/planning/full_pool_selector_root_approval.json": "785b445913cc7c9c76c56474db4c89eb01a39c65bfbb50d1e8f87f7a6d0bfdc6"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "topic_children": {
+    "maximum": 5,
+    "timeout_seconds": 60,
+    "sequential": true,
+    "positive_attempts": 1,
+    "parent_scientific_modules_absent": true,
+    "real_source_population": false
+  },
+  "topic_runtime_receipt": {
+    "path": "extension/operations/full-pool-runtime-source-metadata-20261021.json",
+    "sha256": "5788c73cff4f26607c9af604a11634334cdec15a0b7b687c48968fac06b73436",
+    "schema": "extension-source-only-selection-runtime-metadata-v1"
+  },
+  "installed_runtime_sources": {
+    "/home/manoj663/.conda/envs/reasoning/lib/python3.10/random.py": {
+      "bytes": 33221,
+      "sha256": "ce80a2471965e64ae93caea14490f16850432e65dce87f15edfe25b6f562f8d1"
+    },
+    "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/numpy/version.py": {
+      "bytes": 216,
+      "sha256": "3932e74a1d0d19f5b22fc56b9c88f435db7f29939397567e903f427fe8d13266"
+    },
+    "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/scipy/version.py": {
+      "bytes": 318,
+      "sha256": "a271fdebc4f15ae566cd3c8ca9686bcf52e123dd5d2254b1618acbd9d4292ebc"
+    },
+    "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/sklearn/base.py": {
+      "bytes": 47777,
+      "sha256": "a2ad39c5ff6491d04c35738e942860def0e80d6800aeb1690cfd68bf46be8d91"
+    },
+    "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/sklearn/cluster/_kmeans.py": {
+      "bytes": 81743,
+      "sha256": "2e0da803f41cc870df45c59a24cd2da93c46d064785fef3e8d5c2e4912d9c803"
+    },
+    "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/sklearn/decomposition/_truncated_svd.py": {
+      "bytes": 11708,
+      "sha256": "9fe23f1ebc98fc0bf27050d95adf30296119f2719433c05962e6011ed6faaa3d"
+    },
+    "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/sklearn/feature_extraction/text.py": {
+      "bytes": 77416,
+      "sha256": "876f0d334735f77174822fabff287fab5602ccff8973a5430ebc70548916da62"
+    },
+    "/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/sklearn/preprocessing/_data.py": {
+      "bytes": 127903,
+      "sha256": "1255040a0eb9c99f58775d55cf34f675cf61539f7c0a0dd0d6a36cb1f0da1e15"
+    }
+  },
+  "pair_runtime_getters": {
+    "float32_matmul_precision": "get_float32_matmul_precision",
+    "cuda_matmul_allow_tf32": "backends.cuda.matmul.allow_tf32",
+    "cuda_matmul_allow_fp16_reduced_precision_reduction": "backends.cuda.matmul.allow_fp16_reduced_precision_reduction",
+    "cuda_matmul_allow_bf16_reduced_precision_reduction": "backends.cuda.matmul.allow_bf16_reduced_precision_reduction",
+    "cudnn_allow_tf32": "backends.cudnn.allow_tf32",
+    "flash_sdp_enabled": "backends.cuda.flash_sdp_enabled",
+    "mem_efficient_sdp_enabled": "backends.cuda.mem_efficient_sdp_enabled",
+    "math_sdp_enabled": "backends.cuda.math_sdp_enabled",
+    "cudnn_sdp_enabled": "backends.cuda.cudnn_sdp_enabled"
+  },
+  "claims": {
+    "synthetic_cpu_fixture_scope_only": true,
+    "small_hook_parameter_count_is_not_native434_proof": true,
+    "intended_phase_order": "topics32_then_pair_hooks32",
+    "pair_runtime_getters_scope": "pair_fixture_phase_only",
+    "combined_parent_is_stdlib_only": false,
+    "topic_fit_scope": "fresh_child_synthetic64_questions_only",
+    "older_tests_replayed": false,
+    "actual_source_population_fitted": false,
+    "actual_R15000_drawn": false,
+    "actual_original_3b_weights_loaded": false,
+    "private_cache_or_source_data_opened": false,
+    "tokenizer_loaded": false,
+    "native_bf16_cuda_admission_established": false,
+    "backward_cuda_recompute_established": false,
+    "native_original_model_or_memory_admission": false,
+    "original_model_full_train_loop_established": false,
+    "actual_unique17_pilot_driver_established": false,
+    "scoring_or_accuracy_established": false,
+    "gpu_or_training_admitted": false,
+    "automatic_retry": false,
+    "automatic_downstream": false
+  },
+  "qualifications": [
+    "ONLY topics32 is discovered and run first in a parent free of Torch/NumPy/SciPy/sklearn/threadpoolctl/joblib; up to5 sequential fresh children use unchanged thread1/no-bytecode policy, with one positive synthetic64-question fit and4 before-fit failures. Every child has60s timeout. No actual82961-source fit, score, population cache, R15000 draw, model or tokenizer is used.",
+    "Only after all topics32 passes does the parent import Torch, capture actual read-only backend getters, discover and run pair-hooks32, then capture ending getters. Those getter receipts bound only the pair fixture phase and cannot prove the prior topic phase runtime or any native CUDA configuration.",
+    "Pair-hook source-verifier production guards use isolated actual source modules without native hardware claims. Tensor/Adam/common-shadow/report/controller fixtures use explicit NONNATIVE tiny CPU counts; they do not admit actual3B/all434/BF16/backward recompute/RSS/headroom/save/reload/long/pilot/training/accuracy work.",
+    "Exact prior35 records, protected204 sources, historical completed ledger, public runtime receipt and8 installed source files are bound before imports and rechecked after work. HistoricalCPU80 and standaloneCPU32 are verified through their exact QA/completion/accounting files and all allocation/batch/extern rows, never replayed.",
+    "This draft is untested and unadmitted. Root review, exact installation and separately bound finite CPU bootstrap/current-role metadata are required before execution. No retry, fallback, automatic downstream or GPU work."
+  ]
+}

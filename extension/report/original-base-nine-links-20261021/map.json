@@ -1,0 +1,251 @@
+{
+  "base_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "files": {
+    "config.json": {
+      "link_text": "../../blobs/51b83fbd4e2d363b60235b9c8d494046a83c1cbf",
+      "lstat": {
+        "ctime_ns": 1769713108192934581,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5229292093,
+        "mode": 511,
+        "mtime_ns": 1769713108192934581,
+        "nlink": 1,
+        "size": 52,
+        "uid": 22825097
+      },
+      "physical_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/51b83fbd4e2d363b60235b9c8d494046a83c1cbf",
+      "physical_stat": {
+        "ctime_ns": 1769713108172080255,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5227687720,
+        "mode": 432,
+        "mtime_ns": 1769713108163252347,
+        "nlink": 1,
+        "size": 661,
+        "uid": 22825097
+      },
+      "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b"
+    },
+    "generation_config.json": {
+      "link_text": "../../blobs/bf077f03dc569cfb8a90b3ec1ad20365a620bad6",
+      "lstat": {
+        "ctime_ns": 1769713160970555965,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5229292097,
+        "mode": 511,
+        "mtime_ns": 1769713160970555965,
+        "nlink": 1,
+        "size": 52,
+        "uid": 22825097
+      },
+      "physical_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/bf077f03dc569cfb8a90b3ec1ad20365a620bad6",
+      "physical_stat": {
+        "ctime_ns": 1769713160968888584,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5227687724,
+        "mode": 432,
+        "mtime_ns": 1769713160960806450,
+        "nlink": 1,
+        "size": 242,
+        "uid": 22825097
+      },
+      "sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9"
+    },
+    "merges.txt": {
+      "link_text": "../../blobs/20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+      "lstat": {
+        "ctime_ns": 1769713161879006462,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5229292100,
+        "mode": 511,
+        "mtime_ns": 1769713161879006462,
+        "nlink": 1,
+        "size": 52,
+        "uid": 22825097
+      },
+      "physical_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+      "physical_stat": {
+        "ctime_ns": 1769713161877141906,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5227687727,
+        "mode": 432,
+        "mtime_ns": 1769713161865991491,
+        "nlink": 1,
+        "size": 1671839,
+        "uid": 22825097
+      },
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "model-00001-of-00002.safetensors": {
+      "link_text": "../../blobs/67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+      "lstat": {
+        "ctime_ns": 1769713159615190292,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5229292096,
+        "mode": 511,
+        "mtime_ns": 1769713159615190292,
+        "nlink": 1,
+        "size": 76,
+        "uid": 22825097
+      },
+      "physical_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+      "physical_stat": {
+        "ctime_ns": 1769713159611769680,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5227687723,
+        "mode": 432,
+        "mtime_ns": 1769713159565762962,
+        "nlink": 1,
+        "size": 3968658944,
+        "uid": 22825097
+      },
+      "sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2"
+    },
+    "model-00002-of-00002.safetensors": {
+      "link_text": "../../blobs/a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+      "lstat": {
+        "ctime_ns": 1769713153844307472,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5229292095,
+        "mode": 511,
+        "mtime_ns": 1769713153844307472,
+        "nlink": 1,
+        "size": 76,
+        "uid": 22825097
+      },
+      "physical_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+      "physical_stat": {
+        "ctime_ns": 1769713153588127949,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5227687722,
+        "mode": 432,
+        "mtime_ns": 1769713153243656282,
+        "nlink": 1,
+        "size": 2203268048,
+        "uid": 22825097
+      },
+      "sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"
+    },
+    "model.safetensors.index.json": {
+      "link_text": "../../blobs/38047c6284a25427043f0ab040f623a2a20dd093",
+      "lstat": {
+        "ctime_ns": 1769713108447867307,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5229292094,
+        "mode": 511,
+        "mtime_ns": 1769713108447867307,
+        "nlink": 1,
+        "size": 52,
+        "uid": 22825097
+      },
+      "physical_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/38047c6284a25427043f0ab040f623a2a20dd093",
+      "physical_stat": {
+        "ctime_ns": 1769713108446128538,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5227687721,
+        "mode": 432,
+        "mtime_ns": 1769713108435897052,
+        "nlink": 1,
+        "size": 35581,
+        "uid": 22825097
+      },
+      "sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56"
+    },
+    "tokenizer.json": {
+      "link_text": "../../blobs/443909a61d429dff23010e5bddd28ff530edda00",
+      "lstat": {
+        "ctime_ns": 1769713162455394153,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5229292101,
+        "mode": 511,
+        "mtime_ns": 1769713162455394153,
+        "nlink": 1,
+        "size": 52,
+        "uid": 22825097
+      },
+      "physical_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/443909a61d429dff23010e5bddd28ff530edda00",
+      "physical_stat": {
+        "ctime_ns": 1769713162453699209,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5227687728,
+        "mode": 432,
+        "mtime_ns": 1769713162435473695,
+        "nlink": 1,
+        "size": 7031645,
+        "uid": 22825097
+      },
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    },
+    "tokenizer_config.json": {
+      "link_text": "../../blobs/07bfe0640cb5a0037f9322287fbfc682806cf672",
+      "lstat": {
+        "ctime_ns": 1769713161142048281,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5229292098,
+        "mode": 511,
+        "mtime_ns": 1769713161142048281,
+        "nlink": 1,
+        "size": 52,
+        "uid": 22825097
+      },
+      "physical_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/07bfe0640cb5a0037f9322287fbfc682806cf672",
+      "physical_stat": {
+        "ctime_ns": 1769713161140227164,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5227687725,
+        "mode": 432,
+        "mtime_ns": 1769713161131351678,
+        "nlink": 1,
+        "size": 7305,
+        "uid": 22825097
+      },
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+    },
+    "vocab.json": {
+      "link_text": "../../blobs/4783fe10ac3adce15ac8f358ef5462739852c569",
+      "lstat": {
+        "ctime_ns": 1769713161598971727,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5229292099,
+        "mode": 511,
+        "mtime_ns": 1769713161598971727,
+        "nlink": 1,
+        "size": 52,
+        "uid": 22825097
+      },
+      "physical_path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/blobs/4783fe10ac3adce15ac8f358ef5462739852c569",
+      "physical_stat": {
+        "ctime_ns": 1769713161596530548,
+        "dev": 48,
+        "gid": 22825097,
+        "ino": 5227687726,
+        "mode": 432,
+        "mtime_ns": 1769713161583144585,
+        "nlink": 1,
+        "size": 2776833,
+        "uid": 22825097
+      },
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "repository": "Qwen/Qwen2.5-3B-Instruct",
+  "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "schema": "extension-original-base-nine-links-v1"
+}

@@ -1,0 +1,79 @@
+test_01_exact_fixed_native_policy_and_complete_constructors (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_02_unicode_normalization_retains_full_mathematical_content (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_03_complete_sorted_population_and_independent_value_seals (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_04_input_snapshot_and_returned_identity_are_not_mutated (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_05_gold_answers_system_losses_and_extra_fields_never_enter (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_06_canonical_full_question_id_and_plain_row_guards (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_07_duplicate_descending_and_noncanonical_expected_ids_fail (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_08_explicit_nonnative_counts_and_plain_fixture_flag (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_09_missing_extra_and_reordered_questions_do_not_drop_or_refill (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_10_fixed_source_file_pins_and_exact_identity_keyset (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_11_each_population_raw_and_normalized_seal_is_required (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_12_canonical_json_and_streamed_sequence_hash_have_independent_oracle (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_13_effective_parameters_canonicalize_dtype_and_tuples_exactly (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_14_nonfinite_and_unsupported_effective_parameters_fail (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_15_original_get_params_and_complete_constructor_map_are_required (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_16_thread_environment_is_observed_and_never_set (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_17_bad_bytecode_child_fails_without_scientific_import_or_refit (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_18_actual_runtime_receipt_is_exact_source_metadata_without_native_alias (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_19_runtime_receipt_mutation_type_and_size_have_no_fallback (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_20_installed_source_reader_verifies_exact_bounded_ordinary_bytes (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_21_size_mismatch_and_oversize_fail_before_source_reads (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_22_installed_source_symlink_and_wrong_content_are_rejected (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_23_threadpool_metadata_is_sorted_complete_and_detached (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_24_threadpool_false_zero_missing_blas_duplicate_and_unbounded_fail (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_25_real_tiny_fit_uses_once_only_complete_frozen_pipeline (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_26_real_artifact_array_sparse_vocabulary_and_assignment_hash_oracles (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_27_real_normalization_labels_counts_and_effective_init_are_observed (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_28_real_runtime_source_thread_bytecode_and_proof_limits (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_29_real_success_latch_blocks_reuse_without_second_fit (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_30_preimported_real_numpy_child_never_fits_or_retries (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_31_bad_thread_child_stops_before_numerical_imports_and_refit (test_full_pool_topics.FullPoolTopicsTests) ... ok
+test_32_changed_receipt_child_fails_before_import_and_poisoned_attempt_is_final (test_full_pool_topics.FullPoolTopicsTests) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 9.666s
+
+OK
+/home/manoj663/.conda/envs/reasoning/lib/python3.10/site-packages/torch/__init__.py:1551: UserWarning: Please use the new API settings to control TF32 behavior, such as torch.backends.cudnn.conv.fp32_precision = 'tf32' or torch.backends.cuda.matmul.fp32_precision = 'ieee'. Old settings, e.g, torch.backends.cuda.matmul.allow_tf32 = True, torch.backends.cudnn.allow_tf32 = True, allowTF32CuDNN() and allowTF32CuBLAS() will be deprecated after Pytorch 2.9. Please see https://pytorch.org/docs/main/notes/cuda.html#tensorfloat-32-tf32-on-ampere-and-later-devices (Triggered internally at /pytorch/aten/src/ATen/Context.cpp:80.)
+  return _C._get_float32_matmul_precision()
+test_01_literal_tensor_gates_are_the_independent_frozen_seven_field_specs (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_02_exact_protocol_file_pin_and_fixed_path_are_mandatory (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_03_case_schema_hashes_types_and_explicit_small_nonnative_count_fail_closed (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_04_no_missing_noncallable_or_duck_typed_native_primitive_default_exists (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_05_source_verifier_checks_actual_file_qualname_inventory_and_module_attribute (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_06_forged_code_with_correct_filename_and_runtime_metadata_is_rejected (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_07_actual_globals_and_code_signature_cannot_be_spoofed_by_function_metadata (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_08_source_mutation_before_or_during_a_primitive_call_poisons_the_adapter (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_09_primitive_receipt_stage_source_case_qualification_and_success_are_exact (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_10_scalar_thresholds_use_independent_dense_relative_and_inclusive_boundaries (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_11_loss_formula_and_actual_group8_tail1_standalone1_are_not_renormalized (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_12_exact_counts_eos_non_eos_and_all_finite_metric_fields_are_required (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_13_unweighted_objectives_and_sft_zero_kl_cannot_be_relabelled (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_14_actual_raw_and_clipped_gradients_use_full_group_norm_rms_and_cosine (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_15_every_actual_gradient_must_exist_be_finite_and_match_fp32_shape (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_16_adam_structure_step_and_nonnegative_second_moments_are_actual_not_inferred (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_17_distinct_first_second_moment_relative_gates_do_not_use_weight_tolerance (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_18_full_updated_weight_bounds_cover_both_tied_and_backbone_parameters (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_19_original_identity_requires_both_branch_byte_hashes_even_for_signed_zero (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_checkpointed_head_native_pair_hooks.py:505: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  self.assertEqual(float(value["candidate"].model.embed.weight[0, 0]), 0.)
+ok
+test_20_original_numeric_primitive_keeps_all_three_old_limits_and_witnesses (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_21_actual_ties_disjoint_storage_frozen_reference_and_model_identity_are_required (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_22_live_suffix_eos_and_case_hash_are_checked_without_trusting_primitive_success (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_23_private_directory_and_report_files_are_exclusive_owner_only_and_no_alias (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_24_closed_private_file_pins_preserve_detail_and_controller_receipts_are_bounded (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_25_partial_report_write_charges_actual_prefix_keeps_artifact_and_poison (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_26_phase_accounting_binds_actual_shared_budget_and_full_remaining_plan (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_27_shadow_requires_post_lr0_identity_exact_phase_actual_state1_and_zero_lr (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_28_one_common_shadow_is_actual_little_endian_fp32_and_physically_pinned (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_29_actual_update2_deltas_use_same_initial_bytes_and_positive_tied_backbone_groups (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_30_wrong_foreign_tampered_or_missing_shadow_cannot_produce_delta_success (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_31_unknown_repeated_wrong_subcase_and_failed_stages_never_resume (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+test_32_actual_tiny_paired_controller_and_standalone_hook_types_remain_nonnative (test_checkpointed_head_native_pair_hooks.CheckpointedHeadNativePairHooksTests) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 1.638s
+
+OK

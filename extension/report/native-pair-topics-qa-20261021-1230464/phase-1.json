@@ -1,0 +1,11 @@
+{
+  "errors": 0,
+  "expected_failures": 0,
+  "expected_tests": 32,
+  "failures": 0,
+  "pattern": "test_full_pool_topics.py",
+  "skipped": 0,
+  "success": true,
+  "tests_run": 32,
+  "unexpected_successes": 0
+}

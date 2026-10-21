@@ -1,0 +1,78 @@
+{
+  "after": {
+    "directory": {
+      "ctime_ns": 1792583276051716583,
+      "dev": 49,
+      "gid": 22825097,
+      "ino": 736909391,
+      "mode": 448,
+      "mtime_ns": 1792544430146333000,
+      "nlink": 2,
+      "size": 4096,
+      "uid": 22825097
+    },
+    "file": {
+      "ctime_ns": 1792583276053189531,
+      "dev": 49,
+      "gid": 22825097,
+      "ino": 938472744,
+      "mode": 384,
+      "mtime_ns": 1792544406692111839,
+      "nlink": 1,
+      "size": 1276073,
+      "uid": 22825097
+    }
+  },
+  "before": {
+    "directory": {
+      "ctime_ns": 1792544430146333000,
+      "dev": 49,
+      "gid": 22825097,
+      "ino": 736909391,
+      "mode": 504,
+      "mtime_ns": 1792544430146333000,
+      "nlink": 2,
+      "size": 4096,
+      "uid": 22825097
+    },
+    "file": {
+      "ctime_ns": 1792544406692111839,
+      "dev": 49,
+      "gid": 22825097,
+      "ino": 938472744,
+      "mode": 432,
+      "mtime_ns": 1792544406692111839,
+      "nlink": 1,
+      "size": 1276073,
+      "uid": 22825097
+    }
+  },
+  "complete": true,
+  "created_at_utc": "2026-10-21T11:47:56.047273+00:00",
+  "directory_mode_after": "0700",
+  "directory_mode_before": "0770",
+  "extension_ledger_before": {
+    "bytes": 1052168,
+    "sha256": "6c82cb0c6ad1241d1f89add0ed270d7cf0fb808c0864bf050b8d8692914670eb"
+  },
+  "file_mode_after": "0600",
+  "file_mode_before": "0660",
+  "historical_and_extension_ledgers_unchanged": true,
+  "historical_ledger_before": {
+    "bytes": 129364,
+    "sha256": "9fc4dfa2506ccd33580bab3e5f4c4e91d0731e221c4f88ac9778e54800dc141d"
+  },
+  "inode_owner_group_mtime_unchanged": true,
+  "prepared_bytes_unchanged": true,
+  "prepared_file": {
+    "bytes": 1276073,
+    "sha256": "d1bb1875a293c71f2a108df4b287b3bb2ab35b3168cd6505b5bd91a98fd66457"
+  },
+  "prepared_path": "extension/runs/native-smoke-preparation-1224497/prepared.json",
+  "protected_source_count": 211,
+  "protected_sources_unchanged": true,
+  "raw_data_parsed": false,
+  "repaired_at_utc": "2026-10-21T11:47:56.206694+00:00",
+  "schema": "extension-native-smoke-permissions-repair-v1",
+  "scope": "Mode-only tightening of one private prepared file and its directory. No source/data/weights/receipt bytes, parser, scientific setting or job admission changed."
+}

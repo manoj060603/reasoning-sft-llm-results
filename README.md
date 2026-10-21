@@ -436,6 +436,29 @@ receipts. All 204 protected sources and the previous 34 ledger entries were
 preserved. This does not establish original-3B/434-parameter BF16 GPU behavior,
 original-file provenance, save/reload, long-context memory or pilot admission.
 
+The [combined topics and pair-hook CPU stage](extension/report/native-pair-topics-qa-20261021-1230464/delivery_summary.json)
+then **passed all 64 new checks** in a **45-second, zero-GPU allocation**.
+The 32 topic checks ran first: one fresh child fitted 64 fabricated questions,
+and four fresh children checked before-fit refusals under the pinned runtime
+and one-thread policy. Only after those checks passed did the parent load Torch
+and run 32 tiny pair-hook checks for source bindings, comparison gates, Adam
+moments, one common initial shadow, stored update differences, private receipts
+and failure handling. Backend getters describe only that later fixture phase.
+The earlier 80 and standalone 32 checks were verified by receipts. All **212
+protected sources** and the previous **35 ledger entries** were preserved.
+This is synthetic CPU verification; the real 82,961-question fit, unconditional
+15,000-pair random draw, original-model scoring, BF16 CUDA comparison,
+recomputation, full-context memory and pilot stages remain unadmitted.
+
+A separate [mode-only privacy repair](extension/report/native-smoke-permissions-repair-20261021/repair.json)
+tightened the old diagnostic folder to owner-only access and its prepared file
+to owner-only read/write, with the exact file bytes, ownership and inode
+preserved. The [original model link map](extension/report/original-base-nine-links-20261021/map.json)
+and [closed namespace observation](extension/report/original-base-nine-links-20261021/closed_namespace_observation.json)
+record only paths, link/stat metadata and inherited expected byte hashes for
+exactly nine HF snapshot files. They did not load or newly hash model/tokenizer
+bytes. Future admitted compute must verify those physical bytes before use.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%
