@@ -1,0 +1,54 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 1038,
+      "sha256": "e6e9bcf021c6f7414683f65e49f391b6291896e514624afec4786fd61c130404"
+    },
+    "delivery_summary.json": {
+      "bytes": 888,
+      "sha256": "6e7b03d19c40c8c2e5f98b27d5b16a149b49f2353a36a15281c08708897f7ec6"
+    },
+    "executed_gpu_admission.py": {
+      "bytes": 17152,
+      "sha256": "a783e3986f0f5f3054f44659573193583a0bebc0620f84e65c7cbdc7a98d844a"
+    },
+    "failure.json": {
+      "bytes": 364,
+      "sha256": "b979b82150fd61a8917e50269057885bf0dc6e846038554b4f813e66b5e08536"
+    },
+    "first_case_failure.json": {
+      "bytes": 1230,
+      "sha256": "fd1f8ffab66b0d0db59b9fa871a2d79f915bddc6a0cbfb500727d97e2ec3a9f2"
+    },
+    "first_case_started.json": {
+      "bytes": 2433,
+      "sha256": "46befab84268a058a6419090af454629d0b6b4e63b5d8d113217882a857bba4c"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 464265,
+      "sha256": "7de19dc305699fe87af6a5ce9f10835142608e5a0a780442abd134498c6e90a2"
+    },
+    "joint_admission.json": {
+      "bytes": 12608,
+      "sha256": "eda8590c48bbfddf3e385c42f09e059315613ec1c5782ec94ef0ef8eda14456a"
+    },
+    "native.stderr.log": {
+      "bytes": 2698,
+      "sha256": "c09a64f206d4a380d8668237f2b426a33a34d6571d40136e25ef5daa4c3b1d02"
+    },
+    "native.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native_admission.json": {
+      "bytes": 12608,
+      "sha256": "71d45220bbda8f78b8b9478168d17f85fd8d7351d254fca09ce1cf768b615986"
+    },
+    "started.json": {
+      "bytes": 2496,
+      "sha256": "71a992ed8315d91d7dd749f970a3bf1926806c62a19a87aec615d922fdd0995b"
+    }
+  },
+  "private_source_records_included": false,
+  "schema": "extension-joint-v2-failure-evidence-v1"
+}

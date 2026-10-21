@@ -1,0 +1,20 @@
+{
+  "command": [
+    "sacct",
+    "--clusters=owl",
+    "-j",
+    "1227970",
+    "--parsable2",
+    "--noheader",
+    "--format=JobIDRaw,JobName,State,ExitCode,ElapsedRaw,Start,End,AllocTRES"
+  ],
+  "job_id": "1227970",
+  "observed_at_utc": "2026-10-21T04:56:29.693321+00:00",
+  "observed_elapsed_seconds": 505,
+  "schema": "extension-nonterminal-scheduler-observation-v1",
+  "state": "RUNNING",
+  "stderr": "",
+  "stdout": "1227970|sft-extension-native-model-admission-v2|RUNNING|0:0|505|2026-10-21T04:48:04|Unknown|billing=328,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n1227970.batch|batch|RUNNING|0:0|505|2026-10-21T04:48:04|Unknown|cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n1227970.extern|extern|RUNNING|0:0|505|2026-10-21T04:48:04|Unknown|billing=328,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n",
+  "terminal_accounting": false,
+  "timezone": "UTC"
+}

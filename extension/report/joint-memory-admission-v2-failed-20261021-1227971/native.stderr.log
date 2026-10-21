@@ -1,0 +1,28 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.08s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.56s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.64s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.05s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.56s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.63s/it]
+Traceback (most recent call last):
+  File "/home/manoj663/.conda/envs/reasoning/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/manoj663/.conda/envs/reasoning/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission_v2.py", line 722, in <module>
+    main()
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission_v2.py", line 718, in main
+    run_case(context, args.mode, parent / "cases" / args.mode, allocation)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission_v2.py", line 466, in run_case
+    rows, metrics, lr_used, lr_after, gradient_norms = presentation_rows(prepared), [], [], [], [], []
+ValueError: too many values to unpack (expected 5)
+Traceback (most recent call last):
+  File "/home/manoj663/.conda/envs/reasoning/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/manoj663/.conda/envs/reasoning/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission_v2.py", line 722, in <module>
+    main()
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission_v2.py", line 704, in main
+    result = run(args.root, args.plan, args.output, args.qa_receipt, args.admission_receipt)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission_v2.py", line 384, in run
+    require(result.returncode == 0, "Joint diagnostic failed without retry: " + mode)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.py", line 46, in require
+    raise ValueError(message)
+ValueError: Joint diagnostic failed without retry: sft

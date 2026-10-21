@@ -1,0 +1,11 @@
+{
+  "automatic_downstream": false,
+  "binding_sha256": "213066715e23dc20e8706f3bcf449ca5cef7114d613b322db2bc26ac1d955904",
+  "complete": false,
+  "completed_cases": {},
+  "exception": "ValueError",
+  "message": "Joint diagnostic failed without retry: sft",
+  "resume_supported": false,
+  "retry": false,
+  "schema": "extension-joint-memory-admission-failure-v1"
+}

@@ -241,6 +241,26 @@ no actual GPU identity, numerical or memory success: all eight native cases
 and all four joint cases still need fresh GPU allocations. The collector and
 future pilot also need their own explicit versioned identity integration.
 
+
+The reviewed replays were admitted as **native 1227970** and **joint 1227971**,
+each with one B200 and a bounded two-hour allocation. The strict identity
+repair worked on actual hardware. The native job has completed the
+[ordinary SFT short and 31,776-token long cases](extension/report/native-model-admission-v2-partial-20261021-1227970/delivery_summary.json),
+including finite updates, unchanged reference, saved-model reload and measured
+headroom. The long case reported a conservative peak of 153,840,451,584 bytes,
+leaving 37,655,019,520 bytes. These are two completed cases out of eight, not
+all-objective or long-after-Adam admission. The remaining cases continue; no
+pilot or generated benchmark result is established by these diagnostics.
+
+The [joint replay](extension/report/joint-memory-admission-v2-failed-20261021-1227971/delivery_summary.json)
+failed after **85 seconds**, after loading both original models but before
+any presentation or update. A frozen initializer supplied six values to five
+variables. The failed original/v2 sources, runtime evidence and allocation
+accounting remain intact. A separately versioned initializer repair must
+receive new scoped CPU QA and a fresh bounded GPU admission. Terminal
+extension GPU use is now 192 seconds plus the separately observed running
+native job; that job retains its open two-hour request until terminal evidence.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%

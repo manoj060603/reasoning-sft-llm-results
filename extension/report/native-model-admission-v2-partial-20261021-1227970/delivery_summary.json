@@ -1,0 +1,43 @@
+{
+  "automatic_downstream": false,
+  "benchmark_result_claimed": false,
+  "case_receipts": {
+    "sft-long": {
+      "public_receipt": {
+        "bytes": 27107,
+        "sha256": "4e7df87ad3e2ab2050ecbe1757a40fb9e899e7182a06d63c9a716135b6c0380e"
+      },
+      "raw_private_receipt": {
+        "bytes": 33353,
+        "sha256": "7e05219f4d1bbed8d34748ffb057a3f388d7bb752f158977468a678ebf8d9f64"
+      }
+    },
+    "sft-short": {
+      "public_receipt": {
+        "bytes": 29151,
+        "sha256": "686f325ec3f6618c21fae9c712d5bbf94fd5ad1e8bb2f5ffe9d6ff228974d169"
+      },
+      "raw_private_receipt": {
+        "bytes": 35652,
+        "sha256": "8549191c3398c1039a00fe03e6153e241bd459706ba9ea39cdaf2e85c814ffb7"
+      }
+    }
+  },
+  "collection_complete_claimed": false,
+  "exported_cases": 2,
+  "exported_complete_cases": [
+    "sft-short",
+    "sft-long"
+  ],
+  "job_id": "1227970",
+  "long_after_adam_established": false,
+  "new_gpu_identity_observed": true,
+  "observed_state": "RUNNING",
+  "ordinary_sft_short_and31776token_long_passed": true,
+  "other_cases_status_not_inferred": true,
+  "raw_witnesses_exported": false,
+  "requested_gpu_seconds": 7200,
+  "schema": "extension-native-v2-partial-delivery-v1",
+  "total_required_cases": 8,
+  "training_pilot_started": false
+}

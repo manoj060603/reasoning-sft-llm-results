@@ -1,0 +1,38 @@
+{
+  "actual_pre_forward_shape_observations": [],
+  "allocator_peak_allocated_seen": 24689607680,
+  "allocator_peak_reserved_seen": 24689770496,
+  "automatic_downstream": false,
+  "binding_sha256": "213066715e23dc20e8706f3bcf449ca5cef7114d613b322db2bc26ac1d955904",
+  "complete": false,
+  "completed_presentations": [],
+  "completed_update_boundaries": [],
+  "exception": "ValueError",
+  "max_observed_nonallocator_bytes": 656080896,
+  "memory_stages_observed": [
+    {
+      "elapsed_seconds": 36.641547431005165,
+      "end": {
+        "allocated_bytes": 24689607680,
+        "free_device_bytes": 166149619712,
+        "reserved_bytes": 24689770496,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 24689607680,
+      "peak_reserved_bytes": 24689770496,
+      "stage": "load_original_fp32_student_and_reference",
+      "start": {
+        "allocated_bytes": 0,
+        "free_device_bytes": 190839390208,
+        "reserved_bytes": 0,
+        "total_bytes": 191495471104
+      }
+    }
+  ],
+  "message": "too many values to unpack (expected 5)",
+  "mode": "sft",
+  "pending_presentation": null,
+  "resume_supported": false,
+  "retry": false,
+  "schema": "extension-joint-memory-admission-case-failure-v1"
+}

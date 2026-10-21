@@ -1,0 +1,22 @@
+{
+  "files": {
+    "delivery_summary.json": {
+      "bytes": 1281,
+      "sha256": "d650f07cae865e25e46abcac4d7e62dac64fe0341e1d99ca68c54cab29e62558"
+    },
+    "scheduler_snapshot.json": {
+      "bytes": 878,
+      "sha256": "936e4555902e514e5532849cdfd9fcbabdc14594e088853d10114a89ce2a12d5"
+    },
+    "sft-long.json": {
+      "bytes": 27107,
+      "sha256": "4e7df87ad3e2ab2050ecbe1757a40fb9e899e7182a06d63c9a716135b6c0380e"
+    },
+    "sft-short.json": {
+      "bytes": 29151,
+      "sha256": "686f325ec3f6618c21fae9c712d5bbf94fd5ad1e8bb2f5ffe9d6ff228974d169"
+    }
+  },
+  "raw_private_records_included": false,
+  "schema": "extension-native-v2-partial-evidence-v1"
+}
