@@ -1,0 +1,19 @@
+{
+  "accounting_complete": true,
+  "actual_gpu_seconds": 64,
+  "automatic_retry": false,
+  "completed_cases": 0,
+  "experiment_complete": false,
+  "first_case": "sft-short",
+  "job_id": "1224577",
+  "model_forward_performed": false,
+  "observed_allocator_peak_bytes": 0,
+  "open_gpu_seconds": 0,
+  "raw_witness_ids_or_tokens_included": false,
+  "reason": "Valid Torch2.9 bare UUID is refused by the frozen GPU-prefixed UUID guard before model loading",
+  "repair_not_yet_admitted": true,
+  "requested_gpu_seconds": 7200,
+  "role": "native_model_admission_20261021_v1",
+  "schema": "extension-gpu-identity-failure-delivery-v1",
+  "training_or_memory_admission_established": false
+}

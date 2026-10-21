@@ -1,0 +1,21 @@
+{
+  "actual_vllm_interface_established": false,
+  "automatic_downstream": false,
+  "complete": true,
+  "elapsed_allocation_seconds": 5,
+  "generation_performed": false,
+  "gpu_seconds": 0,
+  "gpu_stage_admitted": false,
+  "job_id": "1227150",
+  "metadata_files": 8,
+  "parent478_replayed": false,
+  "private_cache_opened": false,
+  "qualification": "CPU fixture checks only. GPU generation is held because the inherited UUID helper failed in two separate actual GPU diagnostics; a separately tested versioned repair is required before generation.",
+  "schema": "extension-source-generation-qa-delivery-v1",
+  "scope": {
+    "collector": 32,
+    "metadata": 16
+  },
+  "source_files": 95,
+  "tests_run": 48
+}

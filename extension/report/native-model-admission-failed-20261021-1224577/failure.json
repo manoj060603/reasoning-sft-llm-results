@@ -1,0 +1,10 @@
+{
+  "automatic_downstream": false,
+  "binding_sha256": "9bda4c0368093fea3235ede2abea9e3e42d1792c043b744be4ad1975aa1f0d91",
+  "complete": false,
+  "completed_cases": {},
+  "exception": "ValueError",
+  "message": "Native diagnostic case failed without retry: sft-short",
+  "retry": false,
+  "schema": "extension-native-model-admission-failure-v1"
+}

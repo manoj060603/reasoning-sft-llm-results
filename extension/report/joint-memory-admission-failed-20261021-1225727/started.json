@@ -1,0 +1,24 @@
+{
+  "allocation": {
+    "allocated_tres": "cpu=8,mem=128G,node=1,billing=328,gres/gpu=1,gres/gpu:b200=1",
+    "checked_at_utc": "2026-10-21T03:15:03.339822+00:00",
+    "cuda_visible_devices": "0",
+    "hostname": "owl-sr001",
+    "job_id": "1225727",
+    "node": "owl-sr001",
+    "scontrol": "JobId=1225727 JobName=sft-extension-joint-memory-admission UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1314 Nice=0 Account=tml_2026 QOS=owl_b200_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:01 TimeLimit=02:00:00 TimeMin=N/A SubmitTime=2026-10-20T22:33:21 EligibleTime=2026-10-20T22:33:21 AccrueTime=2026-10-20T23:13:30 StartTime=2026-10-20T23:15:02 EndTime=2026-10-21T01:15:02 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T23:15:02 Scheduler=Backfill Partition=b200_normal_q AllocNode:Sid=owl1:1774098 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl-sr001 BatchHost=owl-sr001 NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=128G,node=1,billing=328,gres/gpu=1 AllocTRES=cpu=8,mem=128G,node=1,billing=328,gres/gpu=1,gres/gpu:b200=1 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission.slurm extension/runs/joint-memory-qa-1225557 WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-joint-memory-1225727.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-joint-memory-1225727.out TresPerNode=gres/gpu:1 TresPerTask=cpu=8",
+    "scontrol_sha256": "b358da9f06936e4ab9cf63aeda56a0d644aea52c6e7b59cb6b880e5f161a6d40",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "binding_sha256": "f7dfc64836d4d2a92f9e2c9dc5f0b9068364d31d32bd2e5c4679e47b3a733aa5",
+  "case_order": [
+    "sft",
+    "ce_kl",
+    "asft",
+    "prior_anchored"
+  ],
+  "complete": false,
+  "schema": "extension-joint-memory-admission-complete-v1"
+}

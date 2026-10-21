@@ -1,0 +1,11 @@
+{
+  "actual_vllm_interface_established": false,
+  "automatic_downstream": false,
+  "complete": true,
+  "cpu_only": true,
+  "gpu_seconds": 0,
+  "job_id": "1227150",
+  "native_qa_sha256": "bc960fb04d9309e8a6b836f45741582674a62603ae8ed8f04d10728c241393eb",
+  "schema": "extension-source-generation-qa-complete-v1",
+  "tests_run": 48
+}

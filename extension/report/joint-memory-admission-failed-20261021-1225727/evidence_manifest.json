@@ -1,0 +1,38 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 1036,
+      "sha256": "9094575d6b9428c31c3f58bc7960c5b4121c2d3b35403a66b492b70019fb78e6"
+    },
+    "delivery_summary.json": {
+      "bytes": 675,
+      "sha256": "f475a7e24d8e53a7e84b04b5b266baad62224d3a3fccb43dae846ad9908609e3"
+    },
+    "failure.json": {
+      "bytes": 364,
+      "sha256": "9318ce3ffcb4220ac9dea91d7dbfb1e6ae5228998d0ae1c627a721f9e616b265"
+    },
+    "first_case_failure.json": {
+      "bytes": 655,
+      "sha256": "921d3bc7abe327b1a54252d450b6ee8bc01bed9343df63dba48b3185c6a598c6"
+    },
+    "first_case_started.json": {
+      "bytes": 2427,
+      "sha256": "c805146b76db3b8577ee114380a9c835802f7d9e7172a23617ad3a373f0088ee"
+    },
+    "native.stderr.log": {
+      "bytes": 2350,
+      "sha256": "d45e3e2cd43bcaf7a51bad4bc85d49099bd31023da1363feb88291bbc1ec9ffc"
+    },
+    "native.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "started.json": {
+      "bytes": 2490,
+      "sha256": "ef70535c0ede91f3c541656dd95a536aa8f602658f9c2e83df9af6ab386d0e8a"
+    }
+  },
+  "private_source_records_included": false,
+  "schema": "extension-failure-evidence-v1"
+}

@@ -1,0 +1,19 @@
+{
+  "actual_pre_forward_shape_observations": [],
+  "allocator_peak_allocated_seen": 0,
+  "allocator_peak_reserved_seen": 0,
+  "automatic_downstream": false,
+  "binding_sha256": "f7dfc64836d4d2a92f9e2c9dc5f0b9068364d31d32bd2e5c4679e47b3a733aa5",
+  "complete": false,
+  "completed_presentations": [],
+  "completed_update_boundaries": [],
+  "exception": "ValueError",
+  "max_observed_nonallocator_bytes": 656080896,
+  "memory_stages_observed": [],
+  "message": "Assigned GPU UUID is unavailable",
+  "mode": "sft",
+  "pending_presentation": null,
+  "resume_supported": false,
+  "retry": false,
+  "schema": "extension-joint-memory-admission-case-failure-v1"
+}

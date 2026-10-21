@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "/home/manoj663/.conda/envs/reasoning/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/manoj663/.conda/envs/reasoning/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission.py", line 720, in <module>
+    main()
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission.py", line 716, in main
+    run_case(context, args.mode, parent / "cases" / args.mode, allocation)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission.py", line 439, in run_case
+    gpu_identity = native.assigned_gpu_identity(torch)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/native_model_admission.py", line 628, in assigned_gpu_identity
+    require(re.fullmatch(r"GPU-[0-9a-fA-F-]+", uuid) is not None, "Assigned GPU UUID is unavailable")
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.py", line 46, in require
+    raise ValueError(message)
+ValueError: Assigned GPU UUID is unavailable
+Traceback (most recent call last):
+  File "/home/manoj663/.conda/envs/reasoning/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/manoj663/.conda/envs/reasoning/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission.py", line 720, in <module>
+    main()
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission.py", line 702, in main
+    result = run(args.root, args.plan, args.output, args.qa_receipt, args.admission_receipt)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/joint_memory_admission.py", line 382, in run
+    require(result.returncode == 0, "Joint diagnostic failed without retry: " + mode)
+  File "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.py", line 46, in require
+    raise ValueError(message)
+ValueError: Joint diagnostic failed without retry: sft

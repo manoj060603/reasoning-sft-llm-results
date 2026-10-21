@@ -117,9 +117,9 @@ semantic limitations described above. Four private diagnostic examples were
 replayed with the original tokenizer, including the longest complete eligible
 example at **31,776 tokens**. No training draw has been selected.
 
-The B200 numerical and memory diagnostic is admitted as job **1224577** and
-remains queued as of October 21 at 01:45 UTC. Its eight fresh cases test four
-objectives on short and long examples. A separate, prospective diagnostic is
+The B200 numerical and memory diagnostic was admitted as job **1224577**.
+Its eight planned fresh cases test four objectives on short and long examples.
+It subsequently failed before model loading, as detailed below. A separate, prospective diagnostic is
 also required to verify a long forward while Adam state and accumulated
 gradients are already resident; short accumulation checks alone cannot prove
 that memory envelope. The pilot driver fails closed without that evidence.
@@ -164,10 +164,10 @@ B200 diagnostic is now admitted as **1225727**, with its [exact admission
 receipt](extension/operations/joint-memory-admission-job-1225727.json). It tests
 a long forward after Adam state and accumulated gradients coexist, across all
 four objectives, using 17 disposable presentations and a final partial batch.
-Both B200 diagnostics remain queued as of **02:37 UTC on October 21**. Their
-combined open reservation is four GPU-hours; extension GPU use is still zero
-at that snapshot. No pilot, generated development score or new benchmark has
-started. A separate unique-example, actual pilot-driver accumulation check is
+Both B200 diagnostics were queued at **02:37 UTC on October 21**, with four
+GPU-hours requested. They subsequently started and failed before model loading;
+their terminal accounting below supersedes that queue snapshot. No pilot,
+generated development score or new benchmark has started. A separate unique-example, actual pilot-driver accumulation check is
 also required before long pilots.
 
 The separately versioned source worker uses a prospectively frozen ten-second
@@ -196,8 +196,38 @@ original-tokenizer prompts of 47–364 tokens. All 32 official-gold self-checks
 and gold-mutation prompt checks passed under the separately identified worker
 protocol. This is engineering readiness for one fixed original-model
 calibration pass; no generated accuracy, training improvement or B200 memory
-result follows from these CPU checks. The two previously admitted GPU
-diagnostics remain queued; no new GPU job was added by this retry.
+result follows from these CPU checks. No new GPU job was added by this retry.
+
+
+The two actual B200 diagnostics then **failed in their first SFT cases before
+model loading**: [1224577](extension/report/native-model-admission-failed-20261021-1224577/delivery_summary.json)
+ran for 64 seconds and [1225727](extension/report/joint-memory-admission-failed-20261021-1225727/delivery_summary.json)
+for 43 seconds. The installed PyTorch 2.9 UUID object prints a bare dashed UUID;
+the frozen identity helper required a `GPU-` prefix and rejected it before its
+UUID-scoped device query. Neither attempt performed a model forward, update,
+or memory test. Their original sources, failures and terminal allocation
+receipts remain preserved. Actual extension GPU use is **107 seconds
+(0.029722 hours)**, with no open GPU reservation at this terminal snapshot;
+this does not rewrite the historical 39.65-hour charge.
+
+A separate [collector CPU QA](extension/report/source-generation-qa-20261021-1227150/delivery_summary.json)
+completed in **five seconds, using zero GPUs**. All **48 checks** passed:
+32 collector fixtures and 16 admission checks, binding 95 core and eight
+metadata files. The preceding 478 checks were verified by receipts rather
+than rerun. These fixtures establish no real vLLM interface or generated
+accuracy. The collector inherits the same faulty UUID helper, so its GPU stage
+is **held pending a separately reviewed and natively tested versioned repair**.
+No new extension model training, calibration generation or benchmark result
+has occurred.
+
+The prospective collector also makes its native-EOS adapter explicit. Pinned
+vLLM 0.12 loads Qwen's extra HF EOS even with the literal `vllm` configuration
+selector. The [collector plan](extension/source_generation_plan.json) therefore
+binds a private, exact EOS-only configuration through the public directory API,
+with every sampling parameter unchanged and no model, tokenizer or library
+patch. A future actual run must verify the effective cloned stop set before
+its sole 32-request generation call. CPU fixture success is not evidence that
+this native interface has worked.
 
 ## Additional recovery follow-up: closed without promotion
 

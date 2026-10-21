@@ -1,0 +1,29 @@
+{
+  "allocation": {
+    "allocated_tres": "cpu=8,mem=128G,node=1,billing=328,gres/gpu=1,gres/gpu:b200=1",
+    "checked_at_utc": "2026-10-21T03:13:29.432281+00:00",
+    "cuda_visible_devices": "0",
+    "hostname": "owl-sr001",
+    "job_id": "1224577",
+    "node": "owl-sr001",
+    "scontrol": "JobId=1224577 JobName=sft-extension-native-model-admission UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1317 Nice=0 Account=tml_2026 QOS=owl_b200_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:02 TimeLimit=02:00:00 TimeMin=N/A SubmitTime=2026-10-20T21:00:41 EligibleTime=2026-10-20T21:00:41 AccrueTime=2026-10-20T21:00:42 StartTime=2026-10-20T23:13:27 EndTime=2026-10-21T01:13:27 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T23:13:27 Scheduler=Backfill Partition=b200_normal_q AllocNode:Sid=owl1:1472813 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl-sr001 BatchHost=owl-sr001 NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=128G,node=1,billing=328,gres/gpu=1 AllocTRES=cpu=8,mem=128G,node=1,billing=328,gres/gpu=1,gres/gpu:b200=1 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=128G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/native_model_admission.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/native_model_admission.slurm extension/runs/native-smoke-preparation-1224497 WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-native-model-1224577.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-native-model-1224577.out TresPerNode=gres/gpu:1 TresPerTask=cpu=8",
+    "scontrol_sha256": "a3d3f7143a71e42c69c736eabd27623bd57fb5b8338c35470ec66120615333ae",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "binding_sha256": "9bda4c0368093fea3235ede2abea9e3e42d1792c043b744be4ad1975aa1f0d91",
+  "cases": [
+    "sft-short",
+    "sft-long",
+    "ce_kl-short",
+    "ce_kl-long",
+    "asft-short",
+    "asft-long",
+    "prior_anchored-short",
+    "prior_anchored-long"
+  ],
+  "complete": false,
+  "created_at_utc": "2026-10-21T03:13:39.939746+00:00",
+  "schema": "extension-native-model-admission-v1"
+}

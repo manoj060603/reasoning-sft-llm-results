@@ -1,0 +1,14 @@
+{
+  "allocator_peak_allocated_seen": 0,
+  "allocator_peak_reserved_seen": 0,
+  "automatic_downstream": false,
+  "binding_sha256": "9bda4c0368093fea3235ede2abea9e3e42d1792c043b744be4ad1975aa1f0d91",
+  "case": "sft-short",
+  "complete": false,
+  "exception": "ValueError",
+  "max_observed_nonallocator_bytes": 656080896,
+  "memory_stages_observed": [],
+  "message": "Assigned GPU UUID is unavailable",
+  "retry": false,
+  "schema": "extension-native-model-admission-case-failure-v1"
+}
