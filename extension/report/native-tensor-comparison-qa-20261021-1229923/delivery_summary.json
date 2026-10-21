@@ -1,0 +1,23 @@
+{
+  "actual_434_comparison_admitted": false,
+  "actual_initial_shadow_phase_identity_admitted": false,
+  "actual_original_3b_weights_loaded": false,
+  "actual_process_rss_or_headroom_measured": false,
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "complete": true,
+  "elapsed_allocation_seconds": 16,
+  "errors": 0,
+  "failures": 0,
+  "gpu_seconds": 0,
+  "job_id": "1229923",
+  "native_bf16_cuda_admitted": false,
+  "older_tests_replayed": false,
+  "qualification": "Exactly32 synthetic CPU fixtures passed for bounded streamed tensor statistics, private rawFP32 shadow storage and actual stored-delta comparisons. No original3B/all434/BF16CUDA, actual phase identity, measured process RSS or memory/pilot/model-improvement admission is established.",
+  "raw_private_records_included": false,
+  "schema": "extension-native-tensor-comparison-qa-delivery-v1",
+  "skipped": 0,
+  "synthetic_cpu_tensor_and_private_shadow_scope_only": true,
+  "tests_run": 32,
+  "training_or_pilot_admitted": false
+}

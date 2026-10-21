@@ -1,0 +1,81 @@
+{
+  "schema": "extension-native-tensor-comparison-qa-plan-v1",
+  "status": "draft_unadmitted_root_sealed_prior31_and_protected170",
+  "role": "native_tensor_comparison_qa_20261021_v1",
+  "test_pattern": "test_native_tensor_comparison.py",
+  "expected_tests": 32,
+  "native_qa_schema": "extension-native-tensor-comparison-native-qa-v1",
+  "source_files": [
+    "extension/native_tensor_comparison.py",
+    "extension/native_tensor_comparison_qa.py",
+    "extension/native_tensor_comparison_qa.slurm",
+    "extension/native_tensor_comparison_qa_plan.json",
+    "tests/test_native_tensor_comparison.py"
+  ],
+  "reviewed_input_sha256": {
+    "extension/native_tensor_comparison.py": "6fbea956b8c91cca2b1a7523954a62fec3210b4d10c9a948ea329622c03d10cb",
+    "tests/test_native_tensor_comparison.py": "57935cc860d046e88e74df8ffcee09e597c902890d3542e2898d832a3c7757ad"
+  },
+  "cpu_bootstrap": {
+    "path": "extension/operations/submit-native-tensor-comparison-qa-20261021.py",
+    "outside_source_inventory": true
+  },
+  "resources": {
+    "cpus": 2,
+    "ram_gib": 8,
+    "gpus": 0,
+    "wall_time_seconds": 1200,
+    "reserve_seconds": 172800
+  },
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "runtime_versions": {
+    "torch": "2.9.0",
+    "transformers": "4.57.3",
+    "accelerate": "1.12.0",
+    "safetensors": "0.7.0",
+    "numpy": "1.26.4"
+  },
+  "numerical_assertions_owner": "Exact prospective assertions in the pinned32-test module; no stage tolerance override",
+  "prior_ledger": {
+    "path": "extension/report/checkpointed-head-trainer-qa-20261021-1229383/job_ledger_snapshot.json",
+    "sha256": "f253ab38be4b0232c0ffb83fcd3e9062f9cb21df01c49cadbcbfda0eebdbffa9",
+    "entries": 31,
+    "entries_sha256": "6ae9ce8c4be049d237b0e628f32d94c51343e1a5631d478669ae0acebf72cd00"
+  },
+  "historical_ledger": {
+    "path": "deadline/job_ledger.json",
+    "sha256": "9fc4dfa2506ccd33580bab3e5f4c4e91d0731e221c4f88ac9778e54800dc141d"
+  },
+  "parent_sources": {
+    "path": "extension/report/checkpointed-head-trainer-qa-20261021-1229383/evidence_manifest.json",
+    "sha256": "1737a84066923f6b479f48033c4703748cc1d3612a3d870d3bb9cace1c6a3eeb",
+    "schema": "extension-checkpointed-head-trainer-qa-evidence-v1",
+    "inventory_key": "protected_source_inventory",
+    "expected_files": 170
+  },
+  "claims": {
+    "synthetic_cpu_tensor_comparison_scope_only": true,
+    "synthetic_private_shadow_fixture_scope_only": true,
+    "fixture_tensor_count_override_is_not_native_434_proof": true,
+    "older_tests_replayed": false,
+    "actual_original_3b_weights_loaded": false,
+    "actual_434_tensor_comparison_established": false,
+    "private_experiment_inputs_opened": false,
+    "tokenizer_loaded": false,
+    "native_bf16_cuda_numerical_admission_established": false,
+    "actual_process_rss_or_cuda_headroom_measured": false,
+    "initial_shadow_phase_identity_established": false,
+    "training_or_pilot_admitted": false,
+    "automatic_retry": false,
+    "automatic_downstream": false
+  },
+  "qualifications": [
+    "Root sealed the exact prior31 snapshot and terminal protected170 public source manifest. This prospective stage remains unadmitted until a separate reviewed metadata bootstrap binds its exact sources and current CPU allocation; no implicit latest ledger, substituted history or source glob is accepted.",
+    "A separate outside-source5 metadata bootstrap must bind the actual plan SHA, all5 source records, exact31-entry prior snapshot, parent manifest SHA, bootstrap source, current assigned CPU2/8GiB/20-minute role and48-hour deadline reserve. No source embeds its own file hash and there is no automatic downstream admission.",
+    "Before importing torch, the helper or tests, verify the real RUNNING zero-GPU CPU allocation and every protected170 source byte. Run exactly32 tests with zero failures, errors, skips, expected failures or unexpected successes; no older test scope is replayed or aliased.",
+    "The fixtures use generic small synthetic FP32 CPU tensors, independent Python FP64 numerical oracles and disposable owner-only shadow files. Explicit fixture tensor counts do not establish actual434 original-parameter comparisons, native BF16/CUDA numerical acceptance, original-model provenance or a real phase/LR identity for stored initial parameters.",
+    "The exact scalar/element/group tolerances and assertions belong to the pinned prospective32-test source. This stage does not replace, relax or adapt them after observing results. Analytical bounded-buffer accounting is not a process RSS, Torch allocator/cache, workspace, device peak or free-headroom measurement.",
+    "No actual experiment parameters, original checkpoint, optimizer state, corpus, calibration data, private cache, tokenizer or benchmark outcome is opened. Private shadow files are synthetic fixtures and never reused. Actual streaming transfer/434 comparison cost, host/disk/CUDA bounds and post-LR0/pre-update2 shadow binding require a separately admitted real-model worker and measured evidence.",
+    "Fresh owner-only output records started/nativeQA/complete or failure with actual compute/time/test scope and all-source/history stability; no resume, retry, publication or job submission occurs in the controller."
+  ]
+}

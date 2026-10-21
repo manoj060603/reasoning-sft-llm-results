@@ -395,6 +395,16 @@ These checks establish no original-3B BF16, all-434-parameter, backward
 recomputation, or full-context memory admission. Those native gates still
 precede any new training pilot.
 
+The [bounded comparison fixture stage](extension/report/native-tensor-comparison-qa-20261021-1229923/delivery_summary.json)
+then **passed all 32 synthetic checks** in a **16-second, zero-GPU allocation**.
+It tests streamed tensor statistics, owner-only FP32 shadow files and actual
+stored-update comparisons with bounded application scratch. Original model
+weights and private experiment inputs were not loaded. Actual all-434 BF16
+comparisons, process memory, original-model shadow phase identities and the
+long-context training gate still require separate native evidence. All 176
+executed or protected source files and the previous 31 ledger entries were
+preserved; this stage creates no pilot or benchmark result.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%
