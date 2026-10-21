@@ -1,0 +1,212 @@
+{
+  "schema": "extension-full-pool-selector-prospective-protocol-v1",
+  "status": "prospective_scientific_choices_for_root_review_not_an_execution_or_admission",
+  "purpose": "Write one exact source-only population, topic, full-target CE, random-control, half-mixture and nested-pilot protocol before any new population fit, score or draw. The eight choices below are prospective commitments for root approval. Unresolved numerical and operational gates remain blocking; this document implements nothing.",
+  "execution_authorized": false,
+  "root_approval_recorded_here": false,
+  "fit_score_or_rng_draw_performed": false,
+  "tests_or_project_imports_performed": false,
+  "changes_frozen_176_sources_or_historical_results": false,
+  "immutable_after_root_approval_before_outcomes": true,
+  "scientific_scope": {
+    "final_pairs_per_arm": 15000,
+    "pilot_pairs_per_arm": 2048,
+    "original_pairs_unchanged": true,
+    "selection_signal": "Full-response mean unweighted CE under the unchanged original Qwen, combined with fixed topic/length coverage. This is a base-compatibility proxy, not verified response correctness or a demonstrated learning-value score.",
+    "root_fixed_mixture": "Exactly floor(cell_quota/2) low-CE-tag members plus all remaining slots from a seeded coverage draw; no ratio, quantile, cluster, bin or coefficient sweep.",
+    "no_outcome_inputs": "No development, confirmation, calibration correctness, final-benchmark answers/scores, historical per-example NLL/probe gains or fitted candidate weights may set or revise this protocol. Benchmark question-only exclusion metadata is an input integrity guard.",
+    "claim_boundary": "This cross-question mixture is an adaptation of likelihood/coverage ideas, not an exact same-question GRAPE reproduction, established novel algorithm, guaranteed improvement, SOTA or proof of universal task gains. Preserve prior benchmark-exposure disclosures."
+  },
+  "identity_and_serialization": {
+    "canonical_value_bytes": "UTF-8 json.dumps(value, sort_keys=True, ensure_ascii=False, separators=(',', ':'), allow_nan=False), with no trailing newline. Plain JSON types only, no duplicate object keys or nonfinite numbers.",
+    "value_sha256": "Lowercase hexadecimal SHA256 of canonical_value_bytes. A physical FILE SHA256 hashes exact saved bytes separately; every receipt labels which identity it carries.",
+    "id_format": "Canonical normalized-question SHA256: exactly64 lowercase hexadecimal characters. Sort IDs by ascending ASCII/Unicode codepoint order, which is identical for this alphabet.",
+    "ordered_id_identity": "VALUE SHA256 of the JSON array in its exact declared presentation order. Also record VALUE SHA256 of sorted unique IDs; require exact counts and no duplicates.",
+    "pair_and_token_identity": "Bind original canonical row, system/user/assistant messages, rendered prompt/full text, prompt/full token arrays, labels/mask, native EOS/tail, tokenizer/base/source/exclusion identities and cache shard/index FILE hashes. Do not recanonicalize or rewrite the source strings.",
+    "score_float_identity": "Persist every FP64 sum and mean as both a finite round-trippable JSON number and Python float.hex() string. Require exact decoded agreement. Rank the decoded finite binary64 mean; no decimal rounding, epsilon ties, quantile bucketing or length normalization. An exact mean tie is broken by ascending canonical ID.",
+    "cell_object": {"topic": "plain integer0..63", "length_bin": "plain integer0..4"},
+    "cell_order": "Ascending(topic, length_bin), including empty cells in count/provenance tables.",
+    "cell_rng_namespace_object": {
+      "protocol": "extension-full-pool-selector-v1",
+      "seed": 20261021,
+      "purpose": "One of the exact purpose strings below",
+      "eligible_sorted_ids_sha256": "VALUE SHA256 of ascending eligible IDs",
+      "topic_assignments_sha256": "VALUE SHA256 of ascending-ID [{id,topic}] records",
+      "random_ordered_ids_sha256": "VALUE SHA256 of the once-drawn R15000 ID array",
+      "cell": {"topic": "integer", "length_bin": "integer"}
+    },
+    "cell_seed_derivation": "SHA256(canonical_value_bytes(namespace_object)); seed=int.from_bytes(the32 digest bytes, byteorder='big', signed=False). Construct a fresh random.Random(seed) for each purpose/cell, and call sample(sorted_available_ids, requested_count) once. No shared mutable RNG or process-order-dependent seed.",
+    "cell_rng_purposes": ["S15000.coverage", "S15000.order", "S2048.low_tag", "S2048.coverage_tag", "S2048.order"],
+    "rng_independence": "Namespaces deliberately contain no CE values, score-file hash, selected-S digest, calibration/development/benchmark metrics or runtime-dependent job identifier. Available coverage candidates still depend on the explicitly removed low-CE set; that dependency is part of the declared algorithm.",
+    "zero_quota_cells": "Emit an explicit zero-count receipt. No sampling or estimator refit is needed for a cell with quota0. Empty learned clusters are valid and necessarily receive quota0 in R/S."
+  },
+  "eight_prospective_choices": [
+    {
+      "id": "S1_population_and_complete_cache",
+      "input_population_rows": 83029,
+      "reserved_source_exclusion_rows": 67,
+      "final_benchmark_question_exclusion_rows": 1,
+      "overlap_between_exclusion_components": 0,
+      "excluded_union_rows": 68,
+      "eligible_population_rows": 82961,
+      "definition": "Validate the entire unchanged canonical pool, then apply the already verified union of reserved-source-evaluation IDs and all-nine-final-benchmark lexical-question IDs BEFORE topic fitting, scoring, R/S draws or new training. Every eligible ID occurs once in ascending-ID order. No response length, box, branching, repetition, old training/probe membership or loss filter is added.",
+      "source": {"repository": "redsgnaoh/acereason11_100k", "revision": "ce815bd726c0c4ffdc0912789754646910188195", "sha256": "f064d1a5fb39b9f493f678d5d6350a9acbfb2a2fa85400d0947fe72578ff28d8"},
+      "pool": {"path": "deadline/artifacts/pool.json", "sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0"},
+      "exclusions": {
+        "development_seal_complete_sha256": "354859dd44e2fe3aa7800ec991b60649f00a99ce4768d8075af42c007289987d",
+        "benchmark_audit_file_sha256": "2671a58d0abf9f52de5445649aecf9a389363f0fe54d8f05dbf5bca243c6fa6f",
+        "benchmark_pool_ids_file_sha256": "5a687438e7b5c31dbc16f2671582b448ff970739219328dbf9c5836474a89984",
+        "combined_receipt_file_sha256": "0066e69a996cf963173018d68196d7ff69e658420c40b250941c2fe8bb6da406",
+        "consumer_rule": "Verify the physical receipts and canonical ID-namespace/population/component VALUE bindings from native-smoke-preparation1224497. The lexical audit includes all nine benchmark question sources and both declared AMC representations; this does not prove semantic decontamination."
+      },
+      "native_cache": {
+        "cutoff": 32768,
+        "context_reserve_tokens": 32,
+        "maximum_complete_serialized_tokens": 32736,
+        "prompt": "Original row.system plus original row.instruction through the exact pinned native chat template/add_generation_prompt=True. Require original canonical row.input=='' because its source content was already incorporated into instruction; never concatenate it again.",
+        "target": "Complete original row.output plus the actual native EOS-plus-template tail. Preserve the exact full rendered text and prompt-prefix token identity, with labels=-100 on prompt and native token IDs on every response/EOS/tail position. Labels remain unshifted in the cache.",
+        "integrity": "Replay/validate every eligible original pair on admitted CPU compute. Bind original strings, complete token arrays, masks, positive active counts, vocabulary, terminal suffix and all cache/index hashes. Require full L+32<=32768, retaining the existing32-token context reserve; the reserve is unused capacity, not appended or supervised tokens. The known historical maximum31776 suggests no population change, but only the new full replay may verify that. Never truncate, append EOS, drop, refill, shorten, recanonicalize or rewrite a row.",
+        "failure": "Any population count/identity, exclusion, prefix, label, native suffix or complete-context mismatch stops preparation and all downstream use. Preserve a failure receipt; no conditional shorter population or partial cache can substitute."
+      },
+      "assignment_qualification": "This is broad sampling from82961 canonical cleaned/decontaminated prepared pairs derived from raw100K, not uniform untouched100K row-index sampling. Report that distinction, all68 exclusions and historical overlap counts."
+    },
+    {
+      "id": "S2_fresh_full_question_coverage",
+      "input": "Every eligible full original instruction, in ascending canonical-ID order, with no assistant/output/system/solution/gold/model-loss text. Topic-text normalization is NFKC, collapse every Unicode whitespace run to one ASCII space, strip leading/trailing whitespace; preserve numbers and mathematical operators. Do not truncate the question. TfidfVectorizer then applies its explicitly enabled lowercase policy. This representation does not modify cached training strings or IDs.",
+      "tfidf": {
+        "class": "sklearn.feature_extraction.text.TfidfVectorizer",
+        "parameters": {
+          "input": "content", "encoding": "utf-8", "decode_error": "strict", "strip_accents": null,
+          "lowercase": true, "preprocessor": null, "tokenizer": null, "analyzer": "char", "stop_words": null,
+          "token_pattern": "(?u)\\b\\w\\w+\\b", "ngram_range": [3, 5], "max_df": 1.0, "min_df": 1,
+          "max_features": 50000, "vocabulary": null, "binary": false, "dtype": "numpy.float32",
+          "norm": "l2", "use_idf": true, "smooth_idf": true, "sublinear_tf": true
+        },
+        "notes": "token_pattern/tokenizer/stop_words are inert for analyzer='char' but are still part of the full recorded constructor configuration. Persist the actual get_params(deep=False) after canonical type encoding, vocabulary/IDF and matrix shape/nnz/dtype hashes."
+      },
+      "svd": {
+        "class": "sklearn.decomposition.TruncatedSVD",
+        "n_components_formula": "k=min(128, n_samples-1, n_features-1), using the actual TF-IDF matrix dimensions before fitting. Require k>=1. This predeclared dimension formula is the only rank sizing rule; no outcome-dependent rank search.",
+        "parameters": {"algorithm": "randomized", "n_iter": 5, "n_oversamples": 10, "power_iteration_normalizer": "auto", "random_state": 20261021, "tol": 0.0},
+        "post_transform": {"callable": "sklearn.preprocessing.normalize", "norm": "l2", "axis": 1, "copy": true},
+        "checks": "Require a finite returned(n_samples,k) representation and positive finite row norms before normalization. Persist actual parameters, fitted components/singular values/shape/dtype and normalized representation hashes. A failed rank/dimension/zero/nonfinite check stops; do not bypass SVD or choose another k."
+      },
+      "clustering": {
+        "class": "sklearn.cluster.MiniBatchKMeans",
+        "parameters": {"n_clusters": 64, "init": "k-means++", "max_iter": 100, "batch_size": 1024, "verbose": 0,
+          "compute_labels": true, "random_state": 20261021, "tol": 0.0, "max_no_improvement": 10,
+          "init_size": null, "n_init": 3, "reassignment_ratio": 0.01},
+        "fit": "One fit_predict on the complete normalized full eligible matrix in ascending-ID input order. The estimator's fixed n_init=3 is part of this one fit, not three inspected candidate fits. No subset fit, warm start, alternate seed, refit after CE or sentinel assignment.",
+        "coverage": "Every one of82961 IDs must receive one actual plain integer label0..63. Preserve the fitted estimator's label IDs. Empty clusters are allowed and have zero population/R/S quota; label-1 or64 is never a topic. Save all centers/fit artifacts and ascending-ID assignments, exact get_params and actual effective init_size.",
+        "interpretation": "These are reproducible unsupervised coverage cells, not certified semantic topic categories."
+      },
+      "runtime": {
+        "metadata_only_arc_verified_versions": {"numpy": "1.26.4", "scipy": "1.15.3", "scikit-learn": "1.7.2", "threadpoolctl": "3.6.0", "joblib": "1.5.2"},
+        "verification_owner": "Root provided installed importlib.metadata observations without importing/fitting these libraries. Native CPU assertions of the same versions, installed module/source identities and all actual estimator parameters remain mandatory before any fit.",
+        "thread_environment": {"OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "NUMEXPR_NUM_THREADS": "1"},
+        "effective_threads": "On admitted CPU, capture threadpoolctl information after the required libraries load and assert effective numerical pools use the sealed one-thread policy. Record BLAS/LAPACK/OpenMP vendors, versions and paths. Do not claim bitwise cross-platform determinism from random_state alone.",
+        "parameter_assertion": "Compare installed get_params(deep=False) to every parameter above, including symbolic encoding of numpy.float32 and the computed SVD k, before fit; fail rather than silently inherit changed defaults. After fit record effective init_size and all fitted artifact hashes. No sklearn/model/data imports or fitting on login/local."
+      },
+      "primary_sources": [
+        "https://raw.githubusercontent.com/scikit-learn/scikit-learn/1.7.2/sklearn/feature_extraction/text.py",
+        "https://raw.githubusercontent.com/scikit-learn/scikit-learn/1.7.2/sklearn/decomposition/_truncated_svd.py",
+        "https://raw.githubusercontent.com/scikit-learn/scikit-learn/1.7.2/sklearn/cluster/_kmeans.py"
+      ],
+      "primary_source_qualification": "Root checked these pinned official1.7.2 sources to supply the full parameter lists. This artifact did not import sklearn or perform a new estimator fit. requirements-selection.txt's older sklearn1.6.1/Transformers4.51.3 stack is not an instruction to replace the verified native environment."
+    },
+    {
+      "id": "S3_full_original_target_mean_ce",
+      "definition": "For full native sequence x[0..L-1], exact prompt boundary P>=1, and A=L-P>0, target j=P..L-1 is scored from the original causal model's predecessor hidden/logits at j-1. Shift exactly once. CE_j=-log_softmax_FP32(original_tied_head_BF16(h[j-1]))[x[j]]. Rank mean_ce=FP64_ordered_sum(CE_j)/A, lower first.",
+      "supervision": "Include every original assistant token, each active native EOS151645 occurrence and every native terminal-template tail token. Prompt positions are excluded. There is no padding under microbatch1; reject any inconsistent mask, active count, tail or cache hash. Do not assume EOS is the final serialized token.",
+      "ordered_reduction": "Visit active target positions in ascending j. Convert each computed finite FP32 CE scalar to binary64 and add to the running binary64 total in that exact order, starting at+0.0; no FP32 chunk-sum or unordered reduction substitutes. Independently maintain the same ordered subset sums for EOS, non-EOS and declared terminal-tail diagnostics, with exact counts. Divide the total once by the exact positive active count.",
+      "private_score_record": ["canonical_id", "original_row_and_pair_sha256", "cache_shard_index_binding", "prompt_and_full_token_ids_sha256", "labels_or_mask_sha256", "prompt_tokens", "total_tokens", "active_tokens", "eos_non_eos_and_tail_counts", "nll_sum_and_hex", "mean_ce_and_hex", "eos_non_eos_tail_nll_sums_and_hex", "score_definition_sha256", "loaded_base_identity_sha256", "runtime_precision_identity_sha256"],
+      "prohibited_substitutions": "No first512/8192-prefix loss, standalone response context, sliding/restarted windows, truncated/rewritten target, answer-only span, sum-NLL ranking, cross-cell z-score, length adjustment, teacher correctness, online weights, frozen-prior weights, probe gain or candidate-model loss. An exact CE tie uses ID order, not a second quality metric."
+    },
+    {
+      "id": "S4_inference_numeric_route",
+      "base": {"repository": "Qwen/Qwen2.5-3B-Instruct", "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1", "identity_path": "deadline/artifacts/model_identity.json", "identity_sha256": "81af59dbb365b8559ad0d853dbda245aa4ac3ff0bedc03428e50fed65d7f7ae2"},
+      "loader_visible_file_inventory": {"path": "extension/smoke_preparation_plan.json", "sha256": "42ac6063786baf0a114507bfae7287dc709210601cd204098936f135a47508a0", "key": "base.files", "files": 9},
+      "storage_and_execution": {"parameter_storage": "float32", "compute_autocast": "CUDA bfloat16", "attention_implementation": "sdpa", "mode": "eval", "grad_context": "torch.no_grad", "use_cache": false, "microbatch": 1, "head_chunk_positions": 128, "log_softmax_and_ce": "float32", "ordered_scalar_reductions": "float64", "reference_model": false, "optimizer": false, "backward": false, "gradient_checkpointing": false},
+      "full_context_path": "Execute one native causal backbone pass over the entire complete pair. Use its actual final-normalized hidden states once. Project only the required active predecessor positions through the unchanged original bias-free tied head, in ascending contiguous windows of exactly128 except the final shorter window. Keep the complete original prefix. Do not create/return an L-by-vocabulary tensor, remove the final norm, call another head or reduce the vocabulary.",
+      "native_observations_required": "Verify all original loader-visible bytes and resolved revision, original architecture/unique434/tied storage identity, finite unchanged FP32 parameters, zero dropout/eval/use_cache=false, logical assigned B200 UUID, actual SDPA and CUDA BF16 autocast at backbone/head entry and actual BF16 head outputs. Record hidden/logit/loss dtypes rather than infer them from arguments. Model load only after actual compute/current-role/deadline/source/cache/base guards; local_files_only and no remote code/downloads.",
+      "numeric_gate_not_yet_sealed": "Root must prospectively set exact dense-short versus bounded-head BF16 CE/logit/reduction tolerances, same-path repeat/parameter-identity checks and TF32/reduced-reduction/SDPA backend flags before even the first probe score. CPU toy parity is not native BF16 proof; a failure cannot widen a tolerance or select another precision after scores.",
+      "scope_boundary": "A successful complete no-gradient scorer does not admit reference-bearing training, Trainer, gradients, Adam, recomputation, long-after-Adam memory, pilots or new accuracy. A failed training diagnostic does not by itself block this separately validated inference workload."
+    },
+    {
+      "id": "S5_broad_random_once",
+      "algorithm": "R15000=random.Random(20261021).sample(sorted(eligible82961_IDs),15000), exactly once on admitted CPU after the eligible/cache seal and before any CE values exist. Preserve the returned draw order. Do not replace this direct seed with the cell namespace scheme.",
+      "identity": "Freeze and hash the private ordered IDs, sorted-ID set, all original pair/cache identities, full eligible population/exclusion IDs, Python/random implementation/version/source and exact selector code. An immutable receipt is an identity seal, not a cryptographic digital-signature claim.",
+      "independence": "Do not filter, redraw, rebalance or replace R for box quality, repetition, topic counts, losses, short parity examples, memory fit, historical training overlap or pilot outcomes. Topic/length counts are measured after the once-draw; they do not condition it. A failed later fit/cache/tag stage preserves the original draw and stops this version.",
+      "parity_witness": "Any separately presealed external short numerical witness remains diagnostic-only and is never inserted into the15000 or2048 training exposure. No draw retry is allowed to manufacture such a row."
+    },
+    {
+      "id": "S6_exact_cells_and_half_mixture",
+      "length_definition": "Complete native total serialized token count L, including system/user/native prefixes and every original response/EOS/tail token; never response-only length or historical cached prefix length. Require L+32<=32768 for every eligible row. The nominal top length bin still ends32768; its feasible occupied envelope ends32736 under the fixed32-token reserve. No IDs or bins are changed to repair a failed envelope check.",
+      "length_bins_inclusive": [[1, 2048], [2049, 4096], [4097, 8192], [8193, 16384], [16385, 32768]],
+      "cells": "C(t,b) contains every eligible ID with learned topic t and the unique inclusive length bin b. Require all82961 IDs partition exactly once across64x5 cells. Empty cells are allowed.",
+      "quotas": "q(t,b)=count of R15000 IDs in C(t,b), with sum(q)=15000. No sqrt-topic, uniform-topic or loss-dependent quota replaces these exact R counts.",
+      "low_ce_members": "For each cell, stable-sort all its IDs by(mean_ce_binary64, canonical_ID). Select the first floor(q/2), tag='low_ce'.",
+      "coverage_members": "Remove only that cell's selected low_ce IDs, sort every remaining cell ID ascending and use a fresh cell RNG purpose='S15000.coverage' to sample q-floor(q/2) without replacement, tag='seeded_coverage'. A coverage member can also have low CE; the tag identifies its selection route, not a verified difficulty class.",
+      "full_order": "For each cell, use purpose='S15000.order' to sample-permute its sorted union of selected low_ce and coverage IDs, taking all q. Traverse R15000's original draw order; at each position pop the next ID from the S queue for that same cell. All queues must exhaust exactly. Thus R/S full training orders have identical cell sequences, while exact original pairs, lengths, CE and supervised-token exposures can differ.",
+      "invariants": "Exactly15000 distinct S IDs, original targets unchanged, no68 exclusions, each cell quota and floor-half tag count exact, all scores complete and finite under one identity. R/S overlap is permitted and reported; no cross-arm exclusion or diversity rewrite is added.",
+      "failure": "Any population, complete-score, quota, tag, namespace or queue inconsistency is a terminal selector failure. Do not replace unavailable tags with another route, change the half-mixture, merge cells, shorten contexts, resample R or choose a different score definition."
+    },
+    {
+      "id": "S7_nested_2048_and_shared_exposure",
+      "random_pilot": "R2048 is exactly the first2048 IDs of the once-frozen R15000 draw order. No short-row conditioning or independent pilot draw.",
+      "pilot_cell_quotas": "p(t,b)=count of R2048 IDs in cell(t,b), sum(p)=2048. S2048 must be a subset of the already frozen S15000 with exactly these counts.",
+      "selected_pilot_tags": "Within each S15000 cell, sample floor(p/2) IDs from sorted low_ce-tag members using purpose='S2048.low_tag', and p-floor(p/2) from sorted seeded_coverage-tag members using purpose='S2048.coverage_tag'. This preserves the full-S tagged half-mixture; it does not rerank the pilot to an additional more-extreme lowest-CE prefix or reselect from the full pool.",
+      "selected_pilot_order": "Permute each sorted union of chosen S2048 cell IDs with purpose='S2048.order'. Traverse R2048's cell sequence and pop from the corresponding S2048 queue. Every queue must exhaust, yielding identical R/S pilot cell-order exposure and fixed within-arm IDs/order for every objective.",
+      "capacity_proof": "p<=q implies floor(p/2)<=floor(q/2) and ceil(p/2)<=ceil(q/2), so a correctly sealed full S has enough members of each tag. Still check actual member identities, capacities, uniqueness, subsets and exact counts explicitly.",
+      "fallback": "There is no replacement/draw fallback. If any tag/quota/pilot-order invariant is impossible or disagrees with its receipt, preserve all frozen15000 draws and fail the version. Do not lower2048, borrow another tag/cell, create a new S, change the seed or truncate targets.",
+      "training_boundary": "This protocol binds data identities only. The separate seven-cell objective/LR/GA8/final256/save64 recipe, fresh initialization, promotion, confirmation and actual complete32768 training-memory gates require their own final plans. A2048 mechanism screen cannot substitute for the assignment's final15000 original pairs, nor continue its checkpoint into a full run."
+    },
+    {
+      "id": "S8_length_only_probe_complete_coverage_and_resources",
+      "timing_witness_rule": "Before any model score, sort the newly complete eligible cache by(total_tokens,canonical_ID). Choose ranks floor(a*(N-1)/b) for the fixed ordered fractions0/1,1/10,1/4,1/2,3/4,9/10,19/20,99/100,1/1. Use exact integer division, and remove only repeated selected IDs by first occurrence. Seal the private ID/order/cache hashes before loading the scorer. These are length-only timing witnesses, not quality filters.",
+      "probe_scope": "The same complete-context numeric route intended for full scoring, including the actual longest eligible row, plus separately presealed short dense-oracle checks. Time model hashing/loading, full backbone, head projection and reductions separately; record total/active lengths, finite CE, actual dtype/backend, memory/headroom and actual assigned allocation. Inspect CE only for mathematical validity/parity, never for an attractive value or selected row.",
+      "full_scoring_order": "Ascending eligible canonical ID. Every one of82961 IDs is scored exactly once in the full pass; probe observations do not remove rows or replace full scores. Bind the same model/cache/numeric/runtime/score-definition identities throughout. Selection is forbidden from a partial prefix, completed shard subset or guessed-zero missing score.",
+      "completion": "Reconcile exact ordered and set digests, per-row source/token/mask/length/active/EOS/tail identities, all finite per-row sums/means, every part/file hash, total row/token counts, unchanged original parameters/sources, actual terminal accounting and no extra/missing/duplicate/excluded IDs. A native full-cache or whole-score completion receipt exists only after all checks pass.",
+      "resource_policy": {"deadline_utc": "2026-10-28T03:59:00+00:00", "minimum_closeout_reserve_seconds": 172800, "new_global_gpu_hour_cap": null, "maximum_pending_or_running_user_gpu_allocations": 2, "each_job_finite_and_individually_admitted": true, "automatic_downstream": false, "automatic_retry_or_resume": false},
+      "proposal_ceilings_not_admissions": {"cpu_prepare_and_topics": {"gpus": 0, "cpus": 8, "ram_gib": 64, "wall_time_seconds": 14400}, "gpu_probe": {"gpus": 1, "gpu_type": "B200", "cpus": 8, "ram_gib": 128, "wall_time_seconds": 1800}, "gpu_full_scoring": {"gpus": 1, "gpu_type": "B200", "cpus": 8, "ram_gib": 128, "wall_time_seconds": 43200}, "cpu_selector": {"gpus": 0, "cpus": 4, "ram_gib": 32, "wall_time_seconds": 3600}},
+      "admission_rule": "Root must separately seal each actual allowed Slurm resource/QoS/wall-time plan and current source/ledger snapshot. Full scoring admission uses only the completed fixed probe's implementation correctness and conservative length-aware throughput/memory estimate, with an explicit safety margin and48-hour delivery reserve. These ceilings are not measured runtimes or permission to submit.",
+      "failure": "Resource or deadline infeasibility stops this reservation/version; it never permits a shorter target, dtype/backend/cluster/mixture sweep, partial population, extra GPU beyond the two-allocation cap, automatic continuation or source-development ranking. Preserve all failed attempts and prior ledgers."
+    }
+  ],
+  "required_new_cpu_fixture_and_native_evidence": [
+    "Gold/output mutation leaves topic input and its question-only fit path unchanged; exact full parameter/runtime/seed/fit-order checks; true assignment for every synthetic population member including empty learned clusters, with no sentinel or subset-fit substitution.",
+    "Independent dense CE oracles for unequal prompt/response lengths, one causal shift, complete response/EOS/tail supervision, exact per-token ordered FP64 sums/means, finite checks and bounded128-position full-vocabulary projections across tail/chunk boundaries.",
+    "Independent small analogous population RNG/quota/tag/order oracles: one broad sample, exact cell quotas, odd floor-half counts, tied means/ID order, overlap allowed, zero cells, deterministic SHA namespaces, nested tagged subsets and failure rather than redraw/refill.",
+    "Strict duplicate/excluded/extra/missing IDs and source/cache/model/runtime/hash tampering fail closed. Physical FILE and canonical VALUE hashes remain distinct. No output reuse, hidden resume, unbound latest score or parameter default is admitted.",
+    "Actual native CPU full serialization/topic/R artifacts and exact count/parameter/BLAS/source evidence are separate from toy fixtures. Actual B200 dense-short numeric and longest inference-memory/throughput proof are separate from CPU or training-helper proofs. No scoring occurs before their prospective gates/admissions."
+  ],
+  "unresolved_blocking_gates_for_next_root_decision": [
+    {"id": "U1_root_scientific_approval", "needed": "Approve this one eight-choice definition, including the exact SHA cell namespaces, full/pilot cell-sequence ordering and sampling WITHIN full-S tags for nested membership. After approval no alternative is selected using losses/development/calibration results."},
+    {"id": "U2_native_runtime_and_full_estimator_assertions", "needed": "Seal an actual metadata receipt for the root-observed five library versions, Python/random implementation, exact installed sklearn class sources/get_params and BLAS/LAPACK/OpenMP/threadpool information. Assert the fixed parameters before any fit; after fit record actual effective init_size and all artifacts. No local/login library import is performed by this document."},
+    {"id": "U3_cache_storage_and_transitive_code", "needed": "Choose and review the new CPU preparation/cache-index/shard/selector schemas, integer storage/byte limits, atomic-exclusive writes, source/plan inventories and privacy/error journals. Define full-cache native QA scope and source-only fixture counts before execution. Revalidate all82961 complete lengths and exact68 exclusions; four historical witnesses are insufficient."},
+    {"id": "U4_scoring_native_numeric_bounds", "needed": "Freeze exact independent dense-short versus chunked BF16 logit/CE/ordered-sum tolerances, repeat-variation policy and identity/reduction checks before any model score. Specify native TF32/reduced-reduction/SDPA backend flags identically and assert actual behavior. No numerical tolerance is invented or borrowed as already-proven by this planning artifact."},
+    {"id": "U5_inference_memory_measurement", "needed": "Review concrete no-LxV backbone/head implementation, parameter-immutability checks and resource tracing; seal positive strict memory/headroom limits and sampled-driver/nonallocator/RSS qualifications before the probe. Inference success supplies no backward/Adam/reference-bearing training admission."},
+    {"id": "U6_private_score_parts_and_failure_closeout", "needed": "Seal the exact score-part row boundaries/serialization, finite float/hex checks, complete hash manifests and no-resume policy before full scoring. Hash-bound interrupted parts remain private evidence only; any future reuse requires a new prospective operational review, not an implicit recovery path."},
+    {"id": "U7_probe_and_full_reservations", "needed": "Seal actual CPU/probe/full/selector resources, allowed scheduler queues, native QA and current source/ledger snapshots. Use fixed probe timing and the complete new length distribution to choose a conservative finite full reservation and delivery margin, without consulting whether scores are favorable. No throughput/memory ETA is established here."},
+    {"id": "U8_training_and_claim_limits", "needed": "Keep actual complete32768 training/GA8/long-after-Adam/recompute/finite-update/save/reload gates, matched R/S objective controls, exact supervised-token exposure receipts, ranking and single-use confirmation separate. Neither full-base CE nor cell matching establishes better source/benchmark accuracy or equal token/compute exposure."}
+  ],
+  "privacy_and_release": {
+    "private_on_compute": "Raw questions/solutions, canonical ID lists, per-ID CE and tags, topic features/assignments, original-pair exports, complete token caches and detailed failures stay owner-only700/600 on ARC unless root separately authorizes assignment-artifact publication.",
+    "public_metadata": "Aggregate population/cell/tag/overlap/token/length counts, runtime/resource/parameter settings, source/model/file VALUE/FILE hashes, passed/failed gates and honest qualifications. No actual sampled IDs, source gold, raw text, per-record seeds or private logs are included by this planning file.",
+    "exposure_disclosure": "R/S match coarse topic/total-length cell counts and cell order, not exact active-token totals or computation. Report each arm's exact total/active/EOS/tail tokens, within-bin distributions, low/coverage CE summaries and old-training/probe/reservoir/R-S overlap; do not condition selection on making those diagnostics look favorable."
+  },
+  "read_only_evidence_and_design_inputs": [
+    {"path": "extension/planning/full_pool_scoring_readiness_review.json", "sha256": "a42673e88c48874444b0c60cf017bfc8bd87f4a136e7b8490224c99bf76a7af2"},
+    {"path": "extension/campaign.json", "sha256": "1407fa170f5b962249c54a294cbadf2b9b96fa90ab6101ad46037301be183dfe"},
+    {"path": "extension/research.json", "sha256": "c81e9a4c966fea1441b77a87e3036fd4cacb2e61f9e2417b8150040252236aca"},
+    {"path": "extension/planning/pilot_freeze_readiness.json", "sha256": "70b7ce6c5eeb99076f1573c822b489dea3e5da38c086df57684bdd59614802fb"},
+    {"path": "extension/planning/preservation_pilot_design_v2.json", "sha256": "5fa145f6a8d0996cf3528cab21da94fb4657fabfb1789a794ad829345ff20f13"},
+    {"path": "extension/planning/prospective_pilot_review.json", "sha256": "129a53f06aa70d5d0ca4afc536ed852b1e0145555b85d084722e160b5ec12c10"},
+    {"path": "extension/preserving_data.py", "sha256": "a560e039d4af86739d16f4c3101eb820535ecebf0373571064db9c588bc69d03"},
+    {"path": "reasoning/data.py", "sha256": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68"},
+    {"path": "reasoning/features.py", "sha256": "5cee76526c1b552e53b490c811c2e4c5506758985be735c13bc0945fb6a59d13"},
+    {"path": "extension/report/feasibility-20261020-1222225/complete.json", "sha256": "8cee12034e7c9f9f6f3334cdac2d3edf5504658ef8000c664761a16887440505"},
+    {"path": "extension/report/native-smoke-preparation-20261021-1224497/complete.json", "sha256": "b7d8dc41b6fd90befc6a85130b3904245aea6dbd2cafc3209941d647a3ab8df5"}
+  ],
+  "work_performed": "Read static source/planning files and small existing public metadata, hash those read-only inputs, and create only this new prospective JSON. No corpus/cache/model/tokenizer bytes, actual RNG draw, library/project import, test, fit, inference, source score, generation, grading, scheduler admission, job, commit, publication or protected176-file modification occurred."
+}

@@ -1,0 +1,33 @@
+{
+  "approved_at_utc": "2026-10-21T09:45:27.305812+00:00",
+  "approved_choice_ids": [
+    "S1_population_and_complete_cache",
+    "S2_fresh_full_question_coverage",
+    "S3_full_original_target_mean_ce",
+    "S4_inference_numeric_route",
+    "S5_broad_random_once",
+    "S6_exact_cells_and_half_mixture",
+    "S7_nested_2048_and_shared_exposure",
+    "S8_length_only_probe_complete_coverage_and_resources"
+  ],
+  "blocking_before_any_new_fit_score_probe_or_draw": [
+    "Resolve and prospectively seal ALL operational/numeric/runtime/cache/serialization/resource gates U2..U8 from the bound protocol in concrete reviewed code and finite current-ledger/nativeQA admissions.",
+    "The scorer exact native BF16 dense-short/repeat/backend tolerance policy must be frozen before the first scoring OR full-topic fitting/draw stage; no implicit borrowing of training-memory success.",
+    "Run new fixture tests only on actual admitted compute; do not use this approval as an adapter, CPUqa success or a GPUcapacity override.",
+    "Current protected176 and ledger32 remain unchanged; every future role must explicitly bind then-current history, source parents and both exclusion components."
+  ],
+  "calibration_method_ranking_or_retuning_used": false,
+  "execution_authorized": false,
+  "fit_score_draw_or_training_has_started": false,
+  "nested_pilot_decision": "Use the specified deterministic samples WITHIN the already sealed fullS low/coverage tags. Do not make the pilot a second more-extreme CE prefix or reselect from the pool. All pairedcellcounts/order and subset/tag invariants must hold.",
+  "no_automatic_retry_resume_downstream": true,
+  "protocol_file": {
+    "path": "extension/planning/full_pool_selector_prospective_protocol.json",
+    "sha256": "160948a0477c6f234a587ac2cc32297f5dc229ba6c0e3a83cea89242fd3adc29"
+  },
+  "raw_private_records_included": false,
+  "root_decision": "Approve the one complete82961 original-pair population with exact68 exclusions, native complete32768 context and32 unused reserve, full-question coverage params, full-active original-base CE route, once broad R15000, fixed per-cell floor-half lowCE plus seeded coverage, sampled-within-tag nested2048 and length-only probe/order definitions exactly as specified. These are prospective method choices, not outcomes or a demonstrated improvement.",
+  "schema": "extension-full-pool-selector-root-scientific-approval-v1",
+  "scientific_choices_may_change_after_source_or_model_outcomes": false,
+  "status": "eight_source_only_scientific_definitions_approved_before_any_fit_score_or_draw_no_execution_admitted"
+}

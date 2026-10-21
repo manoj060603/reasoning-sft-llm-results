@@ -1,0 +1,220 @@
+{
+  "schema": "extension-full-pool-scoring-readiness-review-v1",
+  "status": "planning_only_choices_unsealed_no_execution_or_admission",
+  "purpose": "Identify the exact source, numerical, coverage and selection choices that root must seal before fresh full-population topic fitting, original-base CE scoring or R/S selection. This review creates no scorer, cache, IDs, scores or runnable admission.",
+  "execution": false,
+  "tested": false,
+  "model_or_data_workload_performed": false,
+  "scientific_choices_frozen_by_this_review": false,
+  "protected_sources_changed": false,
+  "decision": "A separately admitted inference-only original-base CE scorer need not wait for a successful long-after-Adam training-memory diagnostic. Its own complete-context forward, numerical, model identity and memory checks remain mandatory. One scoring B200 may overlap one separately admitted head/training diagnostic under the campaign's maximum of two pending/running GPU allocations; neither stage automatically admits the other.",
+  "existing_evidence_and_limits": {
+    "campaign": {
+      "deadline_utc": "2026-10-28T03:59:00+00:00",
+      "new_global_gpu_hour_cap": null,
+      "maximum_initial_concurrent_gpu_allocations": 2,
+      "minimum_closeout_reserve_seconds": 172800,
+      "historical_experiments_and_ledger_preserved": true,
+      "qualification": "The campaign and older planning files contain historical stage statuses. This review uses their proposed source/selection definitions, not their stale statements about pending jobs, as current evidence. Unlimited GPU hours do not admit any job or remove finite wall times, queue checks or the deadline reserve."
+    },
+    "completed_source_audit": {
+      "path": "extension/report/feasibility-20261020-1222225/complete.json",
+      "sha256": "8cee12034e7c9f9f6f3334cdac2d3edf5504658ef8000c664761a16887440505",
+      "prepared_feature_population_rows": 83029,
+      "cached_total_serialized_tokens": 618134020,
+      "cached_total_response_span_tokens": 603080250,
+      "cached_maximum_serialized_tokens": 31776,
+      "qualification": "These cached aggregate counts concern all83029 finalized canonical rows before the new68-row exclusion union. They are not exact new82961 token totals, fresh complete token caches, full CE coverage, throughput or a memory guarantee. Do not equate this population with untouched100K raw row indices."
+    },
+    "completed_question_exclusion_and_witness_preparation": {
+      "path": "extension/report/native-smoke-preparation-20261021-1224497/complete.json",
+      "sha256": "b7d8dc41b6fd90befc6a85130b3904245aea6dbd2cafc3209941d647a3ab8df5",
+      "prepared_file_sha256": "d1bb1875a293c71f2a108df4b287b3bb2ab35b3168cd6505b5bd91a98fd66457",
+      "pool_rows_scanned": 83029,
+      "reserved_source_excluded_rows": 67,
+      "final_benchmark_excluded_rows": 1,
+      "overlap_between_exclusion_components": 0,
+      "combined_excluded_rows": 68,
+      "eligible_rows": 82961,
+      "complete_native_witnesses_serialized": 4,
+      "longest_witness_tokens": 31776,
+      "qualification": "Both exclusion components must apply before topic fitting, base-loss scoring, selection, new probes and training. The exact lexical criterion is not semantic decontamination. Four witnesses do not establish fresh serialization of all82961 rows."
+    },
+    "known_old_feature_limit": "The old prepare_transfer producer fitted64 clusters only on its structurally eligible subset. Unfitted cluster-1 was later represented by sentinel64 for47614 rows. Neither sentinel is a learned topic. The old structural filters, first512-response-token feature NLL and cross-fitted probe gains are different estimands and cannot replace the proposed full-target original-base CE or full-population coverage features.",
+    "training_memory_boundary": "A complete no-gradient CE forward has one frozen base and no reference, backward activations, accumulated gradients or Adam moments. A failed or pending reference-bearing training-memory trial therefore does not by itself block this distinct workload. Conversely successful inference scoring supplies no training-memory, gradient, BF16 Trainer, recompute, optimizer, pilot or accuracy admission.",
+    "outcome_boundary": "No generated calibration answers, grading accuracy, benchmark outcomes, per-example source losses or candidate rankings were read or used for this review. Calibration is engineering evidence only and cannot choose topic parameters, score normalization, mixture ratio, length bins, IDs or a new method."
+  },
+  "fixed_inputs_to_revalidate_on_compute": {
+    "raw_source": {
+      "repository": "redsgnaoh/acereason11_100k",
+      "revision": "ce815bd726c0c4ffdc0912789754646910188195",
+      "sha256": "f064d1a5fb39b9f493f678d5d6350a9acbfb2a2fa85400d0947fe72578ff28d8"
+    },
+    "canonical_pool": {
+      "path": "deadline/artifacts/pool.json",
+      "sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+      "rows": 83029,
+      "id_namespace": "Existing canonical normalized-question SHA256; preserve exact original pair strings and native system mapping."
+    },
+    "cached_features": {
+      "path": "deadline/artifacts/features.json",
+      "sha256": "c6ef548173b6b4e93a62fd5c43783ad49a6e3dc9b9437b3b31941ffef8c2b55f",
+      "meta_path": "deadline/artifacts/features.json.meta.json",
+      "meta_sha256": "d69155338e79e63690f3b9fd615a1026489046dbad239e96dd8cf14b91b51afc",
+      "permitted_use": "Identity/count cross-checks and a prospectively defined source-length-only timing probe; never old NLL, probe gain, eligibility filters or sentinel topics as the fresh score/selector."
+    },
+    "base": {
+      "repository": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "identity_path": "deadline/artifacts/model_identity.json",
+      "identity_sha256": "81af59dbb365b8559ad0d853dbda245aa4ac3ff0bedc03428e50fed65d7f7ae2",
+      "exact_file_inventory_owner": "extension/smoke_preparation_plan.json base.files, all9 actual loader-visible files",
+      "requirements": "Verify actual local original shard/index/config/tokenizer bytes, resolved revision, architecture, tied head, EOS and native chat-template identity. Use local_files_only and no remote code or downloads in the GPU scorer. No probe, historical SFT, recovery, interpolation, adapter or current candidate weights."
+    },
+    "exclusion_union": {
+      "development_seal_complete_sha256": "354859dd44e2fe3aa7800ec991b60649f00a99ce4768d8075af42c007289987d",
+      "benchmark_audit_file_sha256": "2671a58d0abf9f52de5445649aecf9a389363f0fe54d8f05dbf5bca243c6fa6f",
+      "benchmark_pool_ids_file_sha256": "5a687438e7b5c31dbc16f2671582b448ff970739219328dbf9c5836474a89984",
+      "combined_receipt_file_sha256": "0066e69a996cf963173018d68196d7ff69e658420c40b250941c2fe8bb6da406",
+      "receipt_location": "The private extension/runs/native-smoke-preparation-1224497 outputs already hash-bound by its public complete receipt.",
+      "requirements": "Validate both component identities, full population ID digest, exact67+1 disjoint union68, canonical VALUE hash separately from physical FILE hash, all nine benchmark sources and ten declared question variants including both AMC fields. Read benchmark questions only. All82961 remaining IDs must occur exactly once in the new coverage/cache manifest; no excluded ID enters fit, scoring or draws."
+    }
+  },
+  "root_must_seal_before_any_topic_fit_or_score": [
+    {
+      "id": "S1_population_and_cache",
+      "unsealed_choice": "The new full-population preparation CLI, exact input/output schemas, source inventory, native QA, private storage format and tokenization throughput bound do not yet exist.",
+      "proposal": "A new CPU-only preparation stage validates the complete immutable pool and68 exclusions, orders eligible IDs ascending, replays every unchanged native pair at32768 with no truncation, and writes an indexed private sharded cache plus exact token/count/hash metadata. Cache input IDs as integer tensors with an explicit prompt boundary/mask and derive labels under a fixed schema; do not duplicate full raw solutions in public metadata. Bind row/pair, prompt/full token IDs, masks, active counts, EOS/tail, source/base/tokenizer and all shard/index hashes.",
+      "failure_rule": "Any ID, schema, prefix, token-count, complete-context or suffix failure stops preparation. Do not drop, refill, condition R on short rows, manufacture EOS or silently change the eligible82961 population. A new source discrepancy requires explicit versioned reconciliation."
+    },
+    {
+      "id": "S2_fresh_question_only_topics",
+      "unsealed_choice": "Exact text normalization, TF-IDF dtype/defaults, SVD implementation/rank guards, KMeans parameters, libraries, fit order and stable artifacts need a single prospective plan.",
+      "proposal": "Use the complete canonical user question only, including any input already incorporated by the canonical producer; never response/solution, boxed answer, calibration gold, old model losses or benchmark performance. Proposed coverage features are char3-5gram TF-IDF, max50000 features, sublinear TF, explicit normalization/case policy; TruncatedSVD up to128 under a declared rank formula; L2 normalization; MiniBatchKMeans64, seed20261021, n_init3, batch1024. Root must seal all remaining estimator get_params values, exact NumPy/SciPy/scikit-learn versions, thread policy and ascending-ID fit order before fitting. Save fit vocabulary/IDF, transform/cluster artifacts and every eligible assignment with hashes. These are unsupervised coverage cells, not verified semantic topic labels.",
+      "failure_rule": "No sentinel/unfitted topic is permitted. Every eligible ID must receive an actual valid assignment. Empty/rank-deficient/unsupported fits fail under the sealed rule; do not try different cluster counts or feature settings after seeing CE/development results. Existing requirements-selection.txt pins an older Transformers stack and is not automatically the new scoring environment."
+    },
+    {
+      "id": "S3_full_target_base_ce_definition",
+      "unsealed_choice": "The precise scoring implementation, storage/compute dtype, head-projection precision, reduction order, finite checks and native parity tolerances must be explicit before the first score.",
+      "proposal": "For each complete token sequence x of lengthL with native prompt boundaryP, score mean unweighted original-model negative log probability over every supervised target position j=P..L-1 using logits at j-1. Shift once; require P>=1 and an exact positive active count. Preserve native EOS151645 and the actual template tail, rather than assuming EOS is the last token. Include every supervised tail token; mask prompt only. Record NLL sum and active count as well as mean, EOS/non-EOS counts/sums and tail proof. Rank by the per-example active-token mean, never total NLL, prefix mean, target-length adjustment, weight-normalized loss, teacher-answer agreement or old probe improvement.",
+      "failure_rule": "A first512/8192-token prefix, response-only standalone context, sliding/restarted windows, altered target, padding loss, prompt loss or partial score population is a different selector and cannot substitute. Do not normalize across response weights or change score orientation after inspection."
+    },
+    {
+      "id": "S4_inference_only_execution",
+      "unsealed_choice": "Choose and freeze one numerical route independently from training: model storage dtype, BF16 autocast and head projection dtype, SDPA policy, TF32/determinism, inference/no-grad context, microbatch and projection chunk size.",
+      "proposal": "Use one fresh pinned original in eval mode, use_cache=False, no reference/Trainer/optimizer/backward or gradient checkpointing, microbatch1 and bounded contiguous head windows no larger than128 positions. A full native causal backbone forward must preserve the entire prefix; obtain its final normalized hidden states and project only required predecessor positions through the unchanged original tied head. Compute log-softmax/CE in FP32 and accumulate scalar chunk sums in a sealed order, preferably FP64 accumulation. Do not materialize or return full L-by-vocabulary logits. Proposed original FP32 storage with BF16 model compute is compatible with existing identity provenance but is not yet a frozen scoring precision; a BF16-storage alternative would require an explicit distinct numeric definition and oracle.",
+      "failure_rule": "A forward-memory failure blocks that scoring recipe only; it does not authorize truncation, approximate vocabulary CE, top-k KL, another model, silent dtype/backend changes or training-memory claims. No checkpointed training-helper admission is required for a separately verified inference-only implementation."
+    },
+    {
+      "id": "S5_random_draw_once",
+      "unsealed_choice": "The approved proposal has not produced a signed/hash-sealed R draw or export. Root must fix its exact RNG/library semantics, serialized ID/order format and signing/sealing authority before scores.",
+      "proposal": "Draw random.Random(20261021).sample(sorted(eligible82961 IDs),15000) exactly once on admitted CPU compute, preferably before any CE values exist. Preserve returned draw order and bind the eligible population, exclusions, seed, code/runtime and exact15000 unchanged pair hashes in an immutable selection receipt. Hash/sign that receipt using the project's chosen existing provenance mechanism; this review does not invent a signing service or claim a signature exists. R remains broad and is not filtered by box, repetition, branch words, loss, response length or topic. Report overlap with historical training/probes/reservoir without excluding those rows anew.",
+      "failure_rule": "No redraw/refill to obtain a short parity witness, attractive cell counts, favorable losses, memory fit or pilot outcomes. Resolve the driver's separate external parity-only witness ABI prospectively; never insert it into the15000 training exposure."
+    },
+    {
+      "id": "S6_length_cells_and_selected_mixture",
+      "unsealed_choice": "The exact total-length definition, bins, half-mixture rule, seeded coverage namespace, score ties and all per-cell receipts remain proposals requiring a single sealed selector plan before scoring.",
+      "proposal": "Use native complete total serialized lengths with bins1..2048,2049..4096,4097..8192,8193..16384,16385..32768. R's actual topic-by-length counts determine exact S quotas. Within each cell choose floor(quota/2) lowest full-target original mean CE with ascending canonical-ID ties, then sample the remaining quota without replacement from remaining sorted cell IDs under one published SHA256-derived cell RNG namespace. Permit R/S overlap and retain low-CE versus seeded-coverage tags. Seal all formulas and namespace encodings before observing scores; no alpha/quantile sweep.",
+      "failure_rule": "Any quota/score coverage failure stops selection. Matching coarse cells/example counts does not match exact supervised-token exposure or compute; report per-arm token totals and distributions rather than claim those are equal. Base compatibility is not verified response correctness, a GRAPE reproduction with same-question alternatives or established learning value."
+    },
+    {
+      "id": "S7_nested_pilot_identities",
+      "unsealed_choice": "Exact R/S15000 manifests, pilot membership/order and tag-preserving feasibility rules have not been sealed; no IDs are chosen in this review.",
+      "proposal": "R_pilot is exactly the first2048 IDs in the once-frozen R draw order. S_pilot is a subset of the same sealed S15000, matches R_pilot's exact topic/length cell counts, and in each cell contains floor(pilot_quota/2) low-CE members plus the remaining coverage members under a separate fixed seed namespace. Order S_pilot by R_pilot's cell sequence with a fixed within-cell permutation. Objectives within each arm share identical IDs/order. Hash-bind all15000 and2048 lists, pair/token caches, tags and cell counts before training or development generation.",
+      "failure_rule": "No score-based pilot-size change, short-row conditioning, different S draw for an objective or pilot-to-full continuation. The original-pair assignment remains exactly15000 unchanged pairs per final arm; a2048 pilot is a separate bounded mechanism screen."
+    },
+    {
+      "id": "S8_probe_full_coverage_and_resources",
+      "unsealed_choice": "A fixed length-only throughput probe, resource ceiling, completion estimate, failure policy and exact full-score sharding/order need prospective plans and native QA.",
+      "proposal": "Before GPU outcomes, select timing witnesses solely from newly validated eligible lengths: sort by(total_tokens,canonical_ID) and use fixed ranks floor(q*(N-1)) for q in[0,0.1,0.25,0.5,0.75,0.9,0.95,0.99,1], deduplicating only identical selected IDs under an explicit rule. Root must seal this exact list/algorithm first. Time model load/hash checks separately from each complete prefill/projection/reduction and record total/active tokens, GPU peaks/headroom and actual dtype/backend. These rows are disposable scoring witnesses, not training updates or data-quality filters. Retain probe values but choose continuation only from correctness-of-implementation, finite coverage, measured resources and deadline feasibility, never whether losses look favorable.",
+      "failure_rule": "Full scoring starts only after its own actual forward/numeric gate and a separately admitted finite reservation. A time estimate must account for the actual length distribution and attention cost, not merely extrapolate the shortest row or original calibration decode speed. A partial run never becomes a selection population. No automatic retry, sweep, third GPU allocation or downstream selection."
+    }
+  ],
+  "proposed_bounded_stage_sequence_not_admitted": [
+    {
+      "stage": "CPU_full_pool_preparation_and_topic_fit",
+      "resources": {"gpus": 0, "cpus": 8, "ram_gib": 64, "wall_time_seconds": 14400, "scratch_gib": 160, "reserve_seconds": 172800},
+      "scope": "New exact fixture QA first; complete native cache/exclusion validation, question-only fit and once-sealed R manifest under a root-approved prospective selector plan. This4-hour ceiling is a proposal, not a measured runtime prediction. No GPU model, CE score, generation, label grading or training.",
+      "outputs": "Private sharded cache/index and original pair hashes; eligible82961 ID/order digest; both68 exclusions and source audits; exact full-token totals/quantiles; fitted topic artifacts/assignments; timing-witness and R15000/R_pilot2048 receipts; public counts/hashes only."
+    },
+    {
+      "stage": "GPU_original_CE_forward_and_quantile_throughput_probe",
+      "resources": {"gpus": 1, "gpu_type": "B200", "cpus": 8, "ram_gib": 128, "wall_time_seconds": 1800, "scratch_gib": 160, "reserve_seconds": 172800},
+      "scope": "Exactly the presealed source-length-only witness list with the same scoring formula/settings intended for full coverage, including actual longest eligible complete context; native dense-short parity plus bounded projection/no-LxV proof; no reference/backward/optimizer. Measure memory and latency. This is an independent inference workload and may occupy the second GPU slot alongside one separately admitted training/head diagnostic.",
+      "continuation": "Produce a conservative length-bin workload estimate and proposed full reservation. Root seals the full job only after this terminal evidence and a live queue/ledger check; no allocation or scorer parameter is selected from per-row CE values."
+    },
+    {
+      "stage": "GPU_original_CE_all82961",
+      "resources_proposal_ceiling": {"gpus": 1, "gpu_type": "B200", "cpus": 8, "ram_gib": 128, "wall_time_seconds": 43200, "scratch_gib": 160, "reserve_seconds": 172800},
+      "qualification": "The12-hour ceiling is a finite planning proposal, not throughput evidence or permission. Root must choose the actual bound from the fixed probe's complete length-aware cost estimate with an explicit safety margin and deadline. If it cannot fit the allowed bound, stop for a new prospective operational reservation, not a shorter target/context or reduced population.",
+      "scope": "One frozen-original full-response CE pass over every eligible ID in one sealed order; no training and no fitted-candidate or reference model. Atomic immutable parts may preserve interrupted work, but any reuse/resume policy must be separately specified and hash-verified before execution; no implicit partial-file resume.",
+      "completion": "Exactly82961 unique IDs, no excluded/extra/missing IDs, all finite scalar scores, exact active/EOS/tail counts and per-row cache/parameter/runtime identities, complete part/file hashes, total-token reconciliation and terminal accounting. Do not publish complete or permit selection until all parts validate."
+    },
+    {
+      "stage": "CPU_exact_S_selection_and_arm_cache_seal",
+      "resources": {"gpus": 0, "cpus": 4, "ram_gib": 32, "wall_time_seconds": 3600, "reserve_seconds": 172800},
+      "scope": "Apply only the previously sealed quota/mixture/tie/RNG rules to the complete score artifact, freeze S15000 and nested S_pilot2048, export original unmodified R/S pairs and complete caches, and reconcile every row/count/order/hash/tag. No model or source-development outcome is used, no training is admitted."
+    }
+  ],
+  "minimum_new_interfaces_and_provenance": {
+    "implementation_status": "No helper/scorer/selector code or actual source-cache processing is implemented by this review. Proposed names are illustrative and root must choose/freeze the final namespace before authoring and QA.",
+    "cpu_cli": "A new full_pool_preparation module with --root, --plan, --output and --qa-receipt; requires real zero-GPU compute/current role, exclusive output, source/plan/code/runtime/history bindings and the exact old exclusion receipts before any private reads or tokenizer import.",
+    "scoring_cli": "A new full_base_ce module with separately admitted probe/full phases, --root, --plan, --prepared, --qa-receipt and --output. No arbitrary model/context/sample-limit switch and no selection/train/generate capability. Heavy imports/model loading only after actual single-B200/current-job/plan/source/cache/base/file checks.",
+    "selection_cli": "A new CPU selector consuming the already sealed R draw, topic/length artifacts and complete82961 score manifest plus the exact prospective selector plan. It cannot fetch models, read development/benchmark results, alter coefficients or silently choose a different score file.",
+    "private_row_score_schema": ["canonical_id", "source_pair_sha256", "cache_shard_and_row_binding", "prompt_token_ids_sha256", "full_token_ids_sha256", "labels_or_mask_sha256", "prompt_tokens", "total_tokens", "active_tokens", "eos_and_tail_counts", "nll_sum", "mean_ce", "eos_nll_sum", "non_eos_nll_sum", "score_definition_sha256", "loaded_base_identity_sha256"],
+    "run_receipts": "Bind physical FILE SHAs and canonical VALUE SHAs distinctly; exact plan/code/dependency/native-QA/runtime/source/tokenizer/model inventories; before/after unchanged input snapshots; actual job/node/GPU UUID/driver; effective precision/SDPA/TF32/eval/dropout/use_cache settings; complete request/row order and length-only batching policy; measured phase and whole-run memory/timings; immutable parts plus complete inventory; separate requested/open/terminal accounting and no automatic downstream flags.",
+    "privacy": "Raw original pairs, token caches, per-ID CE, ID lists, topic features and exception details remain private on compute unless root separately authorizes assignment artifact publication. Public readiness/closeout metadata contains aggregate counts/distributions and hash links only, without original questions/solutions or scored examples.",
+    "history": "At each future admission root must seal the then-current exact historical extension ledger and source parent inventory. This review does not borrow an old role, silently bind arbitrary latest files or assume a fixed current ledger count. Preserve every failed diagnostic and completed prior artifact."
+  },
+  "meaningful_native_QA_required_before_actual_full_scoring": {
+    "cpu_fixtures": [
+      "Independent dense FP32 mean-CE oracle for unequal prompt/response lengths and each valid active target; exact one-shift indexing, no prompt loss, last native EOS and following tail both supervised, and score invariance to padding/masked positions under the declared policy.",
+      "Chunked original-head projection matches independent dense CE across several chunk boundaries, including EOS/tail crossing a boundary; no full L-by-vocabulary tensor escapes. No accidental second head normalization or missing final backbone norm. Test finite sums and exact active/EOS/non-EOS counts.",
+      "Fail closed on zero active targets, malformed/duplicate IDs, invalid labels, nonfinite hidden/logit/loss values, prompt-prefix mismatch, changed source/tokenizer/model/cache parts, partial coverage, extra/missing parts, excluded IDs, output reuse and unsupported precision/attention settings.",
+      "Whole-population question-only topic fixtures: output/gold mutation leaves topic input and assignment path unchanged; every ID is truly fitted/assigned; no cluster-1/64 sentinel fallback; fit-order/runtime/seed/source artifacts reproduce the prospective fixture contract.",
+      "Independent RNG/quota oracles for one15000 draw from sorted IDs, complete source eligibility independent of length/loss/style, fixed cell quotas and floor-half low-CE plus seeded coverage, stable ties, overlap permitted, exact nested2048 tag counts/order and no refill/redraw. Tests use small analogous sizes rather than pretend a fixture proves native82961 coverage.",
+      "Exact68 exclusion union and FILE-versus-VALUE binding fixtures; both components apply to fit, score, draw and train; source-only probe quantiles are fixed before losses and cannot filter the full score population. All tests must run natively on admitted compute with zero failures/errors/skips/xfails/unexpected successes."
+    ],
+    "actual_B200_probe": [
+      "Load the exact original file inventory in the declared inference precision, no downloads/reference/optimizer; verify eval/dropout/use_cache, zero trainable updates, original tied head/backbone normalization and actual SDPA/CUDA/dtype behavior.",
+      "On presealed short witnesses compare the independent native full-model dense CE and bounded-head scorer under a prospectively fixed tolerance before full-score admission. CPU FP32 proposed tolerances are loss/metrics atol1e-6 and rtol1e-5; actual BF16 path tolerances, reduction precision and allowed repeat variation remain explicit root decisions to freeze BEFORE the probe, not empirical post-failure relaxations.",
+      "Run the exact presealed quantile/max complete rows with original native prompt/full tokens, active EOS/tail proof and no context cropping. Check finite values, exact score counts, actual no-grad memory peaks, sampled driver/nonallocator qualification, positive required headroom and measured wall time through all projections.",
+      "Verify source/base/cache/plan/code and parameter state unchanged, immutable private output/part hashes, real logical-GPU identity and terminal accounting. Probe success is an inference-scoring interface/numerical/resource result only; it cannot be relabeled successful actual Trainer/backward/Adam/checkpoint or long-memory pilot admission."
+    ],
+    "full_closeout": "Recompute complete ordered/set ID digests and all part/file hashes; require every eligible row once, no68 exclusions, exact per-row lengths/token hashes/counts, finite CE, total sums and model/cache/runtime equality with probe. Failure or timeout preserves private evidence and blocks selection. No target repair or outcome-dependent partial admission."
+  },
+  "root_decisions_in_order": [
+    "Approve one exact source-only selector definition before topic fit or CE: broad82961 population, question representation/topic fit, length bins, half mixture, all ties/RNG encodings, once-drawn R and nested pilot policy; retain the original15000-pair assignment and causal controls.",
+    "Approve and implement separate CPU preparation/fixture QA plus immutable full serialization/topic/R/probe artifacts, without waiting for a training-memory result and without inspecting model losses.",
+    "Freeze the independent original-base inference numeric definition, short parity tolerances, fixed quantile probe identities/order, headroom/resource gates and a finite probe plan. Admit it only under live queue/ledger capacity and48-hour reserve checks.",
+    "Use only measured throughput/memory and implementation correctness to seal one finite complete82961 scoring admission; keep all selector choices fixed. Scoring may overlap one other independently admitted GPU workload under the two-slot cap.",
+    "After complete score audit, execute the already sealed CPU S/pilot selection/cache seal. Actual training still requires its own future admitted Trainer/head/GA8/long-after-Adam numerical and memory evidence, exact scientific cell/promotion freeze and end-to-end delivery reserves."
+  ],
+  "research_context_not_new_evidence": {
+    "references_in_existing_research": [
+      {"method": "GRAPE", "url": "https://arxiv.org/abs/2502.04194", "limit": "Its same-question alternative-response selection does not make our cross-question full-CE mixture an exact reproduction."},
+      {"method": "Capacity dependent data selection", "url": "https://arxiv.org/abs/2608.13721", "limit": "The existing review motivates avoiding a universal lowest-loss rule; it does not validate this fixed half-mixture or our3B protocol."},
+      {"method": "Random selection at scale", "url": "https://aclanthology.org/2025.findings-emnlp.146/", "limit": "Supports retaining an honest broad random control, not a claim that any selector or full-base score will improve all benchmarks."}
+    ],
+    "qualification": "These primary links and summaries are inherited from the existing repository literature review, not a fresh browsing/reproduction result. Coverage topics and lower teacher-forced loss do not establish correct intermediate reasoning, independent development improvement, assignment benchmark wins, novelty or SOTA. Preserve the historically viewed-test disclosure and all16 official task/metric regressions."
+  },
+  "read_only_inputs": [
+    {"path": "extension/campaign.json", "sha256": "1407fa170f5b962249c54a294cbadf2b9b96fa90ab6101ad46037301be183dfe"},
+    {"path": "extension/research.json", "sha256": "c81e9a4c966fea1441b77a87e3036fd4cacb2e61f9e2417b8150040252236aca"},
+    {"path": "extension/planning/pilot_freeze_readiness.json", "sha256": "70b7ce6c5eeb99076f1573c822b489dea3e5da38c086df57684bdd59614802fb"},
+    {"path": "extension/planning/preservation_pilot_design_v2.json", "sha256": "5fa145f6a8d0996cf3528cab21da94fb4657fabfb1789a794ad829345ff20f13"},
+    {"path": "extension/planning/prospective_pilot_review.json", "sha256": "129a53f06aa70d5d0ca4afc536ed852b1e0145555b85d084722e160b5ec12c10"},
+    {"path": "extension/planning/pilot_integration_gaps.json", "sha256": "4085aaccced4694216975df1d30f1bd38c22845d88fab567d5891d5c006dafef"},
+    {"path": "extension/planning/retention_and_onpolicy_review.json", "sha256": "83ad0e16b90066fd3a6ec8d0aa30251f71c66bfc2c9bb4a57de106ebb543c9f4"},
+    {"path": "extension/planning/long_context_memory_design_review.json", "sha256": "2bcb82dd8e5d1659662b41303e0080be994107103f20cc93803de163d33c0330"},
+    {"path": "extension/smoke_preparation_plan.json", "sha256": "42ac6063786baf0a114507bfae7287dc709210601cd204098936f135a47508a0"},
+    {"path": "extension/smoke_preparation.py", "sha256": "a4a4f9245ba6dc60b211c60b9a8096429bcef943d5731ae41ec8e54364c8d40b"},
+    {"path": "extension/preserving_data.py", "sha256": "a560e039d4af86739d16f4c3101eb820535ecebf0373571064db9c588bc69d03"},
+    {"path": "reasoning/features.py", "sha256": "5cee76526c1b552e53b490c811c2e4c5506758985be735c13bc0945fb6a59d13"},
+    {"path": "reasoning/data.py", "sha256": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68"},
+    {"path": "deadline/prepare_transfer.py", "sha256": "7432c951c854651bc25541b0976540435a28ae1e39ec70c7ed46f9b417b36779"},
+    {"path": "requirements-selection.txt", "sha256": "f6f11ef52bca0a71935eefa21848373c4c06726ce5450fb789d36e922660abd9"},
+    {"path": "extension/report/native-smoke-preparation-20261021-1224497/delivery_summary.json", "sha256": "a9ba19b0bd05d7b4812432d1ce301b8c4bc0de23524ff712f2f25ffd66194343"}
+  ],
+  "work_performed": "Read static campaign/research/planning/source files and small public aggregate/provenance metadata, hash the named read-only inputs, and create only this new planning JSON. No tests, project imports, tokenization, real corpus/output processing, model inference, scoring, topic fitting, RNG draws, scheduler actions, submissions, commits, publication or protected-file edits occurred."
+}

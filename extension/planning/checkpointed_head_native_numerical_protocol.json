@@ -1,0 +1,226 @@
+{
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "bounded_comparison_helper_cpu_prerequisite": {
+    "job_id": "1229923",
+    "native_qa_sha256": "c909b3ccd8c423982fd711baf2131b1872f6f3f7920b7ecd700432b488a67e12",
+    "scope": "32 synthetic CPU fixtures only, not original all434 or BF16 CUDA equivalence."
+  },
+  "controller_decision": {
+    "actual_api": "Pinned inherited Trainer.training_step on dense then candidate sequentially for every disposable presentation, while both model/gradient/optimizer states remain live.",
+    "loss_scaling": "Set current_gradient_accumulation_steps to actual group8 then1. Assert accelerator.gradient_accumulation_steps1; no accelerator.accumulate, second division or manual backward.",
+    "pre_update_comparisons": "Compare all434 raw accumulated gradients before either owned finite/clip callback; dispatch inherited guard exactly once per branch, compare clipped tensors/norm, then actual optimizer/scheduler boundaries and moments/weights/stored deltas.",
+    "proof_boundary": "A separately natively tested controller must own exact preparation, callback, clipping, optimizer/scheduler/RNG and phase boundaries. It is a diagnostic using real training_step and cannot be labeled a full .train() loop or the later17unique actualdriver integration.",
+    "unresolved_before_source_plan_freeze": [
+      "Exact prepared-model/AcceleratedOptimizer/scheduler ownership and callbacks under installed HF4.57.3/Accelerate1.12.0.",
+      "Native original-file/cache/source/current-job resource adapter and CPU controller/observation fixtures.",
+      "Original BF16 loss/backbone/head/recompute, all434 memory/host/RSS/filesystem shadow and reference-isolation receipts."
+    ]
+  },
+  "dense_vs_checkpointed_numeric_gates": {
+    "adam_state_structure": "At both updates require exactly434 student state entries with matching per-Parameter step1 then2, same-shaped finite FP32 exp_avg/exp_avg_sq and no reference state. Defaults, parameter-group order/decay and optimizer kernel settings must match exactly. Any expected optional state must be identical in both branches, never ignored.",
+    "all434_adam_first_moments": {
+      "all_tied_backbone_group_relative_l2_maximum": 0.01,
+      "elementwise_atol": 1e-07,
+      "elementwise_rtol": 0.05
+    },
+    "all434_adam_second_moments": {
+      "all_tied_backbone_group_relative_l2_maximum": 0.03,
+      "elementwise_atol": 1e-12,
+      "elementwise_rtol": 0.1,
+      "nonnegative": true
+    },
+    "all434_raw_and_clipped_gradients": {
+      "all_tied_backbone_group_relative_l2_maximum": 0.01,
+      "elementwise_atol": 1e-06,
+      "elementwise_rtol": 0.05,
+      "group_cosine_minimum": 0.9999,
+      "per_parameter_rms_rule": "RMS(diff)<=1e-7+0.05*RMS(dense); all434 must have non-None finite FP32 gradients. Per-tensor mathematical near-zero gradients are not required to be nonzero.",
+      "scope": "Compare each standalone three-witness gradient and actual accumulated gradients before clipping at both9-short update boundaries; then compare clipped tensors and the returned finite clip norm."
+    },
+    "caveat": "These proposed relative/absolute floors are intended to distinguish BF16 rounding from broken autograd/normalization/optimizer integration. They may still reject a correct implementation and are not a universal BF16 error theorem. Such failure is an engineering result, not permission to relax gates, inspect accuracy, try a second implementation automatically or claim native parity.",
+    "clip_norm": {
+      "atol": 1e-06,
+      "rtol": 0.01,
+      "scope": "Pre-clip norm as returned by the same frozen owned finite-update guard, and the same positive clip coefficient<=1; native Trainer max_grad_norm remains0."
+    },
+    "count_metrics": {
+      "active_tokens": "exact",
+      "causal_shift_count": 1,
+      "eos_tokens": "exact",
+      "examples": "exact",
+      "native_tail_and_mask_hashes": "exact",
+      "non_eos_tokens": "exact"
+    },
+    "effective_weight_means": {
+      "atol": 1e-07,
+      "metrics": [
+        "effective_weight",
+        "eos_effective_weight",
+        "non_eos_effective_weight"
+      ],
+      "rtol": 0.01
+    },
+    "forward_kl_means": {
+      "atol": 1e-05,
+      "metrics": [
+        "kl",
+        "eos_kl",
+        "non_eos_kl"
+      ],
+      "rtol": 0.01
+    },
+    "fresh_backbone_final_normalized_hidden": {
+      "dtype_and_shape_exact": true,
+      "maximum_absolute_difference": 1e-05,
+      "scope": "Fresh equal weights on all three short witnesses, before optimizer updates; the decoder execution and shape have not changed."
+    },
+    "head_logits": {
+      "every_element": "bf16_ulp_rule",
+      "global_relative_l2_maximum": 0.005,
+      "scope": "Every full-vocabulary value at every aligned active short position, using bounded copied head outputs. Compare both student and anchored reference. Do not retain a graph or long full logits for telemetry."
+    },
+    "ordinary_ce_means": {
+      "atol": 0.0002,
+      "metrics": [
+        "ce",
+        "eos_ce",
+        "non_eos_ce"
+      ],
+      "rtol": 0.002
+    },
+    "status": "Prospectively frozen exact thresholds; no actual original-model comparison has occurred. No after-outcome relaxation.",
+    "sum_metrics": "Where raw token sums are recorded, compare their divided-by-exact-count means with the corresponding frozen mean bounds. Record unscaled sums too; do not apply a scalar1e-6 tolerance to a31776-token sum and confuse association error with the declared mean objective. No absent-EOS case is accepted by the native response guard.",
+    "total_loss": {
+      "atol": 2e-06,
+      "formula_check": "For each branch independently, loss=weighted_ce+beta*kl at absolute1e-6. SFT and CEKL effective weights are exactly1 and SFT KL exactly0. This also checks no duplicated accumulation division in compute_loss.",
+      "rtol": 0.002
+    },
+    "update2_deltas": {
+      "all_tied_backbone_group_relative_l2_maximum": 0.05,
+      "definition": "For each branch independently subtract its same verified initial FP32 tensor from its actual after-update2 tensor, compare actual stored deltas in FP64 reductions, and require positive group norms and at least one changed tensor in each tied/backbone group. Do not compare only weights whose magnitude dwarfs the update, infer update from LR, or substitute moment initialization for a changed weight.",
+      "elementwise_atol": 2e-08,
+      "elementwise_rtol": 0.1
+    },
+    "updated_full_weights": {
+      "elementwise_atol": 1e-07,
+      "elementwise_rtol": 1e-06,
+      "scope": "Every434 updated FP32 tensor, in addition to delta gates; this loose full-weight check alone is insufficient at a tiny warmup LR."
+    },
+    "weighted_ce_means": {
+      "atol": 1e-06,
+      "metrics": [
+        "weighted_ce",
+        "eos_weighted_ce",
+        "non_eos_weighted_ce"
+      ],
+      "rtol": 0.01
+    }
+  },
+  "failure_rule": "Any numerical or unchanged identity/memory gate failure stops this version, preserving every preceding result. No after-outcome tolerance/context/precision/backend/chunk change or implicit retry. No training/pilot/benchmark admission.",
+  "first_actual_comparison_performed": false,
+  "frozen_at_utc": "2026-10-21T09:31:26.358003+00:00",
+  "generation_or_source_scores_used_for_thresholds": false,
+  "nine_short_ga8_exact_schedule": {
+    "accumulation": 8,
+    "actual_group_sizes": [
+      8,
+      1
+    ],
+    "after_scheduler_learning_rates": [
+      "0.000002/57",
+      "2*0.000002/57"
+    ],
+    "first_update": "Observe real optimizer step1 and434 finite FP32 moment entries, but require every actual FP32 student tensor unchanged from its initial value because usedLR=0. This update is NOT proof of learning or nonzero weight update.",
+    "identity_and_recompute": "Every presentation has a unique diagnostic presentation index but repeats one of three source IDs openly. Record exactly9 consumed native batches,9 completed backwards,2 updates; decoder/head recompute must not create a second consumed example or scheduler event. This is diagnostic-only and is never17-unique-row driver admission.",
+    "learning_rate_numeric_check": {
+      "atol": 1e-18,
+      "rtol": 1e-12
+    },
+    "loss_scaling": "compute_loss returns an unscaled equal-example objective; model_accepts_loss_kwargs=false; pinned Trainer/Accelerate scale once by actual current_gradient_accumulation_steps8 then1. Match the independent mean-of8 and mean-of1 gradient oracle.",
+    "optimizer_updates": 2,
+    "presentation_count": 9,
+    "roles_by_presentation": [
+      "short0",
+      "short1",
+      "short2",
+      "short0",
+      "short1",
+      "short2",
+      "short0",
+      "short1",
+      "short2"
+    ],
+    "sampler": "Explicit SequentialSampler, microbatch1, dataloader_drop_last=false, no resume or random reshuffle",
+    "second_update": "Observe real optimizer step2 using peakLR/57, followed by scheduler advancement to2*peakLR/57. Require actual nonzero stored FP32 update in the tied head/embedding and in the remaining backbone group in both branches. Compare all434 deltas and moment tensors using the prospective gates.",
+    "unique_source_rows": 3,
+    "used_learning_rates": [
+      0,
+      "0.000002/57"
+    ]
+  },
+  "proposal_file": {
+    "path": "extension/planning/checkpointed_head_native_validation_review.json",
+    "sha256": "4ed665e668d3b8a3042474647c556ead2a3d13b85a42dfe4270a5eb0b5365d35"
+  },
+  "root_decision": "Freeze all proposed numerical thresholds and original identity/reload/headroom gates exactly before any actual original-model dense-versus-checkpointed comparison. Separately version the paired actual Trainer.training_step diagnostic controller; this numerical freeze does not admit a job or prove full .train() integration.",
+  "schema": "extension-checkpointed-head-native-numerical-protocol-v1",
+  "scientific_runtime_contract": {
+    "allocator": "Retain the explicitly reviewed native backend plus expandable_segments:True policy from allocator-v4; no flag search, threshold reduction or empty-cache insertion. Its earlier overall failure remains failed.",
+    "beta": 0.05,
+    "compute": "actual CUDA BF16 autocast, SDPA, original zero dropout, use_cache=false",
+    "decoder_checkpoint": "same original non-reentrant checkpoint configuration in both branches",
+    "normalization": "each example divided by ALL active native response/EOS/tail tokens; one external causal shift; Trainer alone divides by actual accumulation group length",
+    "objective_checkpoint": "non-reentrant, chunk128 active aligned positions, no full-sequence vocabulary return in candidate",
+    "objectives_in_order": [
+      "sft",
+      "ce_kl",
+      "asft",
+      "prior_anchored"
+    ],
+    "optimizer": {
+      "adam_beta1": 0.9,
+      "adam_beta2": 0.999,
+      "adam_epsilon": 1e-08,
+      "name": "adamw_torch",
+      "native_max_grad_norm": 0,
+      "owned_clip_norm": 1.0,
+      "peak_learning_rate": 2e-06,
+      "weight_decay": 0.01
+    },
+    "optimizer_group_detail": "Keep the exact pinned HF original-name parameter grouping: decay0.01 and the existing excluded bias/normalization group with decay0. Do not silently apply decay uniformly. Record identical group membership, order, defaults and actual foreach/fused settings in both branches; introduce no new optimizer backend flag.",
+    "precision_flags": "Record and hold the pinned installed runtime's actual TF32/reduced-reduction/backend flags identically in both branches. Do not change them to make a comparison pass. BF16 autocast is not a conversion of original Parameter storage.",
+    "reference_parameter_storage": "separate original FP32 Parameters, eval/no_grad, storage-disjoint, absent from student/optimizer/checkpoint",
+    "repository": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "schedule": {
+      "name": "unchanged_full_horizon_cosine_prefix",
+      "num_cycles": 0.5,
+      "total_steps": 1875,
+      "warmup_steps": 57
+    },
+    "seed": 20261021,
+    "student_parameter_storage": "all434 unique original trainable FP32 Parameters"
+  },
+  "status": "prospective_numeric_gates_frozen_before_actual_model_outcomes_no_execution_admission",
+  "strict_memory_measurement": {
+    "coverage": "Synchronize at declared phase boundaries; sample assigned-driver use as well as allocator allocated/reserved/current/peaks during initialization, dense short comparisons, chunk forward/recompute/backward, finite gradients/moments, Adam update, standard save and native reload. Record sampling limitation explicitly: sampled nonallocator use is not a continuous driver peak.",
+    "native_scope": "Paired short success proves only this short comparison and exact implementation/runtime. It does not certify a single-candidate long process, general32K workload or all four objectives' long headroom. Release each case process completely; do not use a successful SFT case as CEKL/ASFT/prior memory evidence.",
+    "rule": "Conservative used=max(observed allocator allocated peak, observed allocator reserved peak)+maximum sampled nonallocator bytes. Require actual_device_total-conservative_used>=max(17179869184,0.1*actual_device_total). Preserve the existing implementation's conservative aggregation rather than selecting a smaller favorable observation."
+  },
+  "unchanged_existing_gates": {
+    "fresh_original_student_vs_original_reference_zero_update": {
+      "absolute_ce_difference": 1e-05,
+      "absolute_kl": 1e-05,
+      "maximum_absolute_logits": 0.001
+    },
+    "same_path_saved_student_reload": {
+      "maximum_absolute_logits": 0.001
+    },
+    "scope": "Keep these existing identity/reload/memory gates exactly. The different dense-versus-checkpointed BF16 error policy below never replaces or relaxes same-path original identity or saved-weight reload checks.",
+    "strict_memory": {
+      "minimum_headroom_bytes": 17179869184,
+      "minimum_headroom_fraction_of_actual_device_total": 0.1
+    }
+  }
+}
