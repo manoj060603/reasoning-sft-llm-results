@@ -229,6 +229,18 @@ patch. A future actual run must verify the effective cloned stop set before
 its sole 32-request generation call. CPU fixture success is not evidence that
 this native interface has worked.
 
+
+The separately reviewed [identity-repair CPU stage](extension/report/identity-replay-qa-20261021-1227308/delivery_summary.json)
+then **passed all 450 checks in a 49-second, zero-GPU allocation**. It reran
+410 prior fixtures, added 24 strict UUID checks and 16 source-equivalence and
+process-dispatch checks, binding 113 files while retaining all 103 parent
+sources. The new workers preserve the original scientific bodies and change
+only GPU identification, explicit version dispatch and provenance inventory.
+Two clearly labeled QA aliases describe the same CPU proof. This establishes
+no actual GPU identity, numerical or memory success: all eight native cases
+and all four joint cases still need fresh GPU allocations. The collector and
+future pilot also need their own explicit versioned identity integration.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%

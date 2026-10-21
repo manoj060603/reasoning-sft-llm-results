@@ -1,0 +1,44 @@
+{
+  "schema": "extension-identity-replay-operational-plan-v1",
+  "status": "prospective_unadmitted_cpu_qa_and_separate_gpu_replays",
+  "role": "identity_replay_qa_20261021_v1",
+  "cpu_job_name": "sft-extension-identity-replay-qa",
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "cpu_resources": {"cpus": 2, "ram_gib": 8, "wall_time_seconds": 1200, "reserve_seconds": 172800, "gpus": 0},
+  "source_inventory_files": 113,
+  "parent_source_inventory_files": 103,
+  "prior_entries": 17,
+  "prior_entries_sha256": "6f2091d2b86d3866a1527e01b51f9fe7850ee0bf1c3d82aef71f9fce980cbff1",
+  "prior_snapshot": {"path": "extension/report/source-generation-qa-20261021-1227150/job_ledger_snapshot.json", "sha256": "414192e5298a83351af02b05f413482ce025d698c0a7aa342840e489adfd9857"},
+  "scientific_plans": {
+    "native": {"path": "extension/native_model_admission_plan.json", "sha256": "94b6d9bc5e46acc0d5a9e3f409d88544f7e091873c2150af705b92c6313b758e"},
+    "joint": {"path": "extension/joint_memory_admission_plan.json", "sha256": "b926be22779d59af501afddd10e7129f105b68b723b9bc8386be0aa397ddfc24"}
+  },
+  "prepared": {"path": "extension/runs/native-smoke-preparation-1224497/prepared.json", "sha256": "d1bb1875a293c71f2a108df4b287b3bb2ab35b3168cd6505b5bd91a98fd66457"},
+  "prepared_bytes_opened_by_cpu_qa": false,
+  "models_or_tokenizers_opened_by_cpu_qa": false,
+  "test_patterns": ["test_extension_*.py", "test_labeled_*.py", "test_preserving_*.py", "test_development_*.py", "test_preservation_development_seal_v2.py", "test_preservation_retry_submission.py", "test_preservation_data.py", "test_native_model_admission.py", "test_smoke_preparation.py", "test_smoke_submission.py", "test_pilot_driver.py", "test_joint_memory_admission.py", "test_gpu_identity_v2.py", "test_native_identity_replay.py"],
+  "expected_counts": [64, 44, 36, 48, 17, 21, 30, 36, 21, 24, 44, 25, 24, 16],
+  "expected_total_tests": 450,
+  "scope": {"legacy_cpu_fixtures": 410, "uuid_representation_and_targeted_query_fixtures": 24, "literal_clone_and_dispatch_fixtures": 16, "source_grader_tests_replayed": false, "collector_tests_replayed": false, "actual_gpu_or_memory_proof": false},
+  "operational_deltas": [
+    "Preserve the failed native1224577 and joint1225727 attempts and all original103 source bytes.",
+    "Normalize only full bare or GPU-prefixed UUIDs returned by CUDA logical0 into the exact GPU-prefixed nvidia-smi target; retain raw type/string and optional16-byte proof. Never query a host ordinal or enumerate other GPUs.",
+    "The two v2 modules are literal original-module copies except the explicit identity-helper delegation, v2 child-module/import targets and required additional source inventory. Scientific plans, prepared witnesses, objectives, presentation schedules, precision, tolerances and receipt schemas remain unchanged.",
+    "native_qa.json and joint_qa.json are explicitly labeled aliases of the same450-test CPU unit receipt, bound to their respective original scientific plan and the same prepared-file SHA. They establish no real model, CUDA interface, memory envelope or pilot admission."
+  ],
+  "future_gpu_replays": {
+    "native": {"role": "native_model_admission_20261021_v2", "wrapper": "extension/native_model_admission_v2.slurm", "qa_filename": "native_qa.json", "admission_prefix": "extension/operations/native-model-admission-v2-job-", "output_prefix": "extension/runs/native-model-admission-v2-"},
+    "joint": {"role": "joint_memory_admission_20261021_v2", "wrapper": "extension/joint_memory_admission_v2.slurm", "qa_filename": "joint_qa.json", "admission_prefix": "extension/operations/joint-memory-admission-v2-job-", "output_prefix": "extension/runs/joint-memory-admission-v2-"},
+    "resources": {"gpus": 1, "gpu_type": "B200", "cpus": 8, "ram_gib": 128, "scratch_free_gib": 160, "wall_time_seconds": 7200, "reserve_seconds": 172800},
+    "separate_current_ledger_admission_required": true,
+    "admitted_by_cpu_qa": false
+  },
+  "cpu_bootstrap": {"path": "extension/operations/submit-identity-replay-qa-20261021.py", "outside_source_inventory": true},
+  "source_install_receipt": "extension/identity_replay_source_receipt.json",
+  "automatic_retry": false,
+  "automatic_downstream": false,
+  "training_pilot": false,
+  "generation": false,
+  "grading": false
+}

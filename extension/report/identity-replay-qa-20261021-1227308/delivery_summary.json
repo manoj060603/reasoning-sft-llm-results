@@ -1,0 +1,23 @@
+{
+  "actual_gpu_or_memory_admission_established": false,
+  "aliases_are_one_cpu_proof": true,
+  "automatic_downstream": false,
+  "complete": true,
+  "elapsed_allocation_seconds": 49,
+  "experiment_model_or_tokenizer_loaded": false,
+  "gpu_replays_admitted": false,
+  "gpu_seconds": 0,
+  "job_id": "1227308",
+  "old_collector_gpu_held": true,
+  "preserved_parent_source_files": 103,
+  "private_prepared_file_opened": false,
+  "qualification": "Reviewed strict UUID repair and literal worker replay passed scoped CPU fixtures. Both original GPU attempts remain failed; every actual native/joint case still requires a fresh separately admitted GPU allocation. The old collector and pilot identity paths also require explicit versioned repair.",
+  "schema": "extension-identity-replay-qa-delivery-v1",
+  "scope": {
+    "legacy": 410,
+    "source_replay_and_dispatch": 16,
+    "uuid_identity": 24
+  },
+  "source_files": 113,
+  "tests_run": 450
+}

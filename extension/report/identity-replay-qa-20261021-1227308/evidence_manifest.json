@@ -1,0 +1,62 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 886,
+      "sha256": "6d3f2b23d9b767ab0f8fc8da2692703aa5da0f2eb383353b0b5a6ff41e18465b"
+    },
+    "complete.json": {
+      "bytes": 18270,
+      "sha256": "23b1345e23041d80c39271640a822a3c33baa4ba8a28ea10b2f05e9137b4bc5c"
+    },
+    "delivery_summary.json": {
+      "bytes": 941,
+      "sha256": "47a100ed289d5f8e1976047ee235891ec85ebd6ff007bd64431ef62c0443c425"
+    },
+    "executed_cpu_admission.py": {
+      "bytes": 6861,
+      "sha256": "28f0a7ae5af2e8296f5aae9d2527145dc37d643655df51bc8efb7acfd437af3d"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 364195,
+      "sha256": "f454eb4d4b35f94e8b26938c5538ae708a692569ef67c469276c92058a67099f"
+    },
+    "joint_qa.json": {
+      "bytes": 520654,
+      "sha256": "81d2f8c11c2335e087ece8b9107f01f88aed38ca84509af49cc78605e53a28c3"
+    },
+    "native.stderr.log": {
+      "bytes": 53441,
+      "sha256": "aa9f7db97367cd8f620f3fd0b11bfd48fba330153a74ebfca77fed7a26cf511c"
+    },
+    "native.stdout.log": {
+      "bytes": 1849,
+      "sha256": "258ba7573b1f3edad25ca13239b9b869dbbf69f23780b8f28ae03bf050465888"
+    },
+    "native_qa.json": {
+      "bytes": 520654,
+      "sha256": "5010058bef28306fb66b046b4e26d949a90eb51df4b4dfd9651d2056bf000dbd"
+    },
+    "original_joint_admission.json": {
+      "bytes": 9349,
+      "sha256": "13fe2386f951daa3b2dc4eb4133d5d5b65df7fc63eee2af8ec1725d65d77c7e2"
+    },
+    "original_native_admission.json": {
+      "bytes": 13739,
+      "sha256": "82be324fee430aa6bf781d4ffa0fc1c9bc70a4d5534c0f4d25574064ea8a8dd0"
+    },
+    "source_install_receipt.json": {
+      "bytes": 35931,
+      "sha256": "cf0d9a421efa4dae0a3c3a6417f0c9fa4eee6afa5d754d1a1b4460e181ba1604"
+    },
+    "started.json": {
+      "bytes": 17952,
+      "sha256": "f6688871d0df33fce1bd2eeae90352e77d84d68319323461924b7c18e74dbb16"
+    },
+    "unit_qa.json": {
+      "bytes": 520268,
+      "sha256": "fd790d109f379ce617b111f10062369d221a59db553d597f6cb5bb5ce485a6f6"
+    }
+  },
+  "raw_private_records_included": false,
+  "schema": "extension-identity-replay-evidence-v1"
+}
