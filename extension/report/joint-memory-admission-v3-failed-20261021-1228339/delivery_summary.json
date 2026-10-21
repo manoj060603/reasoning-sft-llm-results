@@ -1,0 +1,41 @@
+{
+  "actual_gpu_seconds": 197,
+  "all_four_cases_completed": false,
+  "all_original_requests_retained": true,
+  "allocated_peak_bytes": 149686226432,
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "complete_cases": 0,
+  "conservative_peak_bytes": 175959113728,
+  "exit_code": "1:0",
+  "failure": "Joint actual memory headroom failed",
+  "first_mode": "sft",
+  "free_after_peak_bytes": 15536357376,
+  "job_id": "1228339",
+  "long_with_resident_adam_and_gradients_observed": true,
+  "no_pilot_or_generation_or_benchmark_started": true,
+  "observed_optimizer_boundaries": 3,
+  "observed_presentations": 17,
+  "open_gpu_allocations_at_closeout": 0,
+  "original_requested_gpu_seconds": 7200,
+  "other_modes_started": false,
+  "out_of_memory_observed": false,
+  "raw_private_case_receipt": {
+    "bytes": 46103,
+    "sha256": "204c3f2604ffa9063b53b7c9028bd7df1342a4c9d8792dfcd7c0cee8527ecb95"
+  },
+  "raw_private_top_receipt": {
+    "bytes": 364,
+    "sha256": "2262fa39abd807981c3146a61de0aaed2bc1a9cd23cbaf659f8096d21d982511"
+  },
+  "raw_witnesses_exported": false,
+  "required_headroom_bytes": 19149547111,
+  "reserved_peak_bytes": 175040888832,
+  "sampled_nonallocator_peak_bytes": 918224896,
+  "schema": "extension-joint-v3-failed-delivery-v1",
+  "scientific_settings_and_headroom_unchanged": true,
+  "state": "FAILED",
+  "strict_admission_passed": false,
+  "total_device_bytes": 191495471104,
+  "total_terminal_extension_gpu_seconds": 1811
+}

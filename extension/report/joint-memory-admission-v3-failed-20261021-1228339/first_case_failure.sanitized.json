@@ -1,0 +1,1263 @@
+{
+  "actual_pre_forward_shape_observations": [
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 0,
+      "resident_gradient_parameters_before_forward": 0,
+      "row_index": 0,
+      "source_role": "short0",
+      "student_parameters_with_adam_moments": 0,
+      "successful_backwards_in_current_update": 0,
+      "tokens": 191
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 0,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 1,
+      "source_role": "short1",
+      "student_parameters_with_adam_moments": 0,
+      "successful_backwards_in_current_update": 1,
+      "tokens": 230
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 0,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 2,
+      "source_role": "short2",
+      "student_parameters_with_adam_moments": 0,
+      "successful_backwards_in_current_update": 2,
+      "tokens": 314
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 0,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 3,
+      "source_role": "short0",
+      "student_parameters_with_adam_moments": 0,
+      "successful_backwards_in_current_update": 3,
+      "tokens": 191
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 0,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 4,
+      "source_role": "short1",
+      "student_parameters_with_adam_moments": 0,
+      "successful_backwards_in_current_update": 4,
+      "tokens": 230
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 0,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 5,
+      "source_role": "short2",
+      "student_parameters_with_adam_moments": 0,
+      "successful_backwards_in_current_update": 5,
+      "tokens": 314
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 0,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 6,
+      "source_role": "short0",
+      "student_parameters_with_adam_moments": 0,
+      "successful_backwards_in_current_update": 6,
+      "tokens": 191
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 0,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 7,
+      "source_role": "short1",
+      "student_parameters_with_adam_moments": 0,
+      "successful_backwards_in_current_update": 7,
+      "tokens": 230
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 1,
+      "resident_gradient_parameters_before_forward": 0,
+      "row_index": 8,
+      "source_role": "long",
+      "student_parameters_with_adam_moments": 434,
+      "successful_backwards_in_current_update": 0,
+      "tokens": 31776
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 1,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 9,
+      "source_role": "long",
+      "student_parameters_with_adam_moments": 434,
+      "successful_backwards_in_current_update": 1,
+      "tokens": 31776
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 1,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 10,
+      "source_role": "short0",
+      "student_parameters_with_adam_moments": 434,
+      "successful_backwards_in_current_update": 2,
+      "tokens": 191
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 1,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 11,
+      "source_role": "short1",
+      "student_parameters_with_adam_moments": 434,
+      "successful_backwards_in_current_update": 3,
+      "tokens": 230
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 1,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 12,
+      "source_role": "short2",
+      "student_parameters_with_adam_moments": 434,
+      "successful_backwards_in_current_update": 4,
+      "tokens": 314
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 1,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 13,
+      "source_role": "short0",
+      "student_parameters_with_adam_moments": 434,
+      "successful_backwards_in_current_update": 5,
+      "tokens": 191
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 1,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 14,
+      "source_role": "short1",
+      "student_parameters_with_adam_moments": 434,
+      "successful_backwards_in_current_update": 6,
+      "tokens": 230
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 1,
+      "resident_gradient_parameters_before_forward": 434,
+      "row_index": 15,
+      "source_role": "short2",
+      "student_parameters_with_adam_moments": 434,
+      "successful_backwards_in_current_update": 7,
+      "tokens": 314
+    },
+    {
+      "backward_complete": true,
+      "forward_complete": true,
+      "optimizer_update_after_backward_complete": true,
+      "optimizer_updates_before_forward": 2,
+      "resident_gradient_parameters_before_forward": 0,
+      "row_index": 16,
+      "source_role": "short0",
+      "student_parameters_with_adam_moments": 434,
+      "successful_backwards_in_current_update": 0,
+      "tokens": 191
+    }
+  ],
+  "allocator_peak_allocated_seen": 149686226432,
+  "allocator_peak_reserved_seen": 175040888832,
+  "automatic_downstream": false,
+  "binding_sha256": "7ea7a9b72ece468454b2ab3c525e24e8d4045c59fcda86a66702f7ef291a3af1",
+  "complete": false,
+  "completed_update_boundaries": [
+    {
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "learning_rates_after": [
+        0.0,
+        0.0
+      ],
+      "learning_rates_before": [
+        0.0,
+        0.0
+      ],
+      "microbatches": 8,
+      "update": 1
+    },
+    {
+      "indices": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "learning_rates_after": [
+        3.508771929824561e-08,
+        3.508771929824561e-08
+      ],
+      "learning_rates_before": [
+        3.508771929824561e-08,
+        3.508771929824561e-08
+      ],
+      "microbatches": 8,
+      "update": 2
+    },
+    {
+      "indices": [
+        16
+      ],
+      "learning_rates_after": [
+        7.017543859649122e-08,
+        7.017543859649122e-08
+      ],
+      "learning_rates_before": [
+        7.017543859649122e-08,
+        7.017543859649122e-08
+      ],
+      "microbatches": 1,
+      "update": 3
+    }
+  ],
+  "exception": "ValueError",
+  "max_observed_nonallocator_bytes": 918224896,
+  "memory_stages_observed": [
+    {
+      "elapsed_seconds": 42.684105335967615,
+      "end": {
+        "allocated_bytes": 24689607680,
+        "free_device_bytes": 166149619712,
+        "reserved_bytes": 24689770496,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 24689607680,
+      "peak_reserved_bytes": 24689770496,
+      "stage": "load_original_fp32_student_and_reference",
+      "start": {
+        "allocated_bytes": 0,
+        "free_device_bytes": 190839390208,
+        "reserved_bytes": 0,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 31101541376,
+        "free_device_bytes": 159310807040,
+        "reserved_bytes": 31348228096,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 31160261632,
+        "free_device_bytes": 158685855744,
+        "reserved_bytes": 31973179392,
+        "total_bytes": 191495471104
+      },
+      "stage": "reference_returned_logits"
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 31564646912,
+        "free_device_bytes": 158568415232,
+        "reserved_bytes": 32090619904,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.129293313017115,
+      "end": {
+        "allocated_bytes": 31448568320,
+        "free_device_bytes": 158568415232,
+        "reserved_bytes": 32090619904,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 31743149056,
+      "peak_reserved_bytes": 32090619904,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 31448567808,
+        "free_device_bytes": 158568415232,
+        "reserved_bytes": 32090619904,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 1.0250993079971522,
+      "end": {
+        "allocated_bytes": 25162280448,
+        "free_device_bytes": 158568415232,
+        "reserved_bytes": 32090619904,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 31794976768,
+      "peak_reserved_bytes": 32090619904,
+      "stage": "prepared_zero_update_parity",
+      "start": {
+        "allocated_bytes": 24689608192,
+        "free_device_bytes": 166149619712,
+        "reserved_bytes": 24689770496,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 25498599424,
+        "free_device_bytes": 158555832320,
+        "reserved_bytes": 32090619904,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.07340665091760457,
+      "end": {
+        "allocated_bytes": 25546006016,
+        "free_device_bytes": 158555832320,
+        "reserved_bytes": 32090619904,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 31106233856,
+      "peak_reserved_bytes": 32090619904,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 24699228160,
+        "free_device_bytes": 158555832320,
+        "reserved_bytes": 32090619904,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.5724011419806629,
+      "end": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 147520618496,
+        "reserved_bytes": 43058724864,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 38306936320,
+      "peak_reserved_bytes": 43058724864,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 24699228160,
+        "free_device_bytes": 158568415232,
+        "reserved_bytes": 32090619904,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 37902006784,
+        "free_device_bytes": 146578997248,
+        "reserved_bytes": 44000346112,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.0818074878770858,
+      "end": {
+        "allocated_bytes": 37957921792,
+        "free_device_bytes": 146578997248,
+        "reserved_bytes": 44000346112,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43470706688,
+      "peak_reserved_bytes": 44000346112,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 146583191552,
+        "reserved_bytes": 43996151808,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.2552607988473028,
+      "end": {
+        "allocated_bytes": 37059662848,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43470706688,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 147520618496,
+        "reserved_bytes": 43058724864,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 37973706240,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.07901465496979654,
+      "end": {
+        "allocated_bytes": 38005918720,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43517143040,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.2528366311453283,
+      "end": {
+        "allocated_bytes": 37059662848,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43517143040,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 37859107328,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.05806723400019109,
+      "end": {
+        "allocated_bytes": 37906513920,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43438913024,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.2122352230362594,
+      "end": {
+        "allocated_bytes": 37059662848,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43438913024,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 37902006784,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.058692896040156484,
+      "end": {
+        "allocated_bytes": 37957921792,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43470706688,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.2134158699773252,
+      "end": {
+        "allocated_bytes": 37059662848,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43470706688,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 37973706240,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.05940932501107454,
+      "end": {
+        "allocated_bytes": 38005918720,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43517143040,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.214657997014001,
+      "end": {
+        "allocated_bytes": 37059662848,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43517143040,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 37859107328,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.06214331882074475,
+      "end": {
+        "allocated_bytes": 37906513920,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43438913024,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.21652597701177,
+      "end": {
+        "allocated_bytes": 37059662848,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43438913024,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 37902006784,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.05924239894375205,
+      "end": {
+        "allocated_bytes": 37957921792,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43470706688,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.21389888785779476,
+      "end": {
+        "allocated_bytes": 37059662848,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 43470706688,
+      "peak_reserved_bytes": 45868908544,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144710434816,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.30264876899309456,
+      "end": {
+        "allocated_bytes": 61749268992,
+        "free_device_bytes": 114425462784,
+        "reserved_bytes": 76151783424,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 74091172352,
+      "peak_reserved_bytes": 76151783424,
+      "stage": "adam_update_1",
+      "start": {
+        "allocated_bytes": 37059662336,
+        "free_device_bytes": 144708337664,
+        "reserved_bytes": 45868908544,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 79391557632,
+        "free_device_bytes": 73547776000,
+        "reserved_bytes": 117029470208,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.8815910620614886,
+      "end": {
+        "allocated_bytes": 79406177280,
+        "free_device_bytes": 73547776000,
+        "reserved_bytes": 117029470208,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 89047394304,
+      "peak_reserved_bytes": 117029470208,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 49400722432,
+        "free_device_bytes": 114425462784,
+        "reserved_bytes": 76151783424,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 8.181432330049574,
+      "end": {
+        "allocated_bytes": 61747574272,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 137339375104,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 49400722432,
+        "free_device_bytes": 114425462784,
+        "reserved_bytes": 76151783424,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 91738408960,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.8998452629894018,
+      "end": {
+        "allocated_bytes": 91753028608,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 101394245632,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 8.745903074042872,
+      "end": {
+        "allocated_bytes": 61747574272,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 149686226432,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 62547477504,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.06245393096469343,
+      "end": {
+        "allocated_bytes": 62594884096,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68062271488,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.2833380429074168,
+      "end": {
+        "allocated_bytes": 61747574272,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68062271488,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 62590868480,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.059377253986895084,
+      "end": {
+        "allocated_bytes": 62646783488,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68094556672,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.2773203831166029,
+      "end": {
+        "allocated_bytes": 61747574272,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68094556672,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 62660896768,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.07103101280517876,
+      "end": {
+        "allocated_bytes": 62693109248,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68139321856,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.29688204708509147,
+      "end": {
+        "allocated_bytes": 61747574272,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68139321856,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 62547477504,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.058811954921111465,
+      "end": {
+        "allocated_bytes": 62594884096,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68062271488,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.2769680689089,
+      "end": {
+        "allocated_bytes": 61747574272,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68062271488,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 62590868480,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.06219225702807307,
+      "end": {
+        "allocated_bytes": 62646783488,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68094556672,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.2830790290609002,
+      "end": {
+        "allocated_bytes": 61747574272,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68094556672,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 62660896768,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.06161488615907729,
+      "end": {
+        "allocated_bytes": 62693109248,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68139321856,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.28228997997939587,
+      "end": {
+        "allocated_bytes": 61747574272,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 68139321856,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.18499310896731913,
+      "end": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 74091410432,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "adam_update_2",
+      "start": {
+        "allocated_bytes": 61747573760,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "snapshot": {
+        "allocated_bytes": 50199063552,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "stage": "student_returned_logits"
+    },
+    {
+      "elapsed_seconds": 0.05933368508704007,
+      "end": {
+        "allocated_bytes": 50246470144,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 55713857536,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "external_objective_forward",
+      "start": {
+        "allocated_bytes": 49399159808,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.2433369408827275,
+      "end": {
+        "allocated_bytes": 61753515520,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 63000789504,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "actual_backward",
+      "start": {
+        "allocated_bytes": 49399159808,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 0.18435106612741947,
+      "end": {
+        "allocated_bytes": 61753515008,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 74097351680,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "adam_update_3",
+      "start": {
+        "allocated_bytes": 61753515008,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 32.501441397937015,
+      "end": {
+        "allocated_bytes": 49399153664,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 149686226432,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "actual_seventeen_presentations_three_updates",
+      "start": {
+        "allocated_bytes": 24689607680,
+        "free_device_bytes": 166149619712,
+        "reserved_bytes": 24689770496,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 21.784156437963247,
+      "end": {
+        "allocated_bytes": 49399153664,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 51578356736,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "full_finite_weights_moments_and_reference_scan",
+      "start": {
+        "allocated_bytes": 49399153664,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 55.70549696101807,
+      "end": {
+        "allocated_bytes": 49399153664,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 49399153664,
+      "peak_reserved_bytes": 174967488512,
+      "stage": "save_and_verify_student_checkpoint",
+      "start": {
+        "allocated_bytes": 49399153664,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    },
+    {
+      "elapsed_seconds": 11.845110987080261,
+      "end": {
+        "allocated_bytes": 37054349824,
+        "free_device_bytes": 15536357376,
+        "reserved_bytes": 175040888832,
+        "total_bytes": 191495471104
+      },
+      "peak_allocated_bytes": 61940530176,
+      "peak_reserved_bytes": 175040888832,
+      "stage": "saved_reload_short_parity",
+      "start": {
+        "allocated_bytes": 49399153664,
+        "free_device_bytes": 15609757696,
+        "reserved_bytes": 174967488512,
+        "total_bytes": 191495471104
+      }
+    }
+  ],
+  "message": "Joint actual memory headroom failed",
+  "mode": "sft",
+  "pending_presentation": null,
+  "private_presentation_count": 17,
+  "raw_private_receipt": {
+    "bytes": 46103,
+    "sha256": "204c3f2604ffa9063b53b7c9028bd7df1342a4c9d8792dfcd7c0cee8527ecb95"
+  },
+  "raw_witnesses_exported": false,
+  "resume_supported": false,
+  "retry": false,
+  "schema": "extension-joint-memory-admission-case-failure-v1",
+  "scope_qualification": "Failed admission. All17 diagnostic presentations and3 optimizer boundaries were observed, including long-after-Adam shape, but the unchanged full headroom gate failed. No complete case, other objectives, pilot or accuracy proof."
+}

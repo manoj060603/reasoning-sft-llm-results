@@ -1,0 +1,25 @@
+{
+  "allocated_gpus": 1,
+  "command": [
+    "sacct",
+    "--clusters=owl",
+    "-j",
+    "1228339",
+    "--parsable2",
+    "--noheader",
+    "--format=JobIDRaw,JobName,State,ExitCode,ElapsedRaw,Start,End,AllocTRES"
+  ],
+  "complete": true,
+  "elapsed_seconds": 197,
+  "exit_code": "1:0",
+  "gpu_hours": 0.05472222222222222,
+  "gpu_seconds": 197,
+  "job_id": "1228339",
+  "observed_at_utc": "2026-10-21T05:17:21.153322+00:00",
+  "original_requested_gpu_seconds": 7200,
+  "schema": "extension-terminal-gpu-accounting-v1",
+  "state": "FAILED",
+  "stderr": "",
+  "stdout": "1228339|sft-extension-joint-memory-admission-v3|FAILED|1:0|197|2026-10-21T05:10:58|2026-10-21T05:14:15|billing=328,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n1228339.batch|batch|FAILED|1:0|197|2026-10-21T05:10:58|2026-10-21T05:14:15|cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n1228339.extern|extern|COMPLETED|0:0|197|2026-10-21T05:10:58|2026-10-21T05:14:15|billing=328,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n",
+  "timezone": "UTC"
+}

@@ -265,9 +265,9 @@ variables. The failed original/v2 sources, runtime evidence and allocation
 accounting remain intact. Its separately versioned initializer repair received
 new scoped CPU QA and a fresh bounded GPU admission. Including the earlier
 UUID failures and this failure, terminal extension GPU use is now
-**1,614 seconds (0.448333 hours)**. The new joint job retains its separate
-open two-hour request until terminal accounting; all ten requested GPU-hours
-across these attempts remain recorded.
+**1,811 seconds (0.503056 hours)** after the later joint failure below. There
+are no open GPU allocations at that closeout; all ten originally requested
+GPU-hours across these attempts remain recorded.
 
 
 The joint initializer repair then [passed all 65 scoped CPU checks](extension/report/joint-identity-v3-qa-20261021-1228170/delivery_summary.json)
@@ -277,11 +277,19 @@ the new 120-file inventory. The earlier 450-test result was verified through
 receipts rather than rerun. Its joint-schema alias describes this same CPU
 proof. The [fresh v3 GPU allocation, job 1228339](extension/report/joint-memory-admission-v3-admitted-20261021-1228339/delivery_summary.json),
 started at **05:10:58 UTC**, using the same scientific plan and prepared cache.
-All four actual long-after-Adam memory and numerical checks remain pending
-at this publication snapshot. There is no automatic pilot or downstream
-submission. The distinct actual-driver proof using 17 unique short examples,
-full training-data preparation and source-generation calibration are also
-still required before admitting training pilots.
+It [failed the unchanged memory reserve gate](extension/report/joint-memory-admission-v3-failed-20261021-1228339/delivery_summary.json)
+after **197 seconds**, ending at **05:14:15 UTC**. The first CE case observed
+17 completed presentations and three update boundaries, including a long
+forward with 434 resident Adam states and 434 gradient tensors. It did not
+run out of memory, but the conservative reserved-memory peak left only
+15,536,357,376 bytes, below the required 19,149,547,111 bytes. Therefore no
+joint case is admitted and the other three objectives did not run. The
+allocated peak was 149,686,226,432 bytes; the reserved peak was
+175,040,888,832 bytes, plus sampled nonallocator memory. A separately reviewed
+memory strategy is required; the original settings and safety margin remain
+frozen. There is no automatic retry or downstream pilot. The distinct
+actual-driver proof using 17 unique short examples, full training-data
+preparation and source-generation calibration are also still required.
 
 ## Additional recovery follow-up: closed without promotion
 

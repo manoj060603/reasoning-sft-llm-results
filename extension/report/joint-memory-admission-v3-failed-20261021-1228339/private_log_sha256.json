@@ -1,0 +1,13 @@
+{
+  "files": {
+    "extension/logs/extension-joint-memory-v3-1228339.err": {
+      "bytes": 2989,
+      "sha256": "dd59bbdfb46a0988814bbc86968ef2d394729e107a5ecdcd450830099de8986c"
+    },
+    "extension/logs/extension-joint-memory-v3-1228339.out": {
+      "bytes": 142,
+      "sha256": "a33aeeea8178957609bc8a070705a251e7c1cf485ae4bcd3c93c3b824bab8b9b"
+    }
+  },
+  "worker_logs_remain_private": true
+}
