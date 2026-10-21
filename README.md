@@ -183,6 +183,22 @@ logs and accounting are preserved. A separate fixture repair must receive fresh
 native validation; these observations establish neither full grading readiness
 nor the earlier five-second end-to-end contract.
 
+The explicit [fixture retry](extension/report/source-readiness-v2-retry-20261021-1226240/delivery_summary.json)
+has now **completed in 98 seconds with zero GPUs**. All **478 scoped checks**
+passed with no failures, errors or skips: 410 regressions, 40 frozen worker
+checks and 28 retry checks. Its separate controller preserves every byte of the
+failed stage's 86 sources and the same scientific calibration plan. The new
+test copy corrects the relative-path fixture and adds four history and binding
+checks; the old failed test scope remains preserved.
+
+The private cache now contains exactly **32 calibration questions**, with
+original-tokenizer prompts of 47–364 tokens. All 32 official-gold self-checks
+and gold-mutation prompt checks passed under the separately identified worker
+protocol. This is engineering readiness for one fixed original-model
+calibration pass; no generated accuracy, training improvement or B200 memory
+result follows from these CPU checks. The two previously admitted GPU
+diagnostics remain queued; no new GPU job was added by this retry.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%

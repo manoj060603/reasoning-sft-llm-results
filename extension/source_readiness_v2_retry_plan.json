@@ -1,0 +1,85 @@
+{
+  "schema": "extension-source-readiness-v2-retry-plan-v1",
+  "status": "prospective_unadmitted_fixture_retry",
+  "scientific_plan": {
+    "path": "extension/source_readiness_v2_plan.json",
+    "sha256": "40479982fe3b43e27f51ec27f28a2cf39f76a464ceffdc576e1f38268f0a6a3b"
+  },
+  "retry_of": {"role": "source_readiness_v2_20261021_v1", "job_id": "1225820"},
+  "failure_evidence": {
+    "accounting.json": {"path": "extension/report/source-readiness-v2-failed-20261021-1225820/accounting.json", "sha256": "f126490b505da796081cd750b17bd6868c45b9955f45763e9e20ab4d20876151"},
+    "unit_qa_failure.json": {"path": "extension/report/source-readiness-v2-failed-20261021-1225820/unit_qa_failure.json", "sha256": "6cd6a0f4a039bb20f8aaf7697846f25e4b3b0473d2177017b1e4152f707ba09f"},
+    "job_ledger_snapshot.json": {"path": "extension/report/source-readiness-v2-failed-20261021-1225820/job_ledger_snapshot.json", "sha256": "48dafdc5a9bc8e5664b56ba6c3d94af35e82d731c92f7cf9ce465743b2034503"},
+    "source_install_receipt.json": {"path": "extension/report/source-readiness-v2-failed-20261021-1225820/source_install_receipt.json", "sha256": "7f0d0dc304ced0559c09a626a14527a761bb67184bd0d47979eb4f51cba644c4"}
+  },
+  "prior_entries_sha256": "3c97abcf6cd6a01838b54c30c91ce37dc80156c2f8ced93a247fe20874ea79ce",
+  "fixture_correction": {
+    "original_test": "tests/test_source_readiness_v2.py",
+    "original_sha256": "5971cfc15b30255e1b7528ad276de92293510d30980ad91935c6c730b63c008a",
+    "replacement_test": "tests/test_source_readiness_v2_retry.py",
+    "copied_tests": 24,
+    "new_metadata_tests": 4,
+    "relative_plan_argument": true,
+    "original_scope_executed": false
+  },
+  "retry_qualification": "Separate fresh role after job1225820 failed474 checks with472 passes and2 fixture errors. The worker40 checks passed. No actual calibration cache was prepared. All86 sources and the failed receipt remain unchanged. This controller delegates the frozen scientific functions and supplies new admission/provenance/output orchestration without changing globals. The old24 readiness tests are excluded; a separately identified copy preserves all24 assertions with a relative fixture plan argument and new controller identities, plus4 metadata guards. No generation, training or automatic downstream admission.",
+  "cpu_only": true,
+  "prepare_calibration_prompts": true,
+  "training": false,
+  "model_inference": false,
+  "automatic_downstream": false,
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "wall_time_seconds": 7200,
+  "reserve_seconds": 172800,
+  "resources": {"cpus": 8, "memory_gib": 64, "gpus": 0},
+  "legacy_plan": {
+    "path": "extension/source_readiness_plan.json",
+    "sha256": "70c6823627d8bc93ce927665b87b943e1bf22f1ddc99eb2fd511a778696b590d"
+  },
+  "worker_protocol": {
+    "path": "extension/planning/source_grader_v2_protocol.json",
+    "sha256": "c2cd03ac8281116810da029eed76116b21dfe5a7d78772765d9773c2ff216e2a"
+  },
+  "predecessor_joint_qa": {
+    "path": "extension/report/joint-memory-qa-20261021-1225557/complete.json",
+    "sha256": "66a6ba25cea01a70ee3a945d1dce9cddf474915ab6b32e506de3058d23a8f51f"
+  },
+  "new_frozen_sources": {
+    "extension/source_evaluation_v2.py": "639e3964a750f3af77d90b4aa4aa6f5e166fd20d494c07abeb2eb08a29e226c4",
+    "tests/test_source_evaluation_v2.py": "57c2b630f2d9b77da0dab279e4f3ba00faac8d2f6a4edc6344b82ef7c9c5010a"
+  },
+  "calibration": {
+    "split": "calibration",
+    "record_count": 32,
+    "domain_counts": {"math": 16, "arc_challenge": 16},
+    "group_count": 32,
+    "maximum_prompt_tokens": 8192,
+    "validate_gold_only_calibration": true,
+    "gold_self_comparison": true,
+    "drop_refill_or_replace": false
+  },
+  "generation_profile": "unchanged_legacy_plan.source_generation_profile",
+  "source_generated_answers_used": false,
+  "confirmation_outputs_opened": false,
+  "native_qa": {
+    "legacy_patterns": [
+      "test_extension_*.py", "test_labeled_*.py", "test_preserving_*.py", "test_development_*.py",
+      "test_preservation_development_seal_v2.py", "test_preservation_retry_submission.py",
+      "test_preservation_data.py", "test_native_model_admission.py", "test_smoke_preparation.py",
+      "test_smoke_submission.py", "test_pilot_driver.py", "test_joint_memory_admission.py"
+    ],
+    "legacy_counts": [64, 44, 36, 48, 17, 21, 30, 36, 21, 24, 44, 25],
+    "legacy_tests": 410,
+    "v2_helper_tests": 40,
+    "new_readiness_tests": 28,
+    "new_patterns": ["test_source_evaluation_v2.py", "test_source_readiness_v2_retry.py"],
+    "source_inventory_files": 91,
+    "old465_scope_replayed": false
+  },
+  "outputs": {
+    "metadata": ["started.json", "unit_qa.json", "unit_qa_failure.json", "complete.json", "failure.json"],
+    "private": ["calibration_prompt_cache.json", "calibration_gold_prechecks.json", "calibration_failure_private.json"],
+    "raw_labels_prompts_or_ids_public": false
+  },
+  "qualification": "The new source worker has separate10s setup and5s comparison deadline budgets plus0.55s cleanup joins, not an OS syscall timing guarantee. This does not validate the old5s end-to-end or465-test scope, change the immutable32 calibration records/source generation profile/final benchmarks, admit model inference/training, or trigger downstream submission."
+}

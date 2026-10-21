@@ -1,0 +1,29 @@
+{
+  "automatic_downstream": false,
+  "calibration_generation_performed": false,
+  "complete": true,
+  "domain_counts": {
+    "arc_challenge": 16,
+    "math": 16
+  },
+  "elapsed_allocation_seconds": 98,
+  "errors": 0,
+  "failures": 0,
+  "gold_self_comparisons_passed": 32,
+  "gpu_seconds": 0,
+  "group_count": 32,
+  "job_id": "1226240",
+  "model_or_memory_admission_established": false,
+  "old465_scope_replayed": false,
+  "old_five_second_end_to_end_contract_validated": false,
+  "old_readiness24_executed": false,
+  "qualification": "Scoped478 CPU checks and sealed32 prompt/gold-self-check readiness under separately frozen10s setup,5s work,.55s cleanup protocol; not old465 repair, GPU/model admission, generated correctness or training.",
+  "raw_labels_prompts_ids_or_grades_included": false,
+  "record_count": 32,
+  "schema": "extension-source-readiness-v2-retry-delivery-v1",
+  "skipped": 0,
+  "source_commit": "0b3e915",
+  "source_inventory_files": 91,
+  "tests_run": 478,
+  "worker_protocol": "source-grader-two-phase-v2"
+}
