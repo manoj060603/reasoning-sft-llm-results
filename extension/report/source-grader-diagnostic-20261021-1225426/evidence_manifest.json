@@ -1,0 +1,79 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 823,
+      "sha256": "f5f1142d776cf730b31c5b264a9dfbbf1ee7217ebb416bc3432fc6afc20c78ce"
+    },
+    "complete.json": {
+      "bytes": 71660,
+      "sha256": "6c780a350fe34873f0251e73b42a8ae022c7effe1f6fb9cca212227be4e36f6b"
+    },
+    "delivery_summary.json": {
+      "bytes": 886,
+      "sha256": "37f031cfd4d6469b62d855650ebf32708414109119d5d8eab7f804b100d2824b"
+    },
+    "executed_admission.py": {
+      "bytes": 6606,
+      "sha256": "a6f9040bbf26e5b61135c188bb479c28339f2412b04281ab8a0341b5aab566a0"
+    },
+    "executed_diagnostic.py": {
+      "bytes": 16553,
+      "sha256": "db5a4707a79815ed991fb8e4b02c2a318a80e6e9619af16fa59fd967adeaf386"
+    },
+    "executed_wrapper.slurm": {
+      "bytes": 1343,
+      "sha256": "ae4cca18285430c46bed2ec0bc3201f8bda925f3b99c8f27bd562ffb9da50ae7"
+    },
+    "fixture-0-numeric_negative_large.json": {
+      "bytes": 5136,
+      "sha256": "9e0c5db79d7e011af46064b667096888b5a325c5c080e49808257e743d43e2fb"
+    },
+    "fixture-0-numeric_negative_small.json": {
+      "bytes": 5132,
+      "sha256": "e3600e74438c80dafb65c30a668d17efe88e0ff7218aa2739c965f64fb606c78"
+    },
+    "fixture-0-percentage_negative.json": {
+      "bytes": 5134,
+      "sha256": "fc95ab58e3fc8dc2635525011f1374d42cb1ba2c9393296940ed9b4a739543f3"
+    },
+    "fixture-0-percentage_positive.json": {
+      "bytes": 5135,
+      "sha256": "401f6a1f54f1f37a7d19db132c55bb4e62ccc732ffa7c708b84a9d678277df56"
+    },
+    "fixture-1-numeric_negative_large.json": {
+      "bytes": 5135,
+      "sha256": "a88bf19a250ff323824fb92314197e56f2866a7c3f33b216ea697903372b4979"
+    },
+    "fixture-1-numeric_negative_small.json": {
+      "bytes": 5129,
+      "sha256": "31ff125aa5b6cc8dd65368668ae9619c39aa00eb5c920ccf939ab2a0619183c4"
+    },
+    "fixture-1-percentage_negative.json": {
+      "bytes": 5141,
+      "sha256": "c66414dcf63b04725f69f9d7270f625493e3c226a244b04c8b85f90c5f25d934"
+    },
+    "fixture-1-percentage_positive.json": {
+      "bytes": 5131,
+      "sha256": "81fef1a650f6dc31fab4f806f2f7e5c897f5a3d074cf54225c019fce062588e2"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 179972,
+      "sha256": "30e4518844f8bf6c3d105b52cc88d6e863bad89acaa948d8d619a0b54177a578"
+    },
+    "native.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "native.stdout.log": {
+      "bytes": 102,
+      "sha256": "0cdb373970f41c1e2c8701dab3ac36284d6adf387241d7add378c30030f7c4f6"
+    },
+    "started.json": {
+      "bytes": 12182,
+      "sha256": "0623697d794d8c35c881ca350b56494397baaed5b20ce047e607273eee1da5fc"
+    }
+  },
+  "private_source_records_or_model_outputs_included": false,
+  "public_synthetic_records_only": true,
+  "schema": "extension-source-grader-diagnostic-evidence-v1"
+}

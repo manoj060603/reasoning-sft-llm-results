@@ -1,0 +1,18 @@
+{
+  "all_fixed_expected_results_observed": true,
+  "calibration_or_model_outcomes_used": false,
+  "diagnostic_complete": true,
+  "elapsed_allocation_seconds": 29,
+  "full_qa_replayed": false,
+  "gpu_seconds": 0,
+  "grader_reliability_admitted": false,
+  "instrumented_public_trials": 8,
+  "job_id": "1225426",
+  "maximum_unchanged_grader_wall_seconds": 4.694382045418024,
+  "qualification": "Fixed synthetic caller/environment timings do not establish the cause of the earlier full-QA timeout or admit reliable source grading. The known diagnostic continuation-after-unchanged-cleanup-error branch was not triggered. No downstream submission.",
+  "schema": "extension-source-grader-diagnostic-summary-v1",
+  "scorer_or_timeout_changed": false,
+  "source_commit": "6256152e3b736e06549a5667e3bf2b934cd1fe2d",
+  "unchanged_grader_public_trials": 8,
+  "worker_cleanup_errors_observed": 0
+}

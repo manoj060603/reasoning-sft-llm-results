@@ -1,0 +1,141 @@
+{
+  "exact_unchanged_grader": {
+    "elapsed_wall_seconds": 1.5540237789973617,
+    "parent_process_cpu_seconds": 0.0008687709999999904,
+    "result": {
+      "comparator_provenance": {
+        "include_percentage": false,
+        "internal_timeout": false,
+        "is_close": true,
+        "loaded_modules": {
+          "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+          "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+          "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+          "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+          "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+        },
+        "normalization_order": "explicit_percentage_then_pinned_strip_string",
+        "runtime_versions": {
+          "antlr4-python3-runtime": "4.7.2",
+          "latex2sympy2": "1.9.1",
+          "regex": "2025.11.3",
+          "sympy": "1.14.0",
+          "word2number": "1.1"
+        },
+        "timeout_owner": "external_spawn_process"
+      },
+      "correct": false,
+      "denominator": 1,
+      "error": null,
+      "extraction": {
+        "answer": "50%",
+        "attempts": 1,
+        "end": 11,
+        "start": 0,
+        "status": "ok"
+      },
+      "rankable": true,
+      "record_id": "d680a321f5f38bd632787d0370bac57cad3d7969d4a289079dc5765490746d1c",
+      "response_sha256": "78a013f8c1d4bbc65bc4347ce50b0df15ea85cd7d269518e27517132e811b942",
+      "source_kind": "math",
+      "status": "graded"
+    },
+    "unchanged_grade_response": true,
+    "work_deadline_seconds": 5.0
+  },
+  "fixture": {
+    "expected_correct": false,
+    "gold": "50",
+    "id": "percentage_negative",
+    "prediction": "50%"
+  },
+  "instrumented_cold_spawn": {
+    "cleanup": {
+      "actions": [
+        "terminate"
+      ],
+      "elapsed_wall_seconds": 0.05756273306906223,
+      "exitcode": -15,
+      "join_budget_seconds": 0.55,
+      "successful": true,
+      "worker_alive": false
+    },
+    "correct": false,
+    "diagnostic_only": true,
+    "elapsed_wall_seconds": 1.5715700630098581,
+    "error_type": null,
+    "events": [
+      {
+        "event": "child_entry",
+        "monotonic_seconds": 6759877.975779032,
+        "parent_received_elapsed_wall_seconds": 0.17649982869625092,
+        "pid": 2205750,
+        "process_cpu_seconds": 0.095134904,
+        "sequence": 0
+      },
+      {
+        "comparator_provenance": {
+          "include_percentage": false,
+          "internal_timeout": false,
+          "is_close": true,
+          "loaded_modules": {
+            "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+            "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+            "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+            "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+            "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+          },
+          "normalization_order": "explicit_percentage_then_pinned_strip_string",
+          "runtime_versions": {
+            "antlr4-python3-runtime": "4.7.2",
+            "latex2sympy2": "1.9.1",
+            "regex": "2025.11.3",
+            "sympy": "1.14.0",
+            "word2number": "1.1"
+          },
+          "timeout_owner": "external_spawn_process"
+        },
+        "event": "comparator_loaded",
+        "monotonic_seconds": 6759878.987090518,
+        "parent_received_elapsed_wall_seconds": 1.1878183158114552,
+        "pid": 2205750,
+        "process_cpu_seconds": 0.765494657,
+        "sequence": 1
+      },
+      {
+        "event": "normalization_finished",
+        "monotonic_seconds": 6759878.999380327,
+        "normalized_gold": "50",
+        "normalized_prediction": "\\frac{1}{2}",
+        "parent_received_elapsed_wall_seconds": 1.2000446924939752,
+        "pid": 2205750,
+        "process_cpu_seconds": 0.777601002,
+        "sequence": 2
+      },
+      {
+        "event": "comparison_started",
+        "monotonic_seconds": 6759878.999473771,
+        "parent_received_elapsed_wall_seconds": 1.200095184147358,
+        "pid": 2205750,
+        "process_cpu_seconds": 0.777634262,
+        "sequence": 3
+      },
+      {
+        "correct": false,
+        "event": "comparison_finished",
+        "monotonic_seconds": 6759879.313275041,
+        "parent_received_elapsed_wall_seconds": 1.5139948278665543,
+        "pid": 2205750,
+        "process_cpu_seconds": 0.996228019,
+        "sequence": 4
+      }
+    ],
+    "last_observed_phase": "comparison_finished",
+    "parent_process_cpu_seconds": 0.0010068100000000246,
+    "rankable": false,
+    "status": "graded",
+    "timed_out_phase": null,
+    "work_deadline_seconds": 5.0
+  },
+  "repetition": 1
+}

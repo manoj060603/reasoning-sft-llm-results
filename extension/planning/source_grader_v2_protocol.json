@@ -1,0 +1,80 @@
+{
+  "comparator_source": {
+    "examples.py": {
+      "path": "eval/utils/examples.py",
+      "sha256": "07aacef0144e11d7c9210beef2f4d1a9bf935d440bbb394e65a588eef861ce7b"
+    },
+    "grader.py": {
+      "path": "eval/utils/grader.py",
+      "sha256": "43d858572b1dadda6fe3ec327db123bb5362fccd271ae58329c57f0c10521383"
+    },
+    "math_normalization.py": {
+      "path": "eval/utils/math_normalization.py",
+      "sha256": "9c0484a01b76bd4582bfe61c8ee55df375dbc09782f1b587fc21b21dd80e23a0"
+    },
+    "parser.py": {
+      "path": "eval/utils/parser.py",
+      "sha256": "8d04ceb93e9ef50d61157fd1c8826a5cbf8d7f64cda85459f1166e19d8784208"
+    },
+    "utils.py": {
+      "path": "eval/utils/utils.py",
+      "sha256": "4365ad38ea1c3c00926781684673e6dbc8f6e228d354a1f49f0d81cc0cfaff1e"
+    }
+  },
+  "created_at_utc": "2026-10-21T01:58:35.295326+00:00",
+  "historical_and_final_benchmark_grading": "unchanged",
+  "new_helper": "extension/source_evaluation_v2.py",
+  "new_tests": "tests/test_source_evaluation_v2.py",
+  "old73_sources": "immutable",
+  "parent_failure": {
+    "path": "extension/report/source-readiness-v2-failed-20261021-1225360/accounting.json",
+    "sha256": "1e725f1fd3bf40e29fff1004b36228695cf219f66ac50ed158b060f2c6bf7d2b"
+  },
+  "parent_timing_diagnostic": {
+    "path": "extension/report/source-grader-diagnostic-20261021-1225426/complete.json",
+    "sha256": "6c780a350fe34873f0251e73b42a8ae022c7effe1f6fb9cca212227be4e36f6b"
+  },
+  "qualification": "This explicitly increases the total operational allowance from5s to15.55s, including setup and cleanup. It does not repair or validate the old5s end-to-end contract, identify the cause of the prior timeout, alter model-selection science, or admit grading/training. Future finite plan, native tests, calibration self-checks and exact job admission remain required. No model or source-generated answers have been observed.",
+  "runtime_versions": {
+    "accelerate": "1.12.0",
+    "antlr4-python3-runtime": "4.7.2",
+    "latex2sympy2": "1.9.1",
+    "regex": "2025.11.3",
+    "safetensors": "0.7.0",
+    "sympy": "1.14.0",
+    "torch": "2.9.0",
+    "transformers": "4.57.3",
+    "vllm": "0.12.0",
+    "word2number": "1.1"
+  },
+  "schema": "extension-source-grader-v2-prospective-protocol-v1",
+  "source_cohorts": "same_exact_sealed_calibration_development_confirmation_no_refill",
+  "status": "worker_budgets_and_semantics_fixed_before_any_source_model_outcomes_implementation_unadmitted",
+  "unchanged_semantics": [
+    "question_and_ARC_option_prompt",
+    "gold_mutation_invariance",
+    "strict_final_box_extraction",
+    "explicit_percentage_normalization_before_strip_string",
+    "math_equal_include_percentage_false_is_close_true_timeout_false",
+    "ARC_exact_original_labels",
+    "error_denominators_retained",
+    "all_nonrankable_errors_block_selection"
+  ],
+  "worker_protocol": {
+    "automatic_retry": false,
+    "cleanup_error_blocks_further_grading_and_ranking": true,
+    "cleanup_seconds": 0.55,
+    "fresh_worker_per_math_response": true,
+    "go_messages": 1,
+    "late_results_accepted": false,
+    "maximum_total_seconds": 15.55,
+    "ready": "strict_request_and_phase_identity_with_actual_comparator_proof",
+    "setup_clock_starts_before_spawn": true,
+    "setup_seconds": 10,
+    "setup_work": "imports_and_actual_source_path_hash_runtime_verification_only_no_answer_normalization_or_comparison",
+    "work_clock_starts_immediately_before_go_send": true,
+    "work_scope": "unchanged_pinned_strip_string_comparison_and_result_IPC",
+    "work_seconds": 5,
+    "worker_reuse": false
+  }
+}

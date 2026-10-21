@@ -137,6 +137,17 @@ repair is chosen. Both attempts stopped before calibration preparation and
 used zero GPUs. No new training, generated source validation, benchmark result
 or demonstrated improvement is claimed by these checks.
 
+An [evidence-only CPU timing diagnostic](extension/report/source-grader-diagnostic-20261021-1225426/delivery_summary.json)
+subsequently completed in **29 seconds, using zero GPUs**. Four fixed public
+scalar fixtures, repeated twice, produced the expected results in all eight
+unchanged grading calls and all eight separately instrumented calls. The first
+unchanged call took **4.694 seconds**; later calls took approximately 1.25–1.66
+seconds. These observations show little margin in the five-second cold-worker
+limit, but do not reproduce the earlier full-QA environment or establish its
+cause. The scorer and timeout remain unchanged, the failed QA remains failed,
+and source-grading reliability is still awaiting an explicit operational repair
+and fresh native validation.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%

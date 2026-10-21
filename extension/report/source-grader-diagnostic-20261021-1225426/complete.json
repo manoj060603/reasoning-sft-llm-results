@@ -1,0 +1,1588 @@
+{
+  "admission_binding_sha256": "2a5734978edf806bdb8e8250a6e367c38882738d561a53344e9c208f86a72b28",
+  "automatic_downstream": false,
+  "calibration_or_model_outcomes_used": false,
+  "code_sha256": {
+    "eval/utils/examples.py": "07aacef0144e11d7c9210beef2f4d1a9bf935d440bbb394e65a588eef861ce7b",
+    "eval/utils/grader.py": "43d858572b1dadda6fe3ec327db123bb5362fccd271ae58329c57f0c10521383",
+    "eval/utils/math_normalization.py": "9c0484a01b76bd4582bfe61c8ee55df375dbc09782f1b587fc21b21dd80e23a0",
+    "eval/utils/parser.py": "8d04ceb93e9ef50d61157fd1c8826a5cbf8d7f64cda85459f1166e19d8784208",
+    "eval/utils/utils.py": "4365ad38ea1c3c00926781684673e6dbc8f6e228d354a1f49f0d81cc0cfaff1e",
+    "extension/__init__.py": "2a99bd8120f34a0ccf36d7d6f5dc02d7a24d5bdd4f8eaf422bd73b75b17a4a13",
+    "extension/campaign.json": "1407fa170f5b962249c54a294cbadf2b9b96fa90ab6101ad46037301be183dfe",
+    "extension/cpu_feasibility.py": "1b0a8872f61a6e89191c16082c5ede531a38965658072855180a943effc35724",
+    "extension/cpu_feasibility.slurm": "3c450f680faca976efc5a2022ece602a369f2261bc41a3cb9c0a0da3fa0137ba",
+    "extension/development_plan.json": "204eabfdfdb36305d0b8377f767b1a456ff595c6dd8afd701e1adceb42a5ac6f",
+    "extension/development_retry.slurm": "33838b55d505bc55871c5e73a013ac5e5614e3b84e1841415a427f0f786e48cd",
+    "extension/development_retry_plan.json": "e564a57c3123f726fab1e059ddc1d87daec65259b8e950726e2ab316ddf4dedc",
+    "extension/development_retry_submission.py": "1c254b9f076d5369ccbbe6f703850ea6db675ffe313688c9f483028dc547fb06",
+    "extension/development_seal.py": "7d53889c33470b36ef363b07a5161b85122b0ad0c55eb7e1fda916ac98908978",
+    "extension/development_seal.slurm": "b2bd243093b8765269ba58701f504362981a1576c0779ece86bda578dd6622c4",
+    "extension/development_seal_v2.py": "8c2dd5697c5cbb945f5245de1d8ce8557554fb4fbee046ee2c68d3d26f487bb7",
+    "extension/development_source_metadata.json": "6a00b4f8f52b496c66d27270009d0c71116d676d024454f950af60730548f994",
+    "extension/development_submission.py": "f40d13069091c9c4afc0cb50fbe83f29446fcbf32f62dd4b4bb9e4d41dff475e",
+    "extension/labeled_feasibility.py": "0afb5f61050e2e7c6350ee9a68ffe47779159f85bf81f684b97536331b6b67da",
+    "extension/labeled_feasibility.slurm": "a2c099805f3a53cfdb59a4c1cf773e91f4f9d8e101b084062b3cb09b5e80728e",
+    "extension/labeled_plan.json": "d44572f18e3de76dea44b243a7427b8cac64cf5d87a294ae005b544412f28d80",
+    "extension/labeled_submission.py": "f1dab8e359603b754ead6dcfd364acb2b4a3a6da31d961f0445e9a8e05cff13a",
+    "extension/native_model_admission.py": "55c73185441a0ac893d8fc95cb5bc8d1a659f767a80d27fe9b6734f8ab8fbb7a",
+    "extension/native_model_admission.slurm": "a16012ec07ed4adf70fb0f2d05febac70beca9cb82b260c84252922cd5304164",
+    "extension/native_model_admission_plan.json": "94b6d9bc5e46acc0d5a9e3f409d88544f7e091873c2150af705b92c6313b758e",
+    "extension/objectives.py": "c56bd73d9824284b0393e23812bfcb4d4496fb518296de5fc35c9ec17bd06fde",
+    "extension/operations/development_metadata_diagnostic.slurm": "e7de99e7b49c5a5a81f624773635cc73bb08bf51d15794a5b5e69994f5b3ddd4",
+    "extension/operations/development_metadata_diagnostic_v2.slurm": "63e1de2d38b8c3df994fbb08becf2ada2f20ab03647473a3516e29a209baf9f8",
+    "extension/operations/submit_development_diagnostic.py": "84157ee60e9ef32979b55c3817028e8d87f0189875f69dddefb3849410545060",
+    "extension/operations/submit_development_diagnostic_v2.py": "534e015c80a88ac8b29ff7f5ef9ea9537f27b1dc685dc8dbdf278c38e440a966",
+    "extension/pilot_driver.py": "e6b707537298d1b42f21e744dafef4e5edcd604a79ee95d37c2906738d2b9d1a",
+    "extension/preserving_data.py": "a560e039d4af86739d16f4c3101eb820535ecebf0373571064db9c588bc69d03",
+    "extension/preserving_objectives.py": "05b079d2da89579436ce53b8a801c0fc51bd6cfef45628c50d23a5af93de3eb4",
+    "extension/preserving_trainer.py": "3a46929eaff536f8165e8b1388fddc9c54fde0198c84aac3bcb69cf397d507d0",
+    "extension/research.json": "c81e9a4c966fea1441b77a87e3036fd4cacb2e61f9e2417b8150040252236aca",
+    "extension/smoke_preparation.py": "a4a4f9245ba6dc60b211c60b9a8096429bcef943d5731ae41ec8e54364c8d40b",
+    "extension/smoke_preparation.slurm": "09d272080e0eaae8c00bee3384ff2c39c880354353034e725136eed7dc8d68a5",
+    "extension/smoke_preparation_plan.json": "42ac6063786baf0a114507bfae7287dc709210601cd204098936f135a47508a0",
+    "extension/smoke_submission.py": "f81f90afd4331cc69e194e16e524c54eb913dbbf8be032243b8be9647b4fae21",
+    "extension/source_evaluation.py": "0d1ea4d02848667aae750323ab3f6698c437eee0063a0cb192c957a20d1c20e6",
+    "extension/source_grader_diagnostic.py": "db5a4707a79815ed991fb8e4b02c2a318a80e6e9619af16fa59fd967adeaf386",
+    "extension/source_grader_diagnostic.slurm": "ae4cca18285430c46bed2ec0bc3201f8bda925f3b99c8f27bd562ffb9da50ae7",
+    "extension/source_readiness.py": "c5fa8e04782a8e4ab0ca5c6674ec336173d3f0a82d587f8fc489786f3d468fd9",
+    "extension/source_readiness.slurm": "314b81bc64d0db7306d727d02cf58695efd52729ee2a29afafd5d2a1b59bc73f",
+    "extension/source_readiness_plan.json": "70c6823627d8bc93ce927665b87b943e1bf22f1ddc99eb2fd511a778696b590d",
+    "extension/source_readiness_qa.py": "535616146352fb847c214e7d82029e4e072d1c181b4cdab4a4f1323f942550da",
+    "extension/source_readiness_retry.slurm": "3a4ea30f595cbd4f22277cb047503da3a90f6325442a061b6fa0b9ff9b8183ed",
+    "extension/source_readiness_retry_qa.py": "7d1196d227d1232c7bb892817e8c56ee318b1747cd16c43d6787df487f9de17c",
+    "extension/source_readiness_retry_submission.py": "258e02932a05897a830c5d9018a8fb51d77b862b47ae989387ef41b02093fa5d",
+    "extension/source_readiness_submission.py": "978590d9c09f78a6b99c00643c7f3905d65ba0b4f4cadb2c2d0d676773a32e31",
+    "extension/submission.py": "fd0d9adc589aa6e6b9287df50801679e46d227c1a46d6a27c22a8b963907bb0a",
+    "reasoning/data.py": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68",
+    "reasoning/features.py": "5cee76526c1b552e53b490c811c2e4c5506758985be735c13bc0945fb6a59d13",
+    "tests/test_development_seal.py": "fa07685cc9c439e564fb93c9205bc4daf5d20d82546aaf206db42a47ea895d39",
+    "tests/test_development_submission.py": "f50e70e7dd55facff9e473aeee6ca625520f07c0d598731de1c00c2630ffba53",
+    "tests/test_extension_feasibility.py": "6e4bf3225e4a68840babc878961b0b6db71cbc5e76cb095905080a65c87d294f",
+    "tests/test_extension_objectives.py": "306caa2e01c1c9aa6ce1799c535bbe3d530549838ff160320750beda576639aa",
+    "tests/test_extension_submission.py": "0cd3949f92389e19112ed99a1d191690dad5ae5b63dc6e68d15b87fded5db50c",
+    "tests/test_labeled_feasibility.py": "f3114f0431c91e99eda6b53abb36f4424cebed193c4ed7d0e508496b9819d0f1",
+    "tests/test_labeled_submission.py": "a51f4837a0780cb432170d5f0989ee84dc9e80532451962d38c4be1568881531",
+    "tests/test_native_model_admission.py": "cbbd53d76057badaa1a14afdc36ee422c9c8591ce84e90158dd007215adb2b28",
+    "tests/test_pilot_driver.py": "ab96ab198011d2c57b3d03ca673a7856925ac000a776f2e92cb0d151daa384c5",
+    "tests/test_preservation_data.py": "d62623fd934e7e47e2de959dde169b79abe08a88da1454d8ec96ed059d31628d",
+    "tests/test_preservation_development_seal_v2.py": "22a38e4867fd1b4390d3d2953fc990fba20d997a42cfff71953a612126beeebd",
+    "tests/test_preservation_retry_submission.py": "2c8f25cc7989d80a095eb372efdb36a785294a4e40201854e91b247d7aaa7450",
+    "tests/test_preserving_objectives.py": "d520dee4691e9186bfa80c44ba8ed67ce610dbe707bd2d20f2327e1bb46d30a6",
+    "tests/test_preserving_trainer.py": "9c2f14ee4023c2b18e059fa5297e469725148fa3d02b2d38b3c1b2c0a6c7dfb7",
+    "tests/test_smoke_preparation.py": "e0baf6787e711704a1958422160e6f3b0a549faba409be270b4d226cc42ea64b",
+    "tests/test_smoke_submission.py": "80225ddaa17a695df6135c7ab44d437e63046a0b91dde1c5bf278596cad3832b",
+    "tests/test_source_evaluation.py": "3b4a9689a0b44312b81e898ef6722f96acd8bb752093134034743d26255ce1af",
+    "tests/test_source_readiness.py": "e371cd95eb7bbbcdbfbc74822aaac62bc9051d0f9cd0979c3fc38c544f83cfee",
+    "tests/test_source_readiness_retry_submission.py": "e7ebf1b6a51a4105c7ca30bab81b194469cd23e3005b30d7572a845c269ecf77",
+    "tests/test_source_readiness_submission.py": "07d70e2e98ff1a103cc0f32308d9e2b5359407471d2db349697f4f19ac1b97e6"
+  },
+  "complete": true,
+  "compute_end": {
+    "allocated_cpus": 1,
+    "allocated_tres": "cpu=1,mem=8G,node=1,billing=2",
+    "checked_at_utc": "2026-10-21T01:54:29.039240+00:00",
+    "cuda_visible_devices": "",
+    "gpu_requested_or_allocated": false,
+    "hostname": "owl033",
+    "job_id": "1225426",
+    "node": "owl033",
+    "requested_tres": "cpu=1,mem=8G,node=1,billing=2",
+    "scontrol": "JobId=1225426 JobName=sft-extension-source-grader-diagnostic UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1314 Nice=0 Account=tml_2026 QOS=owl_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:29 TimeLimit=00:10:00 TimeMin=N/A SubmitTime=2026-10-20T21:53:47 EligibleTime=2026-10-20T21:53:47 AccrueTime=2026-10-20T21:53:48 StartTime=2026-10-20T21:54:00 EndTime=2026-10-20T22:04:00 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T21:54:00 Scheduler=Backfill Partition=normal_q AllocNode:Sid=owl1:1650692 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl033 BatchHost=owl033 NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=1,mem=8G,node=1,billing=2 AllocTRES=cpu=1,mem=8G,node=1,billing=2 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=1 MinMemoryNode=8G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/source_grader_diagnostic.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/source_grader_diagnostic.slurm WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-source-grader-diagnostic-1225426.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-source-grader-diagnostic-1225426.out TresPerTask=cpu=1",
+    "scontrol_sha256": "4e57a1ba72043eb624e1d641276aa6bcfcc32333d5527ddc1387bc3f9c26fa8b",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "compute_start": {
+    "allocated_cpus": 1,
+    "allocated_tres": "cpu=1,mem=8G,node=1,billing=2",
+    "checked_at_utc": "2026-10-21T01:54:01.870728+00:00",
+    "cuda_visible_devices": "",
+    "gpu_requested_or_allocated": false,
+    "hostname": "owl033",
+    "job_id": "1225426",
+    "node": "owl033",
+    "requested_tres": "cpu=1,mem=8G,node=1,billing=2",
+    "scontrol": "JobId=1225426 JobName=sft-extension-source-grader-diagnostic UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1314 Nice=0 Account=tml_2026 QOS=owl_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:01 TimeLimit=00:10:00 TimeMin=N/A SubmitTime=2026-10-20T21:53:47 EligibleTime=2026-10-20T21:53:47 AccrueTime=2026-10-20T21:53:48 StartTime=2026-10-20T21:54:00 EndTime=2026-10-20T22:04:00 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T21:54:00 Scheduler=Backfill Partition=normal_q AllocNode:Sid=owl1:1650692 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl033 BatchHost=owl033 NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=1,mem=8G,node=1,billing=2 AllocTRES=cpu=1,mem=8G,node=1,billing=2 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=1 MinMemoryNode=8G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/source_grader_diagnostic.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/source_grader_diagnostic.slurm WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-source-grader-diagnostic-1225426.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-source-grader-diagnostic-1225426.out TresPerTask=cpu=1",
+    "scontrol_sha256": "af308d54643b0bb42e5c2b9fb876ec5302858c23a58fa3135a1f292ff8df64d4",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "cpu_only": true,
+  "created_at_utc": "2026-10-21T01:54:29.050036+00:00",
+  "diagnostic_completed": true,
+  "elapsed_seconds": 26.433960598893464,
+  "gpu_seconds": 0,
+  "grader_success_claimed": false,
+  "job_id": "1225426",
+  "model_framework_imports_forbidden": true,
+  "observations": [
+    {
+      "exact_unchanged_grader": {
+        "elapsed_wall_seconds": 4.694382045418024,
+        "parent_process_cpu_seconds": 0.006064668999999995,
+        "result": {
+          "comparator_provenance": {
+            "include_percentage": false,
+            "internal_timeout": false,
+            "is_close": true,
+            "loaded_modules": {
+              "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+              "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+              "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+              "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+              "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+            },
+            "normalization_order": "explicit_percentage_then_pinned_strip_string",
+            "runtime_versions": {
+              "antlr4-python3-runtime": "4.7.2",
+              "latex2sympy2": "1.9.1",
+              "regex": "2025.11.3",
+              "sympy": "1.14.0",
+              "word2number": "1.1"
+            },
+            "timeout_owner": "external_spawn_process"
+          },
+          "correct": true,
+          "denominator": 1,
+          "error": null,
+          "extraction": {
+            "answer": "50%",
+            "attempts": 1,
+            "end": 11,
+            "start": 0,
+            "status": "ok"
+          },
+          "rankable": true,
+          "record_id": "adce4f8ed6bb4dafa65d0237aa8e454b9f52c70a2ec0e41bce04fd7013037b71",
+          "response_sha256": "78a013f8c1d4bbc65bc4347ce50b0df15ea85cd7d269518e27517132e811b942",
+          "source_kind": "math",
+          "status": "graded"
+        },
+        "unchanged_grade_response": true,
+        "work_deadline_seconds": 5.0
+      },
+      "fixture": {
+        "expected_correct": true,
+        "gold": ".5",
+        "id": "percentage_positive",
+        "prediction": "50%"
+      },
+      "instrumented_cold_spawn": {
+        "cleanup": {
+          "actions": [
+            "terminate"
+          ],
+          "elapsed_wall_seconds": 0.05758643429726362,
+          "exitcode": -15,
+          "join_budget_seconds": 0.55,
+          "successful": true,
+          "worker_alive": false
+        },
+        "correct": true,
+        "diagnostic_only": true,
+        "elapsed_wall_seconds": 1.5997313195839524,
+        "error_type": null,
+        "events": [
+          {
+            "event": "child_entry",
+            "monotonic_seconds": 6759863.213183611,
+            "parent_received_elapsed_wall_seconds": 0.18754598032683134,
+            "pid": 2205684,
+            "process_cpu_seconds": 0.101703548,
+            "sequence": 0
+          },
+          {
+            "comparator_provenance": {
+              "include_percentage": false,
+              "internal_timeout": false,
+              "is_close": true,
+              "loaded_modules": {
+                "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+                "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+                "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+                "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+                "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+              },
+              "normalization_order": "explicit_percentage_then_pinned_strip_string",
+              "runtime_versions": {
+                "antlr4-python3-runtime": "4.7.2",
+                "latex2sympy2": "1.9.1",
+                "regex": "2025.11.3",
+                "sympy": "1.14.0",
+                "word2number": "1.1"
+              },
+              "timeout_owner": "external_spawn_process"
+            },
+            "event": "comparator_loaded",
+            "monotonic_seconds": 6759864.229585496,
+            "parent_received_elapsed_wall_seconds": 1.2039594845846295,
+            "pid": 2205684,
+            "process_cpu_seconds": 0.784593194,
+            "sequence": 1
+          },
+          {
+            "event": "normalization_finished",
+            "monotonic_seconds": 6759864.242312682,
+            "normalized_gold": "0.5",
+            "normalized_prediction": "\\frac{1}{2}",
+            "parent_received_elapsed_wall_seconds": 1.2166788410395384,
+            "pid": 2205684,
+            "process_cpu_seconds": 0.797110229,
+            "sequence": 2
+          },
+          {
+            "event": "comparison_started",
+            "monotonic_seconds": 6759864.242489759,
+            "parent_received_elapsed_wall_seconds": 1.2167464029043913,
+            "pid": 2205684,
+            "process_cpu_seconds": 0.797165339,
+            "sequence": 3
+          },
+          {
+            "correct": true,
+            "event": "comparison_finished",
+            "monotonic_seconds": 6759864.567772887,
+            "parent_received_elapsed_wall_seconds": 1.54213282559067,
+            "pid": 2205684,
+            "process_cpu_seconds": 1.025404469,
+            "sequence": 4
+          }
+        ],
+        "last_observed_phase": "comparison_finished",
+        "parent_process_cpu_seconds": 0.0010949000000000098,
+        "rankable": false,
+        "status": "graded",
+        "timed_out_phase": null,
+        "work_deadline_seconds": 5.0
+      },
+      "repetition": 0
+    },
+    {
+      "exact_unchanged_grader": {
+        "elapsed_wall_seconds": 1.659715917892754,
+        "parent_process_cpu_seconds": 0.0008988500000000066,
+        "result": {
+          "comparator_provenance": {
+            "include_percentage": false,
+            "internal_timeout": false,
+            "is_close": true,
+            "loaded_modules": {
+              "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+              "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+              "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+              "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+              "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+            },
+            "normalization_order": "explicit_percentage_then_pinned_strip_string",
+            "runtime_versions": {
+              "antlr4-python3-runtime": "4.7.2",
+              "latex2sympy2": "1.9.1",
+              "regex": "2025.11.3",
+              "sympy": "1.14.0",
+              "word2number": "1.1"
+            },
+            "timeout_owner": "external_spawn_process"
+          },
+          "correct": false,
+          "denominator": 1,
+          "error": null,
+          "extraction": {
+            "answer": "50%",
+            "attempts": 1,
+            "end": 11,
+            "start": 0,
+            "status": "ok"
+          },
+          "rankable": true,
+          "record_id": "d680a321f5f38bd632787d0370bac57cad3d7969d4a289079dc5765490746d1c",
+          "response_sha256": "78a013f8c1d4bbc65bc4347ce50b0df15ea85cd7d269518e27517132e811b942",
+          "source_kind": "math",
+          "status": "graded"
+        },
+        "unchanged_grade_response": true,
+        "work_deadline_seconds": 5.0
+      },
+      "fixture": {
+        "expected_correct": false,
+        "gold": "50",
+        "id": "percentage_negative",
+        "prediction": "50%"
+      },
+      "instrumented_cold_spawn": {
+        "cleanup": {
+          "actions": [
+            "terminate"
+          ],
+          "elapsed_wall_seconds": 0.05733180418610573,
+          "exitcode": -15,
+          "join_budget_seconds": 0.55,
+          "successful": true,
+          "worker_alive": false
+        },
+        "correct": false,
+        "diagnostic_only": true,
+        "elapsed_wall_seconds": 1.604837859980762,
+        "error_type": null,
+        "events": [
+          {
+            "event": "child_entry",
+            "monotonic_seconds": 6759866.46851715,
+            "parent_received_elapsed_wall_seconds": 0.1779809072613716,
+            "pid": 2205722,
+            "process_cpu_seconds": 0.0995945,
+            "sequence": 0
+          },
+          {
+            "comparator_provenance": {
+              "include_percentage": false,
+              "internal_timeout": false,
+              "is_close": true,
+              "loaded_modules": {
+                "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+                "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+                "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+                "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+                "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+              },
+              "normalization_order": "explicit_percentage_then_pinned_strip_string",
+              "runtime_versions": {
+                "antlr4-python3-runtime": "4.7.2",
+                "latex2sympy2": "1.9.1",
+                "regex": "2025.11.3",
+                "sympy": "1.14.0",
+                "word2number": "1.1"
+              },
+              "timeout_owner": "external_spawn_process"
+            },
+            "event": "comparator_loaded",
+            "monotonic_seconds": 6759867.496910932,
+            "parent_received_elapsed_wall_seconds": 1.206400129944086,
+            "pid": 2205722,
+            "process_cpu_seconds": 0.791445284,
+            "sequence": 1
+          },
+          {
+            "event": "normalization_finished",
+            "monotonic_seconds": 6759867.509987041,
+            "normalized_gold": "50",
+            "normalized_prediction": "\\frac{1}{2}",
+            "parent_received_elapsed_wall_seconds": 1.2194779897108674,
+            "pid": 2205722,
+            "process_cpu_seconds": 0.803960888,
+            "sequence": 2
+          },
+          {
+            "event": "comparison_started",
+            "monotonic_seconds": 6759867.510177889,
+            "parent_received_elapsed_wall_seconds": 1.2195430919528008,
+            "pid": 2205722,
+            "process_cpu_seconds": 0.804023858,
+            "sequence": 3
+          },
+          {
+            "correct": false,
+            "event": "comparison_finished",
+            "monotonic_seconds": 6759867.838033857,
+            "parent_received_elapsed_wall_seconds": 1.5474946442991495,
+            "pid": 2205722,
+            "process_cpu_seconds": 1.038016552,
+            "sequence": 4
+          }
+        ],
+        "last_observed_phase": "comparison_finished",
+        "parent_process_cpu_seconds": 0.001076739000000021,
+        "rankable": false,
+        "status": "graded",
+        "timed_out_phase": null,
+        "work_deadline_seconds": 5.0
+      },
+      "repetition": 0
+    },
+    {
+      "exact_unchanged_grader": {
+        "elapsed_wall_seconds": 1.2815231382846832,
+        "parent_process_cpu_seconds": 0.0009390200000000126,
+        "result": {
+          "comparator_provenance": {
+            "include_percentage": false,
+            "internal_timeout": false,
+            "is_close": true,
+            "loaded_modules": {
+              "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+              "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+              "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+              "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+              "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+            },
+            "normalization_order": "explicit_percentage_then_pinned_strip_string",
+            "runtime_versions": {
+              "antlr4-python3-runtime": "4.7.2",
+              "latex2sympy2": "1.9.1",
+              "regex": "2025.11.3",
+              "sympy": "1.14.0",
+              "word2number": "1.1"
+            },
+            "timeout_owner": "external_spawn_process"
+          },
+          "correct": false,
+          "denominator": 1,
+          "error": null,
+          "extraction": {
+            "answer": "1000",
+            "attempts": 1,
+            "end": 12,
+            "start": 0,
+            "status": "ok"
+          },
+          "rankable": true,
+          "record_id": "dbc6a38a928b8b2bd361a3c0b5fa5b427430da5c8c94a63eb48bf1ace088a5de",
+          "response_sha256": "86273bc027cec7e5f34b22790c678ebc846550542835b492d0dc11736f2f0219",
+          "source_kind": "math",
+          "status": "graded"
+        },
+        "unchanged_grade_response": true,
+        "work_deadline_seconds": 5.0
+      },
+      "fixture": {
+        "expected_correct": false,
+        "gold": "10",
+        "id": "numeric_negative_large",
+        "prediction": "1000"
+      },
+      "instrumented_cold_spawn": {
+        "cleanup": {
+          "actions": [
+            "terminate"
+          ],
+          "elapsed_wall_seconds": 0.05533103737980127,
+          "exitcode": -15,
+          "join_budget_seconds": 0.55,
+          "successful": true,
+          "worker_alive": false
+        },
+        "correct": false,
+        "diagnostic_only": true,
+        "elapsed_wall_seconds": 1.271632402203977,
+        "error_type": null,
+        "events": [
+          {
+            "event": "child_entry",
+            "monotonic_seconds": 6759869.360262267,
+            "parent_received_elapsed_wall_seconds": 0.17793160490691662,
+            "pid": 2205725,
+            "process_cpu_seconds": 0.098750446,
+            "sequence": 0
+          },
+          {
+            "comparator_provenance": {
+              "include_percentage": false,
+              "internal_timeout": false,
+              "is_close": true,
+              "loaded_modules": {
+                "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+                "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+                "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+                "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+                "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+              },
+              "normalization_order": "explicit_percentage_then_pinned_strip_string",
+              "runtime_versions": {
+                "antlr4-python3-runtime": "4.7.2",
+                "latex2sympy2": "1.9.1",
+                "regex": "2025.11.3",
+                "sympy": "1.14.0",
+                "word2number": "1.1"
+              },
+              "timeout_owner": "external_spawn_process"
+            },
+            "event": "comparator_loaded",
+            "monotonic_seconds": 6759870.383740378,
+            "parent_received_elapsed_wall_seconds": 1.2014465471729636,
+            "pid": 2205725,
+            "process_cpu_seconds": 0.784769682,
+            "sequence": 1
+          },
+          {
+            "event": "normalization_finished",
+            "monotonic_seconds": 6759870.396567628,
+            "normalized_gold": "10",
+            "normalized_prediction": "1000",
+            "parent_received_elapsed_wall_seconds": 1.2142447046935558,
+            "pid": 2205725,
+            "process_cpu_seconds": 0.797352779,
+            "sequence": 2
+          },
+          {
+            "event": "comparison_started",
+            "monotonic_seconds": 6759870.396748895,
+            "parent_received_elapsed_wall_seconds": 1.2143111480399966,
+            "pid": 2205725,
+            "process_cpu_seconds": 0.797410149,
+            "sequence": 3
+          },
+          {
+            "correct": false,
+            "event": "comparison_finished",
+            "monotonic_seconds": 6759870.39867729,
+            "parent_received_elapsed_wall_seconds": 1.2162873446941376,
+            "pid": 2205725,
+            "process_cpu_seconds": 0.799289269,
+            "sequence": 4
+          }
+        ],
+        "last_observed_phase": "comparison_finished",
+        "parent_process_cpu_seconds": 0.001033397999999991,
+        "rankable": false,
+        "status": "graded",
+        "timed_out_phase": null,
+        "work_deadline_seconds": 5.0
+      },
+      "repetition": 0
+    },
+    {
+      "exact_unchanged_grader": {
+        "elapsed_wall_seconds": 1.2675247229635715,
+        "parent_process_cpu_seconds": 0.0007712600000000236,
+        "result": {
+          "comparator_provenance": {
+            "include_percentage": false,
+            "internal_timeout": false,
+            "is_close": true,
+            "loaded_modules": {
+              "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+              "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+              "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+              "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+              "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+            },
+            "normalization_order": "explicit_percentage_then_pinned_strip_string",
+            "runtime_versions": {
+              "antlr4-python3-runtime": "4.7.2",
+              "latex2sympy2": "1.9.1",
+              "regex": "2025.11.3",
+              "sympy": "1.14.0",
+              "word2number": "1.1"
+            },
+            "timeout_owner": "external_spawn_process"
+          },
+          "correct": false,
+          "denominator": 1,
+          "error": null,
+          "extraction": {
+            "answer": ".1",
+            "attempts": 1,
+            "end": 10,
+            "start": 0,
+            "status": "ok"
+          },
+          "rankable": true,
+          "record_id": "cc2f4fafe4838275365da754831093817328c9f53ef98b49f6b2dd1d81e04df1",
+          "response_sha256": "cf05c2b4cf9adeb535cc8fcf97607335648bcf55d510f50bbd352903a24e1082",
+          "source_kind": "math",
+          "status": "graded"
+        },
+        "unchanged_grade_response": true,
+        "work_deadline_seconds": 5.0
+      },
+      "fixture": {
+        "expected_correct": false,
+        "gold": "10",
+        "id": "numeric_negative_small",
+        "prediction": ".1"
+      },
+      "instrumented_cold_spawn": {
+        "cleanup": {
+          "actions": [
+            "terminate"
+          ],
+          "elapsed_wall_seconds": 0.05590481869876385,
+          "exitcode": -15,
+          "join_budget_seconds": 0.55,
+          "successful": true,
+          "worker_alive": false
+        },
+        "correct": false,
+        "diagnostic_only": true,
+        "elapsed_wall_seconds": 1.2930779298767447,
+        "error_type": null,
+        "events": [
+          {
+            "event": "child_entry",
+            "monotonic_seconds": 6759871.904308403,
+            "parent_received_elapsed_wall_seconds": 0.17703057080507278,
+            "pid": 2205727,
+            "process_cpu_seconds": 0.098292142,
+            "sequence": 0
+          },
+          {
+            "comparator_provenance": {
+              "include_percentage": false,
+              "internal_timeout": false,
+              "is_close": true,
+              "loaded_modules": {
+                "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+                "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+                "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+                "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+                "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+              },
+              "normalization_order": "explicit_percentage_then_pinned_strip_string",
+              "runtime_versions": {
+                "antlr4-python3-runtime": "4.7.2",
+                "latex2sympy2": "1.9.1",
+                "regex": "2025.11.3",
+                "sympy": "1.14.0",
+                "word2number": "1.1"
+              },
+              "timeout_owner": "external_spawn_process"
+            },
+            "event": "comparator_loaded",
+            "monotonic_seconds": 6759872.949801781,
+            "parent_received_elapsed_wall_seconds": 1.2225287090986967,
+            "pid": 2205727,
+            "process_cpu_seconds": 0.77362796,
+            "sequence": 1
+          },
+          {
+            "event": "normalization_finished",
+            "monotonic_seconds": 6759872.962444204,
+            "normalized_gold": "10",
+            "normalized_prediction": "0.1",
+            "parent_received_elapsed_wall_seconds": 1.2351376414299011,
+            "pid": 2205727,
+            "process_cpu_seconds": 0.786073006,
+            "sequence": 2
+          },
+          {
+            "event": "comparison_started",
+            "monotonic_seconds": 6759872.96258426,
+            "parent_received_elapsed_wall_seconds": 1.2351971035823226,
+            "pid": 2205727,
+            "process_cpu_seconds": 0.786115796,
+            "sequence": 3
+          },
+          {
+            "correct": false,
+            "event": "comparison_finished",
+            "monotonic_seconds": 6759872.964498924,
+            "parent_received_elapsed_wall_seconds": 1.2371578691527247,
+            "pid": 2205727,
+            "process_cpu_seconds": 0.787995696,
+            "sequence": 4
+          }
+        ],
+        "last_observed_phase": "comparison_finished",
+        "parent_process_cpu_seconds": 0.0010024500000000158,
+        "rankable": false,
+        "status": "graded",
+        "timed_out_phase": null,
+        "work_deadline_seconds": 5.0
+      },
+      "repetition": 0
+    },
+    {
+      "exact_unchanged_grader": {
+        "elapsed_wall_seconds": 1.6221480248495936,
+        "parent_process_cpu_seconds": 0.0008417710000000189,
+        "result": {
+          "comparator_provenance": {
+            "include_percentage": false,
+            "internal_timeout": false,
+            "is_close": true,
+            "loaded_modules": {
+              "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+              "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+              "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+              "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+              "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+            },
+            "normalization_order": "explicit_percentage_then_pinned_strip_string",
+            "runtime_versions": {
+              "antlr4-python3-runtime": "4.7.2",
+              "latex2sympy2": "1.9.1",
+              "regex": "2025.11.3",
+              "sympy": "1.14.0",
+              "word2number": "1.1"
+            },
+            "timeout_owner": "external_spawn_process"
+          },
+          "correct": true,
+          "denominator": 1,
+          "error": null,
+          "extraction": {
+            "answer": "50%",
+            "attempts": 1,
+            "end": 11,
+            "start": 0,
+            "status": "ok"
+          },
+          "rankable": true,
+          "record_id": "adce4f8ed6bb4dafa65d0237aa8e454b9f52c70a2ec0e41bce04fd7013037b71",
+          "response_sha256": "78a013f8c1d4bbc65bc4347ce50b0df15ea85cd7d269518e27517132e811b942",
+          "source_kind": "math",
+          "status": "graded"
+        },
+        "unchanged_grade_response": true,
+        "work_deadline_seconds": 5.0
+      },
+      "fixture": {
+        "expected_correct": true,
+        "gold": ".5",
+        "id": "percentage_positive",
+        "prediction": "50%"
+      },
+      "instrumented_cold_spawn": {
+        "cleanup": {
+          "actions": [
+            "terminate"
+          ],
+          "elapsed_wall_seconds": 0.05799858085811138,
+          "exitcode": -15,
+          "join_budget_seconds": 0.55,
+          "successful": true,
+          "worker_alive": false
+        },
+        "correct": true,
+        "diagnostic_only": true,
+        "elapsed_wall_seconds": 1.591146876104176,
+        "error_type": null,
+        "events": [
+          {
+            "event": "child_entry",
+            "monotonic_seconds": 6759874.825994207,
+            "parent_received_elapsed_wall_seconds": 0.177890514023602,
+            "pid": 2205732,
+            "process_cpu_seconds": 0.096389943,
+            "sequence": 0
+          },
+          {
+            "comparator_provenance": {
+              "include_percentage": false,
+              "internal_timeout": false,
+              "is_close": true,
+              "loaded_modules": {
+                "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+                "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+                "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+                "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+                "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+              },
+              "normalization_order": "explicit_percentage_then_pinned_strip_string",
+              "runtime_versions": {
+                "antlr4-python3-runtime": "4.7.2",
+                "latex2sympy2": "1.9.1",
+                "regex": "2025.11.3",
+                "sympy": "1.14.0",
+                "word2number": "1.1"
+              },
+              "timeout_owner": "external_spawn_process"
+            },
+            "event": "comparator_loaded",
+            "monotonic_seconds": 6759875.847025213,
+            "parent_received_elapsed_wall_seconds": 1.1989230187609792,
+            "pid": 2205732,
+            "process_cpu_seconds": 0.760668673,
+            "sequence": 1
+          },
+          {
+            "event": "normalization_finished",
+            "monotonic_seconds": 6759875.859814721,
+            "normalized_gold": "0.5",
+            "normalized_prediction": "\\frac{1}{2}",
+            "parent_received_elapsed_wall_seconds": 1.2117000371217728,
+            "pid": 2205732,
+            "process_cpu_seconds": 0.773258429,
+            "sequence": 2
+          },
+          {
+            "event": "comparison_started",
+            "monotonic_seconds": 6759875.859974457,
+            "parent_received_elapsed_wall_seconds": 1.2117687799036503,
+            "pid": 2205732,
+            "process_cpu_seconds": 0.7733093,
+            "sequence": 3
+          },
+          {
+            "correct": true,
+            "event": "comparison_finished",
+            "monotonic_seconds": 6759876.181250039,
+            "parent_received_elapsed_wall_seconds": 1.533135974779725,
+            "pid": 2205732,
+            "process_cpu_seconds": 0.99337246,
+            "sequence": 4
+          }
+        ],
+        "last_observed_phase": "comparison_finished",
+        "parent_process_cpu_seconds": 0.001079357000000003,
+        "rankable": false,
+        "status": "graded",
+        "timed_out_phase": null,
+        "work_deadline_seconds": 5.0
+      },
+      "repetition": 1
+    },
+    {
+      "exact_unchanged_grader": {
+        "elapsed_wall_seconds": 1.5540237789973617,
+        "parent_process_cpu_seconds": 0.0008687709999999904,
+        "result": {
+          "comparator_provenance": {
+            "include_percentage": false,
+            "internal_timeout": false,
+            "is_close": true,
+            "loaded_modules": {
+              "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+              "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+              "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+              "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+              "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+            },
+            "normalization_order": "explicit_percentage_then_pinned_strip_string",
+            "runtime_versions": {
+              "antlr4-python3-runtime": "4.7.2",
+              "latex2sympy2": "1.9.1",
+              "regex": "2025.11.3",
+              "sympy": "1.14.0",
+              "word2number": "1.1"
+            },
+            "timeout_owner": "external_spawn_process"
+          },
+          "correct": false,
+          "denominator": 1,
+          "error": null,
+          "extraction": {
+            "answer": "50%",
+            "attempts": 1,
+            "end": 11,
+            "start": 0,
+            "status": "ok"
+          },
+          "rankable": true,
+          "record_id": "d680a321f5f38bd632787d0370bac57cad3d7969d4a289079dc5765490746d1c",
+          "response_sha256": "78a013f8c1d4bbc65bc4347ce50b0df15ea85cd7d269518e27517132e811b942",
+          "source_kind": "math",
+          "status": "graded"
+        },
+        "unchanged_grade_response": true,
+        "work_deadline_seconds": 5.0
+      },
+      "fixture": {
+        "expected_correct": false,
+        "gold": "50",
+        "id": "percentage_negative",
+        "prediction": "50%"
+      },
+      "instrumented_cold_spawn": {
+        "cleanup": {
+          "actions": [
+            "terminate"
+          ],
+          "elapsed_wall_seconds": 0.05756273306906223,
+          "exitcode": -15,
+          "join_budget_seconds": 0.55,
+          "successful": true,
+          "worker_alive": false
+        },
+        "correct": false,
+        "diagnostic_only": true,
+        "elapsed_wall_seconds": 1.5715700630098581,
+        "error_type": null,
+        "events": [
+          {
+            "event": "child_entry",
+            "monotonic_seconds": 6759877.975779032,
+            "parent_received_elapsed_wall_seconds": 0.17649982869625092,
+            "pid": 2205750,
+            "process_cpu_seconds": 0.095134904,
+            "sequence": 0
+          },
+          {
+            "comparator_provenance": {
+              "include_percentage": false,
+              "internal_timeout": false,
+              "is_close": true,
+              "loaded_modules": {
+                "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+                "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+                "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+                "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+                "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+              },
+              "normalization_order": "explicit_percentage_then_pinned_strip_string",
+              "runtime_versions": {
+                "antlr4-python3-runtime": "4.7.2",
+                "latex2sympy2": "1.9.1",
+                "regex": "2025.11.3",
+                "sympy": "1.14.0",
+                "word2number": "1.1"
+              },
+              "timeout_owner": "external_spawn_process"
+            },
+            "event": "comparator_loaded",
+            "monotonic_seconds": 6759878.987090518,
+            "parent_received_elapsed_wall_seconds": 1.1878183158114552,
+            "pid": 2205750,
+            "process_cpu_seconds": 0.765494657,
+            "sequence": 1
+          },
+          {
+            "event": "normalization_finished",
+            "monotonic_seconds": 6759878.999380327,
+            "normalized_gold": "50",
+            "normalized_prediction": "\\frac{1}{2}",
+            "parent_received_elapsed_wall_seconds": 1.2000446924939752,
+            "pid": 2205750,
+            "process_cpu_seconds": 0.777601002,
+            "sequence": 2
+          },
+          {
+            "event": "comparison_started",
+            "monotonic_seconds": 6759878.999473771,
+            "parent_received_elapsed_wall_seconds": 1.200095184147358,
+            "pid": 2205750,
+            "process_cpu_seconds": 0.777634262,
+            "sequence": 3
+          },
+          {
+            "correct": false,
+            "event": "comparison_finished",
+            "monotonic_seconds": 6759879.313275041,
+            "parent_received_elapsed_wall_seconds": 1.5139948278665543,
+            "pid": 2205750,
+            "process_cpu_seconds": 0.996228019,
+            "sequence": 4
+          }
+        ],
+        "last_observed_phase": "comparison_finished",
+        "parent_process_cpu_seconds": 0.0010068100000000246,
+        "rankable": false,
+        "status": "graded",
+        "timed_out_phase": null,
+        "work_deadline_seconds": 5.0
+      },
+      "repetition": 1
+    },
+    {
+      "exact_unchanged_grader": {
+        "elapsed_wall_seconds": 1.2485056910663843,
+        "parent_process_cpu_seconds": 0.0008267700000000044,
+        "result": {
+          "comparator_provenance": {
+            "include_percentage": false,
+            "internal_timeout": false,
+            "is_close": true,
+            "loaded_modules": {
+              "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+              "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+              "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+              "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+              "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+            },
+            "normalization_order": "explicit_percentage_then_pinned_strip_string",
+            "runtime_versions": {
+              "antlr4-python3-runtime": "4.7.2",
+              "latex2sympy2": "1.9.1",
+              "regex": "2025.11.3",
+              "sympy": "1.14.0",
+              "word2number": "1.1"
+            },
+            "timeout_owner": "external_spawn_process"
+          },
+          "correct": false,
+          "denominator": 1,
+          "error": null,
+          "extraction": {
+            "answer": "1000",
+            "attempts": 1,
+            "end": 12,
+            "start": 0,
+            "status": "ok"
+          },
+          "rankable": true,
+          "record_id": "dbc6a38a928b8b2bd361a3c0b5fa5b427430da5c8c94a63eb48bf1ace088a5de",
+          "response_sha256": "86273bc027cec7e5f34b22790c678ebc846550542835b492d0dc11736f2f0219",
+          "source_kind": "math",
+          "status": "graded"
+        },
+        "unchanged_grade_response": true,
+        "work_deadline_seconds": 5.0
+      },
+      "fixture": {
+        "expected_correct": false,
+        "gold": "10",
+        "id": "numeric_negative_large",
+        "prediction": "1000"
+      },
+      "instrumented_cold_spawn": {
+        "cleanup": {
+          "actions": [
+            "terminate"
+          ],
+          "elapsed_wall_seconds": 0.05693468917161226,
+          "exitcode": -15,
+          "join_budget_seconds": 0.55,
+          "successful": true,
+          "worker_alive": false
+        },
+        "correct": false,
+        "diagnostic_only": true,
+        "elapsed_wall_seconds": 1.2970426231622696,
+        "error_type": null,
+        "events": [
+          {
+            "event": "child_entry",
+            "monotonic_seconds": 6759880.803621689,
+            "parent_received_elapsed_wall_seconds": 0.17944185342639685,
+            "pid": 2205752,
+            "process_cpu_seconds": 0.09757523,
+            "sequence": 0
+          },
+          {
+            "comparator_provenance": {
+              "include_percentage": false,
+              "internal_timeout": false,
+              "is_close": true,
+              "loaded_modules": {
+                "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+                "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+                "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+                "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+                "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+              },
+              "normalization_order": "explicit_percentage_then_pinned_strip_string",
+              "runtime_versions": {
+                "antlr4-python3-runtime": "4.7.2",
+                "latex2sympy2": "1.9.1",
+                "regex": "2025.11.3",
+                "sympy": "1.14.0",
+                "word2number": "1.1"
+              },
+              "timeout_owner": "external_spawn_process"
+            },
+            "event": "comparator_loaded",
+            "monotonic_seconds": 6759881.849107407,
+            "parent_received_elapsed_wall_seconds": 1.224845388904214,
+            "pid": 2205752,
+            "process_cpu_seconds": 0.80716149,
+            "sequence": 1
+          },
+          {
+            "event": "normalization_finished",
+            "monotonic_seconds": 6759881.862322952,
+            "normalized_gold": "10",
+            "normalized_prediction": "1000",
+            "parent_received_elapsed_wall_seconds": 1.238044354133308,
+            "pid": 2205752,
+            "process_cpu_seconds": 0.820170286,
+            "sequence": 2
+          },
+          {
+            "event": "comparison_started",
+            "monotonic_seconds": 6759881.862489579,
+            "parent_received_elapsed_wall_seconds": 1.2381081162020564,
+            "pid": 2205752,
+            "process_cpu_seconds": 0.820223496,
+            "sequence": 3
+          },
+          {
+            "correct": false,
+            "event": "comparison_finished",
+            "monotonic_seconds": 6759881.864399323,
+            "parent_received_elapsed_wall_seconds": 1.2400871831923723,
+            "pid": 2205752,
+            "process_cpu_seconds": 0.822099376,
+            "sequence": 4
+          }
+        ],
+        "last_observed_phase": "comparison_finished",
+        "parent_process_cpu_seconds": 0.0011666379999999976,
+        "rankable": false,
+        "status": "graded",
+        "timed_out_phase": null,
+        "work_deadline_seconds": 5.0
+      },
+      "repetition": 1
+    },
+    {
+      "exact_unchanged_grader": {
+        "elapsed_wall_seconds": 1.317254121415317,
+        "parent_process_cpu_seconds": 0.0007997510000000152,
+        "result": {
+          "comparator_provenance": {
+            "include_percentage": false,
+            "internal_timeout": false,
+            "is_close": true,
+            "loaded_modules": {
+              "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+              "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+              "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+              "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+              "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+            },
+            "normalization_order": "explicit_percentage_then_pinned_strip_string",
+            "runtime_versions": {
+              "antlr4-python3-runtime": "4.7.2",
+              "latex2sympy2": "1.9.1",
+              "regex": "2025.11.3",
+              "sympy": "1.14.0",
+              "word2number": "1.1"
+            },
+            "timeout_owner": "external_spawn_process"
+          },
+          "correct": false,
+          "denominator": 1,
+          "error": null,
+          "extraction": {
+            "answer": ".1",
+            "attempts": 1,
+            "end": 10,
+            "start": 0,
+            "status": "ok"
+          },
+          "rankable": true,
+          "record_id": "cc2f4fafe4838275365da754831093817328c9f53ef98b49f6b2dd1d81e04df1",
+          "response_sha256": "cf05c2b4cf9adeb535cc8fcf97607335648bcf55d510f50bbd352903a24e1082",
+          "source_kind": "math",
+          "status": "graded"
+        },
+        "unchanged_grade_response": true,
+        "work_deadline_seconds": 5.0
+      },
+      "fixture": {
+        "expected_correct": false,
+        "gold": "10",
+        "id": "numeric_negative_small",
+        "prediction": ".1"
+      },
+      "instrumented_cold_spawn": {
+        "cleanup": {
+          "actions": [
+            "terminate"
+          ],
+          "elapsed_wall_seconds": 0.057211220264434814,
+          "exitcode": -15,
+          "join_budget_seconds": 0.55,
+          "successful": true,
+          "worker_alive": false
+        },
+        "correct": false,
+        "diagnostic_only": true,
+        "elapsed_wall_seconds": 1.3293046401813626,
+        "error_type": null,
+        "events": [
+          {
+            "event": "child_entry",
+            "monotonic_seconds": 6759883.419485694,
+            "parent_received_elapsed_wall_seconds": 0.17491730768233538,
+            "pid": 2205757,
+            "process_cpu_seconds": 0.09619299,
+            "sequence": 0
+          },
+          {
+            "comparator_provenance": {
+              "include_percentage": false,
+              "internal_timeout": false,
+              "is_close": true,
+              "loaded_modules": {
+                "utils.examples": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/examples.py",
+                "utils.grader": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/grader.py",
+                "utils.math_normalization": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/math_normalization.py",
+                "utils.parser": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/parser.py",
+                "utils.utils": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/eval/utils/utils.py"
+              },
+              "normalization_order": "explicit_percentage_then_pinned_strip_string",
+              "runtime_versions": {
+                "antlr4-python3-runtime": "4.7.2",
+                "latex2sympy2": "1.9.1",
+                "regex": "2025.11.3",
+                "sympy": "1.14.0",
+                "word2number": "1.1"
+              },
+              "timeout_owner": "external_spawn_process"
+            },
+            "event": "comparator_loaded",
+            "monotonic_seconds": 6759884.50108433,
+            "parent_received_elapsed_wall_seconds": 1.2565331347286701,
+            "pid": 2205757,
+            "process_cpu_seconds": 0.833912269,
+            "sequence": 1
+          },
+          {
+            "event": "normalization_finished",
+            "monotonic_seconds": 6759884.514500833,
+            "normalized_gold": "10",
+            "normalized_prediction": "0.1",
+            "parent_received_elapsed_wall_seconds": 1.269943236373365,
+            "pid": 2205757,
+            "process_cpu_seconds": 0.847131534,
+            "sequence": 2
+          },
+          {
+            "event": "comparison_started",
+            "monotonic_seconds": 6759884.51468741,
+            "parent_received_elapsed_wall_seconds": 1.2700093295425177,
+            "pid": 2205757,
+            "process_cpu_seconds": 0.847191824,
+            "sequence": 3
+          },
+          {
+            "correct": false,
+            "event": "comparison_finished",
+            "monotonic_seconds": 6759884.516672417,
+            "parent_received_elapsed_wall_seconds": 1.2720771301537752,
+            "pid": 2205757,
+            "process_cpu_seconds": 0.849141413,
+            "sequence": 4
+          }
+        ],
+        "last_observed_phase": "comparison_finished",
+        "parent_process_cpu_seconds": 0.001081797999999995,
+        "rankable": false,
+        "status": "graded",
+        "timed_out_phase": null,
+        "work_deadline_seconds": 5.0
+      },
+      "repetition": 1
+    }
+  ],
+  "output_sha256": {
+    "fixture-0-numeric_negative_large.json": "9e0c5db79d7e011af46064b667096888b5a325c5c080e49808257e743d43e2fb",
+    "fixture-0-numeric_negative_small.json": "e3600e74438c80dafb65c30a668d17efe88e0ff7218aa2739c965f64fb606c78",
+    "fixture-0-percentage_negative.json": "fc95ab58e3fc8dc2635525011f1374d42cb1ba2c9393296940ed9b4a739543f3",
+    "fixture-0-percentage_positive.json": "401f6a1f54f1f37a7d19db132c55bb4e62ccc732ffa7c708b84a9d678277df56",
+    "fixture-1-numeric_negative_large.json": "a88bf19a250ff323824fb92314197e56f2866a7c3f33b216ea697903372b4979",
+    "fixture-1-numeric_negative_small.json": "31ff125aa5b6cc8dd65368668ae9619c39aa00eb5c920ccf939ab2a0619183c4",
+    "fixture-1-percentage_negative.json": "c66414dcf63b04725f69f9d7270f625493e3c226a244b04c8b85f90c5f25d934",
+    "fixture-1-percentage_positive.json": "81fef1a650f6dc31fab4f806f2f7e5c897f5a3d074cf54225c019fce062588e2",
+    "started.json": "0623697d794d8c35c881ca350b56494397baaed5b20ce047e607273eee1da5fc"
+  },
+  "private_inputs_forbidden": true,
+  "public_fixtures": [
+    {
+      "expected_correct": true,
+      "gold": ".5",
+      "id": "percentage_positive",
+      "prediction": "50%"
+    },
+    {
+      "expected_correct": false,
+      "gold": "50",
+      "id": "percentage_negative",
+      "prediction": "50%"
+    },
+    {
+      "expected_correct": false,
+      "gold": "10",
+      "id": "numeric_negative_large",
+      "prediction": "1000"
+    },
+    {
+      "expected_correct": false,
+      "gold": "10",
+      "id": "numeric_negative_small",
+      "prediction": ".1"
+    }
+  ],
+  "rankable": false,
+  "repetitions": 2,
+  "role": "source_grader_diagnostic_20261021_v1",
+  "schema": "extension-source-grader-diagnostic-v1",
+  "source_inventory": {
+    "eval/utils/examples.py": {
+      "bytes": 51401,
+      "sha256": "07aacef0144e11d7c9210beef2f4d1a9bf935d440bbb394e65a588eef861ce7b"
+    },
+    "eval/utils/grader.py": {
+      "bytes": 15870,
+      "sha256": "43d858572b1dadda6fe3ec327db123bb5362fccd271ae58329c57f0c10521383"
+    },
+    "eval/utils/math_normalization.py": {
+      "bytes": 3547,
+      "sha256": "9c0484a01b76bd4582bfe61c8ee55df375dbc09782f1b587fc21b21dd80e23a0"
+    },
+    "eval/utils/parser.py": {
+      "bytes": 15023,
+      "sha256": "8d04ceb93e9ef50d61157fd1c8826a5cbf8d7f64cda85459f1166e19d8784208"
+    },
+    "eval/utils/utils.py": {
+      "bytes": 8573,
+      "sha256": "4365ad38ea1c3c00926781684673e6dbc8f6e228d354a1f49f0d81cc0cfaff1e"
+    },
+    "extension/__init__.py": {
+      "bytes": 79,
+      "sha256": "2a99bd8120f34a0ccf36d7d6f5dc02d7a24d5bdd4f8eaf422bd73b75b17a4a13"
+    },
+    "extension/campaign.json": {
+      "bytes": 5649,
+      "sha256": "1407fa170f5b962249c54a294cbadf2b9b96fa90ab6101ad46037301be183dfe"
+    },
+    "extension/cpu_feasibility.py": {
+      "bytes": 32044,
+      "sha256": "1b0a8872f61a6e89191c16082c5ede531a38965658072855180a943effc35724"
+    },
+    "extension/cpu_feasibility.slurm": {
+      "bytes": 4801,
+      "sha256": "3c450f680faca976efc5a2022ece602a369f2261bc41a3cb9c0a0da3fa0137ba"
+    },
+    "extension/development_plan.json": {
+      "bytes": 4234,
+      "sha256": "204eabfdfdb36305d0b8377f767b1a456ff595c6dd8afd701e1adceb42a5ac6f"
+    },
+    "extension/development_retry.slurm": {
+      "bytes": 5658,
+      "sha256": "33838b55d505bc55871c5e73a013ac5e5614e3b84e1841415a427f0f786e48cd"
+    },
+    "extension/development_retry_plan.json": {
+      "bytes": 5078,
+      "sha256": "e564a57c3123f726fab1e059ddc1d87daec65259b8e950726e2ab316ddf4dedc"
+    },
+    "extension/development_retry_submission.py": {
+      "bytes": 26568,
+      "sha256": "1c254b9f076d5369ccbbe6f703850ea6db675ffe313688c9f483028dc547fb06"
+    },
+    "extension/development_seal.py": {
+      "bytes": 30551,
+      "sha256": "7d53889c33470b36ef363b07a5161b85122b0ad0c55eb7e1fda916ac98908978"
+    },
+    "extension/development_seal.slurm": {
+      "bytes": 5510,
+      "sha256": "b2bd243093b8765269ba58701f504362981a1576c0779ece86bda578dd6622c4"
+    },
+    "extension/development_seal_v2.py": {
+      "bytes": 35320,
+      "sha256": "8c2dd5697c5cbb945f5245de1d8ce8557554fb4fbee046ee2c68d3d26f487bb7"
+    },
+    "extension/development_source_metadata.json": {
+      "bytes": 1437,
+      "sha256": "6a00b4f8f52b496c66d27270009d0c71116d676d024454f950af60730548f994"
+    },
+    "extension/development_submission.py": {
+      "bytes": 18893,
+      "sha256": "f40d13069091c9c4afc0cb50fbe83f29446fcbf32f62dd4b4bb9e4d41dff475e"
+    },
+    "extension/labeled_feasibility.py": {
+      "bytes": 33130,
+      "sha256": "0afb5f61050e2e7c6350ee9a68ffe47779159f85bf81f684b97536331b6b67da"
+    },
+    "extension/labeled_feasibility.slurm": {
+      "bytes": 5252,
+      "sha256": "a2c099805f3a53cfdb59a4c1cf773e91f4f9d8e101b084062b3cb09b5e80728e"
+    },
+    "extension/labeled_plan.json": {
+      "bytes": 10259,
+      "sha256": "d44572f18e3de76dea44b243a7427b8cac64cf5d87a294ae005b544412f28d80"
+    },
+    "extension/labeled_submission.py": {
+      "bytes": 17855,
+      "sha256": "f1dab8e359603b754ead6dcfd364acb2b4a3a6da31d961f0445e9a8e05cff13a"
+    },
+    "extension/native_model_admission.py": {
+      "bytes": 61267,
+      "sha256": "55c73185441a0ac893d8fc95cb5bc8d1a659f767a80d27fe9b6734f8ab8fbb7a"
+    },
+    "extension/native_model_admission.slurm": {
+      "bytes": 1798,
+      "sha256": "a16012ec07ed4adf70fb0f2d05febac70beca9cb82b260c84252922cd5304164"
+    },
+    "extension/native_model_admission_plan.json": {
+      "bytes": 2959,
+      "sha256": "94b6d9bc5e46acc0d5a9e3f409d88544f7e091873c2150af705b92c6313b758e"
+    },
+    "extension/objectives.py": {
+      "bytes": 9223,
+      "sha256": "c56bd73d9824284b0393e23812bfcb4d4496fb518296de5fc35c9ec17bd06fde"
+    },
+    "extension/operations/development_metadata_diagnostic.slurm": {
+      "bytes": 2873,
+      "sha256": "e7de99e7b49c5a5a81f624773635cc73bb08bf51d15794a5b5e69994f5b3ddd4"
+    },
+    "extension/operations/development_metadata_diagnostic_v2.slurm": {
+      "bytes": 2876,
+      "sha256": "63e1de2d38b8c3df994fbb08becf2ada2f20ab03647473a3516e29a209baf9f8"
+    },
+    "extension/operations/submit_development_diagnostic.py": {
+      "bytes": 5023,
+      "sha256": "84157ee60e9ef32979b55c3817028e8d87f0189875f69dddefb3849410545060"
+    },
+    "extension/operations/submit_development_diagnostic_v2.py": {
+      "bytes": 6483,
+      "sha256": "534e015c80a88ac8b29ff7f5ef9ea9537f27b1dc685dc8dbdf278c38e440a966"
+    },
+    "extension/pilot_driver.py": {
+      "bytes": 68502,
+      "sha256": "e6b707537298d1b42f21e744dafef4e5edcd604a79ee95d37c2906738d2b9d1a"
+    },
+    "extension/preserving_data.py": {
+      "bytes": 21559,
+      "sha256": "a560e039d4af86739d16f4c3101eb820535ecebf0373571064db9c588bc69d03"
+    },
+    "extension/preserving_objectives.py": {
+      "bytes": 6891,
+      "sha256": "05b079d2da89579436ce53b8a801c0fc51bd6cfef45628c50d23a5af93de3eb4"
+    },
+    "extension/preserving_trainer.py": {
+      "bytes": 19790,
+      "sha256": "3a46929eaff536f8165e8b1388fddc9c54fde0198c84aac3bcb69cf397d507d0"
+    },
+    "extension/research.json": {
+      "bytes": 8331,
+      "sha256": "c81e9a4c966fea1441b77a87e3036fd4cacb2e61f9e2417b8150040252236aca"
+    },
+    "extension/smoke_preparation.py": {
+      "bytes": 34569,
+      "sha256": "a4a4f9245ba6dc60b211c60b9a8096429bcef943d5731ae41ec8e54364c8d40b"
+    },
+    "extension/smoke_preparation.slurm": {
+      "bytes": 8084,
+      "sha256": "09d272080e0eaae8c00bee3384ff2c39c880354353034e725136eed7dc8d68a5"
+    },
+    "extension/smoke_preparation_plan.json": {
+      "bytes": 5044,
+      "sha256": "42ac6063786baf0a114507bfae7287dc709210601cd204098936f135a47508a0"
+    },
+    "extension/smoke_submission.py": {
+      "bytes": 29304,
+      "sha256": "f81f90afd4331cc69e194e16e524c54eb913dbbf8be032243b8be9647b4fae21"
+    },
+    "extension/source_evaluation.py": {
+      "bytes": 24926,
+      "sha256": "0d1ea4d02848667aae750323ab3f6698c437eee0063a0cb192c957a20d1c20e6"
+    },
+    "extension/source_grader_diagnostic.py": {
+      "bytes": 16553,
+      "sha256": "db5a4707a79815ed991fb8e4b02c2a318a80e6e9619af16fa59fd967adeaf386"
+    },
+    "extension/source_grader_diagnostic.slurm": {
+      "bytes": 1343,
+      "sha256": "ae4cca18285430c46bed2ec0bc3201f8bda925f3b99c8f27bd562ffb9da50ae7"
+    },
+    "extension/source_readiness.py": {
+      "bytes": 15040,
+      "sha256": "c5fa8e04782a8e4ab0ca5c6674ec336173d3f0a82d587f8fc489786f3d468fd9"
+    },
+    "extension/source_readiness.slurm": {
+      "bytes": 1463,
+      "sha256": "314b81bc64d0db7306d727d02cf58695efd52729ee2a29afafd5d2a1b59bc73f"
+    },
+    "extension/source_readiness_plan.json": {
+      "bytes": 6205,
+      "sha256": "70c6823627d8bc93ce927665b87b943e1bf22f1ddc99eb2fd511a778696b590d"
+    },
+    "extension/source_readiness_qa.py": {
+      "bytes": 4685,
+      "sha256": "535616146352fb847c214e7d82029e4e072d1c181b4cdab4a4f1323f942550da"
+    },
+    "extension/source_readiness_retry.slurm": {
+      "bytes": 1478,
+      "sha256": "3a4ea30f595cbd4f22277cb047503da3a90f6325442a061b6fa0b9ff9b8183ed"
+    },
+    "extension/source_readiness_retry_qa.py": {
+      "bytes": 5706,
+      "sha256": "7d1196d227d1232c7bb892817e8c56ee318b1747cd16c43d6787df487f9de17c"
+    },
+    "extension/source_readiness_retry_submission.py": {
+      "bytes": 15616,
+      "sha256": "258e02932a05897a830c5d9018a8fb51d77b862b47ae989387ef41b02093fa5d"
+    },
+    "extension/source_readiness_submission.py": {
+      "bytes": 15734,
+      "sha256": "978590d9c09f78a6b99c00643c7f3905d65ba0b4f4cadb2c2d0d676773a32e31"
+    },
+    "extension/submission.py": {
+      "bytes": 16062,
+      "sha256": "fd0d9adc589aa6e6b9287df50801679e46d227c1a46d6a27c22a8b963907bb0a"
+    },
+    "reasoning/data.py": {
+      "bytes": 3338,
+      "sha256": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68"
+    },
+    "reasoning/features.py": {
+      "bytes": 6003,
+      "sha256": "5cee76526c1b552e53b490c811c2e4c5506758985be735c13bc0945fb6a59d13"
+    },
+    "tests/test_development_seal.py": {
+      "bytes": 18601,
+      "sha256": "fa07685cc9c439e564fb93c9205bc4daf5d20d82546aaf206db42a47ea895d39"
+    },
+    "tests/test_development_submission.py": {
+      "bytes": 19657,
+      "sha256": "f50e70e7dd55facff9e473aeee6ca625520f07c0d598731de1c00c2630ffba53"
+    },
+    "tests/test_extension_feasibility.py": {
+      "bytes": 13563,
+      "sha256": "6e4bf3225e4a68840babc878961b0b6db71cbc5e76cb095905080a65c87d294f"
+    },
+    "tests/test_extension_objectives.py": {
+      "bytes": 12567,
+      "sha256": "306caa2e01c1c9aa6ce1799c535bbe3d530549838ff160320750beda576639aa"
+    },
+    "tests/test_extension_submission.py": {
+      "bytes": 13784,
+      "sha256": "0cd3949f92389e19112ed99a1d191690dad5ae5b63dc6e68d15b87fded5db50c"
+    },
+    "tests/test_labeled_feasibility.py": {
+      "bytes": 19447,
+      "sha256": "f3114f0431c91e99eda6b53abb36f4424cebed193c4ed7d0e508496b9819d0f1"
+    },
+    "tests/test_labeled_submission.py": {
+      "bytes": 20563,
+      "sha256": "a51f4837a0780cb432170d5f0989ee84dc9e80532451962d38c4be1568881531"
+    },
+    "tests/test_native_model_admission.py": {
+      "bytes": 41382,
+      "sha256": "cbbd53d76057badaa1a14afdc36ee422c9c8591ce84e90158dd007215adb2b28"
+    },
+    "tests/test_pilot_driver.py": {
+      "bytes": 48647,
+      "sha256": "ab96ab198011d2c57b3d03ca673a7856925ac000a776f2e92cb0d151daa384c5"
+    },
+    "tests/test_preservation_data.py": {
+      "bytes": 23449,
+      "sha256": "d62623fd934e7e47e2de959dde169b79abe08a88da1454d8ec96ed059d31628d"
+    },
+    "tests/test_preservation_development_seal_v2.py": {
+      "bytes": 14331,
+      "sha256": "22a38e4867fd1b4390d3d2953fc990fba20d997a42cfff71953a612126beeebd"
+    },
+    "tests/test_preservation_retry_submission.py": {
+      "bytes": 16737,
+      "sha256": "2c8f25cc7989d80a095eb372efdb36a785294a4e40201854e91b247d7aaa7450"
+    },
+    "tests/test_preserving_objectives.py": {
+      "bytes": 16059,
+      "sha256": "d520dee4691e9186bfa80c44ba8ed67ce610dbe707bd2d20f2327e1bb46d30a6"
+    },
+    "tests/test_preserving_trainer.py": {
+      "bytes": 17572,
+      "sha256": "9c2f14ee4023c2b18e059fa5297e469725148fa3d02b2d38b3c1b2c0a6c7dfb7"
+    },
+    "tests/test_smoke_preparation.py": {
+      "bytes": 29871,
+      "sha256": "e0baf6787e711704a1958422160e6f3b0a549faba409be270b4d226cc42ea64b"
+    },
+    "tests/test_smoke_submission.py": {
+      "bytes": 22545,
+      "sha256": "80225ddaa17a695df6135c7ab44d437e63046a0b91dde1c5bf278596cad3832b"
+    },
+    "tests/test_source_evaluation.py": {
+      "bytes": 23759,
+      "sha256": "3b4a9689a0b44312b81e898ef6722f96acd8bb752093134034743d26255ce1af"
+    },
+    "tests/test_source_readiness.py": {
+      "bytes": 9559,
+      "sha256": "e371cd95eb7bbbcdbfbc74822aaac62bc9051d0f9cd0979c3fc38c544f83cfee"
+    },
+    "tests/test_source_readiness_retry_submission.py": {
+      "bytes": 13672,
+      "sha256": "e7ebf1b6a51a4105c7ca30bab81b194469cd23e3005b30d7572a845c269ecf77"
+    },
+    "tests/test_source_readiness_submission.py": {
+      "bytes": 10908,
+      "sha256": "07d70e2e98ff1a103cc0f32308d9e2b5359407471d2db349697f4f19ac1b97e6"
+    }
+  },
+  "source_snapshot_unchanged": true
+}
