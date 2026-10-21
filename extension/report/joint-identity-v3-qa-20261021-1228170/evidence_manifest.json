@@ -1,0 +1,50 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 888,
+      "sha256": "455cda55ba852be2ef7bb0d60e393b94e51708947e7f1738409b12fcc011a96f"
+    },
+    "complete.json": {
+      "bytes": 19340,
+      "sha256": "00835a892b571eaba14a6c0f65c7ede751d6c050472d43146460f5df0f9dd94e"
+    },
+    "delivery_summary.json": {
+      "bytes": 852,
+      "sha256": "20f1982d325e7b867c98c3905ac7d8c5b113829568da3d1461092b9929991900"
+    },
+    "executed_cpu_admission.py": {
+      "bytes": 6916,
+      "sha256": "3aad1b2af0f50bf8cee4d5e857ed304966c9842ee0849747e38665632b5faec4"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 498290,
+      "sha256": "7bd5d37f72860ae5b9e5a7743d561ca1c62286da706d3a5500313e192c787cd6"
+    },
+    "native.stderr.log": {
+      "bytes": 8556,
+      "sha256": "cef978a24b658b976c2cdc41d7c3c32fdd1c735fd3424531b7e06e2b472a55bd"
+    },
+    "native.stdout.log": {
+      "bytes": 541,
+      "sha256": "17ae3a56e334421379e2d7bbda45b941e20c4022ec17a3ce21eed5454a1c099a"
+    },
+    "native_qa.json": {
+      "bytes": 705012,
+      "sha256": "cf05eb73d2a2a44e548b4b354254af6544cdee23b8cf691cf30191414d2045a5"
+    },
+    "source_install_receipt.json": {
+      "bytes": 38235,
+      "sha256": "4d88d39475bd1309780aec6e4760447cefed68e98e8ac8f7924ab3373a638139"
+    },
+    "started.json": {
+      "bytes": 19132,
+      "sha256": "98988079af62ef4200d696438e00f231e4cb03dbbfa37616b0e5aec34995ba11"
+    },
+    "unit_qa.json": {
+      "bytes": 704636,
+      "sha256": "8e0f61aabe1ba4d285007c92d680542762cfae1271905c2cec63f908dc760874"
+    }
+  },
+  "raw_private_records_included": false,
+  "schema": "extension-joint-v3-qa-evidence-v1"
+}

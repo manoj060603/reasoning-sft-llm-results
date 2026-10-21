@@ -1,0 +1,23 @@
+{
+  "historical_ledger": {
+    "bytes": 129364,
+    "sha256": "9fc4dfa2506ccd33580bab3e5f4c4e91d0731e221c4f88ac9778e54800dc141d"
+  },
+  "installed_at_utc": "2026-10-21T05:10:36.344512+00:00",
+  "installed_file": "extension/operations/submit-joint-identity-v3-20261021.py",
+  "installed_file_receipt": {
+    "bytes": 16699,
+    "sha256": "86e6a6fff11216e848f63602752da57052f0782e6d7965654ce97b72dc7ec853"
+  },
+  "installed_on_arc": true,
+  "live_ledger_before_submission": {
+    "bytes": 498290,
+    "sha256": "7bd5d37f72860ae5b9e5a7743d561ca1c62286da706d3a5500313e192c787cd6"
+  },
+  "local_commit": "41357046982f21fe4c25719c2f432b0bc4fb1846",
+  "metadata_only": true,
+  "protected_source_files": 120,
+  "protected_sources_unchanged": true,
+  "schema": "extension-joint-v3-gpu-bootstrap-source-install-v1",
+  "source_install_receipt_sha256": "4d88d39475bd1309780aec6e4760447cefed68e98e8ac8f7924ab3373a638139"
+}

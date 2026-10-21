@@ -1,0 +1,51 @@
+{
+  "schema": "extension-joint-identity-replay-v3-operational-plan-v1",
+  "status": "prospective_unadmitted_cpu_qa_and_separate_joint_gpu_replay",
+  "role": "joint_identity_replay_v3_qa_20261021_v1",
+  "cpu_job_name": "sft-extension-joint-identity-v3-qa",
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "cpu_resources": {"cpus": 2, "ram_gib": 8, "wall_time_seconds": 1200, "reserve_seconds": 172800, "gpus": 0},
+  "source_inventory_files": 120,
+  "parent_source_inventory_files": 114,
+  "prior_entries": 20,
+  "prior_entries_sha256": "7e03f2b63becabd011e2e9b6cdd87a2697597ea910b8264127dc7b349608ae7c",
+  "prior_snapshot": {"path": "extension/report/joint-memory-admission-v2-failed-20261021-1227971/job_ledger_snapshot.json", "sha256": "7de19dc305699fe87af6a5ce9f10835142608e5a0a780442abd134498c6e90a2"},
+  "scientific_plans": {
+    "native": {"path": "extension/native_model_admission_plan.json", "sha256": "94b6d9bc5e46acc0d5a9e3f409d88544f7e091873c2150af705b92c6313b758e"},
+    "joint": {"path": "extension/joint_memory_admission_plan.json", "sha256": "b926be22779d59af501afddd10e7129f105b68b723b9bc8386be0aa397ddfc24"}
+  },
+  "prepared": {"path": "extension/runs/native-smoke-preparation-1224497/prepared.json", "sha256": "d1bb1875a293c71f2a108df4b287b3bb2ab35b3168cd6505b5bd91a98fd66457"},
+  "prepared_bytes_opened_by_cpu_qa": false,
+  "models_or_tokenizers_opened_by_cpu_qa": false,
+  "test_patterns": ["test_joint_memory_admission.py", "test_gpu_identity_v2.py", "test_joint_identity_replay_v3.py"],
+  "expected_counts": [25, 24, 16],
+  "expected_total_tests": 65,
+  "previous_tests_previously_passed": 450,
+  "previous_tests_replayed": false,
+  "failed_parent": {"job_id": "1227971", "directory": "extension/report/joint-memory-admission-v2-failed-20261021-1227971", "elapsed_seconds": 85, "state": "FAILED", "presentations_completed": 0, "updates_completed": 0},
+  "scope": {"joint_diagnostic_cpu_fixtures": 25, "uuid_representation_fixtures": 24, "initializer_and_literal_replay_fixtures": 16, "source_grader_tests_replayed": false, "collector_tests_replayed": false, "actual_gpu_or_memory_proof": false},
+  "operational_deltas": [
+    "Preserve all113 nativeCPU450 source bytes, the exact executed GPU bootstrap as parent114, and the failed joint1227971 receipts unchanged.",
+    "Copy joint_memory_admission_v2.py literally to v3, remove exactly one excess empty list from the five-target initializer, change only the child module dispatch namespace and add the v3 module/test to required source inventory.",
+    "The failed85-second v2 attempt loaded both original FP32 models but completed no presentations or optimizer updates; it remains failed and is not reclassified as numerical or memory evidence.",
+    "Original scientific plans, four private witnesses, objectives,17-position schedule,GA8,precision,tolerances and numerical validation schemas remain unchanged.",
+    "native_qa.json explicitly aliases the SAME65 CPU checks under the original joint QA schema and binds the original scientific plan/prepared SHA. It establishes no real CUDA, model, memory envelope or pilot admission."
+  ],
+  "future_gpu_replay": {
+    "role": "joint_memory_admission_20261021_v3",
+    "wrapper": "extension/joint_memory_admission_v3.slurm",
+    "qa_filename": "native_qa.json",
+    "admission_prefix": "extension/operations/joint-memory-admission-v3-job-",
+    "output_prefix": "extension/runs/joint-memory-admission-v3-",
+    "resources": {"gpus": 1, "gpu_type": "B200", "cpus": 8, "ram_gib": 128, "scratch_free_gib": 160, "wall_time_seconds": 7200, "reserve_seconds": 172800},
+    "separate_current_ledger_admission_required": true,
+    "admitted_by_cpu_qa": false
+  },
+  "cpu_bootstrap": {"path": "extension/operations/submit-joint-identity-v3-qa-20261021.py", "outside_source_inventory": true},
+  "source_install_receipt": "extension/joint_identity_replay_v3_source_receipt.json",
+  "automatic_retry": false,
+  "automatic_downstream": false,
+  "training_pilot": false,
+  "generation": false,
+  "grading": false
+}

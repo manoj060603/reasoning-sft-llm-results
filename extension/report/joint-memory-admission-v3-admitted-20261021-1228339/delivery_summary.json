@@ -1,0 +1,19 @@
+{
+  "admitted": true,
+  "all_four_cases_completed_claimed": false,
+  "allocated_gpus": 1,
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "cpu_qa_job": "1228170",
+  "cpu_qa_tests": 65,
+  "gpu_admission_code_sha256": "86e6a6fff11216e848f63602752da57052f0782e6d7965654ce97b72dc7ec853",
+  "job_id": "1228339",
+  "observed_state": "RUNNING",
+  "qualification": "Fresh bounded admission after the preserved v2 initializer failure and CPU65 proof. Does not establish all four actual joint cases, long-after-Adam feasibility, a pilot or any accuracy improvement.",
+  "requested_gpu_seconds": 7200,
+  "role": "joint_memory_admission_20261021_v3",
+  "same_original_scientific_plan_and_private_prepared_cache": true,
+  "schema": "extension-joint-v3-admitted-delivery-v1",
+  "source_code_sha256": "be1d4aa53b5e01755bcddfc380cf132af3ea0dca90f32b5418d1ecd28325dafa",
+  "source_files": 120
+}

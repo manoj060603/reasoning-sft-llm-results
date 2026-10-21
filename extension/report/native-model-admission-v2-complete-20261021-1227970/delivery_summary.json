@@ -1,0 +1,95 @@
+{
+  "actual_gpu_seconds": 1422,
+  "actual_identity_dtype_dispatch_and_headroom_observed": true,
+  "all_case_checks_passed": true,
+  "all_eight_cases_completed": true,
+  "automatic_downstream": false,
+  "benchmark_result_claimed": false,
+  "case_headroom": {
+    "asft-long": {
+      "free_after_peak_bytes": 27899068416,
+      "passed": true,
+      "peak_bytes": 163596402688,
+      "required_headroom_bytes": 19149547111,
+      "total_bytes": 191495471104
+    },
+    "asft-short": {
+      "free_after_peak_bytes": 114362548224,
+      "passed": true,
+      "peak_bytes": 77132922880,
+      "required_headroom_bytes": 19149547111,
+      "total_bytes": 191495471104
+    },
+    "ce_kl-long": {
+      "free_after_peak_bytes": 27899068416,
+      "passed": true,
+      "peak_bytes": 163596402688,
+      "required_headroom_bytes": 19149547111,
+      "total_bytes": 191495471104
+    },
+    "ce_kl-short": {
+      "free_after_peak_bytes": 114362548224,
+      "passed": true,
+      "peak_bytes": 77132922880,
+      "required_headroom_bytes": 19149547111,
+      "total_bytes": 191495471104
+    },
+    "prior_anchored-long": {
+      "free_after_peak_bytes": 27899068416,
+      "passed": true,
+      "peak_bytes": 163596402688,
+      "required_headroom_bytes": 19149547111,
+      "total_bytes": 191495471104
+    },
+    "prior_anchored-short": {
+      "free_after_peak_bytes": 114362548224,
+      "passed": true,
+      "peak_bytes": 77132922880,
+      "required_headroom_bytes": 19149547111,
+      "total_bytes": 191495471104
+    },
+    "sft-long": {
+      "free_after_peak_bytes": 37655019520,
+      "passed": true,
+      "peak_bytes": 153840451584,
+      "required_headroom_bytes": 19149547111,
+      "total_bytes": 191495471104
+    },
+    "sft-short": {
+      "free_after_peak_bytes": 114377228288,
+      "passed": true,
+      "peak_bytes": 77118242816,
+      "required_headroom_bytes": 19149547111,
+      "total_bytes": 191495471104
+    }
+  },
+  "cases": [
+    "sft-short",
+    "sft-long",
+    "ce_kl-short",
+    "ce_kl-long",
+    "asft-short",
+    "asft-long",
+    "prior_anchored-short",
+    "prior_anchored-long"
+  ],
+  "complete": true,
+  "finite_fp32_parameter_count_per_case": 434,
+  "four_objectives": [
+    "sft",
+    "ce_kl",
+    "asft",
+    "prior_anchored"
+  ],
+  "ga2_long_stops_at_first_adam": true,
+  "job_id": "1227970",
+  "long_after_adam_established": false,
+  "longest_complete_tokens": 31776,
+  "original_requested_gpu_seconds": 7200,
+  "pilot_driver_ga8_unique_rows_established": false,
+  "qualification": "All eight numerical/memory diagnostics passed at fixed settings. Disposable tiny updates are not a training pilot or evidence of improved source/benchmark accuracy. A separate joint v3 long-after-Adam test and unique-row actual-driver integration remain necessary.",
+  "raw_witnesses_exported": false,
+  "schema": "extension-native-v2-complete-delivery-v1",
+  "source_generation_started": false,
+  "training_pilot_started": false
+}

@@ -244,22 +244,44 @@ future pilot also need their own explicit versioned identity integration.
 
 The reviewed replays were admitted as **native 1227970** and **joint 1227971**,
 each with one B200 and a bounded two-hour allocation. The strict identity
-repair worked on actual hardware. The native job has completed the
-[ordinary SFT short and 31,776-token long cases](extension/report/native-model-admission-v2-partial-20261021-1227970/delivery_summary.json),
-including finite updates, unchanged reference, saved-model reload and measured
-headroom. The long case reported a conservative peak of 153,840,451,584 bytes,
-leaving 37,655,019,520 bytes. These are two completed cases out of eight, not
-all-objective or long-after-Adam admission. The remaining cases continue; no
-pilot or generated benchmark result is established by these diagnostics.
+repair worked on actual hardware. Native job 1227970 then
+[completed all eight cases](extension/report/native-model-admission-v2-complete-20261021-1227970/delivery_summary.json)
+in **1,422 seconds**, ending at **05:11:46 UTC on October 21**. Ordinary CE,
+CE+KL, ASFT and the proposed anchored objective each passed short and complete
+**31,776-token** diagnostics, including finite updates, unchanged reference,
+saved-model reload and measured headroom. The conservative long-case peaks
+were 153,840,451,584 bytes for CE and 163,596,402,688 bytes for the other
+objectives, leaving at least 27,899,068,416 bytes. Driver memory outside the
+allocator was sampled, so unobserved transients are not claimed exact. The
+[earlier two-case snapshot](extension/report/native-model-admission-v2-partial-20261021-1227970/delivery_summary.json)
+is preserved. GA2 long cases stop at the first Adam update; they do not prove
+long forward feasibility after resident Adam and accumulated gradients.
+These disposable updates establish neither a full pilot nor accuracy gains.
 
 The [joint replay](extension/report/joint-memory-admission-v2-failed-20261021-1227971/delivery_summary.json)
 failed after **85 seconds**, after loading both original models but before
 any presentation or update. A frozen initializer supplied six values to five
 variables. The failed original/v2 sources, runtime evidence and allocation
-accounting remain intact. A separately versioned initializer repair must
-receive new scoped CPU QA and a fresh bounded GPU admission. Terminal
-extension GPU use is now 192 seconds plus the separately observed running
-native job; that job retains its open two-hour request until terminal evidence.
+accounting remain intact. Its separately versioned initializer repair received
+new scoped CPU QA and a fresh bounded GPU admission. Including the earlier
+UUID failures and this failure, terminal extension GPU use is now
+**1,614 seconds (0.448333 hours)**. The new joint job retains its separate
+open two-hour request until terminal accounting; all ten requested GPU-hours
+across these attempts remain recorded.
+
+
+The joint initializer repair then [passed all 65 scoped CPU checks](extension/report/joint-identity-v3-qa-20261021-1228170/delivery_summary.json)
+in **32 seconds, with zero GPUs**: 25 joint fixtures, 24 UUID fixtures and 16
+initializer/source/dispatch checks. All 114 parent files remain unchanged in
+the new 120-file inventory. The earlier 450-test result was verified through
+receipts rather than rerun. Its joint-schema alias describes this same CPU
+proof. The [fresh v3 GPU allocation, job 1228339](extension/report/joint-memory-admission-v3-admitted-20261021-1228339/delivery_summary.json),
+started at **05:10:58 UTC**, using the same scientific plan and prepared cache.
+All four actual long-after-Adam memory and numerical checks remain pending
+at this publication snapshot. There is no automatic pilot or downstream
+submission. The distinct actual-driver proof using 17 unique short examples,
+full training-data preparation and source-generation calibration are also
+still required before admitting training pilots.
 
 ## Additional recovery follow-up: closed without promotion
 

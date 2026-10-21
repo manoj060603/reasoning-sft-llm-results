@@ -1,0 +1,59 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 1027,
+      "sha256": "d07bba8535d989580d7a41e31828c4d5fc2b63c6eb69c7e90437e574538dd1cb"
+    },
+    "admission.json": {
+      "bytes": 12608,
+      "sha256": "71d45220bbda8f78b8b9478168d17f85fd8d7351d254fca09ce1cf768b615986"
+    },
+    "asft-long.json": {
+      "bytes": 29870,
+      "sha256": "073778d32b28f6a197181874a382ef3e0c71018d7efe76863dfd624b852dedbb"
+    },
+    "asft-short.json": {
+      "bytes": 32542,
+      "sha256": "ee0cba867942389be9377cd84ce5b0202b43b94279abfeb47e5ee2a404007eed"
+    },
+    "ce_kl-long.json": {
+      "bytes": 29872,
+      "sha256": "8180b8839e33d8e61c82c3b837c47a6d90e20eaf7c27f69effddc8b825e7be0f"
+    },
+    "ce_kl-short.json": {
+      "bytes": 32545,
+      "sha256": "6fad4f013a9a65dfccf78e479beac205cdfeb7ad5b676d12561c93274e455591"
+    },
+    "complete.json": {
+      "bytes": 15880,
+      "sha256": "bd874df4f923bd6a914da7448a7ffb0f8b7a411c7a3bd5ebfcade581e4c898e9"
+    },
+    "delivery_summary.json": {
+      "bytes": 2949,
+      "sha256": "3d84e285023c552207b1ae795585a7a7d1c413baffaa35575674820e3c61613b"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 551210,
+      "sha256": "d1f9dfe9c90acd6de567f33e7346877cccd61fde99df0c22e122ea91884d8254"
+    },
+    "prior_anchored-long.json": {
+      "bytes": 29888,
+      "sha256": "7f2aa11df09b8f94148cfcad503f4c668b17dcd8e0ad599ac0a22172d2a130fb"
+    },
+    "prior_anchored-short.json": {
+      "bytes": 32569,
+      "sha256": "72b1f12fe98401dc431e0194c5520de18b63b09f9cf0ce12634ec356f46ba924"
+    },
+    "sft-long.json": {
+      "bytes": 28499,
+      "sha256": "cf84dc16891251cc902eee932bfa5eb6b3192f157501c99d2bd22ca39736f2a9"
+    },
+    "sft-short.json": {
+      "bytes": 30726,
+      "sha256": "e848879e2a0ee458d102ca07f9178a125b15396bd1fa23f9234d99445c2469c5"
+    }
+  },
+  "raw_private_records_included": false,
+  "schema": "extension-native-v2-complete-sanitized-evidence-v1",
+  "worker_logs_and_witnesses_remain_private": true
+}

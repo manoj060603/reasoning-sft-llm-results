@@ -1,0 +1,23 @@
+{
+  "actual_gpu_or_memory_admission_established": false,
+  "alias_is_one_cpu_proof": true,
+  "automatic_downstream": false,
+  "complete": true,
+  "elapsed_allocation_seconds": 32,
+  "experiment_model_or_tokenizer_loaded": false,
+  "gpu_seconds": 0,
+  "job_id": "1228170",
+  "joint_v3_gpu_admitted": false,
+  "preserved_parent_source_files": 114,
+  "previous450_replayed": false,
+  "private_prepared_file_opened": false,
+  "qualification": "Scoped CPU fixtures verify the literal initializer repair. The failed85-second v2 attempt remains failed; all four actual joint cases still require one new separately admitted GPU run with unchanged scientific settings.",
+  "schema": "extension-joint-v3-qa-delivery-v1",
+  "scope": {
+    "joint": 25,
+    "uuid_identity": 24,
+    "v3_initializer_and_dispatch": 16
+  },
+  "source_files": 120,
+  "tests_run": 65
+}

@@ -1,0 +1,4 @@
+{'train_runtime': 0.045, 'train_samples_per_second': 533.474, 'train_steps_per_second': 66.684, 'train_loss': 2.0478830337524414, 'epoch': 1.0}
+{'train_runtime': 0.0342, 'train_samples_per_second': 700.871, 'train_steps_per_second': 87.609, 'train_loss': 2.827415148417155, 'epoch': 1.0}
+{'train_runtime': 0.0414, 'train_samples_per_second': 579.204, 'train_steps_per_second': 72.4, 'train_loss': 2.8274189631144204, 'epoch': 1.0}
+{'joint_initializer_cpu_qa_complete': True, 'tests_run': 65, 'gpu_seconds': 0, 'automatic_downstream': False}
