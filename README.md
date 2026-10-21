@@ -405,6 +405,17 @@ long-context training gate still require separate native evidence. All 176
 executed or protected source files and the previous 31 ledger entries were
 preserved; this stage creates no pilot or benchmark result.
 
+The [native-tools CPU fixture stage](extension/report/head-native-tools-qa-20261021-1230042/delivery_summary.json)
+then **passed all 80 new checks** in a **50-second, zero-GPU allocation**:
+24 bounded projection checks, 24 explicit fake observation checks and 32 tiny
+CPU Trainer/controller checks, including independent stock-loop comparisons.
+The earlier 36, 24 and 32-check scopes were verified through receipts rather
+than rerun. Runtime precision and backend defaults were recorded unchanged;
+CUDA was not initialized. All 188 executed or protected source files and the
+previous 32 ledger entries were preserved. Original-3B BF16 comparisons,
+all-434-parameter evidence, actual backward recomputation, process memory,
+long-context feasibility and the separate training-pilot gates remain open.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%

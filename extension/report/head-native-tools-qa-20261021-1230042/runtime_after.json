@@ -1,0 +1,29 @@
+{
+  "cuda_initialized": false,
+  "getters": {
+    "cuda_matmul_allow_bf16_reduced_precision_reduction": "backends.cuda.matmul.allow_bf16_reduced_precision_reduction",
+    "cuda_matmul_allow_fp16_reduced_precision_reduction": "backends.cuda.matmul.allow_fp16_reduced_precision_reduction",
+    "cuda_matmul_allow_tf32": "backends.cuda.matmul.allow_tf32",
+    "cudnn_allow_tf32": "backends.cudnn.allow_tf32",
+    "cudnn_sdp_enabled": "backends.cuda.cudnn_sdp_enabled",
+    "flash_sdp_enabled": "backends.cuda.flash_sdp_enabled",
+    "float32_matmul_precision": "get_float32_matmul_precision",
+    "math_sdp_enabled": "backends.cuda.math_sdp_enabled",
+    "mem_efficient_sdp_enabled": "backends.cuda.mem_efficient_sdp_enabled"
+  },
+  "job_id": "1230042",
+  "kernel_or_native_bf16_admission_established": false,
+  "schema": "extension-head-native-tools-runtime-getters-v1",
+  "unchanged_from_before": true,
+  "values": {
+    "cuda_matmul_allow_bf16_reduced_precision_reduction": true,
+    "cuda_matmul_allow_fp16_reduced_precision_reduction": true,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cudnn_sdp_enabled": true,
+    "flash_sdp_enabled": true,
+    "float32_matmul_precision": "highest",
+    "math_sdp_enabled": true,
+    "mem_efficient_sdp_enabled": true
+  }
+}

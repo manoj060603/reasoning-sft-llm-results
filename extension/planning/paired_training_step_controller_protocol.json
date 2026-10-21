@@ -1,0 +1,166 @@
+{
+  "schema": "extension-paired-training-step-controller-protocol-review-v1",
+  "status": "prospective_root_review_only_not_an_execution_plan_or_admission",
+  "review_date_utc": "2026-10-21",
+  "decision": "Use one single-threaded, single-B200 numerical controller that calls the actual pinned Trainer.training_step for dense then candidate at each presentation. Retain both live student gradient/state sets until comparison. Do not run two independent full Trainer.train loops, threads, generators made from private loops, or serialize complete gradient/moment copies to synchronize branches.",
+  "parent_review": {
+    "path": "extension/planning/checkpointed_head_native_validation_review.json",
+    "sha256": "4ed665e668d3b8a3042474647c556ead2a3d13b85a42dfe4270a5eb0b5365d35",
+    "relationship": "This proposal resolves the paired execution mechanism before native outcomes. It narrows the nine-short claim to an actual-training_step numerical/optimizer diagnostic. It does not alter any scientific loss, coefficient, tolerance, allocator, resource or later unique-driver requirement, and does not rewrite the parent artifact's historical bytes. A future root-sealed native plan must explicitly choose this execution kind rather than calling it a full train-loop admission."
+  },
+  "separate_root_numeric_freeze": {
+    "path": "extension/planning/checkpointed_head_native_numerical_protocol.json",
+    "sha256": "27cedace388a17f3b97a0b1466e119c59a4d63913085263c689c8cfbbb003cb3",
+    "relationship": "Root separately froze the exact parent numerical values before actual original-model comparisons. This controller proposal inherits that freeze and does not edit it. The copied schedule's SequentialSampler description is an order specification here, not evidence that this explicit-list diagnostic actually iterated a sampler; future receipts must name the actual order owner."
+  },
+  "implementation_inputs": {
+    "dense_trainer": "extension/preserving_trainer.py:make_trainer_class",
+    "candidate_trainer": {
+      "path": "extension/checkpointed_head_trainer.py",
+      "sha256": "971c5e88bcfff7ed80bea74edcd07624dadd97253a1a1ce30b25d6741f876082",
+      "factory": "make_trainer_class"
+    },
+    "head_objective": {
+      "path": "extension/checkpointed_head_objectives.py",
+      "sha256": "a0c02ac3730f616d7ccd0fcb2b768af60387cea15e9cf82c1050b9deb60d7a34"
+    },
+    "bounded_comparison": {
+      "path": "extension/native_tensor_comparison.py",
+      "sha256": "6fbea956b8c91cca2b1a7523954a62fec3210b4d10c9a948ea329622c03d10cb",
+      "qualification": "This planning file neither runs nor declares the new CPU32 scope passed. The future native admission must bind its actual successful terminal receipt, plus the already required exact helper36 and Trainer24 receipts."
+    },
+    "future_worker_exists_or_admitted": false
+  },
+  "fixed_contract_inherited_without_change": {
+    "objectives_in_order": ["sft", "ce_kl", "asft", "prior_anchored"],
+    "beta": 0.05,
+    "head_chunk_active_aligned_positions": 128,
+    "students": "Two distinct original Qwen2.5-3B-Instruct students, each all434 unique FP32 trainable Parameters with the original tied head/embedding. Both start from the same verified original bytes; no shared student storage or optimizer state.",
+    "reference": "Every case, including SFT, retains two fresh original FP32 students AND one separate original FP32 eval/no_grad reference throughout the measured case. The same immutable reference may serve both branches sequentially, but stays outside both Trainer.model trees, optimizer groups, Accelerator prepared-model lists and standard saved student checkpoints. SFT loss does not use it; SFT initial-zero/LR0 identity controls do. Measure the same bound reference-resident memory in every case.",
+    "compute": "Actual CUDA BF16, original SDPA/dropout0/cachefalse, original decoder non-reentrant checkpointing and candidate head non-reentrant checkpointing. The candidate uses its existing explicit accelerator.autocast context for direct backbones/head.",
+    "resources_and_numeric_limits": "Inherit every resource, allocator-v4 setting, precision/backend flag, old identity/reload/headroom gate, proposed BF16 numerical tolerance, <=1M-element/128MiB comparison bound and112/160/32GiB stage accounting from the exact parent review. No fallback or threshold adaptation is authorized by this proposal.",
+    "nine_presentations": ["short0", "short1", "short2", "short0", "short1", "short2", "short0", "short1", "short2"],
+    "actual_update_group_sizes": [8, 1],
+    "diagnostic_only": "The three repeated source witnesses have nine distinct diagnostic presentation indices per branch. A branch completes nine training_step calls/backwards and two real optimizer updates. These are not nine unique training records or a pilot exposure draw."
+  },
+  "preparation_before_any_diagnostic_forward": [
+    "On the actual assigned compute allocation, validate current role/handoff, terminal CPU prerequisites, deadline, source inventory, installed runtime, original model/tokenizer files and the existing private complete witnesses/exclusion receipts. Apply the fixed allocator environment before framework imports. This document grants no current-job authority.",
+    "Construct both original FP32 students independently from verified original files. Establish exact original FQN/shape/value inventories and tied alias, cross-student/reference storage disjointness, absence of PEFT/compile/offload/sharding, and all434 original trainable Parameters. Keep every reference Parameter FP32, frozen and unchanged; never prepare the reference as an Accelerator training model.",
+    "Construct one dense preserving Trainer and one checkpointed-head Trainer, each retaining its own original student as Trainer.model, with identical fixed TrainingArguments and the same objective/beta/masks/EOS/tail. Set report_to=[], eval/log/save strategies=no, native max_grad_norm=0, owned clip_norm=1, no custom loss function, no smoothing, no empty-cache cadence, no resume/model_init or external callbacks. Require model_accepts_loss_kwargs=false.",
+    "Enable the same original decoder gradient_checkpointing_enable(gradient_checkpointing_kwargs={use_reentrant:false}) before the first forward. This normally happens inside Trainer.train; it must therefore be performed explicitly by this different controller and verified on both original backbones.",
+    "For each fresh Trainer, call its existing create_optimizer_and_scheduler(num_training_steps=1875), using the unchanged cosine scheduler with57 warmup steps. Preserve HF's actual original-name AdamW groups, group order, decay exclusions, defaults and existing foreach/fused settings. Both raw optimizers must initially have empty state and contain only their own434 students once.",
+    "For each branch exactly once, use its own public accelerator.prepare(original_student, raw_optimizer). Require the returned model is the identical original Trainer.model and the existing keep_fp32_wrapper=True unwrap remains an identity. Store the returned AcceleratedOptimizer on that Trainer. The ordinary framework AMP wrapper installed by Accelerator is retained; introduce no user forward reassignment, model wrapper, global patch or re-preparation.",
+    "Keep the already-created ordinary LambdaLR on its original underlying AdamW; verify that its optimizer is the unwrapped object inside the prepared optimizer and its group objects agree. In the pinned ordinary Trainer path, a scheduler with a step method is not included in accelerator.prepare. Do not add prepare_scheduler/AcceleratedScheduler to this diagnostic or accidentally obtain accumulation-adjusted extra scheduler steps.",
+    "Update each callback handler's model, optimizer and lr_scheduler references to these exact objects, as the stock loop does. Initialize only the explicit diagnostic state needed for callbacks: global_step0, max_steps2, one epoch and microbatch1. Require exactly one inherited _FiniteUpdates callback per branch and a fixed, reviewed non-mutating remaining callback set. Claim neither that Trainer.train ran nor that its private initialization/flow was fully reproduced.",
+    "After both Trainers exist and after preparation, assert for BOTH Accelerators: one process/DistributedType.NO, BF16, no scaler, gradient_accumulation_steps==1, no conflicting accumulation environment/plugin, no active prepared dataloader and no hidden state reset. Accelerate GradientState is shared in-process, so do not reset it between branches or give the two branches different accumulation policies.",
+    "Verify original zero-update identity with the unchanged old gates before the new numerical comparisons. For the nine-step phase use fresh original students/empty optimizers, independent of any earlier standalone-gradient phase; release earlier model/Trainer references under the same measured allocator envelope rather than offloading or keeping an extra pair. Hashing model equality never substitutes for the declared numerical comparisons."
+  ],
+  "loss_scaling_contract": {
+    "does_training_step_normalize": true,
+    "rule": "The overridden compute_loss returns one unscaled equal-example objective. Actual inherited Trainer.training_step divides it by trainer.current_gradient_accumulation_steps because model_accepts_loss_kwargs=false. The actual Accelerator.backward then has its own divisor, which MUST equal1. Set the Trainer's current group length to8 for every one of the first eight presentations and1 for the tail.",
+    "num_items_in_batch": null,
+    "forbidden": ["No loss division in the new controller or compute_loss", "No manual loss.backward or replacement backward", "No accelerator.accumulate", "No Accelerator accumulation count8", "No duplicate finite/clip call outside the inherited pre-optimizer callback", "No reconstructing objectives or Adam updates from a formula"],
+    "expected_returned_training_step_loss": "The returned value is detached and scaled by the actual group length. Compare it to the corresponding branch's unscaled objective/group length; preserve unscaled scalar metrics separately. Do not treat the returned value as the original loss or divide its gradients again.",
+    "standalone_gradient_phase": "The earlier three single-witness numerical comparisons use actual group length1, paired backward, no optimizer/scheduler update and cleared gradients between witnesses. They are explicitly separate from the fresh nine-step trajectory."
+  },
+  "single_threaded_pair_choreography": [
+    "At group begin, require both prior groups completely finalized, gradients None, equal state.global_step and the expected Adam step counts. Set both current_gradient_accumulation_steps to the exact upcoming group length. Dispatch on_step_begin once per branch. The controller owns explicit source order; it does not sample a dataloader.",
+    "For each presentation in the group, set public accelerator.sync_gradients=false on non-boundaries and true on the final presentation, matching the intended accumulation boundary. The in-process shared state must agree for both branches. Use no distributed/no_sync workaround in this single-process diagnostic.",
+    "Capture the bounded Python/NumPy/Torch CPU/assigned-CUDA RNG states. Run dense.training_step(dense.model, unchanged_batch, num_items_in_batch=None) to completion, including its actual Accelerator.backward. Retain only scalar metrics/metadata plus its original live gradients; release forward graph/output references.",
+    "Save the dense post-call RNG state, restore the presentation's pre-call state, then run candidate.training_step(candidate.model, the exact same unchanged_batch, None) to completion. Require finite detached returned loss, the same logical counts and the same token/mask/position/EOS/tail hashes. Check and record both post-call RNG state hashes. With original dropout0 and checkpoint RNG preservation, any divergence must fail this version rather than be hidden by a new seed. Continue the logical stream from the matching post-call state once, not twice.",
+    "Keep bounded worker-level backbone/head hooks registered for the whole training_step, through backward, in addition to the helper's temporary forward-only observations. Attribute original forward versus checkpoint recomputation with an explicit phase/call counter. Observe actual CUDA BF16 inside both backbones, every original head projection and candidate head/backbone recomputation after compute_loss's outer context has exited. Never rebind a forward method or count recomputation as another consumed record.",
+    "On non-boundaries, dispatch on_substep_end once per branch after the paired calls and require no update, scheduler or zero_grad event. Accumulated gradients stay resident. At a boundary, require both branches have exactly the complete group, both sync_gradients=true and all434 finite non-None FP32 gradients before any clipping or update.",
+    "Stream-compare both raw accumulated gradient sets NOW, while neither branch is clipped, stepped or zeroed. Do not try to obtain raw values from an observer appended after _FiniteUpdates, because that inherited callback already clips within on_pre_optimizer_step.",
+    "Dispatch each branch's callback_handler.on_pre_optimizer_step exactly once, dense then candidate. With native max_grad_norm0, only the one inherited _FiniteUpdates performs the existing finite optimizer/gradient check and clip_norm1. Compare both resulting live clipped gradient sets and returned last_gradient_norm values after BOTH callback chains finish and before EITHER optimizer steps. Never clip a second time for telemetry.",
+    "Record exact used LRs and optimizer membership, then call dense.optimizer.step followed by candidate.optimizer.step with sync_gradients=true. Dispatch each on_optimizer_step immediately after its own step to retain the inherited moment validation. If either step/validation fails, preserve the failed partial state and stop; there is no transactional rollback or permission to continue the other branch later.",
+    "Before either zero_grad, stream-compare all434 FP32 exp_avg, exp_avg_sq and actual updated Parameter tensors. Check exact per-Parameter state step1 then2, optional-state parity, finite/nonnegative second moments, all original group membership and no reference state. Require neither AcceleratedOptimizer reports a skipped step. Preserve both gradient sets until all declared boundary checks finish.",
+    "At update1, require usedLR0, all434 initialized states, and every stored student Parameter exactly unchanged from its verified initial value. Stream-compare both students to the same retained original reference in EVERY case, SFT included; original identity cannot be inferred from the LR or moment count. After that proof and before update2, write the one common immutable private initial shadow from the equal original students, binding its actual post-LR0/pre-update2 phase. Do not create an unbounded initial-state copy.",
+    "At update2, require usedLR=0.000002/57 and positive actual stored FP32 update norms in both tied and backbone groups for BOTH students. Compare every actual after-minus-shadow delta using the reviewed bounded reader, not an Adam formula, selected tensor or full-weight tolerance alone.",
+    "For each successful branch boundary, step the existing raw LambdaLR exactly once AFTER optimizer callbacks/state comparisons, giving post-scheduler LRs peak/57 then2*peak/57. Use the same no-skipped-step condition as the ordinary loop. Then call original model.zero_grad(), require all gradients None, increment state.global_step to1 then2, set explicit diagnostic epoch progress8/9 then1, and dispatch on_step_end. These extra read-only comparisons do not authorize another scheduler event or optimizer update.",
+    "After both groups, require exactly9 forward/backward presentation events,2 finite/clip events,2 actual optimizer steps and2 scheduler steps per branch. Remove worker hooks in finally, retain private failure observations on any exception, and perform standard candidate-only save/reload and all unchanged final provenance/RSS/CUDA/scratch gates. No automatic downstream stage follows."
+  ],
+  "rng_and_recompute_limits": {
+    "rng_storage": "Only bounded generator states are retained; no activation, logit, model or optimizer snapshot is hidden in the RNG mechanism. Root must freeze the seed20261021, exact RNG families and hash format before execution.",
+    "no_stochastic_workload_change": "Do not disable an actually stochastic original operation to make RNG states agree. This design requires the already-declared original dropout0 and records checkpoint preservation settings; the post-state equality gate may still reject a valid different implementation and then remains a failure.",
+    "hooks": "Callbacks/hooks observe shapes, autocast enabled/dtype, detached scalars and phase counts only. A bounded temporary numerical projection comparison may inspect its current <=128-position chunk, then releases it. No tensor-bearing telemetry tree, full host logits, hidden graph retention, extra metric head forward or altered checkpoint closure is permitted.",
+    "synchronization": "Complete both backwards before streamed boundary comparisons; synchronize the assigned CUDA device at declared measurement/comparison boundaries. No threads or overlapping student backward is proposed. Record sampling limitations and unchanged conservative driver/allocator headroom throughout."
+  },
+  "proposed_observation_helper_integration": {
+    "helper_path": "extension/checkpointed_head_native_observation.py",
+    "abi": "NativeObservation(torch_module, student=original_student, reference=optional_shared_frozen_original, branch=dense_or_candidate, parts_validator=frozen_qwen_parts). This is a future draft/helper ABI, not an executed proof.",
+    "phase_nesting": "Keep the context-managed original backbone/decoder-layer/tied-head hooks installed around the actual training_step. The controller enters phase(backward,presentation_index=i); a new small compute_loss subclass enters nested phase(forward,presentation_index=i) and delegates directly to super without changing or normalizing loss. When compute_loss exits, actual checkpoint recomputation occurs in the outer backward phase. No root-forward reassignment or globals are changed.",
+    "shared_reference": "When dense and candidate observers are simultaneously installed on a shared frozen reference, an observer outside its own active explicit phase must ignore the other branch's calls. Alternatively use nonoverlapping observer install lifetimes, always retaining each through its complete backward. Never attribute the same reference call to both branch frames.",
+    "required_coverage": "Record original decoder-layer pre/post hooks as well as the whole backbone/head. Require forward coverage of every original decoder layer and at least one actual candidate decoder-layer plus head backward/recompute observation with restored CUDA BF16. Non-reentrant early stopping may change post-hook/rerun counts; do not require invented identical counts or use configured checkpoint flags as the observation. No output tensors remain in snapshot metadata."
+  },
+  "required_receipt_claims": {
+    "execution_kind": "paired_native_trainer_training_step_controller",
+    "trainer_train_called": false,
+    "full_trainer_train_loop_established": false,
+    "backward_owner": "Actual pinned inherited Trainer.training_step and Accelerator.backward",
+    "group_boundary_callback_optimizer_scheduler_owner": "Explicit reviewed diagnostic controller",
+    "unique_row_driver_established": false,
+    "long_context_memory_established": false,
+    "training_or_pilot_admitted": false,
+    "no_claim_before_actual_execution": "This planning artifact establishes none of the native numerical, dtype, memory, original-weight, optimization or save/reload gates. Future receipts must report observed counts and failures rather than copying these proposed claims as success."
+  },
+  "minimum_new_cpu_oracles_before_native_admission": [
+    "Exercise the paired controller against independent tiny CPU dense math, retaining original Trainer/model ownership. Compare its two group8+1 updates with each branch's separately executed stock full Trainer.train tiny oracle under matching AdamW/cosine-prefix settings. Explicit tiny parameter-count seams never become native434 proof.",
+    "Assert one division by8 then1, Accelerator divisor1, actual training_step/Accelerator.backward calls, no manual backward/accumulate, no update on non-boundaries, and rejection of conflicting gradient accumulation environment/plugin/defaults.",
+    "Capture raw gradients before inherited _FiniteUpdates and clipped gradients afterward. Count clipping exactly once, verify callback object/owner ordering, optimizer handler references, no duplicate telemetry clip and no optimizer step before both clipped comparisons.",
+    "Check prepared original-model identity and exactly one normal AMP preparation; raw LambdaLR remains attached to the underlying AdamW. Test no skipped step, LR0 all-weight identity with initialized moments, LR/57 actual stored nonzero deltas, scheduler ordering and final tail1. Test unexpected prepared scheduler/wrapper/optimizer/reference membership refuses.",
+    "Test deterministic paired RNG snapshot/restore/post-state equality, worker-hook lifetime through backward, cleanup on callback/optimizer/comparison failure, bounded shadow/scratch accounting across all cases and preservation of an already-updated partial branch without rollback/retry claims.",
+    "Before GPU admission, use a metadata-only full-shape36-decoder-layer, shared-reference, nine-presentation observation fixture to establish that both observer receipts fit the prospectively chosen128KiB per-receipt cap and the complete bounded event journal fits2MiB. Small tiny-layer fixtures alone do not establish this serialization bound. A later cap failure stops the version; no automatic cap increase follows outcomes.",
+    "Use native source/metadata-only orchestration fixtures for current-job/source/proof failure paths. Original weights, source records, real CUDA BF16/recompute/434 counts, terminal accounting and actual memory remain separately required compute evidence."
+  ],
+  "remaining_admissions_and_blockers": [
+    "A real worker, exact plan/tolerance implementation, BF16-ULP logit comparator, bounded native hooks, paired-controller tests, native CPU QA, metadata admission and private/public closeout do not yet exist as a successful native stage. Root must independently review and freeze them before any comparison outcomes.",
+    "Explicit preparation/callback/state ownership differs from Trainer.train. The required independent tiny full-loop comparison limits integration mistakes but never converts this diagnostic into actual original3B full-loop evidence.",
+    "After complete four-objective short success with terminal accounting, separately admit the original candidate-only17-presentation long GA8 memory version, including the second31776-token forward with434 Adam states plus434 resident gradients and prior_backward1. This controller's short paired peak is not that proof.",
+    "Before a pilot, implement and admit a new actual full-driver17-UNIQUE-row Trainer.train integration with the normal ConsumptionLedger, complete native cache/exclusions, actual optimizer/scheduler/checkpoint path and no external parity-row conditioning of a broad random draw. Existing pilot_driver defaults still select the dense preserving Trainer; merely injecting a new base into its factory does not repair its full runtime/proof schemas or authorize deployment.",
+    "Any failed threshold/resource/provenance/runtime gate stops this version. Preserve old failures and successful preceding cases. No tolerance, allocator, objective, precision, context, backend, source order or resource change follows automatically."
+  ],
+  "source_references": [
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.57.3/src/transformers/trainer.py",
+      "line_index_basis": "L indices in the web plain-text viewer, zero-based",
+      "lines": ["1144-1157 optimizer/scheduler creation", "1682-1698 scheduler", "2213-2257 preparation", "2327-2341 callback references", "2382-2390 group length/sync", "2484-2505 update order", "3638-3723 training_step", "4965-5028 Accelerator creation"],
+      "verified_fact": "The pinned step handles backward and divides by current group size. The ordinary loop prepares model/optimizer, dispatches callbacks and owns scheduler/zero/state advancement; calling the step alone does not run those parts."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/accelerate/v1.12.0/src/accelerate/accelerator.py",
+      "line_index_basis": "L indices in the web plain-text viewer, zero-based",
+      "lines": ["1147-1160 public sync/accumulation properties", "1594-1644 prepare_model/AMP", "2514-2552 prepare_optimizer", "2553-2590 prepare_scheduler", "2592-2622 backward"],
+      "verified_fact": "Accelerator backward has its own accumulation divisor; public preparation installs ordinary AMP/optimizer handling. Adding another scheduler preparation changes the wrapper path."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/accelerate/v1.12.0/src/accelerate/optimizer.py",
+      "line_index_basis": "L indices in the web plain-text viewer, zero-based",
+      "lines": ["49-67 construction", "100-110 zero_grad", "131-172 step/skip"],
+      "verified_fact": "The prepared optimizer gates stepping on sync_gradients and exposes skipped-step state. Its ordinary underlying state remains available through the wrapper."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/accelerate/v1.12.0/src/accelerate/state.py",
+      "line_index_basis": "L indices in the web plain-text viewer, zero-based",
+      "lines": ["1139-1178 GradientState"],
+      "verified_fact": "GradientState uses shared in-process state; two Accelerator objects are not independent accumulation-state machines."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/v4.57.3/src/transformers/trainer_callback.py",
+      "line_index_basis": "L indices in the web plain-text viewer, zero-based",
+      "lines": ["409-437 registration", "481-489 optimizer events", "506-523 ordered dispatch"],
+      "verified_fact": "The callback handler uses its stored model/optimizer/scheduler references and invokes registered callbacks in order."
+    },
+    {
+      "path": "extension/preserving_trainer.py",
+      "line_index_basis": "local source lines, one-based",
+      "lines": ["204-212 _FiniteUpdates", "255-267 inherited setup", "274-314 dense compute_loss"],
+      "verified_fact": "The inherited pre-optimizer callback performs the owned finite-gradient clipping; the dense overridden compute_loss itself has no extra gradient-accumulation division. The class does not override training_step."
+    },
+    {
+      "path": "extension/checkpointed_head_trainer.py",
+      "line_index_basis": "local source lines, one-based",
+      "lines": ["193-215 identity/unwrap guards", "217-273 compute_loss"],
+      "verified_fact": "The candidate also inherits training_step unchanged. Its unscaled compute_loss uses explicit autocast around direct backbones/head, one causal shift and scalar diagnostics. Temporary local head hooks end before backward, so future worker observations must cover recomputation separately."
+    }
+  ]
+}

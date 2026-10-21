@@ -1,0 +1,5 @@
+{'train_runtime': 0.0318, 'train_samples_per_second': 503.11, 'train_steps_per_second': 62.889, 'train_loss': 2.9654541015625, 'epoch': 1.0}
+{'train_runtime': 0.0258, 'train_samples_per_second': 619.011, 'train_steps_per_second': 77.376, 'train_loss': 2.9654541015625, 'epoch': 1.0}
+{'train_runtime': 0.0311, 'train_samples_per_second': 513.929, 'train_steps_per_second': 64.241, 'train_loss': 0.1529516577720642, 'epoch': 1.0}
+{'train_runtime': 0.0308, 'train_samples_per_second': 519.672, 'train_steps_per_second': 64.959, 'train_loss': 0.1529516577720642, 'epoch': 1.0}
+{"head_native_tools_cpu_fixture_qa_complete": true, "tests_run": 80, "gpu_seconds": 0, "actual_model_or_memory_admission": false}

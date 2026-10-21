@@ -1,0 +1,53 @@
+{
+  "actual_434_comparison_admitted": false,
+  "actual_initial_shadow_phase_identity_admitted": false,
+  "actual_original_3b_weights_loaded": false,
+  "actual_process_rss_or_headroom_measured": false,
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "complete": true,
+  "elapsed_allocation_seconds": 50,
+  "errors": 0,
+  "failures": 0,
+  "full_train_loop_or_long_context_admitted": false,
+  "gpu_seconds": 0,
+  "job_id": "1230042",
+  "native_bf16_cuda_or_recompute_admitted": false,
+  "older_tests_replayed": false,
+  "qualification": "Exactly80 new CPU fixtures passed:24 bounded projection numerical/guard fixtures,24 explicit fake observation fixtures and32 actual tiny CPU Trainer paired-step fixtures including independent stock-loop comparisons. Historical36/24/32 receipts were verified, not replayed. No original3B/all434/native CUDA BF16 or recompute, actual shadow phase, RSS/headroom, actual full-train-loop, long-context or pilot/model-improvement admission is established.",
+  "raw_private_records_included": false,
+  "runtime_flags_set_or_swept": false,
+  "runtime_getters_after": {
+    "cuda_matmul_allow_bf16_reduced_precision_reduction": true,
+    "cuda_matmul_allow_fp16_reduced_precision_reduction": true,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cudnn_sdp_enabled": true,
+    "flash_sdp_enabled": true,
+    "float32_matmul_precision": "highest",
+    "math_sdp_enabled": true,
+    "mem_efficient_sdp_enabled": true
+  },
+  "runtime_getters_before": {
+    "cuda_matmul_allow_bf16_reduced_precision_reduction": true,
+    "cuda_matmul_allow_fp16_reduced_precision_reduction": true,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "cudnn_sdp_enabled": true,
+    "flash_sdp_enabled": true,
+    "float32_matmul_precision": "highest",
+    "math_sdp_enabled": true,
+    "mem_efficient_sdp_enabled": true
+  },
+  "runtime_getters_unchanged": true,
+  "schema": "extension-head-native-tools-qa-delivery-v1",
+  "skipped": 0,
+  "synthetic_cpu_tools_and_tiny_trainer_scope_only": true,
+  "test_counts": {
+    "test_checkpointed_head_native_observation.py": 24,
+    "test_native_bf16_projection_comparison.py": 24,
+    "test_paired_training_step_controller.py": 32
+  },
+  "tests_run": 80,
+  "training_or_pilot_admitted": false
+}

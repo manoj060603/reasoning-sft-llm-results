@@ -1,0 +1,131 @@
+{
+  "schema": "extension-head-native-tools-qa-plan-v1",
+  "status": "prospective_frozen_cpu80_source11_unadmitted_before_execution",
+  "role": "head_native_tools_qa_20261021_v1",
+  "test_patterns": {
+    "test_native_bf16_projection_comparison.py": 24,
+    "test_checkpointed_head_native_observation.py": 24,
+    "test_paired_training_step_controller.py": 32
+  },
+  "expected_tests": 80,
+  "native_qa_schema": "extension-head-native-tools-native-qa-v1",
+  "source_files": [
+    "extension/checkpointed_head_native_observation.py",
+    "extension/head_native_tools_qa.py",
+    "extension/head_native_tools_qa.slurm",
+    "extension/head_native_tools_qa_plan.json",
+    "extension/native_bf16_projection_comparison.py",
+    "extension/paired_training_step_controller.py",
+    "extension/planning/checkpointed_head_native_numerical_protocol.json",
+    "extension/planning/paired_training_step_controller_protocol.json",
+    "tests/test_checkpointed_head_native_observation.py",
+    "tests/test_native_bf16_projection_comparison.py",
+    "tests/test_paired_training_step_controller.py"
+  ],
+  "reviewed_input_sha256": {
+    "extension/native_bf16_projection_comparison.py": "a1fcf8637450c5b15fa990dfcd26cb267b54b87b59e10a4735bf25324da4fb22",
+    "tests/test_native_bf16_projection_comparison.py": "08c187824458b47fc6eec2e0847b122930995a0e50a8e7dcf4a8defe86ae3e2b",
+    "extension/checkpointed_head_native_observation.py": "555e40b513a1034753b7055123207bc6ae2aa4b855b06de8ee82e878a49b486a",
+    "tests/test_checkpointed_head_native_observation.py": "90c6df32ce892d197173744a00cbda671a4acbc8379f6210c418ce00a7a53a20",
+    "extension/paired_training_step_controller.py": "9e446719e34f2370a00967066813b28acb6bf0a072cfade473eda3ef5e59e726",
+    "tests/test_paired_training_step_controller.py": "806fd6da4fc25b62126d2909c4e8bf5b1148d427ed4fa924e12b2f43c636e852",
+    "extension/planning/checkpointed_head_native_numerical_protocol.json": "27cedace388a17f3b97a0b1466e119c59a4d63913085263c689c8cfbbb003cb3",
+    "extension/planning/paired_training_step_controller_protocol.json": "1c9c0aa078b1c31b7b589ca51dd36651f69b5cef2efbaec44af271ac17148a2b"
+  },
+  "protocol_sha256": {
+    "extension/planning/checkpointed_head_native_numerical_protocol.json": "27cedace388a17f3b97a0b1466e119c59a4d63913085263c689c8cfbbb003cb3",
+    "extension/planning/paired_training_step_controller_protocol.json": "1c9c0aa078b1c31b7b589ca51dd36651f69b5cef2efbaec44af271ac17148a2b"
+  },
+  "cpu_bootstrap": {
+    "path": "extension/operations/submit-head-native-tools-qa-20261021.py",
+    "outside_source_inventory": true
+  },
+  "resources": {"cpus": 2, "ram_gib": 8, "gpus": 0, "wall_time_seconds": 1800, "reserve_seconds": 172800},
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "runtime_versions": {"torch": "2.9.0", "transformers": "4.57.3", "accelerate": "1.12.0", "safetensors": "0.7.0", "numpy": "1.26.4"},
+  "runtime_getters": {
+    "float32_matmul_precision": "get_float32_matmul_precision",
+    "cuda_matmul_allow_tf32": "backends.cuda.matmul.allow_tf32",
+    "cuda_matmul_allow_fp16_reduced_precision_reduction": "backends.cuda.matmul.allow_fp16_reduced_precision_reduction",
+    "cuda_matmul_allow_bf16_reduced_precision_reduction": "backends.cuda.matmul.allow_bf16_reduced_precision_reduction",
+    "cudnn_allow_tf32": "backends.cudnn.allow_tf32",
+    "flash_sdp_enabled": "backends.cuda.flash_sdp_enabled",
+    "mem_efficient_sdp_enabled": "backends.cuda.mem_efficient_sdp_enabled",
+    "math_sdp_enabled": "backends.cuda.math_sdp_enabled",
+    "cudnn_sdp_enabled": "backends.cuda.cudnn_sdp_enabled"
+  },
+  "numerical_assertions_owner": "Exact prospective assertions in the pinned24+24+32 test modules and frozen protocols; no stage tolerance override",
+  "prior_ledger": {
+    "path": "extension/report/native-tensor-comparison-qa-20261021-1229923/job_ledger_snapshot.json",
+    "sha256": "001efc38f83a8f1843715c97d57db17639f183447bad190fd626fdb9ba1ad0b7",
+    "entries": 32,
+    "entries_sha256": "466cbaaa4d2e765f17c2d0cafc6d75eded7bf308a90945a20ce7b79029e8dd0d"
+  },
+  "historical_ledger": {
+    "path": "deadline/job_ledger.json",
+    "sha256": "9fc4dfa2506ccd33580bab3e5f4c4e91d0731e221c4f88ac9778e54800dc141d"
+  },
+  "parent_sources": {
+    "path": "extension/report/native-tensor-comparison-qa-20261021-1229923/evidence_manifest.json",
+    "sha256": "751bef2c5e01e2130b3c7ab1f7742d846af946df8dabb1382ee02d082c79402b",
+    "schema": "extension-native-tensor-comparison-qa-evidence-v1",
+    "inventory_key": "protected_source_inventory",
+    "expected_files": 176
+  },
+  "historical_native_qa": {
+    "head36": {
+      "directory": "extension/report/head-objective-qa-20261021-1228995", "job_id": "1228995",
+      "name": "sft-extension-head-objective-qa", "tests": 36, "row_elapsed": [23, 23, 23],
+      "qa_schema": "extension-head-objective-native-qa-v1", "complete_schema": "extension-head-objective-qa-complete-v1",
+      "native_qa_sha256": "7e160735bcc8e3de3b9e34b8c9819e36a61e8e704ab19ca5bf8f7972d8095cc1",
+      "complete_sha256": "90ed243cfc47e592089bab63c48546d1577e1fd23428aac0c028422377ca10bc",
+      "accounting_sha256": "784e872caf436d98ac7c30058db76a0aa1eb9aec267e7bb0a7e7e6529d3c5414"
+    },
+    "trainer24": {
+      "directory": "extension/report/checkpointed-head-trainer-qa-20261021-1229383", "job_id": "1229383",
+      "name": "sft-extension-checkpointed-head-trainer-qa", "tests": 24, "row_elapsed": [40, 40, 40],
+      "qa_schema": "extension-checkpointed-head-trainer-native-qa-v1", "complete_schema": "extension-checkpointed-head-trainer-qa-complete-v1",
+      "native_qa_sha256": "5932df2f7e6519eda903ea854b26de7a2dd563243980ceac46b749f7f6ab68c1",
+      "complete_sha256": "298a80f83949cbd3e575d9a4406479ac60b43684c9386999f9616246e50f267d",
+      "accounting_sha256": "c184cbaf0511f388f7f61951b5d6dcd026b18403dd6bd9bbd1522fc67f45e0c9"
+    },
+    "comparison32": {
+      "directory": "extension/report/native-tensor-comparison-qa-20261021-1229923", "job_id": "1229923",
+      "name": "sft-extension-native-tensor-comparison-qa", "tests": 32, "row_elapsed": [16, 16, 17],
+      "qa_schema": "extension-native-tensor-comparison-native-qa-v1", "complete_schema": "extension-native-tensor-comparison-qa-complete-v1",
+      "native_qa_sha256": "c909b3ccd8c423982fd711baf2131b1872f6f3f7920b7ecd700432b488a67e12",
+      "complete_sha256": "fb559baac116a62ae9588523f1e8cefd8b93879c366e443fd5ad53790a48b755",
+      "accounting_sha256": "ac34db9eed874059eadcc62c3ead59e4644356878799e8c5fcebe6d949c545f7"
+    }
+  },
+  "claims": {
+    "synthetic_cpu_projection_observation_and_controller_scope_only": true,
+    "tiny_cpu_trainer_fixture_scope": true,
+    "fake_cuda_observation_fixture_scope": true,
+    "runtime_precision_backend_getter_metadata_only": true,
+    "runtime_flags_set_or_swept": false,
+    "runtime_getters_establish_kernel_or_gpu_behavior": false,
+    "fixture_tensor_count_override_is_not_native_434_proof": true,
+    "older_tests_replayed": false,
+    "actual_original_3b_weights_loaded": false,
+    "actual_434_numeric_comparison_established": false,
+    "private_experiment_inputs_opened": false,
+    "tokenizer_loaded": false,
+    "native_bf16_cuda_or_recompute_admission_established": false,
+    "actual_process_rss_or_cuda_headroom_measured": false,
+    "initial_shadow_phase_identity_established": false,
+    "full_train_loop_or_long_context_admission_established": false,
+    "training_or_pilot_admitted": false,
+    "automatic_retry": false,
+    "automatic_downstream": false
+  },
+  "qualifications": [
+    "The prospective CPU80/source11 inputs are frozen before execution, including the independently reviewed controller32 test pin. This stage remains unadmitted until a separate reviewed outside-source11 metadata bootstrap binds exact current-job/source/plan/protocol/history evidence.",
+    "Source11 consists only of three new helpers, their three new test files, the new QA controller, plan and wrapper, and the two root-frozen numerical/controller protocols. It is disjoint from protected176; no historical source is rewritten. The two protocols are source-bound before imports, not post-outcome tolerance choices.",
+    "Exactly24 projection plus24 fake-observation plus32 paired-controller tests run on real assigned CPU2/8GiB/30-minute zero-GPU compute. Require zero failures, errors, skips, expected failures and unexpected successes. Historical36/24/32 native QA, complete and accounting receipts are verified by pinned metadata and protected source hashes, not replayed or relabeled as this80 scope.",
+    "Historical terminal raw rows remain exact: CPU36 allocation/batch/extern23/23/23 seconds, CPU24 40/40/40, CPU32 16/16/17. Each is its recorded actual duration, with exact JobName accounting command and all steps COMPLETED0:0/noGPU; no shared elapsed assumption or JobName%80 format substitution.",
+    "After guarded Torch import and before tests, read only the listed public precision/backend getters with no CUDA initialization. Record the same fields after all80 and require unchanged known-string/plain-bool values. Missing APIs or type changes fail closed. Do not set flags, infer defaults, import scikit-learn, fit topics, read source inputs or claim actual GPU/kernel/BF16 behavior from CPU metadata.",
+    "Synthetic projection tensors, explicit fake AMP/module/decoder hooks and tiny CPU Qwen/Trainer tests prove only their numerical/guard fixtures. They do not establish original3B/434 identities, actual CUDA BF16 or checkpoint recomputation, real RSS/scratch/headroom, actual post-LR0 shadow phase, actual full Trainer.train integration, long-context memory or a pilot. No source or benchmark outcome, actual private cache, tokenizer or original checkpoint is opened.",
+    "All native runtime versions, protocol/source/historical/current-ledger identities and default CPU/FP32 precision must remain unchanged through QA. Save fresh owner-only started, pre-test runtime getter evidence, nativeQA and complete or failure receipts. No resume, automatic retry, admission of a GPU job, generation, ranking or downstream execution is provided."
+  ]
+}
