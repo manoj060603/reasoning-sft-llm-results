@@ -302,10 +302,36 @@ The [review](extension/planning/joint_allocator_v4_review.json) distinguishes
 reserved-memory overhead from demonstrated fragmentation. A fresh bounded
 GPU run must verify the effective setting and all four cases; any success
 applies only to that matching allocator policy and diagnostic workload.
-The [single bounded replay, job 1228582](extension/report/joint-allocator-v4-admitted-20261021-1228582/delivery_summary.json),
-has been admitted on one B200 for up to two hours. Its running-state snapshot
-does not establish memory admission or accuracy improvement. All 24 ledger
-entries and original allocation requests remain preserved.
+The [single bounded replay, job 1228582](extension/report/joint-allocator-v4-admitted-20261021-1228582/delivery_summary.json)
+then ran for **391 seconds**, ending at **05:46:20 UTC**. The
+[terminal result](extension/report/joint-allocator-v4-failed-20261021-1228582/delivery_summary.json)
+is **failed overall**. Ordinary CE passed all checks and left 24,132,583,424
+bytes of conservative headroom. CE+KL completed its 17 presentations and
+three updates, but left only 13,877,510,144 bytes against the unchanged
+19,149,547,111-byte requirement. No CUDA OOM was observed; ASFT and the
+prior-anchored case did not run. The effective fixed allocator setting was
+verified. The CE result is individual diagnostic evidence, and full training
+remains blocked. There is no allocator sweep or weaker memory threshold.
+Terminal extension GPU use is **2,202 seconds (0.611667 hours)**; all twelve
+originally requested GPU-hours remain recorded.
+
+The separate original-calibration collector received explicit identity
+integration, with its generation settings unchanged. Its
+[native CPU attempt, job 1228729](extension/report/source-generation-v2-qa-failed-20261021-1228729/delivery_summary.json),
+ran **60 checks: 59 passed and one fixture errored**, in an 11-second
+zero-GPU allocation. A negative accounting-mutation test expected
+`ValueError`; the production accounting guard correctly rejected it with
+`SubmissionError`. The failed suite and all 25 ledger entries are preserved.
+No calibration model or source generation ran. A separately versioned fixture
+repair and fresh admission are required before the first calibration pass.
+
+A [new memory design review](extension/planning/long_context_memory_design_review.json)
+proposes checkpointing the original tied output projection together with the
+exact full-vocabulary objective in bounded token chunks. This targets full
+logit materialization while retaining the original context, precision,
+objectives and headroom. It is an unadmitted engineering proposal requiring
+independent loss, tied-weight gradient, update and actual-memory comparisons.
+It establishes no numerical equivalence, memory success or accuracy gain.
 
 ## Additional recovery follow-up: closed without promotion
 

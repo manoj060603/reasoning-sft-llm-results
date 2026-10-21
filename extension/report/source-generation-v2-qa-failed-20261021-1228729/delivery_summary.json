@@ -1,0 +1,22 @@
+{
+  "actual_vllm_interface_established": false,
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "elapsed_allocation_seconds": 11,
+  "errors": 1,
+  "exit_code": "1:0",
+  "experiment_model_loaded": false,
+  "failure_classification": "Negative accounting-mutation fixture expected ValueError, while the unchanged mandatory accounting-row guard correctly raised extension.submission.SubmissionError. The expected rejection was not caught by the fixture. No production outcome or generated source result exists.",
+  "failures": 0,
+  "gpu_seconds": 0,
+  "job_id": "1228729",
+  "old_fixture_remains_failed": true,
+  "passed": 59,
+  "private_prompt_cache_opened": false,
+  "protected_source_files": 139,
+  "raw_private_records_included": false,
+  "schema": "extension-source-generation-v2-qa-failed-delivery-v1",
+  "skipped": 0,
+  "state": "FAILED",
+  "tests_run": 60
+}

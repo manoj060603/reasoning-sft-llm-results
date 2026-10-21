@@ -1,0 +1,18 @@
+{
+  "command": [
+    "squeue",
+    "--clusters=owl",
+    "--array",
+    "--states=all",
+    "--me",
+    "--noheader",
+    "--format=%i|%T|%j|%b"
+  ],
+  "job_id": "1228582",
+  "observed_at_utc": "2026-10-21T06:11:43.658541+00:00",
+  "other_queue_row_count": 0,
+  "queue_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "schema": "extension-target-terminal-queue-observation-v1",
+  "target_active_rows": 0,
+  "unrelated_job_rows_exported": false
+}

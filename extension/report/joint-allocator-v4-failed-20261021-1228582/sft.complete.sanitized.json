@@ -1,0 +1,101 @@
+{
+  "all_recorded_case_checks_passed": true,
+  "allocator": {
+    "backend": "native",
+    "effective_settings": {
+      "PYTORCH_CUDA_ALLOC_CONF": "backend:native,expandable_segments:True",
+      "expandable_segments": true
+    },
+    "effective_torch_version": "2.9.0+cu128",
+    "final_observed_stats": {
+      "active_bytes.all.current": 37050401280,
+      "active_bytes.all.peak": 61911432192,
+      "allocated_bytes.all.current": 37050401280,
+      "allocated_bytes.all.peak": 61911432192,
+      "inactive_split_bytes.all.current": 0,
+      "inactive_split_bytes.all.peak": 0,
+      "num_alloc_retries": 0,
+      "num_device_alloc": 1203,
+      "num_device_free": 0,
+      "num_ooms": 0,
+      "num_sync_all_streams": 1,
+      "requested_bytes.all.current": 37050401024,
+      "requested_bytes.all.peak": 61911431424,
+      "reserved_bytes.all.current": 166444662784,
+      "reserved_bytes.all.peak": 166444662784,
+      "segment.all.current": 0,
+      "segment.all.peak": 0
+    },
+    "observed_maximum_stats": {
+      "active_bytes.all.current": 91742919680,
+      "active_bytes.all.peak": 149676117504,
+      "allocated_bytes.all.current": 91742919680,
+      "allocated_bytes.all.peak": 149676117504,
+      "inactive_split_bytes.all.current": 0,
+      "inactive_split_bytes.all.peak": 0,
+      "num_alloc_retries": 0,
+      "num_device_alloc": 1203,
+      "num_device_free": 0,
+      "num_ooms": 0,
+      "num_sync_all_streams": 1,
+      "requested_bytes.all.current": 91742908543,
+      "requested_bytes.all.peak": 149676105351,
+      "reserved_bytes.all.current": 166444662784,
+      "reserved_bytes.all.peak": 166444662784,
+      "segment.all.current": 0,
+      "segment.all.peak": 0
+    },
+    "policy": {
+      "automatic_retry": false,
+      "backend": "native",
+      "cache_disabled": false,
+      "configuration_sweep": false,
+      "effective_settings_api": "torch.cuda.memory._snapshot()['allocator_settings']",
+      "empty_cache_introduced": false,
+      "environment_variable": "PYTORCH_CUDA_ALLOC_CONF",
+      "expandable_segments": true,
+      "private_api_version_pinned": true,
+      "torch_version": "2.9.0",
+      "value": "backend:native,expandable_segments:True"
+    },
+    "qualification": "Only integer aggregates are exported. Nonallocator usage is sampled at synchronized captures and conservatively added to separate allocator maxima; unobserved driver transients are not measured exactly. Inactive-split statistics alone do not establish fragmentation relief.",
+    "raw_capture_sequence_or_allocator_snapshot_exported": false,
+    "settings_equal_before_and_after_model_work": true,
+    "synchronized_capture_count": 109
+  },
+  "complete": true,
+  "finite_fp32_parameter_count": 434,
+  "finite_moments": true,
+  "headroom": {
+    "free_after_peak_bytes": 24132583424,
+    "passed": true,
+    "peak_bytes": 167362887680,
+    "required_headroom_bytes": 19149547111,
+    "total_bytes": 191495471104
+  },
+  "job_id": "1228582",
+  "mode": "sft",
+  "progress": {
+    "diagnostic_repeated_ids": true,
+    "long_after_resident_adam_and_gradients_observed": true,
+    "maximum_complete_tokens": 31776,
+    "microbatches_per_update": [
+      8,
+      8,
+      1
+    ],
+    "optimizer_updates_completed": 3,
+    "presentations_completed": 17,
+    "raw_presentation_ids_update_ids_tokens_or_observations_exported": false,
+    "unique_source_examples": 4
+  },
+  "qualification": "Only this disposable SFT diagnostic passed. This does not admit the failed CEKL or unrun ASFT/prior objectives, a unique-row training pilot, source generation or benchmark performance.",
+  "raw_private_receipt": {
+    "bytes": 333636,
+    "path": "extension/runs/joint-memory-allocator-v4-1228582/cases/sft/complete.json",
+    "private_contents_exported": false,
+    "sha256": "6fb44208d88488db4002e5852f1a4e6c4c730ce3dd85317e19d3dcda25fe1877"
+  },
+  "reference_unchanged": true,
+  "schema": "extension-joint-allocator-v4-case-sanitized-v1"
+}

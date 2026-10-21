@@ -1,0 +1,28 @@
+{
+  "allocated_gpus": 1,
+  "allocation_only_charged_once": true,
+  "batch_and_extern_are_not_additional_gpu_allocations": true,
+  "command": [
+    "sacct",
+    "--clusters=owl",
+    "--duplicates",
+    "-j",
+    "1228582",
+    "--parsable2",
+    "--noheader",
+    "--format=JobIDRaw,JobName%80,State,ExitCode,ElapsedRaw,Start,End,AllocTRES%256"
+  ],
+  "complete": true,
+  "elapsed_seconds": 391,
+  "exit_code": "1:0",
+  "gpu_hours": 0.10861111111111112,
+  "gpu_seconds": 391,
+  "job_id": "1228582",
+  "observed_at_utc": "2026-10-21T06:11:43.655280+00:00",
+  "original_requested_gpu_seconds": 7200,
+  "schema": "extension-terminal-gpu-accounting-v1",
+  "state": "FAILED",
+  "stderr": "",
+  "stdout": "1228582|sft-extension-joint-memory-allocator-v4|FAILED|1:0|391|2026-10-21T05:39:49|2026-10-21T05:46:20|billing=328,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n1228582.batch|batch|FAILED|1:0|391|2026-10-21T05:39:49|2026-10-21T05:46:20|cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n1228582.extern|extern|COMPLETED|0:0|391|2026-10-21T05:39:49|2026-10-21T05:46:20|billing=328,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n",
+  "timezone": "UTC"
+}

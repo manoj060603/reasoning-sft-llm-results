@@ -1,0 +1,30 @@
+{
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "binding_sha256": "17dd22c9ae592982752eea2a252aa50a26ee72fcd1796211806f3798fb37b7fa",
+  "complete": false,
+  "completed_cases": {
+    "sft": {
+      "bytes": 333636,
+      "path": "extension/runs/joint-memory-allocator-v4-1228582/cases/sft/complete.json",
+      "private_contents_exported": false,
+      "sha256": "6fb44208d88488db4002e5852f1a4e6c4c730ce3dd85317e19d3dcda25fe1877"
+    }
+  },
+  "failed_case": "ce_kl",
+  "failure": "Joint actual memory headroom failed",
+  "job_id": "1228582",
+  "raw_private_receipt": {
+    "bytes": 622,
+    "path": "extension/runs/joint-memory-allocator-v4-1228582/failure.json",
+    "private_contents_exported": false,
+    "sha256": "1ad0344e800221201b66838fb6bbfdedeb83e09775d4b93fe7e5291f981f1a4f"
+  },
+  "raw_private_records_exported": false,
+  "role": "joint_memory_allocator_20261021_v4",
+  "schema": "extension-joint-allocator-v4-failed-sanitized-v1",
+  "unrun_cases": [
+    "asft",
+    "prior_anchored"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 1157,
+      "sha256": "98996abff0a28df1173edf542b368c23063532023d174b75eef5eb9650da2bd5"
+    },
+    "ce_kl.failure.sanitized.json": {
+      "bytes": 3876,
+      "sha256": "d7de96b0d17b060aed6eca488e4cc88a8eada1b4c6c9f54bf84ddd4a3e8fce33"
+    },
+    "delivery_summary.json": {
+      "bytes": 1979,
+      "sha256": "50f913b55528e2e7cefc3abe35f0332f1f49af21f906e5528cfd4fdae6ac4d68"
+    },
+    "failure.json": {
+      "bytes": 1017,
+      "sha256": "2583c9331842009db7424cb229199330a41ebb10d352cbfe1683e00bf6623b86"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 697270,
+      "sha256": "d0f5853e09dad982993d60b4b6576aaf7acb469314a5dd6e2036b1f680c37710"
+    },
+    "provenance.json": {
+      "bytes": 23451,
+      "sha256": "96bbc327e425fc2a836d48010d570a3b96a8086b327515b78a8536dc215b3cfe"
+    },
+    "scheduler_snapshot.json": {
+      "bytes": 483,
+      "sha256": "e9189cb9a81d02c74ae5cd00566f77c1c3baeb1afb3351ab6694c287b40940be"
+    },
+    "sft.complete.sanitized.json": {
+      "bytes": 3948,
+      "sha256": "4cb7ffc98cb19a6124f604af353d823d1e4704ddc31b0355b87dd0a8fcb02778"
+    }
+  },
+  "raw_private_records_included": false,
+  "schema": "extension-joint-allocator-v4-failed-sanitized-evidence-v1",
+  "source_handoff_protected_parents_admitted_report_and_both_ledgers_byte_identical_before_after": true
+}

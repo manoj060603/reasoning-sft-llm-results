@@ -1,0 +1,64 @@
+{
+  "actual_gpu_seconds": 391,
+  "all_four_cases_completed": false,
+  "all_original_requests_retained": true,
+  "allocator_policy": {
+    "automatic_retry": false,
+    "backend": "native",
+    "cache_disabled": false,
+    "configuration_sweep": false,
+    "effective_settings_api": "torch.cuda.memory._snapshot()['allocator_settings']",
+    "empty_cache_introduced": false,
+    "environment_variable": "PYTORCH_CUDA_ALLOC_CONF",
+    "expandable_segments": true,
+    "private_api_version_pinned": true,
+    "torch_version": "2.9.0",
+    "value": "backend:native,expandable_segments:True"
+  },
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "ce_kl_headroom": {
+    "free_after_peak_bytes": 13877510144,
+    "passed": false,
+    "peak_bytes": 177617960960,
+    "required_headroom_bytes": 19149547111,
+    "total_bytes": 191495471104
+  },
+  "complete_cases": [
+    "sft"
+  ],
+  "exit_code": "1:0",
+  "failed_case": "ce_kl",
+  "job_id": "1228582",
+  "original_requested_gpu_seconds": 7200,
+  "raw_private_records_included": false,
+  "schema": "extension-joint-allocator-v4-failed-delivery-v1",
+  "scientific_settings_and_strict_headroom_unchanged": true,
+  "separate_collector_cpu60": {
+    "actual_generation_or_native_interface_established": false,
+    "errors": 1,
+    "failures": 0,
+    "gpu_seconds": 0,
+    "job_id": "1228729",
+    "passed": 59,
+    "state": "FAILED",
+    "tests_run": 60
+  },
+  "sft_headroom": {
+    "free_after_peak_bytes": 24132583424,
+    "passed": true,
+    "peak_bytes": 167362887680,
+    "required_headroom_bytes": 19149547111,
+    "total_bytes": 191495471104
+  },
+  "state": "FAILED",
+  "strict_overall_admission_passed": false,
+  "total_original_requested_gpu_hours_through_prior24": 12,
+  "total_original_requested_gpu_seconds_through_prior24": 43200,
+  "total_terminal_extension_gpu_seconds_through_this_stage": 2202,
+  "training_pilot_or_accuracy_result_established": false,
+  "unrun_cases": [
+    "asft",
+    "prior_anchored"
+  ]
+}

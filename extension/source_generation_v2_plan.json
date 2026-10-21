@@ -1,0 +1,101 @@
+{
+  "schema": "extension-source-calibration-generation-plan-v2",
+  "status": "draft_unadmitted_requires_separate_cpu_qa_and_gpu_admission",
+  "role": "source_generation_original_calibration_20261021_v2",
+  "scientific_parent": {"path": "extension/source_generation_plan.json", "sha256": "f1b5fd13f75e4c7e5916caf4210a397605828cb0cd896c1609a3edc1a726a19e"},
+  "identity_helper": {"path": "extension/gpu_identity_v2.py", "sha256": "9fcaea73bb8c77a0f88a53ee3c7615f953a6480f085a041b50cc6df3658280d1"},
+  "identity_parent_evidence": {
+    "complete.json": {"path": "extension/report/joint-identity-v3-qa-20261021-1228170/complete.json", "sha256": "00835a892b571eaba14a6c0f65c7ede751d6c050472d43146460f5df0f9dd94e"},
+    "unit_qa.json": {"path": "extension/report/joint-identity-v3-qa-20261021-1228170/unit_qa.json", "sha256": "8e0f61aabe1ba4d285007c92d680542762cfae1271905c2cec63f908dc760874"},
+    "accounting.json": {"path": "extension/report/joint-identity-v3-qa-20261021-1228170/accounting.json", "sha256": "455cda55ba852be2ef7bb0d60e393b94e51708947e7f1738409b12fcc011a96f"}
+  },
+  "admission_seals": {
+    "prior_snapshot": {"path": "extension/report/joint-allocator-v4-admitted-20261021-1228582/job_ledger_snapshot.json", "sha256": "bab3dff51d0080bd9b889e847c7557207c48bdf8e2e08a014920092f848f6b50"},
+    "prior_entries": 24,
+    "prior_entries_sha256": "0bdb6b0227b45433ef102ddde1137d7a5e77a62e2a9c6dc20d58576038a227d7",
+    "allocator97": {"directory": "extension/report/joint-allocator-v4-qa-20261021-1228551", "job_id": "1228551", "elapsed_seconds": 52,
+      "pins": {"unit_qa.json": "dab9595d0bac0fe1dd4abbce72005fb4d07ed855017b30793d95b11a7b546c66", "native_qa.json": "c4207f2fb3bf28a67d7028465931c49415d29dafba032d025640b581fff613d1", "complete.json": "c9b6e44594f43cceedc270c8d8ba8ad1b5fbeb9c8ceb9ef5e09fc955df28049a", "accounting.json": "311ddc8a3678b0a1f392ef50bfc1604bf29ab631c9e1be99990da59e8ab1f6ff", "source_install_receipt.json": "f4217f032612b3f86e75ad29b20044536250974bf9d5e52867a71e48d5bdaca3"}},
+    "allocator_v4": {"role": "joint_memory_allocator_20261021_v4", "job_id": "1228582", "admission": {"path": "extension/report/joint-allocator-v4-admitted-20261021-1228582/admission.json", "sha256": "1ba40edcd34836d773b258e26340ba03691683f6c989e1872be14fd70988c6c2"}},
+    "executed_bootstraps": {
+      "extension/operations/submit-joint-allocator-v4-qa-20261021.py": "7581fd2b99dd7876be59e12fb29fb5f8f53b50e0ef37385d3ab4633b656eaba0",
+      "extension/operations/submit-joint-allocator-v4-20261021.py": "746b523de0ec480f0c6c53d61b87e3e09946ad2167df62c397a510008a2851c4"}
+  },
+  "model_role": "original",
+  "cache": {
+    "path": "extension/runs/source-readiness-v2-retry-1226240/calibration_prompt_cache.json",
+    "sha256": "6b9e9ff88a23aa73b9ea34cb4618d5858d0a23ef606e2892639fb953bbfede65"
+  },
+  "source_plan": {
+    "path": "extension/source_readiness_plan.json",
+    "sha256": "70c6823627d8bc93ce927665b87b943e1bf22f1ddc99eb2fd511a778696b590d"
+  },
+  "parent_evidence": {
+    "complete.json": {"path": "extension/report/source-readiness-v2-retry-20261021-1226240/complete.json", "sha256": "3de54b64f58ba6b23bc1b22f65d8f85ee2cb34b127683052bf55522e1237ea7a"},
+    "unit_qa.json": {"path": "extension/report/source-readiness-v2-retry-20261021-1226240/unit_qa.json", "sha256": "b45cc1fcc1dc1c19011274796142aa95381cd99b8c5021b4ba7e60cfd7ada1c1"},
+    "accounting.json": {"path": "extension/report/source-readiness-v2-retry-20261021-1226240/accounting.json", "sha256": "8934ec8542d877f425b4abe8a44a9c0bf8c60345e72514d504a107f1a32cbcfa"}
+  },
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "resources": {"gpu_type": "B200", "gpus": 1, "host_cpus": 8, "host_ram_gib": 128, "wall_time_seconds": 7200, "reserve_seconds": 172800},
+  "request_count": 32,
+  "sample_count": 256,
+  "native_eos_token_id": 151645,
+  "one_generate_call": true,
+  "first_native_interface_check": true,
+  "training": false,
+  "grading": false,
+  "ranking": false,
+  "automatic_retry": false,
+  "automatic_downstream": false,
+  "native_qa": {"schema": "extension-source-calibration-generation-native-qa-v2", "collector_expected_tests": 40, "parent_tests_previously_passed": 478, "parent_tests_replayed": false, "identity_parent_tests_previously_passed": 65, "identity_parent_tests_replayed": false, "test_pattern": "test_source_generation_identity_v2.py", "metadata_test_pattern": "test_source_generation_v2_submission.py", "source_inventory_files": 124, "separate_metadata_source_files": 4, "cpu_only_fixtures": true, "actual_vllm_interface_established": false},
+  "metadata_expected_tests": 20,
+  "expected_total_tests": 60,
+  "cpu_role": "source_generation_v2_qa_20261021_v1",
+  "cpu_bootstrap": {"path": "extension/operations/submit-source-generation-v2-qa-20261021.py", "outside_source_inventory": true},
+  "admission_seals_status": "RESOLVED_FOR_REVIEW_REQUIRES_NATIVE_CPU60",
+  "engine_adapter": {
+    "schema": "extension-source-native-eos-directory-adapter-v1",
+    "source_profile_generation_config": "vllm",
+    "constructor_generation_config": "private_eos_only_directory",
+    "relative_directory": "engine-config",
+    "filename": "generation_config.json",
+    "exact_utf8_json": "{\"eos_token_id\":151645}\n",
+    "sha256": "d5513acbf141afd5d7ddf7f8f0e382d48f7eba14e087fd866a93db14106d2d1e",
+    "content": {"eos_token_id": 151645},
+    "expected_loader_metadata": {"transformers_version": "4.57.3"},
+    "sampling_parameters_unchanged": true,
+    "native_eos_only": true,
+    "model_and_tokenizer_bytes_unchanged": true,
+    "constructor_override_generation_config_used": false,
+    "effective_cloned_sampling_parameters_verified_before_generate": true
+  },
+  "profile": {
+    "additional_stop_strings": [], "additional_stop_token_ids": [], "batch_size": 32,
+    "dtype": "bfloat16", "frequency_penalty": 0.0, "generation_config": "vllm", "gpu_memory_utilization": 0.85,
+    "hardware": "B200", "ignore_eos": false, "max_model_len": 16384, "max_new_tokens": 8192,
+    "max_num_seqs": 128, "min_p": 0.0, "min_tokens": 0, "n": 8, "native_eos_token_id": 151645,
+    "per_record_seed": "(20261021+int(record_id[:8],16)) modulo2**31", "presence_penalty": 0.0,
+    "repetition_penalty": 1.0, "seed": 20261021,
+    "status": "frozen_sampling_proposal_requires_separate_gpu_admission", "temperature": 0.6,
+    "tensor_parallel_size": 1, "top_k": -1, "top_p": 0.95
+  },
+  "interface_sources": {
+    "llm": "https://github.com/vllm-project/vllm/blob/v0.12.0/vllm/entrypoints/llm.py",
+    "sampling": "https://github.com/vllm-project/vllm/blob/v0.12.0/vllm/sampling_params.py",
+    "model_config": "https://github.com/vllm-project/vllm/blob/v0.12.0/vllm/config/model.py",
+    "input_processor": "https://github.com/vllm-project/vllm/blob/v0.12.0/vllm/v1/engine/input_processor.py",
+    "hf_generation_config": "https://github.com/huggingface/transformers/blob/v4.57.3/src/transformers/generation/configuration_utils.py",
+    "outputs": "https://github.com/vllm-project/vllm/blob/v0.12.0/vllm/outputs.py",
+    "output_processor": "https://github.com/vllm-project/vllm/blob/v0.12.0/vllm/v1/engine/output_processor.py",
+    "detokenizer": "https://github.com/vllm-project/vllm/blob/v0.12.0/vllm/v1/engine/detokenizer.py"
+  },
+  "qualifications": [
+    "The preceding478 CPU checks prepared the unchanged32 source calibration prompts; they did not execute or admit vLLM inference.",
+    "A future exact current-job receipt must expressly authorize the first native original-model interface check and this same one32-request calibration batch. There is no additional preflight generation, extra GPU allocation or sequential fallback.",
+    "The model and tokenizer use the pinned Qwen/Qwen2.5-3B-Instruct original bytes. Each request supplies only verified native prompt token IDs and the existing per-record seed; labels and gold answers never enter the engine.",
+    "Prospectively authorized operational refinement: the frozen source profile's generation_config='vllm' denotes neutral sampling defaults. On pinned vLLM0.12, the literal selector still loads Qwen's HF EOS list [151645,151643] independently, and override_generation_config does not alter that EOS loader. The adapter instead writes the exact sealed EOS-only JSON above into a fresh private compute-run directory and passes that directory through the documented public generation_config API. Every explicit sampling parameter remains unchanged, and only the already-declared native EOS151645 terminates generation. No model/tokenizer files or library/global/internal state are patched.",
+    "Before the sole generate call, inspect actual try_get_generation_config and the input processor's cloned SamplingParams merge. The loaded fields must be eos_token_id151645 plus only the HF4.57.3 to_diff_dict metadata transformers_version=4.57.3, with no inherited sampling overrides or extra stops, and effective all_stop_token_ids={151645} for every request. Seal the runtime JSON bytes before initialization and verify them unchanged afterward. The first actual B200 run must establish this interface; neither this source refinement nor CPU fixtures claim native success.",
+    "Preserve all32 requests and all256 indexed outputs privately, including returned text, token IDs, opaque request IDs, finish/stop reasons, timing, memory and provenance. Any missing/duplicate/aborted/mismatched result fails the whole run without retry/refill/ranking.",
+    "Engine and worker stdout/stderr are redirected at OS-descriptor level into private run logs. Worker logs remain explicitly unsealed until terminal external closeout; immutable completion hashes cover the closed JSON evidence only. The public completion metadata contains aggregates/hashes, not raw source records or generated responses.",
+    "No source answers are graded here. A separate later CPU grading stage requires its own plan, review and admission; no training or automatic downstream work is authorized by this proposal."
+  ]
+}
