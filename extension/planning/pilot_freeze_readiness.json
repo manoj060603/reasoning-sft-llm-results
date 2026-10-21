@@ -105,7 +105,7 @@
       "requirement": "Consume the completed all-nine question-only audit and both exclusion components from CPU1224497, then freeze full native-cache policy, full-population topic fit and one original-base compatibility definition before scoring or selection."
     },
     {
-      "evidence_needed": "Original row/export/token/EOS hashes; no truncation, rewriting, dropped/refilled pairs or answer-based filters; R broad-population sampling proof; complete S selection rule and independent seeded coverage; exact per-arm exposure receipts.",
+      "evidence_needed": "Original row/export/token/EOS hashes; no truncation, rewriting, dropped/refilled pairs or answer-based filters; R broad-population sampling proof; complete S selection rule and independent seeded coverage; exact per-arm exposure receipts. Additionally require actual longest-eligible forward AFTER Adam initialization and WITH an already resident accumulated-gradient set; record both before-forward states. The current short-only diagnostic does not establish this joint peak.",
       "failure_rule": "A selected native serialization failure stops preparation. It does not authorize replacing the row, redrawing R, discarding long examples or manufacturing EOS.",
       "id": "F3",
       "requirement": "Freeze the exact15000-pair R/S draws and nested2048-pair pilot subsets, including cell quotas, ordering, overlap and selection tags."
@@ -326,6 +326,7 @@
     "topic_features": "Propose fresh question-only char3-5gram TF-IDF, maximum50000 features, SVD up to128 dimensions, normalization and MiniBatchKMeans64 with seed20261021/n_init3/batch1024 on the entire eligible population. Freeze exact libraries, fit order and small-rank guards. These are unsupervised coverage cells, not trusted semantic topic labels. Never reuse cluster64 as a learned topic for the old47614 unfitted rows."
   },
   "root_review_update": {
+    "additional_memory_gap": "The frozen GA2 longest case reaches its first Adam allocation after the two long microbatches. The proposed GA8 diagnostic is short-only. Neither proves a longest forward after FP32 Adam moments already exist together with resident accumulated gradients. A successful short diagnostic and old eight cases therefore cannot alone admit a32K pilot; a separately bound actual long-after-Adam/gradient shape test remains required.",
     "cpu_evidence_verified": true,
     "gpu_success_claimed": false,
     "metadata_only": true,

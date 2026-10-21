@@ -107,6 +107,36 @@ and [accounting](extension/report/development-seal-v2-20261021-1223943/accountin
 are public. The next step is actual Qwen/B200 memory and training integration
 admission. New model training and new benchmark results remain pending.
 
+The subsequent [native preparation audit](extension/report/native-smoke-preparation-20261021-1224497/complete.json)
+completed in **215 seconds with zero GPUs and all 341 checks passing**. It
+screened the full prepared pool against all nine benchmark question sets,
+including both AMC representations. One additional benchmark-overlapping row
+and the 67 reserved-source rows are excluded, leaving **82,961 eligible
+original pairs**. This establishes the declared lexical screen, with the
+semantic limitations described above. Four private diagnostic examples were
+replayed with the original tokenizer, including the longest complete eligible
+example at **31,776 tokens**. No training draw has been selected.
+
+The B200 numerical and memory diagnostic is admitted as job **1224577** and
+remains queued as of October 21 at 01:45 UTC. Its eight fresh cases test four
+objectives on short and long examples. A separate, prospective diagnostic is
+also required to verify a long forward while Adam state and accumulated
+gradients are already resident; short accumulation checks alone cannot prove
+that memory envelope. The pilot driver fails closed without that evidence.
+
+The source-grading preparation has encountered two preserved CPU failures.
+The [first attempt](extension/report/source-readiness-failed-20261021-1225252/accounting.json)
+ran 445 checks and exposed one fixture that tried to construct an official
+empty answer already quarantined by the source loader. A pinned fixture-only
+repair left the scorer and protocol unchanged. The
+[fresh retry](extension/report/source-readiness-v2-failed-20261021-1225360/accounting.json)
+then passed **464 of 465 checks**; a negative percentage comparison timed out
+under the fixed five-second, fresh-process grading limit. Its comparator
+imports and symbolic work need separate timing evidence before an operational
+repair is chosen. Both attempts stopped before calibration preparation and
+used zero GPUs. No new training, generated source validation, benchmark result
+or demonstrated improvement is claimed by these checks.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%

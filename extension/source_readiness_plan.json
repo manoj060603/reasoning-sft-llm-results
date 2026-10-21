@@ -1,0 +1,159 @@
+{
+  "automatic_downstream": false,
+  "base": {
+    "files": {
+      "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+      "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "model-00001-of-00002.safetensors": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+      "model-00002-of-00002.safetensors": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+      "model.safetensors.index.json": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "identity_receipt": {
+      "path": "deadline/artifacts/model_identity.json",
+      "sha256": "81af59dbb365b8559ad0d853dbda245aa4ac3ff0bedc03428e50fed65d7f7ae2"
+    },
+    "path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "calibration": {
+    "domain_counts": {
+      "arc_challenge": 16,
+      "math": 16
+    },
+    "gold_self_comparison": true,
+    "group_count": 32,
+    "maximum_prompt_tokens": 8192,
+    "record_count": 32,
+    "split": "calibration",
+    "timeout_seconds": 5,
+    "unsupported_gold_policy": "Fail complete preparation, preserve failure, do not drop/refill/replace or inspect model outcomes.",
+    "validate_gold_only_calibration": true
+  },
+  "cpu_only": true,
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "development_seal": {
+    "path": "extension/runs/development-seal-v2-20261021-1223943/complete.json",
+    "sha256": "354859dd44e2fe3aa7800ec991b60649f00a99ce4768d8075af42c007289987d"
+  },
+  "grader_source": {
+    "examples.py": {
+      "path": "eval/utils/examples.py",
+      "sha256": "07aacef0144e11d7c9210beef2f4d1a9bf935d440bbb394e65a588eef861ce7b"
+    },
+    "grader.py": {
+      "path": "eval/utils/grader.py",
+      "sha256": "43d858572b1dadda6fe3ec327db123bb5362fccd271ae58329c57f0c10521383"
+    },
+    "math_normalization.py": {
+      "path": "eval/utils/math_normalization.py",
+      "sha256": "9c0484a01b76bd4582bfe61c8ee55df375dbc09782f1b587fc21b21dd80e23a0"
+    },
+    "parser.py": {
+      "path": "eval/utils/parser.py",
+      "sha256": "8d04ceb93e9ef50d61157fd1c8826a5cbf8d7f64cda85459f1166e19d8784208"
+    },
+    "utils.py": {
+      "path": "eval/utils/utils.py",
+      "sha256": "4365ad38ea1c3c00926781684673e6dbc8f6e228d354a1f49f0d81cc0cfaff1e"
+    }
+  },
+  "model_inference": false,
+  "native_qa": {
+    "experiment_model_loaded": false,
+    "fixture_models_cpu_only": true,
+    "new_exact_modules": [
+      "test_source_evaluation.py",
+      "test_pilot_driver.py",
+      "test_source_readiness.py",
+      "test_source_readiness_submission.py"
+    ],
+    "prior_test_expected": 341,
+    "zero_failures_errors_skips": true
+  },
+  "outputs": {
+    "metadata": [
+      "unit_qa.json",
+      "complete.json"
+    ],
+    "private": [
+      "calibration_prompt_cache.json",
+      "calibration_gold_prechecks.json"
+    ],
+    "raw_labels_prompts_or_ids_public": false
+  },
+  "prepare_calibration_prompts": true,
+  "prior_cpu": {
+    "accounting.json": {
+      "path": "extension/report/native-smoke-preparation-20261021-1224497/accounting.json",
+      "sha256": "4d670f1fc86ab88c10da7270c94262d3bdd023061320d868b0a61852850aa1a2"
+    },
+    "benchmark_audit.json": {
+      "path": "extension/report/native-smoke-preparation-20261021-1224497/benchmark_audit.json",
+      "sha256": "2671a58d0abf9f52de5445649aecf9a389363f0fe54d8f05dbf5bca243c6fa6f"
+    },
+    "complete.json": {
+      "path": "extension/report/native-smoke-preparation-20261021-1224497/complete.json",
+      "sha256": "b7d8dc41b6fd90befc6a85130b3904245aea6dbd2cafc3209941d647a3ab8df5"
+    },
+    "job_ledger_snapshot.json": {
+      "path": "extension/report/native-smoke-preparation-20261021-1224497/job_ledger_snapshot.json",
+      "sha256": "9e8caec6473d6ec8cce39f581c4084ee9f866403a3e1fee404156a6dd4624d00"
+    },
+    "native_qa.json": {
+      "path": "extension/report/native-smoke-preparation-20261021-1224497/native_qa.json",
+      "sha256": "351368511546e4c8d7b897c6340c057e7595a2dde0afc5b26b655c62d57a3b6e"
+    },
+    "unit_qa.json": {
+      "path": "extension/report/native-smoke-preparation-20261021-1224497/unit_qa.json",
+      "sha256": "4d900d4ef8b5b706cfc89e2e3fc4017eab3338bb4efd4e7e83e15836efaa3497"
+    }
+  },
+  "qualification": "Source-specific strict extraction and percent handling do not alter historical/final benchmark grading. CPU fixture proof and calibration prompt preparation do not admit a training pilot or prove B200 integration/superiority.",
+  "reserve_seconds": 172800,
+  "runtime_versions": {
+    "accelerate": "1.12.0",
+    "antlr4-python3-runtime": "4.7.2",
+    "latex2sympy2": "1.9.1",
+    "regex": "2025.11.3",
+    "safetensors": "0.7.0",
+    "sympy": "1.14.0",
+    "torch": "2.9.0",
+    "transformers": "4.57.3",
+    "vllm": "0.12.0",
+    "word2number": "1.1"
+  },
+  "schema": "extension-source-readiness-plan-v1",
+  "source_generation_profile": {
+    "additional_stop_strings": [],
+    "additional_stop_token_ids": [],
+    "batch_size": 32,
+    "dtype": "bfloat16",
+    "frequency_penalty": 0.0,
+    "generation_config": "vllm",
+    "gpu_memory_utilization": 0.85,
+    "hardware": "B200",
+    "ignore_eos": false,
+    "max_model_len": 16384,
+    "max_new_tokens": 8192,
+    "max_num_seqs": 128,
+    "min_p": 0.0,
+    "min_tokens": 0,
+    "n": 8,
+    "native_eos_token_id": 151645,
+    "per_record_seed": "(20261021+int(record_id[:8],16)) modulo2**31",
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "seed": 20261021,
+    "status": "frozen_sampling_proposal_requires_separate_gpu_admission",
+    "temperature": 0.6,
+    "tensor_parallel_size": 1,
+    "top_k": -1,
+    "top_p": 0.95
+  },
+  "status": "prospective_cpu_only_no_model_generation",
+  "training": false,
+  "wall_time_seconds": 7200
+}

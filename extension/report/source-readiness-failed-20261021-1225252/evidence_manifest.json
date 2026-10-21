@@ -1,0 +1,35 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 1073,
+      "sha256": "62337f57dae3e86f070198f458cdfc00fd8f3e4f2dc828848dfa418d7a56666b"
+    },
+    "executed_test_source_evaluation.py": {
+      "bytes": 23399,
+      "sha256": "e1e2bcaa4b29dbe3abe57e8e55525caece7bbc900752df72d352a0ad04d0a33a"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 126896,
+      "sha256": "69ad79601473ced278fb8650db21cc9529f7cbec534216a794ca41fa943fc7c3"
+    },
+    "native.stderr.log": {
+      "bytes": 53516,
+      "sha256": "5579132a028c783779c1f714147792d4f1619ec69ab8eafab60f5c3ea33bae7c"
+    },
+    "native.stdout.log": {
+      "bytes": 1307,
+      "sha256": "e237ca97abfd46423e0eb1e4c07f393ab18688a45a0b10ae23f53bfa37ba00b5"
+    },
+    "source_install_receipt.json": {
+      "bytes": 13376,
+      "sha256": "516ab670d8a2241e4aaaa4fc466b9f62ea4fee6b78d1b612d836161ed0328209"
+    },
+    "unit_qa_failure.json": {
+      "bytes": 7509,
+      "sha256": "ab1f54696de38a7d890a30094cd66d9cb574b5a0db3b0589ab07a84b8482debd"
+    }
+  },
+  "native_run": "extension/runs/source-readiness-1225252",
+  "raw_records_included": false,
+  "schema": "extension-public-native-failure-manifest-v1"
+}

@@ -1,0 +1,29 @@
+{
+  "automatic_retry": false,
+  "calibration_prepared": false,
+  "command": [
+    "sacct",
+    "--clusters=owl",
+    "-j",
+    "1225360",
+    "--parsable2",
+    "--noheader",
+    "--format=JobIDRaw,JobName,State,ExitCode,ElapsedRaw,Start,End,AllocTRES"
+  ],
+  "complete": false,
+  "elapsed_seconds": 65,
+  "errors": 0,
+  "failure_kind": "cold_spawn_symbolic_percentage_negative_comparison_timeout_5_seconds",
+  "failures": 1,
+  "gpu_seconds": 0,
+  "job_id": "1225360",
+  "model_or_benchmark_outcomes_viewed": false,
+  "observed_at_utc": "2026-10-21T01:47:18.690594+00:00",
+  "schema": "extension-terminal-source-readiness-v2-failure-v1",
+  "skipped": 0,
+  "stderr": "",
+  "stdout": "1225360|sft-extension-source-readiness-v2|FAILED|1:0|65|2026-10-21T01:43:18|2026-10-21T01:44:23|billing=20,cpu=8,mem=64G,node=1\n1225360.batch|batch|FAILED|1:0|65|2026-10-21T01:43:18|2026-10-21T01:44:23|cpu=8,mem=64G,node=1\n1225360.extern|extern|COMPLETED|0:0|65|2026-10-21T01:43:18|2026-10-21T01:44:23|billing=20,cpu=8,mem=64G,node=1\n",
+  "terminal": true,
+  "tests_run": 465,
+  "timezone": "UTC"
+}

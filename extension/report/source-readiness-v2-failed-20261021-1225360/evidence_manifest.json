@@ -1,0 +1,35 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 1085,
+      "sha256": "1e725f1fd3bf40e29fff1004b36228695cf219f66ac50ed158b060f2c6bf7d2b"
+    },
+    "executed_test_source_evaluation.py": {
+      "bytes": 23759,
+      "sha256": "3b4a9689a0b44312b81e898ef6722f96acd8bb752093134034743d26255ce1af"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 158528,
+      "sha256": "8ddea4b35c0b8f06b77632378c418feb891b0281192c1b8386e83d2eec9c99bc"
+    },
+    "native.stderr.log": {
+      "bytes": 56677,
+      "sha256": "a2661df15b8bbab0f7115fefdc728a053c8667b1cfd1f4553f461a8a9c19991d"
+    },
+    "native.stdout.log": {
+      "bytes": 1309,
+      "sha256": "ef4536f4d614d07c16ab9804a9ded27b3872f2771bf67cd7637acf229eba56aa"
+    },
+    "source_install_receipt.json": {
+      "bytes": 22906,
+      "sha256": "fcfbdfcfade0a4889db061c02f8c0ccc91b953f6ad7e86965dff1eac65b55717"
+    },
+    "unit_qa_failure.json": {
+      "bytes": 21914,
+      "sha256": "8cdb5a256023a64623616f43c99f19f5deaf20cad8b540e1ae0edaf8b078d8b2"
+    }
+  },
+  "prior_71_source_inventory_unchanged": true,
+  "raw_labeled_records_included": false,
+  "schema": "extension-source-readiness-v2-failure-evidence-v1"
+}
