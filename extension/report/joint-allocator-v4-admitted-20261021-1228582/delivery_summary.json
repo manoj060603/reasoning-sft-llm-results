@@ -1,0 +1,32 @@
+{
+  "admitted": true,
+  "all_four_cases_completed_claimed": false,
+  "allocated_gpus": 1,
+  "allocator_policy": {
+    "automatic_retry": false,
+    "backend": "native",
+    "cache_disabled": false,
+    "configuration_sweep": false,
+    "effective_settings_api": "torch.cuda.memory._snapshot()['allocator_settings']",
+    "empty_cache_introduced": false,
+    "environment_variable": "PYTORCH_CUDA_ALLOC_CONF",
+    "expandable_segments": true,
+    "private_api_version_pinned": true,
+    "torch_version": "2.9.0",
+    "value": "backend:native,expandable_segments:True"
+  },
+  "automatic_downstream": false,
+  "automatic_retry": false,
+  "cpu_qa_job": "1228551",
+  "cpu_qa_tests": 97,
+  "job_id": "1228582",
+  "observed_state": "RUNNING",
+  "operational_plan_sha256": "c779c8e3ebbfb128fba0fd01547e8728a5b0c6d1c2ea333361e95b570a381a79",
+  "qualification": "One prospective allocator-only engineering replay after preserved headroom failure and native CPU97 proof. Actual effective private API, four-case memory fit, full pilot and accuracy remain unestablished until successful native completion. All scientific settings and strict headroom are unchanged.",
+  "requested_gpu_seconds": 7200,
+  "role": "joint_memory_allocator_20261021_v4",
+  "same_original_scientific_plan_and_private_prepared_cache": true,
+  "schema": "extension-joint-allocator-v4-admitted-delivery-v1",
+  "scientific_plan_sha256": "b926be22779d59af501afddd10e7129f105b68b723b9bc8386be0aa397ddfc24",
+  "source_files": 128
+}

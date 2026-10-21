@@ -1,0 +1,140 @@
+{
+  "schema": "extension-joint-allocator-v4-engineering-review-v1",
+  "status": "proposal_only_unexecuted_unadmitted",
+  "review_date_utc": "2026-10-21",
+  "scope": "One prospectively frozen allocator-only replay of the unchanged four-objective, seventeen-presentation GA8 joint diagnostic. This review is not a passed memory admission, a training experiment, or evidence of improved accuracy.",
+  "failed_parent": {
+    "job_id": "1228339",
+    "public_summary": "extension/report/joint-memory-admission-v3-failed-20261021-1228339/delivery_summary.json",
+    "state": "FAILED",
+    "exit_code": "1:0",
+    "actual_gpu_seconds": 197,
+    "first_mode": "sft",
+    "presentations_observed": 17,
+    "optimizer_updates_observed": 3,
+    "long_with_resident_adam_and_gradients_observed": true,
+    "out_of_memory_observed": false,
+    "strict_headroom_admission_passed": false,
+    "other_three_modes_started": false,
+    "allocated_peak_bytes": 149686226432,
+    "reserved_peak_bytes": 175040888832,
+    "sampled_nonallocator_peak_bytes": 918224896,
+    "total_device_bytes": 191495471104,
+    "conservative_peak_bytes": 175959113728,
+    "free_after_peak_bytes": 15536357376,
+    "required_headroom_bytes": 19149547111,
+    "headroom_deficit_bytes": 3613189735,
+    "difference_of_allocator_peaks_bytes": 25354662400,
+    "qualification": "The difference of separately observed whole-run reserved and allocated maxima is not a contemporaneous fragmentation measurement and is not wholly proven reclaimable. The failed attempt and all original request/accounting history must remain immutable."
+  },
+  "single_fixed_strategy": {
+    "environment_key": "PYTORCH_CUDA_ALLOC_CONF",
+    "exact_value": "backend:native,expandable_segments:True",
+    "set_before_any_torch_or_cuda_import": true,
+    "reject_presence_even_empty": [
+      "PYTORCH_NO_CUDA_MEMORY_CACHING",
+      "PYTORCH_ALLOC_CONF",
+      "PYTORCH_HIP_ALLOC_CONF"
+    ],
+    "conflicting_configuration_is_error": true,
+    "no_runtime_allocator_mutation_or_global_monkeypatch": true,
+    "no_other_allocator_knobs_or_parameter_sweep": true,
+    "no_empty_cache_insertion": true,
+    "experimental_feature": true,
+    "rationale": "The fixed diagnostic transitions between short and 31,776-token contexts while optimizer state and gradients become resident. A growing per-stream segment can reduce unusable allocation slivers. This is a plausible engineering response to the observed reservation overhead, not a guarantee of sufficient headroom."
+  },
+  "unchanged_scientific_and_admission_controls": {
+    "parent_module": "extension/joint_memory_admission_v3.py",
+    "parent_sha256": "be1d4aa53b5e01755bcddfc380cf132af3ea0dca90f32b5418d1ecd28325dafa",
+    "original_scientific_plan": "extension/joint_memory_admission_plan.json",
+    "original_scientific_plan_sha256": "b926be22779d59af501afddd10e7129f105b68b723b9bc8386be0aa397ddfc24",
+    "prepared_sha256": "d1bb1875a293c71f2a108df4b287b3bb2ab35b3168cd6505b5bd91a98fd66457",
+    "objective_order": ["sft", "ce_kl", "asft", "prior_anchored"],
+    "presentations_per_objective": 17,
+    "unique_source_witnesses": 4,
+    "accumulation": 8,
+    "update_microbatches": [8, 8, 1],
+    "optimizer_updates": 3,
+    "maximum_complete_tokens": 31776,
+    "student_and_reference_parameter_dtype": "float32",
+    "compute_dtype": "bfloat16",
+    "attention": "sdpa",
+    "chunk_tokens": 128,
+    "headroom_formula": "total - (max(whole_allocated_peak, whole_reserved_peak) + sampled_nonallocator_peak) >= max(16 * 2**30, ceil(0.1 * total))",
+    "all_existing_numerical_finite_reference_serialization_checkpoint_reload_and_shape_gates_retained": true,
+    "fresh_process_and_original_weights_per_objective": true,
+    "stop_on_first_genuine_failure_without_alternate_strategy": true,
+    "automatic_retry_or_downstream": false,
+    "prospective_maximum_job_gpu_seconds": 7200,
+    "minimum_deadline_reserve_seconds": 172800
+  },
+  "effective_configuration_and_measurement_proof": {
+    "public_backend_api": "torch.cuda.memory.get_allocator_backend()",
+    "required_backend": "native",
+    "pinned_private_snapshot_api": "torch.cuda.memory._snapshot()['allocator_settings']",
+    "required_snapshot_fields": {
+      "PYTORCH_CUDA_ALLOC_CONF": "backend:native,expandable_segments:True",
+      "expandable_segments": true
+    },
+    "private_api_qualification": "The snapshot configuration keys are supported by the pinned PyTorch v2.9.0 C++ implementation, not promised as a stable public API. Missing fields, unsupported platform fallback, unexpected backend, or ignored configuration must fail closed. No fallback or runtime setting mutation is authorized.",
+    "before_model_and_at_closeout_checks": true,
+    "pinned_python_type_compatibility": {
+      "torch_version": "PyTorch2.9 exposes TorchVersion, a str subclass. Accept a string instance, validate the exact2.9.0 base version, and retain a canonical plain string in JSON evidence.",
+      "memory_stats": "The pinned memory_stats implementation returns collections.OrderedDict. Accept its dictionary interface while requiring every retained statistic to be a nonnegative plain integer."
+    },
+    "phase_synchronized_aggregate_statistics": [
+      "allocated_bytes.all.current", "allocated_bytes.all.peak",
+      "reserved_bytes.all.current", "reserved_bytes.all.peak",
+      "active_bytes.all.current", "active_bytes.all.peak",
+      "requested_bytes.all.current", "requested_bytes.all.peak",
+      "inactive_split_bytes.all.current", "inactive_split_bytes.all.peak",
+      "num_alloc_retries", "num_ooms"
+    ],
+    "retain_existing_peak_capture_and_headroom_math": true,
+    "no_raw_snapshot_segments_addresses_frames_or_tensor_contents_in_public_metadata": true,
+    "inactive_split_qualification": "PyTorch v2.9.0 excludes expandable segments from inactive_split tracking. A lower inactive_split value under this strategy cannot independently prove reduced fragmentation.",
+    "comparison_qualification": "The parent did not establish the other three modes' joint memory envelope. All four new cases must actually complete and independently pass the original threshold before a four-mode claim is allowed. Allocator-only success still does not prove the separate unique-row actual-driver GA8 integration or any pilot/source/benchmark improvement."
+  },
+  "primary_sources": [
+    {
+      "url": "https://docs.pytorch.org/docs/2.9/notes/cuda.html#memory-management",
+      "evidence": "Separates tensor allocation from caching-allocator reservation; documents expandable_segments as experimental/defaultFalse for changing allocation sizes and segment growth."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.9.0/c10/cuda/CUDACachingAllocator.cpp",
+      "locations": ["Expandable Segments note around lines260-304", "inactive_split exclusion around lines2637-2642", "config_metadata around lines3695-3706"],
+      "evidence": "Uses expandable virtual segments with physical mapping, omits expandable segments from inactive_split tracking, and exposes actual allocator configuration metadata."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.9.0/c10/cuda/CUDAAllocatorConfig.h",
+      "locations": ["unsupported-platform fallback around lines28-35", "environment initialization around lines90-100"],
+      "evidence": "Pinned CUDA allocator reads PYTORCH_CUDA_ALLOC_CONF; unsupported expandable-segment builds returnFalse."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.9.0/torch/csrc/cuda/Module.cpp",
+      "locations": ["allocator_settings around lines838-877"],
+      "evidence": "Snapshot contains actual expandable_segments boolean and the parsed PYTORCH_CUDA_ALLOC_CONF string."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.9.0/torch/cuda/memory.py",
+      "locations": ["memory_stats OrderedDict return around lines287-301", "_snapshot around lines879-954", "get_allocator_backend around lines990-999"],
+      "evidence": "memory_stats returns an OrderedDict. The public backend accessor distinguishes native from cudaMallocAsync; the private snapshot returns the underlying allocator snapshot."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.9.0/torch/torch_version.py",
+      "evidence": "TorchVersion derives from str; the pinned package version attribute must not be rejected merely because its exact type differs from str."
+    },
+    {
+      "url": "https://docs.pytorch.org/docs/2.9/generated/torch.cuda.memory.memory_stats.html",
+      "evidence": "Defines allocated/reserved/active/inactive split statistics and allocation retry/OOM counters."
+    }
+  ],
+  "work_performed_for_this_artifact": {
+    "primary_documentation_and_source_read_only": true,
+    "public_failure_metadata_read_only": true,
+    "tests_executed": false,
+    "model_or_data_work_executed": false,
+    "gpu_or_slurm_actions": false,
+    "admission_or_performance_claim": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "historical_ledger_unchanged": true,
+  "installed_at_utc": "2026-10-21T05:38:23.884815+00:00",
+  "installed_file": "extension/operations/submit-joint-allocator-v4-20261021.py",
+  "installed_file_receipt": {
+    "bytes": 17277,
+    "sha256": "746b523de0ec480f0c6c53d61b87e3e09946ad2167df62c397a510008a2851c4"
+  },
+  "installed_on_arc": true,
+  "live_ledger_before_submission": {
+    "bytes": 586881,
+    "sha256": "0a73e09fec48dddb3bbeeb2b81cdff622be74206669ada0c6d464fd418ac08f0"
+  },
+  "local_commit": "2ddb24b26bc9d2297e20296f421540e60993bfca",
+  "metadata_only": true,
+  "protected_source_files": 128,
+  "protected_sources_unchanged": true,
+  "schema": "extension-joint-allocator-v4-gpu-bootstrap-source-install-v1"
+}

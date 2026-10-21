@@ -1,0 +1,30 @@
+{
+  "files": {
+    "admission.json": {
+      "bytes": 14704,
+      "sha256": "1ba40edcd34836d773b258e26340ba03691683f6c989e1872be14fd70988c6c2"
+    },
+    "delivery_summary.json": {
+      "bytes": 1488,
+      "sha256": "7b6cf1c237fe3e29c72bd136326428d5afd0f617ad1127cab4293ea072384be5"
+    },
+    "executed_gpu_admission.py": {
+      "bytes": 17277,
+      "sha256": "746b523de0ec480f0c6c53d61b87e3e09946ad2167df62c397a510008a2851c4"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 643153,
+      "sha256": "bab3dff51d0080bd9b889e847c7557207c48bdf8e2e08a014920092f848f6b50"
+    },
+    "scheduler_snapshot.json": {
+      "bytes": 841,
+      "sha256": "ddf3e5fad1f4492608a9c32927fdbea0e13729f39e5d5608b357f03f3d279b37"
+    },
+    "source_install_receipt.json": {
+      "bytes": 725,
+      "sha256": "358fb4b53d4c6c0724433bf10f0c5c61d985da6ae415efd6de14fdb686929ee4"
+    }
+  },
+  "raw_private_records_included": false,
+  "schema": "extension-joint-allocator-v4-admitted-evidence-v1"
+}

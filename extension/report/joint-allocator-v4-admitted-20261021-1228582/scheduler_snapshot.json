@@ -1,0 +1,19 @@
+{
+  "command": [
+    "sacct",
+    "--clusters=owl",
+    "-j",
+    "1228582",
+    "--parsable2",
+    "--noheader",
+    "--format=JobIDRaw,JobName,State,ExitCode,ElapsedRaw,Start,End,AllocTRES"
+  ],
+  "job_id": "1228582",
+  "observed_at_utc": "2026-10-21T05:40:40.490583+00:00",
+  "schema": "extension-admitted-job-scheduler-observation-v1",
+  "state": "RUNNING",
+  "stderr": "",
+  "stdout": "1228582|sft-extension-joint-memory-allocator-v4|RUNNING|0:0|51|2026-10-21T05:39:49|Unknown|billing=328,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n1228582.batch|batch|RUNNING|0:0|51|2026-10-21T05:39:49|Unknown|cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n1228582.extern|extern|RUNNING|0:0|51|2026-10-21T05:39:49|Unknown|billing=328,cpu=8,gres/gpu:b200=1,gres/gpu=1,mem=128G,node=1\n",
+  "terminal_accounting": false,
+  "timezone": "UTC"
+}

@@ -1,0 +1,26 @@
+{
+  "actual_gpu_or_memory_admission_established": false,
+  "alias_is_one_cpu_proof": true,
+  "automatic_downstream": false,
+  "complete": true,
+  "effective_expandable_segments_interface_established": false,
+  "elapsed_allocation_seconds": 52,
+  "experiment_model_or_tokenizer_loaded": false,
+  "gpu_seconds": 0,
+  "historical450_replayed": false,
+  "job_id": "1228551",
+  "new_allocator_gpu_admitted": false,
+  "preserved_parent_source_files": 122,
+  "previous_focused65_regression_checks_rerun": true,
+  "private_prepared_file_opened": false,
+  "qualification": "Native CPU fixtures verify the single fixed allocator configuration and unchanged science/headroom plumbing, not the actual private allocator API or memory fit. The failed197-second v3 attempt remains failed. All four actual joint cases still require a separately admitted bounded GPU run. Future training needs its own matching allocator and real-driver proofs.",
+  "schema": "extension-joint-allocator-v4-qa-delivery-v1",
+  "scope": {
+    "initializer_regression": 16,
+    "joint_regression": 25,
+    "new_allocator": 32,
+    "uuid_regression": 24
+  },
+  "source_files": 128,
+  "tests_run": 97
+}

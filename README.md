@@ -291,6 +291,22 @@ frozen. There is no automatic retry or downstream pilot. The distinct
 actual-driver proof using 17 unique short examples, full training-data
 preparation and source-generation calibration are also still required.
 
+A separately frozen [allocator-only engineering proposal](extension/joint_allocator_v4_plan.json)
+then [passed all 97 native CPU checks](extension/report/joint-allocator-v4-qa-20261021-1228551/delivery_summary.json)
+in **52 seconds, with zero GPUs**. The scope reran 65 focused regression
+checks and added 32 allocator fixtures; it did not rerun the older 450-test
+suite or establish actual GPU memory fit. The one proposed change enables
+experimental expandable segments in the existing native PyTorch allocator.
+Context, precision, objectives, chunks, schedules and headroom stay fixed.
+The [review](extension/planning/joint_allocator_v4_review.json) distinguishes
+reserved-memory overhead from demonstrated fragmentation. A fresh bounded
+GPU run must verify the effective setting and all four cases; any success
+applies only to that matching allocator policy and diagnostic workload.
+The [single bounded replay, job 1228582](extension/report/joint-allocator-v4-admitted-20261021-1228582/delivery_summary.json),
+has been admitted on one B200 for up to two hours. Its running-state snapshot
+does not establish memory admission or accuracy improvement. All 24 ledger
+entries and original allocation requests remain preserved.
+
 ## Additional recovery follow-up: closed without promotion
 
 A separate follow-up, authorized October 20 after delivery, tested **12.5%
