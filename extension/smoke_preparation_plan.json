@@ -1,0 +1,113 @@
+{
+  "automatic_downstream": false,
+  "base": {
+    "files": {
+      "config.json": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+      "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "model-00001-of-00002.safetensors": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+      "model-00002-of-00002.safetensors": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d",
+      "model.safetensors.index.json": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "identity_receipt": {
+      "path": "deadline/artifacts/model_identity.json",
+      "sha256": "81af59dbb365b8559ad0d853dbda245aa4ac3ff0bedc03428e50fed65d7f7ae2"
+    },
+    "path": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1"
+  },
+  "choose_smoke_witnesses": true,
+  "cpu_only": true,
+  "criterion": {
+    "jaccard_denominator": 5,
+    "jaccard_numerator": 4,
+    "normalization": "NFKC casefold whitespace; preserve numbers/operators",
+    "search": "exact inverted index",
+    "shingle_tokens": 3,
+    "short_question_policy": "exact normalized equality when fewer than3tokens",
+    "tokenization": "word-or-single-nonwhitespace-character"
+  },
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "development_seal": {
+    "path": "extension/runs/development-seal-v2-20261021-1223943/complete.json",
+    "sha256": "354859dd44e2fe3aa7800ec991b60649f00a99ce4768d8075af42c007289987d"
+  },
+  "feature_meta": {
+    "path": "deadline/artifacts/features.json.meta.json",
+    "sha256": "d69155338e79e63690f3b9fd615a1026489046dbad239e96dd8cf14b91b51afc"
+  },
+  "features": {
+    "path": "deadline/artifacts/features.json",
+    "sha256": "c6ef548173b6b4e93a62fd5c43783ad49a6e3dc9b9437b3b31941ffef8c2b55f"
+  },
+  "labeled_plan": {
+    "path": "extension/labeled_plan.json",
+    "sha256": "d44572f18e3de76dea44b243a7427b8cac64cf5d87a294ae005b544412f28d80"
+  },
+  "model_inference": false,
+  "native_plan": {
+    "path": "extension/native_model_admission_plan.json",
+    "sha256": "94b6d9bc5e46acc0d5a9e3f409d88544f7e091873c2150af705b92c6313b758e"
+  },
+  "native_qa": {
+    "experiment_model_loaded": false,
+    "fixture_models_cpu_only": true,
+    "new_exact_modules": [
+      "test_preservation_data.py",
+      "test_native_model_admission.py",
+      "test_smoke_preparation.py",
+      "test_smoke_submission.py"
+    ],
+    "prior_test_expected": 230,
+    "zero_failures_errors_skips": true
+  },
+  "original_source_audit": {
+    "path": "extension/runs/feasibility-20261020-1222225/complete.json",
+    "sha256": "8cee12034e7c9f9f6f3334cdac2d3edf5504658ef8000c664761a16887440505"
+  },
+  "outputs": {
+    "metadata": [
+      "benchmark_audit.json",
+      "unit_qa.json",
+      "native_qa.json",
+      "complete.json"
+    ],
+    "private": [
+      "benchmark_pool_ids.json",
+      "benchmark_pool_matches.json",
+      "exclusion_receipt.json",
+      "preparation.json",
+      "prepared.json"
+    ],
+    "raw_rows_or_witness_cache_public": false
+  },
+  "pool": {
+    "expected_rows": 83029,
+    "path": "deadline/artifacts/pool.json",
+    "sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0"
+  },
+  "qualification": "Full lexical screening is exact for the declared criterion, not a semantic decontamination guarantee. CPU tokenization is not actual-model memory or numerical admission.",
+  "reserve_seconds": 172800,
+  "schema": "extension-native-smoke-preparation-plan-v1",
+  "status": "prospective_cpu_preparation_and_native_qa",
+  "terminal_probe": {
+    "assistant": "native-smoke-termination-sentinel-20261021",
+    "system": "Native serialization diagnostic.",
+    "user": "Return the fixed sentinel."
+  },
+  "training": false,
+  "wall_time_seconds": 7200,
+  "witness_selection": {
+    "cached_counts_must_match_actual_native_serialization": true,
+    "context_role": "diagnostic",
+    "cutoffs": {
+      "long": 32768,
+      "short": 512
+    },
+    "long": "Maximum cached total_tokens among the same eligible population; ascending canonical ID breaks ties. The ID must be distinct from short rows.",
+    "short": "From the eligible full pool after BOTH exclusion components, sort by (cached total_tokens, canonical ID); take the first three rows having distinct cached response_tokens, each total_tokens <=512. No replacement after actual serialization failure.",
+    "terminal_suffix": "Derive exact terminal text and EOS-plus-tail tokens from the pinned native chat template on CPU using a fixed synthetic sentinel; verify all four unchanged original rows. Never append or repair EOS."
+  }
+}

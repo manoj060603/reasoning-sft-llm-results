@@ -1,0 +1,96 @@
+{
+  "automatic_downstream": false,
+  "base_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+  "case_order": [
+    "sft-short",
+    "sft-long",
+    "ce_kl-short",
+    "ce_kl-long",
+    "asft-short",
+    "asft-long",
+    "prior_anchored-short",
+    "prior_anchored-long"
+  ],
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "diagnostic_only": true,
+  "failure_rules": [
+    "A failed case or missing native evidence stops the stage without retry or downstream admission.",
+    "Do not change backend, context, reference precision, optimizer, chunk size or thresholds after outcomes to fit.",
+    "Preserve failed allocation and all successful preceding case receipts."
+  ],
+  "objectives": [
+    "sft",
+    "ce_kl",
+    "asft",
+    "prior_anchored"
+  ],
+  "publication": {
+    "no_model_or_dataset_upload": true,
+    "public_metadata_and_source_only": true,
+    "raw_witnesses_private": true
+  },
+  "qualifications": [
+    "This is a numerical/memory integration diagnostic, not a training recipe, correctness evaluation or evidence of improvement.",
+    "Success admits only the exact tested implementation and source/shape envelope; further or longer workloads need an explicit admission."
+  ],
+  "resources": {
+    "gpu_type": "B200",
+    "gpus": 1,
+    "host_cpus": 8,
+    "host_ram_gib": 128,
+    "maximum_initial_concurrent_gpu_allocations": 2,
+    "reserve_seconds": 172800,
+    "scratch_free_gib": 160,
+    "wall_time_seconds": 7200
+  },
+  "schema": "extension-native-model-admission-plan-v1",
+  "settings": {
+    "accumulation": 2,
+    "attention": "sdpa",
+    "beta": 0.05,
+    "bf16": true,
+    "checkpoint_chunks": true,
+    "checkpoint_use_reentrant": false,
+    "chunk_tokens": 128,
+    "clip_norm": 1.0,
+    "dropout_from_original_config_must_be_zero": true,
+    "gradient_checkpointing": true,
+    "learning_rate": 2e-06,
+    "optimizer": "adamw_torch",
+    "reference_dtype": "float32",
+    "resume": false,
+    "scheduler": "constant",
+    "seed": 20261021,
+    "student_dtype": "float32",
+    "weight_decay": 0.01
+  },
+  "status": "prospective_diagnostic_only",
+  "tolerances": {
+    "ce_abs": 1e-05,
+    "headroom_fraction": 0.1,
+    "headroom_min_bytes": 17179869184,
+    "kl_abs": 1e-05,
+    "logit_max_abs": 0.001,
+    "reload_logit_max_abs": 0.001
+  },
+  "training_pilot": false,
+  "workload": {
+    "actual_model_generation_or_benchmark_evaluation": false,
+    "fresh_subprocess_and_original_initialization_for_each_case": true,
+    "long": {
+      "examples": 1,
+      "optimizer_updates": 1,
+      "presentations": 2,
+      "repeat_is_disposable_diagnostic_only": true,
+      "selection": "maximum eligible cached total tokens after both exclusions, tie ascending canonical ID"
+    },
+    "preparation_and_native_qa_required_before_any_gpu_request": true,
+    "short": {
+      "distinct_active_lengths": true,
+      "examples": 3,
+      "maximum_tokens": 512,
+      "optimizer_updates": 2,
+      "presentations": 3
+    }
+  }
+}
