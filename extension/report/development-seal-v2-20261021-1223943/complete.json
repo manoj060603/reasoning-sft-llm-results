@@ -1,0 +1,1775 @@
+{
+  "actions": {
+    "automatic_downstream": false,
+    "generation": false,
+    "splits_chosen": true,
+    "training": false
+  },
+  "allocation": {
+    "cross_domain_unused_rows": 0,
+    "initial_eligible_population": {
+      "arc_challenge": {
+        "groups": 1118,
+        "rows": 1119,
+        "stratum_rows": {
+          "arc_challenge:[\"<=15\",4]": 456,
+          "arc_challenge:[\"<=30\",4]": 424,
+          "arc_challenge:[\"<=60\",3]": 1,
+          "arc_challenge:[\"<=60\",4]": 218,
+          "arc_challenge:[\"<=60\",5]": 1,
+          "arc_challenge:[\">60\",4]": 19
+        }
+      },
+      "math": {
+        "groups": 5959,
+        "rows": 6013,
+        "stratum_rows": {
+          "math:[\"algebra\",\"Level 1\"]": 137,
+          "math:[\"algebra\",\"Level 2\"]": 255,
+          "math:[\"algebra\",\"Level 3\"]": 302,
+          "math:[\"algebra\",\"Level 4\"]": 303,
+          "math:[\"algebra\",\"Level 5\"]": 343,
+          "math:[\"counting_and_probability\",\"Level 1\"]": 36,
+          "math:[\"counting_and_probability\",\"Level 2\"]": 101,
+          "math:[\"counting_and_probability\",\"Level 3\"]": 119,
+          "math:[\"counting_and_probability\",\"Level 4\"]": 131,
+          "math:[\"counting_and_probability\",\"Level 5\"]": 234,
+          "math:[\"geometry\",\"Level 1\"]": 32,
+          "math:[\"geometry\",\"Level 2\"]": 83,
+          "math:[\"geometry\",\"Level 3\"]": 113,
+          "math:[\"geometry\",\"Level 4\"]": 131,
+          "math:[\"geometry\",\"Level 5\"]": 361,
+          "math:[\"geometry\",\"unknown:Level ?\"]": 1,
+          "math:[\"intermediate_algebra\",\"Level 1\"]": 40,
+          "math:[\"intermediate_algebra\",\"Level 2\"]": 138,
+          "math:[\"intermediate_algebra\",\"Level 3\"]": 225,
+          "math:[\"intermediate_algebra\",\"Level 4\"]": 271,
+          "math:[\"intermediate_algebra\",\"Level 5\"]": 350,
+          "math:[\"number_theory\",\"Level 1\"]": 34,
+          "math:[\"number_theory\",\"Level 2\"]": 111,
+          "math:[\"number_theory\",\"Level 3\"]": 143,
+          "math:[\"number_theory\",\"Level 4\"]": 149,
+          "math:[\"number_theory\",\"Level 5\"]": 244,
+          "math:[\"prealgebra\",\"Level 1\"]": 108,
+          "math:[\"prealgebra\",\"Level 2\"]": 260,
+          "math:[\"prealgebra\",\"Level 3\"]": 205,
+          "math:[\"prealgebra\",\"Level 4\"]": 201,
+          "math:[\"prealgebra\",\"Level 5\"]": 208,
+          "math:[\"precalculus\",\"Level 1\"]": 45,
+          "math:[\"precalculus\",\"Level 2\"]": 127,
+          "math:[\"precalculus\",\"Level 3\"]": 131,
+          "math:[\"precalculus\",\"Level 4\"]": 140,
+          "math:[\"precalculus\",\"Level 5\"]": 150,
+          "mixed": 51
+        }
+      }
+    },
+    "splits": {
+      "calibration": {
+        "arc_challenge": {
+          "achieved_rows": 16,
+          "desired_stratum_rows": {
+            "arc_challenge:[\"<=15\",4]": {
+              "denominator": 1119,
+              "numerator": 7296
+            },
+            "arc_challenge:[\"<=30\",4]": {
+              "denominator": 1119,
+              "numerator": 6784
+            },
+            "arc_challenge:[\"<=60\",3]": {
+              "denominator": 1119,
+              "numerator": 16
+            },
+            "arc_challenge:[\"<=60\",4]": {
+              "denominator": 1119,
+              "numerator": 3488
+            },
+            "arc_challenge:[\"<=60\",5]": {
+              "denominator": 1119,
+              "numerator": 16
+            },
+            "arc_challenge:[\">60\",4]": {
+              "denominator": 1119,
+              "numerator": 304
+            }
+          },
+          "selected_groups": 16,
+          "stratum_rows": {
+            "arc_challenge:[\"<=15\",4]": 7,
+            "arc_challenge:[\"<=30\",4]": 6,
+            "arc_challenge:[\"<=60\",4]": 3
+          },
+          "target_rows": 16
+        },
+        "math": {
+          "achieved_rows": 16,
+          "desired_stratum_rows": {
+            "math:[\"algebra\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 2192
+            },
+            "math:[\"algebra\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 4080
+            },
+            "math:[\"algebra\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 4832
+            },
+            "math:[\"algebra\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 4848
+            },
+            "math:[\"algebra\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 5488
+            },
+            "math:[\"counting_and_probability\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 576
+            },
+            "math:[\"counting_and_probability\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 1616
+            },
+            "math:[\"counting_and_probability\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 1904
+            },
+            "math:[\"counting_and_probability\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 2096
+            },
+            "math:[\"counting_and_probability\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 3744
+            },
+            "math:[\"geometry\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 512
+            },
+            "math:[\"geometry\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 1328
+            },
+            "math:[\"geometry\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 1808
+            },
+            "math:[\"geometry\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 2096
+            },
+            "math:[\"geometry\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 5776
+            },
+            "math:[\"geometry\",\"unknown:Level ?\"]": {
+              "denominator": 6013,
+              "numerator": 16
+            },
+            "math:[\"intermediate_algebra\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 640
+            },
+            "math:[\"intermediate_algebra\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 2208
+            },
+            "math:[\"intermediate_algebra\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 3600
+            },
+            "math:[\"intermediate_algebra\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 4336
+            },
+            "math:[\"intermediate_algebra\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 5600
+            },
+            "math:[\"number_theory\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 544
+            },
+            "math:[\"number_theory\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 1776
+            },
+            "math:[\"number_theory\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 2288
+            },
+            "math:[\"number_theory\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 2384
+            },
+            "math:[\"number_theory\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 3904
+            },
+            "math:[\"prealgebra\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 1728
+            },
+            "math:[\"prealgebra\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 4160
+            },
+            "math:[\"prealgebra\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 3280
+            },
+            "math:[\"prealgebra\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 3216
+            },
+            "math:[\"prealgebra\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 3328
+            },
+            "math:[\"precalculus\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 720
+            },
+            "math:[\"precalculus\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 2032
+            },
+            "math:[\"precalculus\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 2096
+            },
+            "math:[\"precalculus\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 2240
+            },
+            "math:[\"precalculus\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 2400
+            },
+            "mixed": {
+              "denominator": 6013,
+              "numerator": 816
+            }
+          },
+          "selected_groups": 16,
+          "stratum_rows": {
+            "math:[\"algebra\",\"Level 2\"]": 1,
+            "math:[\"algebra\",\"Level 3\"]": 1,
+            "math:[\"algebra\",\"Level 4\"]": 1,
+            "math:[\"algebra\",\"Level 5\"]": 1,
+            "math:[\"counting_and_probability\",\"Level 5\"]": 1,
+            "math:[\"geometry\",\"Level 5\"]": 1,
+            "math:[\"intermediate_algebra\",\"Level 3\"]": 1,
+            "math:[\"intermediate_algebra\",\"Level 4\"]": 1,
+            "math:[\"intermediate_algebra\",\"Level 5\"]": 1,
+            "math:[\"number_theory\",\"Level 4\"]": 1,
+            "math:[\"number_theory\",\"Level 5\"]": 1,
+            "math:[\"prealgebra\",\"Level 2\"]": 1,
+            "math:[\"prealgebra\",\"Level 3\"]": 1,
+            "math:[\"prealgebra\",\"Level 4\"]": 1,
+            "math:[\"prealgebra\",\"Level 5\"]": 1,
+            "math:[\"precalculus\",\"Level 5\"]": 1
+          },
+          "target_rows": 16
+        }
+      },
+      "confirmation": {
+        "arc_challenge": {
+          "achieved_rows": 512,
+          "desired_stratum_rows": {
+            "arc_challenge:[\"<=15\",4]": {
+              "denominator": 1119,
+              "numerator": 233472
+            },
+            "arc_challenge:[\"<=30\",4]": {
+              "denominator": 1119,
+              "numerator": 217088
+            },
+            "arc_challenge:[\"<=60\",3]": {
+              "denominator": 1119,
+              "numerator": 512
+            },
+            "arc_challenge:[\"<=60\",4]": {
+              "denominator": 1119,
+              "numerator": 111616
+            },
+            "arc_challenge:[\"<=60\",5]": {
+              "denominator": 1119,
+              "numerator": 512
+            },
+            "arc_challenge:[\">60\",4]": {
+              "denominator": 1119,
+              "numerator": 9728
+            }
+          },
+          "selected_groups": 511,
+          "stratum_rows": {
+            "arc_challenge:[\"<=15\",4]": 209,
+            "arc_challenge:[\"<=30\",4]": 194,
+            "arc_challenge:[\"<=60\",4]": 100,
+            "arc_challenge:[\">60\",4]": 9
+          },
+          "target_rows": 512
+        },
+        "math": {
+          "achieved_rows": 1024,
+          "desired_stratum_rows": {
+            "math:[\"algebra\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 140288
+            },
+            "math:[\"algebra\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 261120
+            },
+            "math:[\"algebra\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 309248
+            },
+            "math:[\"algebra\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 310272
+            },
+            "math:[\"algebra\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 351232
+            },
+            "math:[\"counting_and_probability\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 36864
+            },
+            "math:[\"counting_and_probability\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 103424
+            },
+            "math:[\"counting_and_probability\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 121856
+            },
+            "math:[\"counting_and_probability\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 134144
+            },
+            "math:[\"counting_and_probability\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 239616
+            },
+            "math:[\"geometry\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 32768
+            },
+            "math:[\"geometry\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 84992
+            },
+            "math:[\"geometry\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 115712
+            },
+            "math:[\"geometry\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 134144
+            },
+            "math:[\"geometry\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 369664
+            },
+            "math:[\"geometry\",\"unknown:Level ?\"]": {
+              "denominator": 6013,
+              "numerator": 1024
+            },
+            "math:[\"intermediate_algebra\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 40960
+            },
+            "math:[\"intermediate_algebra\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 141312
+            },
+            "math:[\"intermediate_algebra\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 230400
+            },
+            "math:[\"intermediate_algebra\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 277504
+            },
+            "math:[\"intermediate_algebra\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 358400
+            },
+            "math:[\"number_theory\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 34816
+            },
+            "math:[\"number_theory\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 113664
+            },
+            "math:[\"number_theory\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 146432
+            },
+            "math:[\"number_theory\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 152576
+            },
+            "math:[\"number_theory\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 249856
+            },
+            "math:[\"prealgebra\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 110592
+            },
+            "math:[\"prealgebra\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 266240
+            },
+            "math:[\"prealgebra\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 209920
+            },
+            "math:[\"prealgebra\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 205824
+            },
+            "math:[\"prealgebra\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 212992
+            },
+            "math:[\"precalculus\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 46080
+            },
+            "math:[\"precalculus\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 130048
+            },
+            "math:[\"precalculus\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 134144
+            },
+            "math:[\"precalculus\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 143360
+            },
+            "math:[\"precalculus\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 153600
+            },
+            "mixed": {
+              "denominator": 6013,
+              "numerator": 52224
+            }
+          },
+          "selected_groups": 1016,
+          "stratum_rows": {
+            "math:[\"algebra\",\"Level 1\"]": 23,
+            "math:[\"algebra\",\"Level 2\"]": 43,
+            "math:[\"algebra\",\"Level 3\"]": 51,
+            "math:[\"algebra\",\"Level 4\"]": 52,
+            "math:[\"algebra\",\"Level 5\"]": 58,
+            "math:[\"counting_and_probability\",\"Level 1\"]": 6,
+            "math:[\"counting_and_probability\",\"Level 2\"]": 17,
+            "math:[\"counting_and_probability\",\"Level 3\"]": 20,
+            "math:[\"counting_and_probability\",\"Level 4\"]": 22,
+            "math:[\"counting_and_probability\",\"Level 5\"]": 40,
+            "math:[\"geometry\",\"Level 1\"]": 5,
+            "math:[\"geometry\",\"Level 2\"]": 14,
+            "math:[\"geometry\",\"Level 3\"]": 20,
+            "math:[\"geometry\",\"Level 4\"]": 22,
+            "math:[\"geometry\",\"Level 5\"]": 62,
+            "math:[\"intermediate_algebra\",\"Level 1\"]": 7,
+            "math:[\"intermediate_algebra\",\"Level 2\"]": 24,
+            "math:[\"intermediate_algebra\",\"Level 3\"]": 38,
+            "math:[\"intermediate_algebra\",\"Level 4\"]": 46,
+            "math:[\"intermediate_algebra\",\"Level 5\"]": 60,
+            "math:[\"number_theory\",\"Level 1\"]": 6,
+            "math:[\"number_theory\",\"Level 2\"]": 19,
+            "math:[\"number_theory\",\"Level 3\"]": 24,
+            "math:[\"number_theory\",\"Level 4\"]": 25,
+            "math:[\"number_theory\",\"Level 5\"]": 42,
+            "math:[\"prealgebra\",\"Level 1\"]": 18,
+            "math:[\"prealgebra\",\"Level 2\"]": 44,
+            "math:[\"prealgebra\",\"Level 3\"]": 35,
+            "math:[\"prealgebra\",\"Level 4\"]": 34,
+            "math:[\"prealgebra\",\"Level 5\"]": 35,
+            "math:[\"precalculus\",\"Level 1\"]": 8,
+            "math:[\"precalculus\",\"Level 2\"]": 22,
+            "math:[\"precalculus\",\"Level 3\"]": 22,
+            "math:[\"precalculus\",\"Level 4\"]": 24,
+            "math:[\"precalculus\",\"Level 5\"]": 26,
+            "mixed": 10
+          },
+          "target_rows": 1024
+        }
+      },
+      "development": {
+        "arc_challenge": {
+          "achieved_rows": 256,
+          "desired_stratum_rows": {
+            "arc_challenge:[\"<=15\",4]": {
+              "denominator": 1119,
+              "numerator": 116736
+            },
+            "arc_challenge:[\"<=30\",4]": {
+              "denominator": 1119,
+              "numerator": 108544
+            },
+            "arc_challenge:[\"<=60\",3]": {
+              "denominator": 1119,
+              "numerator": 256
+            },
+            "arc_challenge:[\"<=60\",4]": {
+              "denominator": 1119,
+              "numerator": 55808
+            },
+            "arc_challenge:[\"<=60\",5]": {
+              "denominator": 1119,
+              "numerator": 256
+            },
+            "arc_challenge:[\">60\",4]": {
+              "denominator": 1119,
+              "numerator": 4864
+            }
+          },
+          "selected_groups": 256,
+          "stratum_rows": {
+            "arc_challenge:[\"<=15\",4]": 104,
+            "arc_challenge:[\"<=30\",4]": 97,
+            "arc_challenge:[\"<=60\",4]": 50,
+            "arc_challenge:[\">60\",4]": 5
+          },
+          "target_rows": 256
+        },
+        "math": {
+          "achieved_rows": 512,
+          "desired_stratum_rows": {
+            "math:[\"algebra\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 70144
+            },
+            "math:[\"algebra\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 130560
+            },
+            "math:[\"algebra\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 154624
+            },
+            "math:[\"algebra\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 155136
+            },
+            "math:[\"algebra\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 175616
+            },
+            "math:[\"counting_and_probability\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 18432
+            },
+            "math:[\"counting_and_probability\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 51712
+            },
+            "math:[\"counting_and_probability\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 60928
+            },
+            "math:[\"counting_and_probability\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 67072
+            },
+            "math:[\"counting_and_probability\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 119808
+            },
+            "math:[\"geometry\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 16384
+            },
+            "math:[\"geometry\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 42496
+            },
+            "math:[\"geometry\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 57856
+            },
+            "math:[\"geometry\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 67072
+            },
+            "math:[\"geometry\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 184832
+            },
+            "math:[\"geometry\",\"unknown:Level ?\"]": {
+              "denominator": 6013,
+              "numerator": 512
+            },
+            "math:[\"intermediate_algebra\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 20480
+            },
+            "math:[\"intermediate_algebra\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 70656
+            },
+            "math:[\"intermediate_algebra\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 115200
+            },
+            "math:[\"intermediate_algebra\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 138752
+            },
+            "math:[\"intermediate_algebra\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 179200
+            },
+            "math:[\"number_theory\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 17408
+            },
+            "math:[\"number_theory\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 56832
+            },
+            "math:[\"number_theory\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 73216
+            },
+            "math:[\"number_theory\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 76288
+            },
+            "math:[\"number_theory\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 124928
+            },
+            "math:[\"prealgebra\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 55296
+            },
+            "math:[\"prealgebra\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 133120
+            },
+            "math:[\"prealgebra\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 104960
+            },
+            "math:[\"prealgebra\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 102912
+            },
+            "math:[\"prealgebra\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 106496
+            },
+            "math:[\"precalculus\",\"Level 1\"]": {
+              "denominator": 6013,
+              "numerator": 23040
+            },
+            "math:[\"precalculus\",\"Level 2\"]": {
+              "denominator": 6013,
+              "numerator": 65024
+            },
+            "math:[\"precalculus\",\"Level 3\"]": {
+              "denominator": 6013,
+              "numerator": 67072
+            },
+            "math:[\"precalculus\",\"Level 4\"]": {
+              "denominator": 6013,
+              "numerator": 71680
+            },
+            "math:[\"precalculus\",\"Level 5\"]": {
+              "denominator": 6013,
+              "numerator": 76800
+            },
+            "mixed": {
+              "denominator": 6013,
+              "numerator": 26112
+            }
+          },
+          "selected_groups": 510,
+          "stratum_rows": {
+            "math:[\"algebra\",\"Level 1\"]": 12,
+            "math:[\"algebra\",\"Level 2\"]": 22,
+            "math:[\"algebra\",\"Level 3\"]": 26,
+            "math:[\"algebra\",\"Level 4\"]": 26,
+            "math:[\"algebra\",\"Level 5\"]": 29,
+            "math:[\"counting_and_probability\",\"Level 1\"]": 3,
+            "math:[\"counting_and_probability\",\"Level 2\"]": 8,
+            "math:[\"counting_and_probability\",\"Level 3\"]": 10,
+            "math:[\"counting_and_probability\",\"Level 4\"]": 11,
+            "math:[\"counting_and_probability\",\"Level 5\"]": 20,
+            "math:[\"geometry\",\"Level 1\"]": 3,
+            "math:[\"geometry\",\"Level 2\"]": 7,
+            "math:[\"geometry\",\"Level 3\"]": 10,
+            "math:[\"geometry\",\"Level 4\"]": 11,
+            "math:[\"geometry\",\"Level 5\"]": 31,
+            "math:[\"intermediate_algebra\",\"Level 1\"]": 3,
+            "math:[\"intermediate_algebra\",\"Level 2\"]": 12,
+            "math:[\"intermediate_algebra\",\"Level 3\"]": 19,
+            "math:[\"intermediate_algebra\",\"Level 4\"]": 23,
+            "math:[\"intermediate_algebra\",\"Level 5\"]": 30,
+            "math:[\"number_theory\",\"Level 1\"]": 3,
+            "math:[\"number_theory\",\"Level 2\"]": 9,
+            "math:[\"number_theory\",\"Level 3\"]": 12,
+            "math:[\"number_theory\",\"Level 4\"]": 13,
+            "math:[\"number_theory\",\"Level 5\"]": 21,
+            "math:[\"prealgebra\",\"Level 1\"]": 9,
+            "math:[\"prealgebra\",\"Level 2\"]": 22,
+            "math:[\"prealgebra\",\"Level 3\"]": 17,
+            "math:[\"prealgebra\",\"Level 4\"]": 17,
+            "math:[\"prealgebra\",\"Level 5\"]": 18,
+            "math:[\"precalculus\",\"Level 1\"]": 4,
+            "math:[\"precalculus\",\"Level 2\"]": 11,
+            "math:[\"precalculus\",\"Level 3\"]": 11,
+            "math:[\"precalculus\",\"Level 4\"]": 12,
+            "math:[\"precalculus\",\"Level 5\"]": 13,
+            "mixed": 4
+          },
+          "target_rows": 512
+        }
+      }
+    },
+    "unused_groups": 4752,
+    "unused_rows": 4796
+  },
+  "complete": true,
+  "compute_end": {
+    "allocated_cpus": 8,
+    "allocated_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "checked_at_utc": "2026-10-21T00:30:23.061064+00:00",
+    "cuda_visible_devices": "",
+    "gpu_requested_or_allocated": false,
+    "hostname": "owl060",
+    "job_id": "1223943",
+    "node": "owl060",
+    "requested_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "scontrol": "JobId=1223943 JobName=sft-extension-development-seal-v2 UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1315 Nice=0 Account=tml_2026 QOS=owl_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:01:39 TimeLimit=02:00:00 TimeMin=N/A SubmitTime=2026-10-20T20:28:13 EligibleTime=2026-10-20T20:28:13 AccrueTime=2026-10-20T20:28:13 StartTime=2026-10-20T20:28:44 EndTime=2026-10-20T22:28:44 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T20:28:44 Scheduler=Backfill Partition=normal_q AllocNode:Sid=owl1:1372442 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl060 BatchHost=owl060 NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=64G,node=1,billing=20 AllocTRES=cpu=8,mem=64G,node=1,billing=20 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_retry.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_retry.slurm WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-development-seal-v2-1223943.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-development-seal-v2-1223943.out TresPerTask=cpu=8",
+    "scontrol_sha256": "34e608b9913e8cdba499d19cb42d314ba91f3500d7a77fbd37f52f5fd7f5e637",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "compute_start": {
+    "allocated_cpus": 8,
+    "allocated_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "checked_at_utc": "2026-10-21T00:29:28.545310+00:00",
+    "cuda_visible_devices": "",
+    "gpu_requested_or_allocated": false,
+    "hostname": "owl060",
+    "job_id": "1223943",
+    "node": "owl060",
+    "requested_tres": "cpu=8,mem=64G,node=1,billing=20",
+    "scontrol": "JobId=1223943 JobName=sft-extension-development-seal-v2 UserId=manoj663(22825097) GroupId=manoj663(22825097) MCS_label=N/A Priority=1315 Nice=0 Account=tml_2026 QOS=owl_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:44 TimeLimit=02:00:00 TimeMin=N/A SubmitTime=2026-10-20T20:28:13 EligibleTime=2026-10-20T20:28:13 AccrueTime=2026-10-20T20:28:13 StartTime=2026-10-20T20:28:44 EndTime=2026-10-20T22:28:44 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T20:28:44 Scheduler=Backfill Partition=normal_q AllocNode:Sid=owl1:1372442 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl060 BatchHost=owl060 NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=8,mem=64G,node=1,billing=20 AllocTRES=cpu=8,mem=64G,node=1,billing=20 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_retry.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_retry.slurm WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-development-seal-v2-1223943.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-development-seal-v2-1223943.out TresPerTask=cpu=8",
+    "scontrol_sha256": "8f38ba1958f29bbead28e7276be052ba09ae2195eeb6ef901c4a4222403cb59f",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "created_at_utc": "2026-10-21T00:30:23.085820+00:00",
+  "deadline_guard": {
+    "checked_at_utc": "2026-10-21T00:29:28.549192+00:00",
+    "deadline_utc": "2026-10-28T03:59:00+00:00",
+    "guard_seconds": 180000
+  },
+  "elapsed_seconds": 54.54362994199619,
+  "gpu_seconds_requested_or_used": 0,
+  "hash_template": "20261021:development-seal-v1:{domain}:{split}:{group_id}",
+  "input_files": {
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/confirmation_ids.json": {
+      "bytes": 13443,
+      "sha256": "69002547f908773102ef3a41286668f84a7ab4fe088c350239aaf4bd3f4c6f9b"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/search_ids.json": {
+      "bytes": 13443,
+      "sha256": "4581332873fef806bbbaf7842b27bc44f02ccd666445e93d920dcbf46b2d53da"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmark_readiness.json": {
+      "bytes": 152861,
+      "sha256": "9f0d2480881672ba07c3c9a4143dec12b55625d721c1ce0ed45e6bfd82082754"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/aime/test.jsonl": {
+      "bytes": 146233,
+      "sha256": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/aime25/test.jsonl": {
+      "bytes": 15903,
+      "sha256": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/amc/test.jsonl": {
+      "bytes": 27631,
+      "sha256": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/cn_math_2024/test.jsonl": {
+      "bytes": 9946,
+      "sha256": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/gpqa/test.jsonl": {
+      "bytes": 154144,
+      "sha256": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/kaoyan/test.jsonl": {
+      "bytes": 192892,
+      "sha256": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/math/test.jsonl": {
+      "bytes": 446563,
+      "sha256": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/minerva/test.jsonl": {
+      "bytes": 130303,
+      "sha256": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/olympiadbench/test.jsonl": {
+      "bytes": 251176,
+      "sha256": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/heldout.json": {
+      "bytes": 23032339,
+      "sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/pool.json": {
+      "bytes": 1970428086,
+      "sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/probeA_ids.json": {
+      "bytes": 35843,
+      "sha256": "6ae31826e4d06b517e9e290d653a9b3502056cc81c57e281ef0447a0918de4d6"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/probeB_ids.json": {
+      "bytes": 35843,
+      "sha256": "42c0b860943dae371ae692c1824504ced4b9e10e09801790324adaca6ed4ffa1"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/selected_ids.json": {
+      "bytes": 1050003,
+      "sha256": "2241e6e39ab65fe465db8544d7635570ff8a67b7e95f764ac72ddcb1bb9d3d7f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/selected_ids.json": {
+      "bytes": 1050003,
+      "sha256": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/transfer_meta.json": {
+      "bytes": 4625697,
+      "sha256": "4c63b8c4eb0d306a3ca7bbd7ff3b80e16e5a83d4638f92b3faa806162476956c"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/operations/recovery-screen-ids-20261020.json": {
+      "bytes": 4483,
+      "sha256": "af899b05afe502400cebb6c2197a7fd454f66114198733838ffd7913f9975d8e"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/__init__.py": {
+      "bytes": 79,
+      "sha256": "2a99bd8120f34a0ccf36d7d6f5dc02d7a24d5bdd4f8eaf422bd73b75b17a4a13"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/campaign.json": {
+      "bytes": 5649,
+      "sha256": "1407fa170f5b962249c54a294cbadf2b9b96fa90ab6101ad46037301be183dfe"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.py": {
+      "bytes": 32044,
+      "sha256": "1b0a8872f61a6e89191c16082c5ede531a38965658072855180a943effc35724"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/cpu_feasibility.slurm": {
+      "bytes": 4801,
+      "sha256": "3c450f680faca976efc5a2022ece602a369f2261bc41a3cb9c0a0da3fa0137ba"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_plan.json": {
+      "bytes": 4234,
+      "sha256": "204eabfdfdb36305d0b8377f767b1a456ff595c6dd8afd701e1adceb42a5ac6f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_retry.slurm": {
+      "bytes": 5658,
+      "sha256": "33838b55d505bc55871c5e73a013ac5e5614e3b84e1841415a427f0f786e48cd"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_retry_plan.json": {
+      "bytes": 5078,
+      "sha256": "e564a57c3123f726fab1e059ddc1d87daec65259b8e950726e2ab316ddf4dedc"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_retry_submission.py": {
+      "bytes": 26568,
+      "sha256": "1c254b9f076d5369ccbbe6f703850ea6db675ffe313688c9f483028dc547fb06"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_seal.py": {
+      "bytes": 30551,
+      "sha256": "7d53889c33470b36ef363b07a5161b85122b0ad0c55eb7e1fda916ac98908978"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_seal.slurm": {
+      "bytes": 5510,
+      "sha256": "b2bd243093b8765269ba58701f504362981a1576c0779ece86bda578dd6622c4"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_seal_v2.py": {
+      "bytes": 35320,
+      "sha256": "8c2dd5697c5cbb945f5245de1d8ce8557554fb4fbee046ee2c68d3d26f487bb7"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_source_metadata.json": {
+      "bytes": 1437,
+      "sha256": "6a00b4f8f52b496c66d27270009d0c71116d676d024454f950af60730548f994"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/development_submission.py": {
+      "bytes": 18893,
+      "sha256": "f40d13069091c9c4afc0cb50fbe83f29446fcbf32f62dd4b4bb9e4d41dff475e"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_feasibility.py": {
+      "bytes": 33130,
+      "sha256": "0afb5f61050e2e7c6350ee9a68ffe47779159f85bf81f684b97536331b6b67da"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_feasibility.slurm": {
+      "bytes": 5252,
+      "sha256": "a2c099805f3a53cfdb59a4c1cf773e91f4f9d8e101b084062b3cb09b5e80728e"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_plan.json": {
+      "bytes": 10259,
+      "sha256": "d44572f18e3de76dea44b243a7427b8cac64cf5d87a294ae005b544412f28d80"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/labeled_submission.py": {
+      "bytes": 17855,
+      "sha256": "f1dab8e359603b754ead6dcfd364acb2b4a3a6da31d961f0445e9a8e05cff13a"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/objectives.py": {
+      "bytes": 9223,
+      "sha256": "c56bd73d9824284b0393e23812bfcb4d4496fb518296de5fc35c9ec17bd06fde"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/operations/development_metadata_diagnostic.slurm": {
+      "bytes": 2873,
+      "sha256": "e7de99e7b49c5a5a81f624773635cc73bb08bf51d15794a5b5e69994f5b3ddd4"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/operations/development_metadata_diagnostic_v2.slurm": {
+      "bytes": 2876,
+      "sha256": "63e1de2d38b8c3df994fbb08becf2ada2f20ab03647473a3516e29a209baf9f8"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/operations/submit_development_diagnostic.py": {
+      "bytes": 5023,
+      "sha256": "84157ee60e9ef32979b55c3817028e8d87f0189875f69dddefb3849410545060"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/operations/submit_development_diagnostic_v2.py": {
+      "bytes": 6483,
+      "sha256": "534e015c80a88ac8b29ff7f5ef9ea9537f27b1dc685dc8dbdf278c38e440a966"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/preserving_objectives.py": {
+      "bytes": 6891,
+      "sha256": "05b079d2da89579436ce53b8a801c0fc51bd6cfef45628c50d23a5af93de3eb4"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/preserving_trainer.py": {
+      "bytes": 19790,
+      "sha256": "3a46929eaff536f8165e8b1388fddc9c54fde0198c84aac3bcb69cf397d507d0"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/research.json": {
+      "bytes": 8331,
+      "sha256": "c81e9a4c966fea1441b77a87e3036fd4cacb2e61f9e2417b8150040252236aca"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/development-level-diagnostic-20261021-1223713/complete.json": {
+      "bytes": 6386,
+      "sha256": "7944215f48b8bd12ba543fe5cf4b543ef1c21cfc674fe35ea4b17c49698cf96c"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/development-seal-v2-20261021-1223943/native_qa.json": {
+      "bytes": 16420,
+      "sha256": "186e7574e26fcd1c1ed5ad3d840a590f4a4417aaa0b0880295b2a7b35f1d6359"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/complete.json": {
+      "bytes": 37541,
+      "sha256": "6c225e606b0086649fa6d578d6a846f37594b893eefcee117ead22e8fb2c3458"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/arc_challenge/ARC-Challenge/train-00000-of-00001.parquet": {
+      "bytes": 189909,
+      "sha256": "e488c1587ffdcfc8443f916c53488a95cd471c5790e0746c6bfe4cecf20962cb"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/arc_challenge/license-card/README.md": {
+      "bytes": 9001,
+      "sha256": "4a293e352253d771604725c978adcea71ee6504e89ed40e1cb0024ecafa9b37e"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/algebra/train/0000.parquet": {
+      "bytes": 505186,
+      "sha256": "73347f5b55869f21ff094361025dbd12d291e971aa4d72142eacee10438e449f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/counting_and_probability/train/0000.parquet": {
+      "bytes": 329354,
+      "sha256": "d37ae017930df41678edee50dcde18c17fb06afaff9eb505c1b95f1002bfcb31"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/geometry/train/0000.parquet": {
+      "bytes": 549388,
+      "sha256": "9dbf5e5b55499e696e0ba72da9d85d4f0be3acbf7eaa6cb014b0fc78bb63784f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/intermediate_algebra/train/0000.parquet": {
+      "bytes": 575154,
+      "sha256": "0c87f3798ebdfb915b1f9b6fc13c1a8d064c3cb91631ccbe85b83ed5d71150f6"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/license-card/README.md": {
+      "bytes": 3926,
+      "sha256": "2372e22a154ca3ed5865378e270b32d8ed5b615c4592fad42630a731a950bcc0"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/number_theory/train/0000.parquet": {
+      "bytes": 308653,
+      "sha256": "81c08649149b39811f2d1d7ddf5dfccf6c4c8044a2e169cfb24db09160c941f4"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/prealgebra/train/0000.parquet": {
+      "bytes": 383626,
+      "sha256": "765b526fb5c0b8385cb7be2c16bf4f6f28cf71f2bc15c826abfbb5fa7f8616cc"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/downloads/math/precalculus/train/0000.parquet": {
+      "bytes": 353745,
+      "sha256": "28bb1ff95525c8d32521509bef91de76339659f5467a381e6e8deea204538f0e"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/excluded.jsonl": {
+      "bytes": 924975,
+      "sha256": "3bd9d05421e5eb221759a6347795513026ed3f0c3b4037db7b1baa071017144f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/groups.json": {
+      "bytes": 2688776,
+      "sha256": "a333abab42471a1f990e4ac670c1f0e0b56a48fe7aaee0930332cd1f525d4c0d"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/native_qa.json": {
+      "bytes": 8355,
+      "sha256": "c5d12f7d0c9bf40ac80f5c685a5db289ff88e1699c6b1628afa1fab120db5945"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/quarantined.jsonl": {
+      "bytes": 1521,
+      "sha256": "25c78446728aff2df00a44fc0825147d45cc1b135829b44aa4d98f3cb9861d4a"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/surviving.jsonl": {
+      "bytes": 17087581,
+      "sha256": "f1304725d60087666fa2c3995fe7b4b344067ad28d1f2af35e8dbc5dab4e0551"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926/surviving_ids.json": {
+      "bytes": 499243,
+      "sha256": "d2d6e77998f1cadfc79f418fa315eec88d8a6c97c9cb7120bb5c3de976cc5098"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/submission.py": {
+      "bytes": 16062,
+      "sha256": "fd0d9adc589aa6e6b9287df50801679e46d227c1a46d6a27c22a8b963907bb0a"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/reasoning/data.py": {
+      "bytes": 3338,
+      "sha256": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_development_seal.py": {
+      "bytes": 18601,
+      "sha256": "fa07685cc9c439e564fb93c9205bc4daf5d20d82546aaf206db42a47ea895d39"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_development_submission.py": {
+      "bytes": 19657,
+      "sha256": "f50e70e7dd55facff9e473aeee6ca625520f07c0d598731de1c00c2630ffba53"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_extension_feasibility.py": {
+      "bytes": 13563,
+      "sha256": "6e4bf3225e4a68840babc878961b0b6db71cbc5e76cb095905080a65c87d294f"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_extension_objectives.py": {
+      "bytes": 12567,
+      "sha256": "306caa2e01c1c9aa6ce1799c535bbe3d530549838ff160320750beda576639aa"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_extension_submission.py": {
+      "bytes": 13784,
+      "sha256": "0cd3949f92389e19112ed99a1d191690dad5ae5b63dc6e68d15b87fded5db50c"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_labeled_feasibility.py": {
+      "bytes": 19447,
+      "sha256": "f3114f0431c91e99eda6b53abb36f4424cebed193c4ed7d0e508496b9819d0f1"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_labeled_submission.py": {
+      "bytes": 20563,
+      "sha256": "a51f4837a0780cb432170d5f0989ee84dc9e80532451962d38c4be1568881531"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_preservation_development_seal_v2.py": {
+      "bytes": 14331,
+      "sha256": "22a38e4867fd1b4390d3d2953fc990fba20d997a42cfff71953a612126beeebd"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_preservation_retry_submission.py": {
+      "bytes": 16737,
+      "sha256": "2c8f25cc7989d80a095eb372efdb36a785294a4e40201854e91b247d7aaa7450"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_preserving_objectives.py": {
+      "bytes": 16059,
+      "sha256": "d520dee4691e9186bfa80c44ba8ed67ce610dbe707bd2d20f2327e1bb46d30a6"
+    },
+    "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/tests/test_preserving_trainer.py": {
+      "bytes": 17572,
+      "sha256": "9c2f14ee4023c2b18e059fa5297e469725148fa3d02b2d38b3c1b2c0a6c7dfb7"
+    }
+  },
+  "input_stats_unchanged_at_closeout": true,
+  "level_diagnostic": {
+    "complete_sha256": "7944215f48b8bd12ba543fe5cf4b543ef1c21cfc674fe35ea4b17c49698cf96c",
+    "directory": "extension/runs/development-level-diagnostic-20261021-1223713",
+    "job_id": "1223713",
+    "level_audit": {
+      "all_surviving_rows": 7132,
+      "math_rows": 6013,
+      "raw_records_unchanged": true,
+      "subject_level_counts": [
+        {
+          "official_level": "Level 1",
+          "rows": 139,
+          "subject": "algebra"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 257,
+          "subject": "algebra"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 303,
+          "subject": "algebra"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 305,
+          "subject": "algebra"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 343,
+          "subject": "algebra"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 36,
+          "subject": "counting_and_probability"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 101,
+          "subject": "counting_and_probability"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 119,
+          "subject": "counting_and_probability"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 132,
+          "subject": "counting_and_probability"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 234,
+          "subject": "counting_and_probability"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 33,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 86,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 115,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 138,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 365,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level ?",
+          "rows": 1,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 45,
+          "subject": "intermediate_algebra"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 139,
+          "subject": "intermediate_algebra"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 227,
+          "subject": "intermediate_algebra"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 271,
+          "subject": "intermediate_algebra"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 350,
+          "subject": "intermediate_algebra"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 34,
+          "subject": "number_theory"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 111,
+          "subject": "number_theory"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 143,
+          "subject": "number_theory"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 149,
+          "subject": "number_theory"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 244,
+          "subject": "number_theory"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 108,
+          "subject": "prealgebra"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 262,
+          "subject": "prealgebra"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 207,
+          "subject": "prealgebra"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 203,
+          "subject": "prealgebra"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 213,
+          "subject": "prealgebra"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 45,
+          "subject": "precalculus"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 128,
+          "subject": "precalculus"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 134,
+          "subject": "precalculus"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 142,
+          "subject": "precalculus"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 151,
+          "subject": "precalculus"
+        }
+      ],
+      "unknown_levels": {
+        "Level ?": 1
+      },
+      "unknown_stratum_label": "unknown:Level ?"
+    },
+    "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/development-level-diagnostic-20261021-1223713/complete.json"
+  },
+  "limitations": [
+    "Source-only metadata stratification; no answer-based selection.",
+    "Exact for the declared lexical criterion, not a semantic leakage guarantee.",
+    "Greedy exact-reachability checks are not a globally complete multi-split partition solver.",
+    "This seal records reservations; future selectors must explicitly enforce them.",
+    "No tokenization, model inference, correctness scoring, generation or training occurred."
+  ],
+  "native_qa": {
+    "code_sha256": {
+      "extension/__init__.py": "2a99bd8120f34a0ccf36d7d6f5dc02d7a24d5bdd4f8eaf422bd73b75b17a4a13",
+      "extension/campaign.json": "1407fa170f5b962249c54a294cbadf2b9b96fa90ab6101ad46037301be183dfe",
+      "extension/cpu_feasibility.py": "1b0a8872f61a6e89191c16082c5ede531a38965658072855180a943effc35724",
+      "extension/cpu_feasibility.slurm": "3c450f680faca976efc5a2022ece602a369f2261bc41a3cb9c0a0da3fa0137ba",
+      "extension/development_plan.json": "204eabfdfdb36305d0b8377f767b1a456ff595c6dd8afd701e1adceb42a5ac6f",
+      "extension/development_retry.slurm": "33838b55d505bc55871c5e73a013ac5e5614e3b84e1841415a427f0f786e48cd",
+      "extension/development_retry_plan.json": "e564a57c3123f726fab1e059ddc1d87daec65259b8e950726e2ab316ddf4dedc",
+      "extension/development_retry_submission.py": "1c254b9f076d5369ccbbe6f703850ea6db675ffe313688c9f483028dc547fb06",
+      "extension/development_seal.py": "7d53889c33470b36ef363b07a5161b85122b0ad0c55eb7e1fda916ac98908978",
+      "extension/development_seal.slurm": "b2bd243093b8765269ba58701f504362981a1576c0779ece86bda578dd6622c4",
+      "extension/development_seal_v2.py": "8c2dd5697c5cbb945f5245de1d8ce8557554fb4fbee046ee2c68d3d26f487bb7",
+      "extension/development_source_metadata.json": "6a00b4f8f52b496c66d27270009d0c71116d676d024454f950af60730548f994",
+      "extension/development_submission.py": "f40d13069091c9c4afc0cb50fbe83f29446fcbf32f62dd4b4bb9e4d41dff475e",
+      "extension/labeled_feasibility.py": "0afb5f61050e2e7c6350ee9a68ffe47779159f85bf81f684b97536331b6b67da",
+      "extension/labeled_feasibility.slurm": "a2c099805f3a53cfdb59a4c1cf773e91f4f9d8e101b084062b3cb09b5e80728e",
+      "extension/labeled_plan.json": "d44572f18e3de76dea44b243a7427b8cac64cf5d87a294ae005b544412f28d80",
+      "extension/labeled_submission.py": "f1dab8e359603b754ead6dcfd364acb2b4a3a6da31d961f0445e9a8e05cff13a",
+      "extension/objectives.py": "c56bd73d9824284b0393e23812bfcb4d4496fb518296de5fc35c9ec17bd06fde",
+      "extension/operations/development_metadata_diagnostic.slurm": "e7de99e7b49c5a5a81f624773635cc73bb08bf51d15794a5b5e69994f5b3ddd4",
+      "extension/operations/development_metadata_diagnostic_v2.slurm": "63e1de2d38b8c3df994fbb08becf2ada2f20ab03647473a3516e29a209baf9f8",
+      "extension/operations/submit_development_diagnostic.py": "84157ee60e9ef32979b55c3817028e8d87f0189875f69dddefb3849410545060",
+      "extension/operations/submit_development_diagnostic_v2.py": "534e015c80a88ac8b29ff7f5ef9ea9537f27b1dc685dc8dbdf278c38e440a966",
+      "extension/preserving_objectives.py": "05b079d2da89579436ce53b8a801c0fc51bd6cfef45628c50d23a5af93de3eb4",
+      "extension/preserving_trainer.py": "3a46929eaff536f8165e8b1388fddc9c54fde0198c84aac3bcb69cf397d507d0",
+      "extension/research.json": "c81e9a4c966fea1441b77a87e3036fd4cacb2e61f9e2417b8150040252236aca",
+      "extension/submission.py": "fd0d9adc589aa6e6b9287df50801679e46d227c1a46d6a27c22a8b963907bb0a",
+      "reasoning/data.py": "597cace7bfe2105f31d3fc2a35e497acb9942431d14f306a8669666236e9fc68",
+      "tests/test_development_seal.py": "fa07685cc9c439e564fb93c9205bc4daf5d20d82546aaf206db42a47ea895d39",
+      "tests/test_development_submission.py": "f50e70e7dd55facff9e473aeee6ca625520f07c0d598731de1c00c2630ffba53",
+      "tests/test_extension_feasibility.py": "6e4bf3225e4a68840babc878961b0b6db71cbc5e76cb095905080a65c87d294f",
+      "tests/test_extension_objectives.py": "306caa2e01c1c9aa6ce1799c535bbe3d530549838ff160320750beda576639aa",
+      "tests/test_extension_submission.py": "0cd3949f92389e19112ed99a1d191690dad5ae5b63dc6e68d15b87fded5db50c",
+      "tests/test_labeled_feasibility.py": "f3114f0431c91e99eda6b53abb36f4424cebed193c4ed7d0e508496b9819d0f1",
+      "tests/test_labeled_submission.py": "a51f4837a0780cb432170d5f0989ee84dc9e80532451962d38c4be1568881531",
+      "tests/test_preservation_development_seal_v2.py": "22a38e4867fd1b4390d3d2953fc990fba20d997a42cfff71953a612126beeebd",
+      "tests/test_preservation_retry_submission.py": "2c8f25cc7989d80a095eb372efdb36a785294a4e40201854e91b247d7aaa7450",
+      "tests/test_preserving_objectives.py": "d520dee4691e9186bfa80c44ba8ed67ce610dbe707bd2d20f2327e1bb46d30a6",
+      "tests/test_preserving_trainer.py": "9c2f14ee4023c2b18e059fa5297e469725148fa3d02b2d38b3c1b2c0a6c7dfb7"
+    },
+    "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/development-seal-v2-20261021-1223943/native_qa.json",
+    "sha256": "186e7574e26fcd1c1ed5ad3d840a590f4a4417aaa0b0880295b2a7b35f1d6359",
+    "tests_run": 230,
+    "versions": {
+      "accelerate": "1.12.0",
+      "huggingface_hub": "0.36.0",
+      "pyarrow": "22.0.0",
+      "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]",
+      "torch": "2.9.0",
+      "transformers": "4.57.3"
+    }
+  },
+  "output_sha256": {
+    "calibration.jsonl": "72ab52b7c872b1881dcf223c6a01b3b893b043c89570f27f0452f04d57f40a8a",
+    "calibration_groups.json": "500fb296a5ca6666042144c8c221a81ddcc5c30395c05e3dfda801340a83414f",
+    "calibration_ids.json": "7eac40ce9b947b9e5d4d89b3294905d222fb70ac80c2d33ecff708c76531c8fa",
+    "confirmation.jsonl": "1cfa0d03675d1d4e04f26da25b2652e5b679c9df16f1904eef3a698a7c3b7fca",
+    "confirmation_groups.json": "ac8d9f92fda11626e6e3757ffb3643d98b27877dc3e4a23fa8660238bb6a83b1",
+    "confirmation_ids.json": "b2efc48343b0703d26b16ca8c27435478121825c14ea8f66f4600a61359ad39c",
+    "development.jsonl": "6da250b9dfa1a1bb03be772251a13df30ce8625e466d6e7fa2e505fd0a3d126c",
+    "development_groups.json": "fd12e7c53c309f7c70c0d79b358b417880eb0173b2c1946f91b63e5ca57a592d",
+    "development_ids.json": "5bf7c9d92268a6a7b3820c00799136ae3bb30b148f6ed8e6d9cf72141057f6c0",
+    "reserved_training_pool_ids.json": "d0e128a5c6a730f0bb4e2740aa393f1e10059038488db1d00ee13a0250d853d3",
+    "reserved_training_pool_matches.json": "967930d96caf2554946120b11857d5b2cc65c00ce3c4f1e51540cd7eb82cd0e4",
+    "unused_groups.json": "f717ccedd697a12b4bddad079ea371493589c3e0abe2d28b4f171c0b3ddee602"
+  },
+  "plan_sha256": "e564a57c3123f726fab1e059ddc1d87daec65259b8e950726e2ab316ddf4dedc",
+  "reservation": {
+    "exact_match_rows": 67,
+    "lexical_criterion": {
+      "jaccard_denominator": 5,
+      "jaccard_numerator": 4,
+      "normalization": "NFKC casefold whitespace; preserve numbers/operators",
+      "search": "exact inverted index",
+      "shingle_tokens": 3,
+      "short_question_policy": "exact normalized equality when fewer than3tokens",
+      "tokenization": "word-or-single-nonwhitespace-character"
+    },
+    "near_match_rows": 0,
+    "prior_pool_overlap_check": {
+      "previously_scored_reservoir": {
+        "prior_ids": 30000,
+        "reserved_overlap": 0
+      },
+      "prior_advanced_training": {
+        "prior_ids": 15000,
+        "reserved_overlap": 0
+      },
+      "prior_probeA_training": {
+        "prior_ids": 512,
+        "reserved_overlap": 0
+      },
+      "prior_probeB_training": {
+        "prior_ids": 512,
+        "reserved_overlap": 0
+      },
+      "prior_random_training": {
+        "prior_ids": 15000,
+        "reserved_overlap": 0
+      }
+    },
+    "required_future_policy": "Every future training/probe selector must verify this complete seal and exclude every reserved_training_pool_id; all selected labeled groups remain held out.",
+    "reserved_training_pool_ids_sha256": "e11ee4fbf20c541f3856d4f38730fea9998c4bd1ca2a38bcc8905c3bfe55bc15",
+    "reserved_training_pool_rows": 67,
+    "scope": "All selected component members: MATH question; ARC stem and ordered stem-plus-options. Correct answer keys and solution text are never indexed.",
+    "training_pool_rows_scanned": 83029
+  },
+  "schema": "extension-development-seal-v2",
+  "seed": 20261021,
+  "selected_record_ids_sha256": "ec1e2c543ee07b4e572d9cf94bc2022e4cae688f53bdefbfa7f63c8f8b0b59d0",
+  "source_audit": {
+    "benchmark_readiness": {
+      "benchmark_counts": {
+        "aime": 30,
+        "aime25": 30,
+        "amc": 40,
+        "cn_math_2024": 30,
+        "gpqa": 198,
+        "kaoyan": 199,
+        "math": 500,
+        "minerva": 272,
+        "olympiadbench": 675
+      },
+      "benchmark_hashes": {
+        "aime": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc",
+        "aime25": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d",
+        "amc": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4",
+        "cn_math_2024": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533",
+        "gpqa": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f",
+        "kaoyan": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7",
+        "math": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94",
+        "minerva": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d",
+        "olympiadbench": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f"
+      },
+      "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmark_readiness.json",
+      "sha256": "9f0d2480881672ba07c3c9a4143dec12b55625d721c1ce0ed45e6bfd82082754"
+    },
+    "complete_sha256": "6c225e606b0086649fa6d578d6a846f37594b893eefcee117ead22e8fb2c3458",
+    "counts": {
+      "arc_challenge:direct_excluded": 0,
+      "arc_challenge:label_valid": 1119,
+      "arc_challenge:propagated_excluded": 0,
+      "arc_challenge:quarantined": 0,
+      "arc_challenge:raw": 1119,
+      "arc_challenge:surviving": 1119,
+      "math:direct_excluded": 1482,
+      "math:label_valid": 7496,
+      "math:propagated_excluded": 1,
+      "math:quarantined": 4,
+      "math:raw": 7500,
+      "math:surviving": 6013
+    },
+    "directory": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/labeled-feasibility-20261020-1222926",
+    "excluded_components": 1452,
+    "exclusions": [
+      {
+        "format": "id_list",
+        "json_pointer": "",
+        "lookup": "deadline/artifacts/pool.json",
+        "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/random/selected_ids.json",
+        "question_field": null,
+        "question_records": 15000,
+        "reason": "prior_random_training",
+        "sha256": "7170740dd2fb96587edb16037388a56afe3981ac8e42db73898bff0c9fa20df9"
+      },
+      {
+        "format": "id_list",
+        "json_pointer": "",
+        "lookup": "deadline/artifacts/pool.json",
+        "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/training/advanced/selected_ids.json",
+        "question_field": null,
+        "question_records": 15000,
+        "reason": "prior_advanced_training",
+        "sha256": "2241e6e39ab65fe465db8544d7635570ff8a67b7e95f764ac72ddcb1bb9d3d7f"
+      },
+      {
+        "format": "id_list",
+        "json_pointer": "",
+        "lookup": "deadline/artifacts/pool.json",
+        "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/probeA_ids.json",
+        "question_field": null,
+        "question_records": 512,
+        "reason": "prior_probeA_training",
+        "sha256": "6ae31826e4d06b517e9e290d653a9b3502056cc81c57e281ef0447a0918de4d6"
+      },
+      {
+        "format": "id_list",
+        "json_pointer": "",
+        "lookup": "deadline/artifacts/pool.json",
+        "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/probeB_ids.json",
+        "question_field": null,
+        "question_records": 512,
+        "reason": "prior_probeB_training",
+        "sha256": "42c0b860943dae371ae692c1824504ced4b9e10e09801790324adaca6ed4ffa1"
+      },
+      {
+        "format": "id_list",
+        "json_pointer": "/reservoir_ids",
+        "lookup": "deadline/artifacts/pool.json",
+        "lookup_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/transfer_meta.json",
+        "question_field": null,
+        "question_records": 30000,
+        "reason": "previously_scored_reservoir",
+        "sha256": "4c63b8c4eb0d306a3ca7bbd7ff3b80e16e5a83d4638f92b3faa806162476956c"
+      },
+      {
+        "format": "id_list",
+        "json_pointer": "",
+        "lookup": "deadline/artifacts/heldout.json",
+        "lookup_sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3",
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/operations/recovery-screen-ids-20261020.json",
+        "question_field": null,
+        "question_records": 64,
+        "reason": "viewed_recovery_source",
+        "sha256": "af899b05afe502400cebb6c2197a7fd454f66114198733838ffd7913f9975d8e"
+      },
+      {
+        "format": "id_list",
+        "json_pointer": "",
+        "lookup": "deadline/artifacts/heldout.json",
+        "lookup_sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3",
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/search_ids.json",
+        "question_field": null,
+        "question_records": 192,
+        "reason": "viewed_anchor_search",
+        "sha256": "4581332873fef806bbbaf7842b27bc44f02ccd666445e93d920dcbf46b2d53da"
+      },
+      {
+        "format": "id_list",
+        "json_pointer": "",
+        "lookup": "deadline/artifacts/heldout.json",
+        "lookup_sha256": "fccb99433ac3f6eab79450d2ce920c057abf9e3ba462b7a90aa95a6169f0adc3",
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/anchor-search-runs/validation-v2-20261020-attempt2/confirmation_ids.json",
+        "question_field": null,
+        "question_records": 192,
+        "reason": "viewed_anchor_confirmation",
+        "sha256": "69002547f908773102ef3a41286668f84a7ab4fe088c350239aaf4bd3f4c6f9b"
+      },
+      {
+        "format": "benchmark_jsonl",
+        "json_pointer": "",
+        "lookup": null,
+        "lookup_sha256": null,
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/aime/test.jsonl",
+        "question_field": "problem",
+        "question_records": 30,
+        "reason": "benchmark_aime",
+        "sha256": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc"
+      },
+      {
+        "format": "benchmark_jsonl",
+        "json_pointer": "",
+        "lookup": null,
+        "lookup_sha256": null,
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/aime25/test.jsonl",
+        "question_field": "question",
+        "question_records": 30,
+        "reason": "benchmark_aime25",
+        "sha256": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d"
+      },
+      {
+        "format": "benchmark_jsonl",
+        "json_pointer": "",
+        "lookup": null,
+        "lookup_sha256": null,
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/amc/test.jsonl",
+        "question_field": "question",
+        "question_records": 40,
+        "reason": "benchmark_amc",
+        "sha256": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4"
+      },
+      {
+        "format": "benchmark_jsonl",
+        "json_pointer": "",
+        "lookup": null,
+        "lookup_sha256": null,
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/cn_math_2024/test.jsonl",
+        "question_field": "problem",
+        "question_records": 30,
+        "reason": "benchmark_cn_math_2024",
+        "sha256": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533"
+      },
+      {
+        "format": "benchmark_jsonl",
+        "json_pointer": "",
+        "lookup": null,
+        "lookup_sha256": null,
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/gpqa/test.jsonl",
+        "question_field": "question",
+        "question_records": 198,
+        "reason": "benchmark_gpqa",
+        "sha256": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f"
+      },
+      {
+        "format": "benchmark_jsonl",
+        "json_pointer": "",
+        "lookup": null,
+        "lookup_sha256": null,
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/kaoyan/test.jsonl",
+        "question_field": "problem",
+        "question_records": 199,
+        "reason": "benchmark_kaoyan",
+        "sha256": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7"
+      },
+      {
+        "format": "benchmark_jsonl",
+        "json_pointer": "",
+        "lookup": null,
+        "lookup_sha256": null,
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/math/test.jsonl",
+        "question_field": "problem",
+        "question_records": 500,
+        "reason": "benchmark_math",
+        "sha256": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94"
+      },
+      {
+        "format": "benchmark_jsonl",
+        "json_pointer": "",
+        "lookup": null,
+        "lookup_sha256": null,
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/minerva/test.jsonl",
+        "question_field": "question",
+        "question_records": 272,
+        "reason": "benchmark_minerva",
+        "sha256": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d"
+      },
+      {
+        "format": "benchmark_jsonl",
+        "json_pointer": "",
+        "lookup": null,
+        "lookup_sha256": null,
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/olympiadbench/test.jsonl",
+        "question_field": "question",
+        "question_records": 675,
+        "reason": "benchmark_olympiadbench",
+        "sha256": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f"
+      },
+      {
+        "format": "benchmark_jsonl",
+        "json_pointer": "",
+        "lookup": null,
+        "lookup_sha256": null,
+        "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmarks/amc/test.jsonl",
+        "question_field": "problem",
+        "question_records": 40,
+        "reason": "benchmark_amc",
+        "sha256": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4"
+      }
+    ],
+    "groups": {
+      "all_label_valid_components": 8529,
+      "direct_excluded_records": 1482,
+      "propagated_excluded_records": 1,
+      "quarantined_records": 4,
+      "surviving_components": 7077,
+      "surviving_records": 7132
+    },
+    "native_tests_run": 108,
+    "output_sha256": {
+      "excluded.jsonl": "3bd9d05421e5eb221759a6347795513026ed3f0c3b4037db7b1baa071017144f",
+      "groups.json": "a333abab42471a1f990e4ac670c1f0e0b56a48fe7aaee0930332cd1f525d4c0d",
+      "quarantined.jsonl": "25c78446728aff2df00a44fc0825147d45cc1b135829b44aa4d98f3cb9861d4a",
+      "surviving.jsonl": "f1304725d60087666fa2c3995fe7b4b344067ad28d1f2af35e8dbc5dab4e0551",
+      "surviving_ids.json": "d2d6e77998f1cadfc79f418fa315eec88d8a6c97c9cb7120bb5c3de976cc5098"
+    },
+    "qa_sha256": "c5d12f7d0c9bf40ac80f5c685a5db289ff88e1699c6b1628afa1fab120db5945",
+    "source_metadata": {
+      "observed_at_utc": "2026-10-20T22:49:51.384749+00:00",
+      "schema": "reasoning-sft-fresh-development-source-pins-v1",
+      "sources": [
+        {
+          "files": [
+            "algebra/train/0000.parquet",
+            "counting_and_probability/train/0000.parquet",
+            "geometry/train/0000.parquet",
+            "intermediate_algebra/train/0000.parquet",
+            "number_theory/train/0000.parquet",
+            "prealgebra/train/0000.parquet",
+            "precalculus/train/0000.parquet"
+          ],
+          "license": null,
+          "metadata_url": "https://huggingface.co/api/datasets/EleutherAI/hendrycks_math/revision/refs%2Fconvert%2Fparquet",
+          "purpose": "Development/confirmation only; no data downloaded.",
+          "repo_id": "EleutherAI/hendrycks_math",
+          "requested_revision": "refs/convert/parquet",
+          "resolved_revision": "fe39eaeb3783a7dd5d7e305da9a8db9b0c4e6b93"
+        },
+        {
+          "files": [
+            "ARC-Challenge/train-00000-of-00001.parquet",
+            "ARC-Easy/train-00000-of-00001.parquet",
+            "README.md"
+          ],
+          "license": [
+            "cc-by-sa-4.0"
+          ],
+          "metadata_url": "https://huggingface.co/api/datasets/allenai/ai2_arc/revision/main",
+          "purpose": "Development/confirmation only; no data downloaded.",
+          "repo_id": "allenai/ai2_arc",
+          "requested_revision": "main",
+          "resolved_revision": "210d026faf9955653af8916fad021475a3f00453"
+        }
+      ],
+      "status": "metadata_only_no_data_downloaded"
+    }
+  },
+  "split_order": [
+    "calibration",
+    "development",
+    "confirmation"
+  ],
+  "splits": {
+    "calibration": {
+      "domain_rows": {
+        "arc_challenge": 16,
+        "math": 16
+      },
+      "group_count": 32,
+      "group_ids_sha256": "4ad9e2c6d5be4eaa175870bb2f9258065af5abed2bdd27fb555c0850e12ff6dd",
+      "ids_sha256": "37618ae9aa3e732c168029f1ac2131f5772500a3c84537b5f847b0ff938e27cc",
+      "rows": 32
+    },
+    "confirmation": {
+      "domain_rows": {
+        "arc_challenge": 512,
+        "math": 1024
+      },
+      "group_count": 1527,
+      "group_ids_sha256": "6368844426c7213caed7c9adc8548dae278f2673c7da29cc5c6c868735a2a56c",
+      "ids_sha256": "5e614d162aac6dfe5729a9001f070a97b91a7dba53eb9ff5943df8c77657050b",
+      "rows": 1536
+    },
+    "development": {
+      "domain_rows": {
+        "arc_challenge": 256,
+        "math": 512
+      },
+      "group_count": 766,
+      "group_ids_sha256": "26fc87134e369dd9a76574641aa20573a3cfd7311fb3915077abd757f14bf184",
+      "ids_sha256": "9c90f2002e40a7e857c5e73d334f2cf6b95995c003db20c77b2d761cb6d2fca3",
+      "rows": 768
+    }
+  },
+  "targets": {
+    "calibration": {
+      "arc_challenge": 16,
+      "math": 16
+    },
+    "confirmation": {
+      "arc_challenge": 512,
+      "math": 1024
+    },
+    "development": {
+      "arc_challenge": 256,
+      "math": 512
+    }
+  },
+  "versions": {
+    "accelerate": "1.12.0",
+    "huggingface_hub": "0.36.0",
+    "pyarrow": "22.0.0",
+    "python": "3.10.19 | packaged by conda-forge | (main, Oct 22 2025, 22:29:10) [GCC 14.3.0]",
+    "torch": "2.9.0",
+    "transformers": "4.57.3"
+  }
+}

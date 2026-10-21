@@ -1,0 +1,108 @@
+{
+  "allocation": {
+    "admissible_whole_group": "Current remaining row target exactly reachable after removal, enough rows for all future targets, every future target and their aggregate separately reachable by group-size bitset subset sum",
+    "arc_strata": "Question stem whitespace-word count bins <=15, <=30, <=60, >60 crossed with original choice count; mixed-stratum groups have one explicit mixed stratum",
+    "cross_domain_components": "Leave unused; never split a component between domains",
+    "failure": "Fail explicitly if the deterministic sequential allocation cannot fill exact targets; no silent shrinking/refilling and no claim of global multi-split impossibility",
+    "fixed_proportions": "Record counts per stratum in the original eligible single-domain population, fixed before split allocation",
+    "math_strata": "Official source-file subject and native Level 1-5; the single diagnostic-bound Level ? remains unchanged and uses explicit metadata stratum unknown:Level ?; mixed-stratum groups have one explicit mixed stratum",
+    "next_group": "Largest integer proportional row deficit; tie by lexical stratum then the declared SHA256 ordering",
+    "unit": "whole connected question group; target counts are records, not groups"
+  },
+  "automatic_downstream": false,
+  "choose_splits": true,
+  "confirmation_single_use_for_later_frozen_candidate_gate": true,
+  "cpu_only": true,
+  "deadline_utc": "2026-10-28T03:59:00+00:00",
+  "hash_template": "20261021:development-seal-v1:{domain}:{split}:{group_id}",
+  "historical_inputs_read_only": true,
+  "labeled_audit": {
+    "complete_sha256": "6c225e606b0086649fa6d578d6a846f37594b893eefcee117ead22e8fb2c3458",
+    "directory": "extension/runs/labeled-feasibility-20261020-1222926",
+    "qa_sha256": "c5d12f7d0c9bf40ac80f5c685a5db289ff88e1699c6b1628afa1fab120db5945"
+  },
+  "level_diagnostic": {
+    "complete_sha256": "7944215f48b8bd12ba543fe5cf4b543ef1c21cfc674fe35ea4b17c49698cf96c",
+    "directory": "extension/runs/development-level-diagnostic-20261021-1223713",
+    "job_id": "1223713"
+  },
+  "math_unknown_levels": {
+    "Level ?": 1
+  },
+  "model_inference": false,
+  "native_qa": {
+    "new_retry_modules": [
+      "test_preservation_development_seal_v2.py",
+      "test_preservation_retry_submission.py"
+    ],
+    "real_model_or_gpu_test": false,
+    "regression_expected": 192,
+    "synthetic_tiny_cpu_model_tests": true,
+    "zero_failures_errors_skips": true
+  },
+  "near_duplicate": {
+    "jaccard_denominator": 5,
+    "jaccard_numerator": 4,
+    "normalization": "NFKC casefold whitespace; preserve numbers/operators",
+    "search": "exact inverted index",
+    "shingle_tokens": 3,
+    "short_question_policy": "exact normalized equality when fewer than3tokens",
+    "tokenization": "word-or-single-nonwhitespace-character"
+  },
+  "operational_repair": {
+    "all_other_seed_targets_order_criterion_inputs_unchanged": true,
+    "failed_before_split_assignment": true,
+    "failed_job_id": "1223566",
+    "native_tests_passed": 192,
+    "no_model_or_correctness_outcomes_observed": true,
+    "original_plan_and_sources_preserved": true,
+    "reason": "One official MATH source row has level Level ? rather than a numeric difficulty. Preserve it and assign a separate metadata stratum; no record or target alteration."
+  },
+  "pool": {
+    "path": "deadline/artifacts/pool.json",
+    "sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0"
+  },
+  "publication": {
+    "no_new_model_or_dataset_publication": true,
+    "public_aggregates_hashes_and_source_only": true,
+    "raw_records_private_on_arc": true
+  },
+  "reserve_seconds": 172800,
+  "schema": "extension-development-seal-plan-v2",
+  "seed": 20261021,
+  "selection_uses_labels_or_model_outcomes": false,
+  "serialization": {
+    "answers_not_in_generation_prompts": true,
+    "arc_choice_order": "Original order and labels unchanged",
+    "preserve_original_records_and_labels": true,
+    "tokenization": "Not performed in this CPU stage; exact native Qwen token/prompt/config validation remains mandatory before GPU generation"
+  },
+  "split_order": [
+    "calibration",
+    "development",
+    "confirmation"
+  ],
+  "status": "prospective_cpu_retry_after_official_unknown_level_diagnostic",
+  "targets": {
+    "calibration": {
+      "arc_challenge": 16,
+      "math": 16
+    },
+    "confirmation": {
+      "arc_challenge": 512,
+      "math": 1024
+    },
+    "development": {
+      "arc_challenge": 256,
+      "math": 512
+    }
+  },
+  "training": false,
+  "training_exclusion": {
+    "future_rule": "All future training, probe and source scoring from this pool must exclude these IDs and every reserved source question/group; new external sources need the same matching audit",
+    "required_output": "reserved_training_pool_ids.json",
+    "scope": "All three reserved evaluation splits; MATH questions and ARC question stem plus rendered original choices",
+    "source": "Canonical prepared source pool only, every question checked against the declared exact lexical index"
+  },
+  "wall_time_seconds": 7200
+}

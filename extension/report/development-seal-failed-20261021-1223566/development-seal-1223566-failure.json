@@ -1,0 +1,26 @@
+{
+  "command": [
+    "sacct",
+    "--clusters=owl",
+    "-j",
+    "1223566",
+    "--parsable2",
+    "--noheader",
+    "--format=JobIDRaw,JobName,State,ExitCode,ElapsedRaw,Start,End,AllocTRES"
+  ],
+  "complete": false,
+  "elapsed_seconds": 45,
+  "exception": "ValueError: MATH subject/official level is missing",
+  "gpu_seconds": 0,
+  "job_id": "1223566",
+  "native_qa_sha256": "cc64b1a5bc9a2f2778adab28d0460a645a6a67b821a14326fe008edc07f4c9cb",
+  "observed_at_utc": "2026-10-21T00:13:05.498853+00:00",
+  "schema": "extension-terminal-cpu-failure-v1",
+  "scientific_outcomes_viewed": false,
+  "source_commit": "c1db50c50ef0ea228315970962843ce996cac113",
+  "splits_chosen": false,
+  "stderr": "",
+  "stdout": "1223566|sft-extension-development-seal|FAILED|1:0|45|2026-10-21T00:09:25|2026-10-21T00:10:10|billing=20,cpu=8,mem=64G,node=1\n1223566.batch|batch|FAILED|1:0|45|2026-10-21T00:09:25|2026-10-21T00:10:10|cpu=8,mem=64G,node=1\n1223566.extern|extern|COMPLETED|0:0|45|2026-10-21T00:09:25|2026-10-21T00:10:10|billing=20,cpu=8,mem=64G,node=1\n",
+  "terminal": true,
+  "tests_passed": 192
+}

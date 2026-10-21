@@ -67,9 +67,45 @@ trigram-set Jaccard similarity of at least 0.8, with connected-group exclusion.
 It does not guarantee removal of every semantic paraphrase. Correct answer
 keys and solution text do not enter the matching. These surviving counts are
 sufficient for the proposed development and confirmation targets, subject to
-whole-group allocation. **No splits have yet been chosen, and no new model
-has been trained or benchmarked.** ARC-Challenge supplies a general science
+whole-group allocation. **That capacity stage chose no splits and trained or
+benchmarked no new model.** ARC-Challenge supplies a general science
 retention check; it does not establish GPQA performance.
+
+The first split-sealing attempt passed **all 192 native CPU checks**, including
+the new four-objective loss and actual tiny-model Trainer checks. It then
+[stopped before assigning splits](extension/report/development-seal-failed-20261021-1223566/delivery_summary.json)
+because an official MATH difficulty field did not satisfy the assumed
+`Level 1`–`Level 5` schema. The 45-second, zero-GPU failure and its passing
+[QA receipt](extension/report/development-seal-failed-20261021-1223566/native_qa.json)
+are preserved. The separate [CPU metadata diagnostic](extension/report/development-level-diagnostic-20261021-1223713/complete.json)
+completed in two seconds and found exactly one official `Level ?` field. A
+versioned repair preserves that record in an explicit metadata stratum. The
+initial diagnostic request failed before reaching the scheduler because its
+environment omitted the Slurm configuration; its rejection is preserved and
+the successful fresh request uses the existing tested environment helper.
+These checks do not establish real Qwen/B200
+memory feasibility, and no new GPU training or inference has started.
+
+The [versioned split seal](extension/report/development-seal-v2-20261021-1223943/complete.json)
+subsequently **completed in 99 seconds with zero GPUs**. All **230 native
+checks** passed without failures, errors or skips. The frozen whole-group
+allocations are:
+
+| Purpose | MATH records | ARC-Challenge records | Question groups |
+|---|---:|---:|---:|
+| Calibration | 16 | 16 | 32 |
+| Development | 512 | 256 | 766 |
+| Single-use confirmation | 1,024 | 512 | 1,527 |
+
+The same lexical audit checked all 83,029 prepared training-pool questions and
+reserved **67 matching IDs** for exclusion from future training, probes and
+selection scoring. None overlaps prior training, probes or the earlier scored
+reservoir. Full-pool screening against the nine benchmark question sets remains
+a separate preparation requirement. Raw labeled records and split IDs remain
+private on ARC; the [QA](extension/report/development-seal-v2-20261021-1223943/native_qa.json)
+and [accounting](extension/report/development-seal-v2-20261021-1223943/accounting.json)
+are public. The next step is actual Qwen/B200 memory and training integration
+admission. New model training and new benchmark results remain pending.
 
 ## Additional recovery follow-up: closed without promotion
 

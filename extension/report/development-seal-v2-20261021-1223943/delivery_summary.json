@@ -1,0 +1,325 @@
+{
+  "actions": {
+    "automatic_downstream": false,
+    "generation": false,
+    "splits_chosen": true,
+    "training": false
+  },
+  "archive_bytes": 27581,
+  "archive_sha256": "366c5b86beef9f28a2fea0436898f621c1e3a37b9ea9268cb8d6f2c601066151",
+  "complete": true,
+  "elapsed_seconds": 99,
+  "errors": 0,
+  "executed_source_commit": "4e767433009e6bf8680d9c4b7cc4764785e5f7c8",
+  "exit_code": "0:0",
+  "failures": 0,
+  "gpu_seconds": 0,
+  "job_id": "1223943",
+  "level_diagnostic": {
+    "complete_sha256": "7944215f48b8bd12ba543fe5cf4b543ef1c21cfc674fe35ea4b17c49698cf96c",
+    "directory": "extension/runs/development-level-diagnostic-20261021-1223713",
+    "job_id": "1223713",
+    "level_audit": {
+      "all_surviving_rows": 7132,
+      "math_rows": 6013,
+      "raw_records_unchanged": true,
+      "subject_level_counts": [
+        {
+          "official_level": "Level 1",
+          "rows": 139,
+          "subject": "algebra"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 257,
+          "subject": "algebra"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 303,
+          "subject": "algebra"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 305,
+          "subject": "algebra"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 343,
+          "subject": "algebra"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 36,
+          "subject": "counting_and_probability"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 101,
+          "subject": "counting_and_probability"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 119,
+          "subject": "counting_and_probability"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 132,
+          "subject": "counting_and_probability"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 234,
+          "subject": "counting_and_probability"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 33,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 86,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 115,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 138,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 365,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level ?",
+          "rows": 1,
+          "subject": "geometry"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 45,
+          "subject": "intermediate_algebra"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 139,
+          "subject": "intermediate_algebra"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 227,
+          "subject": "intermediate_algebra"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 271,
+          "subject": "intermediate_algebra"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 350,
+          "subject": "intermediate_algebra"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 34,
+          "subject": "number_theory"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 111,
+          "subject": "number_theory"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 143,
+          "subject": "number_theory"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 149,
+          "subject": "number_theory"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 244,
+          "subject": "number_theory"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 108,
+          "subject": "prealgebra"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 262,
+          "subject": "prealgebra"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 207,
+          "subject": "prealgebra"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 203,
+          "subject": "prealgebra"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 213,
+          "subject": "prealgebra"
+        },
+        {
+          "official_level": "Level 1",
+          "rows": 45,
+          "subject": "precalculus"
+        },
+        {
+          "official_level": "Level 2",
+          "rows": 128,
+          "subject": "precalculus"
+        },
+        {
+          "official_level": "Level 3",
+          "rows": 134,
+          "subject": "precalculus"
+        },
+        {
+          "official_level": "Level 4",
+          "rows": 142,
+          "subject": "precalculus"
+        },
+        {
+          "official_level": "Level 5",
+          "rows": 151,
+          "subject": "precalculus"
+        }
+      ],
+      "unknown_levels": {
+        "Level ?": 1
+      },
+      "unknown_stratum_label": "unknown:Level ?"
+    },
+    "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/development-level-diagnostic-20261021-1223713/complete.json"
+  },
+  "limitations": [
+    "Source-only metadata stratification; no answer-based selection.",
+    "Exact for the declared lexical criterion, not a semantic leakage guarantee.",
+    "Greedy exact-reachability checks are not a globally complete multi-split partition solver.",
+    "This seal records reservations; future selectors must explicitly enforce them.",
+    "No tokenization, model inference, correctness scoring, generation or training occurred."
+  ],
+  "new_benchmark_results": false,
+  "new_gpu_training_started": false,
+  "next_stage": "Bind original-source training exclusions/native cache, then separately reviewed actual-Qwen B200 memory and integration admission. Native230 does not establish production-model feasibility.",
+  "output_sha256": {
+    "calibration.jsonl": "72ab52b7c872b1881dcf223c6a01b3b893b043c89570f27f0452f04d57f40a8a",
+    "calibration_groups.json": "500fb296a5ca6666042144c8c221a81ddcc5c30395c05e3dfda801340a83414f",
+    "calibration_ids.json": "7eac40ce9b947b9e5d4d89b3294905d222fb70ac80c2d33ecff708c76531c8fa",
+    "confirmation.jsonl": "1cfa0d03675d1d4e04f26da25b2652e5b679c9df16f1904eef3a698a7c3b7fca",
+    "confirmation_groups.json": "ac8d9f92fda11626e6e3757ffb3643d98b27877dc3e4a23fa8660238bb6a83b1",
+    "confirmation_ids.json": "b2efc48343b0703d26b16ca8c27435478121825c14ea8f66f4600a61359ad39c",
+    "development.jsonl": "6da250b9dfa1a1bb03be772251a13df30ce8625e466d6e7fa2e505fd0a3d126c",
+    "development_groups.json": "fd12e7c53c309f7c70c0d79b358b417880eb0173b2c1946f91b63e5ca57a592d",
+    "development_ids.json": "5bf7c9d92268a6a7b3820c00799136ae3bb30b148f6ed8e6d9cf72141057f6c0",
+    "reserved_training_pool_ids.json": "d0e128a5c6a730f0bb4e2740aa393f1e10059038488db1d00ee13a0250d853d3",
+    "reserved_training_pool_matches.json": "967930d96caf2554946120b11857d5b2cc65c00ce3c4f1e51540cd7eb82cd0e4",
+    "unused_groups.json": "f717ccedd697a12b4bddad079ea371493589c3e0abe2d28b4f171c0b3ddee602"
+  },
+  "plan_sha256": "e564a57c3123f726fab1e059ddc1d87daec65259b8e950726e2ab316ddf4dedc",
+  "raw_records_or_split_ids_public": false,
+  "reservation": {
+    "exact_match_rows": 67,
+    "lexical_criterion": {
+      "jaccard_denominator": 5,
+      "jaccard_numerator": 4,
+      "normalization": "NFKC casefold whitespace; preserve numbers/operators",
+      "search": "exact inverted index",
+      "shingle_tokens": 3,
+      "short_question_policy": "exact normalized equality when fewer than3tokens",
+      "tokenization": "word-or-single-nonwhitespace-character"
+    },
+    "near_match_rows": 0,
+    "prior_pool_overlap_check": {
+      "previously_scored_reservoir": {
+        "prior_ids": 30000,
+        "reserved_overlap": 0
+      },
+      "prior_advanced_training": {
+        "prior_ids": 15000,
+        "reserved_overlap": 0
+      },
+      "prior_probeA_training": {
+        "prior_ids": 512,
+        "reserved_overlap": 0
+      },
+      "prior_probeB_training": {
+        "prior_ids": 512,
+        "reserved_overlap": 0
+      },
+      "prior_random_training": {
+        "prior_ids": 15000,
+        "reserved_overlap": 0
+      }
+    },
+    "required_future_policy": "Every future training/probe selector must verify this complete seal and exclude every reserved_training_pool_id; all selected labeled groups remain held out.",
+    "reserved_training_pool_ids_sha256": "e11ee4fbf20c541f3856d4f38730fea9998c4bd1ca2a38bcc8905c3bfe55bc15",
+    "reserved_training_pool_rows": 67,
+    "scope": "All selected component members: MATH question; ARC stem and ordered stem-plus-options. Correct answer keys and solution text are never indexed.",
+    "training_pool_rows_scanned": 83029
+  },
+  "schema": "extension-development-seal-delivery-v2",
+  "skipped": 0,
+  "splits": {
+    "calibration": {
+      "domain_rows": {
+        "arc_challenge": 16,
+        "math": 16
+      },
+      "group_count": 32,
+      "group_ids_sha256": "4ad9e2c6d5be4eaa175870bb2f9258065af5abed2bdd27fb555c0850e12ff6dd",
+      "ids_sha256": "37618ae9aa3e732c168029f1ac2131f5772500a3c84537b5f847b0ff938e27cc",
+      "rows": 32
+    },
+    "confirmation": {
+      "domain_rows": {
+        "arc_challenge": 512,
+        "math": 1024
+      },
+      "group_count": 1527,
+      "group_ids_sha256": "6368844426c7213caed7c9adc8548dae278f2673c7da29cc5c6c868735a2a56c",
+      "ids_sha256": "5e614d162aac6dfe5729a9001f070a97b91a7dba53eb9ff5943df8c77657050b",
+      "rows": 1536
+    },
+    "development": {
+      "domain_rows": {
+        "arc_challenge": 256,
+        "math": 512
+      },
+      "group_count": 766,
+      "group_ids_sha256": "26fc87134e369dd9a76574641aa20573a3cfd7311fb3915077abd757f14bf184",
+      "ids_sha256": "9c90f2002e40a7e857c5e73d334f2cf6b95995c003db20c77b2d761cb6d2fca3",
+      "rows": 768
+    }
+  },
+  "terminal_state": "COMPLETED",
+  "test_counts": {
+    "test_development_*.py": 48,
+    "test_extension_*.py": 64,
+    "test_labeled_*.py": 44,
+    "test_preservation_development_seal_v2.py": 17,
+    "test_preservation_retry_submission.py": 21,
+    "test_preserving_*.py": 36
+  },
+  "tests_run": 230
+}

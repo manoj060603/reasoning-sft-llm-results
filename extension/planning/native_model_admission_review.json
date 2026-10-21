@@ -1,0 +1,202 @@
+{
+  "schema": "extension-native-model-admission-review-v1",
+  "artifact_type": "source_planning_not_runnable_code_or_execution_evidence",
+  "status": "proposed_for_separately_frozen_compute_admission",
+  "tested": false,
+  "execution": false,
+  "model_loaded": false,
+  "job_submitted": false,
+  "scientific_choices_sealed": false,
+  "reviewed_source_commit": "c1db50c50ef0ea228315970962843ce996cac113",
+  "scope": {
+    "purpose": "Establish numerical, masking, state-isolation and real-memory feasibility before any preservation-objective pilot. This document does not select a method, recipe, data arm, checkpoint or benchmark winner.",
+    "modes": ["sft", "ce_kl", "asft", "prior_anchored"],
+    "fresh_process_per_mode_and_check": true,
+    "preserve_historical_sources_receipts_models_and_results": true,
+    "no_benchmark_generation_or_outcome_inspection": true,
+    "no_automatic_downstream_admission": true,
+    "current_blocker": "A completed development seal and its reserved_training_pool_ids.json must exist before selecting real smoke-training examples. Parent reports 192 native CPU fixture checks passed in job1223566, but actual v1 sealing failed on its level-stratum guard before allocation; no usable split seal is inferred. A separately reviewed repair and completed seal remain prerequisites."
+  },
+  "source_bindings_reviewed": {
+    "extension/preserving_trainer.py": "3a46929eaff536f8165e8b1388fddc9c54fde0198c84aac3bcb69cf397d507d0",
+    "extension/preserving_objectives.py": "05b079d2da89579436ce53b8a801c0fc51bd6cfef45628c50d23a5af93de3eb4",
+    "extension/objectives.py": "c56bd73d9824284b0393e23812bfcb4d4496fb518296de5fc35c9ec17bd06fde",
+    "tests/test_preserving_trainer.py": "9c2f14ee4023c2b18e059fa5297e469725148fa3d02b2d38b3c1b2c0a6c7dfb7",
+    "tests/test_preserving_objectives.py": "d520dee4691e9186bfa80c44ba8ed67ce610dbe707bd2d20f2327e1bb46d30a6",
+    "extension/report/feasibility-20261020-1222225/complete.json": "8cee12034e7c9f9f6f3334cdac2d3edf5504658ef8000c664761a16887440505",
+    "deadline/report/random_training_runtime.json": "75367f54aefaa523fd1df55b34b2c823be559c95bb013aefe5b06db51173e0fe"
+  },
+  "historical_metadata_context_not_new_admission": {
+    "pinned_runtime": {"torch": "2.9.0", "transformers": "4.57.3", "accelerate": "1.12.0", "safetensors": "0.7.0"},
+    "recorded_gpu": "NVIDIA B200, one device",
+    "base_repository": "Qwen/Qwen2.5-3B-Instruct",
+    "base_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "native_base_directory": "/home/manoj663/.cache/huggingface/hub/models--Qwen--Qwen2.5-3B-Instruct/snapshots/aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "base_identity_receipt": "deadline/artifacts/model_identity.json",
+    "base_identity_receipt_sha256": "81af59dbb365b8559ad0d853dbda245aa4ac3ff0bedc03428e50fed65d7f7ae2",
+    "original_base_weight_files": {
+      "model-00001-of-00002.safetensors": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2",
+      "model-00002-of-00002.safetensors": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"
+    },
+    "base_config_sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b",
+    "base_tokenizer_json_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "base_tokenizer_config_sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "cached_feature_tokenizer_commit": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "features_sha256": "c6ef548173b6b4e93a62fd5c43783ad49a6e3dc9b9437b3b31941ffef8c2b55f",
+    "feature_metadata_sha256": "d69155338e79e63690f3b9fd615a1026489046dbad239e96dd8cf14b91b51afc",
+    "pool_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+    "pool_rows": 83029,
+    "cached_maximum_serialized_tokens": 31776,
+    "cached_maximum_response_span_tokens": 31671,
+    "pool_complete_serialized_fit_rows": {"8192": 51289, "16384": 80140, "32768": 83029},
+    "historical_random_cache": {"rows": 15000, "cutoff": 8192, "truncated_rows": 5806, "supervised_eos_missing_rows": 5806},
+    "qualification": "These are cached native-serialization counts for the prepared population, not untouched100K and not a proof of EOS/correctness or real-model fit. The old trainer used a different memory-CE path. Reusing an old truncated random cache would violate the new complete-response hook and cannot establish long-context admission."
+  },
+  "prerequisites_before_any_real_model_work": [
+    "Freeze a new admission plan, wrapper, unique output root and exact diagnostic settings, then bind their code, helpers, unit tests and native QA hashes. This review alone grants no execution or scheduler admission.",
+    "Verify the actual running single-B200 Slurm allocation, assigned device, GPU UUID, total/free memory, driver/CUDA/runtime versions, user/node/job/step, deadline reserve and new extension ledger admission. Unlimited total GPU hours do not authorize unbounded jobs or bypass the deadline/concurrency guards.",
+    "Verify the completed repaired development seal, every private split/ID/group hash and reserved_training_pool_ids.json. Exclude all reserved pool IDs before choosing any smoke-training row; an optimizer smoke step is training even when its output will be discarded.",
+    "On compute only, verify the original local snapshot revision and all loader-visible model/index/config/tokenizer file hashes against the actual original identity receipt. Require local_files_only=True and trust_remote_code=False. Do not accept historical fine-tuned, probe, merged or recovery weights as fresh initialization.",
+    "Choose short and longest smoke examples by predeclared source/length rules only. Persist their IDs, input hashes and intended presentation sequence before any forward. Never choose them using labeled calibration/development/confirmation answers, model scores or benchmark outcomes."
+  ],
+  "proposed_diagnostic_configuration_to_freeze_before_execution": {
+    "student": "Load the pinned original directly with FP32 parameter storage; all original parameters trainable, no adapter/quantization/offload/sharding/device_map=auto.",
+    "reference": "Independently load the exact same pinned original with FP32 parameter storage; eval(), requires_grad_(False), use_cache=False. Keep it outside the student module, optimizer and saved student checkpoints. The current hooks permit BF16 reference storage, but this initial strict-parity admission proposes FP32 reference storage.",
+    "compute": "BF16 native autocast for both forwards; FP32 objective chunks and FP32 Adam moments; no FP16 scaler.",
+    "model_settings": "One unsharded process, microbatch1, SDPA attention, use_cache=False, gradient checkpointing with explicitly recorded non-reentrant setting, dropout/config checked against the pinned original. Do not alter RoPE, tokenizer, context or attention policy to make the test pass.",
+    "trainer_settings": "Training-only PreservingTrainer factory; remove_unused_columns=False; label_smoothing_factor=0; model_accepts_loss_kwargs=False; compute_loss_func=None; max_grad_norm=0 in TrainingArguments with one explicit finite/clipping callback; eval_strategy=no; push_to_hub=False; fresh Trainer per check.",
+    "diagnostic_hyperparameters_proposal": {"anchored_beta": 0.05, "chunk_tokens": 128, "checkpoint_chunks": true, "short_accumulation": 2, "long_accumulation": 2, "optimizer": "adamw_torch", "learning_rate": 0.000002, "weight_decay": 0.01, "clip_norm": 1.0},
+    "qualification": "These are proposed numerical/memory smoke settings, not a sealed pilot recipe. The final admission plan must fix them before outcomes. A later pilot must match the admitted implementation/precision/shape envelope or receive a new admission."
+  },
+  "required_checks": [
+    {
+      "id": "native_serialization_and_eos",
+      "real_model_required": false,
+      "real_pinned_tokenizer_and_source_required": true,
+      "procedure": "On compute, reconstruct prompt/full tokens from the unchanged source record and native system/user/assistant template, with the historical prefix assertion. Require the full token sequence to match the bound cached length/IDs where those IDs are retained. Mask precisely the prompt; preserve every original response token and actual template tail. Derive and persist the exact terminal tuple from the pinned tokenizer; config EOS is151645, but do not infer the tuple from that ID alone or assume EOS is the final token.",
+      "gate": "No silent truncation, invented EOS, answer rewriting, prompt remapping, suffix guessing or source-row dropping. All shifted active targets remain unchanged; first response token, EOS and any native post-EOS tail remain supervised. Right padding, if used, is contiguous and entirely masked."
+    },
+    {
+      "id": "fresh_original_and_storage_isolation",
+      "real_model_required": true,
+      "procedure": "For every mode/check in a new subprocess, load independent FP32 student and reference from verified original files. Verify actual architecture, vocabulary151936, context32768, EOS151645, no sliding-window use, dropout0, tied embedding semantics, unique parameter names/counts and exact initial values. Verify no shared parameter object or storage between models and every student parameter trainable FP32. Allow only the model's intentional internal tied embedding alias, not student/reference aliasing.",
+      "gate": "Loaded tensor identities correspond to the pinned base, not merely the same repository name. No adapters, stale optimizer states, warm-started candidate weights or cross-mode process/model reuse."
+    },
+    {
+      "id": "zero_update_parity",
+      "real_model_required": true,
+      "procedure": "Before optimizer mutation, compare student/reference on identical short native inputs under the exact declared autocast/backend and train/eval configuration. Verify original dropout0 and quantify direct versus Accelerate-prepared forward differences. Cast only the small comparison outputs to the same dtype for comparison. Record max/RMS logit difference, unweighted CE difference, full forward KL and ASFT/prior weight differences. No-grad diagnostic calls must not be counted as training presentations.",
+      "proposed_gates_to_freeze": {"maximum_absolute_logit_difference": 0.001, "maximum_absolute_mean_ce_difference": 0.00001, "maximum_absolute_mean_forward_kl": 0.00001},
+      "gate": "All quantities finite; frozen predeclared tolerances pass; p=q implies ASFT and prior weights/losses agree within the same declared tolerance. A failure triggers diagnosis and a separately reviewed attempt, not a threshold change after viewing results. These proposed tolerances are not measured findings."
+    },
+    {
+      "id": "real_forward_mask_and_external_objective",
+      "real_model_required": true,
+      "procedure": "Exercise the actual native Qwen forward with labels omitted and all logits returned. Apply exactly one shift student[:, :-1] versus labels[:, 1:], identically for the reference. On a short response, compare external SFT CE to an independent shifted full-vocabulary CE oracle; check masked positions and first-answer/EOS/tail positions. Exercise each of sft, ce_kl, asft and prior_anchored, including beta0 identity checks where applicable, against the already tested objective formulas.",
+      "gate": "No second causal shift, built-in CausalLM loss, chosen-token KL substitute, denominator by weight sum or hidden num_items_in_batch normalization. Require no historical memory_ce.install call/global loss mapping patch; record imported source hashes and loss mapping identity before/after."
+    },
+    {
+      "id": "actual_trainer_update_and_partial_tail",
+      "real_model_required": true,
+      "procedure": "For each mode, run a disposable actual PreservingTrainer on three distinct complete unreserved source examples with unequal active lengths and total native length at most512. Choose them before any forward by ascending cached(total_tokens,id), taking the first three distinct active lengths; fail if capacity is insufficient. Use microbatch1 and accumulation2: two updates, the second from one example. Capture actual backward/update events and a bounded independent gradient/parameter-delta oracle. Verify loss is an equal-example mean, not a token-weighted mean; do not divide again by configured accumulation. Use a nonzero diagnostic learning rate and confirm at least one student value changes below a BF16-parameter rounding scale while storage remains FP32.",
+      "gate": "Exactly three declared presentations and two updates, finite loss and pre-update gradient norm, correct tail denominator, and no unexplained extra backward/model-loss calls. Tiny all-parameter gradient oracles remain the exhaustive algebra check; this actual-model check validates Qwen/Trainer/AMP integration."
+    },
+    {
+      "id": "actual_longest_complete_eligible_row",
+      "real_model_required": true,
+      "procedure": "Using verified features and the completed development reservation, deterministically choose maximum cached serialized length among future-training-eligible unreserved pool rows with a valid full native response; break ties by source ID. Persist the selection before inference, then revalidate its actual native tokens and suffix. The old all-pool maximum was31776; the eligible maximum may differ after reservations. Run that unchanged full example, not its old8K prefix.",
+      "gate": "Record actual T and active response length. Do not crop or silently pad it to call the check32K. This admits at most the measured source/shape envelope; a later example longer than the tested maximum or new32768-token source requires an explicit additional test. Any optional masked-padding stress test must be separately labeled and cannot replace the actual complete-example test."
+    },
+    {
+      "id": "long_sequence_through_first_adam_step",
+      "real_model_required": true,
+      "procedure": "For each of four modes in a fresh process, reload fresh student/reference and empty Adam state. Present the chosen longest example twice under a declared disposable two-presentation schedule with accumulation2, then execute the first Adam step. The second backward includes already resident accumulated gradients. This deliberate repeat is a diagnostic schedule, not a unique-example pilot. Capture synchronized memory/time after load, reference forward, student forward and output conversion, objective, each backward, finite/clipping guard, first Adam allocation/update and post-update scan.",
+      "gate": "All four complete without OOM or nonfinite values; first-step moments exist, are finite FP32 and cover exactly student parameters; final student parameters are finite FP32. Record actual timings/peak memory and fresh output binding. A forward-only or backward-only success is insufficient."
+    },
+    {
+      "id": "precision_and_real_attention_dispatch",
+      "real_model_required": true,
+      "procedure": "Record student/reference parameter dtypes, actual returned logits dtypes before objective conversion, objective scalar dtype, gradient/moment dtypes, autocast state, active SDPA backend/flash eligibility and any fallback. Check returned student logits after Accelerate preparation, not only raw unprepared model output. Do not request hidden states/attentions or KV caches.",
+      "gate": "FP32 storage and moments with BF16 compute remain declared. No silent reference downcast, optimizer replacement, attention fallback with unmeasured memory, sequence reduction or chunk-size change to fit. A math attention fallback must be explicitly measured and accepted in a new bound plan, not assumed equivalent in resource cost."
+    },
+    {
+      "id": "reference_and_checkpoint_isolation",
+      "real_model_required": true,
+      "procedure": "Stream-verify reference tensor identities before and after all updates; require eval mode, requires_gradFalse and gradNone throughout. Check optimizer group identity equals every student parameter exactly once and excludes the reference. Save a disposable student checkpoint; verify its complete tensor key/shape/dtype/finite inventory equals the trained student, contains no extra reference prefix/weights and reloads with identical short native forward output. Compare saved student content to post-update student, not simply to expected key names.",
+      "gate": "No reference mutation, registration under student, optimizer state or duplicated reference checkpoint. Full saved-weight finite scans are mandatory because current callback checks are not a transactional post-step rollback."
+    },
+    {
+      "id": "bounded_metrics_and_update_failure_behavior",
+      "real_model_required": true,
+      "procedure": "Inspect only detached bounded scalar diagnostics: loss, CE, weighted CE, forward KL, effective weight, active/EOS/non-EOS counts and means, pre-clip norm and clipping status. Verify complements reconcile with active-token means. Confirm reference gradients absent. Preserve fatal first-failure receipts; any deliberately injected nonfinite pre-step oracle belongs in disposable tiny native tests rather than modifying real source/model weights.",
+      "gate": "No full logits/graphs in logs, callbacks, return_outputs, checkpoint metadata or history. Known nonfinite loss/gradients/moments abort before a new update where the guard owns that check. Optimizer faults discovered after step can already have mutated state: no rollback or safe-resume claim."
+    }
+  ],
+  "memory_review": {
+    "status": "static_tensor_estimates_not_measured_peak",
+    "batch": 1,
+    "vocabulary": 151936,
+    "lengths_to_report": [8192, 16384, 31776, 32768],
+    "one_full_fp32_logits_gib": {"8192": 4.63671875, "16384": 9.2734375, "32768": 18.546875},
+    "one_full_bf16_logits_gib_at32768": 9.2734375,
+    "two_full_fp32_logits_gib_at32768": 37.09375,
+    "formula": "B*T*V*element_bytes / 2^30; at the actual eligible maximum substitute measured T rather than claiming32768.",
+    "model_state_lower_bound": "For actual unique parameter count P, FP32 student weights+gradients+two Adam moments require approximately16P bytes; separate FP32 reference adds4P. At roughly3.086B parameters that is about57.5GiB before logits, activations, attention workspaces, casting and optimizer temporaries. Verify actual P and tied storage on compute.",
+    "accelerate_caveat": "Accelerate1.12.0 native-AMP model preparation converts model outputs recursively to FP32. Student output logits can therefore be full FP32 despite BF16 matmuls, with a transient BF16 source and FP32 destination. The independently held reference is not prepared by Accelerator in these hooks and commonly returns BF16 under its own autocast, but measure this and conservatively budget both outputs as FP32.",
+    "chunking_caveat": "128-position FP32 objective chunks bound log-softmax/KL temporaries and checkpoint recomputation; they do not remove either complete resident logit tensor or its gradient/conversion allocations. EOS diagnostics also allocate vocabulary chunks. AdamW CUDA foreach behavior can add parameter-sized temporaries; no peak estimate based only on persistent moments is sufficient.",
+    "measurement": "Synchronize CUDA before/after named stages; reset peak counters only at declared boundaries; report max_memory_allocated, max_memory_reserved, mem_get_info, total device bytes and process/driver memory sampling where available. Maintain a whole-process peak as well as stage peaks. Do not empty-cache between stages to manufacture a lower reported envelope.",
+    "proposed_admission_headroom": "After measured whole-process peak, retain at least max(16GiB,10% of actual reported usable device memory). This is a proposed conservative gate to freeze before execution, not an observed margin or guaranteed production bound.",
+    "failure_policy": "OOM/nonfinite/insufficient headroom means not admitted. Record the failing stage and terminate the unique attempt. Any streaming-head/custom-autograd/AMP-wrapper/chunk/context/reference-storage/optimizer change is separate source work requiring equivalence QA and a new real-model admission."
+  },
+  "resource_proposal_not_requested_or_admitted": {
+    "cpu_preparation": "Separate normal CPU allocation for source/weight hashing, tokenizer/cache verification and prior native-QA binding. No login-node model/data processing. Reuse verified source snapshots without processing benchmark outcomes.",
+    "gpu": "One B200 in one process, exclusive assigned device; sequential fresh subprocesses, never four simultaneous models/modes.",
+    "gpu_wall_time_seconds_upper_bound_proposal": 7200,
+    "host_cpus_proposal": 8,
+    "host_ram_gib_proposal": 128,
+    "scratch_free_gib_proposal": 160,
+    "workload_bound": "Four short three-example/accumulation2 checks plus four longest-example two-presentation/accumulation2 checks: at most20 backward presentations and12 optimizer updates, all disposable. No retries, pilot epochs, generation, checkpoint ranking or follow-on jobs in this admission allocation.",
+    "timing_qualification": "Two hours is a proposed fail-closed scheduler bound, not a measured ETA. Loading/hashing and first-step memory scans may dominate; collect actual stage seconds before planning pilot throughput.",
+    "deadline": "Complete within the parent-approved reserve before2026-10-28T03:59:00+00:00; job admission must recheck after queue delay. The exact reserve and concurrency remain parent-owned prospective choices."
+  },
+  "existing_tiny_tests_versus_new_real_model_evidence": {
+    "tiny_native_scope": [
+      "All-parameter manual causal gradients for four modes; exactly-once shift, response/EOS masking and detached diagnostics.",
+      "Pinned Trainer equal-example accumulation with unequal target lengths and a partial final update.",
+      "Reference isolation, initial zero KL, precision/optimizer checks, nonfinite pre-update abort and bounded return_outputs.",
+      "These fixtures do not allocate Qwen3B logits, select actual complete source rows, exercise B200 SDPA dispatch or measure first Adam-step memory."
+    ],
+    "new_real_scope": [
+      "Actual pinned bytes, tokenizer suffix, full Qwen architecture and prepared BF16/FP32 forward parity.",
+      "Full complete eligible long-context forward/backward/first-step memory for every objective.",
+      "Reference immutability, actual checkpoint byte/tensor identity and all-parameter/moment finite scans.",
+      "Measured runtime and resource envelope for the exact future integration, not historical memory_ce."
+    ],
+    "status": "Existing fixture results and any parent-reported192-check receipt must be linked by their actual hashes. This planning file supplies no new test result or admission receipt."
+  },
+  "pending_runner_obligations_before_any_real_pilot": [
+    "Build a separately reviewed runner/cache adapter with explicit selected source IDs, original-pair hashes, complete native tokens/suffix/masks, cutoff and all exclusions, including the repaired development reservation. Current hooks neither load data nor establish original initialization from in-memory tensors alone.",
+    "Bind a deterministic presentation order by stable source identity; preserve row_index with remove_unused_columns=False. Track actual loss/backward presentations, successful update boundaries, active tokens and partial-tail counts. Dataloader prefetch or training_forward_examples alone is not a consumed-order receipt.",
+    "Freeze epochs, expected row/presentation multiplicity, shuffle seed, batch/accumulation, update schedule, objective/beta, optimizer/scheduler, clipping, precision, attention and checkpoint policy. Do not carry the historical hardcoded15K/1875/8K contract into an unreviewed smaller pilot.",
+    "Current PreservingTrainer explicitly rejects resume_from_checkpoint and repeated train calls. Until complete resume and consumption-state support is implemented and tested, pilots must be bounded fresh runs; a failed run cannot be silently continued or restarted into the same output.",
+    "A future resumable checkpoint must atomically bind student/optimizer/scheduler/RNG/Trainer state, exact consumed order/update-boundary receipt, source/cache/reference/code/recipe hashes and partial accumulation policy. Interrupted-versus-uninterrupted equivalence, mismatch rejection and no duplicate/skipped presentations require new native fixtures before resume admission.",
+    "Final completion must scan every saved student parameter for finite FP32 values, verify full tokenizer/config/weights inventory and optimizer precision if retained, and record input/output unchanged proofs. Pre-update guards do not prove final saved-model integrity.",
+    "Keep development/confirmation single-use and benchmark evaluation/admission separate. No numerical smoke output is a candidate result, correctness score, SOTA claim or permission to optimize against public benchmark outcomes."
+  ],
+  "required_receipt_fields_for_future_admission": [
+    "Frozen plan, unique attempt/output, full code/test/helper hashes and native-QA evidence; execution start/end job/node/step/allocation/GPU identity and deadline guards.",
+    "Full original base/tokenizer/config/index/shard inventory plus actual loaded tensor/parameter identity, separate reference identity and source/development-reservation/cache hashes.",
+    "Before-forward source-ID/shape/order seal; exact native terminal tuple and active/prompt lengths; no protected split/source overlap; declared repeated diagnostic presentations.",
+    "Per-mode process/start identity; initialization/zero-parity values; all objective/mask/update assertions; actual logits/parameter/gradient/moment dtypes and SDPA dispatch.",
+    "Stage and whole-process GPU memory peaks, device usable capacity/headroom, host-memory peak, first optimizer moment allocation, timings and any exception/OOM stage.",
+    "All finite/reference-unchanged/optimizer-exclusion/checkpoint-isolation results; saved tensor/file hashes; actual presentation/update counts; no generation/training-pilot/downstream flags.",
+    "Complete=true only if every required mode/gate passes and all input/code snapshots remain unchanged. Partial or failed receipts remain explicit and cannot authorize pilots."
+  ],
+  "primary_source_citations": [
+    {"title": "Pinned Qwen2.5-3B original config", "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json", "use": "Vocabulary/context/EOS/architecture/dropout configuration; actual local bytes still require verification."},
+    {"title": "Transformers4.57.3 Qwen2 forward", "url": "https://github.com/huggingface/transformers/blob/v4.57.3/src/transformers/models/qwen2/modeling_qwen2.py#L379", "use": "Without labels, the native forward emits head logits without invoking its built-in loss. The reviewed external path requests all positions."},
+    {"title": "Accelerate1.12.0 native-AMP wrapping", "url": "https://github.com/huggingface/accelerate/blob/v1.12.0/src/accelerate/accelerator.py#L1633", "use": "Prepared forwards are autocast and wrapped with recursive FP32 output conversion."},
+    {"title": "Accelerate1.12.0 output conversion", "url": "https://github.com/huggingface/accelerate/blob/v1.12.0/src/accelerate/utils/operations.py#L765", "use": "Returned half/BF16 tensor outputs can be converted to FP32; native measurement must include the conversion peak."},
+    {"title": "Transformers4.57.3 Trainer", "url": "https://github.com/huggingface/transformers/blob/v4.57.3/src/transformers/trainer.py", "use": "With custom loss kwargs disabled and no competing compute_loss_func, training_step divides by actual current accumulation count, including the final tail. Do not add another configured-GA division."}
+  ]
+}

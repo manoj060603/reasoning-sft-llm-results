@@ -1,0 +1,35 @@
+{
+  "files": {
+    "extension/development_source_install_receipt.json": {
+      "bytes": 4903,
+      "sha256": "0eb6cf662538d055e3cc6a5ec4cafbd767ec56401afcb86256d92f8a322430b2"
+    },
+    "extension/job_ledger.json": {
+      "bytes": 23927,
+      "sha256": "efb72a659abc654eddbb79f2096738f83ec835435fa423fe8a08eb2ae8436525"
+    },
+    "extension/logs/extension-development-seal-1223566.err": {
+      "bytes": 23334,
+      "sha256": "c06e33d7e5c25224f29cfe718a0024088e845700159a8cececc57202540356a9"
+    },
+    "extension/logs/extension-development-seal-1223566.out": {
+      "bytes": 455,
+      "sha256": "974403ad16942ac7ea13805ba89b0e3e087434e1c051548c01788a32fea01d1e"
+    },
+    "extension/operations/development-seal-1223566-failure.json": {
+      "bytes": 1089,
+      "sha256": "62072e4644341ccf315525646ebc3c9a9025425586c3a22c1226f6a281aab8ac"
+    },
+    "extension/runs/development-seal-20261021-1223566/native_qa.json": {
+      "bytes": 11962,
+      "sha256": "cc64b1a5bc9a2f2778adab28d0460a645a6a67b821a14326fe008edc07f4c9cb"
+    },
+    "extension/runs/development-seal-20261021-1223566/started.json": {
+      "bytes": 5996,
+      "sha256": "4124e05b2289ec0bb4a2a517a61a5f009923f910ac50acf1f15f94f1f4b173e0"
+    }
+  },
+  "job_id": "1223566",
+  "raw_labeled_records_included": false,
+  "schema": "extension-development-failed-native-evidence-v1"
+}

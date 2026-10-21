@@ -1,0 +1,142 @@
+{
+  "schema": "extension-preservation-pilot-design-draft-v2",
+  "status": "prospective_draft_unsealed_unadmitted",
+  "authorizes_execution_or_downstream": false,
+  "changes_frozen_sources_or_historical_results": false,
+  "purpose": "Distinguish source selection from preservation during SFT on unchanged original pairs. A seven-cell short mechanism screen is separate from the final 15000-pair recipe, replication and untouched confirmation.",
+  "evidence": {
+    "source_audit": "extension/report/feasibility-20261020-1222225/complete.json",
+    "source_audit_sha256": "8cee12034e7c9f9f6f3334cdac2d3edf5504658ef8000c664761a16887440505",
+    "labeled_audit": "extension/report/labeled-feasibility-20261020-1222926/complete.json",
+    "labeled_audit_sha256": "6c225e606b0086649fa6d578d6a846f37594b893eefcee117ead22e8fb2c3458",
+    "measured_metadata_only": [
+      "All 83029 finalized source outputs start with one balanced think pair. Prior advanced already had complete balanced boxed targets, lower median repetition and lower branch-keyword density than random; a new tag/branch filter alone is a weak explanation for its regression.",
+      "Cached native token features show all 83029 serialized originals fit32768 with32-token reserve; maximum serialized length is31776. This establishes cached source capacity, not current export equality or measured training-memory feasibility.",
+      "Prior random lost5806 original tails at8192; advanced lost none. Its old results therefore cannot isolate source quality, exposure and truncation.",
+      "Independent labeled feasibility retained6013 MATH and1119 ARC-Challenge records after declared exclusions; these are records rather than an assertion about independent component counts."
+    ],
+    "current_split_status": "The first development sealer passed192 native CPU checks but failed before split allocation on the MATH level schema. Exact development IDs, group allocations, training exclusions and their final receipt are pending a separately evidenced CPU repair. No split or model outcome may be assumed from the capacity counts."
+  },
+  "prerequisites_before_any_gpu_work": [
+    "A successful immutable development seal must bind exact calibration/development/confirmation record and group IDs, answer hashes, source revisions and every matching training-pool exclusion. Preserve the failed seal and diagnostic history; do not change its28 reviewed sources.",
+    "Resolve the actual official MATH level schema using the finite CPU metadata diagnostic. Unknown-level records may receive only an explicitly observed unknown stratum under a new frozen plan; do not infer difficulty, rewrite labels, silently drop records or adapt strata using model performance.",
+    "Use the existing target sizes only after exact allocation succeeds: calibration16MATH+16ARC, development512MATH+256ARC, confirmation1024MATH+512ARC, seed20261021. Keep whole connected question groups together and leave cross-domain components unused as the sealed CPU plan specifies.",
+    "Exclude all reserved calibration/development/confirmation groups from every training, probe and base-loss selection-scoring operation, including source near-matches identified by reserved_training_pool_ids. Exclude all final nine benchmark question identities and declared lexical near-duplicates without reading their answers or performance for selection.",
+    "Freeze exact original-base/tokenizer files, rendered chat prefixes, complete original assistant targets and actual native EOS. Verify untruncated export lengths on compute; do not attach EOS to a truncated prefix or remove think tags to make a row fit.",
+    "Run a separately admitted worst-length native GPU feasibility check on the actual largest complete sequence, plus a typical sequence, for ordinary CE and the reference-bearing objective. Measure peak memory, finite forward/backward/optimizer updates, reference isolation and runtime. A tiny-model QA pass does not establish32K real-model fit.",
+    "Seal all training, scoring, inference, ranking, confirmation, seed, model-identity and finite reservation rules before their first GPU job. The user's unlimited total GPU authorization does not replace finite per-stage time limits and deadline guards."
+  ],
+  "training_population_and_integrity": {
+    "population": "The broad canonical prepared original-source population after benchmark and reserved-development exclusions. Neither length, boxed-answer presence, branch words, base loss nor repetition may be used to condition the random control's sampling population.",
+    "assignment_disclosure": "This is uniform sampling from a cleaned canonical population derived from the100K source, not literal uniform sampling of all raw100K row indices. Preserve and disclose deduplication/decontamination and exact exclusions. Resolve any stricter assignment interpretation before freezing the new dataset recipe.",
+    "prior_row_reuse": "All models start from original Qwen. Reusing an old training row is not inheriting its trained weights, but old-row/scored-reservoir overlap must be recorded. Do not silently use old probe gains or previous model outcomes as the new selection score.",
+    "R": "Uniformly draw exactly15000 unique canonical IDs without replacement from that broad population using random.Random(20261021).sample on sorted IDs. Freeze the draw once; do not reroll or remove long/unboxed examples. Export exactly the unchanged source strings with explicit system/instruction/input/output mapping.",
+    "S": "Choose exactly15000 unique original pairs from the same population using a source-only compatibility-and-coverage rule. Permit R/S overlap. Use the random draw's topic-by-full-serialized-length cell counts as S quotas to reduce distribution and length confounding.",
+    "proposed_selector_to_seal": "Within each cell allocate floor(quota/2) slots to smallest frozen-original mean supervised-token CE, with stable ID ties, and fill remaining slots by seeded coverage sampling from remaining cell members. This fixed50percent mixture is a proposed policy, not a validated optimum. No development labels, generated answer agreement, benchmark scores or old probe weights enter it.",
+    "feature_prerequisite": "Recompute or validate real topic assignments for the full new32K population. The old cluster64 sentinel covered47614 unfitted rows and must not be treated as one learned topic. Proposed fixed length bins are serialized counts(0,2048],(2048,4096],(4096,8192],(8192,16384],(16384,32768]. Freeze feature code, topic fit and source/model/tokenizer provenance before scoring.",
+    "target_integrity": "Each final arm consumes all15000 original examples exactly once, complete including EOS, with no dropped examples, rewritten reasoning, answer-only targets or prefix truncation. Every ID/export/token-cache digest and actual consumption receipt must reconcile.",
+    "common_training_cutoff": 32768,
+    "cutoff_condition": "All final training arms and the proposed mechanism screen use the same32768 cap only after measured native memory feasibility. If a fresh export violates the cap or full-reference training does not fit, stop and prospectively revise memory/backend resources. Do not change the broad random draw, silently truncate it or run different caps by objective."
+  },
+  "pilot": {
+    "purpose": "Mechanism screening on2048 original pairs per data arm, not a substitute for a final15000-pair run.",
+    "rows_per_arm": 2048,
+    "data_subset": "Freeze nested R/S subsets before generation. Draw the R prefix from its seeded permutation, then choose an S subset with the same full-length/topic cell counts. Objectives within an arm receive identical IDs and order. No forced disjointness or outcome-based replacement.",
+    "matrix": [
+      {"cell": "R_CE", "data": "R", "objective": "sft", "learning_rate": 0.000002, "beta": 0},
+      {"cell": "S_CE", "data": "S", "objective": "sft", "learning_rate": 0.000002, "beta": 0},
+      {"cell": "R_KL", "data": "R", "objective": "ce_kl", "learning_rate": 0.000002, "beta": 0.05},
+      {"cell": "S_KL", "data": "S", "objective": "ce_kl", "learning_rate": 0.000002, "beta": 0.05},
+      {"cell": "R_ASFT", "data": "R", "objective": "asft", "learning_rate": 0.000002, "beta": 0.05},
+      {"cell": "R_PRIOR", "data": "R", "objective": "prior_anchored", "learning_rate": 0.000002, "beta": 0.05},
+      {"cell": "R_CE_HALF_LR", "data": "R", "objective": "sft", "learning_rate": 0.000001, "beta": 0}
+    ],
+    "training": {
+      "initialization_and_reference": "Every run starts from the exact original Qwen checkpoint; frozen reference is that same checkpoint in evaluation mode. No previously trained SFT, recovery interpolation, EMA, or stronger teacher.",
+      "full_parameter": true,
+      "training_cutoff": 32768,
+      "global_batch": 8,
+      "updates": 256,
+      "training_seed": 20261021,
+      "schedule": "Use the prefix of a predeclared1875-update full-run schedule, rather than introducing a separate short-run LR-decay schedule. Proposed inherited schedule is cosine with warmup0.03; exact implementation must be frozen before execution.",
+      "checkpoints": [64, 256],
+      "ranking_checkpoint": 256,
+      "checkpoint64": "Source training/memory/EOS/gradient diagnostics only; no alternate development-checkpoint ranking.",
+      "precision": "Verified FP32 trainable master parameters and optimizer moments, BF16 autocast, gradient checkpointing, complete response-only supervision including EOS, correct partial accumulation tails and finite-update checks.",
+      "objective_semantics": "CE+KL uses unweighted CE and full-vocabulary forwardKL(original||student). ASFT weights are detached online target probabilities; prior_anchored weights are detached frozen-original target probabilities. Reference is detached. All modes divide each example by every active supervised token then average examples, never by weight sums.",
+      "coefficient_status": "LR/beta values are single proposed values, not measured optimal settings or admitted hyperparameters. Freeze them before GPU execution; do not sweep them on final benchmark outcomes."
+    },
+    "causal_comparisons": {
+      "selected_data": ["S_CE minus R_CE", "S_KL minus R_KL"],
+      "anchor_only": ["R_KL minus R_CE", "S_KL minus S_CE"],
+      "probability_weighting": ["R_ASFT minus R_KL", "R_PRIOR minus R_KL", "R_PRIOR minus R_ASFT"],
+      "step_size": "R_CE_HALF_LR versus preservation arms is a basic lower-step-size control. It does not exactly match Adam update geometry; constant loss scaling is not equivalent because Adam approximately cancels constant scale."
+    },
+    "required_exposure_and_behavior_receipts": [
+      "Full IDs/order, original and serialized target hashes, actual active-token/EOS counts, zero truncation/drop counts, examples and optimizer updates consumed.",
+      "Per-arm supervised-token sums and length distributions. Matching example counts or coarse length-bin counts is not exact token-exposure matching.",
+      "Plain CE, weighted CE, full KL, effective-weight distribution, EOS/final-answer/think-region weights and probabilities, gradient norms and actual parameter-update norms.",
+      "Finite trainable tensors and optimizer states, frozen-reference no-grad/no-optimizer proof, peak allocated/reserved memory and actual timings.",
+      "Per-question eight correctness flags, finish reasons, generated token counts, extraction failures counted incorrect, and exact repetition definition. Public receipts omit source answers and generated text."
+    ]
+  },
+  "development": {
+    "input": "The successfully sealed512MATH+256ARC development records/groups only. Calibration16+16 is for prompt/grader/runtime setup, never ranking. Do not reuse the viewed64/192/192 source screens as unseen validation.",
+    "sampling": {"n": 8, "max_new_tokens": 8192, "temperature": 0.6, "top_p": 0.95, "seed": 20261021, "paired_question_seeds": true},
+    "roles": "Original base, all seven fixed step256 pilot cells; published incumbent may be an explicitly unranked historical reference. Match prompt, native tokenization, context budget, model precision, hardware and grader.",
+    "metrics": "Within each domain p1 is mean correctness across eight responses per record and p8 is any-correct among those eight. Two-domain macro weights MATH and ARC equally; do not pool their unequal row counts.",
+    "gates": [
+      "All records and protocol/identity bindings are complete and paired; grader exceptions or partial coverage block ranking. Unparseable generated answers count incorrect and are disclosed.",
+      "Per domain, p1 is at least original minus1percentage point and p8 at least original minus2points.",
+      "Per domain, length-finish rate is at most original plus1percentage point and mean repetition at most original plus0.01 under the exact same sampling cap. Do not relax this ceiling to a collapsed R_CE control.",
+      "An improvement candidate must exceed original and R_CE on equal-domain p1 and must be no lower than either on p8. These are operational point-estimate screens, not a statistical superiority claim."
+    ],
+    "ranking": "Rank eligible cells by equal-domain p1, then p8. Exact ties use the fixed order S_CE,R_CE_HALF_LR,S_KL,R_KL,R_PRIOR,R_ASFT. R_CE is a control and cannot strictly beat itself. If none qualifies retain the prior delivered results and report a negative screen.",
+    "assignment_candidate_promotion": "Direct promotion of a selected-data recipe is supported only for S_CE or S_KL, for which a matched R objective exists in this screen. Require that selected-data cell also exceed its matched R cell on p1 and not lose p8 before claiming that selection helped.",
+    "weighted_or_lower_lr_winner": "A winning R_ASFT,R_PRIOR or R_CE_HALF_LR identifies an objective/step-size finding on R. It does not justify silently transferring that recipe to S. A prospective S counterpart is required before claiming or promoting a combined selection/objective improvement. This is an unresolved comparison, not an automatically admitted eighth run."
+  },
+  "full_run_and_replication": {
+    "when": "After one exact recipe is prospectively promoted and all full-run hyperparameters, source IDs and controls are frozen. Restart all roles from original base; do not continue the pilot checkpoint.",
+    "data": "The same sealed15000 R and15000 S unchanged original pairs, complete at the common32768 cap.",
+    "seeds": [20261022, 20261023],
+    "paired_seeds": true,
+    "roles": [
+      "S under the single promoted objective/LR: selected-data candidate",
+      "R under exactly the same objective/LR: isolates the source selection effect",
+      "R under ordinary CE with otherwise identical full recipe: assignment-style random SFT baseline"
+    ],
+    "deduplication": "When the promoted objective/LR is ordinary CE, the latter two roles are the same physical run, not duplicate evidence.",
+    "example_exposure": "One complete pass, globalbatch8,1875optimizerupdates, all15000 IDs once per model. Disclose unequal supervised-token totals across R and S rather than claiming matched compute/exposure.",
+    "no_seed_selection": "Train and report both fixed seeds. Do not select the better seed, add a third seed after inspecting confirmation, drop a failed seed silently, or choose a checkpoint from official benchmarks. Operational failures require reconciliation under the unchanged recipe."
+  },
+  "single_use_confirmation": {
+    "when": "Only after every predeclared full model/control/seed is frozen and complete; then run the untouched1024MATH+512ARC confirmation split once.",
+    "sampling": {"n": 8, "max_new_tokens": 32768, "temperature": 0.6, "top_p": 0.95, "seed": 20261021, "paired_question_seeds": true},
+    "roles": "Original plus all predeclared full-run roles/seeds; no new candidate or model switch based on confirmation.",
+    "aggregation": "Average per-seed p1 and per-seed p8 with equal seed weight. Never combine two seeds'16 responses and label any-correct-over16 as p8.",
+    "gates": [
+      "All protocol/completeness and per-domain retention/length/repetition gates above pass under the matched32K confirmation protocol.",
+      "The preselected candidate exceeds original and ordinary R_CE on both equal-domain p1 and p8 point estimates. To claim selection helped, it also exceeds the same-objective R control on p1 without losing p8.",
+      "Apply the fixed two-seed mean for operational acceptance; also disclose each seed and every domain regression. No retrospective better-seed acceptance.",
+      "Failure closes this confirmation round. Do not test the next pilot cell, change beta/LR or checkpoint, or call these questions fresh in a later round."
+    ],
+    "uncertainty": "Predeclare10000 paired normalized-question-group bootstrap draws, seed20261019, stratified by domain. Resample all records and both fixed training-seed results belonging to a group together; preserve record weighting within domain and equal domain macro. Report95percent intervals versus original, R_CE and matched R objective. These condition on the fixed trained models/outputs and are unadjusted for multiple comparisons; two training seeds do not quantify general training-seed uncertainty.",
+    "claim_limit": "Point-estimate acceptance is an operational decision. Intervals including zero do not establish improvement or equivalence. These split sizes do not reliably resolve one-point effects. ARC is a science retention guard and does not establish GPQA, Chinese-test or every-benchmark gains."
+  },
+  "final_benchmark_and_delivery": {
+    "protocol": "Only the single preselected recipe and its predeclared matched controls/seeds receive the unchanged all-nine n8/32K evaluation. Reuse an original reference only if native audit proves identical data/ordered IDs/protocol/grader/evaluator/hardware/version identities; otherwise rerun that reference under a separately admitted fixed protocol.",
+    "no_ranking": "Official outcomes never choose a recipe, seed, checkpoint, interpolation, length penalty or stop setting. Preserve every evaluated result and every individual regression.",
+    "success_labels": "Both supplied-eight equal-benchmark macro p1 and p8 above original is the primary point-estimate objective. Every individual official task/metric above original is the stronger16-comparison goal. Neither implies statistically established general superiority; AIME25 is separate auxiliary evidence.",
+    "historical_tests": "The official tests have already been viewed in prior rounds; label later benchmark comparisons as having that exploratory history even with a fresh prospective development/confirmation plan.",
+    "assignment_artifacts": "Deliver original15000-pair selected dataset, broad random dataset, exact full trained weights/config/tokenizer, native matched audits, fixed-run uncertainty, source/receipt provenance and an honest final report. A preservation-only gain on R does not establish an advanced selection-method gain."
+  },
+  "unresolved_causal_and_operational_limits": [
+    "The seven-cell screen lacks S_ASFT,S_PRIOR and S_lowerLR. A complete data-by-objective comparison would require prospectively adding the missing counterparts; no interaction benefit may be inferred from the seven cells.",
+    "Short2048-pair behavior may not predict full15000-pair behavior even with a shared schedule prefix. A failed short screen does not prove all full-duration methods fail.",
+    "Full-vocabulary KL on teacher-forced source prefixes need not preserve sampled free-generation prefixes. The32K confirmation is essential and still cannot promise the final domains.",
+    "Online probability weights may reinforce current preferences; frozen-prior weights can suppress novel correct steps or EOS. The prior+KL combination and equal-example normalization are adaptations, not exact reproductions of every paper recipe.",
+    "Topic/coarse-length matching cannot perfectly match supervised tokens, sample difficulty, language, teacher correctness or gradient scale. Log these differences and avoid a unique-cause claim.",
+    "The proposed compatibility score rewards existing base support, not verified learning potential. Keep the fixed coverage fraction and record full distributions; do not advertise guaranteed SOTA or all-benchmark gains.",
+    "Native worst-length32K real-model memory/runtime, final eligible IDs, full topic features, complete EOS cache exports, final compute reservations and the successful repaired split receipt remain unresolved."
+  ]
+}

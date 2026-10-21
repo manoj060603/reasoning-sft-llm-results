@@ -1,0 +1,18 @@
+{
+  "archive_bytes": 7881,
+  "archive_sha256": "a51d64175a298d7a001b47b959c3f1435bcc26f5ed49ee62da032350b574d34a",
+  "complete": true,
+  "elapsed_seconds": 2,
+  "exit_code": "0:0",
+  "failed_pre_scheduler_request_preserved": true,
+  "gpu_seconds": 0,
+  "job_id": "1223713",
+  "next_action": "Versioned split sealer keeps this row unchanged in an explicit metadata stratum, then native QA and real data sealing.",
+  "no_labels_or_solutions_inspected": true,
+  "no_splits_or_model_outcomes": true,
+  "official_unknown_level_counts": {
+    "Level ?": 1
+  },
+  "schema": "extension-development-level-diagnostic-delivery-v1",
+  "terminal_state": "COMPLETED"
+}

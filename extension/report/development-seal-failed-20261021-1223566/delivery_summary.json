@@ -1,0 +1,18 @@
+{
+  "archive_bytes": 12739,
+  "archive_sha256": "d9fe8f68f1da11f8626d270a7d5113751653d6ab607c6cf13e0505d5660cc909",
+  "elapsed_seconds": 45,
+  "exception": "MATH subject/official level is missing",
+  "exit_code": "1:0",
+  "gpu_seconds": 0,
+  "job_id": "1223566",
+  "native_tests_errors": 0,
+  "native_tests_failed": 0,
+  "native_tests_passed": 192,
+  "native_tests_skipped": 0,
+  "new_model_training_or_inference": false,
+  "next_action": "Separate CPU-only metadata diagnostic before a versioned repair; original source/QA/failure preserved.",
+  "schema": "extension-development-failed-delivery-v1",
+  "splits_chosen": false,
+  "terminal_state": "FAILED"
+}

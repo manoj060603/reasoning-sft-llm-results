@@ -1,0 +1,21 @@
+{
+  "command": [
+    "sacct",
+    "--clusters=owl",
+    "-j",
+    "1223713",
+    "--parsable2",
+    "--noheader",
+    "--format=JobIDRaw,JobName,State,ExitCode,ElapsedRaw,Start,End,AllocTRES"
+  ],
+  "complete": true,
+  "elapsed_seconds": 2,
+  "gpu_seconds": 0,
+  "job_id": "1223713",
+  "no_gpu_in_alloc_tres": true,
+  "observed_at_utc": "2026-10-21T00:19:42.777580+00:00",
+  "schema": "extension-terminal-cpu-accounting-v1",
+  "stderr": "",
+  "stdout": "1223713|sft-extension-level-diagnostic|COMPLETED|0:0|2|2026-10-21T00:19:01|2026-10-21T00:19:03|billing=2,cpu=1,mem=4G,node=1\n1223713.batch|batch|COMPLETED|0:0|2|2026-10-21T00:19:01|2026-10-21T00:19:03|cpu=1,mem=4G,node=1\n1223713.extern|extern|COMPLETED|0:0|2|2026-10-21T00:19:01|2026-10-21T00:19:03|billing=2,cpu=1,mem=4G,node=1\n",
+  "timezone": "UTC"
+}

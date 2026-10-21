@@ -1,0 +1,128 @@
+{
+  "schema": "extension-development-source-mirror-v1",
+  "local_commit": "c1db50c50ef0ea228315970962843ce996cac113",
+  "local_tree": "814c9370dacced47ff47e029d3c345913ece7483",
+  "previous_local_commit": "d88d18639653f91f8f391da6f5d5a26d773f7632",
+  "files": {
+    "extension/development_plan.json": {
+      "bytes": 4234,
+      "sha256": "204eabfdfdb36305d0b8377f767b1a456ff595c6dd8afd701e1adceb42a5ac6f"
+    },
+    "extension/development_seal.py": {
+      "bytes": 30551,
+      "sha256": "7d53889c33470b36ef363b07a5161b85122b0ad0c55eb7e1fda916ac98908978"
+    },
+    "extension/development_seal.slurm": {
+      "bytes": 5510,
+      "sha256": "b2bd243093b8765269ba58701f504362981a1576c0779ece86bda578dd6622c4"
+    },
+    "extension/development_submission.py": {
+      "bytes": 18893,
+      "sha256": "f40d13069091c9c4afc0cb50fbe83f29446fcbf32f62dd4b4bb9e4d41dff475e"
+    },
+    "extension/preserving_objectives.py": {
+      "bytes": 6891,
+      "sha256": "05b079d2da89579436ce53b8a801c0fc51bd6cfef45628c50d23a5af93de3eb4"
+    },
+    "extension/preserving_trainer.py": {
+      "bytes": 19790,
+      "sha256": "3a46929eaff536f8165e8b1388fddc9c54fde0198c84aac3bcb69cf397d507d0"
+    },
+    "tests/test_development_seal.py": {
+      "bytes": 18601,
+      "sha256": "fa07685cc9c439e564fb93c9205bc4daf5d20d82546aaf206db42a47ea895d39"
+    },
+    "tests/test_development_submission.py": {
+      "bytes": 19657,
+      "sha256": "f50e70e7dd55facff9e473aeee6ca625520f07c0d598731de1c00c2630ffba53"
+    },
+    "tests/test_preserving_objectives.py": {
+      "bytes": 16059,
+      "sha256": "d520dee4691e9186bfa80c44ba8ed67ce610dbe707bd2d20f2327e1bb46d30a6"
+    },
+    "tests/test_preserving_trainer.py": {
+      "bytes": 17572,
+      "sha256": "9c2f14ee4023c2b18e059fa5297e469725148fa3d02b2d38b3c1b2c0a6c7dfb7"
+    }
+  },
+  "readonly_existing_files": {
+    "extension/.gitignore": {
+      "sha256": "64302ddf4d0c9bb6b613ba3950ed0f18752ee7f2237de268de8ff12703a5329b",
+      "bytes": 57
+    },
+    "extension/__init__.py": {
+      "sha256": "2a99bd8120f34a0ccf36d7d6f5dc02d7a24d5bdd4f8eaf422bd73b75b17a4a13",
+      "bytes": 79
+    },
+    "extension/campaign.json": {
+      "sha256": "1407fa170f5b962249c54a294cbadf2b9b96fa90ab6101ad46037301be183dfe",
+      "bytes": 5649
+    },
+    "extension/cpu_feasibility.py": {
+      "sha256": "1b0a8872f61a6e89191c16082c5ede531a38965658072855180a943effc35724",
+      "bytes": 32044
+    },
+    "extension/cpu_feasibility.slurm": {
+      "sha256": "3c450f680faca976efc5a2022ece602a369f2261bc41a3cb9c0a0da3fa0137ba",
+      "bytes": 4801
+    },
+    "extension/development_source_metadata.json": {
+      "sha256": "6a00b4f8f52b496c66d27270009d0c71116d676d024454f950af60730548f994",
+      "bytes": 1437
+    },
+    "extension/objectives.py": {
+      "sha256": "c56bd73d9824284b0393e23812bfcb4d4496fb518296de5fc35c9ec17bd06fde",
+      "bytes": 9223
+    },
+    "extension/research.json": {
+      "sha256": "c81e9a4c966fea1441b77a87e3036fd4cacb2e61f9e2417b8150040252236aca",
+      "bytes": 8331
+    },
+    "extension/submission.py": {
+      "sha256": "fd0d9adc589aa6e6b9287df50801679e46d227c1a46d6a27c22a8b963907bb0a",
+      "bytes": 16062
+    },
+    "tests/test_extension_feasibility.py": {
+      "sha256": "6e4bf3225e4a68840babc878961b0b6db71cbc5e76cb095905080a65c87d294f",
+      "bytes": 13563
+    },
+    "tests/test_extension_objectives.py": {
+      "sha256": "306caa2e01c1c9aa6ce1799c535bbe3d530549838ff160320750beda576639aa",
+      "bytes": 12567
+    },
+    "tests/test_extension_submission.py": {
+      "sha256": "0cd3949f92389e19112ed99a1d191690dad5ae5b63dc6e68d15b87fded5db50c",
+      "bytes": 13784
+    },
+    "extension/labeled_feasibility.py": {
+      "sha256": "0afb5f61050e2e7c6350ee9a68ffe47779159f85bf81f684b97536331b6b67da",
+      "bytes": 33130
+    },
+    "extension/labeled_feasibility.slurm": {
+      "sha256": "a2c099805f3a53cfdb59a4c1cf773e91f4f9d8e101b084062b3cb09b5e80728e",
+      "bytes": 5252
+    },
+    "extension/labeled_plan.json": {
+      "sha256": "d44572f18e3de76dea44b243a7427b8cac64cf5d87a294ae005b544412f28d80",
+      "bytes": 10259
+    },
+    "extension/labeled_submission.py": {
+      "sha256": "f1dab8e359603b754ead6dcfd364acb2b4a3a6da31d961f0445e9a8e05cff13a",
+      "bytes": 17855
+    },
+    "tests/test_labeled_feasibility.py": {
+      "sha256": "f3114f0431c91e99eda6b53abb36f4424cebed193c4ed7d0e508496b9819d0f1",
+      "bytes": 19447
+    },
+    "tests/test_labeled_submission.py": {
+      "sha256": "a51f4837a0780cb432170d5f0989ee84dc9e80532451962d38c4be1568881531",
+      "bytes": 20563
+    }
+  },
+  "complete": true,
+  "installed_at_utc": "2026-10-21T00:09:07.248861+00:00",
+  "archive_sha256": "e92cf5a35ef49c18c2045067b16fb0a52bef214797a9a05e86be327066c790c7",
+  "historical_ledger_sha256": "9fc4dfa2506ccd33580bab3e5f4c4e91d0731e221c4f88ac9778e54800dc141d",
+  "historical_ledger_unchanged": true,
+  "existing_tested_sources_unchanged": true
+}

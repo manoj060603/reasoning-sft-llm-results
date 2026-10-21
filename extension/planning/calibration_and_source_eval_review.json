@@ -1,0 +1,126 @@
+{
+  "schema": "extension-calibration-source-evaluation-review-v1",
+  "status": "proposal_only_unsealed_not_admitted",
+  "reviewed_at_utc": "2026-10-21T00:12:55+00:00",
+  "execution_authorized_by_this_artifact": false,
+  "tests_models_data_processing_or_jobs_run_by_this_review": false,
+  "scope": "A minimal prospective calibration and source-only evaluation protocol. This is design advice, not a generation plan, native receipt, result, permission to submit, or evidence of improved performance.",
+  "current_prerequisite_state": {
+    "development_plan": "extension/development_plan.json",
+    "development_plan_sha256_at_review": "204eabfdfdb36305d0b8377f767b1a456ff595c6dd8afd701e1adceb42a5ac6f",
+    "native_qa": "The first sealing attempt1223566 passed192 checks, then failed before split sealing on an official-level metadata guard. The failed attempt remains preserved; a metadata-only diagnostic is being prepared.",
+    "do_not_treat_pending_or_failed_seal_as_complete": true,
+    "before_any_generation": [
+      "Resolve the evidenced metadata failure without outcome-based filtering; preserve the failed plan, code and receipt, and prospectively bind any repaired version.",
+      "Require a successful native complete development seal with its exact output hashes, QA, source population and pool-reservation identities.",
+      "Bind the exact calibration/development/confirmation record and component IDs. The targets are16 MATH RECORDS plus16 ARC RECORDS for calibration, selected as whole groups; the number of groups is whatever the completed seal reports.",
+      "Require zero overlap between reserved groups and every future training/probe/scoring population under the declared exact and token-three-gram Jaccard4/5 criterion. Enforce reserved_training_pool_ids.json in every future source selector.",
+      "Freeze renderer, extraction, scoring, timeout policy, seed schedule, generation parameters, software/hardware identities and engineering gates before opening generated answers."
+    ]
+  },
+  "calibration_scope": {
+    "population": "The one successfully sealed calibration split only:16 MATH plus16 ARC records, complete components, no replacement or accuracy-based question choice.",
+    "model_role": "The exact original Qwen/Qwen2.5-3B-Instruct checkpoint at aa8e72537993ba99e69dfaafa59ed015b17504d1. Do not add trained variants or alternative prompts to calibration after observing outcomes.",
+    "purpose": "Verify native prompt fidelity, label isolation, extraction behavior, stopping metadata, evidence completeness and measured throughput. Calibration correctness is not a recipe-ranking metric or a reliable generalization estimate.",
+    "passes": "One prespecified eight-sample generation pass for the original model. No best-of-parser, prompt, seed, output cap, stopping rule or option permutation search.",
+    "repair_boundary": "A concrete implementation fault may justify a separately bound repair and a complete matched rerun, preserving the first attempt and disclosing the viewed calibration IDs. Poor accuracy, unboxed answers or long reasoning are model outcomes, not implementation faults. They do not authorize repeated calibration tuning or refreshing calibration IDs until performance improves."
+  },
+  "prompt_proposal": {
+    "system": "Please reason step by step, and put your final answer within \\boxed{}.",
+    "math_user": "The original record.question string, unchanged; no solution, reference answer, level, subject or worked example.",
+    "arc_user_rendering": "record.question + '\\n\\n' + join('\\n', original_label + '. ' + original_choice_text in original order) + '\\n\\nSelect one original option label and put that label within \\boxed{}.'",
+    "arc_instruction_caveat": "The final label-format sentence is a proposed SOURCE-only instruction, common to every source-evaluated model. It contains no correct label and must be frozen before generation. It changes neither original question/options nor the final benchmark renderer.",
+    "options": "Never shuffle, sort, relabel, balance by correct-answer position, or normalize numeric labels to letters. Preserve the supplied order even if that order was randomized by the dataset producer. All eight samples and all model roles receive identical option order.",
+    "native_serialization": "Use the pinned native Qwen chat template on exactly system and user messages, add_generation_prompt=True, with no forced <think> text, assistant answer prefix, few-shot examples or manual special-token concatenation.",
+    "token_fidelity": [
+      "On compute, bind tokenizer/config/template files and record UTF-8 rendered-prompt SHA256, native prompt-token SHA256 and token count. A normalized question hash alone does not bind whitespace or chat serialization.",
+      "Verify direct native template tokenization equals encoding of the rendered prompt with add_special_tokens=False; avoid a second BOS/EOS insertion.",
+      "Pass the verified prompt_token_ids to the inference engine, using the same pinned tokenizer identity. Refuse prompt truncation.",
+      "Test label isolation structurally: changing answerKey, extracted gold or source solution while keeping question/options fixed must leave prompt bytes and tokens unchanged. Do not assert that a short gold string is absent as a substring; legitimate questions/options often contain it.",
+      "A CPU-only length pass may inspect all reserved prompt lengths before generation, including confirmation, without opening model outputs or using gold answers."
+    ]
+  },
+  "one_proposed_source_generation_profile": {
+    "status": "Must be separately frozen and admitted; no run is authorized here",
+    "samples_per_question": 8,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": -1,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "min_tokens": 0,
+    "max_new_tokens": 8192,
+    "max_model_len": 16384,
+    "headroom_gate": "Every rendered prompt must have at most8192 tokens so all questions have the full8192-token response allowance. Fail before generation on a violation; never silently reduce a long question's response budget, crop its question, drop it or refill its row.",
+    "seed": 20261021,
+    "per_record_seed": "(20261021 + int(sealed_record_id[:8],16)) modulo2**31; persist sample index0..7 and engine output index. Use identical IDs/seeds/order for every paired model role and resume only complete immutable requests.",
+    "engine_seed": 20261021,
+    "engine": "Pinned vLLM0.12.0, BF16 inference, TP1, generation_config='vllm', max_num_seqs128, gpu_memory_utilization0.85, batch_size32 and one B200. Bind the actual runtime and engine configuration; a seed alone does not prove bitwise reproducibility across different batching/hardware/software.",
+    "stopping": "ignore_eos=False; no extra stop strings, no extra stop-token IDs, no forced format/grammar, no generated-program execution and no repetition-triggered early termination. Verify actual engine EOS from the pinned model configuration:151645. Record resolved stop IDs, finish_reason and stop_reason.",
+    "generation_config_caveat": "The pinned HF generation_config.json has different sampling defaults and additionally lists151643 as EOS. Do not accidentally inherit those settings when the proposed source profile explicitly uses generation_config='vllm'. Record resolved values instead of inferring them from a config filename.",
+    "short_source_proxy": "An8K-output/16K-context source screen is a deliberate cheaper proxy. Passing it does not establish32K benchmark performance or graduate-science retention. Use this same profile for paired source comparisons if chosen; any different confirmation profile needs its own prospective bound and runtime admission."
+  },
+  "extraction_and_scoring_proposal": {
+    "freeze_before_model_outputs": true,
+    "gold": "Use the independently supplied sealed official gold only in the scorer. MATH gold was extracted from the official solution; it is not a fresh independent proof. ARC gold remains the exact original answerKey-to-label match.",
+    "primary_extraction": "Use the final literal balanced \\boxed{...} group, supporting nested braces, with surrounding whitespace stripped. Empty, missing or unbalanced final boxes are extraction failures and incorrect. A later malformed box does not permit falling back to an earlier box. No last-number, reasoning-text, option-text or substring guessing.",
+    "math_primary_grading": "Propose a NEW source wrapper using pinned eval/utils/grader.py math_equal(strip_string(pred), strip_string(gold), include_percentage=False, is_close=True, timeout=True), inside a separately bounded scoring worker. Preserve and document the existing numeric tolerance and symbolic normalizer. Do not silently replace the final benchmark grader.",
+    "math_percentage_reason": "The existing benchmark check_is_correct default accepts percentage-scaled numeric alternatives. Source selection should not gain credit for100x or0.01x errors merely through that default; verify negative examples before the source wrapper is frozen.",
+    "arc_primary_grading": "The extracted body must be exactly one of that record's original choice labels and equal the original answerKey, after whitespace trim only. No1-to-A mapping, choice-text matching, label case guessing or scan through reasoning for a plausible label.",
+    "format_shadow_metric": "Optionally predeclare a separate ARC diagnostic accepting only a final nonempty line exactly equal to an original label or an anchored 'Answer: <label>'/'Final answer: <label>' line. Never use this shadow metric to select a recipe or overwrite primary flags. Report whether apparent gains are format compliance rather than improved answer selection.",
+    "error_policy": "Keep every scheduled sample in the denominator. Empty output, extraction failure or classified grader timeout/error receives incorrect plus its explicit status; never omit it. Native engineering calibration must expose scoring errors/timeouts and block an unclassified failure. Do not hand-correct a model's answer or regrade only its misses.",
+    "timeout_policy": "Propose a five-second hard external worker limit per MATH comparison, including a bounded result retrieval if a child crashes. Keep timeout distinct from a mathematical false result and retain raw outputs so the effect is auditable. The wrapper and limit need native CPU QA before admission.",
+    "required_label_blind_cpu_fixtures": [
+      "Nested fractions, final-vs-earlier boxes, whitespace, zero, multiple boxes and incomplete/empty boxes.",
+      "Equivalent numeric/LaTeX forms and negatives including10 versus1000 and10 versus0.1, wrong signs, and ordered/multiple-answer examples appropriate to the existing normalizer.",
+      "ARC numeric and alphabetic labels, preserved choice order, wrong/unavailable/ambiguous labels, reasoning containing several labels, and mutation of gold without prompt changes.",
+      "Gold self-equality, every result a boolean or explicit scoring-error state, finite summaries and no deadlock after a worker timeout/crash."
+    ],
+    "terminology": "Primary scores are answer accuracy under the required boxed-output source protocol. They are not proof of deeper reasoning. Report extraction/format compliance and any shadow diagnostic alongside correctness."
+  },
+  "metrics_and_evidence": {
+    "per_question": "For exactly eight correctness booleans and c correct responses: pass@1=c/8 and pass@8=1 if c>0 else0. Do not report only the best sample as pass@1 or treat the eight responses as eight independent questions.",
+    "aggregation": "Average records within each domain; report MATH and ARC separately, then their equal-domain macro. Do not pool domains of different sizes. Retain record weights and component IDs; paired uncertainty resamples whole question components within domain.",
+    "no_calibration_inference_claim": "The32-record calibration set is for engineering checks only. Any displayed calibration accuracy is descriptive and cannot rank recipes or support a superiority claim.",
+    "stopping_metrics": [
+      "Per sample: output token count, finish_reason, stop_reason, whether the last retained token is native EOS, and complete-box/valid-choice/extraction-error flags.",
+      "Per domain/model: mean, median, p95 and maximum output tokens; length-finish rate; EOS-stop rate; empty-output rate; box-completion and valid-choice rates; scorer-error/timeout counts.",
+      "Use the existing reasoning.features.repetition definition: whitespace eight-gram duplication fraction1-unique_8grams/total_8grams, zero when fewer than eight words. Preserve spelling/case behavior and freeze the helper hash.",
+      "Report length finishes even when a complete correct box appeared before the cap. Truncated samples stay scored under the same primary rule; never filter them to improve accuracy or silently treat a cap as an EOS finish."
+    ],
+    "private_raw_evidence": "Record source/record/component identity, model-parent/checkpoint and tokenizer hashes, exact prompt/token hashes, all raw completions and output-token IDs/hashes, sample indices, seeds, stop metadata, extracted predictions, sealed gold identity and correctness/error statuses. Answers/solutions remain outside generation requests and public aggregate artifacts.",
+    "completeness": "A complete role needs every declared record exactly once and eight indexed samples each, matching protocol and source hashes. An incomplete timed-out job is pending/failed evidence, not a completed comparable score."
+  },
+  "development_and_confirmation_isolation": {
+    "development": "After calibration protocol freeze, evaluate only prospectively listed model roles/checkpoints on the sealed512-MATH plus256-ARC development split. Freeze ranking, retention/length/repetition gates and tie-breaks before reading scores; never use final benchmark outcomes for recipe ranking.",
+    "confirmation": "Keep the sealed1024-MATH plus512-ARC confirmation split single-use for the later one-candidate gate. Do not generate or inspect even original-model confirmation responses before the exact final candidate/control/seed/checkpoint and acceptance rule are frozen.",
+    "seeds_and_controls": "If multiple training seeds are admitted, evaluate all predeclared seeds with a fixed aggregation; do not select the better seed. Paired roles share prompts, generation seeds, sampling settings, scoring and hardware/software bindings.",
+    "after_failure": "A failed confirmation preserves the negative result and ends that round. Do not try a second development winner, coefficient, checkpoint, prompt, output cap or extractor on the same confirmation labels.",
+    "limits": "Whole-group disjointness and lexical decontamination do not guarantee semantic independence. ARC is an elementary-science retention guard, not evidence of GPQA generalization. Previously viewed final benchmarks remain exploratory comparisons."
+  },
+  "finite_resource_proposal": {
+    "calibration_only": "One B200, TP1, at most90 minutes including engine load, native prompt/EOS checks,256 samples and bounded grading; a1.5-GPU-hour reservation is a conservative planning bound, not an ETA or authorization.",
+    "maximum_calibration_output_tokens": 2097152,
+    "prerequisites": "Successful exact source seal; native CPU renderer/parser/grader tests; exact original model/tokenizer/native-runtime identities; resolved EOS and headroom checks; an admitted compute allocation; separate extension-ledger/scheduler duplicate checks; sufficient deadline/closeout reserve.",
+    "timing": "Measure load time, prefill/decode token counts, runtime, peak memory and length-finish behavior. Scale later per-role reservations from measured evidence plus a conservative collapse/length margin, not only the original model's short-answer average. Development768x8x8192 has a50,331,648-token worst-case response bound per role.",
+    "failure": "No automatic reservation extension, batch/context/precision change, missing-sample drop or downstream submission. Preserve partial receipts; operational retries require a separately bound plan and the exact scheduler/ledger live-state check."
+  },
+  "unchanged_final_benchmarks": {
+    "protocol": "Keep the delivered all-nine final benchmark harness, eight samples, seed0,32K generation/context, B200, existing renderer/parser/grader/runtime bindings and original/random/incumbent evidence unchanged.",
+    "no_transfer_of_source_scores": "Source8K scores, strict source extraction or percentage-disabled source grading are not directly comparable to the final32K benchmark scores. Never relabel one as the other or apply a source scorer change retroactively to historical results.",
+    "success_claim": "Only comparable measured results can show both supplied-eight macro metrics or all individual benchmark metrics improving. Calibration or source confirmation cannot establish state of the art or a guaranteed universal win."
+  },
+  "primary_and_local_references": [
+    {"description": "Pinned original model configuration: EOS151645, native context32768, attention_dropout0, vocabulary151936", "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/aa8e72537993ba99e69dfaafa59ed015b17504d1/config.json"},
+    {"description": "Pinned HF generation defaults differ from the proposed explicit vLLM profile", "url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct/blob/aa8e72537993ba99e69dfaafa59ed015b17504d1/generation_config.json"},
+    {"description": "Pinned vLLM sampling and EOS/generation-config handling", "url": "https://github.com/vllm-project/vllm/blob/v0.12.0/vllm/sampling_params.py"},
+    {"description": "Existing native source/benchmark rendering, per-question seeds and immutable manifest behavior", "path": "reasoning/evaluate.py"},
+    {"description": "Existing pass@1/pass@8 estimator and paired component bootstrap helpers", "path": "reasoning/metrics.py"},
+    {"description": "Balanced final literal box extraction", "path": "reasoning/data.py"},
+    {"description": "Existing benchmark grader/normalization; source wrapper parameters must be explicitly distinct", "path": "eval/utils/grader.py"},
+    {"description": "Existing whitespace eight-gram repetition definition", "path": "reasoning/features.py"}
+  ],
+  "next_action_boundary": "This file proposes choices only. First finish the metadata diagnosis and successfully reseal native source splits. Then freeze a separate exact calibration/renderer/scorer/resource plan and obtain its native QA/admission evidence. Do not execute this review as an automation or submit a GPU job from it."
+}

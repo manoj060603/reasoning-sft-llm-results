@@ -1,0 +1,79 @@
+{'train_runtime': 0.0132, 'train_samples_per_second': 302.238, 'train_steps_per_second': 151.119, 'train_loss': 2.0211925506591797, 'epoch': 1.0}
+{'train_runtime': 0.0253, 'train_samples_per_second': 39.537, 'train_steps_per_second': 39.537, 'train_loss': 2.3534388542175293, 'epoch': 1.0}
+{"native_qa_complete": true, "tests": 230, "output": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/development-seal-v2-20261021-1223943"}
+{
+  "complete": true,
+  "splits": {
+    "calibration": {
+      "rows": 32,
+      "group_count": 32,
+      "domain_rows": {
+        "arc_challenge": 16,
+        "math": 16
+      },
+      "ids_sha256": "37618ae9aa3e732c168029f1ac2131f5772500a3c84537b5f847b0ff938e27cc",
+      "group_ids_sha256": "4ad9e2c6d5be4eaa175870bb2f9258065af5abed2bdd27fb555c0850e12ff6dd"
+    },
+    "development": {
+      "rows": 768,
+      "group_count": 766,
+      "domain_rows": {
+        "arc_challenge": 256,
+        "math": 512
+      },
+      "ids_sha256": "9c90f2002e40a7e857c5e73d334f2cf6b95995c003db20c77b2d761cb6d2fca3",
+      "group_ids_sha256": "26fc87134e369dd9a76574641aa20573a3cfd7311fb3915077abd757f14bf184"
+    },
+    "confirmation": {
+      "rows": 1536,
+      "group_count": 1527,
+      "domain_rows": {
+        "arc_challenge": 512,
+        "math": 1024
+      },
+      "ids_sha256": "5e614d162aac6dfe5729a9001f070a97b91a7dba53eb9ff5943df8c77657050b",
+      "group_ids_sha256": "6368844426c7213caed7c9adc8548dae278f2673c7da29cc5c6c868735a2a56c"
+    }
+  },
+  "reservation": {
+    "training_pool_rows_scanned": 83029,
+    "reserved_training_pool_rows": 67,
+    "reserved_training_pool_ids_sha256": "e11ee4fbf20c541f3856d4f38730fea9998c4bd1ca2a38bcc8905c3bfe55bc15",
+    "lexical_criterion": {
+      "normalization": "NFKC casefold whitespace; preserve numbers/operators",
+      "tokenization": "word-or-single-nonwhitespace-character",
+      "shingle_tokens": 3,
+      "jaccard_numerator": 4,
+      "jaccard_denominator": 5,
+      "search": "exact inverted index",
+      "short_question_policy": "exact normalized equality when fewer than3tokens"
+    },
+    "exact_match_rows": 67,
+    "near_match_rows": 0,
+    "prior_pool_overlap_check": {
+      "previously_scored_reservoir": {
+        "prior_ids": 30000,
+        "reserved_overlap": 0
+      },
+      "prior_advanced_training": {
+        "prior_ids": 15000,
+        "reserved_overlap": 0
+      },
+      "prior_probeA_training": {
+        "prior_ids": 512,
+        "reserved_overlap": 0
+      },
+      "prior_probeB_training": {
+        "prior_ids": 512,
+        "reserved_overlap": 0
+      },
+      "prior_random_training": {
+        "prior_ids": 15000,
+        "reserved_overlap": 0
+      }
+    },
+    "scope": "All selected component members: MATH question; ARC stem and ordered stem-plus-options. Correct answer keys and solution text are never indexed.",
+    "required_future_policy": "Every future training/probe selector must verify this complete seal and exclude every reserved_training_pool_id; all selected labeled groups remain held out."
+  }
+}
+Development seal complete: /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/runs/development-seal-v2-20261021-1223943

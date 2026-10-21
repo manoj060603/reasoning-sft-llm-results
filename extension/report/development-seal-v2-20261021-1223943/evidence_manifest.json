@@ -1,0 +1,39 @@
+{
+  "files": {
+    "extension/development_retry_source_install_receipt.json": {
+      "bytes": 6647,
+      "sha256": "547ec91025a8a9034b6683f71e636b692871d149e6bb53f12b2c40fafffe8899"
+    },
+    "extension/job_ledger.json": {
+      "bytes": 51934,
+      "sha256": "0fd2f4a3e3bc752158587d5843421306b0c91b28069c90fdd302fb63dda26041"
+    },
+    "extension/logs/extension-development-seal-v2-1223943.err": {
+      "bytes": 26189,
+      "sha256": "013dbe0c22e9d2edd324f342441279104fe1f2e51eb52b6c576a5d0d737f2fd5"
+    },
+    "extension/logs/extension-development-seal-v2-1223943.out": {
+      "bytes": 3197,
+      "sha256": "85cadec019916c79b419d65d937b267c7aacdd6ada231ed51974cbda26040b06"
+    },
+    "extension/runs/development-seal-v2-20261021-1223943/accounting.json": {
+      "bytes": 823,
+      "sha256": "bfc7614d82c34246f35b285148121521ae8397e2ebd148914fbe042c8afbe846"
+    },
+    "extension/runs/development-seal-v2-20261021-1223943/complete.json": {
+      "bytes": 78149,
+      "sha256": "354859dd44e2fe3aa7800ec991b60649f00a99ce4768d8075af42c007289987d"
+    },
+    "extension/runs/development-seal-v2-20261021-1223943/native_qa.json": {
+      "bytes": 16420,
+      "sha256": "186e7574e26fcd1c1ed5ad3d840a590f4a4417aaa0b0880295b2a7b35f1d6359"
+    },
+    "extension/runs/development-seal-v2-20261021-1223943/started.json": {
+      "bytes": 7250,
+      "sha256": "1209cbc5160e9ef5cc243092da2239addfcc8cb7ac09570894c0fe4eec57ba5c"
+    }
+  },
+  "job_id": "1223943",
+  "raw_labeled_records_or_split_ids_included": false,
+  "schema": "extension-development-seal-native-evidence-v2"
+}

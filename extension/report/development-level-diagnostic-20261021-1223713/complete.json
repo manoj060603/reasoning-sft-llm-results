@@ -1,0 +1,213 @@
+{
+  "admission_binding_sha256": "84043ec5facce04801c2dcbf9b77f2a48834967b7beb13c6cf5312b372bdf2fc",
+  "complete": true,
+  "compute": {
+    "allocated_cpus": 1,
+    "allocated_tres": "cpu=1,mem=4G,node=1,billing=2",
+    "checked_at_utc": "2026-10-21T00:19:02.911841+00:00",
+    "cuda_visible_devices": "",
+    "gpu_requested_or_allocated": false,
+    "hostname": "owl123",
+    "job_id": "1223713",
+    "node": "owl123",
+    "requested_tres": "cpu=1,mem=4G,node=1,billing=2",
+    "scontrol": "JobId=1223713 JobName=sft-extension-level-diagnostic UserId=manoj663(22825097) GroupId=22825097(22825097) MCS_label=N/A Priority=1314 Nice=0 Account=tml_2026 QOS=owl_normal_short JobState=RUNNING Reason=None Dependency=(null) Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0 RunTime=00:00:01 TimeLimit=00:10:00 TimeMin=N/A SubmitTime=2026-10-20T20:18:32 EligibleTime=2026-10-20T20:18:32 AccrueTime=2026-10-20T20:18:33 StartTime=2026-10-20T20:19:01 EndTime=2026-10-20T20:29:01 Deadline=N/A SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-20T20:19:01 Scheduler=Backfill Partition=normal_q AllocNode:Sid=owl1:1341085 ReqNodeList=(null) ExcNodeList=(null) NodeList=owl123 BatchHost=owl123 NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:* ReqTRES=cpu=1,mem=4G,node=1,billing=2 AllocTRES=cpu=1,mem=4G,node=1,billing=2 Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=* MinCPUsNode=1 MinMemoryNode=4G MinTmpDiskNode=0 Features=(null) DelayBoot=00:00:00 OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null) Command=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/operations/development_metadata_diagnostic_v2.slurm SubmitLine=sbatch --clusters=owl --parsable /projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/operations/development_metadata_diagnostic_v2.slurm WorkDir=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019 StdErr=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-level-diagnostic-1223713.err StdIn=/dev/null StdOut=/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/extension/logs/extension-level-diagnostic-1223713.out TresPerTask=cpu=1",
+    "scontrol_sha256": "b86eba93d80811106dfd22829d849821160011badaa1c534de0903454d13ebe9",
+    "state": "RUNNING",
+    "step_id": "batch",
+    "user_id": 22825097
+  },
+  "created_at_utc": "2026-10-21T00:19:03.120130+00:00",
+  "gpu_seconds": 0,
+  "input_sha256": "f1304725d60087666fa2c3995fe7b4b344067ad28d1f2af35e8dbc5dab4e0551",
+  "math_rows": 6013,
+  "no_labels_or_solutions_inspected": true,
+  "no_split_assignment_or_model_outcomes": true,
+  "non_1_to_5_levels": {
+    "Level ?": 1
+  },
+  "rows": 7132,
+  "schema": "extension-development-level-diagnostic-v1",
+  "subject_level_counts": [
+    {
+      "official_level": "Level 1",
+      "rows": 139,
+      "subject": "algebra"
+    },
+    {
+      "official_level": "Level 2",
+      "rows": 257,
+      "subject": "algebra"
+    },
+    {
+      "official_level": "Level 3",
+      "rows": 303,
+      "subject": "algebra"
+    },
+    {
+      "official_level": "Level 4",
+      "rows": 305,
+      "subject": "algebra"
+    },
+    {
+      "official_level": "Level 5",
+      "rows": 343,
+      "subject": "algebra"
+    },
+    {
+      "official_level": "Level 1",
+      "rows": 36,
+      "subject": "counting_and_probability"
+    },
+    {
+      "official_level": "Level 2",
+      "rows": 101,
+      "subject": "counting_and_probability"
+    },
+    {
+      "official_level": "Level 3",
+      "rows": 119,
+      "subject": "counting_and_probability"
+    },
+    {
+      "official_level": "Level 4",
+      "rows": 132,
+      "subject": "counting_and_probability"
+    },
+    {
+      "official_level": "Level 5",
+      "rows": 234,
+      "subject": "counting_and_probability"
+    },
+    {
+      "official_level": "Level 1",
+      "rows": 33,
+      "subject": "geometry"
+    },
+    {
+      "official_level": "Level 2",
+      "rows": 86,
+      "subject": "geometry"
+    },
+    {
+      "official_level": "Level 3",
+      "rows": 115,
+      "subject": "geometry"
+    },
+    {
+      "official_level": "Level 4",
+      "rows": 138,
+      "subject": "geometry"
+    },
+    {
+      "official_level": "Level 5",
+      "rows": 365,
+      "subject": "geometry"
+    },
+    {
+      "official_level": "Level ?",
+      "rows": 1,
+      "subject": "geometry"
+    },
+    {
+      "official_level": "Level 1",
+      "rows": 45,
+      "subject": "intermediate_algebra"
+    },
+    {
+      "official_level": "Level 2",
+      "rows": 139,
+      "subject": "intermediate_algebra"
+    },
+    {
+      "official_level": "Level 3",
+      "rows": 227,
+      "subject": "intermediate_algebra"
+    },
+    {
+      "official_level": "Level 4",
+      "rows": 271,
+      "subject": "intermediate_algebra"
+    },
+    {
+      "official_level": "Level 5",
+      "rows": 350,
+      "subject": "intermediate_algebra"
+    },
+    {
+      "official_level": "Level 1",
+      "rows": 34,
+      "subject": "number_theory"
+    },
+    {
+      "official_level": "Level 2",
+      "rows": 111,
+      "subject": "number_theory"
+    },
+    {
+      "official_level": "Level 3",
+      "rows": 143,
+      "subject": "number_theory"
+    },
+    {
+      "official_level": "Level 4",
+      "rows": 149,
+      "subject": "number_theory"
+    },
+    {
+      "official_level": "Level 5",
+      "rows": 244,
+      "subject": "number_theory"
+    },
+    {
+      "official_level": "Level 1",
+      "rows": 108,
+      "subject": "prealgebra"
+    },
+    {
+      "official_level": "Level 2",
+      "rows": 262,
+      "subject": "prealgebra"
+    },
+    {
+      "official_level": "Level 3",
+      "rows": 207,
+      "subject": "prealgebra"
+    },
+    {
+      "official_level": "Level 4",
+      "rows": 203,
+      "subject": "prealgebra"
+    },
+    {
+      "official_level": "Level 5",
+      "rows": 213,
+      "subject": "prealgebra"
+    },
+    {
+      "official_level": "Level 1",
+      "rows": 45,
+      "subject": "precalculus"
+    },
+    {
+      "official_level": "Level 2",
+      "rows": 128,
+      "subject": "precalculus"
+    },
+    {
+      "official_level": "Level 3",
+      "rows": 134,
+      "subject": "precalculus"
+    },
+    {
+      "official_level": "Level 4",
+      "rows": 142,
+      "subject": "precalculus"
+    },
+    {
+      "official_level": "Level 5",
+      "rows": 151,
+      "subject": "precalculus"
+    }
+  ]
+}
