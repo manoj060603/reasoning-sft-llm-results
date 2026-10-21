@@ -1,0 +1,339 @@
+{
+  "current_state_and_superseded_proposals": {
+    "budget": "The user removed the old GPU-hour cap for the extension. Preserve historical39.65-hour accounting and the old ledger. The campaign100-hour figure is an internal planning target, not a user cap or authorization for every proposed stage.",
+    "completed_native_source_seal": {
+      "calibration": {
+        "arc_records": 16,
+        "groups": 32,
+        "math_records": 16,
+        "records": 32
+      },
+      "complete_sha256": "354859dd44e2fe3aa7800ec991b60649f00a99ce4768d8075af42c007289987d",
+      "confirmation": {
+        "arc_records": 512,
+        "groups": 1527,
+        "math_records": 1024,
+        "records": 1536
+      },
+      "development": {
+        "arc_records": 256,
+        "groups": 766,
+        "math_records": 512,
+        "records": 768
+      },
+      "job_id": "1223943",
+      "native_checks_passed": 230,
+      "qualification": "Completed source/group reservations are evidence; older review language calling the repaired source seal pending is superseded. IDs and source bytes still require their exact native receipt checks in every consumer.",
+      "reserved_canonical_pool_ids": 67
+    },
+    "context_default": "Use v2 broad-source complete32768 training, conditional on measured native admission. The earlier complete8K-only random population would condition the assignment control on length and is not the recommended main random draw.",
+    "cpu_preparation": "CPU1224497 completed0:0 in215seconds with341 native checks, zero failures/errors/skips and zeroGPUs. All83029 pool questions were screened against all nine benchmark question sources plus both AMC representations; one benchmark-overlapping pool row and67 disjoint reserved-source pool rows were excluded, leaving82961. Four unchanged private witnesses were natively serialized/replayed, longest31776tokens. This is not actual-model memory or correctness evidence. Exact metadata: extension/report/native-smoke-preparation-20261021-1224497; complete SHA b7d8dc41b6fd90befc6a85130b3904245aea6dbd2cafc3209941d647a3ab8df5.",
+    "gpu_training_or_generation": "Manual diagnostic GPUjob1224577 is admitted for oneB200/twohours and was pending at01:02UTC. No successful B200 case, pilot, calibration generation or new benchmark score is established. Native smoke outputs remain disposable diagnostics.",
+    "precision_default": "Use the actual frozen native smoke configuration: independent FP32 student/reference storage, BF16 autocast, FP32 optimizer moments. The earlier BF16-reference proposal is not an admitted replacement.",
+    "resume_default": "Fresh bounded runs only. Current PreservingTrainer rejects resume and repeated train calls; earlier aspirational resume requirements are not implemented capabilities."
+  },
+  "development_ranking_to_freeze_before_pilot_outputs": {
+    "gates": [
+      "All requests complete, paired and byte/protocol bound; extraction failures remain incorrect, grader exceptions remain explicit.",
+      "Each domain p1 >= original-0.01 and p8 >= original-0.02.",
+      "Each domain length-finish rate <= original+0.01 and mean exact whitespace8gram repetition <= original+0.01. A collapsed R_CE cannot relax these bounds.",
+      "Equal-domain p1 strictly exceeds both original and R_CE; p8 is no lower than either.",
+      "For an S selection claim, p1 also strictly exceeds the matched R objective and p8 is no lower."
+    ],
+    "metrics": "Per record with c correct of8: p1=c/8, p8=1[c>0]. Average records within each domain and then weight MATH/ARC equally. Keep component IDs for uncertainty; eight responses are not eight independent questions.",
+    "negative_screen": "If no admitted recipe meets the frozen screen/promotion rule, preserve the negative finding and delivered original/incumbent artifacts. This does not prove every full-duration method would fail.",
+    "promotion_choice_still_required": "Adopt and seal the F5 default or another explicit finite policy before generation. The draft's global ranking and combined-assignment promotion are different questions. Do not silently move a winning R objective onto S, add a new S cell automatically, or promote a runner-up after confirmation fails.",
+    "ranking": "Among eligible cells rank equal-domain p1, then p8; exact ties S_CE,R_CE_HALF_LR,S_KL,R_KL,R_PRIOR,R_ASFT. R_CE is a control and cannot beat itself.",
+    "roles": "Fresh original plus every complete final256 model from the seven listed cells. Any historical incumbent is explicitly unranked. Same768 reserved records, prompts, per-record seeds, source profile and grader for all roles."
+  },
+  "execution_authorized_by_this_artifact": false,
+  "final_protocol_and_claims": {
+    "deferred_arms": "Answer-checked concise/on-policy SFT and GRPO remain separately identified, unadmitted alternatives with new data/reward/provenance requirements. They must not rewrite the original15K-pair arm or open its single-use confirmation early.",
+    "one_candidate": "Only the one source-selected exact full recipe and predeclared matched controls/seeds receive final evaluation; no benchmark-based reranking, interpolation, checkpoint choice, seed choice, stopping changes or best-of-method selection.",
+    "success_labels": "Both supplied-eight equal-benchmark macro p1 and p8 above original is the primary point-estimate target. All16 per-task metric improvements is the stronger aspiration. Disclose every regression, auxiliary AIME25 separately, conditional uncertainty and prior benchmark exposure. Neither source confirmation nor a macro win establishes universal SOTA.",
+    "unchanged": "Keep all-nine assignment benchmarking at delivered n8/seed0/32K native context/B200/pinned renderer/parser/grader/runtime settings. Source strict extraction, percent normalization or8K screening never changes historical or final grading."
+  },
+  "finite_next_stage_proposals_not_requests": [
+    {
+      "ceiling": "One8-CPU/64GiB allocation, at most2h, zeroGPU; no generation or recipe choice.",
+      "stage": "source-evaluation CPU renderer/scorer and prompt-cache QA",
+      "stop": "Any label leak, truncation, parser ambiguity or timeout deadlock blocks calibration."
+    },
+    {
+      "ceiling": "One B200 at most90min,32records x8 x8192 =2097152 maximum output tokens.",
+      "stage": "one original-model calibration",
+      "stop": "Incomplete samples remain incomplete; engineering failure gets a separately bound repair, poor model outcomes get no tuning rerun."
+    },
+    {
+      "ceiling": "CPU feature/cache audit at most2h; propose one B200 scoring allocation at most6h only after a bound token count and throughput gate show complete coverage is feasible. This is a proposal and must use an available allowed Slurm partition/QoS.",
+      "stage": "full eligible feature fit and frozen-base source score",
+      "stop": "No partial-score selector, old-prefix-loss substitution or automatic wall-time extension."
+    },
+    {
+      "ceiling": "Propose at most2B200-hours per2048-pair cell initially,14GPU-hours total requested; actual smoke throughput must justify those bounds and the deadline margin before admission.",
+      "stage": "seven pilot cells",
+      "stop": "Fresh unique attempts only. A failed cell is not silently restarted/resumed/dropped; incomplete matrix cannot support full causal comparisons."
+    },
+    {
+      "ceiling": "Propose four fixed whole-group shards per role, roughly192records each, at most2B200-hours per shard. Original plus seven cells gives at most32 shards/64requestedGPU-hours. Use measured calibration to seal a feasible exact plan before training; these upper bounds are not an ETA.",
+      "stage": "paired development generation",
+      "stop": "Every role needs every768records x8 complete. Do not lower n, cap output, omit collapsed rows or rank a partial result to meet the reservation."
+    },
+    {
+      "ceiling": "Reserve them prospectively from measured training/source decode rates plus worst-length margin, with finite per-job limits and at least48h remaining for final evaluation/closeout. No numeric ETA is justified before these measurements.",
+      "stage": "full replication, single confirmation and final benchmark/delivery",
+      "stop": "If the remaining wall-clock cannot accommodate the predeclared roles, do not admit an unfinishable promotion or weaken controls after outcomes."
+    }
+  ],
+  "freeze_blockers_in_order": [
+    {
+      "evidence_needed": "Immutable complete CPU cache/audits and unit/native QA; manual current-job GPU admission; all four modes on short and longest complete eligible examples; finite updates/moments/weights, exact consumption, reference and checkpoint isolation, native replay, reload parity, measured headroom and terminal accounting.",
+      "failure_rule": "A partial, failed, OOM or pending case admits no pilot. Do not reduce context, change reference precision/backend/objective or reinterpret the longest witness after an outcome.",
+      "id": "F0",
+      "requirement": "Verify the completed CPU1224497 evidence/accounting and separately complete every required admitted B200 smoke case."
+    },
+    {
+      "evidence_needed": "Exact sealed calibration/development/confirmation input hashes; no-gold prompt mutation oracle; native prompt text/token parity; percent-aware grading policy; bounded timeout/crash behavior; exactly eight sample identities; no missing-record filtering.",
+      "id": "F1",
+      "recommended_default": "One original-model calibration pass on all32 reserved calibration records. Use the explicit8K-output/16K-context source profile below.",
+      "requirement": "Implement and freeze source prompt/render/extraction/grading code and its CPU oracles before original-model calibration generation."
+    },
+    {
+      "evidence_needed": "Both benchmark and reserved-source components applied before fitting/scoring/selecting; no old cluster64 sentinel treated as a topic; exact full eligible IDs/order and score/model/tokenizer/target hashes; measured scoring throughput and complete finite cache.",
+      "failure_rule": "Do not infer that the67 reserved IDs alone decontaminate final benchmarks. Do not use old probe gains or previously trained/recovery weights as the new frozen-base score.",
+      "id": "F2",
+      "requirement": "Consume the completed all-nine question-only audit and both exclusion components from CPU1224497, then freeze full native-cache policy, full-population topic fit and one original-base compatibility definition before scoring or selection."
+    },
+    {
+      "evidence_needed": "Original row/export/token/EOS hashes; no truncation, rewriting, dropped/refilled pairs or answer-based filters; R broad-population sampling proof; complete S selection rule and independent seeded coverage; exact per-arm exposure receipts.",
+      "failure_rule": "A selected native serialization failure stops preparation. It does not authorize replacing the row, redrawing R, discarding long examples or manufacturing EOS.",
+      "id": "F3",
+      "requirement": "Freeze the exact15000-pair R/S draws and nested2048-pair pilot subsets, including cell quotas, ordering, overlap and selection tags."
+    },
+    {
+      "evidence_needed": "Current smoke uses accumulation2; the proposed globalbatch8/microbatch1 requires accumulation8 CPU update/tail oracles and a bounded actual-model integration check. Bind scheduler step order, LR vector, save boundaries, consumed IDs, optimizer precision and final saved finite tensor inventories.",
+      "failure_rule": "Do not claim GA2 smoke automatically admits every GA8 training-driver behavior. Do not continue a pilot checkpoint into the full run or silently resume a failed run.",
+      "id": "F4",
+      "requirement": "Implement and natively validate the fresh one-pass pilot runner and its exact schedule/consumption guards at the proposed accumulation setting."
+    },
+    {
+      "evidence_needed": "An exact protocol and one prospective promotion rule. The seven-cell screen lacks S_ASFT, S_PRIOR and S_halfLR; no selected-data interaction can be inferred for those objectives.",
+      "id": "F5",
+      "recommended_default": "Keep the seven-cell screen bounded. Direct combined-method promotion is available only to an eligible S_CE or S_KL with its matched R evidence. A global R-only winner is an objective/step-size finding and requires a separately sealed S counterpart before any combined-selection claim; no automatic eighth run or runner-up substitution.",
+      "requirement": "Freeze all seven cells, source-development roles, one ranking checkpoint, eligibility gates, tie breaks and the policy for a random-only winning objective before any pilot outcomes."
+    },
+    {
+      "evidence_needed": "Finite per-job bounds, separate requested/actual/open reservations, queue/ledger duplicate checks, at most two initial concurrent GPU allocations, and an end-to-end wall-clock plan that leaves the48-hour closeout reserve.",
+      "failure_rule": "Unlimited total GPU hours do not remove the deadline, finite job limits or admission gates. A shortened or incomplete evaluation is not a comparable completed result.",
+      "id": "F6",
+      "requirement": "Reserve full training, source confirmation, unchanged final evaluation and artifact delivery before admitting the first pilot cell."
+    }
+  ],
+  "full_training_and_single_use_confirmation": {
+    "confirmation_context_choice_still_required": "Recommend matching native final32K TOTAL context, with requested output cap32768 and explicit effective per-request allowance min(32768,32768-prompt_tokens), as the engine's native context bound requires. Freeze and record this behavior; do not describe it as32768 NEW tokens available in addition to a nonempty prompt. Alternatively a shorter common allowance is a distinct source confirmation profile that must be fixed prospectively. Do not change the official benchmark harness.",
+    "confirmation_opening_rule": "Only after every predeclared final model/control/seed/checkpoint and acceptance rule is frozen and complete, generate original and all declared roles on untouched1024MATH+512ARC. Do not precompute even original confirmation outputs during calibration, pilot ranking or budget scouting.",
+    "controls": "S under promoted objective/LR, R under identical objective/LR, and ordinary R_CE with otherwise identical full recipe, all paired by the two fixed seeds. Deduplicate physically identical roles when the promoted recipe is CE. These controls must be newly complete/native matched; historical8K truncated random is not a substitute.",
+    "full_recipe_freeze": "Promote at most one exact data/objective/LR recipe. Before full training, freeze all15000 IDs, complete32768 caches, optimizer/scheduler/consumption plan, paired seed orders and all model/control roles. Restart from original; do not continue step256.",
+    "limits": "ARC-Challenge is an elementary-science retention guard, not GPQA/Chinese reasoning equivalence. These source sets cannot certify all16 official metric wins.",
+    "operational_gate": "At the fixed two-seed mean, candidate exceeds original and ordinary R_CE on BOTH equal-domain p1 and p8, satisfies every per-domain retention/length/repetition floor, and, for selection attribution, exceeds same-objective R on p1 without losing p8. Apply all comparisons under the same confirmation protocol, never8K-versus32K.",
+    "recommended_full_exposure": {
+      "global_batch": 8,
+      "pairs_once_per_model": 15000,
+      "seed_aggregation": "equal mean of per-seed p1 and per-seed p8; never select the better seed or treat16 combined responses as p8",
+      "training_seeds": [
+        20261022,
+        20261023
+      ],
+      "updates": 1875
+    },
+    "single_use": "A failed confirmation closes the round. Never try the next cell/seed/checkpoint/beta, revise the source extractor/cap or call these same questions fresh. Preserve both seeds and every regression.",
+    "uncertainty": "Predeclare10000 paired whole-question-component bootstrap draws, seed20261019, stratified by domain. Resample records and fixed training-seed results together within components, retain record weighting, and average domains equally. Report95% intervals against original, R_CE and matched R objective. These are conditional, unadjusted intervals; two seeds do not establish general training-seed variance, and intervals crossing zero are not equivalence or demonstrated improvement."
+  },
+  "inputs": [
+    {
+      "path": "extension/planning/prospective_pilot_review.json",
+      "sha256": "129a53f06aa70d5d0ca4afc536ed852b1e0145555b85d084722e160b5ec12c10"
+    },
+    {
+      "path": "extension/planning/preservation_pilot_design_v2.json",
+      "sha256": "5fa145f6a8d0996cf3528cab21da94fb4657fabfb1789a794ad829345ff20f13"
+    },
+    {
+      "path": "extension/planning/training_integration_review.json",
+      "sha256": "712bcce45098d389c160195e9b3d268ca916e1b149b153fd8d823f362fdaa705"
+    },
+    {
+      "path": "extension/planning/calibration_and_source_eval_review.json",
+      "sha256": "c352bde3f7d691d320fe37aebc8ca4e99d78156cb8d5dcce88b28572638d3406"
+    },
+    {
+      "path": "extension/planning/native_model_admission_review.json",
+      "sha256": "5741645e0fd6e51be3e6cb4e2376820b2ab281a06bb1567985971f1db8d86852"
+    },
+    {
+      "path": "extension/planning/retention_and_onpolicy_review.json",
+      "sha256": "83ad0e16b90066fd3a6ec8d0aa30251f71c66bfc2c9bb4a57de106ebb543c9f4"
+    },
+    {
+      "path": "extension/campaign.json",
+      "sha256": "1407fa170f5b962249c54a294cbadf2b9b96fa90ab6101ad46037301be183dfe"
+    },
+    {
+      "path": "extension/research.json",
+      "sha256": "c81e9a4c966fea1441b77a87e3036fd4cacb2e61f9e2417b8150040252236aca"
+    }
+  ],
+  "jobs_tests_models_or_data_workloads_run_by_this_review": false,
+  "purpose": "Resolve the remaining exact scientific and operational choices for a bounded original-pair preservation pilot after successful native B200 admission. This review does not alter the frozen51 sources, historical experiments or any admission.",
+  "recommended_seven_cell_freeze": {
+    "causal_identification": [
+      "S_CE versus R_CE and S_KL versus R_KL isolate selection under two objectives.",
+      "R_KL versus R_CE and S_KL versus S_CE isolate anchor-only effects.",
+      "R_ASFT/R_PRIOR versus R_KL isolate probability weighting on R.",
+      "R_CE_HALF_LR tests a basic lower-step-size alternative, not exact Adam geometry matching.",
+      "No S-weighting/lower-LR interactions are identified by these seven cells; no untested cross-product promotion."
+    ],
+    "cells": [
+      {
+        "beta": 0,
+        "data": "R_pilot",
+        "id": "R_CE",
+        "learning_rate": 2e-06,
+        "objective": "sft"
+      },
+      {
+        "beta": 0,
+        "data": "S_pilot",
+        "id": "S_CE",
+        "learning_rate": 2e-06,
+        "objective": "sft"
+      },
+      {
+        "beta": 0.05,
+        "data": "R_pilot",
+        "id": "R_KL",
+        "learning_rate": 2e-06,
+        "objective": "ce_kl"
+      },
+      {
+        "beta": 0.05,
+        "data": "S_pilot",
+        "id": "S_KL",
+        "learning_rate": 2e-06,
+        "objective": "ce_kl"
+      },
+      {
+        "beta": 0.05,
+        "data": "R_pilot",
+        "id": "R_ASFT",
+        "learning_rate": 2e-06,
+        "objective": "asft"
+      },
+      {
+        "beta": 0.05,
+        "data": "R_pilot",
+        "id": "R_PRIOR",
+        "learning_rate": 2e-06,
+        "objective": "prior_anchored"
+      },
+      {
+        "beta": 0,
+        "data": "R_pilot",
+        "id": "R_CE_HALF_LR",
+        "learning_rate": 1e-06,
+        "objective": "sft"
+      }
+    ],
+    "checkpoints": "Save64 for native source-loss/memory/weight/EOS diagnostics only; rank only final256. No generated-development ranking of64, interpolation, best seed or intermediate checkpoints.",
+    "exposure": {
+      "accumulation": 8,
+      "cutoff": 32768,
+      "global_batch": 8,
+      "microbatch": 1,
+      "optimizer_updates": 256,
+      "passes": 1,
+      "training_seed": 20261021,
+      "unique_original_pairs_per_cell": 2048
+    },
+    "initialization": "Fresh exact original full-parameter Qwen per cell. Frozen independent original reference for anchored cells; FP32 storage/Adam moments, BF16 compute, SDPA and checkpoint/chunk settings identical to successful admitted integration. No historical model, interpolation, adapter, resumed pilot or EMA initialization.",
+    "loss": "One causal shift, contiguous original response-only labels including EOS/tail; divide each example by all active tokens then average examples. Forward full-vocabulary KL(original||student); online/prior weights detached; never divide by weight sums. Keep beta0.05 and the objective unchanged after outputs, including no EOS bonus or probability floor.",
+    "required_receipts": "Exact presentations/order, active/EOS tokens and update boundaries; CE/weightedCE/fullKL/effective weights; EOS/non-EOS and optional final-answer-region diagnostics; finite FP32 parameters/moments, reference byte invariance, gradient/update norms, LR vector, clipped-norm status, actual memory/runtime and saved model/config/tokenizer hashes. Dataloader prefetch is not consumption evidence.",
+    "schedule": "Propose exact first256 updates of the later1875-update cosine schedule, fixed warmup_steps57, cosine cycles0.5 and zero final LR floor. Peak LR is the cell's listed LR. Freeze/QA the actual pinned scheduler step convention and all LR values; never use a separate256-step decay-to-zero pilot schedule."
+  },
+  "recommended_source_calibration_freeze": {
+    "arc_grading": "Exact original label equality after whitespace trim only; no number-letter conversion or case/choice-text guessing. A predeclared terminal-label shadow metric may diagnose formatting but must never rank a recipe.",
+    "bounded_errors": "Propose five-second hard external MATH comparison timeout with bounded result retrieval and explicit timeout/crash states. All scheduled samples remain in the denominator; unparseable/timeout output is incorrect and disclosed. An unclassified implementation failure blocks completion/ranking.",
+    "extraction": "Final literal balanced box only, nested braces supported, outer whitespace stripped. Missing/empty/unbalanced final box is incorrect; never fall back to an earlier box or guess a last number/option mentioned in reasoning.",
+    "generation": {
+      "engine": "Pinned vLLM0.12.0/BF16/B200/TP1, generation_config='vllm', max_num_seqs128, gpu_memory_utilization0.85, batch32; record actual identities and resolved settings.",
+      "frequency_penalty": 0.0,
+      "max_model_len": 16384,
+      "max_new_tokens": 8192,
+      "maximum_prompt_tokens": 8192,
+      "min_p": 0.0,
+      "min_tokens": 0,
+      "n": 8,
+      "per_record_seed": "(20261021+int(sealed_record_id[:8],16)) modulo2**31; sample indices0..7",
+      "presence_penalty": 0.0,
+      "repetition_penalty": 1.0,
+      "seed": 20261021,
+      "stop": "Native model EOS151645, ignore_eos=False, no additional stop strings/token IDs/format constraints or repetition aborts. Do not inherit extra HF generation-config EOS/sampling defaults.",
+      "temperature": 0.6,
+      "top_k": -1,
+      "top_p": 0.95
+    },
+    "math_grading_remaining_choice": "Freeze a new source-only wrapper around the pinned numeric/symbolic comparator with include_percentage=False, with explicit percent normalization BEFORE strip_string. Local parser strip_string removes '%' marks, so blindly disabling percentage scaling can reject 50% versus0.5. Require fixtures for 50%=0.5, 50%!=50, 10!=1000 and10!=0.1, signs, fractions, zero and supported set/tuple forms. Exact accepted percent syntax and numeric tolerance must be fixed from mathematical fixtures before any generated answers; do not optimize them on calibration misses.",
+    "no_repeat_tuning": "A separately evidenced engineering repair preserves the entire first attempt and requires a complete matched rerun under a new binding. Poor correctness, missing boxes and long thinking are model outcomes, not permission to tune extraction/prompts or refresh calibration IDs.",
+    "prompt": {
+      "arc_user": "Unchanged question plus original labels/text in original order, followed by a fixed instruction to put exactly one original option label within a box. No sorting, shuffling, relabeling or correct-position balancing.",
+      "math_user": "Unchanged original question; no official solution, gold answer, level or worked example.",
+      "native": "Pinned system/user chat template with add_generation_prompt=True; no forced think/answer prefix or few-shot exemplars. Bind exact prompt text, token IDs and tokenizer files. Mutating gold/solution alone must leave prompt bytes/tokens unchanged.",
+      "system": "Please reason step by step, and put your final answer within \\boxed{}."
+    },
+    "roles_and_use": "Exact original Qwen only, one eight-sample pass on the sealed16MATH+16ARC calibration records; engineering/runtime/format evidence only, never recipe ranking. No alternate prompt, seed, parser or stopping search based on calibration accuracy.",
+    "status": "proposal_only_requires_new_code_cpu_qa_exact_plan_and_admission"
+  },
+  "recommended_training_data_freeze": {
+    "capacity_failure": "If a quota, source byte, complete cache or context check fails, stop. Do not refill, redraw, switch populations, remove think tags or rewrite responses in the original-pair main arm.",
+    "compatibility": "Propose mean unweighted frozen-original CE over EVERY supervised response token, including native EOS/tail, on each complete teacher-forced pair. Prompt positions are masked, causal shift occurs once, no dropout/model updates, and all base/cache/token identities are bound. A first512-token score, old probe gain or old trained-model loss is a different selector and cannot silently substitute for this definition.",
+    "exposure_limit": "Cell/record matching is not exact supervised-token or compute matching. Preserve exact total/active/EOS token sums, within-bin distributions, R/S overlap, old training/reservoir overlap and actual consumed sequence for every run.",
+    "length_bins": [
+      [
+        1,
+        2048
+      ],
+      [
+        2049,
+        4096
+      ],
+      [
+        4097,
+        8192
+      ],
+      [
+        8193,
+        16384
+      ],
+      [
+        16385,
+        32768
+      ]
+    ],
+    "nested_pilot": "R_pilot is the first2048 IDs of frozen R draw order. S_pilot must be contained in frozen S, match R_pilot's exact cell counts, and preserve per-cell floor(pilot_quota/2) low-CE plus remaining coverage membership using a separately fixed seed namespace. Order S_pilot by the R_pilot cell sequence with a fixed within-cell permutation, so objectives within an arm share exact IDs/order and both arms share cell-order exposure. Seal all ties and feasibility before outcomes.",
+    "population": "All82961 unchanged canonical prepared original pairs after the completed reserved-source plus final-benchmark union exclusions. The CPU stage serialized only four disposable witnesses, not the full training population. No response-length, box, branching, repetition or base-loss eligibility filter is allowed for the broad R draw.",
+    "random_R": "random.Random(20261021).sample(sorted(eligible_pool_ids),15000), once. Preserve draw order and every selected complete original pair. Disclose that canonical cleaned source sampling differs from raw100K-row-index sampling.",
+    "selected_S": "Use R's topic-by-full-length cell counts as exact quotas. In each cell, take floor(quota/2) lowest frozen-original mean CE with ascending-ID ties. Fill the remaining quota by a fixed seeded sample without replacement from remaining cell IDs in sorted order; derive each cell's RNG from a published SHA256 seed namespace. Permit R/S overlap. Keep low-CE versus coverage tags and score/rank/sample provenance.",
+    "topic_features": "Propose fresh question-only char3-5gram TF-IDF, maximum50000 features, SVD up to128 dimensions, normalization and MiniBatchKMeans64 with seed20261021/n_init3/batch1024 on the entire eligible population. Freeze exact libraries, fit order and small-rank guards. These are unsupervised coverage cells, not trusted semantic topic labels. Never reuse cluster64 as a learned topic for the old47614 unfitted rows."
+  },
+  "root_review_update": {
+    "cpu_evidence_verified": true,
+    "gpu_success_claimed": false,
+    "metadata_only": true,
+    "note": "The draft recommendations remain prospective. Full score/decode throughput, finite reservations, source-grader policy, GA8 driver admission and promotion rules are unresolved.",
+    "proposal_not_admitted": true
+  },
+  "schema": "extension-pilot-freeze-readiness-review-v1",
+  "source_commit_reviewed": "11fe4d82963e4ebbc867a666a878da1399034850",
+  "status": "proposal_only_not_frozen_tested_or_admitted",
+  "work_boundary": "Only static source/planning/metadata reads and creation of this new planning JSON occurred. No tests, model/data workloads, admissions, commits, uploads or historical/frozen-file edits were performed."
+}

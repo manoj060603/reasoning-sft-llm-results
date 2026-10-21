@@ -1,0 +1,5 @@
+{'train_runtime': 0.014, 'train_samples_per_second': 285.298, 'train_steps_per_second': 142.649, 'train_loss': 2.0211925506591797, 'epoch': 1.0}
+{'train_runtime': 0.0287, 'train_samples_per_second': 34.851, 'train_steps_per_second': 34.851, 'train_loss': 2.3534388542175293, 'epoch': 1.0}
+{"unit_qa_complete": true, "tests_run": 341}
+{"private_preparation_complete": true, "witnesses": 4, "rows_sha256": "080b2280d3832be34ed2338f817d7c04b22132e1a316b9ed6bb10096445ffee2", "gpu_admitted": false}
+{"complete": true, "job_id": "1224497", "tests_run": 341, "private_prepared_sha256": "d1bb1875a293c71f2a108df4b287b3bb2ab35b3168cd6505b5bd91a98fd66457", "gpu_seconds": 0}

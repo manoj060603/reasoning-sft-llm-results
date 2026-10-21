@@ -1,0 +1,81 @@
+{
+  "answers_or_outcomes_used": false,
+  "benchmark_question_sha256": {
+    "aime": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc",
+    "aime25": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d",
+    "amc": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4",
+    "cn_math_2024": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533",
+    "gpqa": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f",
+    "kaoyan": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7",
+    "math": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94",
+    "minerva": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d",
+    "olympiadbench": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f"
+  },
+  "benchmark_readiness": {
+    "benchmark_counts": {
+      "aime": 30,
+      "aime25": 30,
+      "amc": 40,
+      "cn_math_2024": 30,
+      "gpqa": 198,
+      "kaoyan": 199,
+      "math": 500,
+      "minerva": 272,
+      "olympiadbench": 675
+    },
+    "benchmark_hashes": {
+      "aime": "a0f7eb9915f60f70fdaa9375414869d101eab639a67acf652cde98166efcd1cc",
+      "aime25": "03f7bb42b21bb9fcdfe489402332d1b1ca20da153c9f2f49a316a6d67c8e042d",
+      "amc": "43707e1ca784602d8479de24ee8ce36609dbebc46dd152b0b12a46611aa898a4",
+      "cn_math_2024": "f6392e72e776ac37f74444d4dd5d2f2e4bf4a16615ff5cafcf426df4406f7533",
+      "gpqa": "1eed4e8b60f983b0106a3ae26db2ffa9eff4fb816611f05a172fafee50a81c7f",
+      "kaoyan": "b81d7b79b7da0cce7894c97e55d4690417a1178303a9c5be3a47fae39fee99c7",
+      "math": "a239272930e5202bf1d5275f7fa475a56687c775a61f1354a6d3371bf9dd7a94",
+      "minerva": "e04ec2bc1d8f80a0091b4b1989f1ffb366f3583f5bae381546a066d4ccc26e3d",
+      "olympiadbench": "8016961fd178845f84b0b6c03afb2c9c8638f7e0b692142608970e5c9faaad2f"
+    },
+    "path": "/projects/slmreasoning/manoj/reasoning-sft-deadline-20261019/deadline/artifacts/benchmark_readiness.json",
+    "sha256": "9f0d2480881672ba07c3c9a4143dec12b55625d721c1ce0ed45e6bfd82082754"
+  },
+  "complete": true,
+  "criterion": {
+    "jaccard_denominator": 5,
+    "jaccard_numerator": 4,
+    "normalization": "NFKC casefold whitespace; preserve numbers/operators",
+    "search": "exact inverted index",
+    "shingle_tokens": 3,
+    "short_question_policy": "exact normalized equality when fewer than3tokens",
+    "tokenization": "word-or-single-nonwhitespace-character"
+  },
+  "excluded_pool_ids_file_sha256": "5a687438e7b5c31dbc16f2671582b448ff970739219328dbf9c5836474a89984",
+  "excluded_pool_ids_sha256": "d3c846548415927bc77b0bc489e2e185f18c169fdb973af756e31c69b6c8ee00",
+  "matches_file_sha256": "f634e5aeb0b6ebf7ccbc4b14374066c08ad05aa36c97bf8be6bd83ea25a39b69",
+  "pool_rows_scanned": 83029,
+  "pool_sha256": "4e8ac972757555c2c0c1c0d31f87f49fc79d19815fb89b49bb748cee3ea145b0",
+  "question_variant_counts": {
+    "aime": 30,
+    "aime25": 30,
+    "amc": 80,
+    "cn_math_2024": 30,
+    "gpqa": 198,
+    "kaoyan": 199,
+    "math": 500,
+    "minerva": 272,
+    "olympiadbench": 675
+  },
+  "question_variant_inventory_sha256": "0d1a645cb01274241f49f782a73010a92ae51affce03719d746b8fc02873f5c9",
+  "question_variant_sha256": {
+    "aime": "52dc5e4ab0ac5868538570904060a970d374cbd82d3ba298e95ae2c3ae9c0b60",
+    "aime25": "392cc1a9b52ec626fe36c66f27f7da54d46877a5ffa35fdd4302c8ac86c5f736",
+    "amc": "d98b8a3399edcd0a0e46e5dd47598798ab97c66c90bef062554555b579f30555",
+    "cn_math_2024": "77153eb9587c70b46b2a6497d7399ddf641d44d7d156b258d14a035278656c5f",
+    "gpqa": "9cc64b973edc06e7a90815434a606972e8dea1b58fd30ec06ddc745772741b94",
+    "kaoyan": "9ad687eea65a39c8fa93bd1d0ccbf358b936ae5d4ecc6d99b12b6ec21331fcfa",
+    "math": "555142f7fcfd62ceed5b394ef5e4d3950bc55f53c1738e27421cff76f7b3d407",
+    "minerva": "1d7aad3531c9e87e3818684ee94c7ac65d0dbcf2cb8ccf4d123351e1bcb8abda",
+    "olympiadbench": "1c90417222f344a6ca15c6303cfff861530dc3ee026f942a8eda0497597b4ff6"
+  },
+  "schema": "extension-final-benchmark-pool-exclusions-v1",
+  "scope": "all_nine_final_benchmarks",
+  "semantic_decontamination_claimed": false
+}

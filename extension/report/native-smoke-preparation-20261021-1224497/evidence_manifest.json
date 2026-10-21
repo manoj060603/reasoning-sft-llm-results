@@ -1,0 +1,43 @@
+{
+  "files": {
+    "accounting.json": {
+      "bytes": 825,
+      "sha256": "4d670f1fc86ab88c10da7270c94262d3bdd023061320d868b0a61852850aa1a2"
+    },
+    "benchmark_audit.json": {
+      "bytes": 4096,
+      "sha256": "2671a58d0abf9f52de5445649aecf9a389363f0fe54d8f05dbf5bca243c6fa6f"
+    },
+    "complete.json": {
+      "bytes": 20027,
+      "sha256": "b7d8dc41b6fd90befc6a85130b3904245aea6dbd2cafc3209941d647a3ab8df5"
+    },
+    "cpu.stdout.log": {
+      "bytes": 666,
+      "sha256": "679797eef945922356a08e27ba78e3d9a12be7f6cfc75d26a4a3c2b80bfb67a7"
+    },
+    "delivery_summary.json": {
+      "bytes": 1362,
+      "sha256": "a9ba19b0bd05d7b4812432d1ce301b8c4bc0de23524ff712f2f25ffd66194343"
+    },
+    "job_ledger_snapshot.json": {
+      "bytes": 98492,
+      "sha256": "9e8caec6473d6ec8cce39f581c4084ee9f866403a3e1fee404156a6dd4624d00"
+    },
+    "native_qa.json": {
+      "bytes": 23467,
+      "sha256": "351368511546e4c8d7b897c6340c057e7595a2dde0afc5b26b655c62d57a3b6e"
+    },
+    "unit_qa.json": {
+      "bytes": 20989,
+      "sha256": "4d900d4ef8b5b706cfc89e2e3fc4017eab3338bb4efd4e7e83e15836efaa3497"
+    },
+    "unit_tests.stderr.log": {
+      "bytes": 39860,
+      "sha256": "543e215adfdc8a5cf745ebbf842295b0a7fb7f765e238d90c89addd9d7a559ec"
+    }
+  },
+  "native_run": "extension/runs/native-smoke-preparation-1224497",
+  "raw_rows_included": false,
+  "schema": "extension-public-native-metadata-manifest-v1"
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "sacct",
+    "--clusters=owl",
+    "-j",
+    "1224497",
+    "--parsable2",
+    "--noheader",
+    "--format=JobIDRaw,JobName,State,ExitCode,ElapsedRaw,Start,End,AllocTRES"
+  ],
+  "complete": true,
+  "elapsed_seconds": 215,
+  "gpu_seconds": 0,
+  "job_id": "1224497",
+  "no_gpu_in_alloc_tres": true,
+  "observed_at_utc": "2026-10-21T01:00:30.143716+00:00",
+  "schema": "extension-terminal-cpu-accounting-v1",
+  "stderr": "",
+  "stdout": "1224497|sft-extension-smoke-preparation|COMPLETED|0:0|215|2026-10-21T00:56:33|2026-10-21T01:00:08|billing=20,cpu=8,mem=64G,node=1\n1224497.batch|batch|COMPLETED|0:0|215|2026-10-21T00:56:33|2026-10-21T01:00:08|cpu=8,mem=64G,node=1\n1224497.extern|extern|COMPLETED|0:0|215|2026-10-21T00:56:33|2026-10-21T01:00:08|billing=20,cpu=8,mem=64G,node=1\n",
+  "timezone": "UTC"
+}
